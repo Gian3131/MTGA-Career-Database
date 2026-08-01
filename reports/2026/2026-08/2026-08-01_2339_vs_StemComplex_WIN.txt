@@ -1,0 +1,606 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, StemComplex
+Seat map: Seat 1=gian31, Seat 2=StemComplex
+Turn range (known): 1 - 13
+Records: 25
+Action chains: 20
+Winner: gian31
+Final life: {'gian31': 18, 'StemComplex': 9}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Match-result payload was observed after the last captured action in Turn 13 (Phase_Main1); payload ordering within later uncaptured records is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 26 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 9 explicit PlayLand transfers across turns [1, 2, 3, 4, 5, 6, 8, 9, 11]. Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=10] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 288) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 288) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [287] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [288], Plains [287]
+
+Turn 2
+  - Boltwave [observed_semantic_effect, seq=30] (active=StemComplex, phase=Phase_Main1, controller=StemComplex, owner=StemComplex, source_object=292)
+      effects: 3 damage, life -3
+      narrative: Boltwave: gian31 takes 3 damage; gian31 loses 3 life.
+      explicit effect object references: object 1 [1] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Boltwave (object 292) Hand (StemComplex) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Boltwave (object 294) Stack -> Graveyard (StemComplex) (Resolve; shared object ID)
+      identity continuity: source object 292 -> transfer object 294 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: gian31 -3 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Zookeeper Mechan [290] Library (StemComplex) -> Hand (StemComplex) (Draw; GRE sequence 24).
+      Mountain [291] Hand (StemComplex) -> Battlefield (PlayLand; GRE sequence 27).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [288], Plains [287]
+      StemComplex: Battlefield: Mountain [291]; Graveyard: Boltwave [294]
+
+Turn 3
+  - Leech Collector [valid_resolution_no_immediate_mutation, seq=50] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=297)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Leech Collector resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Leech Collector (object 297) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leech Collector (object 297) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Leech Collector [295] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 44).
+      Swamp [296] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 47).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [288], Leech Collector [297], Plains [287], Swamp [296]
+      StemComplex: Battlefield: Mountain [291]; Graveyard: Boltwave [294]
+
+Turn 4
+  - Burst Lightning [observed_semantic_effect, seq=73] (active=StemComplex, phase=Phase_Main1, controller=StemComplex, owner=StemComplex, source_object=302)
+      effects: 2 damage
+      narrative: Burst Lightning: Leech Collector takes 2 damage.
+      explicit effect object references: Leech Collector [297] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Burst Lightning (object 302) Hand (StemComplex) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Burst Lightning (object 304) Stack -> Graveyard (StemComplex) (Resolve; shared object ID)
+      identity continuity: source object 302 -> transfer object 304 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Leech Collector (object 305) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [300] Library (StemComplex) -> Hand (StemComplex) (Draw; GRE sequence 64).
+      Mountain [301] Hand (StemComplex) -> Battlefield (PlayLand; GRE sequence 67).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [288], Plains [287], Swamp [296]; Graveyard: Leech Collector [305]
+      StemComplex: Battlefield: Mountain [291], Mountain [301]; Graveyard: Boltwave [294], Burst Lightning [304]
+
+Turn 5
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=94] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=308)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 308) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 308) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [306] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 87).
+      Swamp [307] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 90).
+      Shock [311] Hand (StemComplex) -> Stack (CastSpell; GRE sequence 98).
+      Shock [313] Stack -> Graveyard (StemComplex) (Resolve; GRE sequence 102).
+      Starscape Cleric [314] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 102).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [288], Plains [287], Swamp [296], Swamp [307]; Graveyard: Leech Collector [305], Starscape Cleric [314]
+      StemComplex: Battlefield: Mountain [291], Mountain [301]; Graveyard: Boltwave [294], Burst Lightning [304], Shock [313]
+
+Turn 6
+  - Zookeeper Mechan [valid_resolution_no_immediate_mutation, seq=120] (active=StemComplex, phase=Phase_Main1, controller=StemComplex, owner=StemComplex, source_object=317)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Zookeeper Mechan resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Zookeeper Mechan (object 317) Hand (StemComplex) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Zookeeper Mechan (object 317) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=122] (active=StemComplex, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 17 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [315] Library (StemComplex) -> Hand (StemComplex) (Draw; GRE sequence 114).
+      Mountain [316] Hand (StemComplex) -> Battlefield (PlayLand; GRE sequence 117).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [288], Plains [287], Swamp [296], Swamp [307]; Graveyard: Leech Collector [305], Starscape Cleric [314]
+      StemComplex: Battlefield: Mountain [291], Mountain [301], Mountain [316], Zookeeper Mechan [317]; Graveyard: Boltwave [294], Burst Lightning [304], Shock [313]
+
+Turn 7
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=141] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 322) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 322) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [321] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 136).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [288], Marauding Blight-Priest [322], Plains [287], Swamp [296], Swamp [307]; Graveyard: Leech Collector [305], Starscape Cleric [314]
+      StemComplex: Battlefield: Mountain [291], Mountain [301], Mountain [316], Zookeeper Mechan [317]; Graveyard: Boltwave [294], Burst Lightning [304], Shock [313]
+
+Turn 8
+  - Impact Tremors [valid_resolution_no_immediate_mutation, seq=161] (active=StemComplex, phase=Phase_Main1, controller=StemComplex, owner=StemComplex, source_object=328)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Impact Tremors resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Impact Tremors (object 328) Hand (StemComplex) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Impact Tremors (object 328) Stack -> Battlefield (Resolve; shared object ID)
+  - Ravenous Robots [valid_resolution_no_immediate_mutation, seq=164] (active=StemComplex, phase=Phase_Main1, controller=StemComplex, owner=StemComplex, source_object=331)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ravenous Robots resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ravenous Robots (object 331) Hand (StemComplex) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ravenous Robots (object 331) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=166] (active=StemComplex, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=168] (active=StemComplex, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: StemComplex loses 1 life.
+  - Ability of Impact Tremors [observed_semantic_effect, seq=170] (active=StemComplex, phase=Phase_Main1, controller=StemComplex, owner=StemComplex, source_object=328)
+      effects: 1 damage, life -1
+      narrative: Ability of Impact Tremors: gian31 takes 1 damage; gian31 loses 1 life.
+      explicit effect object references: object 1 [1] (role/targeting only where the protocol identifies it)
+    net observed life change this turn: StemComplex -1 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 19
+    life: StemComplex 20 -> 19
+    life: gian31 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shocking Sharpshooter [326] Library (StemComplex) -> Hand (StemComplex) (Draw; GRE sequence 155).
+      Mountain [327] Hand (StemComplex) -> Battlefield (PlayLand; GRE sequence 158).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [288], Marauding Blight-Priest [322], Plains [287], Swamp [296], Swamp [307]; Graveyard: Leech Collector [305], Starscape Cleric [314]
+      StemComplex: Battlefield: Impact Tremors [328], Mountain [291], Mountain [301], Mountain [316], Mountain [327], Ravenous Robots [331], Zookeeper Mechan [317]; Graveyard: Boltwave [294], Burst Lightning [304], Shock [313]
+
+Turn 9
+  - Moment of Craving [observed_semantic_effect, seq=193] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=339)
+      effects: P/T -2/-2, life +2
+      narrative: Moment of Craving: Ravenous Robots gets -2/-2; gian31 gains 2 life.
+      explicit effect object references: Ravenous Robots [331] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Moment of Craving (object 339) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Moment of Craving (object 343) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 339 -> transfer object 343 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Ravenous Robots (object 344) Battlefield -> Graveyard (StemComplex) (SBA_ZeroToughness; shared object ID)
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=195] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: StemComplex loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Marauding Blight-Priest [322] (unblocked, observed P/T 3/2)
+      blockers: none identified
+      observed attacker power total: 3; unattributed defending-player life loss: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: StemComplex -4; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 20
+    life: StemComplex 19 -> 18
+    life (combat-related snapshot; exact source unavailable): StemComplex 18 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [337] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 185).
+      Swamp [338] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 188).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [288], Marauding Blight-Priest [322], Plains [287], Swamp [296], Swamp [307], Swamp [338]; Graveyard: Leech Collector [305], Moment of Craving [343], Starscape Cleric [314]
+      StemComplex: Battlefield: Impact Tremors [328], Mountain [291], Mountain [301], Mountain [316], Mountain [327], Zookeeper Mechan [317]; Graveyard: Boltwave [294], Burst Lightning [304], Ravenous Robots [344], Shock [313]
+
+Turn 10
+  - Shocking Sharpshooter [valid_resolution_no_immediate_mutation, seq=221] (active=StemComplex, phase=Phase_Main1, controller=StemComplex, owner=StemComplex, source_object=346)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Shocking Sharpshooter resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Shocking Sharpshooter (object 346) Hand (StemComplex) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Shocking Sharpshooter (object 346) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=223] (active=StemComplex, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=225] (active=StemComplex, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: StemComplex loses 1 life.
+  - Ability of Impact Tremors [observed_semantic_effect, seq=227] (active=StemComplex, phase=Phase_Main1, controller=StemComplex, owner=StemComplex, source_object=328)
+      effects: 1 damage, life -1
+      narrative: Ability of Impact Tremors: gian31 takes 1 damage; gian31 loses 1 life.
+      explicit effect object references: object 1 [1] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=StemComplex; frames: DeclareAttack -> DeclareBlock):
+      attackers: Zookeeper Mechan [317] (unblocked, observed P/T 1/3)
+      blockers: none identified
+      observed attacker power total: 1; unattributed defending-player life loss: 2; snapshot comparison does not reconcile (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: StemComplex -1; gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life: StemComplex 15 -> 14
+    life (combat-related snapshot; exact source unavailable): gian31 21 -> 20
+    life (combat-related snapshot; exact source unavailable): gian31 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 345 [345] Library (StemComplex) -> Hand (StemComplex) (Draw; GRE sequence 216).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [288], Marauding Blight-Priest [322], Plains [287], Swamp [296], Swamp [307], Swamp [338]; Graveyard: Leech Collector [305], Moment of Craving [343], Starscape Cleric [314]
+      StemComplex: Battlefield: Impact Tremors [328], Mountain [291], Mountain [301], Mountain [316], Mountain [327], Shocking Sharpshooter [346], Zookeeper Mechan [317]; Graveyard: Boltwave [294], Burst Lightning [304], Ravenous Robots [344], Shock [313]
+
+Turn 11
+  - Shock [observed_semantic_effect, seq=102] (active=unknown, controller=StemComplex, owner=StemComplex, source_object=311)
+      effects: 2 damage
+      narrative: Shock: Starscape Cleric takes 2 damage.
+      explicit effect object references: Starscape Cleric [308] (role/targeting only where the protocol identifies it)
+  - Sinister Monolith [valid_resolution_no_immediate_mutation, seq=253] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=354)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sinister Monolith resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sinister Monolith (object 354) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sinister Monolith (object 354) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Sinister Monolith [observed_semantic_effect, seq=257] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=354)
+      effects: life -1, life +1
+      narrative: Ability of Sinister Monolith: StemComplex loses 1 life; gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=259] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=322)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: StemComplex loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Marauding Blight-Priest [322] (unblocked, observed P/T 3/2)
+      blockers: none identified
+      observed attacker power total: 3; unattributed defending-player life loss: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: StemComplex -5; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 19 -> 20
+    life: StemComplex 14 -> 13
+    life: StemComplex 13 -> 12
+    life (combat-related snapshot; exact source unavailable): StemComplex 12 -> 9
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [352] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 247).
+      Plains [353] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 250).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [288], Marauding Blight-Priest [322], Plains [287], Plains [353], Sinister Monolith [354], Swamp [296], Swamp [307], Swamp [338]; Graveyard: Leech Collector [305], Moment of Craving [343], Starscape Cleric [314]
+      StemComplex: Battlefield: Impact Tremors [328], Mountain [291], Mountain [301], Mountain [316], Mountain [327], Shocking Sharpshooter [346], Zookeeper Mechan [317]; Graveyard: Boltwave [294], Burst Lightning [304], Ravenous Robots [344], Shock [313]
+
+Turn 12
+  - Shock [observed_semantic_effect, seq=284] (active=StemComplex, phase=Phase_Main1, controller=StemComplex, owner=StemComplex, source_object=362)
+      effects: 2 damage
+      narrative: Shock: Marauding Blight-Priest takes 2 damage.
+      explicit effect object references: Marauding Blight-Priest [322] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shock (object 362) Hand (StemComplex) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Shock (object 364) Stack -> Graveyard (StemComplex) (Resolve; shared object ID)
+      identity continuity: source object 362 -> transfer object 364 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Marauding Blight-Priest (object 365) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+  Combat snapshots observed (active=StemComplex; frames: DeclareAttack -> DeclareBlock):
+      attackers: Zookeeper Mechan [317] (unblocked, observed P/T 1/3), Shocking Sharpshooter [346] (unblocked, observed P/T 1/3)
+      blockers: none identified
+      observed attacker power total: 2; unattributed defending-player life loss: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (combat-related snapshot; exact source unavailable): gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shock [361] Library (StemComplex) -> Hand (StemComplex) (Draw; GRE sequence 277).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [288], Plains [287], Plains [353], Sinister Monolith [354], Swamp [296], Swamp [307], Swamp [338]; Graveyard: Leech Collector [305], Marauding Blight-Priest [365], Moment of Craving [343], Starscape Cleric [314]
+      StemComplex: Battlefield: Impact Tremors [328], Mountain [291], Mountain [301], Mountain [316], Mountain [327], Shocking Sharpshooter [346], Zookeeper Mechan [317]; Graveyard: Boltwave [294], Burst Lightning [304], Ravenous Robots [344], Shock [313], Shock [364]
+
+Turn 13
+  - Rot-Curse Rakshasa [valid_resolution_no_immediate_mutation, seq=309] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=367)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Rot-Curse Rakshasa resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Rot-Curse Rakshasa (object 367) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Rot-Curse Rakshasa (object 367) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Rot-Curse Rakshasa [366] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 304).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [288], Plains [287], Plains [353], Rot-Curse Rakshasa [367], Sinister Monolith [354], Swamp [296], Swamp [307], Swamp [338]; Graveyard: Leech Collector [305], Marauding Blight-Priest [365], Moment of Craving [343], Starscape Cleric [314]
+      StemComplex: Battlefield: Impact Tremors [328], Mountain [291], Mountain [301], Mountain [316], Mountain [327], Shocking Sharpshooter [346], Zookeeper Mechan [317]; Graveyard: Boltwave [294], Burst Lightning [304], Ravenous Robots [344], Shock [313], Shock [364]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+UNATTRIBUTED LIFE CHANGES
+------------------------------------------------------------
+- Turn 2, seq 30, Phase_Main1: gian31 20 -> 17. No source event correlated in captured records. Previous captured action: Boltwave.
+- Turn 8, seq 170, Phase_Main1: gian31 19 -> 18. No source event correlated in captured records. Previous captured action: Impact Tremors.
+- Turn 9, seq 206, Phase_Main1: StemComplex 18 -> 15. Combat declaration observed; exact assignment unavailable. Previous captured action: Marauding Blight-Priest.
+- Turn 10, seq 227, Phase_Main1: gian31 21 -> 20; gian31 20 -> 19. Combat declaration observed; exact assignment unavailable. Previous captured action: Impact Tremors.
+- Turn 11, seq 267, Phase_Combat: StemComplex 12 -> 9. Combat declaration observed; exact assignment unavailable. Previous captured action: Marauding Blight-Priest.
+- Turn 12, seq 294, Phase_Main1: gian31 20 -> 18. Combat declaration observed; exact assignment unavailable. Previous captured action: Shock.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 1, seq 10: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 24: Zookeeper Mechan [owner=unknown owner, controller=unknown controller] moves Library (StemComplex) -> Hand (StemComplex) (Draw).
+- Turn 2, seq 27: Mountain [owner=StemComplex, controller=StemComplex] moves Hand (StemComplex) -> Battlefield (PlayLand).
+- Turn 2, seq 28: Boltwave [owner=StemComplex, controller=StemComplex] moves Hand (StemComplex) -> Stack (CastSpell).
+- Turn 2, seq 30: Boltwave [owner=StemComplex, controller=StemComplex] moves Stack -> Graveyard (StemComplex) (Resolve).
+- Turn 3, seq 44: Leech Collector [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 47: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 48: Leech Collector [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 50: Leech Collector [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 64: Mountain [owner=unknown owner, controller=unknown controller] moves Library (StemComplex) -> Hand (StemComplex) (Draw).
+- Turn 4, seq 67: Mountain [owner=StemComplex, controller=StemComplex] moves Hand (StemComplex) -> Battlefield (PlayLand).
+- Turn 4, seq 68: Burst Lightning [owner=StemComplex, controller=StemComplex] moves Hand (StemComplex) -> Stack (CastSpell).
+- Turn 4, seq 73: Burst Lightning [owner=StemComplex, controller=StemComplex] moves Stack -> Graveyard (StemComplex) (Resolve).
+- Turn 4, seq 73: Leech Collector [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 5, seq 87: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 90: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 91: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 94: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 98: Shock [owner=StemComplex, controller=StemComplex] moves Hand (StemComplex) -> Stack (CastSpell).
+- Turn 5, seq 102: Shock [owner=StemComplex, controller=StemComplex] moves Stack -> Graveyard (StemComplex) (Resolve).
+- Turn 5, seq 102: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 6, seq 114: Mountain [owner=unknown owner, controller=unknown controller] moves Library (StemComplex) -> Hand (StemComplex) (Draw).
+- Turn 6, seq 117: Mountain [owner=StemComplex, controller=StemComplex] moves Hand (StemComplex) -> Battlefield (PlayLand).
+- Turn 6, seq 118: Zookeeper Mechan [owner=StemComplex, controller=StemComplex] moves Hand (StemComplex) -> Stack (CastSpell).
+- Turn 6, seq 120: Zookeeper Mechan [owner=StemComplex, controller=StemComplex] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 136: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 139: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 141: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 155: Shocking Sharpshooter [owner=unknown owner, controller=unknown controller] moves Library (StemComplex) -> Hand (StemComplex) (Draw).
+- Turn 8, seq 158: Mountain [owner=StemComplex, controller=StemComplex] moves Hand (StemComplex) -> Battlefield (PlayLand).
+- Turn 8, seq 159: Impact Tremors [owner=StemComplex, controller=StemComplex] moves Hand (StemComplex) -> Stack (CastSpell).
+- Turn 8, seq 161: Impact Tremors [owner=StemComplex, controller=StemComplex] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 162: Ravenous Robots [owner=StemComplex, controller=StemComplex] moves Hand (StemComplex) -> Stack (CastSpell).
+- Turn 8, seq 164: Ravenous Robots [owner=StemComplex, controller=StemComplex] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 185: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 188: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 189: Moment of Craving [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 193: Moment of Craving [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 9, seq 193: Ravenous Robots [owner=StemComplex, controller=StemComplex] moves Battlefield -> Graveyard (StemComplex) (SBA_ZeroToughness).
+- Turn 10, seq 216: object 345 [owner=unknown owner, controller=unknown controller] moves Library (StemComplex) -> Hand (StemComplex) (Draw).
+- Turn 10, seq 219: Shocking Sharpshooter [owner=StemComplex, controller=StemComplex] moves Hand (StemComplex) -> Stack (CastSpell).
+- Turn 10, seq 221: Shocking Sharpshooter [owner=StemComplex, controller=StemComplex] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 247: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 250: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 11, seq 251: Sinister Monolith [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 253: Sinister Monolith [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 277: Shock [owner=unknown owner, controller=unknown controller] moves Library (StemComplex) -> Hand (StemComplex) (Draw).
+- Turn 12, seq 280: Shock [owner=StemComplex, controller=StemComplex] moves Hand (StemComplex) -> Stack (CastSpell).
+- Turn 12, seq 284: Shock [owner=StemComplex, controller=StemComplex] moves Stack -> Graveyard (StemComplex) (Resolve).
+- Turn 12, seq 284: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 13, seq 304: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 307: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 13, seq 309: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 173 becomes object 287 [Plains].
+- Turn 1, seq 8: object 171 becomes object 288 [Authority of the Consuls].
+- Turn 2, seq 24: object 234 becomes object 290 [Zookeeper Mechan].
+- Turn 2, seq 27: object 227 becomes object 291 [Mountain].
+- Turn 2, seq 28: object 230 becomes object 292 [Boltwave].
+- Turn 2, seq 30: object 292 becomes object 294 [Boltwave].
+- Turn 3, seq 44: object 174 becomes object 295 [Leech Collector].
+- Turn 3, seq 47: object 172 becomes object 296 [Swamp].
+- Turn 3, seq 48: object 295 becomes object 297 [Leech Collector].
+- Turn 4, seq 64: object 235 becomes object 300 [Mountain].
+- Turn 4, seq 67: object 300 becomes object 301 [Mountain].
+- Turn 4, seq 68: object 232 becomes object 302 [Burst Lightning].
+- Turn 4, seq 73: object 302 becomes object 304 [Burst Lightning].
+- Turn 4, seq 73: object 297 becomes object 305 [Leech Collector].
+- Turn 5, seq 87: object 175 becomes object 306 [Starscape Cleric].
+- Turn 5, seq 90: object 170 becomes object 307 [Swamp].
+- Turn 5, seq 91: object 306 becomes object 308 [Starscape Cleric].
+- Turn 5, seq 98: object 231 becomes object 311 [Shock].
+- Turn 5, seq 102: object 311 becomes object 313 [Shock].
+- Turn 5, seq 102: object 308 becomes object 314 [Starscape Cleric].
+- Turn 6, seq 114: object 236 becomes object 315 [Mountain].
+- Turn 6, seq 117: object 315 becomes object 316 [Mountain].
+- Turn 6, seq 118: object 290 becomes object 317 [Zookeeper Mechan].
+- Turn 7, seq 136: object 176 becomes object 321 [Makeshift Binding].
+- Turn 7, seq 139: object 169 becomes object 322 [Marauding Blight-Priest].
+- Turn 8, seq 155: object 237 becomes object 326 [Shocking Sharpshooter].
+- Turn 8, seq 158: object 229 becomes object 327 [Mountain].
+- Turn 8, seq 159: object 228 becomes object 328 [Impact Tremors].
+- Turn 8, seq 162: object 233 becomes object 331 [Ravenous Robots].
+- Turn 9, seq 185: object 177 becomes object 337 [Swamp].
+- Turn 9, seq 188: object 337 becomes object 338 [Swamp].
+- Turn 9, seq 189: object 168 becomes object 339 [Moment of Craving].
+- Turn 9, seq 193: object 339 becomes object 343 [Moment of Craving].
+- Turn 9, seq 193: object 331 becomes object 344 [Ravenous Robots].
+- Turn 10, seq 216: object 238 becomes object 345 [object 238].
+- Turn 10, seq 219: object 326 becomes object 346 [Shocking Sharpshooter].
+- Turn 11, seq 247: object 178 becomes object 352 [Plains].
+- Turn 11, seq 250: object 352 becomes object 353 [Plains].
+- Turn 11, seq 251: object 167 becomes object 354 [Sinister Monolith].
+- Turn 12, seq 277: object 239 becomes object 361 [Shock].
+- Turn 12, seq 280: object 361 becomes object 362 [Shock].
+- Turn 12, seq 284: object 362 becomes object 364 [Shock].
+- Turn 12, seq 284: object 322 becomes object 365 [Marauding Blight-Priest].
+- Turn 13, seq 304: object 179 becomes object 366 [Rot-Curse Rakshasa].
+- Turn 13, seq 307: object 366 becomes object 367 [Rot-Curse Rakshasa].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Plains (object 287) from Hand (gian31) to Battlefield.
+- Turn 2: StemComplex plays Mountain (object 291) from Hand (StemComplex) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 296) from Hand (gian31) to Battlefield.
+- Turn 4: StemComplex plays Mountain (object 301) from Hand (StemComplex) to Battlefield.
+- Turn 5: gian31 plays Swamp (object 307) from Hand (gian31) to Battlefield.
+- Turn 6: StemComplex plays Mountain (object 316) from Hand (StemComplex) to Battlefield.
+- Turn 8: StemComplex plays Mountain (object 327) from Hand (StemComplex) to Battlefield.
+- Turn 9: gian31 plays Swamp (object 338) from Hand (gian31) to Battlefield.
+- Turn 11: gian31 plays Plains (object 353) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+TRIGGER LOOP SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Marauding Blight-Priest: casts=1; abilities=4 (triggered=4, activated=0) across turns [7, 8, 9, 10, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=4, other=3
+  observed effects: life -1, synthetic event
+- Authority of the Consuls: casts=1; abilities=3 (triggered=3, activated=0) across turns [1, 6, 8, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=0
+  observed effects: life +1
+- Impact Tremors: casts=1; abilities=2 (triggered=2, activated=0) across turns [8, 8, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=2, life_changes=2, other=2
+  observed effects: 1 damage, life -1, synthetic event
+- Shock: casts=2 across turns [11, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=2, life_changes=0, other=0
+  observed effects: 2 damage
+- Sinister Monolith: casts=1; abilities=1 (triggered=1, activated=0) across turns [11, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=1
+  observed effects: life +1, life -1, synthetic event
+- Boltwave: casts=1 across turns [2]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=1, other=1
+  observed effects: 3 damage, life -3, synthetic event
+- Burst Lightning: casts=1 across turns [4]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 2 damage
+- Leech Collector: casts=1 across turns [3]
+- Moment of Craving: casts=1 across turns [9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: P/T -2/-2, life +2
+- Ravenous Robots: casts=1 across turns [8]
+- Rot-Curse Rakshasa: casts=1 across turns [13]
+- Shocking Sharpshooter: casts=1 across turns [10]
+- Starscape Cleric: casts=1 across turns [5]
+- Zookeeper Mechan: casts=1 across turns [6]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 9 â€” None (active=gian31)
+  attacker: Marauding Blight-Priest (gian31) -> StemComplex; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 â€” None (active=StemComplex)
+  attacker: Zookeeper Mechan (StemComplex) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 â€” None (active=gian31)
+  attacker: Marauding Blight-Priest (gian31) -> StemComplex; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 â€” None (active=StemComplex)
+  attacker: Zookeeper Mechan (StemComplex) -> gian31; unblocked in this observed snapshot
+  attacker: Shocking Sharpshooter (StemComplex) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 11: Ability of Sinister Monolith (active=gian31) - Ability of Sinister Monolith: StemComplex loses 1 life; gian31 gains 1 life.
+- Turn 11: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: StemComplex loses 1 life.
+
+TECHNICAL APPENDIX â€” OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 167: Sinister Monolith | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 168: Moment of Craving | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 169: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 170: Swamp | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 171: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 172: Swamp | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 173: Plains | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 287: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 288: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 291: Mountain | controller=StemComplex | owner=StemComplex | zone=Battlefield (latest_object_observation)
+- 292: Boltwave | controller=StemComplex | owner=StemComplex | zone=Stack (latest_object_observation)
+- 294: Boltwave | controller=StemComplex | owner=StemComplex | zone=Graveyard (latest_object_observation)
+- 295: Leech Collector | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 296: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 297: Leech Collector | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 301: Mountain | controller=StemComplex | owner=StemComplex | zone=Battlefield (latest_object_observation)
+- 302: Burst Lightning | controller=StemComplex | owner=StemComplex | zone=Stack (latest_object_observation)
+- 304: Burst Lightning | controller=StemComplex | owner=StemComplex | zone=Graveyard (latest_object_observation)
+- 305: Leech Collector | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 306: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 307: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 308: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 311: Shock | controller=StemComplex | owner=StemComplex | zone=Stack (latest_object_observation)
+- 313: Shock | controller=StemComplex | owner=StemComplex | zone=Graveyard (latest_object_observation)
+- 314: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 316: Mountain | controller=StemComplex | owner=StemComplex | zone=Battlefield (latest_object_observation)
+- 317: Zookeeper Mechan | controller=StemComplex | owner=StemComplex | zone=Battlefield (latest_object_observation)
+- 320: object 320 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 321: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 322: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 327: Mountain | controller=StemComplex | owner=StemComplex | zone=Battlefield (latest_object_observation)
+- 328: Impact Tremors | controller=StemComplex | owner=StemComplex | zone=Stack (latest_object_observation)
+- 331: Ravenous Robots | controller=StemComplex | owner=StemComplex | zone=Battlefield (latest_object_observation)
+- 334: object 334 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 335: object 335 | controller=StemComplex | owner=StemComplex | zone=unknown (inferred unknown) (latest_object_observation)
+- 336: object 336 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 337: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 338: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 339: Moment of Craving | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 342: object 342 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 343: Moment of Craving | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 344: Ravenous Robots | controller=StemComplex | owner=StemComplex | zone=Graveyard (latest_object_observation)
+- 346: Shocking Sharpshooter | controller=StemComplex | owner=StemComplex | zone=Battlefield (latest_object_observation)
+- 349: object 349 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 350: object 350 | controller=StemComplex | owner=StemComplex | zone=unknown (inferred unknown) (latest_object_observation)
+- 351: object 351 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 352: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 353: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 354: Sinister Monolith | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 359: object 359 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 360: object 360 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 362: Shock | controller=StemComplex | owner=StemComplex | zone=Stack (latest_object_observation)
+- 364: Shock | controller=StemComplex | owner=StemComplex | zone=Graveyard (latest_object_observation)
+- 365: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 366: Rot-Curse Rakshasa | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 367: Rot-Curse Rakshasa | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+
+TECHNICAL APPENDIX â€” CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+StemComplex: 19 total items
+  zones: Battlefield=7, Graveyard=5, Stack=5, unknown=2
+  objects: Mountain x4, Shock x4, Boltwave x2, Burst Lightning x2, Ravenous Robots x2, Impact Tremors, Shocking Sharpshooter, Zookeeper Mechan, object 335, object 350
+gian31: 37 total items
+  zones: Battlefield=13, Hand=6, Stack=10, unknown=8
+  objects: Swamp x6, Plains x4, Leech Collector x3, Marauding Blight-Priest x3, Moment of Craving x3, Starscape Cleric x3, Authority of the Consuls x2, Rot-Curse Rakshasa x2, Sinister Monolith x2, Makeshift Binding, object 320, object 334
+
+TECHNICAL APPENDIX â€” LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (13): Leech Collector, Leech Collector, Marauding Blight-Priest, Marauding Blight-Priest, Moment of Craving, Plains, Plains, Rot-Curse Rakshasa, Starscape Cleric, Starscape Cleric, Swamp, Swamp, Swamp
+  Graveyard: 0 card(s)
+StemComplex:
+  Battlefield (7): Mountain, Mountain, Mountain, Mountain, Ravenous Robots, Shocking Sharpshooter, Zookeeper Mechan
+  Graveyard: 5 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+10 objects have no resolved final zone and are omitted from the known board state.
+StemComplex: 2 unknown object(s)
+gian31: 8 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=6, Stack=15
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+StemComplex:
+  Battlefield (7): Mountain, Mountain, Mountain, Zookeeper Mechan, Mountain, Impact Tremors, Shocking Sharpshooter
+  Graveyard (5): Boltwave, Burst Lightning, Shock, Ravenous Robots, Shock
+gian31:
+  Battlefield (7): Plains, Authority of the Consuls, Swamp, Swamp, Swamp, Plains, Sinister Monolith
+  Graveyard (4): Leech Collector, Starscape Cleric, Moment of Craving, Marauding Blight-Priest
+Known non-persistent entries (counts only):
+  StemComplex: Limbo=1
+  gian31: Hand=1, Limbo=4, Stack=1
+  unknown: Hand=1, Library=94, Limbo=4
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=2
+- Turn 2: StemComplex Battlefield=1; StemComplex Graveyard=1; gian31 Battlefield=2
+- Turn 3: StemComplex Battlefield=1; StemComplex Graveyard=1; gian31 Battlefield=4
+- Turn 4: StemComplex Battlefield=2; StemComplex Graveyard=2; gian31 Battlefield=3; gian31 Graveyard=1
+- Turn 5: StemComplex Battlefield=2; StemComplex Graveyard=3; gian31 Battlefield=4; gian31 Graveyard=2
+- Turn 6: StemComplex Battlefield=4; StemComplex Graveyard=3; gian31 Battlefield=4; gian31 Graveyard=2
+- Turn 7: StemComplex Battlefield=4; StemComplex Graveyard=3; gian31 Battlefield=5; gian31 Graveyard=2
+- Turn 8: StemComplex Battlefield=7; StemComplex Graveyard=3; gian31 Battlefield=5; gian31 Graveyard=2
+- Turn 9: StemComplex Battlefield=6; StemComplex Graveyard=4; gian31 Battlefield=6; gian31 Graveyard=3
+- Turn 10: StemComplex Battlefield=7; StemComplex Graveyard=4; gian31 Battlefield=6; gian31 Graveyard=3
+- Turn 11: StemComplex Battlefield=7; StemComplex Graveyard=4; gian31 Battlefield=8; gian31 Graveyard=3
+- Turn 12: StemComplex Battlefield=7; StemComplex Graveyard=5; gian31 Battlefield=7; gian31 Graveyard=4
+- Turn 13: StemComplex Battlefield=7; StemComplex Graveyard=5; gian31 Battlefield=8; gian31 Graveyard=4
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Leech Collector resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Zookeeper Mechan resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Impact Tremors resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Ravenous Robots resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Shocking Sharpshooter resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Sinister Monolith resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Rot-Curse Rakshasa resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
