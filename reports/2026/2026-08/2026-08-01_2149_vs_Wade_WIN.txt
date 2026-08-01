@@ -1,0 +1,674 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: Wade, gian31
+Seat map: Seat 1=Wade, Seat 2=gian31
+Turn range (known): 1 - 16
+Records: 50
+Action chains: 33
+Winner: gian31
+Final life: {'Wade': 2, 'gian31': 21}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Technical note: low-level runtime signals remain in the JSON technical appendix; they are not repeated under each action.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - no narrative actions observed; protocol-only observations, if any, remain in the technical sections.
+
+Turn 2
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=353)
+      effects: none immediately observed
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 353) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 353) Stack -> Battlefield (Resolve; shared object ID)
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      gian31: Battlefield: Leech Collector [349], Plains [352]
+      Wade: Battlefield: Mountain [350]
+
+Turn 3
+  - no narrative actions observed; protocol-only observations, if any, remain in the technical sections.
+
+Turn 4
+  - Rot-Curse Rakshasa [valid_resolution_no_immediate_mutation] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=359)
+      effects: none immediately observed
+      narrative: Rot-Curse Rakshasa resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Rot-Curse Rakshasa (object 359) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Rot-Curse Rakshasa (object 359) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=353)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+    life: gian31 20 -> 21
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      gian31: Battlefield: Leech Collector [349], Plains [352], Swamp [358]
+      Wade: Battlefield: Mountain [350], Mountain [356]
+
+Turn 5
+  - Thistledown Players [valid_resolution_no_immediate_mutation] (active=Wade, phase=Phase_Main1, controller=Wade, owner=Wade, source_object=365)
+      effects: none immediately observed
+      narrative: Thistledown Players resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Thistledown Players (object 365) Hand (Wade) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Thistledown Players (object 365) Stack -> Battlefield (Resolve; shared object ID)
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      gian31: Battlefield: Leech Collector [349], Plains [352], Swamp [358]
+      Wade: Battlefield: Mountain [350], Mountain [356], Plains [364]
+
+Turn 6
+  - Leech Collector [valid_resolution_no_immediate_mutation] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=371)
+      effects: none immediately observed
+      narrative: Leech Collector resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Leech Collector (object 371) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leech Collector (object 371) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=353)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=371)
+      effects: none immediately observed
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  - Bloodletting [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=377)
+      effects: life -2
+      narrative: Bloodletting: Wade loses 2 life.
+      protocol-linked zone transfer: Bloodletting (object 377) Exile -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: object 379 (object 379) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+    life: gian31 21 -> 19
+    life: gian31 19 -> 20
+    life: Wade 20 -> 18
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      gian31: Battlefield: Godless Shrine [370], Leech Collector [349], Plains [352], Swamp [358]
+      Wade: Battlefield: Mountain [350], Mountain [356], Plains [364]
+      unknown: Graveyard: object 379 [379]
+
+Turn 7
+  - Burst Lightning [observed_semantic_effect] (active=Wade, phase=Phase_Main1, controller=Wade, owner=Wade, source_object=382)
+      effects: 2 damage
+      narrative: Burst Lightning: Leech Collector takes 2 damage.
+      protocol-linked zone transfer: Burst Lightning (object 382) Hand (Wade) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Burst Lightning (object 384) Stack -> Graveyard (Wade) (Resolve; shared object ID)
+      protocol-linked zone transfer: Leech Collector (object 385) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+  - Flowerfoot Swordmaster [valid_resolution_no_immediate_mutation] (active=Wade, phase=Phase_Main1, controller=Wade, owner=Wade, source_object=386)
+      effects: none immediately observed
+      narrative: Flowerfoot Swordmaster resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Flowerfoot Swordmaster (object 386) Hand (Wade) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Flowerfoot Swordmaster (object 386) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Flowerfoot Swordmaster [observed_semantic_effect] (active=Wade, phase=Phase_Main1, controller=Wade, owner=Wade, source_object=386)
+      effects: token creation
+      narrative: Ability of Flowerfoot Swordmaster: a token is created.
+      token created: Flowerfoot Swordmaster (object 391, controller=Wade) 1/1
+  - Ability of Thistledown Players [valid_resolution_no_immediate_mutation] (active=Wade, phase=Phase_Combat, step=Step_DeclareAttack, controller=Wade, owner=Wade, source_object=365)
+      effects: none immediately observed
+      narrative: Ability of Thistledown Players resolves with no immediate observed mutation.
+  Combat snapshots observed (active=Wade; frames: DeclareAttack -> DeclareBlock):
+      attackers: Thistledown Players [365] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat damage assignment: unknown unless explicitly observed
+    life (combat-related snapshot; exact source unavailable): gian31 20 -> 17
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      gian31: Battlefield: Godless Shrine [370], Leech Collector [349], Plains [352], Swamp [358]; Graveyard: Leech Collector [385]
+      Wade: Battlefield: Mountain [350], Mountain [356], Mountain [381], Plains [364]; Graveyard: Burst Lightning [384]
+      unknown: Graveyard: object 379 [379]
+
+Turn 8
+  - Starscape Cleric [valid_resolution_no_immediate_mutation] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=395)
+      effects: none immediately observed
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 395) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 395) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=353)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=395)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Wade loses 1 life.
+  - Demon Wall [valid_resolution_no_immediate_mutation] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=400)
+      effects: none immediately observed
+      narrative: Demon Wall resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Demon Wall (object 400) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Demon Wall (object 400) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=353)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=395)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Wade loses 1 life.
+    life: gian31 17 -> 18
+    life: Wade 18 -> 17
+    life: gian31 18 -> 19
+    life: Wade 17 -> 16
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      gian31: Battlefield: Godless Shrine [370], Leech Collector [349], Plains [352], Swamp [358], Swamp [394]; Graveyard: Leech Collector [385]
+      Wade: Battlefield: Mountain [350], Mountain [356], Mountain [381], Plains [364]; Graveyard: Burst Lightning [384]
+      unknown: Graveyard: object 379 [379]
+
+Turn 9
+  - Fire Magic [observed_semantic_effect] (active=Wade, phase=Phase_Main1, controller=Wade, owner=Wade, source_object=407)
+      effects: 1 damage, 1 damage, 1 damage, 1 damage, 1 damage, 1 damage
+      narrative: Fire Magic: Rot-Curse Rakshasa takes 1 damage; Thistledown Players takes 1 damage; Flowerfoot Swordmaster takes 1 damage; Flowerfoot Swordmaster takes 1 damage; Starscape Cleric takes 1 damage; Demon Wall takes 1 damage.
+      protocol-linked zone transfer: Fire Magic (object 407) Hand (Wade) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fire Magic (object 409) Stack -> Graveyard (Wade) (Resolve; shared object ID)
+      protocol-linked zone transfer: object 410 (object 410) Battlefield -> Graveyard (Wade) (SBA_Damage; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 411) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+  - Ability of Flowerfoot Swordmaster [observed_semantic_effect] (active=Wade, phase=Phase_Main1, controller=Wade, owner=Wade, source_object=386)
+      effects: P/T +1/+0, P/T +1/+0
+      narrative: Ability of Flowerfoot Swordmaster: Thistledown Players gets +1/+0; Flowerfoot Swordmaster gets +1/+0.
+  - Squeak By [observed_semantic_effect] (active=Wade, phase=Phase_Main1, controller=Wade, owner=Wade, source_object=412)
+      effects: P/T +1/+1
+      narrative: Squeak By: Flowerfoot Swordmaster gets +1/+1.
+      protocol-linked zone transfer: Squeak By (object 412) Hand (Wade) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Cheeky House-Mouse (object 416) Stack -> Exile (Resolve; shared object ID)
+  Combat snapshots observed (active=Wade; frames: DeclareAttack -> DeclareBlock):
+      attackers: Flowerfoot Swordmaster [386] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat damage assignment: unknown unless explicitly observed
+    life (combat-related snapshot; exact source unavailable): gian31 19 -> 16
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      gian31: Battlefield: Godless Shrine [370], Leech Collector [349], Plains [352], Swamp [358], Swamp [394]; Graveyard: Leech Collector [385], Starscape Cleric [411]
+      Wade: Battlefield: Mountain [350], Mountain [356], Mountain [381], Plains [364]; Graveyard: Burst Lightning [384], Fire Magic [409]; Exile: Cheeky House-Mouse [416]
+      unknown: Graveyard: object 379 [379], object 410 [410]
+
+Turn 10
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=420)
+      effects: none immediately observed
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 420) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 420) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=353)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=420)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Wade loses 1 life.
+    life: gian31 16 -> 17
+    life: Wade 16 -> 15
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      gian31: Battlefield: Godless Shrine [370], Leech Collector [349], Plains [352], Swamp [358], Swamp [394], Swamp [419]; Graveyard: Leech Collector [385], Starscape Cleric [411]
+      Wade: Battlefield: Mountain [350], Mountain [356], Mountain [381], Plains [364]; Graveyard: Burst Lightning [384], Fire Magic [409]; Exile: Cheeky House-Mouse [416]
+      unknown: Graveyard: object 379 [379], object 410 [410]
+
+Turn 11
+  - Cheeky House-Mouse [valid_resolution_no_immediate_mutation] (active=Wade, phase=Phase_Main1, controller=Wade, owner=Wade, source_object=428)
+      effects: none immediately observed
+      narrative: Cheeky House-Mouse resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Cheeky House-Mouse (object 428) Exile -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Cheeky House-Mouse (object 428) Stack -> Battlefield (Resolve; shared object ID)
+  - Veteran Guardmouse [valid_resolution_no_immediate_mutation] (active=Wade, phase=Phase_Main1, controller=Wade, owner=Wade, source_object=431)
+      effects: none immediately observed
+      narrative: Veteran Guardmouse resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Veteran Guardmouse (object 431) Hand (Wade) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Veteran Guardmouse (object 431) Stack -> Battlefield (Resolve; shared object ID)
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      gian31: Battlefield: Godless Shrine [370], Leech Collector [349], Plains [352], Swamp [358], Swamp [394], Swamp [419]; Graveyard: Leech Collector [385], Starscape Cleric [411]
+      Wade: Battlefield: Mountain [350], Mountain [356], Mountain [381], Plains [364], Plains [427]; Graveyard: Burst Lightning [384], Fire Magic [409]; Exile: Cheeky House-Mouse [416]
+      unknown: Graveyard: object 379 [379], object 410 [410]
+
+Turn 12
+  - Demon Wall [valid_resolution_no_immediate_mutation] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=437)
+      effects: none immediately observed
+      narrative: Demon Wall resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Demon Wall (object 437) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Demon Wall (object 437) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=353)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=420)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Wade loses 1 life.
+    life: gian31 17 -> 18
+    life: Wade 15 -> 14
+
+Turn 13
+  - Roughshod Duo [valid_resolution_no_immediate_mutation] (active=Wade, phase=Phase_Main1, controller=Wade, owner=Wade, source_object=443)
+      effects: none immediately observed
+      narrative: Roughshod Duo resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Roughshod Duo (object 443) Hand (Wade) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Roughshod Duo (object 443) Stack -> Battlefield (Resolve; shared object ID)
+
+Turn 14
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=448)
+      effects: none immediately observed
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 448) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 448) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=353)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=420)
+      effects: life -2
+      narrative: Ability of Marauding Blight-Priest: Wade loses 2 life.
+    life: gian31 18 -> 19
+    life: Wade 14 -> 12
+
+Turn 15
+  - Ability of Roughshod Duo [observed_semantic_effect] (active=Wade, phase=Phase_Main1, controller=Wade, owner=Wade, source_object=443)
+      effects: P/T +1/+1
+      narrative: Ability of Roughshod Duo: Cheeky House-Mouse gets +1/+1.
+  - Brambleguard Captain [valid_resolution_no_immediate_mutation] (active=Wade, phase=Phase_Main1, controller=Wade, owner=Wade, source_object=456)
+      effects: none immediately observed
+      narrative: Brambleguard Captain resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Brambleguard Captain (object 456) Hand (Wade) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Brambleguard Captain (object 456) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Brambleguard Captain [observed_semantic_effect] (active=Wade, phase=Phase_Combat, step=Step_BeginCombat, controller=Wade, owner=Wade, source_object=456)
+      effects: P/T +2/+0
+      narrative: Ability of Brambleguard Captain: Roughshod Duo gets +2/+0.
+  - Ability of Thistledown Players [valid_resolution_no_immediate_mutation] (active=Wade, phase=Phase_Combat, step=Step_DeclareAttack, controller=Wade, owner=Wade, source_object=365)
+      effects: none immediately observed
+      narrative: Ability of Thistledown Players resolves with no immediate observed mutation.
+  Combat snapshots observed (active=Wade; frames: DeclareAttack):
+      attackers: Thistledown Players [365] (unblocked, observed P/T 3/3), Flowerfoot Swordmaster [386] (unblocked, observed P/T 1/2), Cheeky House-Mouse [428] (unblocked, observed P/T 3/2), Veteran Guardmouse [431] (unblocked, observed P/T 3/4), Roughshod Duo [443] (unblocked, observed P/T 5/2)
+      blockers: none identified
+      combat damage assignment: unknown unless explicitly observed
+    life (combat-related snapshot; exact source unavailable): gian31 19 -> 10
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      gian31: Battlefield: Godless Shrine [370], Leech Collector [349], Plains [352], Swamp [358], Swamp [394], Swamp [419]; Graveyard: Demon Wall [464], Demon Wall [467], Leech Collector [385], Starscape Cleric [411]
+      Wade: Battlefield: Mountain [350], Mountain [356], Mountain [381], Plains [364], Plains [427]; Graveyard: Burst Lightning [384], Cheeky House-Mouse [465], Fire Magic [409], Roughshod Duo [468]; Exile: Cheeky House-Mouse [416]
+      unknown: Graveyard: object 379 [379], object 410 [410]
+
+Turn 16
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=470)
+      effects: none immediately observed
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 470) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 470) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=353)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=420)
+      effects: life -2
+      narrative: Ability of Marauding Blight-Priest: Wade loses 2 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=470)
+      effects: life +2
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 2 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=420)
+      effects: life -2
+      narrative: Ability of Marauding Blight-Priest: Wade loses 2 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=470)
+      effects: life +2
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 2 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=420)
+      effects: life -2
+      narrative: Ability of Marauding Blight-Priest: Wade loses 2 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=470)
+      effects: life +2
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 2 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=420)
+      effects: life -2
+      narrative: Ability of Marauding Blight-Priest: Wade loses 2 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=470)
+      effects: life +2
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 2 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=420)
+      effects: life -2
+      narrative: Ability of Marauding Blight-Priest: Wade loses 2 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=470)
+      effects: life +2
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 2 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=420)
+      effects: life -2
+      narrative: Ability of Marauding Blight-Priest: Wade loses 2 life.
+    life: gian31 10 -> 11
+    life: Wade 12 -> 10
+    life: gian31 11 -> 13
+    life: Wade 10 -> 8
+    life: gian31 13 -> 15
+    life: Wade 8 -> 6
+    life: gian31 15 -> 17
+    life: Wade 6 -> 4
+    life: gian31 17 -> 19
+    life: Wade 4 -> 2
+    life: gian31 19 -> 21
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+- Turn 1: no narrative actions observed; protocol-only observations, if any, remain in zone transfers.
+- Turn 3: no narrative actions observed; protocol-only observations, if any, remain in zone transfers.
+UNATTRIBUTED LIFE CHANGES
+------------------------------------------------------------
+- Turn 6: gian31 21 -> 19. No source event correlated in captured records.
+- Turn 7: gian31 20 -> 17. Combat declaration observed; exact assignment unavailable.
+- Turn 9: gian31 19 -> 16. Combat declaration observed; exact assignment unavailable.
+- Turn 15: gian31 19 -> 10. Combat declaration observed; exact assignment unavailable.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 6: Leech Collector [owner=gian31, controller=gian31] moves Hand (gian31) -> Library (gian31) (Put).
+- Turn 1, seq 9: Mountain [owner=Wade, controller=Wade] moves Hand (Wade) -> Battlefield (PlayLand).
+- Turn 2, seq 23: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 26: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 27: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 29: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 43: object 355 [owner=unknown owner, controller=unknown controller] moves Library (Wade) -> Hand (Wade) (Draw).
+- Turn 3, seq 46: Mountain [owner=Wade, controller=Wade] moves Hand (Wade) -> Battlefield (PlayLand).
+- Turn 4, seq 60: Godless Shrine [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 63: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 64: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 66: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 82: object 363 [owner=unknown owner, controller=unknown controller] moves Library (Wade) -> Hand (Wade) (Draw).
+- Turn 5, seq 85: Plains [owner=Wade, controller=Wade] moves Hand (Wade) -> Battlefield (PlayLand).
+- Turn 5, seq 86: Thistledown Players [owner=Wade, controller=Wade] moves Hand (Wade) -> Stack (CastSpell).
+- Turn 5, seq 88: Thistledown Players [owner=Wade, controller=Wade] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 102: Leech Collector [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 106: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 107: Leech Collector [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 109: Leech Collector [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 114: Bloodletting [owner=gian31, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 6, seq 116: object 379 [owner=unknown owner, controller=unknown controller] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 7, seq 131: object 380 [owner=unknown owner, controller=unknown controller] moves Library (Wade) -> Hand (Wade) (Draw).
+- Turn 7, seq 134: Mountain [owner=Wade, controller=Wade] moves Hand (Wade) -> Battlefield (PlayLand).
+- Turn 7, seq 135: Burst Lightning [owner=Wade, controller=Wade] moves Hand (Wade) -> Stack (CastSpell).
+- Turn 7, seq 140: Burst Lightning [owner=Wade, controller=Wade] moves Stack -> Graveyard (Wade) (Resolve).
+- Turn 7, seq 140: Leech Collector [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 7, seq 141: Flowerfoot Swordmaster [owner=Wade, controller=Wade] moves Hand (Wade) -> Stack (CastSpell).
+- Turn 7, seq 145: Flowerfoot Swordmaster [owner=Wade, controller=Wade] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 171: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 174: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 175: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 178: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 183: Demon Wall [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 185: Demon Wall [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 204: object 405 [owner=unknown owner, controller=unknown controller] moves Library (Wade) -> Hand (Wade) (Draw).
+- Turn 9, seq 207: Fire Magic [owner=Wade, controller=Wade] moves Hand (Wade) -> Stack (CastSpell).
+- Turn 9, seq 210: Fire Magic [owner=Wade, controller=Wade] moves Stack -> Graveyard (Wade) (Resolve).
+- Turn 9, seq 210: object 410 [owner=unknown owner, controller=unknown controller] moves Battlefield -> Graveyard (Wade) (SBA_Damage).
+- Turn 9, seq 210: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 9, seq 211: Squeak By [owner=Wade, controller=Wade] moves Hand (Wade) -> Stack (CastSpell).
+- Turn 9, seq 217: Cheeky House-Mouse [owner=Wade, controller=Wade] moves Stack -> Exile (Resolve).
+- Turn 10, seq 237: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 240: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 241: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 243: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 262: object 426 [owner=unknown owner, controller=unknown controller] moves Library (Wade) -> Hand (Wade) (Draw).
+- Turn 11, seq 265: Plains [owner=Wade, controller=Wade] moves Hand (Wade) -> Battlefield (PlayLand).
+- Turn 11, seq 266: Cheeky House-Mouse [owner=Wade, controller=Wade] moves Exile -> Stack (CastSpell).
+- Turn 11, seq 268: Cheeky House-Mouse [owner=Wade, controller=Wade] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 269: Veteran Guardmouse [owner=Wade, controller=Wade] moves Hand (Wade) -> Stack (CastSpell).
+- Turn 11, seq 271: Veteran Guardmouse [owner=Wade, controller=Wade] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 286: Demon Wall [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 289: Demon Wall [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 291: Demon Wall [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 310: object 442 [owner=unknown owner, controller=unknown controller] moves Library (Wade) -> Hand (Wade) (Draw).
+- Turn 13, seq 313: Roughshod Duo [owner=Wade, controller=Wade] moves Hand (Wade) -> Stack (CastSpell).
+- Turn 13, seq 315: Roughshod Duo [owner=Wade, controller=Wade] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 330: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 333: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 335: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 354: object 455 [owner=unknown owner, controller=unknown controller] moves Library (Wade) -> Hand (Wade) (Draw).
+- Turn 15, seq 357: Brambleguard Captain [owner=Wade, controller=Wade] moves Hand (Wade) -> Stack (CastSpell).
+- Turn 15, seq 363: Brambleguard Captain [owner=Wade, controller=Wade] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 385: Demon Wall [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 15, seq 385: Cheeky House-Mouse [owner=Wade, controller=Wade] moves Battlefield -> Graveyard (Wade) (SBA_Damage).
+- Turn 15, seq 385: Demon Wall [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 15, seq 385: Roughshod Duo [owner=Wade, controller=Wade] moves Battlefield -> Graveyard (Wade) (SBA_Damage).
+- Turn 16, seq 395: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 398: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 400: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: Wade plays Mountain (object 350) from Hand (Wade) to Battlefield.
+- Turn 2: gian31 plays Plains (object 352) from Hand (gian31) to Battlefield.
+- Turn 3: Wade plays Mountain (object 356) from Hand (Wade) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 358) from Hand (gian31) to Battlefield.
+- Turn 5: Wade plays Plains (object 364) from Hand (Wade) to Battlefield.
+- Turn 6: gian31 plays Godless Shrine (object 370) from Hand (gian31) to Battlefield.
+- Turn 7: Wade plays Mountain (object 381) from Hand (Wade) to Battlefield.
+- Turn 8: gian31 plays Swamp (object 394) from Hand (gian31) to Battlefield.
+- Turn 10: gian31 plays Swamp (object 419) from Hand (gian31) to Battlefield.
+- Turn 11: Wade plays Plains (object 427) from Hand (Wade) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- Turn 8: Case of the Uneaten Feast -> Starscape Cleric; observed repeated transitions=2; net life: Wade -2, gian31 +2.
+  Individual ability records remain in the timeline.
+- Turn 16: Marauding Blight-Priest -> Bloodthirsty Conqueror; observed repeated transitions=5; net life: Wade -10, gian31 +10.
+  Individual ability records remain in the timeline.
+TRIGGER LOOP SUMMARY
+------------------------------------------------------------
+- Turn 16: Marauding Blight-Priest â†” Bloodthirsty Conqueror; observed repetitions=5 (cycle length 2).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Marauding Blight-Priest: casts=1; abilities=9 (triggered=9, activated=0) across turns [10, 10, 12, 14, 16, 16, 16, 16, 16, 16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=9, other=4
+  observed effects: life -1, life -2, synthetic event
+- Case of the Uneaten Feast: casts=1; abilities=8 (triggered=8, activated=0) across turns [2, 4, 6, 8, 8, 10, 12, 14, 16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=8, other=0
+  observed effects: life +1
+- Bloodthirsty Conqueror: casts=1; abilities=5 (triggered=5, activated=0) across turns [16, 16, 16, 16, 16, 16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=0
+  observed effects: life +2
+- Flowerfoot Swordmaster: casts=1; abilities=2 (triggered=2, activated=0) across turns [7, 7, 9]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: P/T +1/+0, token creation
+- Starscape Cleric: casts=1; abilities=2 (triggered=2, activated=0) across turns [8, 8, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=1
+  observed effects: life -1, synthetic event
+- Thistledown Players: casts=1; abilities=2 (triggered=2, activated=0) across turns [5, 7, 15]
+- Brambleguard Captain: casts=1; abilities=1 (triggered=1, activated=0) across turns [15, 15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: P/T +2/+0
+- Demon Wall: casts=2 across turns [8, 12]
+- Leech Collector: casts=1; abilities=1 (triggered=1, activated=0) across turns [6, 6]
+- Roughshod Duo: casts=1; abilities=1 (triggered=1, activated=0) across turns [13, 15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: P/T +1/+1
+- Bloodletter of Aclazotz: casts=1 across turns [14]
+- Bloodletting: casts=1 across turns [6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: life -2, synthetic event
+- Burst Lightning: casts=1 across turns [7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 2 damage
+- Cheeky House-Mouse: casts=1 across turns [11]
+- Fire Magic: casts=1 across turns [9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=6, life_changes=0, other=0
+  observed effects: 1 damage
+- Rot-Curse Rakshasa: casts=1 across turns [4]
+- Squeak By: casts=1 across turns [9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: P/T +1/+1
+- Veteran Guardmouse: casts=1 across turns [11]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 7 â€” None (active=Wade)
+  attacker: Thistledown Players (Wade) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 â€” None (active=Wade)
+  attacker: Flowerfoot Swordmaster (Wade) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 15 â€” None (active=Wade)
+  attacker: Thistledown Players (Wade) -> gian31; unblocked in this observed snapshot
+  attacker: Flowerfoot Swordmaster (Wade) -> gian31; unblocked in this observed snapshot
+  attacker: Cheeky House-Mouse (Wade) -> gian31; unblocked in this observed snapshot
+  attacker: Veteran Guardmouse (Wade) -> gian31; unblocked in this observed snapshot
+  attacker: Roughshod Duo (Wade) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 7: Ability of Thistledown Players (active=Wade) - Ability of Thistledown Players resolves with no immediate observed mutation.
+- Turn 15: Ability of Brambleguard Captain (active=Wade) - Ability of Brambleguard Captain: Roughshod Duo gets +2/+0.
+- Turn 15: Ability of Thistledown Players (active=Wade) - Ability of Thistledown Players resolves with no immediate observed mutation.
+
+TECHNICAL APPENDIX â€” OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 229: Sinister Monolith | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 230: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 231: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 232: Swamp | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 233: Sheltered by Ghosts | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 234: Scoured Barrens | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 235: Sinister Monolith | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 289: Leech Collector | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 290: Demon Wall | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 291: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 292: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 293: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 294: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 295: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 349: Leech Collector | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 350: Mountain | controller=Wade | owner=Wade | zone=Battlefield (latest_object_observation)
+- 351: Rot-Curse Rakshasa | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 352: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 353: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 356: Mountain | controller=Wade | owner=Wade | zone=Battlefield (latest_object_observation)
+- 357: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 358: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 359: Rot-Curse Rakshasa | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 362: object 362 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 364: Plains | controller=Wade | owner=Wade | zone=Battlefield (latest_object_observation)
+- 365: Thistledown Players | controller=Wade | owner=Wade | zone=Battlefield (latest_object_observation)
+- 369: Leech Collector | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 370: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 371: Leech Collector | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 374: object 374 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 375: object 375 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 376: Bloodletting | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 377: Bloodletting | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 381: Mountain | controller=Wade | owner=Wade | zone=Battlefield (latest_object_observation)
+- 382: Burst Lightning | controller=Wade | owner=Wade | zone=Stack (latest_object_observation)
+- 384: Burst Lightning | controller=Wade | owner=Wade | zone=Battlefield (latest_object_observation)
+- 385: Leech Collector | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 386: Flowerfoot Swordmaster | controller=Wade | owner=Wade | zone=Battlefield (latest_object_observation)
+- 390: object 390 | controller=Wade | owner=Wade | zone=unknown (inferred unknown) (latest_object_observation)
+- 391: Flowerfoot Swordmaster | controller=Wade | owner=Wade | zone=Hand (latest_object_observation)
+- 392: object 392 | controller=Wade | owner=Wade | zone=unknown (inferred unknown) (latest_object_observation)
+- 393: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 394: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 395: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 398: object 398 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 399: object 399 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 400: Demon Wall | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 403: object 403 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 404: object 404 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 407: Fire Magic | controller=Wade | owner=Wade | zone=Stack (latest_object_observation)
+- 409: Fire Magic | controller=Wade | owner=Wade | zone=Battlefield (latest_object_observation)
+- 411: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 412: Squeak By | controller=Wade | owner=Wade | zone=Stack (latest_object_observation)
+- 413: Squeak By | controller=Wade | owner=Wade | zone=unknown (inferred unknown) (latest_object_observation)
+- 414: object 414 | controller=Wade | owner=Wade | zone=unknown (inferred unknown) (latest_object_observation)
+- 416: Cheeky House-Mouse | controller=Wade | owner=Wade | zone=Battlefield (latest_object_observation)
+- 417: Squeak By | controller=Wade | owner=Wade | zone=unknown (inferred unknown) (latest_object_observation)
+- 418: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 419: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 420: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 424: object 424 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 425: object 425 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 427: Plains | controller=Wade | owner=Wade | zone=Battlefield (latest_object_observation)
+- 428: Cheeky House-Mouse | controller=Wade | owner=Wade | zone=Battlefield (latest_object_observation)
+- 429: Squeak By | controller=Wade | owner=Wade | zone=Battlefield (latest_object_observation)
+- 431: Veteran Guardmouse | controller=Wade | owner=Wade | zone=Battlefield (latest_object_observation)
+- 436: Demon Wall | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 437: Demon Wall | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 440: object 440 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 441: object 441 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 443: Roughshod Duo | controller=Wade | owner=Wade | zone=Battlefield (latest_object_observation)
+- 447: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 448: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 453: object 453 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 454: object 454 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 456: Brambleguard Captain | controller=Wade | owner=Wade | zone=Battlefield (latest_object_observation)
+- 461: object 461 | controller=Wade | owner=Wade | zone=unknown (inferred unknown) (latest_object_observation)
+- 462: object 462 | controller=Wade | owner=Wade | zone=unknown (inferred unknown) (latest_object_observation)
+- 463: object 463 | controller=Wade | owner=Wade | zone=unknown (inferred unknown) (latest_object_observation)
+- 464: Demon Wall | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 465: Cheeky House-Mouse | controller=Wade | owner=Wade | zone=Battlefield (latest_object_observation)
+- 466: Squeak By | controller=Wade | owner=Wade | zone=Battlefield (latest_object_observation)
+- 467: Demon Wall | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 468: Roughshod Duo | controller=Wade | owner=Wade | zone=Battlefield (latest_object_observation)
+- 469: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 470: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 476: object 476 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 477: object 477 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 478: object 478 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 479: object 479 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 480: object 480 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 481: object 481 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 482: object 482 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 483: object 483 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 484: object 484 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 485: object 485 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 486: object 486 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 487: object 487 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 488: object 488 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX â€” CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Wade: 30 total items
+  zones: Battlefield=18, Hand=1, Stack=3, unknown=8
+  objects: Squeak By x5, Cheeky House-Mouse x3, Mountain x3, Burst Lightning x2, Fire Magic x2, Flowerfoot Swordmaster x2, Plains x2, Roughshod Duo x2, Brambleguard Captain, Thistledown Players, Veteran Guardmouse, object 390
+gian31: 69 total items
+  zones: Battlefield=18, Hand=16, Stack=2, unknown=33
+  objects: Swamp x7, Demon Wall x6, Leech Collector x5, Case of the Uneaten Feast x3, Starscape Cleric x3, Bloodletter of Aclazotz x2, Bloodletting x2, Bloodthirsty Conqueror x2, Godless Shrine x2, Marauding Blight-Priest x2, Plains x2, Rot-Curse Rakshasa x2
+
+TECHNICAL APPENDIX â€” LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+Wade:
+  Battlefield (18): Brambleguard Captain, Burst Lightning, Cheeky House-Mouse, Cheeky House-Mouse, Cheeky House-Mouse, Fire Magic, Flowerfoot Swordmaster, Mountain, Mountain, Mountain, Plains, Plains, Roughshod Duo, Roughshod Duo, Squeak By, Squeak By, Thistledown Players, Veteran Guardmouse
+  Graveyard: 0 card(s)
+gian31:
+  Battlefield (18): Bloodletter of Aclazotz, Bloodthirsty Conqueror, Demon Wall, Demon Wall, Demon Wall, Demon Wall, Godless Shrine, Leech Collector, Leech Collector, Leech Collector, Marauding Blight-Priest, Plains, Rot-Curse Rakshasa, Starscape Cleric, Starscape Cleric, Swamp, Swamp, Swamp
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+41 objects have no resolved final zone and are omitted from the known board state.
+Wade: 8 unknown object(s)
+gian31: 33 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=17, Stack=5
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Wade:
+  Battlefield (9): Mountain, Mountain, Plains, Thistledown Players, Mountain, Flowerfoot Swordmaster, Plains, Veteran Guardmouse, Brambleguard Captain
+  Graveyard (5): Burst Lightning, Fire Magic, Cheeky House-Mouse, Squeak By, Roughshod Duo
+gian31:
+  Battlefield (10): Plains, Case of the Uneaten Feast, Swamp, Rot-Curse Rakshasa, Godless Shrine, Swamp, Swamp, Marauding Blight-Priest, Bloodletter of Aclazotz, Bloodthirsty Conqueror
+  Graveyard (4): Leech Collector, Starscape Cleric, Demon Wall, Demon Wall
+Known non-persistent entries (counts only):
+  Wade: Limbo=2
+  gian31: Library=1, Limbo=4, Pending=1
+  unknown: Hand=1, Library=91, Limbo=4
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: Wade Battlefield=1; gian31 Battlefield=1
+- Turn 2: Wade Battlefield=1; gian31 Battlefield=2
+- Turn 3: Wade Battlefield=2; gian31 Battlefield=2
+- Turn 4: Wade Battlefield=2; gian31 Battlefield=3
+- Turn 5: Wade Battlefield=3; gian31 Battlefield=3
+- Turn 6: Wade Battlefield=3; gian31 Battlefield=4; unknown Graveyard=1
+- Turn 7: Wade Battlefield=4; Wade Graveyard=1; gian31 Battlefield=4; gian31 Graveyard=1; unknown Graveyard=1
+- Turn 8: Wade Battlefield=4; Wade Graveyard=1; gian31 Battlefield=5; gian31 Graveyard=1; unknown Graveyard=1
+- Turn 9: Wade Battlefield=4; Wade Graveyard=2; Wade Exile=1; gian31 Battlefield=5; gian31 Graveyard=2; unknown Graveyard=2
+- Turn 10: Wade Battlefield=4; Wade Graveyard=2; Wade Exile=1; gian31 Battlefield=6; gian31 Graveyard=2; unknown Graveyard=2
+- Turn 11: Wade Battlefield=5; Wade Graveyard=2; Wade Exile=1; gian31 Battlefield=6; gian31 Graveyard=2; unknown Graveyard=2
+- Turn 12: Wade Battlefield=5; Wade Graveyard=2; Wade Exile=1; gian31 Battlefield=6; gian31 Graveyard=2; unknown Graveyard=2
+- Turn 13: Wade Battlefield=5; Wade Graveyard=2; Wade Exile=1; gian31 Battlefield=6; gian31 Graveyard=2; unknown Graveyard=2
+- Turn 14: Wade Battlefield=5; Wade Graveyard=2; Wade Exile=1; gian31 Battlefield=6; gian31 Graveyard=2; unknown Graveyard=2
+- Turn 15: Wade Battlefield=5; Wade Graveyard=4; Wade Exile=1; gian31 Battlefield=6; gian31 Graveyard=4; unknown Graveyard=2
+- Turn 16: Wade Battlefield=5; Wade Graveyard=4; Wade Exile=1; gian31 Battlefield=6; gian31 Graveyard=4; unknown Graveyard=2
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Rot-Curse Rakshasa resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Thistledown Players resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Leech Collector resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Flowerfoot Swordmaster resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Demon Wall resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Cheeky House-Mouse resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Veteran Guardmouse resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Demon Wall resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Roughshod Duo resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: Brambleguard Captain resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
