@@ -1,0 +1,440 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, trantorlad
+Seat map: Seat 1=gian31, Seat 2=trantorlad
+Turn range (known): 1 - 9
+Records: 18
+Action chains: 16
+Winner: trantorlad
+Final life: {'gian31': -27, 'trantorlad': 20}
+Lethal combat transition: gian31 18 -> -27. 3 unblocked attackers and observed P/T modifiers reconcile to 45 power; individual combat assignment unavailable.
+Match conclusion: Life total reached 0 observed for gian31.
+Match-result payload was observed after the last captured action: Turn 9 (Phase_Combat, Step_DeclareAttack; Ability of Sovereign Okinec Ahau, seq 204); payload ordering within later uncaptured records is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 18 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 8 explicit PlayLand transfers across turns [1, 2, 3, 4, 5, 6, 8, 9]. Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 8 explicit Library -> Hand movement(s); named in the draw record=4, resolved through an explicit identity transition=3, unresolved=1.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: trantorlad; observed final life totals: {'gian31': -27, 'trantorlad': 20}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 9 (Phase_Combat, Step_DeclareAttack; Ability of Sovereign Okinec Ahau, seq 204).
+Last captured life mutation: gian31 18 -> -27 (seq 209).
+Terminal condition observed: gian31 reached -27 life; exact lethal-source coverage is reported separately.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Ability of Blossoming Sands [observed_semantic_effect, seq=9] (active=trantorlad, phase=Phase_Main1, controller=trantorlad, owner=trantorlad, source_object=287, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Blossoming Sands: trantorlad gains 1 life.
+    net observed life change this turn: trantorlad +1 (individual changes below; gains and losses may offset)
+    life: trantorlad 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Blossoming Sands [287] Hand (trantorlad) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      trantorlad: Battlefield: Blossoming Sands [287]
+
+Turn 2
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=28] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [289] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 23).
+      Scoured Barrens [290] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 26).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      trantorlad: Battlefield: Blossoming Sands [287]
+      gian31: Battlefield: Scoured Barrens [290]
+
+Turn 3
+  - Llanowar Elves [valid_resolution_no_immediate_mutation, seq=48] (active=trantorlad, phase=Phase_Main1, controller=trantorlad, owner=trantorlad, source_object=294)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Llanowar Elves resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Llanowar Elves (object 294) Hand (trantorlad) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Llanowar Elves (object 294) Stack -> Battlefield (Resolve; shared object ID)
+  - Springleaf Drum [valid_resolution_no_immediate_mutation, seq=51] (active=trantorlad, phase=Phase_Main1, controller=trantorlad, owner=trantorlad, source_object=296)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Springleaf Drum resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Springleaf Drum (object 296) Hand (trantorlad) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Springleaf Drum (object 296) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Ajani's Pridemate [292] Library (trantorlad) -> Hand (trantorlad) (Draw; GRE sequence 42).
+      Forest [293] Hand (trantorlad) -> Battlefield (PlayLand; GRE sequence 45).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      trantorlad: Battlefield: Blossoming Sands [287], Forest [293], Llanowar Elves [294], Springleaf Drum [296]
+      gian31: Battlefield: Scoured Barrens [290]
+
+Turn 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Sinister Monolith [298] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 65).
+      Godless Shrine [299] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 69).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      trantorlad: Battlefield: Blossoming Sands [287], Forest [293], Llanowar Elves [294], Springleaf Drum [296]
+      gian31: Battlefield: Godless Shrine [299], Scoured Barrens [290]
+
+Turn 5
+  - Ouroboroid [valid_resolution_no_immediate_mutation, seq=89] (active=trantorlad, phase=Phase_Main1, controller=trantorlad, owner=trantorlad, source_object=302)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ouroboroid resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ouroboroid (object 302) Hand (trantorlad) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ouroboroid (object 302) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Ouroboroid [observed_semantic_effect, seq=93] (active=trantorlad, phase=Phase_Combat, step=Step_BeginCombat, controller=trantorlad, owner=trantorlad, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s)
+      narrative: Ability of Ouroboroid: Llanowar Elves gets +1/+1; Ouroboroid gets +1/+1; 1 counter(s) are added to Llanowar Elves [294]; 1 counter(s) are added to Llanowar Elves [294].
+      explicit effect object references: Llanowar Elves [294] (role/targeting only where the protocol identifies it)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Blossoming Sands [300] Library (trantorlad) -> Hand (trantorlad) (Draw; GRE sequence 83).
+      Forest [301] Hand (trantorlad) -> Battlefield (PlayLand; GRE sequence 86).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      trantorlad: Battlefield: Blossoming Sands [287], Forest [293], Forest [301], Llanowar Elves [294], Ouroboroid [302], Springleaf Drum [296]
+      gian31: Battlefield: Godless Shrine [299], Scoured Barrens [290]
+
+Turn 6
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=111] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=310)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 310) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 310) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [308] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 105).
+      Swamp [309] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 108).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      trantorlad: Battlefield: Blossoming Sands [287], Forest [293], Forest [301], Llanowar Elves [294], Ouroboroid [302], Springleaf Drum [296]
+      gian31: Battlefield: Godless Shrine [299], Marauding Blight-Priest [310], Scoured Barrens [290], Swamp [309]
+
+Turn 7
+  - Sovereign Okinec Ahau [valid_resolution_no_immediate_mutation, seq=130] (active=trantorlad, phase=Phase_Main1, controller=trantorlad, owner=trantorlad, source_object=315)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sovereign Okinec Ahau resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sovereign Okinec Ahau (object 315) Hand (trantorlad) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sovereign Okinec Ahau (object 315) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Ouroboroid [observed_semantic_effect, seq=134] (active=trantorlad, phase=Phase_Combat, step=Step_BeginCombat, controller=trantorlad, owner=trantorlad, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: P/T +2/+2, P/T +2/+2, P/T +2/+2, +2 counter(s), +2 counter(s), +2 counter(s)
+      narrative: Ability of Ouroboroid: Llanowar Elves gets +2/+2; Ouroboroid gets +2/+2; Sovereign Okinec Ahau gets +2/+2; 2 counter(s) are added to Llanowar Elves [294]; 2 counter(s) are added to Llanowar Elves [294]; 2 counter(s) are added to Llanowar Elves [294].
+      explicit effect object references: Llanowar Elves [294], Sovereign Okinec Ahau [315] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=trantorlad; frames: DeclareAttack):
+      attackers: Ouroboroid [302] (unblocked, observed P/T 4/6)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -4 (individual changes below; gains and losses may offset)
+    life (combat-correlated: observed unblocked power 4; life seq 143; exact assignment unavailable): gian31 21 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Sovereign Okinec Ahau [314] Library (trantorlad) -> Hand (trantorlad) (Draw; GRE sequence 125).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      trantorlad: Battlefield: Blossoming Sands [287], Forest [293], Forest [301], Llanowar Elves [294], Ouroboroid [302], Sovereign Okinec Ahau [315], Springleaf Drum [296]
+      gian31: Battlefield: Godless Shrine [299], Marauding Blight-Priest [310], Scoured Barrens [290], Swamp [309]
+
+Turn 8
+  - Sinister Monolith [valid_resolution_no_immediate_mutation, seq=159] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=323)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sinister Monolith resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sinister Monolith (object 323) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sinister Monolith (object 323) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Sinister Monolith [observed_semantic_effect, seq=163] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=323, source_last_explicit_zone=Battlefield)
+      effects: life -1, life +1
+      narrative: Ability of Sinister Monolith: trantorlad loses 1 life; gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=165] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=310, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: trantorlad loses 1 life.
+    net observed life change this turn: gian31 +1; trantorlad -2 (individual changes below; gains and losses may offset)
+    life: gian31 17 -> 18
+    life: trantorlad 21 -> 20
+    life: trantorlad 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Leech Collector [321] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 153).
+      Swamp [322] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 156).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      trantorlad: Battlefield: Blossoming Sands [287], Forest [293], Forest [301], Llanowar Elves [294], Ouroboroid [302], Sovereign Okinec Ahau [315], Springleaf Drum [296]
+      gian31: Battlefield: Godless Shrine [299], Marauding Blight-Priest [310], Scoured Barrens [290], Sinister Monolith [323], Swamp [309], Swamp [322]
+
+Turn 9
+  - Ajani's Pridemate [valid_resolution_no_immediate_mutation, seq=183] (active=trantorlad, phase=Phase_Main1, controller=trantorlad, owner=trantorlad, source_object=331)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ajani's Pridemate resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ajani's Pridemate (object 331) Hand (trantorlad) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ajani's Pridemate (object 331) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Blossoming Sands [observed_semantic_effect, seq=186] (active=trantorlad, phase=Phase_Main1, controller=trantorlad, owner=trantorlad, source_object=334, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Blossoming Sands: trantorlad gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=188] (active=trantorlad, phase=Phase_Main1, controller=trantorlad, owner=trantorlad, source_object=331, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, +1 counter(s)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to target.
+  - Gloryheath Lynx [valid_resolution_no_immediate_mutation, seq=194] (active=trantorlad, phase=Phase_Main1, controller=trantorlad, owner=trantorlad, source_object=337)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Gloryheath Lynx resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Gloryheath Lynx (object 337) Hand (trantorlad) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gloryheath Lynx (object 337) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Ouroboroid [observed_semantic_effect, seq=198] (active=trantorlad, phase=Phase_Combat, step=Step_BeginCombat, controller=trantorlad, owner=trantorlad, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: P/T +4/+4, P/T +4/+4, P/T +4/+4, P/T +4/+4, P/T +4/+4, +4 counter(s), +4 counter(s), +4 counter(s), +4 counter(s), +4 counter(s)
+      narrative: Ability of Ouroboroid: Llanowar Elves gets +4/+4; Ouroboroid gets +4/+4; Sovereign Okinec Ahau gets +4/+4; Ajani's Pridemate gets +4/+4; Gloryheath Lynx gets +4/+4; 4 counter(s) are added to Llanowar Elves [294]; 4 counter(s) are added to Llanowar Elves [294]; 4 counter(s) are added to Llanowar Elves [294]; 4 counter(s) are added to Llanowar Elves [294]; 4 counter(s) are added to Llanowar Elves [294].
+      explicit effect object references: Llanowar Elves [294], Sovereign Okinec Ahau [315], Ajani's Pridemate [331], Gloryheath Lynx [337] (role/targeting only where the protocol identifies it)
+  - Ability of Sovereign Okinec Ahau [observed_semantic_effect, seq=204] (active=trantorlad, phase=Phase_Combat, step=Step_DeclareAttack, controller=trantorlad, owner=trantorlad, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: P/T +7/+7, P/T +7/+7, P/T +6/+6, P/T +5/+5, P/T +4/+4, +7 counter(s), +7 counter(s), +6 counter(s), +5 counter(s), +4 counter(s)
+      narrative: Ability of Sovereign Okinec Ahau: Llanowar Elves gets +7/+7; Ouroboroid gets +7/+7; Sovereign Okinec Ahau gets +6/+6; Ajani's Pridemate gets +5/+5; Gloryheath Lynx gets +4/+4; 7 counter(s) are added to Llanowar Elves [294]; 7 counter(s) are added to Llanowar Elves [294]; 6 counter(s) are added to Llanowar Elves [294]; 5 counter(s) are added to Llanowar Elves [294]; 4 counter(s) are added to Llanowar Elves [294].
+      explicit effect object references: Llanowar Elves [294], Ouroboroid [302], Ajani's Pridemate [331], Gloryheath Lynx [337] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=trantorlad; frames: DeclareAttack):
+      attackers: Llanowar Elves [294] (unblocked, observed P/T 8/8), Ouroboroid [302] (unblocked, observed P/T 8/10), Sovereign Okinec Ahau [315] (unblocked, observed P/T 9/10)
+      blockers: none identified
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -45; trantorlad +1 (individual changes below; gains and losses may offset)
+    life: trantorlad 19 -> 20
+    life (combat-related snapshot; exact source unavailable): gian31 18 -> -27
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 330 [330] Library (trantorlad) -> Hand (trantorlad) (Draw; GRE sequence 178).
+      Blossoming Sands [334] Hand (trantorlad) -> Battlefield (PlayLand; GRE sequence 184).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      trantorlad: Battlefield: Ajani's Pridemate [331], Blossoming Sands [287], Blossoming Sands [334], Forest [293], Forest [301], Gloryheath Lynx [337], Llanowar Elves [294], Ouroboroid [302], Sovereign Okinec Ahau [315], Springleaf Drum [296]
+      gian31: Battlefield: Godless Shrine [299], Marauding Blight-Priest [310], Scoured Barrens [290], Sinister Monolith [323], Swamp [309], Swamp [322]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+- Turn 7, seq 143, Phase_Combat: gian31 21 -> 17. combat-correlated loss with observed unblocked power 4; exact assignment unavailable.
+- Turn 9, seq 209, Phase_Combat: gian31 18 -> -27. Combat declaration observed; exact assignment unavailable. Previous captured action: Sovereign Okinec Ahau.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 9: gian31 18 -> -27 (required change 45). Explained by exact same-record evidence: 0/45; unattributed: 0/45.
+  Fully reconciled from observed combat state and modifiers: 45/45 (pre-modifier power=25; explicit modifier power=+20; reconstructed post-modifier power=45; individual assignment unavailable).
+  Last combat snapshot at or before lethal: Turn 9; attackers=Llanowar Elves [294], Ouroboroid [302], Sovereign Okinec Ahau [315]; observed snapshot power total=25; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 9, Ability of Sovereign Okinec Ahau (seq 204).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Blossoming Sands [owner=trantorlad, controller=trantorlad] moves Hand (trantorlad) -> Battlefield (PlayLand).
+- Turn 2, seq 23: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 26: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 42: Ajani's Pridemate [owner/controller metadata unavailable] moves Library (trantorlad) -> Hand (trantorlad) (Draw).
+- Turn 3, seq 45: Forest [owner=trantorlad, controller=trantorlad] moves Hand (trantorlad) -> Battlefield (PlayLand).
+- Turn 3, seq 46: Llanowar Elves [owner=trantorlad, controller=trantorlad] moves Hand (trantorlad) -> Stack (CastSpell).
+- Turn 3, seq 48: Llanowar Elves [owner=trantorlad, controller=trantorlad] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 49: Springleaf Drum [owner=trantorlad, controller=trantorlad] moves Hand (trantorlad) -> Stack (CastSpell).
+- Turn 3, seq 51: Springleaf Drum [owner=trantorlad, controller=trantorlad] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 65: Sinister Monolith [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 69: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 83: Blossoming Sands [owner/controller metadata unavailable] moves Library (trantorlad) -> Hand (trantorlad) (Draw).
+- Turn 5, seq 86: Forest [owner=trantorlad, controller=trantorlad] moves Hand (trantorlad) -> Battlefield (PlayLand).
+- Turn 5, seq 87: Ouroboroid [owner=trantorlad, controller=trantorlad] moves Hand (trantorlad) -> Stack (CastSpell).
+- Turn 5, seq 89: Ouroboroid [owner=trantorlad, controller=trantorlad] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 105: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 108: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 109: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 111: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 125: Sovereign Okinec Ahau [owner/controller metadata unavailable] moves Library (trantorlad) -> Hand (trantorlad) (Draw).
+- Turn 7, seq 128: Sovereign Okinec Ahau [owner=trantorlad, controller=trantorlad] moves Hand (trantorlad) -> Stack (CastSpell).
+- Turn 7, seq 130: Sovereign Okinec Ahau [owner=trantorlad, controller=trantorlad] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 153: Leech Collector [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 156: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 157: Sinister Monolith [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 159: Sinister Monolith [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 178: object 330 [owner/controller metadata unavailable] moves Library (trantorlad) -> Hand (trantorlad) (Draw).
+- Turn 9, seq 181: Ajani's Pridemate [owner=trantorlad, controller=trantorlad] moves Hand (trantorlad) -> Stack (CastSpell).
+- Turn 9, seq 183: Ajani's Pridemate [owner=trantorlad, controller=trantorlad] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 184: Blossoming Sands [owner=trantorlad, controller=trantorlad] moves Hand (trantorlad) -> Battlefield (PlayLand).
+- Turn 9, seq 189: Gloryheath Lynx [owner=trantorlad, controller=trantorlad] moves Hand (trantorlad) -> Stack (CastSpell).
+- Turn 9, seq 194: Gloryheath Lynx [owner=trantorlad, controller=trantorlad] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 228 becomes object 287 [Blossoming Sands].
+- Turn 2, seq 23: object 174 becomes object 289 [Swamp].
+- Turn 2, seq 26: object 171 becomes object 290 [Scoured Barrens].
+- Turn 3, seq 42: object 234 becomes object 292 [Ajani's Pridemate].
+- Turn 3, seq 45: object 227 becomes object 293 [Forest].
+- Turn 3, seq 46: object 232 becomes object 294 [Llanowar Elves].
+- Turn 3, seq 49: object 230 becomes object 296 [Springleaf Drum].
+- Turn 4, seq 65: object 175 becomes object 298 [Sinister Monolith].
+- Turn 4, seq 69: object 170 becomes object 299 [Godless Shrine].
+- Turn 5, seq 83: object 235 becomes object 300 [Blossoming Sands].
+- Turn 5, seq 86: object 229 becomes object 301 [Forest].
+- Turn 5, seq 87: object 231 becomes object 302 [Ouroboroid].
+- Turn 6, seq 105: object 176 becomes object 308 [Swamp].
+- Turn 6, seq 108: object 289 becomes object 309 [Swamp].
+- Turn 6, seq 109: object 168 becomes object 310 [Marauding Blight-Priest].
+- Turn 7, seq 125: object 236 becomes object 314 [Sovereign Okinec Ahau].
+- Turn 7, seq 128: object 314 becomes object 315 [Sovereign Okinec Ahau].
+- Turn 8, seq 153: object 177 becomes object 321 [Leech Collector].
+- Turn 8, seq 156: object 308 becomes object 322 [Swamp].
+- Turn 8, seq 157: object 298 becomes object 323 [Sinister Monolith].
+- Turn 9, seq 178: object 237 becomes object 330 [object 237].
+- Turn 9, seq 181: object 292 becomes object 331 [Ajani's Pridemate].
+- Turn 9, seq 184: object 300 becomes object 334 [Blossoming Sands].
+- Turn 9, seq 189: object 233 becomes object 337 [Gloryheath Lynx].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: trantorlad plays Blossoming Sands (object 287) from Hand (trantorlad) to Battlefield.
+- Turn 2: gian31 plays Scoured Barrens (object 290) from Hand (gian31) to Battlefield.
+- Turn 3: trantorlad plays Forest (object 293) from Hand (trantorlad) to Battlefield.
+- Turn 4: gian31 plays Godless Shrine (object 299) from Hand (gian31) to Battlefield.
+- Turn 5: trantorlad plays Forest (object 301) from Hand (trantorlad) to Battlefield.
+- Turn 6: gian31 plays Swamp (object 309) from Hand (gian31) to Battlefield.
+- Turn 8: gian31 plays Swamp (object 322) from Hand (gian31) to Battlefield.
+- Turn 9: trantorlad plays Blossoming Sands (object 334) from Hand (trantorlad) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED TRIGGER CYCLES
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Ouroboroid: casts=1; abilities=3 (triggered=3, activated=0) across turns [5, 5, 7, 9]
+  observed effect totals: draws=0, tokens=0, counters=10, returns=0, damage=0, life_changes=0, other=10
+  observed effects: +1 counter(s), +2 counter(s), +4 counter(s), P/T +1/+1, P/T +2/+2, P/T +4/+4
+- Ajani's Pridemate: casts=1; abilities=1 (triggered=1, activated=0) across turns [9, 9]
+  observed effect totals: draws=0, tokens=0, counters=1, returns=0, damage=0, life_changes=0, other=1
+  observed effects: +1 counter(s), P/T +1/+1
+- Blossoming Sands: abilities=2 (triggered=2, activated=0) across turns [1, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Marauding Blight-Priest: casts=1; abilities=1 (triggered=1, activated=0) across turns [6, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life -1
+- Sinister Monolith: casts=1; abilities=1 (triggered=1, activated=0) across turns [8, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=1
+  observed effects: life +1, life -1, synthetic event
+- Sovereign Okinec Ahau: casts=1; abilities=1 (triggered=1, activated=0) across turns [7, 9]
+  observed effect totals: draws=0, tokens=0, counters=5, returns=0, damage=0, life_changes=0, other=5
+  observed effects: +4 counter(s), +5 counter(s), +6 counter(s), +7 counter(s), P/T +4/+4, P/T +5/+5, P/T +6/+6, P/T +7/+7
+- Gloryheath Lynx: casts=1 across turns [9]
+- Llanowar Elves: casts=1 across turns [3]
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [2]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Springleaf Drum: casts=1 across turns [3]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 7 â€” None (active=trantorlad)
+  attacker: Ouroboroid (trantorlad) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 â€” None (active=trantorlad)
+  attacker: Llanowar Elves (trantorlad) -> gian31; unblocked in this observed snapshot
+  attacker: Ouroboroid (trantorlad) -> gian31; unblocked in this observed snapshot
+  attacker: Sovereign Okinec Ahau (trantorlad) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 5: Ability of Ouroboroid (active=trantorlad) - Ability of Ouroboroid: Llanowar Elves gets +1/+1; Ouroboroid gets +1/+1; 1 counter(s) are added to target; 1 counter(s) are added to target.
+- Turn 7: Ability of Ouroboroid (active=trantorlad) - Ability of Ouroboroid: Llanowar Elves gets +2/+2; Ouroboroid gets +2/+2; Sovereign Okinec Ahau gets +2/+2; 2 counter(s) are added to target; 2 counter(s) are added to target; 2 counter(s) are added to target.
+- Turn 8: Ability of Sinister Monolith (active=gian31) - Ability of Sinister Monolith: trantorlad loses 1 life; gian31 gains 1 life.
+- Turn 8: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: trantorlad loses 1 life.
+- Turn 9: Ability of Ouroboroid (active=trantorlad) - Ability of Ouroboroid: Llanowar Elves gets +4/+4; Ouroboroid gets +4/+4; Sovereign Okinec Ahau gets +4/+4; Ajani's Pridemate gets +4/+4; Gloryheath Lynx gets +4/+4; 4 counter(s) are added to target; 4 counter(s) are added to target; 4 counter(s) are added to target; 4 counter(s) are added to target; 4 counter(s) are added to target.
+- Turn 9: Ability of Sovereign Okinec Ahau (active=trantorlad) - Ability of Sovereign Okinec Ahau: Llanowar Elves gets +7/+7; Ouroboroid gets +7/+7; Sovereign Okinec Ahau gets +6/+6; Ajani's Pridemate gets +5/+5; Gloryheath Lynx gets +4/+4; 7 counter(s) are added to target; 7 counter(s) are added to target; 6 counter(s) are added to target; 5 counter(s) are added to target; 4 counter(s) are added to target.
+
+TECHNICAL APPENDIX â€” OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 55: Unholy Annex | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 56: Ritual Chamber | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 167: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 168: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 169: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 170: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 171: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 172: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 173: Unholy Annex // Ritual Chamber | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 287: Blossoming Sands | controller=trantorlad | owner=trantorlad | zone=Battlefield (latest_object_observation)
+- 288: object 288 | controller=trantorlad | owner=trantorlad | zone=unknown (inferred unknown) (latest_object_observation)
+- 289: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 290: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 291: object 291 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 293: Forest | controller=trantorlad | owner=trantorlad | zone=Battlefield (latest_object_observation)
+- 294: Llanowar Elves | controller=trantorlad | owner=trantorlad | zone=Battlefield (latest_object_observation)
+- 296: Springleaf Drum | controller=trantorlad | owner=trantorlad | zone=Stack (latest_object_observation)
+- 298: Sinister Monolith | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 299: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 301: Forest | controller=trantorlad | owner=trantorlad | zone=Battlefield (latest_object_observation)
+- 302: Ouroboroid | controller=trantorlad | owner=trantorlad | zone=Battlefield (latest_object_observation)
+- 307: object 307 | controller=trantorlad | owner=trantorlad | zone=unknown (inferred unknown) (latest_object_observation)
+- 308: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 309: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 310: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 315: Sovereign Okinec Ahau | controller=trantorlad | owner=trantorlad | zone=Battlefield (latest_object_observation)
+- 320: object 320 | controller=trantorlad | owner=trantorlad | zone=unknown (inferred unknown) (latest_object_observation)
+- 321: Leech Collector | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 322: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 323: Sinister Monolith | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 328: object 328 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 329: object 329 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 331: Ajani's Pridemate | controller=trantorlad | owner=trantorlad | zone=Battlefield (latest_object_observation)
+- 334: Blossoming Sands | controller=trantorlad | owner=trantorlad | zone=Battlefield (latest_object_observation)
+- 335: object 335 | controller=trantorlad | owner=trantorlad | zone=unknown (inferred unknown) (latest_object_observation)
+- 336: Deal Gone Bad | controller=trantorlad | owner=trantorlad | zone=unknown (inferred unknown) (latest_object_observation)
+- 337: Gloryheath Lynx | controller=trantorlad | owner=trantorlad | zone=Battlefield (latest_object_observation)
+- 338: object 338 | controller=trantorlad | owner=trantorlad | zone=unknown (inferred unknown) (latest_object_observation)
+- 340: object 340 | controller=trantorlad | owner=trantorlad | zone=unknown (inferred unknown) (latest_object_observation)
+- 341: object 341 | controller=trantorlad | owner=trantorlad | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX â€” CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 22 total items
+  zones: Battlefield=5, Hand=13, Stack=1, unknown=3
+  objects: Swamp x4, Godless Shrine x2, Marauding Blight-Priest x2, Scoured Barrens x2, Sinister Monolith x2, Bloodletter of Aclazotz, Bloodthirsty Conqueror, Leech Collector, Makeshift Binding, Ritual Chamber, Unholy Annex, Unholy Annex // Ritual Chamber
+trantorlad: 18 total items
+  zones: Battlefield=9, Stack=1, unknown=8
+  objects: Blossoming Sands x2, Forest x2, Ajani's Pridemate, Deal Gone Bad, Gloryheath Lynx, Llanowar Elves, Ouroboroid, Sovereign Okinec Ahau, Springleaf Drum, object 288, object 307, object 320
+
+TECHNICAL APPENDIX â€” LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (5): Godless Shrine, Marauding Blight-Priest, Scoured Barrens, Swamp, Swamp
+  Graveyard: 0 card(s)
+trantorlad:
+  Battlefield (9): Ajani's Pridemate, Blossoming Sands, Blossoming Sands, Forest, Forest, Gloryheath Lynx, Llanowar Elves, Ouroboroid, Sovereign Okinec Ahau
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+11 objects have no resolved final zone and are omitted from the known board state.
+gian31: 3 unknown object(s)
+trantorlad: 8 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=13, Stack=2
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+gian31:
+  Battlefield (6): Scoured Barrens, Godless Shrine, Swamp, Marauding Blight-Priest, Swamp, Sinister Monolith
+trantorlad:
+  Battlefield (10): Blossoming Sands, Forest, Llanowar Elves, Springleaf Drum, Forest, Ouroboroid, Sovereign Okinec Ahau, Ajani's Pridemate, Blossoming Sands, Gloryheath Lynx
+Known non-persistent entries (counts only):
+  gian31: Hand=7, Limbo=2
+  unknown: Hand=1, Library=98, Limbo=7
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: trantorlad Battlefield=1
+- Turn 2: gian31 Battlefield=1; trantorlad Battlefield=1
+- Turn 3: gian31 Battlefield=1; trantorlad Battlefield=4
+- Turn 4: gian31 Battlefield=2; trantorlad Battlefield=4
+- Turn 5: gian31 Battlefield=2; trantorlad Battlefield=6
+- Turn 6: gian31 Battlefield=4; trantorlad Battlefield=6
+- Turn 7: gian31 Battlefield=4; trantorlad Battlefield=7
+- Turn 8: gian31 Battlefield=6; trantorlad Battlefield=7
+- Turn 9: gian31 Battlefield=6; trantorlad Battlefield=10
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 3: Llanowar Elves resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Springleaf Drum resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Ouroboroid resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Sovereign Okinec Ahau resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Sinister Monolith resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Ajani's Pridemate resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Gloryheath Lynx resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
