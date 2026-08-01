@@ -1,0 +1,757 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Dinholo
+Seat map: Seat 1=gian31, Seat 2=Dinholo
+Turn range (known): 1 - 15
+Records: 35
+Action chains: 23
+Winner: Dinholo
+Final life: {'gian31': -17, 'Dinholo': 11}
+Lethal life snapshot: gian31 14 -> -17 (at least 31 damage/life loss observed; exact source may be unavailable).
+Match conclusion: Life total reached 0 observed for gian31.
+Match-result payload was observed after the last captured action: Turn 15 (Phase_Combat, Step_DeclareBlock; Claws Out, seq 383); payload ordering within later uncaptured records is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 28 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 11 explicit PlayLand transfers across turns [1, 2, 3, 4, 5, 6, 8, 10, 12, 13, 14]. Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 14 explicit Library -> Hand movement(s); named in the draw record=7, resolved through an explicit identity transition=4, unresolved=3.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: Dinholo; observed final life totals: {'gian31': -17, 'Dinholo': 11}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 15 (Phase_Combat, Step_DeclareBlock; Claws Out, seq 383).
+Observed active tokens: Cat [378] controller=Dinholo, created Turn 9, last observed Turn 15 seq 383, P/T P/T unavailable (current zone unconfirmed); Cat [380] controller=Dinholo, created Turn 9, last observed Turn 15 seq 383, P/T P/T unavailable (current zone unconfirmed); Cat [400] controller=Dinholo, created Turn 11, last observed Turn 15 seq 383, P/T P/T unavailable (current zone unconfirmed).
+Terminal condition observed: gian31 reached -17 life; exact lethal-source coverage is reported separately.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Restless Prairie [323] Hand (Dinholo) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Dinholo: Battlefield: Restless Prairie [323]
+
+Turn 2
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=27] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 326) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 326) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [324] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 21).
+      Plains [325] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Dinholo: Battlefield: Restless Prairie [323]
+      gian31: Battlefield: Authority of the Consuls [326], Plains [325]
+
+Turn 3
+  - Ability of Blossoming Sands [observed_semantic_effect, seq=46] (active=Dinholo, phase=Phase_Main1, controller=Dinholo, owner=Dinholo, source_object=329, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Blossoming Sands: Dinholo gains 1 life.
+    net observed life change this turn: Dinholo +1 (individual changes below; gains and losses may offset)
+    life: Dinholo 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Claws Out [328] Library (Dinholo) -> Hand (Dinholo) (Draw; GRE sequence 41).
+      Blossoming Sands [329] Hand (Dinholo) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Dinholo: Battlefield: Blossoming Sands [329], Restless Prairie [323]
+      gian31: Battlefield: Authority of the Consuls [326], Plains [325]
+
+Turn 4
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=65] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=332, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=68] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=334)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 334) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 334) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Marauding Blight-Priest [331] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 60).
+      Scoured Barrens [332] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 63).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Dinholo: Battlefield: Blossoming Sands [329], Restless Prairie [323]
+      gian31: Battlefield: Authority of the Consuls [326], Case of the Uneaten Feast [334], Plains [325], Scoured Barrens [332]
+
+Turn 5
+  - Arahbo, the First Fang [valid_resolution_no_immediate_mutation, seq=88] (active=Dinholo, phase=Phase_Main1, controller=Dinholo, owner=Dinholo, source_object=338)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Arahbo, the First Fang resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Arahbo, the First Fang (object 338) Hand (Dinholo) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Arahbo, the First Fang (object 338) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=90] (active=Dinholo, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Arahbo, the First Fang [observed_semantic_effect, seq=92] (active=Dinholo, phase=Phase_Main1, controller=Dinholo, owner=Dinholo, source_object=338, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Arahbo, the First Fang: a token is created.
+      explicit effect object references: Cat [344] (role/targeting only where the protocol identifies it)
+      token created: Cat (object 344, controller=Dinholo) 1/1
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=94] (active=Dinholo, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+    net observed life change this turn: gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    life: gian31 22 -> 23
+    additional protocol-observed zone movements not assigned to an action chain:
+      Requisition Raid [336] Library (Dinholo) -> Hand (Dinholo) (Draw; GRE sequence 82).
+      Plains [337] Hand (Dinholo) -> Battlefield (PlayLand; GRE sequence 85).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Dinholo: Battlefield: Arahbo, the First Fang [338], Blossoming Sands [329], Plains [337], Restless Prairie [323]
+      gian31: Battlefield: Authority of the Consuls [326], Case of the Uneaten Feast [334], Plains [325], Scoured Barrens [332]
+
+Turn 6
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=113] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=347, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Moment of Craving [observed_semantic_effect, seq=118] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=349)
+      effects: P/T -2/-2, life +2
+      narrative: Moment of Craving: Arahbo, the First Fang gets -2/-2; gian31 gains 2 life.
+      explicit effect object references: Arahbo, the First Fang [338] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Moment of Craving (object 349) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Moment of Craving (object 352) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 349 -> transfer object 352 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Arahbo, the First Fang (object 353) Battlefield -> Graveyard (Dinholo) (SBA_ZeroToughness; shared object ID)
+    net observed life change this turn: gian31 +3 (individual changes below; gains and losses may offset)
+    life: gian31 23 -> 24
+    life: gian31 24 -> 26
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [346] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 108).
+      Scoured Barrens [347] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 111).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Dinholo: Battlefield: Blossoming Sands [329], Plains [337], Restless Prairie [323]; Graveyard: Arahbo, the First Fang [353]
+      gian31: Battlefield: Authority of the Consuls [326], Case of the Uneaten Feast [334], Plains [325], Scoured Barrens [332], Scoured Barrens [347]; Graveyard: Moment of Craving [352]
+
+Turn 7
+  - Ajani's Pridemate [valid_resolution_no_immediate_mutation, seq=137] (active=Dinholo, phase=Phase_Main1, controller=Dinholo, owner=Dinholo, source_object=355)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ajani's Pridemate resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ajani's Pridemate (object 355) Hand (Dinholo) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ajani's Pridemate (object 355) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=139] (active=Dinholo, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  Combat snapshots observed (active=Dinholo; frames: DeclareAttack -> DeclareBlock):
+      attackers: Cat [344] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      observed attacker power total: 1; unattributed defending-player life loss: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 +0 (individual changes below; gains and losses may offset)
+    life: gian31 26 -> 27
+    life (combat-related snapshot; exact source unavailable): gian31 27 -> 26
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 354 [354] Library (Dinholo) -> Hand (Dinholo) (Draw; GRE sequence 132).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Dinholo: Battlefield: Ajani's Pridemate [355], Blossoming Sands [329], Plains [337], Restless Prairie [323]; Graveyard: Arahbo, the First Fang [353]
+      gian31: Battlefield: Authority of the Consuls [326], Case of the Uneaten Feast [334], Plains [325], Scoured Barrens [332], Scoured Barrens [347]; Graveyard: Moment of Craving [352]
+
+Turn 8
+  - Moment of Craving [observed_semantic_effect, seq=167] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=361)
+      effects: P/T -2/-2, life +2
+      narrative: Moment of Craving: Ajani's Pridemate gets -2/-2; gian31 gains 2 life.
+      explicit effect object references: Ajani's Pridemate [355] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Moment of Craving (object 361) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Moment of Craving (object 364) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 361 -> transfer object 364 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Ajani's Pridemate (object 365) Battlefield -> Graveyard (Dinholo) (SBA_ZeroToughness; shared object ID)
+    net observed life change this turn: gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 26 -> 28
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [359] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 159).
+      Swamp [360] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 162).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Dinholo: Battlefield: Blossoming Sands [329], Plains [337], Restless Prairie [323]; Graveyard: Ajani's Pridemate [365], Arahbo, the First Fang [353]
+      gian31: Battlefield: Authority of the Consuls [326], Case of the Uneaten Feast [334], Plains [325], Scoured Barrens [332], Scoured Barrens [347], Swamp [360]; Graveyard: Moment of Craving [352], Moment of Craving [364]
+
+Turn 9
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=203] (active=Dinholo, phase=Phase_Combat, step=Step_DeclareBlock, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=205] (active=Dinholo, phase=Phase_Combat, step=Step_DeclareBlock, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Arahbo, the First Fang [observed_semantic_effect, seq=207] (active=Dinholo, phase=Phase_Combat, step=Step_DeclareBlock, controller=Dinholo, owner=Dinholo, source_object=371, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Arahbo, the First Fang: a token is created.
+      explicit effect object references: Cat [378] (role/targeting only where the protocol identifies it)
+      token created: Cat (object 378, controller=Dinholo) 5/5
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=209] (active=Dinholo, phase=Phase_Combat, step=Step_DeclareBlock, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Arahbo, the First Fang [observed_semantic_effect, seq=211] (active=Dinholo, phase=Phase_Combat, step=Step_DeclareBlock, controller=Dinholo, owner=Dinholo, source_object=371, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Arahbo, the First Fang: a token is created.
+      explicit effect object references: Cat [380] (role/targeting only where the protocol identifies it)
+      token created: Cat (object 380, controller=Dinholo) 5/5
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=213] (active=Dinholo, phase=Phase_Combat, step=Step_DeclareBlock, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  Combat snapshots observed (active=Dinholo; frames: DeclareAttack -> DeclareBlock):
+      attackers: Cat [344] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 +4 (individual changes below; gains and losses may offset)
+    life: gian31 28 -> 29
+    life: gian31 29 -> 30
+    life: gian31 30 -> 31
+    life: gian31 31 -> 32
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 366 [366] Library (Dinholo) -> Hand (Dinholo) (Draw; GRE sequence 181).
+      Leonardo's Technique [367] Hand (Dinholo) -> Stack (CastSpell; GRE sequence 192).
+      Cat [370] Battlefield -> Hand (Dinholo) (Return; GRE sequence 196).
+      Arahbo, the First Fang [371] Graveyard (Dinholo) -> Battlefield (Return; GRE sequence 198).
+      Ajani's Pridemate [372] Graveyard (Dinholo) -> Battlefield (Return; GRE sequence 198).
+      Leonardo's Technique [377] Stack -> Graveyard (Dinholo) (Resolve; GRE sequence 199).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Dinholo: Battlefield: Ajani's Pridemate [372], Arahbo, the First Fang [371], Blossoming Sands [329], Plains [337], Restless Prairie [323]; Graveyard: Leonardo's Technique [377]
+      gian31: Battlefield: Authority of the Consuls [326], Case of the Uneaten Feast [334], Plains [325], Scoured Barrens [332], Scoured Barrens [347], Swamp [360]; Graveyard: Moment of Craving [352], Moment of Craving [364]
+
+Turn 10
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=231] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=384)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 384) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 384) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=235] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=384, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Arahbo, the First Fang; gian31 gains 2 life.
+      explicit effect object references: Arahbo, the First Fang [371], Arahbo, the First Fang [389] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Arahbo, the First Fang (object 389) Battlefield -> Exile (Exile; shared object ID)
+    net observed life change this turn: gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 32 -> 34
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [382] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 225).
+      Swamp [383] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 228).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Dinholo: Battlefield: Ajani's Pridemate [372], Blossoming Sands [329], Plains [337], Restless Prairie [323]; Graveyard: Leonardo's Technique [377]; Exile: Arahbo, the First Fang [389]
+      gian31: Battlefield: Authority of the Consuls [326], Case of the Uneaten Feast [334], Makeshift Binding [384], Plains [325], Scoured Barrens [332], Scoured Barrens [347], Swamp [360], Swamp [383]; Graveyard: Moment of Craving [352], Moment of Craving [364]
+
+Turn 11
+  - Requisition Raid [observed_semantic_effect, seq=259] (active=Dinholo, phase=Phase_Main1, controller=Dinholo, owner=Dinholo, source_object=391)
+      effects: destroy, return to battlefield, P/T +1/+1, P/T +1/+1, P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s), +1 counter(s), +1 counter(s)
+      narrative: Requisition Raid destroys Makeshift Binding.
+      explicit effect object references: Ajani's Pridemate [372], Cat [378], Cat [380], Makeshift Binding [384], Arahbo, the First Fang [389], Makeshift Binding [395], Arahbo, the First Fang [396] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Requisition Raid (object 391) Hand (Dinholo) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 395) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Arahbo, the First Fang (object 396) Exile -> Battlefield (Return; shared object ID)
+      protocol-linked zone transfer: Requisition Raid (object 399) Stack -> Graveyard (Dinholo) (Resolve; shared object ID)
+      identity continuity: source object 391 -> transfer object 399 (explicit GRE ObjectIdChanged chain).
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=261] (active=Dinholo, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Arahbo, the First Fang [observed_semantic_effect, seq=263] (active=Dinholo, phase=Phase_Main1, controller=Dinholo, owner=Dinholo, source_object=396, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Arahbo, the First Fang: a token is created.
+      explicit effect object references: Cat [400] (role/targeting only where the protocol identifies it)
+      token created: Cat (object 400, controller=Dinholo) 4/4
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=265] (active=Dinholo, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  Combat snapshots observed (active=Dinholo; frames: DeclareAttack -> DeclareBlock):
+      attackers: Ajani's Pridemate [372] (unblocked, observed P/T 4/4), Cat [378] (unblocked, observed P/T 3/3), Cat [380] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      observed attacker power total: 10; unattributed defending-player life loss: 10; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -8 (individual changes below; gains and losses may offset)
+    life: gian31 34 -> 35
+    life: gian31 35 -> 36
+    life (combat-related snapshot; exact source unavailable): gian31 36 -> 26
+    additional protocol-observed zone movements not assigned to an action chain:
+      Storm, Windrider [390] Library (Dinholo) -> Hand (Dinholo) (Draw; GRE sequence 249).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Dinholo: Battlefield: Ajani's Pridemate [372], Arahbo, the First Fang [396], Blossoming Sands [329], Plains [337], Restless Prairie [323]; Graveyard: Leonardo's Technique [377], Requisition Raid [399]
+      gian31: Battlefield: Authority of the Consuls [326], Case of the Uneaten Feast [334], Plains [325], Scoured Barrens [332], Scoured Barrens [347], Swamp [360], Swamp [383]; Graveyard: Makeshift Binding [395], Moment of Craving [352], Moment of Craving [364]
+
+Turn 12
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=291] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=404)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 404) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 404) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=293] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=334, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=295] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=404, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Dinholo loses 1 life.
+    net observed life change this turn: Dinholo -1; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 26 -> 27
+    life: Dinholo 21 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [402] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 285).
+      Plains [403] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 288).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Dinholo: Battlefield: Ajani's Pridemate [372], Arahbo, the First Fang [396], Blossoming Sands [329], Plains [337], Restless Prairie [323]; Graveyard: Leonardo's Technique [377], Requisition Raid [399]
+      gian31: Battlefield: Authority of the Consuls [326], Case of the Uneaten Feast [334], Marauding Blight-Priest [404], Plains [325], Plains [403], Scoured Barrens [332], Scoured Barrens [347], Swamp [360], Swamp [383]; Graveyard: Makeshift Binding [395], Moment of Craving [352], Moment of Craving [364]
+
+Turn 13
+  - Storm, Windrider [valid_resolution_no_immediate_mutation, seq=330] (active=Dinholo, phase=Phase_Main2, controller=Dinholo, owner=Dinholo, source_object=412)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Storm, Windrider resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Storm, Windrider (object 412) Hand (Dinholo) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Storm, Windrider (object 412) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=332] (active=Dinholo, phase=Phase_Main2, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=334] (active=Dinholo, phase=Phase_Main2, controller=gian31, owner=gian31, source_object=404, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Dinholo loses 1 life.
+  Combat snapshots observed (active=Dinholo; frames: DeclareAttack -> DeclareBlock):
+      attackers: Ajani's Pridemate [372] (unblocked, observed P/T 4/4), Cat [378] (unblocked, observed P/T 3/3), Cat [380] (unblocked, observed P/T 3/3), Arahbo, the First Fang [396] (unblocked, observed P/T 3/3), Cat [400] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      observed attacker power total: 15; unattributed defending-player life loss: 15; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Dinholo -1; gian31 -14 (individual changes below; gains and losses may offset)
+    life (combat-related snapshot; exact source unavailable): gian31 27 -> 12
+    life: gian31 12 -> 13
+    life: Dinholo 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [410] Library (Dinholo) -> Hand (Dinholo) (Draw; GRE sequence 309).
+      Plains [411] Hand (Dinholo) -> Battlefield (PlayLand; GRE sequence 312).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Dinholo: Battlefield: Ajani's Pridemate [372], Arahbo, the First Fang [396], Blossoming Sands [329], Plains [337], Plains [411], Restless Prairie [323], Storm, Windrider [412]; Graveyard: Leonardo's Technique [377], Requisition Raid [399]
+      gian31: Battlefield: Authority of the Consuls [326], Case of the Uneaten Feast [334], Marauding Blight-Priest [404], Plains [325], Plains [403], Scoured Barrens [332], Scoured Barrens [347], Swamp [360], Swamp [383]; Graveyard: Makeshift Binding [395], Moment of Craving [352], Moment of Craving [364]
+
+Turn 14
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation, seq=346] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=421)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 421) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 421) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=348] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=334, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=350] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=404, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Marauding Blight-Priest: Dinholo loses 2 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Marauding Blight-Priest [404] (unblocked, observed P/T 3/2)
+      blockers: none identified
+      observed attacker power total: 3; unattributed defending-player life loss: 6; snapshot comparison does not reconcile (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Dinholo -8; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 13 -> 14
+    life: Dinholo 19 -> 17
+    life (combat-related snapshot; exact source unavailable): Dinholo 17 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [419] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 340).
+      Swamp [420] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 343).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Dinholo: Battlefield: Ajani's Pridemate [372], Arahbo, the First Fang [396], Blossoming Sands [329], Plains [337], Plains [411], Restless Prairie [323], Storm, Windrider [412]; Graveyard: Leonardo's Technique [377], Requisition Raid [399]
+      gian31: Battlefield: Authority of the Consuls [326], Bloodletter of Aclazotz [421], Case of the Uneaten Feast [334], Marauding Blight-Priest [404], Plains [325], Plains [403], Scoured Barrens [332], Scoured Barrens [347], Swamp [360], Swamp [383], Swamp [420]; Graveyard: Makeshift Binding [395], Moment of Craving [352], Moment of Craving [364]
+
+Turn 15
+  - Claws Out [observed_semantic_effect, seq=383] (active=Dinholo, phase=Phase_Combat, step=Step_DeclareBlock, controller=Dinholo, owner=Dinholo, source_object=429)
+      effects: P/T +2/+2, P/T +2/+2, P/T +2/+2, P/T +2/+2, P/T +2/+2, P/T +2/+2
+      narrative: Claws Out: Ajani's Pridemate gets +2/+2; Cat gets +2/+2; Cat gets +2/+2; Arahbo, the First Fang gets +2/+2; Cat gets +2/+2; Storm, Windrider gets +2/+2.
+      explicit effect object references: Ajani's Pridemate [372], Cat [378], Cat [380], Arahbo, the First Fang [396], Cat [400], Storm, Windrider [412] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Claws Out (object 429) Hand (Dinholo) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Claws Out (object 432) Stack -> Graveyard (Dinholo) (Resolve; shared object ID)
+      identity continuity: source object 429 -> transfer object 432 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=Dinholo; frames: DeclareAttack -> DeclareBlock):
+      attackers: Ajani's Pridemate [372] (unblocked, observed P/T 4/4), Cat [378] (unblocked, observed P/T 3/3), Cat [380] (unblocked, observed P/T 3/3), Arahbo, the First Fang [396] (unblocked, observed P/T 3/3), Cat [400] (unblocked, observed P/T 2/2), Storm, Windrider [412] (unblocked, observed P/T 4/4)
+      blockers: none identified
+      observed attacker power total: 19; unattributed defending-player life loss: 31; snapshot comparison does not reconcile (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -31 (individual changes below; gains and losses may offset)
+    life (combat-related snapshot; exact source unavailable): gian31 14 -> -17
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 428 [428] Library (Dinholo) -> Hand (Dinholo) (Draw; GRE sequence 370).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Dinholo: Battlefield: Ajani's Pridemate [372], Arahbo, the First Fang [396], Blossoming Sands [329], Plains [337], Plains [411], Restless Prairie [323], Storm, Windrider [412]; Graveyard: Claws Out [432], Leonardo's Technique [377], Requisition Raid [399]
+      gian31: Battlefield: Authority of the Consuls [326], Bloodletter of Aclazotz [421], Case of the Uneaten Feast [334], Marauding Blight-Priest [404], Plains [325], Plains [403], Scoured Barrens [332], Scoured Barrens [347], Swamp [360], Swamp [383], Swamp [420]; Graveyard: Makeshift Binding [395], Moment of Craving [352], Moment of Craving [364]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+- Turn 7, seq 149, Phase_Main1: gian31 27 -> 26. Combat declaration observed; exact assignment unavailable. Previous captured action: Authority of the Consuls.
+- Turn 11, seq 275, Phase_Main1: gian31 36 -> 26. Combat declaration observed; exact assignment unavailable. Previous captured action: Authority of the Consuls.
+- Turn 13, seq 323: gian31 27 -> 12. Combat declaration observed; exact assignment unavailable.
+- Turn 14, seq 360, Phase_Main1: Dinholo 17 -> 11. Combat declaration observed; exact assignment unavailable. Previous captured action: Marauding Blight-Priest.
+- Turn 15, seq 385, Phase_Combat: gian31 14 -> -17. Combat declaration observed; exact assignment unavailable. Previous captured action: Claws Out.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 15: gian31 14 -> -17 (required change 31). Explained by exact same-record evidence: 0/31; unattributed: 31/31.
+  Last combat snapshot at or before lethal: Turn 15; attackers=Ajani's Pridemate [372], Cat [378], Cat [380], Arahbo, the First Fang [396], Cat [400], Storm, Windrider [412]; observed power total=19; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 15, Claws Out (seq 383).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 4 token creations observed; 3 active as last observed; 1 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Cat [344] controller=Dinholo; created Turn 5 (1/1); left battlefield Turn 9 via Battlefield -> Hand (Dinholo) (Return); ceases to exist after that observed move (token rules consequence).
+- Cat [378] controller=Dinholo; created Turn 9 (5/5); active as last observed at Turn 15, object 378 (latest observed P/T 5/5; current zone unconfirmed).
+- Cat [380] controller=Dinholo; created Turn 9 (5/5); active as last observed at Turn 15, object 380 (latest observed P/T 5/5; current zone unconfirmed).
+- Cat [400] controller=Dinholo; created Turn 11 (4/4); active as last observed at Turn 15, object 400 (latest observed P/T 4/4; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Restless Prairie [owner=Dinholo, controller=Dinholo] moves Hand (Dinholo) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Scoured Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 24: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 27: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 41: Claws Out [owner/controller metadata unavailable] moves Library (Dinholo) -> Hand (Dinholo) (Draw).
+- Turn 3, seq 44: Blossoming Sands [owner=Dinholo, controller=Dinholo] moves Hand (Dinholo) -> Battlefield (PlayLand).
+- Turn 4, seq 60: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 63: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 66: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 68: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 82: Requisition Raid [owner/controller metadata unavailable] moves Library (Dinholo) -> Hand (Dinholo) (Draw).
+- Turn 5, seq 85: Plains [owner=Dinholo, controller=Dinholo] moves Hand (Dinholo) -> Battlefield (PlayLand).
+- Turn 5, seq 86: Arahbo, the First Fang [owner=Dinholo, controller=Dinholo] moves Hand (Dinholo) -> Stack (CastSpell).
+- Turn 5, seq 88: Arahbo, the First Fang [owner=Dinholo, controller=Dinholo] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 108: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 111: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 114: Moment of Craving [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 118: Moment of Craving [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 6, seq 118: Arahbo, the First Fang [owner=Dinholo, controller=Dinholo] moves Battlefield -> Graveyard (Dinholo) (SBA_ZeroToughness).
+- Turn 7, seq 132: object 354 [owner/controller metadata unavailable] moves Library (Dinholo) -> Hand (Dinholo) (Draw).
+- Turn 7, seq 135: Ajani's Pridemate [owner=Dinholo, controller=Dinholo] moves Hand (Dinholo) -> Stack (CastSpell).
+- Turn 7, seq 137: Ajani's Pridemate [owner=Dinholo, controller=Dinholo] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 159: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 162: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 163: Moment of Craving [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 167: Moment of Craving [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 8, seq 167: Ajani's Pridemate [owner=Dinholo, controller=Dinholo] moves Battlefield -> Graveyard (Dinholo) (SBA_ZeroToughness).
+- Turn 9, seq 181: object 366 [owner/controller metadata unavailable] moves Library (Dinholo) -> Hand (Dinholo) (Draw).
+- Turn 9, seq 192: Leonardo's Technique [owner=Dinholo, controller=Dinholo] moves Hand (Dinholo) -> Stack (CastSpell).
+- Turn 9, seq 196: Cat [owner/controller metadata unavailable] moves Battlefield -> Hand (Dinholo) (Return).
+- Turn 9, seq 198: Arahbo, the First Fang [owner=Dinholo, controller=Dinholo] moves Graveyard (Dinholo) -> Battlefield (Return).
+- Turn 9, seq 198: Ajani's Pridemate [owner=Dinholo, controller=Dinholo] moves Graveyard (Dinholo) -> Battlefield (Return).
+- Turn 9, seq 199: Leonardo's Technique [owner=Dinholo, controller=Dinholo] moves Stack -> Graveyard (Dinholo) (Resolve).
+- Turn 10, seq 225: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 228: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 229: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 231: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 235: Arahbo, the First Fang [owner=Dinholo, controller=Dinholo] moves Battlefield -> Exile (Exile).
+- Turn 11, seq 249: Storm, Windrider [owner/controller metadata unavailable] moves Library (Dinholo) -> Hand (Dinholo) (Draw).
+- Turn 11, seq 252: Requisition Raid [owner=Dinholo, controller=Dinholo] moves Hand (Dinholo) -> Stack (CastSpell).
+- Turn 11, seq 259: Makeshift Binding [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 11, seq 259: Arahbo, the First Fang [owner=Dinholo, controller=Dinholo] moves Exile -> Battlefield (Return).
+- Turn 11, seq 259: Requisition Raid [owner=Dinholo, controller=Dinholo] moves Stack -> Graveyard (Dinholo) (Resolve).
+- Turn 12, seq 285: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 288: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 289: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 291: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 309: Plains [owner/controller metadata unavailable] moves Library (Dinholo) -> Hand (Dinholo) (Draw).
+- Turn 13, seq 312: Plains [owner=Dinholo, controller=Dinholo] moves Hand (Dinholo) -> Battlefield (PlayLand).
+- Turn 13, seq 328: Storm, Windrider [owner=Dinholo, controller=Dinholo] moves Hand (Dinholo) -> Stack (CastSpell).
+- Turn 13, seq 330: Storm, Windrider [owner=Dinholo, controller=Dinholo] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 340: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 343: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 14, seq 344: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 346: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 370: object 428 [owner/controller metadata unavailable] moves Library (Dinholo) -> Hand (Dinholo) (Draw).
+- Turn 15, seq 381: Claws Out [owner=Dinholo, controller=Dinholo] moves Hand (Dinholo) -> Stack (CastSpell).
+- Turn 15, seq 383: Claws Out [owner=Dinholo, controller=Dinholo] moves Stack -> Graveyard (Dinholo) (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 248 becomes object 323 [Restless Prairie].
+- Turn 2, seq 21: object 192 becomes object 324 [Scoured Barrens].
+- Turn 2, seq 24: object 185 becomes object 325 [Plains].
+- Turn 2, seq 25: object 186 becomes object 326 [Authority of the Consuls].
+- Turn 3, seq 41: object 252 becomes object 328 [Claws Out].
+- Turn 3, seq 44: object 247 becomes object 329 [Blossoming Sands].
+- Turn 4, seq 60: object 193 becomes object 331 [Marauding Blight-Priest].
+- Turn 4, seq 63: object 187 becomes object 332 [Scoured Barrens].
+- Turn 4, seq 66: object 188 becomes object 334 [Case of the Uneaten Feast].
+- Turn 5, seq 82: object 253 becomes object 336 [Requisition Raid].
+- Turn 5, seq 85: object 245 becomes object 337 [Plains].
+- Turn 5, seq 86: object 251 becomes object 338 [Arahbo, the First Fang].
+- Turn 6, seq 108: object 194 becomes object 346 [Makeshift Binding].
+- Turn 6, seq 111: object 324 becomes object 347 [Scoured Barrens].
+- Turn 6, seq 114: object 189 becomes object 349 [Moment of Craving].
+- Turn 6, seq 118: object 349 becomes object 352 [Moment of Craving].
+- Turn 6, seq 118: object 338 becomes object 353 [Arahbo, the First Fang].
+- Turn 7, seq 132: object 254 becomes object 354 [object 254].
+- Turn 7, seq 135: object 246 becomes object 355 [Ajani's Pridemate].
+- Turn 8, seq 159: object 195 becomes object 359 [Swamp].
+- Turn 8, seq 162: object 359 becomes object 360 [Swamp].
+- Turn 8, seq 163: object 191 becomes object 361 [Moment of Craving].
+- Turn 8, seq 167: object 361 becomes object 364 [Moment of Craving].
+- Turn 8, seq 167: object 355 becomes object 365 [Ajani's Pridemate].
+- Turn 9, seq 181: object 255 becomes object 366 [object 255].
+- Turn 9, seq 192: object 249 becomes object 367 [Leonardo's Technique].
+- Turn 9, seq 196: object 344 becomes object 370 [Cat].
+- Turn 9, seq 198: object 353 becomes object 371 [Arahbo, the First Fang].
+- Turn 9, seq 198: object 365 becomes object 372 [Ajani's Pridemate].
+- Turn 9, seq 199: object 367 becomes object 377 [Leonardo's Technique].
+- Turn 10, seq 225: object 196 becomes object 382 [Swamp].
+- Turn 10, seq 228: object 382 becomes object 383 [Swamp].
+- Turn 10, seq 229: object 346 becomes object 384 [Makeshift Binding].
+- Turn 10, seq 235: object 371 becomes object 389 [Arahbo, the First Fang].
+- Turn 11, seq 249: object 256 becomes object 390 [Storm, Windrider].
+- Turn 11, seq 252: object 336 becomes object 391 [Requisition Raid].
+- Turn 11, seq 259: object 384 becomes object 395 [Makeshift Binding].
+- Turn 11, seq 259: object 389 becomes object 396 [Arahbo, the First Fang].
+- Turn 11, seq 259: object 391 becomes object 399 [Requisition Raid].
+- Turn 12, seq 285: object 197 becomes object 402 [Plains].
+- Turn 12, seq 288: object 402 becomes object 403 [Plains].
+- Turn 12, seq 289: object 331 becomes object 404 [Marauding Blight-Priest].
+- Turn 13, seq 309: object 257 becomes object 410 [Plains].
+- Turn 13, seq 312: object 410 becomes object 411 [Plains].
+- Turn 13, seq 328: object 390 becomes object 412 [Storm, Windrider].
+- Turn 14, seq 340: object 198 becomes object 419 [Swamp].
+- Turn 14, seq 343: object 419 becomes object 420 [Swamp].
+- Turn 14, seq 344: object 190 becomes object 421 [Bloodletter of Aclazotz].
+- Turn 15, seq 370: object 258 becomes object 428 [object 258].
+- Turn 15, seq 381: object 328 becomes object 429 [Claws Out].
+- Turn 15, seq 383: object 429 becomes object 432 [Claws Out].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: Dinholo plays Restless Prairie (object 323) from Hand (Dinholo) to Battlefield.
+- Turn 2: gian31 plays Plains (object 325) from Hand (gian31) to Battlefield.
+- Turn 3: Dinholo plays Blossoming Sands (object 329) from Hand (Dinholo) to Battlefield.
+- Turn 4: gian31 plays Scoured Barrens (object 332) from Hand (gian31) to Battlefield.
+- Turn 5: Dinholo plays Plains (object 337) from Hand (Dinholo) to Battlefield.
+- Turn 6: gian31 plays Scoured Barrens (object 347) from Hand (gian31) to Battlefield.
+- Turn 8: gian31 plays Swamp (object 360) from Hand (gian31) to Battlefield.
+- Turn 10: gian31 plays Swamp (object 383) from Hand (gian31) to Battlefield.
+- Turn 12: gian31 plays Plains (object 403) from Hand (gian31) to Battlefield.
+- Turn 13: Dinholo plays Plains (object 411) from Hand (Dinholo) to Battlefield.
+- Turn 14: gian31 plays Swamp (object 420) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- Turn 9: Authority of the Consuls -> Arahbo, the First Fang; observed repeated transitions=2; net life: gian31 +2.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED TRIGGER CYCLES
+------------------------------------------------------------
+- Turn 9: Authority of the Consuls â†” Arahbo, the First Fang; observed repetitions=2 (cycle length 2).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Authority of the Consuls: casts=1; abilities=10 (triggered=10, activated=0) across turns [2, 5, 5, 7, 9, 9, 9, 9, 11, 11, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=10, other=0
+  observed effects: life +1
+- Arahbo, the First Fang: casts=1; abilities=4 (triggered=4, activated=0) across turns [5, 5, 9, 9, 11]
+  observed effect totals: draws=0, tokens=4, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Marauding Blight-Priest: casts=1; abilities=3 (triggered=3, activated=0) across turns [12, 12, 13, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=3
+  observed effects: life -1, life -2, synthetic event
+- Case of the Uneaten Feast: casts=1; abilities=2 (triggered=2, activated=0) across turns [4, 12, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Moment of Craving: casts=2 across turns [6, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=2
+  observed effects: P/T -2/-2, life +2
+- Scoured Barrens: abilities=2 (triggered=2, activated=0) across turns [4, 6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Ajani's Pridemate: casts=1 across turns [7]
+- Bloodletter of Aclazotz: casts=1 across turns [14]
+- Blossoming Sands: abilities=1 (triggered=1, activated=0) across turns [3]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Claws Out: casts=1 across turns [15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=6
+  observed effects: P/T +2/+2
+- Requisition Raid: casts=1 across turns [11]
+  observed effect totals: draws=0, tokens=0, counters=4, returns=1, damage=0, life_changes=0, other=5
+  observed effects: +1 counter(s), P/T +1/+1, destroy, return to battlefield
+- Storm, Windrider: casts=1 across turns [13]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 7 â€” None (active=Dinholo)
+  attacker: Cat (Dinholo) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 â€” None (active=Dinholo)
+  attacker: Cat (Dinholo) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 â€” None (active=Dinholo)
+  attacker: Ajani's Pridemate (Dinholo) -> gian31; unblocked in this observed snapshot
+  attacker: Cat (Dinholo) -> gian31; unblocked in this observed snapshot
+  attacker: Cat (Dinholo) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 â€” None (active=Dinholo)
+  attacker: Ajani's Pridemate (Dinholo) -> gian31; unblocked in this observed snapshot
+  attacker: Cat (Dinholo) -> gian31; unblocked in this observed snapshot
+  attacker: Cat (Dinholo) -> gian31; unblocked in this observed snapshot
+  attacker: Arahbo, the First Fang (Dinholo) -> gian31; unblocked in this observed snapshot
+  attacker: Cat (Dinholo) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 14 â€” None (active=gian31)
+  attacker: Marauding Blight-Priest (gian31) -> Dinholo; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 15 â€” None (active=Dinholo)
+  attacker: Ajani's Pridemate (Dinholo) -> gian31; unblocked in this observed snapshot
+  attacker: Cat (Dinholo) -> gian31; unblocked in this observed snapshot
+  attacker: Cat (Dinholo) -> gian31; unblocked in this observed snapshot
+  attacker: Arahbo, the First Fang (Dinholo) -> gian31; unblocked in this observed snapshot
+  attacker: Cat (Dinholo) -> gian31; unblocked in this observed snapshot
+  attacker: Storm, Windrider (Dinholo) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 9: Ability of Authority of the Consuls (active=Dinholo controller=gian31) - Ability of Authority of the Consuls: gian31 gains 1 life.
+- Turn 9: Ability of Authority of the Consuls (active=Dinholo controller=gian31) - Ability of Authority of the Consuls: gian31 gains 1 life.
+- Turn 9: Ability of Arahbo, the First Fang (active=Dinholo) - Ability of Arahbo, the First Fang: a token is created.
+- Turn 9: Ability of Authority of the Consuls (active=Dinholo controller=gian31) - Ability of Authority of the Consuls: gian31 gains 1 life.
+- Turn 9: Ability of Arahbo, the First Fang (active=Dinholo) - Ability of Arahbo, the First Fang: a token is created.
+- Turn 9: Ability of Authority of the Consuls (active=Dinholo controller=gian31) - Ability of Authority of the Consuls: gian31 gains 1 life.
+- Turn 15: Claws Out (active=Dinholo) - Claws Out: Ajani's Pridemate gets +2/+2; Cat gets +2/+2; Cat gets +2/+2; Arahbo, the First Fang gets +2/+2; Cat gets +2/+2; Storm, Windrider gets +2/+2.
+
+TECHNICAL APPENDIX â€” OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 185: Plains | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 186: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 187: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 188: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 189: Moment of Craving | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 190: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 191: Moment of Craving | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 323: Restless Prairie | controller=Dinholo | owner=Dinholo | zone=Battlefield (latest_object_observation)
+- 324: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 325: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 326: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 329: Blossoming Sands | controller=Dinholo | owner=Dinholo | zone=Battlefield (latest_object_observation)
+- 330: object 330 | controller=Dinholo | owner=Dinholo | zone=unknown (inferred unknown) (latest_object_observation)
+- 331: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 332: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 333: object 333 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 334: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 337: Plains | controller=Dinholo | owner=Dinholo | zone=Battlefield (latest_object_observation)
+- 338: Arahbo, the First Fang | controller=Dinholo | owner=Dinholo | zone=Stack (latest_object_observation)
+- 342: object 342 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 343: object 343 | controller=Dinholo | owner=Dinholo | zone=unknown (inferred unknown) (latest_object_observation)
+- 344: Cat | controller=Dinholo | owner=Dinholo | zone=Stack (latest_object_observation)
+- 345: object 345 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 346: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 347: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 348: object 348 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 349: Moment of Craving | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 352: Moment of Craving | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 353: Arahbo, the First Fang | controller=Dinholo | owner=Dinholo | zone=Graveyard (latest_object_observation)
+- 355: Ajani's Pridemate | controller=Dinholo | owner=Dinholo | zone=Stack (latest_object_observation)
+- 358: object 358 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 359: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 360: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 361: Moment of Craving | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 364: Moment of Craving | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 365: Ajani's Pridemate | controller=Dinholo | owner=Dinholo | zone=Graveyard (latest_object_observation)
+- 367: Leonardo's Technique | controller=Dinholo | owner=Dinholo | zone=Stack (latest_object_observation)
+- 371: Arahbo, the First Fang | controller=Dinholo | owner=Dinholo | zone=Battlefield (latest_object_observation)
+- 372: Ajani's Pridemate | controller=Dinholo | owner=Dinholo | zone=Battlefield (latest_object_observation)
+- 373: object 373 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 374: object 374 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 375: object 375 | controller=Dinholo | owner=Dinholo | zone=unknown (inferred unknown) (latest_object_observation)
+- 376: object 376 | controller=Dinholo | owner=Dinholo | zone=unknown (inferred unknown) (latest_object_observation)
+- 377: Leonardo's Technique | controller=Dinholo | owner=Dinholo | zone=unknown (inferred unknown) (latest_object_observation)
+- 378: Cat | controller=Dinholo | owner=Dinholo | zone=Battlefield (latest_object_observation)
+- 379: object 379 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 380: Cat | controller=Dinholo | owner=Dinholo | zone=Battlefield (latest_object_observation)
+- 381: object 381 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 382: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 383: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 384: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 388: object 388 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 389: Arahbo, the First Fang | controller=Dinholo | owner=Dinholo | zone=Exile (latest_object_observation)
+- 391: Requisition Raid | controller=Dinholo | owner=Dinholo | zone=Stack (latest_object_observation)
+- 395: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 396: Arahbo, the First Fang | controller=Dinholo | owner=Dinholo | zone=Battlefield (latest_object_observation)
+- 397: object 397 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 398: object 398 | controller=Dinholo | owner=Dinholo | zone=unknown (inferred unknown) (latest_object_observation)
+- 399: Requisition Raid | controller=Dinholo | owner=Dinholo | zone=unknown (inferred unknown) (latest_object_observation)
+- 400: Cat | controller=Dinholo | owner=Dinholo | zone=Battlefield (latest_object_observation)
+- 401: object 401 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 402: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 403: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 404: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 408: object 408 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 409: object 409 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 411: Plains | controller=Dinholo | owner=Dinholo | zone=Battlefield (latest_object_observation)
+- 412: Storm, Windrider | controller=Dinholo | owner=Dinholo | zone=Battlefield (latest_object_observation)
+- 417: object 417 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 418: object 418 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 419: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 420: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 421: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 426: object 426 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 427: object 427 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 429: Claws Out | controller=Dinholo | owner=Dinholo | zone=Stack (latest_object_observation)
+- 432: Claws Out | controller=Dinholo | owner=Dinholo | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX â€” CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Dinholo: 28 total items
+  zones: Battlefield=11, Exile=1, Graveyard=2, Stack=6, unknown=8
+  objects: Arahbo, the First Fang x5, Cat x4, Ajani's Pridemate x3, Claws Out x2, Leonardo's Technique x2, Plains x2, Requisition Raid x2, Blossoming Sands, Restless Prairie, Storm, Windrider, object 330, object 343
+gian31: 49 total items
+  zones: Battlefield=9, Graveyard=3, Hand=7, Stack=12, unknown=18
+  objects: Moment of Craving x6, Swamp x6, Plains x4, Scoured Barrens x4, Makeshift Binding x3, Authority of the Consuls x2, Bloodletter of Aclazotz x2, Case of the Uneaten Feast x2, Marauding Blight-Priest x2, object 333, object 342, object 345
+
+TECHNICAL APPENDIX â€” LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (9): Bloodletter of Aclazotz, Marauding Blight-Priest, Plains, Plains, Scoured Barrens, Scoured Barrens, Swamp, Swamp, Swamp
+  Graveyard: 3 card(s)
+Dinholo:
+  Battlefield (11): Ajani's Pridemate, Arahbo, the First Fang, Arahbo, the First Fang, Blossoming Sands, Cat, Cat, Cat, Plains, Plains, Restless Prairie, Storm, Windrider
+  Graveyard: 2 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+26 objects have no resolved final zone and are omitted from the known board state.
+Dinholo: 8 unknown object(s)
+gian31: 18 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=7, Stack=18
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Dinholo:
+  Battlefield (10): Restless Prairie, Blossoming Sands, Plains, Ajani's Pridemate, Cat, Cat, Arahbo, the First Fang, Cat, Plains, Storm, Windrider
+  Graveyard (3): Leonardo's Technique, Requisition Raid, Claws Out
+gian31:
+  Battlefield (11): Plains, Authority of the Consuls, Scoured Barrens, Case of the Uneaten Feast, Scoured Barrens, Swamp, Swamp, Plains, Marauding Blight-Priest, Swamp, Bloodletter of Aclazotz
+  Graveyard (3): Moment of Craving, Moment of Craving, Makeshift Binding
+Known non-persistent entries (counts only):
+  Dinholo: Stack=1
+  gian31: Limbo=2
+  unknown: Hand=4, Library=110, Limbo=6
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: Dinholo Battlefield=1
+- Turn 2: Dinholo Battlefield=1; gian31 Battlefield=2
+- Turn 3: Dinholo Battlefield=2; gian31 Battlefield=2
+- Turn 4: Dinholo Battlefield=2; gian31 Battlefield=4
+- Turn 5: Dinholo Battlefield=4; gian31 Battlefield=4
+- Turn 6: Dinholo Battlefield=3; Dinholo Graveyard=1; gian31 Battlefield=5; gian31 Graveyard=1
+- Turn 7: Dinholo Battlefield=4; Dinholo Graveyard=1; gian31 Battlefield=5; gian31 Graveyard=1
+- Turn 8: Dinholo Battlefield=3; Dinholo Graveyard=2; gian31 Battlefield=6; gian31 Graveyard=2
+- Turn 9: Dinholo Battlefield=5; Dinholo Graveyard=1; gian31 Battlefield=6; gian31 Graveyard=2
+- Turn 10: Dinholo Battlefield=4; Dinholo Graveyard=1; Dinholo Exile=1; gian31 Battlefield=8; gian31 Graveyard=2
+- Turn 11: Dinholo Battlefield=5; Dinholo Graveyard=2; gian31 Battlefield=7; gian31 Graveyard=3
+- Turn 12: Dinholo Battlefield=5; Dinholo Graveyard=2; gian31 Battlefield=9; gian31 Graveyard=3
+- Turn 13: Dinholo Battlefield=7; Dinholo Graveyard=2; gian31 Battlefield=9; gian31 Graveyard=3
+- Turn 14: Dinholo Battlefield=7; Dinholo Graveyard=2; gian31 Battlefield=11; gian31 Graveyard=3
+- Turn 15: Dinholo Battlefield=7; Dinholo Graveyard=3; gian31 Battlefield=11; gian31 Graveyard=3
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Arahbo, the First Fang resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Ajani's Pridemate resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Storm, Windrider resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
