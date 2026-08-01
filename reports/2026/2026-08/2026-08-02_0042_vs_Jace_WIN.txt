@@ -1,0 +1,758 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Jace
+Seat map: Seat 1=gian31, Seat 2=Jace
+Turn range (known): 1 - 12
+Records: 42
+Action chains: 27
+Winner: gian31
+Final life: {'gian31': 11, 'Jace': 3}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Match-result payload was observed after the last captured action: Turn 12 (Phase_Main1; Moment of Craving, seq 351); payload ordering within later uncaptured records is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 30 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 10 explicit PlayLand transfers across turns [1, 2, 3, 4, 6, 7, 9, 10, 11, 12]. Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 12 explicit Library -> Hand movement(s); named in the draw record=6, resolved through an explicit identity transition=5, unresolved=1.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 11, 'Jace': 3}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 12 (Phase_Main1; Moment of Craving, seq 351).
+Last captured life mutation: gian31 9 -> 11 (seq 351).
+Specific win condition is unavailable unless separately stated by the match-result payload.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Temple of Epiphany [287] Hand (Jace) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Jace: Battlefield: Temple of Epiphany [287]
+
+Turn 2
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=30] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=291)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 291) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 291) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [289] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 24).
+      Plains [290] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 27).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Jace: Battlefield: Temple of Epiphany [287]
+      gian31: Battlefield: Authority of the Consuls [291], Plains [290]
+
+Turn 3
+  - Firebrand Archer [valid_resolution_no_immediate_mutation, seq=50] (active=Jace, phase=Phase_Main1, controller=Jace, owner=Jace, source_object=295)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Firebrand Archer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Firebrand Archer (object 295) Hand (Jace) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Firebrand Archer (object 295) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=52] (active=Jace, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=291, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Firespitter Whelp [293] Library (Jace) -> Hand (Jace) (Draw; GRE sequence 44).
+      Mountain [294] Hand (Jace) -> Battlefield (PlayLand; GRE sequence 47).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Jace: Battlefield: Firebrand Archer [295], Mountain [294], Temple of Epiphany [287]
+      gian31: Battlefield: Authority of the Consuls [291], Plains [290]
+
+Turn 4
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=73] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=301)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 301) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 301) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Moment of Craving [299] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 66).
+      Swamp [300] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 69).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Jace: Battlefield: Firebrand Archer [295], Mountain [294], Temple of Epiphany [287]
+      gian31: Battlefield: Authority of the Consuls [291], Plains [290], Starscape Cleric [301], Swamp [300]
+
+Turn 5
+  - Ability of Firebrand Archer [observed_semantic_effect, seq=92] (active=Jace, phase=Phase_Main1, controller=Jace, owner=Jace, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Firebrand Archer: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: object 1 [1] (role/targeting only where the protocol identifies it)
+  - Dragon Fodder [observed_semantic_effect, seq=94] (active=Jace, phase=Phase_Main1, controller=Jace, owner=Jace, source_object=305)
+      effects: token creation, token creation
+      narrative: Dragon Fodder: a token is created; a token is created.
+      explicit effect object references: Goblin [309], Goblin [310] (role/targeting only where the protocol identifies it)
+      token created: Goblin (object 309, controller=Jace) 1/1
+      token created: Goblin (object 310, controller=Jace) 1/1
+      protocol-linked zone transfer: Dragon Fodder (object 305) Hand (Jace) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Dragon Fodder (object 313) Stack -> Graveyard (Jace) (Resolve; shared object ID)
+      identity continuity: source object 305 -> transfer object 313 (explicit GRE ObjectIdChanged chain).
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=97] (active=Jace, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=291, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=99] (active=Jace, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=301, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Jace loses 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=101] (active=Jace, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=291, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=103] (active=Jace, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=301, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Jace loses 1 life.
+  Combat snapshots observed (active=Jace; frames: DeclareAttack -> DeclareBlock):
+      attackers: Firebrand Archer [295] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      observed attacker power total: 2; unattributed defending-player life loss: 3; snapshot comparison does not reconcile (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Jace -2; gian31 -1 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Firebrand Archer; direct protocol link unavailable): gian31 21 -> 20
+    life: gian31 20 -> 21
+    life: Jace 20 -> 19
+    life: gian31 21 -> 22
+    life: Jace 19 -> 18
+    life (semantically attributed to Firebrand Archer; direct protocol link unavailable): gian31 22 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Dragon Fodder [304] Library (Jace) -> Hand (Jace) (Draw; GRE sequence 87).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Jace: Battlefield: Firebrand Archer [295], Mountain [294], Temple of Epiphany [287]; Graveyard: Dragon Fodder [313]
+      gian31: Battlefield: Authority of the Consuls [291], Plains [290], Starscape Cleric [301], Swamp [300]
+
+Turn 6
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=129] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=318)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 318) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 318) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [301] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      observed attacker power total: 2; unattributed defending-player life loss: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Jace -2 (individual changes below; gains and losses may offset)
+    life (combat-related snapshot; exact source unavailable): Jace 18 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Leech Collector [316] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 123).
+      Swamp [317] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 126).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Jace: Battlefield: Firebrand Archer [295], Mountain [294], Temple of Epiphany [287]; Graveyard: Dragon Fodder [313]
+      gian31: Battlefield: Authority of the Consuls [291], Marauding Blight-Priest [318], Plains [290], Starscape Cleric [301], Swamp [300], Swamp [317]
+
+Turn 7
+  - Ability of Firebrand Archer [observed_semantic_effect, seq=157] (active=Jace, phase=Phase_Main1, controller=Jace, owner=Jace, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Firebrand Archer: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: object 1 [1] (role/targeting only where the protocol identifies it)
+  - Fiery Annihilation [observed_semantic_effect, seq=159] (active=Jace, phase=Phase_Main1, controller=Jace, owner=Jace, source_object=324)
+      effects: 5 damage
+      narrative: Fiery Annihilation: Marauding Blight-Priest takes 5 damage.
+      explicit effect object references: Marauding Blight-Priest [318] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Fiery Annihilation (object 324) Hand (Jace) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fiery Annihilation (object 329) Stack -> Graveyard (Jace) (Resolve; shared object ID)
+      identity continuity: source object 324 -> transfer object 329 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Marauding Blight-Priest (object 330) Battlefield -> Exile (SBA_Damage; shared object ID)
+  Combat snapshots observed (active=Jace; frames: DeclareAttack -> DeclareBlock):
+      attackers: Firebrand Archer [295] (unblocked, observed P/T 2/1), Goblin [309] (unblocked, observed P/T 1/1), Goblin [310] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      observed attacker power total: 4; unattributed defending-player life loss: 5; snapshot comparison does not reconcile (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -5 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Firebrand Archer; direct protocol link unavailable): gian31 20 -> 19
+    life (semantically attributed to Firebrand Archer; direct protocol link unavailable): gian31 19 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [322] Library (Jace) -> Hand (Jace) (Draw; GRE sequence 149).
+      Mountain [323] Hand (Jace) -> Battlefield (PlayLand; GRE sequence 152).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Jace: Battlefield: Firebrand Archer [295], Mountain [294], Mountain [323], Temple of Epiphany [287]; Graveyard: Dragon Fodder [313], Fiery Annihilation [329]
+      gian31: Battlefield: Authority of the Consuls [291], Plains [290], Starscape Cleric [301], Swamp [300], Swamp [317]; Exile: Marauding Blight-Priest [330]
+
+Turn 8
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=184] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=332)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 332) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 332) Stack -> Battlefield (Resolve; shared object ID)
+  - Leech Collector [valid_resolution_no_immediate_mutation, seq=187] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=334)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Leech Collector resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Leech Collector (object 334) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leech Collector (object 334) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=189] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=332, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=192] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=301, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Jace loses 1 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=194] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=334, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+    net observed life change this turn: Jace -1; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 15 -> 16
+    life: Jace 16 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [331] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 179).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Jace: Battlefield: Firebrand Archer [295], Mountain [294], Mountain [323], Temple of Epiphany [287]; Graveyard: Dragon Fodder [313], Fiery Annihilation [329]
+      gian31: Battlefield: Authority of the Consuls [291], Case of the Uneaten Feast [332], Leech Collector [334], Plains [290], Starscape Cleric [301], Swamp [300], Swamp [317]; Exile: Marauding Blight-Priest [330]
+
+Turn 9
+  - Ability of Swiftwater Cliffs [observed_semantic_effect, seq=214] (active=Jace, phase=Phase_Main1, controller=Jace, owner=Jace, source_object=342, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Swiftwater Cliffs: Jace gains 1 life.
+  - Firespitter Whelp [valid_resolution_no_immediate_mutation, seq=217] (active=Jace, phase=Phase_Main1, controller=Jace, owner=Jace, source_object=344)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Firespitter Whelp resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Firespitter Whelp (object 344) Hand (Jace) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Firespitter Whelp (object 344) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=219] (active=Jace, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=291, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=222] (active=Jace, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=301, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Jace loses 1 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=224] (active=Jace, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=334, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  Combat snapshots observed (active=Jace; frames: DeclareAttack):
+      attackers: Firebrand Archer [295] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      observed attacker power total: 2; unattributed defending-player life loss: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Jace +0; gian31 -1 (individual changes below; gains and losses may offset)
+    life: Jace 15 -> 16
+    life: gian31 16 -> 17
+    life: Jace 16 -> 15
+    life (combat-related snapshot; exact source unavailable): gian31 17 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swiftwater Cliffs [341] Library (Jace) -> Hand (Jace) (Draw; GRE sequence 209).
+      Swiftwater Cliffs [342] Hand (Jace) -> Battlefield (PlayLand; GRE sequence 212).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Jace: Battlefield: Firebrand Archer [295], Firespitter Whelp [344], Mountain [294], Mountain [323], Swiftwater Cliffs [342], Temple of Epiphany [287]; Graveyard: Dragon Fodder [313], Fiery Annihilation [329]
+      gian31: Battlefield: Authority of the Consuls [291], Case of the Uneaten Feast [332], Leech Collector [334], Plains [290], Starscape Cleric [301], Swamp [300], Swamp [317]; Exile: Marauding Blight-Priest [330]
+
+Turn 10
+  - Bloodletting [observed_semantic_effect, seq=251] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=353)
+      effects: life -2
+      narrative: Bloodletting: Jace loses 2 life.
+      protocol-linked zone transfer: Bloodletting (object 353) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Bloodletting (object 355) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 353 -> transfer object 355 (explicit GRE ObjectIdChanged chain).
+  - Leech Collector [valid_resolution_no_immediate_mutation, seq=254] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=356)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Leech Collector resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Leech Collector (object 356) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leech Collector (object 356) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=256] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=332, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=259] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=301, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Jace loses 1 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=261] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=356, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=263] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=334, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  - Bloodletting [observed_semantic_effect, seq=266] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=365)
+      effects: life -2
+      narrative: Bloodletting: Jace loses 2 life.
+      protocol-linked zone transfer: Bloodletting (object 365) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Bloodletting (object 367) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 365 -> transfer object 367 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [301] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      observed attacker power total: 2; unattributed defending-player life loss: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Jace -7; gian31 +1 (individual changes below; gains and losses may offset)
+    life: Jace 15 -> 13
+    life: gian31 15 -> 16
+    life: Jace 13 -> 12
+    life: Jace 12 -> 10
+    life (semantically attributed to Bloodletting; direct protocol link unavailable): Jace 10 -> 8
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [351] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 245).
+      Swamp [352] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 248).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Jace: Battlefield: Firebrand Archer [295], Firespitter Whelp [344], Mountain [294], Mountain [323], Swiftwater Cliffs [342], Temple of Epiphany [287]; Graveyard: Dragon Fodder [313], Fiery Annihilation [329]
+      gian31: Battlefield: Authority of the Consuls [291], Case of the Uneaten Feast [332], Leech Collector [334], Leech Collector [356], Plains [290], Starscape Cleric [301], Swamp [300], Swamp [317], Swamp [352]; Exile: Marauding Blight-Priest [330]; Graveyard: Bloodletting [355], Bloodletting [367]
+
+Turn 11
+  - Ability of Firespitter Whelp [observed_semantic_effect, seq=292] (active=Jace, phase=Phase_Main1, controller=Jace, owner=Jace, source_object=344, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Firespitter Whelp: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: object 1 [1] (role/targeting only where the protocol identifies it)
+  - Firespitter Whelp [valid_resolution_no_immediate_mutation, seq=294] (active=Jace, phase=Phase_Main1, controller=Jace, owner=Jace, source_object=370)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Firespitter Whelp resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Firespitter Whelp (object 370) Hand (Jace) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Firespitter Whelp (object 370) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=296] (active=Jace, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=291, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=299] (active=Jace, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=301, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Jace loses 1 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=301] (active=Jace, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=356, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=303] (active=Jace, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=334, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  - Ability of Firespitter Whelp [observed_semantic_effect, seq=307] (active=Jace, phase=Phase_Main1, controller=Jace, owner=Jace, source_object=370, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Firespitter Whelp: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: object 1 [1] (role/targeting only where the protocol identifies it)
+  - Ability of Firespitter Whelp [observed_semantic_effect, seq=309] (active=Jace, phase=Phase_Main1, controller=Jace, owner=Jace, source_object=344, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Firespitter Whelp: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: object 1 [1] (role/targeting only where the protocol identifies it)
+  - Ability of Firebrand Archer [observed_semantic_effect, seq=311] (active=Jace, phase=Phase_Main1, controller=Jace, owner=Jace, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Firebrand Archer: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: object 1 [1] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=Jace; frames: DeclareAttack -> CombatDamage):
+      attackers: Firebrand Archer [295] (unblocked, observed P/T 2/1), Goblin [309] (unblocked, observed P/T 1/1), Goblin [310] (unblocked, observed P/T 1/1), Firespitter Whelp [344] (unblocked, observed P/T 2/2)
+      blockers: Leech Collector [334], Leech Collector [356]
+      observed attacker power total: 6; unattributed defending-player life loss: 8; snapshot comparison does not reconcile (exact assignment unavailable).
+      combat-result zone change: Goblin [387] Battlefield -> Graveyard (Jace) (SBA_Damage).
+      combat-result zone change: Goblin [388] Battlefield -> Graveyard (Jace) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Jace -1; gian31 -7 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Firespitter Whelp; direct protocol link unavailable): gian31 16 -> 15
+    life: gian31 15 -> 16
+    life: Jace 8 -> 7
+    life (semantically attributed to Firespitter Whelp; direct protocol link unavailable): gian31 16 -> 15
+    life (semantically attributed to Firespitter Whelp; direct protocol link unavailable): gian31 15 -> 14
+    life (semantically attributed to Firebrand Archer; direct protocol link unavailable): gian31 14 -> 13
+    life (semantically attributed to Firebrand Archer; direct protocol link unavailable): gian31 13 -> 9
+    additional protocol-observed zone movements not assigned to an action chain:
+      Island [368] Library (Jace) -> Hand (Jace) (Draw; GRE sequence 286).
+      Island [369] Hand (Jace) -> Battlefield (PlayLand; GRE sequence 289).
+      Opt [380] Hand (Jace) -> Stack (CastSpell; GRE sequence 304).
+      object 385 [385] Library (Jace) -> Hand (Jace) (Draw; GRE sequence 314).
+      Opt [386] Stack -> Graveyard (Jace) (Resolve; GRE sequence 314).
+      Goblin [387] Battlefield -> Graveyard (Jace) (SBA_Damage; GRE sequence 327).
+      Goblin [388] Battlefield -> Graveyard (Jace) (SBA_Damage; GRE sequence 327).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Jace: Battlefield: Firebrand Archer [295], Firespitter Whelp [344], Firespitter Whelp [370], Island [369], Mountain [294], Mountain [323], Swiftwater Cliffs [342], Temple of Epiphany [287]; Graveyard: Dragon Fodder [313], Fiery Annihilation [329], Opt [386]
+      gian31: Battlefield: Authority of the Consuls [291], Case of the Uneaten Feast [332], Leech Collector [334], Leech Collector [356], Plains [290], Starscape Cleric [301], Swamp [300], Swamp [317], Swamp [352]; Exile: Marauding Blight-Priest [330]; Graveyard: Bloodletting [355], Bloodletting [367]
+      unknown: Graveyard: object 387 [387], object 388 [388]
+
+Turn 12
+  - Bloodletting [observed_semantic_effect, seq=343] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=391)
+      effects: life -2
+      narrative: Bloodletting: Jace loses 2 life.
+      protocol-linked zone transfer: Bloodletting (object 391) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Bloodletting (object 393) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 391 -> transfer object 393 (explicit GRE ObjectIdChanged chain).
+  - Bloodletting [observed_semantic_effect, seq=346] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=394)
+      effects: life -2
+      narrative: Bloodletting: Jace loses 2 life.
+      protocol-linked zone transfer: Bloodletting (object 394) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Bloodletting (object 396) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 394 -> transfer object 396 (explicit GRE ObjectIdChanged chain).
+  - Moment of Craving [observed_semantic_effect, seq=351] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=397)
+      effects: P/T -2/-2, life +2
+      narrative: Moment of Craving: Firespitter Whelp gets -2/-2; gian31 gains 2 life.
+      explicit effect object references: Firespitter Whelp [370] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Moment of Craving (object 397) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Moment of Craving (object 403) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 397 -> transfer object 403 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Firespitter Whelp (object 404) Battlefield -> Graveyard (Jace) (SBA_ZeroToughness; shared object ID)
+    net observed life change this turn: Jace -4; gian31 +2 (individual changes below; gains and losses may offset)
+    life: Jace 7 -> 5
+    life: Jace 5 -> 3
+    life: gian31 9 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [389] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 337).
+      Swamp [390] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 340).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Jace: Battlefield: Firebrand Archer [295], Firespitter Whelp [344], Island [369], Mountain [294], Mountain [323], Swiftwater Cliffs [342], Temple of Epiphany [287]; Graveyard: Dragon Fodder [313], Fiery Annihilation [329], Firespitter Whelp [404], Opt [386]
+      gian31: Battlefield: Authority of the Consuls [291], Case of the Uneaten Feast [332], Leech Collector [334], Leech Collector [356], Plains [290], Starscape Cleric [301], Swamp [300], Swamp [317], Swamp [352], Swamp [390]; Exile: Marauding Blight-Priest [330]; Graveyard: Bloodletting [355], Bloodletting [367], Bloodletting [393], Bloodletting [396], Moment of Craving [403]
+      unknown: Graveyard: object 387 [387], object 388 [388]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+- Turn 5, seq 92, Phase_Main1: gian31 21 -> 20; gian31 22 -> 20. Semantically attributed to Firebrand Archer; direct protocol link unavailable. Previous captured action: Firebrand Archer.
+- Turn 6, seq 139, Phase_Main1: Jace 18 -> 16. Combat declaration observed; exact assignment unavailable. Previous captured action: Marauding Blight-Priest.
+- Turn 7, seq 157, Phase_Main1: gian31 20 -> 19; gian31 19 -> 15. Semantically attributed to Firebrand Archer; direct protocol link unavailable. Previous captured action: Firebrand Archer.
+- Turn 9, seq 235, Phase_Main1: gian31 17 -> 15. Combat declaration observed; exact assignment unavailable. Previous captured action: Leech Collector.
+- Turn 10, seq 276, Phase_Main1: Jace 10 -> 8. Semantically attributed to Bloodletting; direct protocol link unavailable. Previous captured action: Bloodletting.
+- Turn 11, seq 292, Phase_Main1: gian31 16 -> 15; gian31 16 -> 15; gian31 15 -> 14; gian31 14 -> 13; gian31 13 -> 9. Semantically attributed to Firebrand Archer, Firespitter Whelp; direct protocol link unavailable. Previous captured action: Firespitter Whelp.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 2 token creations observed; 0 active as last observed; 2 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Goblin [309] controller=Jace; created Turn 5 (1/1); left battlefield Turn 11 via Battlefield -> Graveyard (Jace) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Goblin [310] controller=Jace; created Turn 5 (1/1); left battlefield Turn 11 via Battlefield -> Graveyard (Jace) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Temple of Epiphany [owner=Jace, controller=Jace] moves Hand (Jace) -> Battlefield (PlayLand).
+- Turn 2, seq 24: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 27: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 28: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 30: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 44: Firespitter Whelp [owner/controller metadata unavailable] moves Library (Jace) -> Hand (Jace) (Draw).
+- Turn 3, seq 47: Mountain [owner=Jace, controller=Jace] moves Hand (Jace) -> Battlefield (PlayLand).
+- Turn 3, seq 48: Firebrand Archer [owner=Jace, controller=Jace] moves Hand (Jace) -> Stack (CastSpell).
+- Turn 3, seq 50: Firebrand Archer [owner=Jace, controller=Jace] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 66: Moment of Craving [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 69: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 70: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 73: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 87: Dragon Fodder [owner/controller metadata unavailable] moves Library (Jace) -> Hand (Jace) (Draw).
+- Turn 5, seq 90: Dragon Fodder [owner=Jace, controller=Jace] moves Hand (Jace) -> Stack (CastSpell).
+- Turn 5, seq 94: Dragon Fodder [owner=Jace, controller=Jace] moves Stack -> Graveyard (Jace) (Resolve).
+- Turn 6, seq 123: Leech Collector [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 126: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 127: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 129: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 149: Mountain [owner/controller metadata unavailable] moves Library (Jace) -> Hand (Jace) (Draw).
+- Turn 7, seq 152: Mountain [owner=Jace, controller=Jace] moves Hand (Jace) -> Battlefield (PlayLand).
+- Turn 7, seq 153: Fiery Annihilation [owner=Jace, controller=Jace] moves Hand (Jace) -> Stack (CastSpell).
+- Turn 7, seq 159: Fiery Annihilation [owner=Jace, controller=Jace] moves Stack -> Graveyard (Jace) (Resolve).
+- Turn 7, seq 159: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Battlefield -> Exile (SBA_Damage).
+- Turn 8, seq 179: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 182: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 184: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 185: Leech Collector [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 187: Leech Collector [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 209: Swiftwater Cliffs [owner/controller metadata unavailable] moves Library (Jace) -> Hand (Jace) (Draw).
+- Turn 9, seq 212: Swiftwater Cliffs [owner=Jace, controller=Jace] moves Hand (Jace) -> Battlefield (PlayLand).
+- Turn 9, seq 215: Firespitter Whelp [owner=Jace, controller=Jace] moves Hand (Jace) -> Stack (CastSpell).
+- Turn 9, seq 217: Firespitter Whelp [owner=Jace, controller=Jace] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 245: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 248: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 249: Bloodletting [owner=gian31, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 10, seq 251: Bloodletting [owner/controller metadata unavailable] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 10, seq 252: Leech Collector [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 254: Leech Collector [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 264: Bloodletting [owner=gian31, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 10, seq 266: Bloodletting [owner/controller metadata unavailable] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 11, seq 286: Island [owner/controller metadata unavailable] moves Library (Jace) -> Hand (Jace) (Draw).
+- Turn 11, seq 289: Island [owner=Jace, controller=Jace] moves Hand (Jace) -> Battlefield (PlayLand).
+- Turn 11, seq 290: Firespitter Whelp [owner=Jace, controller=Jace] moves Hand (Jace) -> Stack (CastSpell).
+- Turn 11, seq 294: Firespitter Whelp [owner=Jace, controller=Jace] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 304: Opt [owner=Jace, controller=Jace] moves Hand (Jace) -> Stack (CastSpell).
+- Turn 11, seq 314: object 385 [owner/controller metadata unavailable] moves Library (Jace) -> Hand (Jace) (Draw).
+- Turn 11, seq 314: Opt [owner=Jace, controller=Jace] moves Stack -> Graveyard (Jace) (Resolve).
+- Turn 11, seq 327: Goblin [owner/controller metadata unavailable] moves Battlefield -> Graveyard (Jace) (SBA_Damage).
+- Turn 11, seq 327: Goblin [owner/controller metadata unavailable] moves Battlefield -> Graveyard (Jace) (SBA_Damage).
+- Turn 12, seq 337: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 340: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 341: Bloodletting [owner=gian31, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 12, seq 343: Bloodletting [owner/controller metadata unavailable] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 12, seq 344: Bloodletting [owner=gian31, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 12, seq 346: Bloodletting [owner/controller metadata unavailable] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 12, seq 347: Moment of Craving [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 351: Moment of Craving [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 12, seq 351: Firespitter Whelp [owner=Jace, controller=Jace] moves Battlefield -> Graveyard (Jace) (SBA_ZeroToughness).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 232 becomes object 287 [Temple of Epiphany].
+- Turn 2, seq 24: object 174 becomes object 289 [Starscape Cleric].
+- Turn 2, seq 27: object 173 becomes object 290 [Plains].
+- Turn 2, seq 28: object 167 becomes object 291 [Authority of the Consuls].
+- Turn 3, seq 44: object 234 becomes object 293 [Firespitter Whelp].
+- Turn 3, seq 47: object 228 becomes object 294 [Mountain].
+- Turn 3, seq 48: object 231 becomes object 295 [Firebrand Archer].
+- Turn 4, seq 66: object 175 becomes object 299 [Moment of Craving].
+- Turn 4, seq 69: object 170 becomes object 300 [Swamp].
+- Turn 4, seq 70: object 289 becomes object 301 [Starscape Cleric].
+- Turn 5, seq 87: object 235 becomes object 304 [Dragon Fodder].
+- Turn 5, seq 90: object 304 becomes object 305 [Dragon Fodder].
+- Turn 5, seq 94: object 305 becomes object 313 [Dragon Fodder].
+- Turn 6, seq 123: object 176 becomes object 316 [Leech Collector].
+- Turn 6, seq 126: object 172 becomes object 317 [Swamp].
+- Turn 6, seq 127: object 168 becomes object 318 [Marauding Blight-Priest].
+- Turn 7, seq 149: object 236 becomes object 322 [Mountain].
+- Turn 7, seq 152: object 322 becomes object 323 [Mountain].
+- Turn 7, seq 153: object 229 becomes object 324 [Fiery Annihilation].
+- Turn 7, seq 159: object 324 becomes object 329 [Fiery Annihilation].
+- Turn 7, seq 159: object 318 becomes object 330 [Marauding Blight-Priest].
+- Turn 8, seq 179: object 177 becomes object 331 [Case of the Uneaten Feast].
+- Turn 8, seq 182: object 331 becomes object 332 [Case of the Uneaten Feast].
+- Turn 8, seq 185: object 316 becomes object 334 [Leech Collector].
+- Turn 9, seq 209: object 237 becomes object 341 [Swiftwater Cliffs].
+- Turn 9, seq 212: object 341 becomes object 342 [Swiftwater Cliffs].
+- Turn 9, seq 215: object 293 becomes object 344 [Firespitter Whelp].
+- Turn 10, seq 245: object 178 becomes object 351 [Swamp].
+- Turn 10, seq 248: object 351 becomes object 352 [Swamp].
+- Turn 10, seq 249: object 340 becomes object 353 [Bloodletting].
+- Turn 10, seq 251: object 353 becomes object 355 [Bloodletting].
+- Turn 10, seq 252: object 171 becomes object 356 [Leech Collector].
+- Turn 10, seq 264: object 363 becomes object 365 [Bloodletting].
+- Turn 10, seq 266: object 365 becomes object 367 [Bloodletting].
+- Turn 11, seq 286: object 238 becomes object 368 [Island].
+- Turn 11, seq 289: object 368 becomes object 369 [Island].
+- Turn 11, seq 290: object 227 becomes object 370 [Firespitter Whelp].
+- Turn 11, seq 304: object 230 becomes object 380 [Opt].
+- Turn 11, seq 314: object 240 becomes object 385 [object 240].
+- Turn 11, seq 314: object 380 becomes object 386 [Opt].
+- Turn 11, seq 327: object 309 becomes object 387 [Goblin].
+- Turn 11, seq 327: object 310 becomes object 388 [Goblin].
+- Turn 12, seq 337: object 179 becomes object 389 [Swamp].
+- Turn 12, seq 340: object 389 becomes object 390 [Swamp].
+- Turn 12, seq 341: object 364 becomes object 391 [Bloodletting].
+- Turn 12, seq 343: object 391 becomes object 393 [Bloodletting].
+- Turn 12, seq 344: object 379 becomes object 394 [Bloodletting].
+- Turn 12, seq 346: object 394 becomes object 396 [Bloodletting].
+- Turn 12, seq 347: object 299 becomes object 397 [Moment of Craving].
+- Turn 12, seq 351: object 397 becomes object 403 [Moment of Craving].
+- Turn 12, seq 351: object 370 becomes object 404 [Firespitter Whelp].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: Jace plays Temple of Epiphany (object 287) from Hand (Jace) to Battlefield.
+- Turn 2: gian31 plays Plains (object 290) from Hand (gian31) to Battlefield.
+- Turn 3: Jace plays Mountain (object 294) from Hand (Jace) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 300) from Hand (gian31) to Battlefield.
+- Turn 6: gian31 plays Swamp (object 317) from Hand (gian31) to Battlefield.
+- Turn 7: Jace plays Mountain (object 323) from Hand (Jace) to Battlefield.
+- Turn 9: Jace plays Swiftwater Cliffs (object 342) from Hand (Jace) to Battlefield.
+- Turn 10: gian31 plays Swamp (object 352) from Hand (gian31) to Battlefield.
+- Turn 11: Jace plays Island (object 369) from Hand (Jace) to Battlefield.
+- Turn 12: gian31 plays Swamp (object 390) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- Turn 5: Authority of the Consuls -> Starscape Cleric; observed repeated transitions=2; net life: Jace -2, gian31 +2.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED TRIGGER CYCLES
+------------------------------------------------------------
+- Turn 5: Authority of the Consuls â†” Starscape Cleric; observed repetitions=2 (cycle length 2).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Leech Collector: casts=2; abilities=6 (triggered=6, activated=0) across turns [8, 8, 9, 10, 10, 10, 11, 11]
+- Starscape Cleric: casts=1; abilities=6 (triggered=6, activated=0) across turns [4, 5, 5, 8, 9, 10, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=6, other=4
+  observed effects: life -1, synthetic event
+- Authority of the Consuls: casts=1; abilities=5 (triggered=5, activated=0) across turns [2, 3, 5, 5, 9, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=0
+  observed effects: life +1
+- Firespitter Whelp: casts=2; abilities=3 (triggered=3, activated=0) across turns [9, 11, 11, 11, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=3, life_changes=3, other=1
+  observed effects: 1 damage, life -1, synthetic event
+- Bloodletting: casts=4 across turns [10, 10, 12, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=4, other=2
+  observed effects: life -2, synthetic event
+- Firebrand Archer: casts=1; abilities=3 (triggered=3, activated=0) across turns [3, 5, 7, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=3, life_changes=3, other=2
+  observed effects: 1 damage, life -1, synthetic event
+- Case of the Uneaten Feast: casts=1; abilities=2 (triggered=2, activated=0) across turns [8, 8, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Dragon Fodder: casts=1 across turns [5]
+  observed effect totals: draws=0, tokens=2, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Fiery Annihilation: casts=1 across turns [7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 5 damage
+- Marauding Blight-Priest: casts=1 across turns [6]
+- Moment of Craving: casts=1 across turns [12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: P/T -2/-2, life +2
+- Swiftwater Cliffs: abilities=1 (triggered=1, activated=0) across turns [9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 â€” None (active=Jace)
+  attacker: Firebrand Archer (Jace) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 6 â€” None (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Jace; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 â€” None (active=Jace)
+  attacker: Firebrand Archer (Jace) -> gian31; unblocked in this observed snapshot
+  attacker: Goblin (Jace) -> gian31; unblocked in this observed snapshot
+  attacker: Goblin (Jace) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 â€” None (active=Jace)
+  attacker: Firebrand Archer (Jace) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 â€” None (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Jace; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 â€” None (active=Jace)
+  attacker: Firebrand Archer (Jace) -> gian31; unblocked in this observed snapshot
+  attacker: Goblin (Jace) -> gian31; unblocked in this observed snapshot
+  attacker: Goblin (Jace) -> gian31; unblocked in this observed snapshot
+  attacker: Firespitter Whelp (Jace) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX â€” OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 167: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 168: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 169: Makeshift Binding | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 170: Swamp | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 171: Leech Collector | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 172: Swamp | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 173: Plains | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 287: Temple of Epiphany | controller=Jace | owner=Jace | zone=Battlefield (latest_object_observation)
+- 288: object 288 | controller=Jace | owner=Jace | zone=unknown (inferred unknown) (latest_object_observation)
+- 289: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 290: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 291: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 294: Mountain | controller=Jace | owner=Jace | zone=Battlefield (latest_object_observation)
+- 295: Firebrand Archer | controller=Jace | owner=Jace | zone=Battlefield (latest_object_observation)
+- 298: object 298 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 299: Moment of Craving | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 300: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 301: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 305: Dragon Fodder | controller=Jace | owner=Jace | zone=Stack (latest_object_observation)
+- 308: object 308 | controller=Jace | owner=Jace | zone=unknown (inferred unknown) (latest_object_observation)
+- 309: Goblin | controller=Jace | owner=Jace | zone=Stack (latest_object_observation)
+- 310: Goblin | controller=Jace | owner=Jace | zone=Stack (latest_object_observation)
+- 311: object 311 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 312: object 312 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 313: Dragon Fodder | controller=Jace | owner=Jace | zone=Graveyard (latest_object_observation)
+- 314: object 314 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 315: object 315 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 316: Leech Collector | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 317: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 318: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 323: Mountain | controller=Jace | owner=Jace | zone=Battlefield (latest_object_observation)
+- 324: Fiery Annihilation | controller=Jace | owner=Jace | zone=Stack (latest_object_observation)
+- 328: object 328 | controller=Jace | owner=Jace | zone=unknown (inferred unknown) (latest_object_observation)
+- 329: Fiery Annihilation | controller=Jace | owner=Jace | zone=Graveyard (latest_object_observation)
+- 330: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 331: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 332: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 334: Leech Collector | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 337: object 337 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 338: object 338 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 339: object 339 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 340: Bloodletting | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 342: Swiftwater Cliffs | controller=Jace | owner=Jace | zone=Battlefield (latest_object_observation)
+- 343: object 343 | controller=Jace | owner=Jace | zone=unknown (inferred unknown) (latest_object_observation)
+- 344: Firespitter Whelp | controller=Jace | owner=Jace | zone=Battlefield (latest_object_observation)
+- 348: object 348 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 349: object 349 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 350: object 350 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 351: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 352: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 353: Bloodletting | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 356: Leech Collector | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 359: object 359 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 360: object 360 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 361: object 361 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 362: object 362 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 363: Bloodletting | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 364: Bloodletting | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 365: Bloodletting | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 369: Island | controller=Jace | owner=Jace | zone=Battlefield (latest_object_observation)
+- 370: Firespitter Whelp | controller=Jace | owner=Jace | zone=Stack (latest_object_observation)
+- 374: object 374 | controller=Jace | owner=Jace | zone=unknown (inferred unknown) (latest_object_observation)
+- 375: object 375 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 376: object 376 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 377: object 377 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 378: object 378 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 379: Bloodletting | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 380: Opt | controller=Jace | owner=Jace | zone=Stack (latest_object_observation)
+- 382: object 382 | controller=Jace | owner=Jace | zone=unknown (inferred unknown) (latest_object_observation)
+- 383: object 383 | controller=Jace | owner=Jace | zone=unknown (inferred unknown) (latest_object_observation)
+- 384: object 384 | controller=Jace | owner=Jace | zone=unknown (inferred unknown) (latest_object_observation)
+- 386: Opt | controller=Jace | owner=Jace | zone=Graveyard (latest_object_observation)
+- 389: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 390: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 391: Bloodletting | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 394: Bloodletting | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 397: Moment of Craving | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 400: object 400 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 401: object 401 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 402: object 402 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 403: Moment of Craving | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 404: Firespitter Whelp | controller=Jace | owner=Jace | zone=Graveyard (latest_object_observation)
+
+TECHNICAL APPENDIX â€” CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Jace: 25 total items
+  zones: Battlefield=7, Graveyard=4, Stack=6, unknown=8
+  objects: Firespitter Whelp x3, Dragon Fodder x2, Fiery Annihilation x2, Goblin x2, Mountain x2, Opt x2, Firebrand Archer, Island, Swiftwater Cliffs, Temple of Epiphany, object 288, object 308
+gian31: 57 total items
+  zones: Battlefield=10, Hand=6, Stack=17, unknown=24
+  objects: Bloodletting x8, Swamp x8, Leech Collector x4, Marauding Blight-Priest x3, Moment of Craving x3, Authority of the Consuls x2, Case of the Uneaten Feast x2, Plains x2, Starscape Cleric x2, Makeshift Binding, object 298, object 311
+
+TECHNICAL APPENDIX â€” LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (10): Leech Collector, Leech Collector, Marauding Blight-Priest, Marauding Blight-Priest, Plains, Starscape Cleric, Swamp, Swamp, Swamp, Swamp
+  Graveyard: 0 card(s)
+Jace:
+  Battlefield (7): Firebrand Archer, Firespitter Whelp, Island, Mountain, Mountain, Swiftwater Cliffs, Temple of Epiphany
+  Graveyard: 4 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+32 objects have no resolved final zone and are omitted from the known board state.
+Jace: 8 unknown object(s)
+gian31: 24 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=6, Stack=23
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Jace:
+  Battlefield (7): Temple of Epiphany, Mountain, Firebrand Archer, Mountain, Swiftwater Cliffs, Firespitter Whelp, Island
+  Graveyard (4): Dragon Fodder, Fiery Annihilation, Opt, Firespitter Whelp
+gian31:
+  Battlefield (10): Plains, Authority of the Consuls, Swamp, Starscape Cleric, Swamp, Case of the Uneaten Feast, Leech Collector, Swamp, Leech Collector, Swamp
+  Graveyard (1): Moment of Craving
+  Exile (1): Marauding Blight-Priest
+Known non-persistent entries (counts only):
+  Jace: Limbo=4
+  gian31: Hand=1, Limbo=13, Pending=3
+  unknown: Hand=2, Library=94, Limbo=7
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: Jace Battlefield=1
+- Turn 2: Jace Battlefield=1; gian31 Battlefield=2
+- Turn 3: Jace Battlefield=3; gian31 Battlefield=2
+- Turn 4: Jace Battlefield=3; gian31 Battlefield=4
+- Turn 5: Jace Battlefield=3; Jace Graveyard=1; gian31 Battlefield=4
+- Turn 6: Jace Battlefield=3; Jace Graveyard=1; gian31 Battlefield=6
+- Turn 7: Jace Battlefield=4; Jace Graveyard=2; gian31 Battlefield=5; gian31 Exile=1
+- Turn 8: Jace Battlefield=4; Jace Graveyard=2; gian31 Battlefield=7; gian31 Exile=1
+- Turn 9: Jace Battlefield=6; Jace Graveyard=2; gian31 Battlefield=7; gian31 Exile=1
+- Turn 10: Jace Battlefield=6; Jace Graveyard=2; gian31 Battlefield=9; gian31 Graveyard=2; gian31 Exile=1
+- Turn 11: Jace Battlefield=8; Jace Graveyard=3; gian31 Battlefield=9; gian31 Graveyard=2; gian31 Exile=1; unknown Graveyard=2
+- Turn 12: Jace Battlefield=7; Jace Graveyard=4; gian31 Battlefield=10; gian31 Graveyard=5; gian31 Exile=1; unknown Graveyard=2
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Firebrand Archer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Leech Collector resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Firespitter Whelp resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Leech Collector resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Firespitter Whelp resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
