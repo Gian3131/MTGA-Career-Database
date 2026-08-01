@@ -1,0 +1,687 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, lordsnowMN
+Seat map: Seat 1=gian31, Seat 2=lordsnowMN
+Turn range (known): 1 - 12
+Records: 41
+Action chains: 21
+Winner: gian31
+Final life: {'gian31': 22, 'lordsnowMN': 1}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Match-result payload was observed after the last captured action in Turn 12 (Phase_Main1); payload ordering within later uncaptured records is unavailable.
+Technical note: low-level runtime signals remain in the JSON technical appendix; they are not repeated under each action.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Ability of Dismal Backwater [observed_semantic_effect] (active=lordsnowMN, phase=Phase_Main1, controller=lordsnowMN, owner=lordsnowMN, source_object=287)
+      effects: life +1
+      narrative: Ability of Dismal Backwater: lordsnowMN gains 1 life.
+    life: lordsnowMN 20 -> 21
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      lordsnowMN: Battlefield: Dismal Backwater [287]
+
+Turn 2
+  - no narrative actions observed; protocol-only observations, if any, remain in the technical sections.
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      lordsnowMN: Battlefield: Dismal Backwater [287]
+      gian31: Battlefield: Godless Shrine [290]
+
+Turn 3
+  - no narrative actions observed; protocol-only observations, if any, remain in the technical sections.
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      lordsnowMN: Battlefield: Dimir Guildgate [292], Dismal Backwater [287]; Graveyard: Opt [296]
+      gian31: Battlefield: Godless Shrine [290]
+
+Turn 4
+  - Rot-Curse Rakshasa [valid_resolution_no_immediate_mutation] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=299)
+      effects: none immediately observed
+      narrative: Rot-Curse Rakshasa resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Rot-Curse Rakshasa (object 299) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Rot-Curse Rakshasa (object 299) Stack -> Battlefield (Resolve; shared object ID)
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      lordsnowMN: Battlefield: Dimir Guildgate [292], Dismal Backwater [287]; Graveyard: Opt [296]
+      gian31: Battlefield: Godless Shrine [290], Swamp [298]
+
+Turn 5
+  - Dreadwing Scavenger [valid_resolution_no_immediate_mutation] (active=lordsnowMN, phase=Phase_Main1, controller=lordsnowMN, owner=lordsnowMN, source_object=304)
+      effects: none immediately observed
+      narrative: Dreadwing Scavenger resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Dreadwing Scavenger (object 304) Hand (lordsnowMN) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Dreadwing Scavenger (object 304) Stack -> Battlefield (Resolve; shared object ID)
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      lordsnowMN: Battlefield: Dimir Guildgate [292], Dismal Backwater [287], Island [303]; Graveyard: Opt [296], Swamp [310]
+      gian31: Battlefield: Godless Shrine [290], Swamp [298]
+
+Turn 6
+  - Unholy Annex // Ritual Chamber [valid_resolution_no_immediate_mutation] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=315)
+      effects: none immediately observed
+      narrative: Unholy Annex // Ritual Chamber resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Unholy Annex // Ritual Chamber (object 315) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Unholy Annex // Ritual Chamber (object 315) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=315)
+      effects: draw, life -2, life +2
+      narrative: Ability of Unholy Annex // Ritual Chamber: draw; lordsnowMN loses 2 life; gian31 gains 2 life.
+      protocol-linked zone transfer: Sinister Monolith (object 322) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+    life: gian31 20 -> 22
+    life: lordsnowMN 21 -> 19
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      lordsnowMN: Battlefield: Dimir Guildgate [292], Dismal Backwater [287], Island [303]; Graveyard: Opt [296], Swamp [310]
+      gian31: Battlefield: Godless Shrine [290], Plains [314], Swamp [298]
+
+Turn 7
+  - Billowing Shriekmass [valid_resolution_no_immediate_mutation] (active=lordsnowMN, phase=Phase_Main1, controller=lordsnowMN, owner=lordsnowMN, source_object=325)
+      effects: none immediately observed
+      narrative: Billowing Shriekmass resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Billowing Shriekmass (object 325) Hand (lordsnowMN) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Billowing Shriekmass (object 325) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Billowing Shriekmass [observed_semantic_effect] (active=lordsnowMN, phase=Phase_Main1, controller=lordsnowMN, owner=lordsnowMN, source_object=325)
+      effects: zone_transfer, zone_transfer, zone_transfer
+      narrative: Ability of Billowing Shriekmass: zone_transfer; zone_transfer; zone_transfer.
+      protocol-linked zone transfer: Stab (object 331) Library (lordsnowMN) -> Graveyard (lordsnowMN) (Mill; shared object ID)
+      protocol-linked zone transfer: Bake into a Pie (object 332) Library (lordsnowMN) -> Graveyard (lordsnowMN) (Mill; shared object ID)
+      protocol-linked zone transfer: Brineborn Cutthroat (object 333) Library (lordsnowMN) -> Graveyard (lordsnowMN) (Mill; shared object ID)
+  Combat snapshots observed (active=lordsnowMN; frames: DeclareAttack -> DeclareBlock):
+      attackers: Dreadwing Scavenger [304] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      observed attacker power total: 2; unattributed defending-player life loss: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    life (combat-related snapshot; exact source unavailable): gian31 22 -> 20
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      lordsnowMN: Battlefield: Dimir Guildgate [292], Dismal Backwater [287], Island [303], Island [324]; Graveyard: Bake into a Pie [332], Brineborn Cutthroat [333], Island [336], Opt [296], Stab [331], Swamp [310]
+      gian31: Battlefield: Godless Shrine [290], Plains [314], Swamp [298]
+
+Turn 8
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=339)
+      effects: none immediately observed
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 339) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 339) Stack -> Battlefield (Resolve; shared object ID)
+  - Leech Collector [valid_resolution_no_immediate_mutation] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=341)
+      effects: none immediately observed
+      narrative: Leech Collector resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Leech Collector (object 341) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leech Collector (object 341) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=339)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=341)
+      effects: none immediately observed
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  - Bloodletting [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=347)
+      effects: life -2
+      narrative: Bloodletting: lordsnowMN loses 2 life.
+      protocol-linked zone transfer: Bloodletting (object 347) Exile -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: object 349 (object 349) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=315)
+      effects: draw, life -2, life +2
+      narrative: Ability of Unholy Annex // Ritual Chamber: draw; lordsnowMN loses 2 life; gian31 gains 2 life.
+      protocol-linked zone transfer: Swamp (object 351) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+    life: gian31 20 -> 21
+    life: lordsnowMN 19 -> 17
+    life: gian31 21 -> 23
+    life: lordsnowMN 17 -> 15
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      lordsnowMN: Battlefield: Dimir Guildgate [292], Dismal Backwater [287], Island [303], Island [324]; Graveyard: Bake into a Pie [332], Brineborn Cutthroat [333], Island [336], Opt [296], Stab [331], Swamp [310]
+      gian31: Battlefield: Godless Shrine [290], Plains [314], Swamp [298], Swamp [338]
+      unknown: Graveyard: object 349 [349]
+
+Turn 9
+  - Gleaming Barrier [valid_resolution_no_immediate_mutation] (active=lordsnowMN, phase=Phase_Main1, controller=lordsnowMN, owner=lordsnowMN, source_object=353)
+      effects: none immediately observed
+      narrative: Gleaming Barrier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Gleaming Barrier (object 353) Hand (lordsnowMN) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gleaming Barrier (object 353) Stack -> Battlefield (Resolve; shared object ID)
+  - Stab [observed_semantic_effect] (active=lordsnowMN, phase=Phase_Main1, controller=lordsnowMN, owner=lordsnowMN, source_object=356)
+      effects: P/T -2/-2
+      narrative: Stab: Leech Collector gets -2/-2.
+      protocol-linked zone transfer: Stab (object 356) Hand (lordsnowMN) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Stab (object 358) Stack -> Graveyard (lordsnowMN) (Resolve; shared object ID)
+      protocol-linked zone transfer: Leech Collector (object 359) Battlefield -> Graveyard (gian31) (SBA_ZeroToughness; shared object ID)
+  Combat snapshots observed (active=lordsnowMN; frames: DeclareAttack -> DeclareBlock):
+      attackers: Dreadwing Scavenger [304] (unblocked, observed P/T 3/3), Billowing Shriekmass [325] (unblocked, observed P/T 4/4)
+      blockers: none identified
+      observed attacker power total: 7; unattributed defending-player life loss: 7; snapshot comparison matches (exact assignment unavailable).
+      combat-result zone change: Leech Collector [359] Battlefield -> Graveyard (gian31) (SBA_ZeroToughness).
+      combat damage assignment: unknown unless explicitly observed
+    life (combat-related snapshot; exact source unavailable): gian31 23 -> 16
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      lordsnowMN: Battlefield: Dimir Guildgate [292], Dismal Backwater [287], Island [303], Island [324]; Graveyard: Bake into a Pie [332], Brineborn Cutthroat [333], Inspiration from Beyond [366], Island [336], Opt [296], Opt [363], Stab [331], Stab [358], Swamp [310]
+      gian31: Battlefield: Godless Shrine [290], Plains [314], Swamp [298], Swamp [338]; Graveyard: Leech Collector [359]
+      unknown: Graveyard: object 349 [349]
+
+Turn 10
+  - Unholy Annex // Ritual Chamber [valid_resolution_no_immediate_mutation] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=369)
+      effects: none immediately observed
+      narrative: Unholy Annex // Ritual Chamber resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Unholy Annex // Ritual Chamber (object 369) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Unholy Annex // Ritual Chamber (object 369) Stack -> Battlefield (Resolve; shared object ID)
+  - Starscape Cleric [valid_resolution_no_immediate_mutation] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375)
+      effects: none immediately observed
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 375) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 375) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=339)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: lordsnowMN loses 1 life.
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=369)
+      effects: draw, life -2, life +2
+      narrative: Ability of Unholy Annex // Ritual Chamber: draw; lordsnowMN loses 2 life; gian31 gains 2 life.
+      protocol-linked zone transfer: Leech Collector (object 382) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Ability of Starscape Cleric [observed_semantic_effect] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=375)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: lordsnowMN loses 1 life.
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=315)
+      effects: draw, life -2, life +2
+      narrative: Ability of Unholy Annex // Ritual Chamber: draw; lordsnowMN loses 2 life; gian31 gains 2 life.
+      protocol-linked zone transfer: Plains (object 384) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Ability of Starscape Cleric [observed_semantic_effect] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=375)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: lordsnowMN loses 1 life.
+    life: gian31 16 -> 17
+    life: lordsnowMN 15 -> 14
+    life: gian31 17 -> 19
+    life: lordsnowMN 14 -> 12
+    life: lordsnowMN 12 -> 11
+    life: gian31 19 -> 21
+    life: lordsnowMN 11 -> 9
+    life: lordsnowMN 9 -> 8
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      lordsnowMN: Battlefield: Dimir Guildgate [292], Dismal Backwater [287], Island [303], Island [324]; Graveyard: Bake into a Pie [332], Brineborn Cutthroat [333], Inspiration from Beyond [366], Island [336], Opt [296], Opt [363], Stab [331], Stab [358], Swamp [310]
+      gian31: Battlefield: Godless Shrine [290], Plains [314], Swamp [298], Swamp [338], Swamp [368]; Graveyard: Leech Collector [359]
+      unknown: Graveyard: object 349 [349]
+
+Turn 11
+  - Gleaming Barrier [valid_resolution_no_immediate_mutation] (active=lordsnowMN, phase=Phase_Main1, controller=lordsnowMN, owner=lordsnowMN, source_object=388)
+      effects: none immediately observed
+      narrative: Gleaming Barrier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Gleaming Barrier (object 388) Hand (lordsnowMN) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gleaming Barrier (object 388) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=lordsnowMN; frames: DeclareAttack -> DeclareBlock):
+      attackers: Dreadwing Scavenger [304] (unblocked, observed P/T 3/3), Billowing Shriekmass [325] (unblocked, observed P/T 4/4)
+      blockers: none identified
+      observed attacker power total: 7; unattributed defending-player life loss: 7; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    life (combat-related snapshot; exact source unavailable): gian31 21 -> 14
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      lordsnowMN: Battlefield: Dimir Guildgate [292], Dismal Backwater [287], Island [303], Island [324], Island [387]; Graveyard: Bake into a Pie [332], Brineborn Cutthroat [333], Inspiration from Beyond [366], Island [336], Opt [296], Opt [363], Opt [394], Stab [331], Stab [358], Swamp [310], Swamp [397]
+      gian31: Battlefield: Godless Shrine [290], Plains [314], Swamp [298], Swamp [338], Swamp [368]; Graveyard: Leech Collector [359]
+      unknown: Graveyard: object 349 [349]
+
+Turn 12
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=400)
+      effects: none immediately observed
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 400) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 400) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=339)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: lordsnowMN loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=400)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: lordsnowMN loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=400)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: lordsnowMN loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=400)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: lordsnowMN loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=400)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: lordsnowMN loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=400)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: lordsnowMN loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=400)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: lordsnowMN loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=400)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: lordsnowMN loses 1 life.
+    life: gian31 14 -> 15
+    life: lordsnowMN 8 -> 7
+    life: gian31 15 -> 16
+    life: lordsnowMN 7 -> 6
+    life: gian31 16 -> 17
+    life: lordsnowMN 6 -> 5
+    life: gian31 17 -> 18
+    life: lordsnowMN 5 -> 4
+    life: gian31 18 -> 19
+    life: lordsnowMN 4 -> 3
+    life: gian31 19 -> 20
+    life: lordsnowMN 3 -> 2
+    life: gian31 20 -> 21
+    life: lordsnowMN 2 -> 1
+    life: gian31 21 -> 22
+    end-of-turn protocol ledger (partial; only explicit zone transfers):
+      lordsnowMN: Battlefield: Dimir Guildgate [292], Dismal Backwater [287], Island [303], Island [324], Island [387]; Graveyard: Bake into a Pie [332], Brineborn Cutthroat [333], Inspiration from Beyond [366], Island [336], Opt [296], Opt [363], Opt [394], Stab [331], Stab [358], Swamp [310], Swamp [397]
+      gian31: Battlefield: Godless Shrine [290], Plains [314], Plains [399], Swamp [298], Swamp [338], Swamp [368]; Graveyard: Leech Collector [359]
+      unknown: Graveyard: object 349 [349]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+- Turn 2: no narrative actions observed; protocol-only observations, if any, remain in zone transfers.
+- Turn 3: no narrative actions observed; protocol-only observations, if any, remain in zone transfers.
+UNATTRIBUTED LIFE CHANGES
+------------------------------------------------------------
+- Turn 7, seq 149, Phase_Main1: gian31 22 -> 20. Combat declaration observed; exact assignment unavailable. Previous captured action: Billowing Shriekmass.
+- Turn 9, seq 219, Phase_Main1: gian31 23 -> 16. Combat declaration observed; exact assignment unavailable. Previous captured action: Stab.
+- Turn 11, seq 290, Phase_Main1: gian31 21 -> 14. Combat declaration observed; exact assignment unavailable. Previous captured action: Gleaming Barrier.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Dismal Backwater [owner=lordsnowMN, controller=lordsnowMN] moves Hand (lordsnowMN) -> Battlefield (PlayLand).
+- Turn 2, seq 23: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 27: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 41: object 291 [owner=unknown owner, controller=unknown controller] moves Library (lordsnowMN) -> Hand (lordsnowMN) (Draw).
+- Turn 3, seq 44: Dimir Guildgate [owner=lordsnowMN, controller=lordsnowMN] moves Hand (lordsnowMN) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Opt [owner=lordsnowMN, controller=lordsnowMN] moves Hand (lordsnowMN) -> Stack (CastSpell).
+- Turn 3, seq 48: object 295 [owner=unknown owner, controller=unknown controller] moves Library (lordsnowMN) -> Hand (lordsnowMN) (Draw).
+- Turn 3, seq 48: Opt [owner=lordsnowMN, controller=lordsnowMN] moves Stack -> Graveyard (lordsnowMN) (Resolve).
+- Turn 4, seq 62: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 65: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 66: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 68: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 82: object 302 [owner=unknown owner, controller=unknown controller] moves Library (lordsnowMN) -> Hand (lordsnowMN) (Draw).
+- Turn 5, seq 85: Island [owner=lordsnowMN, controller=lordsnowMN] moves Hand (lordsnowMN) -> Battlefield (PlayLand).
+- Turn 5, seq 86: Dreadwing Scavenger [owner=lordsnowMN, controller=lordsnowMN] moves Hand (lordsnowMN) -> Stack (CastSpell).
+- Turn 5, seq 88: Dreadwing Scavenger [owner=lordsnowMN, controller=lordsnowMN] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 90: object 309 [owner=unknown owner, controller=unknown controller] moves Library (lordsnowMN) -> Hand (lordsnowMN) (Draw).
+- Turn 5, seq 91: Swamp [owner=lordsnowMN, controller=lordsnowMN] moves Hand (lordsnowMN) -> Graveyard (lordsnowMN) (Discard).
+- Turn 6, seq 105: Unholy Annex // Ritual Chamber [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 108: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 109: Unholy Annex // Ritual Chamber [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 111: Unholy Annex // Ritual Chamber [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 124: Sinister Monolith [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 128: object 323 [owner=unknown owner, controller=unknown controller] moves Library (lordsnowMN) -> Hand (lordsnowMN) (Draw).
+- Turn 7, seq 131: Island [owner=lordsnowMN, controller=lordsnowMN] moves Hand (lordsnowMN) -> Battlefield (PlayLand).
+- Turn 7, seq 132: Billowing Shriekmass [owner=lordsnowMN, controller=lordsnowMN] moves Hand (lordsnowMN) -> Stack (CastSpell).
+- Turn 7, seq 134: Billowing Shriekmass [owner=lordsnowMN, controller=lordsnowMN] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 136: Stab [owner=lordsnowMN, controller=lordsnowMN] moves Library (lordsnowMN) -> Graveyard (lordsnowMN) (Mill).
+- Turn 7, seq 136: Bake into a Pie [owner=lordsnowMN, controller=lordsnowMN] moves Library (lordsnowMN) -> Graveyard (lordsnowMN) (Mill).
+- Turn 7, seq 136: Brineborn Cutthroat [owner=lordsnowMN, controller=lordsnowMN] moves Library (lordsnowMN) -> Graveyard (lordsnowMN) (Mill).
+- Turn 7, seq 144: object 335 [owner=unknown owner, controller=unknown controller] moves Library (lordsnowMN) -> Hand (lordsnowMN) (Draw).
+- Turn 7, seq 145: Island [owner=lordsnowMN, controller=lordsnowMN] moves Hand (lordsnowMN) -> Graveyard (lordsnowMN) (Discard).
+- Turn 8, seq 159: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 162: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 163: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 165: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 166: Leech Collector [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 168: Leech Collector [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 173: Bloodletting [owner=gian31, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 8, seq 175: object 349 [owner=unknown owner, controller=unknown controller] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 8, seq 188: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 192: object 352 [owner=unknown owner, controller=unknown controller] moves Library (lordsnowMN) -> Hand (lordsnowMN) (Draw).
+- Turn 9, seq 195: Gleaming Barrier [owner=lordsnowMN, controller=lordsnowMN] moves Hand (lordsnowMN) -> Stack (CastSpell).
+- Turn 9, seq 197: Gleaming Barrier [owner=lordsnowMN, controller=lordsnowMN] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 198: Stab [owner=lordsnowMN, controller=lordsnowMN] moves Hand (lordsnowMN) -> Stack (CastSpell).
+- Turn 9, seq 202: Stab [owner=lordsnowMN, controller=lordsnowMN] moves Stack -> Graveyard (lordsnowMN) (Resolve).
+- Turn 9, seq 202: Leech Collector [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_ZeroToughness).
+- Turn 9, seq 203: Opt [owner=lordsnowMN, controller=lordsnowMN] moves Hand (lordsnowMN) -> Stack (CastSpell).
+- Turn 9, seq 206: object 362 [owner=unknown owner, controller=unknown controller] moves Library (lordsnowMN) -> Hand (lordsnowMN) (Draw).
+- Turn 9, seq 206: Opt [owner=lordsnowMN, controller=lordsnowMN] moves Stack -> Graveyard (lordsnowMN) (Resolve).
+- Turn 9, seq 214: object 365 [owner=unknown owner, controller=unknown controller] moves Library (lordsnowMN) -> Hand (lordsnowMN) (Draw).
+- Turn 9, seq 215: Inspiration from Beyond [owner=lordsnowMN, controller=lordsnowMN] moves Hand (lordsnowMN) -> Graveyard (lordsnowMN) (Discard).
+- Turn 10, seq 229: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 232: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 233: Unholy Annex // Ritual Chamber [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 235: Unholy Annex // Ritual Chamber [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 236: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 239: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 257: Leech Collector [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 261: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 267: object 386 [owner=unknown owner, controller=unknown controller] moves Library (lordsnowMN) -> Hand (lordsnowMN) (Draw).
+- Turn 11, seq 270: Island [owner=lordsnowMN, controller=lordsnowMN] moves Hand (lordsnowMN) -> Battlefield (PlayLand).
+- Turn 11, seq 271: Gleaming Barrier [owner=lordsnowMN, controller=lordsnowMN] moves Hand (lordsnowMN) -> Stack (CastSpell).
+- Turn 11, seq 273: Gleaming Barrier [owner=lordsnowMN, controller=lordsnowMN] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 274: Opt [owner=lordsnowMN, controller=lordsnowMN] moves Hand (lordsnowMN) -> Stack (CastSpell).
+- Turn 11, seq 277: object 393 [owner=unknown owner, controller=unknown controller] moves Library (lordsnowMN) -> Hand (lordsnowMN) (Draw).
+- Turn 11, seq 277: Opt [owner=lordsnowMN, controller=lordsnowMN] moves Stack -> Graveyard (lordsnowMN) (Resolve).
+- Turn 11, seq 285: object 396 [owner=unknown owner, controller=unknown controller] moves Library (lordsnowMN) -> Hand (lordsnowMN) (Draw).
+- Turn 11, seq 286: Swamp [owner=lordsnowMN, controller=lordsnowMN] moves Hand (lordsnowMN) -> Graveyard (lordsnowMN) (Discard).
+- Turn 12, seq 300: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 303: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 304: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 306: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 231 becomes object 287 (object 231 -> Dismal Backwater).
+- Turn 2, seq 23: object 174 becomes object 289 (object 174 -> Rot-Curse Rakshasa).
+- Turn 2, seq 27: object 169 becomes object 290.
+- Turn 3, seq 41: object 234 becomes object 291.
+- Turn 3, seq 44: object 232 becomes object 292 (object 232 -> Dimir Guildgate).
+- Turn 3, seq 45: object 233 becomes object 293 (object 233 -> Opt).
+- Turn 3, seq 48: object 236 becomes object 295.
+- Turn 3, seq 48: object 293 becomes object 296.
+- Turn 4, seq 62: object 175 becomes object 297 (object 175 -> Case of the Uneaten Feast).
+- Turn 4, seq 65: object 170 becomes object 298.
+- Turn 4, seq 66: object 289 becomes object 299.
+- Turn 5, seq 82: object 237 becomes object 302.
+- Turn 5, seq 85: object 295 becomes object 303 (object 295 -> Island).
+- Turn 5, seq 86: object 229 becomes object 304 (object 229 -> Dreadwing Scavenger).
+- Turn 5, seq 90: object 238 becomes object 309.
+- Turn 5, seq 91: object 302 becomes object 310 (object 302 -> Swamp).
+- Turn 6, seq 105: object 176 becomes object 311 (object 176 -> Unholy Annex // Ritual Chamber).
+- Turn 6, seq 108: object 172 becomes object 314.
+- Turn 6, seq 109: object 173 becomes object 315.
+- Turn 6, seq 124: object 177 becomes object 322 (object 177 -> Sinister Monolith).
+- Turn 7, seq 128: object 239 becomes object 323.
+- Turn 7, seq 131: object 228 becomes object 324 (object 228 -> Island).
+- Turn 7, seq 132: object 323 becomes object 325 (object 323 -> Billowing Shriekmass).
+- Turn 7, seq 136: object 240 becomes object 331 (object 240 -> Stab).
+- Turn 7, seq 136: object 241 becomes object 332 (object 241 -> Bake into a Pie).
+- Turn 7, seq 136: object 242 becomes object 333 (object 242 -> Brineborn Cutthroat).
+- Turn 7, seq 144: object 243 becomes object 335.
+- Turn 7, seq 145: object 335 becomes object 336 (object 335 -> Island).
+- Turn 8, seq 159: object 178 becomes object 337 (object 178 -> Swamp).
+- Turn 8, seq 162: object 337 becomes object 338.
+- Turn 8, seq 163: object 297 becomes object 339.
+- Turn 8, seq 166: object 167 becomes object 341.
+- Turn 8, seq 173: object 346 becomes object 347.
+- Turn 8, seq 175: object 347 becomes object 349.
+- Turn 8, seq 188: object 179 becomes object 351 (object 179 -> Swamp).
+- Turn 9, seq 192: object 244 becomes object 352.
+- Turn 9, seq 195: object 230 becomes object 353 (object 230 -> Gleaming Barrier).
+- Turn 9, seq 198: object 352 becomes object 356 (object 352 -> Stab).
+- Turn 9, seq 202: object 356 becomes object 358.
+- Turn 9, seq 202: object 341 becomes object 359.
+- Turn 9, seq 203: object 309 becomes object 360 (object 309 -> Opt).
+- Turn 9, seq 206: object 246 becomes object 362.
+- Turn 9, seq 206: object 360 becomes object 363.
+- Turn 9, seq 214: object 247 becomes object 365.
+- Turn 9, seq 215: object 227 becomes object 366 (object 227 -> Inspiration from Beyond).
+- Turn 10, seq 229: object 180 becomes object 367 (object 180 -> Makeshift Binding).
+- Turn 10, seq 232: object 351 becomes object 368.
+- Turn 10, seq 233: object 311 becomes object 369.
+- Turn 10, seq 236: object 168 becomes object 375.
+- Turn 10, seq 257: object 181 becomes object 382 (object 181 -> Leech Collector).
+- Turn 10, seq 261: object 182 becomes object 384 (object 182 -> Plains).
+- Turn 11, seq 267: object 248 becomes object 386.
+- Turn 11, seq 270: object 386 becomes object 387 (object 386 -> Island).
+- Turn 11, seq 271: object 362 becomes object 388 (object 362 -> Gleaming Barrier).
+- Turn 11, seq 274: object 291 becomes object 391 (object 291 -> Opt).
+- Turn 11, seq 277: object 249 becomes object 393.
+- Turn 11, seq 277: object 391 becomes object 394.
+- Turn 11, seq 285: object 250 becomes object 396.
+- Turn 11, seq 286: object 396 becomes object 397 (object 396 -> Swamp).
+- Turn 12, seq 300: object 183 becomes object 398 (object 183 -> Plains).
+- Turn 12, seq 303: object 384 becomes object 399.
+- Turn 12, seq 304: object 171 becomes object 400.
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: lordsnowMN plays Dismal Backwater (object 287) from Hand (lordsnowMN) to Battlefield.
+- Turn 2: gian31 plays Godless Shrine (object 290) from Hand (gian31) to Battlefield.
+- Turn 3: lordsnowMN plays Dimir Guildgate (object 292) from Hand (lordsnowMN) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 298) from Hand (gian31) to Battlefield.
+- Turn 5: lordsnowMN plays Island (object 303) from Hand (lordsnowMN) to Battlefield.
+- Turn 6: gian31 plays Plains (object 314) from Hand (gian31) to Battlefield.
+- Turn 7: lordsnowMN plays Island (object 324) from Hand (lordsnowMN) to Battlefield.
+- Turn 8: gian31 plays Swamp (object 338) from Hand (gian31) to Battlefield.
+- Turn 10: gian31 plays Swamp (object 368) from Hand (gian31) to Battlefield.
+- Turn 11: lordsnowMN plays Island (object 387) from Hand (lordsnowMN) to Battlefield.
+- Turn 12: gian31 plays Plains (object 399) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- Turn 10: Starscape Cleric -> Unholy Annex // Ritual Chamber; observed repeated transitions=2; net life: draw; lordsnowMN -4, lordsnowMN -2.
+  Individual ability records remain in the timeline.
+- Turn 12: Starscape Cleric -> Bloodthirsty Conqueror; observed repeated transitions=7; net life: gian31 +7, lordsnowMN -7.
+  Individual ability records remain in the timeline.
+TRIGGER LOOP SUMMARY
+------------------------------------------------------------
+- Turn 10: Starscape Cleric â†” Unholy Annex // Ritual Chamber; observed repetitions=2 (cycle length 2).
+  Raw ability events remain available in the turn timeline.
+- Turn 12: Starscape Cleric â†” Bloodthirsty Conqueror; observed repetitions=7 (cycle length 2).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Starscape Cleric: casts=1; abilities=11 (triggered=11, activated=0) across turns [10, 10, 10, 10, 12, 12, 12, 12, 12, 12, 12, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=11, other=2
+  observed effects: life -1, synthetic event
+- Bloodthirsty Conqueror: casts=1; abilities=7 (triggered=7, activated=0) across turns [12, 12, 12, 12, 12, 12, 12, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=7, other=0
+  observed effects: life +1
+- Unholy Annex // Ritual Chamber: casts=2; abilities=4 (triggered=4, activated=0) across turns [6, 6, 8, 10, 10, 10]
+  observed effect totals: draws=4, tokens=0, counters=0, returns=0, damage=0, life_changes=8, other=1
+  observed effects: draw, life +2, life -2, synthetic event
+- Case of the Uneaten Feast: casts=1; abilities=3 (triggered=3, activated=0) across turns [8, 8, 10, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=0
+  observed effects: life +1
+- Billowing Shriekmass: casts=1; abilities=1 (triggered=1, activated=0) across turns [7, 7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=3
+  observed effects: zone_transfer
+- Gleaming Barrier: casts=2 across turns [9, 11]
+- Leech Collector: casts=1; abilities=1 (triggered=1, activated=0) across turns [8, 8]
+- Bloodletting: casts=1 across turns [8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: life -2, synthetic event
+- Dismal Backwater: abilities=1 (triggered=1, activated=0) across turns [1]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Dreadwing Scavenger: casts=1 across turns [5]
+- Rot-Curse Rakshasa: casts=1 across turns [4]
+- Stab: casts=1 across turns [9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: P/T -2/-2
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 7 â€” None (active=lordsnowMN)
+  attacker: Dreadwing Scavenger (lordsnowMN) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 â€” None (active=lordsnowMN)
+  attacker: Dreadwing Scavenger (lordsnowMN) -> gian31; unblocked in this observed snapshot
+  attacker: Billowing Shriekmass (lordsnowMN) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 â€” None (active=lordsnowMN)
+  attacker: Dreadwing Scavenger (lordsnowMN) -> gian31; unblocked in this observed snapshot
+  attacker: Billowing Shriekmass (lordsnowMN) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX â€” OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 58: Unholy Annex | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 59: Ritual Chamber | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 167: Leech Collector | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 168: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 169: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 170: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 171: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 172: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 173: Unholy Annex // Ritual Chamber | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 287: Dismal Backwater | controller=lordsnowMN | owner=lordsnowMN | zone=Battlefield (latest_object_observation)
+- 288: object 288 | controller=lordsnowMN | owner=lordsnowMN | zone=unknown (inferred unknown) (latest_object_observation)
+- 289: Rot-Curse Rakshasa | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 290: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 292: Dimir Guildgate | controller=lordsnowMN | owner=lordsnowMN | zone=Battlefield (latest_object_observation)
+- 293: Opt | controller=lordsnowMN | owner=lordsnowMN | zone=Stack (latest_object_observation)
+- 296: Opt | controller=lordsnowMN | owner=lordsnowMN | zone=Graveyard (latest_object_observation)
+- 297: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 298: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 299: Rot-Curse Rakshasa | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 303: Island | controller=lordsnowMN | owner=lordsnowMN | zone=Battlefield (latest_object_observation)
+- 304: Dreadwing Scavenger | controller=lordsnowMN | owner=lordsnowMN | zone=Battlefield (latest_object_observation)
+- 308: object 308 | controller=lordsnowMN | owner=lordsnowMN | zone=unknown (inferred unknown) (latest_object_observation)
+- 310: Swamp | controller=lordsnowMN | owner=lordsnowMN | zone=Graveyard (latest_object_observation)
+- 311: Unholy Annex // Ritual Chamber | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 312: Unholy Annex | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 313: Ritual Chamber | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 314: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 315: Unholy Annex // Ritual Chamber | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 316: Unholy Annex | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 317: Ritual Chamber | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 321: object 321 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 322: Sinister Monolith | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 324: Island | controller=lordsnowMN | owner=lordsnowMN | zone=Battlefield (latest_object_observation)
+- 325: Billowing Shriekmass | controller=lordsnowMN | owner=lordsnowMN | zone=Battlefield (latest_object_observation)
+- 330: Glen Elendra Guardian | controller=lordsnowMN | owner=lordsnowMN | zone=unknown (inferred unknown) (latest_object_observation)
+- 331: Stab | controller=lordsnowMN | owner=lordsnowMN | zone=Graveyard (latest_object_observation)
+- 332: Bake into a Pie | controller=lordsnowMN | owner=lordsnowMN | zone=Graveyard (latest_object_observation)
+- 333: Brineborn Cutthroat | controller=lordsnowMN | owner=lordsnowMN | zone=Graveyard (latest_object_observation)
+- 334: object 334 | controller=lordsnowMN | owner=lordsnowMN | zone=unknown (inferred unknown) (latest_object_observation)
+- 336: Island | controller=lordsnowMN | owner=lordsnowMN | zone=Graveyard (latest_object_observation)
+- 337: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 338: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 339: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 341: Leech Collector | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 344: object 344 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 345: object 345 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 346: Bloodletting | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 347: Bloodletting | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 350: object 350 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 351: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 353: Gleaming Barrier | controller=lordsnowMN | owner=lordsnowMN | zone=Battlefield (latest_object_observation)
+- 356: Stab | controller=lordsnowMN | owner=lordsnowMN | zone=Stack (latest_object_observation)
+- 358: Stab | controller=lordsnowMN | owner=lordsnowMN | zone=Graveyard (latest_object_observation)
+- 359: Leech Collector | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 360: Opt | controller=lordsnowMN | owner=lordsnowMN | zone=Stack (latest_object_observation)
+- 363: Opt | controller=lordsnowMN | owner=lordsnowMN | zone=Graveyard (latest_object_observation)
+- 364: object 364 | controller=lordsnowMN | owner=lordsnowMN | zone=unknown (inferred unknown) (latest_object_observation)
+- 366: Inspiration from Beyond | controller=lordsnowMN | owner=lordsnowMN | zone=Graveyard (latest_object_observation)
+- 367: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 368: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 369: Unholy Annex // Ritual Chamber | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 370: Unholy Annex | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 371: Ritual Chamber | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 375: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 378: object 378 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 379: object 379 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 380: object 380 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 381: object 381 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 382: Leech Collector | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 383: object 383 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 384: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 385: object 385 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 387: Island | controller=lordsnowMN | owner=lordsnowMN | zone=Battlefield (latest_object_observation)
+- 388: Gleaming Barrier | controller=lordsnowMN | owner=lordsnowMN | zone=Battlefield (latest_object_observation)
+- 391: Opt | controller=lordsnowMN | owner=lordsnowMN | zone=Stack (latest_object_observation)
+- 394: Opt | controller=lordsnowMN | owner=lordsnowMN | zone=Graveyard (latest_object_observation)
+- 395: object 395 | controller=lordsnowMN | owner=lordsnowMN | zone=unknown (inferred unknown) (latest_object_observation)
+- 397: Swamp | controller=lordsnowMN | owner=lordsnowMN | zone=Graveyard (latest_object_observation)
+- 398: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 399: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 400: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 406: object 406 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 407: object 407 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 408: object 408 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 409: object 409 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 410: object 410 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 411: object 411 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 412: object 412 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 413: object 413 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 414: object 414 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 415: object 415 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 416: object 416 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 417: object 417 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 418: object 418 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 419: object 419 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 420: object 420 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 421: object 421 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 422: object 422 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX â€” CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 68 total items
+  zones: Battlefield=13, Graveyard=1, Hand=22, Stack=5, unknown=27
+  objects: Swamp x6, Plains x5, Leech Collector x4, Ritual Chamber x4, Unholy Annex x4, Unholy Annex // Ritual Chamber x4, Bloodletting x2, Bloodthirsty Conqueror x2, Case of the Uneaten Feast x2, Godless Shrine x2, Rot-Curse Rakshasa x2, Starscape Cleric x2
+lordsnowMN: 30 total items
+  zones: Battlefield=9, Graveyard=11, Stack=4, unknown=6
+  objects: Opt x6, Island x4, Stab x3, Gleaming Barrier x2, Swamp x2, Bake into a Pie, Billowing Shriekmass, Brineborn Cutthroat, Dimir Guildgate, Dismal Backwater, Dreadwing Scavenger, Glen Elendra Guardian
+
+TECHNICAL APPENDIX â€” LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (13): Bloodthirsty Conqueror, Godless Shrine, Plains, Plains, Ritual Chamber, Ritual Chamber, Rot-Curse Rakshasa, Starscape Cleric, Swamp, Swamp, Swamp, Unholy Annex, Unholy Annex
+  Graveyard: 1 card(s)
+lordsnowMN:
+  Battlefield (9): Billowing Shriekmass, Dimir Guildgate, Dismal Backwater, Dreadwing Scavenger, Gleaming Barrier, Gleaming Barrier, Island, Island, Island
+  Graveyard: 11 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+33 objects have no resolved final zone and are omitted from the known board state.
+gian31: 27 unknown object(s)
+lordsnowMN: 6 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=22, Stack=9
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+gian31:
+  Battlefield (16): Godless Shrine, Swamp, Rot-Curse Rakshasa, Plains, Unholy Annex // Ritual Chamber, Unholy Annex, Ritual Chamber, Swamp, Case of the Uneaten Feast, Swamp, Unholy Annex // Ritual Chamber, Unholy Annex, Ritual Chamber, Starscape Cleric, Plains, Bloodthirsty Conqueror
+  Graveyard (1): Leech Collector
+lordsnowMN:
+  Battlefield (9): Dismal Backwater, Dimir Guildgate, Island, Dreadwing Scavenger, Island, Billowing Shriekmass, Gleaming Barrier, Island, Gleaming Barrier
+  Graveyard (11): Opt, Swamp, Stab, Bake into a Pie, Brineborn Cutthroat, Island, Stab, Opt, Inspiration from Beyond, Opt, Swamp
+Known non-persistent entries (counts only):
+  gian31: Hand=4, Limbo=5, Pending=1
+  lordsnowMN: Limbo=1
+  unknown: Hand=2, Library=81, Limbo=11
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: lordsnowMN Battlefield=1
+- Turn 2: gian31 Battlefield=1; lordsnowMN Battlefield=1
+- Turn 3: gian31 Battlefield=1; lordsnowMN Battlefield=2; lordsnowMN Graveyard=1
+- Turn 4: gian31 Battlefield=2; lordsnowMN Battlefield=2; lordsnowMN Graveyard=1
+- Turn 5: gian31 Battlefield=2; lordsnowMN Battlefield=3; lordsnowMN Graveyard=2
+- Turn 6: gian31 Battlefield=3; lordsnowMN Battlefield=3; lordsnowMN Graveyard=2
+- Turn 7: gian31 Battlefield=3; lordsnowMN Battlefield=4; lordsnowMN Graveyard=6
+- Turn 8: gian31 Battlefield=4; lordsnowMN Battlefield=4; lordsnowMN Graveyard=6; unknown Graveyard=1
+- Turn 9: gian31 Battlefield=4; gian31 Graveyard=1; lordsnowMN Battlefield=4; lordsnowMN Graveyard=9; unknown Graveyard=1
+- Turn 10: gian31 Battlefield=5; gian31 Graveyard=1; lordsnowMN Battlefield=4; lordsnowMN Graveyard=9; unknown Graveyard=1
+- Turn 11: gian31 Battlefield=5; gian31 Graveyard=1; lordsnowMN Battlefield=5; lordsnowMN Graveyard=11; unknown Graveyard=1
+- Turn 12: gian31 Battlefield=6; gian31 Graveyard=1; lordsnowMN Battlefield=5; lordsnowMN Graveyard=11; unknown Graveyard=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 4: Rot-Curse Rakshasa resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Dreadwing Scavenger resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Unholy Annex // Ritual Chamber resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Billowing Shriekmass resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Leech Collector resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Gleaming Barrier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Unholy Annex // Ritual Chamber resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Gleaming Barrier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
