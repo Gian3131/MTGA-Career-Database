@@ -1,0 +1,599 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: T3rd F3rg1s0n, gian31
+Seat map: Seat 1=T3rd F3rg1s0n, Seat 2=gian31
+Turn range (known): 1 - 13
+Records: 28
+Action chains: 24
+Winner: T3rd F3rg1s0n
+Final life: {'T3rd F3rg1s0n': 11, 'gian31': -1}
+Lethal life snapshot: gian31 9 -> -1 (at least 10 damage/life loss observed; exact source may be unavailable).
+Match conclusion: Life total reached 0 observed for gian31.
+Match-result payload was observed after the last captured action in Turn 13 (Phase_Main1); payload ordering within later uncaptured records is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 28 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 10 explicit PlayLand transfers across turns [1, 2, 3, 4, 5, 6, 8, 10, 11, 13]. Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [291] Hand (T3rd F3rg1s0n) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      T3rd F3rg1s0n: Battlefield: Swamp [291]
+
+Turn 2
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=27] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=294)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 294) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 294) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [292] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 21).
+      Plains [293] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      T3rd F3rg1s0n: Battlefield: Swamp [291]
+      gian31: Battlefield: Case of the Uneaten Feast [294], Plains [293]
+
+Turn 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [296] Library (T3rd F3rg1s0n) -> Hand (T3rd F3rg1s0n) (Draw; GRE sequence 41).
+      Swamp [297] Hand (T3rd F3rg1s0n) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      T3rd F3rg1s0n: Battlefield: Swamp [291], Swamp [297]
+      gian31: Battlefield: Case of the Uneaten Feast [294], Plains [293]
+
+Turn 4
+  - Rot-Curse Rakshasa [valid_resolution_no_immediate_mutation, seq=64] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=300)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Rot-Curse Rakshasa resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Rot-Curse Rakshasa (object 300) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Rot-Curse Rakshasa (object 300) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=66] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=294)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Rot-Curse Rakshasa [298] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 58).
+      Swamp [299] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 61).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      T3rd F3rg1s0n: Battlefield: Swamp [291], Swamp [297]
+      gian31: Battlefield: Case of the Uneaten Feast [294], Plains [293], Rot-Curse Rakshasa [300], Swamp [299]
+
+Turn 5
+  - Fell [observed_semantic_effect, seq=88] (active=T3rd F3rg1s0n, phase=Phase_Main1, controller=T3rd F3rg1s0n, owner=T3rd F3rg1s0n, source_object=306)
+      effects: destroy
+      narrative: Fell destroys Rot-Curse Rakshasa.
+      explicit effect object references: Rot-Curse Rakshasa [300], Rot-Curse Rakshasa [309] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Fell (object 306) Hand (T3rd F3rg1s0n) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Rot-Curse Rakshasa (object 309) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Fell (object 310) Stack -> Graveyard (T3rd F3rg1s0n) (Resolve; shared object ID)
+      identity continuity: source object 306 -> transfer object 310 (explicit GRE ObjectIdChanged chain).
+  - Tinybones, the Pickpocket [valid_resolution_no_immediate_mutation, seq=91] (active=T3rd F3rg1s0n, phase=Phase_Main1, controller=T3rd F3rg1s0n, owner=T3rd F3rg1s0n, source_object=311)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, the Pickpocket resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 311) Hand (T3rd F3rg1s0n) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 311) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tinybones, the Pickpocket [304] Library (T3rd F3rg1s0n) -> Hand (T3rd F3rg1s0n) (Draw; GRE sequence 80).
+      Swamp [305] Hand (T3rd F3rg1s0n) -> Battlefield (PlayLand; GRE sequence 83).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      T3rd F3rg1s0n: Battlefield: Swamp [291], Swamp [297], Swamp [305], Tinybones, the Pickpocket [311]; Graveyard: Fell [310]
+      gian31: Battlefield: Case of the Uneaten Feast [294], Plains [293], Swamp [299]; Graveyard: Rot-Curse Rakshasa [309]
+
+Turn 6
+  - Moment of Craving [observed_semantic_effect, seq=113] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=315)
+      effects: P/T -2/-2, life +2
+      narrative: Moment of Craving: Tinybones, the Pickpocket gets -2/-2; gian31 gains 2 life.
+      explicit effect object references: Tinybones, the Pickpocket [311] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Moment of Craving (object 315) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Moment of Craving (object 318) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 315 -> transfer object 318 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 319) Battlefield -> Graveyard (T3rd F3rg1s0n) (SBA_ZeroToughness; shared object ID)
+    net observed life change this turn: gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 23
+    additional protocol-observed zone movements not assigned to an action chain:
+      Leech Collector [313] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 105).
+      Swamp [314] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 108).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      T3rd F3rg1s0n: Battlefield: Swamp [291], Swamp [297], Swamp [305]; Graveyard: Fell [310], Tinybones, the Pickpocket [319]
+      gian31: Battlefield: Case of the Uneaten Feast [294], Plains [293], Swamp [299], Swamp [314]; Graveyard: Moment of Craving [318], Rot-Curse Rakshasa [309]
+
+Turn 7
+  - Unstoppable Slasher [valid_resolution_no_immediate_mutation, seq=132] (active=T3rd F3rg1s0n, phase=Phase_Main1, controller=T3rd F3rg1s0n, owner=T3rd F3rg1s0n, source_object=321)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Unstoppable Slasher resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Unstoppable Slasher (object 321) Hand (T3rd F3rg1s0n) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Unstoppable Slasher (object 321) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 320 [320] Library (T3rd F3rg1s0n) -> Hand (T3rd F3rg1s0n) (Draw; GRE sequence 127).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      T3rd F3rg1s0n: Battlefield: Swamp [291], Swamp [297], Swamp [305], Unstoppable Slasher [321]; Graveyard: Fell [310], Tinybones, the Pickpocket [319]
+      gian31: Battlefield: Case of the Uneaten Feast [294], Plains [293], Swamp [299], Swamp [314]; Graveyard: Moment of Craving [318], Rot-Curse Rakshasa [309]
+
+Turn 8
+  - Ability of Rot-Curse Rakshasa [observed_semantic_effect, seq=157] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=309)
+      effects: +1 counter(s)
+      narrative: Ability of Rot-Curse Rakshasa: 1 counter(s) are added to target.
+      explicit effect object references: Unstoppable Slasher [321] (role/targeting only where the protocol identifies it)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodletter of Aclazotz [325] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 146).
+      Godless Shrine [326] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 150).
+      Rot-Curse Rakshasa [331] Graveyard (gian31) -> Exile (Exile; GRE sequence 155).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      T3rd F3rg1s0n: Battlefield: Swamp [291], Swamp [297], Swamp [305], Unstoppable Slasher [321]; Graveyard: Fell [310], Tinybones, the Pickpocket [319]
+      gian31: Battlefield: Case of the Uneaten Feast [294], Godless Shrine [326], Plains [293], Swamp [299], Swamp [314]; Graveyard: Moment of Craving [318]; Exile: Rot-Curse Rakshasa [331]
+
+Turn 9
+  - Unholy Annex // Ritual Chamber [valid_resolution_no_immediate_mutation, seq=176] (active=T3rd F3rg1s0n, phase=Phase_Main1, controller=T3rd F3rg1s0n, owner=T3rd F3rg1s0n, source_object=335)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Unholy Annex // Ritual Chamber resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Unholy Annex // Ritual Chamber (object 335) Hand (T3rd F3rg1s0n) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Unholy Annex // Ritual Chamber (object 335) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Unstoppable Slasher [valid_resolution_no_immediate_mutation, seq=184] (active=T3rd F3rg1s0n, phase=Phase_Combat, step=Step_DeclareAttack, controller=T3rd F3rg1s0n, owner=T3rd F3rg1s0n, source_object=321)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Unstoppable Slasher resolves with no immediate observed mutation.
+  - Ability of Unstoppable Slasher [observed_semantic_effect, seq=190] (active=T3rd F3rg1s0n, phase=Phase_Combat, step=Step_CombatDamage, controller=T3rd F3rg1s0n, owner=T3rd F3rg1s0n, source_object=321)
+      effects: life -11
+      narrative: Ability of Unstoppable Slasher: gian31 loses 11 life.
+  - Ability of Unstoppable Slasher [observed_semantic_effect, seq=194] (active=T3rd F3rg1s0n, phase=Phase_Combat, step=Step_EndCombat, controller=T3rd F3rg1s0n, owner=T3rd F3rg1s0n, source_object=321)
+      effects: sacrifice
+      narrative: Ability of Unstoppable Slasher: sacrifice.
+      explicit effect object references: Unstoppable Slasher [345] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Unstoppable Slasher (object 345) Battlefield -> Graveyard (T3rd F3rg1s0n) (Sacrifice; shared object ID)
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect, seq=200] (active=T3rd F3rg1s0n, phase=Phase_Ending, step=Step_End, controller=T3rd F3rg1s0n, owner=T3rd F3rg1s0n, source_object=335)
+      effects: draw, life -2
+      narrative: Ability of Unholy Annex // Ritual Chamber: draw; T3rd F3rg1s0n loses 2 life.
+      explicit effect object references: object 182 [182], object 347 [347] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Swamp (object 347) Library (T3rd F3rg1s0n) -> Hand (T3rd F3rg1s0n) (Draw; shared object ID)
+  Combat snapshots observed (active=T3rd F3rg1s0n; frames: DeclareAttack -> DeclareBlock):
+      attackers: Unstoppable Slasher [321] (unblocked, observed P/T 2/3)
+      blockers: none identified
+      observed attacker power total: 2; unattributed defending-player life loss: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: T3rd F3rg1s0n -2; gian31 -13 (individual changes below; gains and losses may offset)
+    life (combat-related snapshot; exact source unavailable): gian31 23 -> 21
+    life: gian31 21 -> 10
+    life: T3rd F3rg1s0n 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Unholy Annex // Ritual Chamber [332] Library (T3rd F3rg1s0n) -> Hand (T3rd F3rg1s0n) (Draw; GRE sequence 171).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      T3rd F3rg1s0n: Battlefield: Swamp [291], Swamp [297], Swamp [305], Unholy Annex // Ritual Chamber [335]; Graveyard: Fell [310], Tinybones, the Pickpocket [319], Unstoppable Slasher [345]
+      gian31: Battlefield: Case of the Uneaten Feast [294], Godless Shrine [326], Plains [293], Swamp [299], Swamp [314]; Graveyard: Moment of Craving [318]; Exile: Rot-Curse Rakshasa [331]
+
+Turn 10
+  - Leech Collector [valid_resolution_no_immediate_mutation, seq=210] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=350)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Leech Collector resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Leech Collector (object 350) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leech Collector (object 350) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=212] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=294)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=214] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=350)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=218] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=356)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 356) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 356) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=220] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=294)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=222] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=356)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: T3rd F3rg1s0n loses 1 life.
+  - Bloodletting [observed_semantic_effect, seq=225] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=361)
+      effects: life -2
+      narrative: Bloodletting: T3rd F3rg1s0n loses 2 life.
+      protocol-linked zone transfer: Bloodletting (object 361) Exile -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletting (object 363) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 361 -> transfer object 363 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: T3rd F3rg1s0n -3; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 10 -> 11
+    life: gian31 11 -> 12
+    life: T3rd F3rg1s0n 18 -> 17
+    life: T3rd F3rg1s0n 17 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [348] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 204).
+      Swamp [349] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 207).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      T3rd F3rg1s0n: Battlefield: Swamp [291], Swamp [297], Swamp [305], Unholy Annex // Ritual Chamber [335]; Graveyard: Fell [310], Tinybones, the Pickpocket [319], Unstoppable Slasher [345]
+      gian31: Battlefield: Case of the Uneaten Feast [294], Godless Shrine [326], Leech Collector [350], Plains [293], Starscape Cleric [356], Swamp [299], Swamp [314], Swamp [349]; Graveyard: Bloodletting [363], Moment of Craving [318]; Exile: Rot-Curse Rakshasa [331]
+
+Turn 11
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation, seq=245] (active=T3rd F3rg1s0n, phase=Phase_Main1, controller=T3rd F3rg1s0n, owner=T3rd F3rg1s0n, source_object=366)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 366) Hand (T3rd F3rg1s0n) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 366) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect, seq=257] (active=T3rd F3rg1s0n, phase=Phase_Ending, step=Step_End, controller=T3rd F3rg1s0n, owner=T3rd F3rg1s0n, source_object=335)
+      effects: draw, life -4, life +2
+      narrative: Ability of Unholy Annex // Ritual Chamber: draw; gian31 loses 4 life; T3rd F3rg1s0n gains 2 life.
+      explicit effect object references: object 184 [184], object 372 [372] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Swamp (object 372) Library (T3rd F3rg1s0n) -> Hand (T3rd F3rg1s0n) (Draw; shared object ID)
+    net observed life change this turn: T3rd F3rg1s0n +2; gian31 -4 (individual changes below; gains and losses may offset)
+    life: T3rd F3rg1s0n 15 -> 17
+    life: gian31 12 -> 8
+    additional protocol-observed zone movements not assigned to an action chain:
+      Rush of Dread [364] Library (T3rd F3rg1s0n) -> Hand (T3rd F3rg1s0n) (Draw; GRE sequence 239).
+      Swamp [365] Hand (T3rd F3rg1s0n) -> Battlefield (PlayLand; GRE sequence 242).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      T3rd F3rg1s0n: Battlefield: Bloodletter of Aclazotz [366], Swamp [291], Swamp [297], Swamp [305], Swamp [365], Unholy Annex // Ritual Chamber [335]; Graveyard: Fell [310], Tinybones, the Pickpocket [319], Unstoppable Slasher [345]
+      gian31: Battlefield: Case of the Uneaten Feast [294], Godless Shrine [326], Leech Collector [350], Plains [293], Starscape Cleric [356], Swamp [299], Swamp [314], Swamp [349]; Graveyard: Bloodletting [363], Moment of Craving [318]; Exile: Rot-Curse Rakshasa [331]
+
+Turn 12
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation, seq=266] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=374)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 374) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 374) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=268] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=294)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=271] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=356)
+      effects: life -2
+      narrative: Ability of Starscape Cleric: T3rd F3rg1s0n loses 2 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=273] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=350)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  - Bloodletting [observed_semantic_effect, seq=276] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=383)
+      effects: life -4
+      narrative: Bloodletting: T3rd F3rg1s0n loses 4 life.
+      protocol-linked zone transfer: Bloodletting (object 383) Exile -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletting (object 385) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 383 -> transfer object 385 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: T3rd F3rg1s0n -6; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 8 -> 9
+    life: T3rd F3rg1s0n 17 -> 15
+    life: T3rd F3rg1s0n 15 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [373] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 261).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      T3rd F3rg1s0n: Battlefield: Bloodletter of Aclazotz [366], Swamp [291], Swamp [297], Swamp [305], Swamp [365], Unholy Annex // Ritual Chamber [335]; Graveyard: Fell [310], Tinybones, the Pickpocket [319], Unstoppable Slasher [345]
+      gian31: Battlefield: Bloodletter of Aclazotz [374], Case of the Uneaten Feast [294], Godless Shrine [326], Leech Collector [350], Plains [293], Starscape Cleric [356], Swamp [299], Swamp [314], Swamp [349]; Graveyard: Bloodletting [363], Bloodletting [385], Moment of Craving [318]; Exile: Rot-Curse Rakshasa [331]
+
+Turn 13
+  - Rush of Dread [observed_semantic_effect, seq=301] (active=T3rd F3rg1s0n, phase=Phase_Main1, controller=T3rd F3rg1s0n, owner=T3rd F3rg1s0n, source_object=388)
+      effects: life -10
+      narrative: Rush of Dread: gian31 loses 10 life.
+      protocol-linked zone transfer: Rush of Dread (object 388) Hand (T3rd F3rg1s0n) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Rush of Dread (object 394) Stack -> Graveyard (T3rd F3rg1s0n) (Resolve; shared object ID)
+      identity continuity: source object 388 -> transfer object 394 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: gian31 -10 (individual changes below; gains and losses may offset)
+    life: gian31 9 -> -1
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 386 [386] Library (T3rd F3rg1s0n) -> Hand (T3rd F3rg1s0n) (Draw; GRE sequence 291).
+      Swamp [387] Hand (T3rd F3rg1s0n) -> Battlefield (PlayLand; GRE sequence 294).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      T3rd F3rg1s0n: Battlefield: Bloodletter of Aclazotz [366], Swamp [291], Swamp [297], Swamp [305], Swamp [365], Swamp [387], Unholy Annex // Ritual Chamber [335]; Graveyard: Fell [310], Rush of Dread [394], Tinybones, the Pickpocket [319], Unstoppable Slasher [345]
+      gian31: Battlefield: Bloodletter of Aclazotz [374], Case of the Uneaten Feast [294], Godless Shrine [326], Leech Collector [350], Plains [293], Starscape Cleric [356], Swamp [299], Swamp [314], Swamp [349]; Graveyard: Bloodletting [363], Bloodletting [385], Moment of Craving [318]; Exile: Rot-Curse Rakshasa [331]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+- Turn 9, seq 188, Phase_Combat: gian31 23 -> 21. Combat declaration observed; exact assignment unavailable. Previous captured action: Unstoppable Slasher.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 13: gian31 9 -> -1 (required change 10). Explained by exact same-record evidence: 10/10; unattributed: 0/10.
+  Last combat snapshot at or before lethal: Turn 9; attackers=Unstoppable Slasher [321]; observed power total=2; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 13, Rush of Dread (seq 301).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Swamp [owner=T3rd F3rg1s0n, controller=T3rd F3rg1s0n] moves Hand (T3rd F3rg1s0n) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 24: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 27: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 41: Swamp [owner=unknown owner, controller=unknown controller] moves Library (T3rd F3rg1s0n) -> Hand (T3rd F3rg1s0n) (Draw).
+- Turn 3, seq 44: Swamp [owner=T3rd F3rg1s0n, controller=T3rd F3rg1s0n] moves Hand (T3rd F3rg1s0n) -> Battlefield (PlayLand).
+- Turn 4, seq 58: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 61: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 62: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 64: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 80: Tinybones, the Pickpocket [owner=unknown owner, controller=unknown controller] moves Library (T3rd F3rg1s0n) -> Hand (T3rd F3rg1s0n) (Draw).
+- Turn 5, seq 83: Swamp [owner=T3rd F3rg1s0n, controller=T3rd F3rg1s0n] moves Hand (T3rd F3rg1s0n) -> Battlefield (PlayLand).
+- Turn 5, seq 84: Fell [owner=T3rd F3rg1s0n, controller=T3rd F3rg1s0n] moves Hand (T3rd F3rg1s0n) -> Stack (CastSpell).
+- Turn 5, seq 88: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 5, seq 88: Fell [owner=T3rd F3rg1s0n, controller=T3rd F3rg1s0n] moves Stack -> Graveyard (T3rd F3rg1s0n) (Resolve).
+- Turn 5, seq 89: Tinybones, the Pickpocket [owner=T3rd F3rg1s0n, controller=T3rd F3rg1s0n] moves Hand (T3rd F3rg1s0n) -> Stack (CastSpell).
+- Turn 5, seq 91: Tinybones, the Pickpocket [owner=T3rd F3rg1s0n, controller=T3rd F3rg1s0n] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 105: Leech Collector [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 108: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 109: Moment of Craving [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 113: Moment of Craving [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 6, seq 113: Tinybones, the Pickpocket [owner=T3rd F3rg1s0n, controller=T3rd F3rg1s0n] moves Battlefield -> Graveyard (T3rd F3rg1s0n) (SBA_ZeroToughness).
+- Turn 7, seq 127: object 320 [owner=unknown owner, controller=unknown controller] moves Library (T3rd F3rg1s0n) -> Hand (T3rd F3rg1s0n) (Draw).
+- Turn 7, seq 130: Unstoppable Slasher [owner=T3rd F3rg1s0n, controller=T3rd F3rg1s0n] moves Hand (T3rd F3rg1s0n) -> Stack (CastSpell).
+- Turn 7, seq 132: Unstoppable Slasher [owner=T3rd F3rg1s0n, controller=T3rd F3rg1s0n] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 146: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 150: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 155: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Exile (Exile).
+- Turn 9, seq 171: Unholy Annex // Ritual Chamber [owner=unknown owner, controller=unknown controller] moves Library (T3rd F3rg1s0n) -> Hand (T3rd F3rg1s0n) (Draw).
+- Turn 9, seq 174: Unholy Annex // Ritual Chamber [owner=T3rd F3rg1s0n, controller=T3rd F3rg1s0n] moves Hand (T3rd F3rg1s0n) -> Stack (CastSpell).
+- Turn 9, seq 176: Unholy Annex // Ritual Chamber [owner=T3rd F3rg1s0n, controller=T3rd F3rg1s0n] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 194: Unstoppable Slasher [owner=T3rd F3rg1s0n, controller=T3rd F3rg1s0n] moves Battlefield -> Graveyard (T3rd F3rg1s0n) (Sacrifice).
+- Turn 9, seq 200: Swamp [owner=unknown owner, controller=unknown controller] moves Library (T3rd F3rg1s0n) -> Hand (T3rd F3rg1s0n) (Draw).
+- Turn 10, seq 204: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 207: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 208: Leech Collector [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 210: Leech Collector [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 215: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 218: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 223: Bloodletting [owner=gian31, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 10, seq 225: Bloodletting [owner=unknown owner, controller=unknown controller] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 11, seq 239: Rush of Dread [owner=unknown owner, controller=unknown controller] moves Library (T3rd F3rg1s0n) -> Hand (T3rd F3rg1s0n) (Draw).
+- Turn 11, seq 242: Swamp [owner=T3rd F3rg1s0n, controller=T3rd F3rg1s0n] moves Hand (T3rd F3rg1s0n) -> Battlefield (PlayLand).
+- Turn 11, seq 243: Bloodletter of Aclazotz [owner=T3rd F3rg1s0n, controller=T3rd F3rg1s0n] moves Hand (T3rd F3rg1s0n) -> Stack (CastSpell).
+- Turn 11, seq 245: Bloodletter of Aclazotz [owner=T3rd F3rg1s0n, controller=T3rd F3rg1s0n] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 257: Swamp [owner=unknown owner, controller=unknown controller] moves Library (T3rd F3rg1s0n) -> Hand (T3rd F3rg1s0n) (Draw).
+- Turn 12, seq 261: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 264: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 266: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 274: Bloodletting [owner=gian31, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 12, seq 276: Bloodletting [owner=unknown owner, controller=unknown controller] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 13, seq 291: object 386 [owner=unknown owner, controller=unknown controller] moves Library (T3rd F3rg1s0n) -> Hand (T3rd F3rg1s0n) (Draw).
+- Turn 13, seq 294: Swamp [owner=T3rd F3rg1s0n, controller=T3rd F3rg1s0n] moves Hand (T3rd F3rg1s0n) -> Battlefield (PlayLand).
+- Turn 13, seq 295: Rush of Dread [owner=T3rd F3rg1s0n, controller=T3rd F3rg1s0n] moves Hand (T3rd F3rg1s0n) -> Stack (CastSpell).
+- Turn 13, seq 301: Rush of Dread [owner=T3rd F3rg1s0n, controller=T3rd F3rg1s0n] moves Stack -> Graveyard (T3rd F3rg1s0n) (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 175 becomes object 291 [Swamp].
+- Turn 2, seq 21: object 238 becomes object 292 [Case of the Uneaten Feast].
+- Turn 2, seq 24: object 237 becomes object 293 [Plains].
+- Turn 2, seq 25: object 292 becomes object 294 [Case of the Uneaten Feast].
+- Turn 3, seq 41: object 178 becomes object 296 [Swamp].
+- Turn 3, seq 44: object 177 becomes object 297 [Swamp].
+- Turn 4, seq 58: object 239 becomes object 298 [Rot-Curse Rakshasa].
+- Turn 4, seq 61: object 231 becomes object 299 [Swamp].
+- Turn 4, seq 62: object 298 becomes object 300 [Rot-Curse Rakshasa].
+- Turn 5, seq 80: object 179 becomes object 304 [Tinybones, the Pickpocket].
+- Turn 5, seq 83: object 296 becomes object 305 [Swamp].
+- Turn 5, seq 84: object 176 becomes object 306 [Fell].
+- Turn 5, seq 88: object 300 becomes object 309 [Rot-Curse Rakshasa].
+- Turn 5, seq 88: object 306 becomes object 310 [Fell].
+- Turn 5, seq 89: object 304 becomes object 311 [Tinybones, the Pickpocket].
+- Turn 6, seq 105: object 240 becomes object 313 [Leech Collector].
+- Turn 6, seq 108: object 233 becomes object 314 [Swamp].
+- Turn 6, seq 109: object 236 becomes object 315 [Moment of Craving].
+- Turn 6, seq 113: object 315 becomes object 318 [Moment of Craving].
+- Turn 6, seq 113: object 311 becomes object 319 [Tinybones, the Pickpocket].
+- Turn 7, seq 127: object 180 becomes object 320 [object 180].
+- Turn 7, seq 130: object 174 becomes object 321 [Unstoppable Slasher].
+- Turn 8, seq 146: object 241 becomes object 325 [Bloodletter of Aclazotz].
+- Turn 8, seq 150: object 232 becomes object 326 [Godless Shrine].
+- Turn 8, seq 155: object 309 becomes object 331 [Rot-Curse Rakshasa].
+- Turn 9, seq 171: object 181 becomes object 332 [Unholy Annex // Ritual Chamber].
+- Turn 9, seq 174: object 332 becomes object 335 [Unholy Annex // Ritual Chamber].
+- Turn 9, seq 194: object 321 becomes object 345 [Unstoppable Slasher].
+- Turn 9, seq 200: object 182 becomes object 347 [Swamp].
+- Turn 10, seq 204: object 242 becomes object 348 [Swamp].
+- Turn 10, seq 207: object 348 becomes object 349 [Swamp].
+- Turn 10, seq 208: object 235 becomes object 350 [Leech Collector].
+- Turn 10, seq 215: object 234 becomes object 356 [Starscape Cleric].
+- Turn 10, seq 223: object 355 becomes object 361 [Bloodletting].
+- Turn 10, seq 225: object 361 becomes object 363 [Bloodletting].
+- Turn 11, seq 239: object 183 becomes object 364 [Rush of Dread].
+- Turn 11, seq 242: object 347 becomes object 365 [Swamp].
+- Turn 11, seq 243: object 171 becomes object 366 [Bloodletter of Aclazotz].
+- Turn 11, seq 257: object 184 becomes object 372 [Swamp].
+- Turn 12, seq 261: object 243 becomes object 373 [Starscape Cleric].
+- Turn 12, seq 264: object 325 becomes object 374 [Bloodletter of Aclazotz].
+- Turn 12, seq 274: object 382 becomes object 383 [Bloodletting].
+- Turn 12, seq 276: object 383 becomes object 385 [Bloodletting].
+- Turn 13, seq 291: object 185 becomes object 386 [object 185].
+- Turn 13, seq 294: object 372 becomes object 387 [Swamp].
+- Turn 13, seq 295: object 364 becomes object 388 [Rush of Dread].
+- Turn 13, seq 301: object 388 becomes object 394 [Rush of Dread].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: T3rd F3rg1s0n plays Swamp (object 291) from Hand (T3rd F3rg1s0n) to Battlefield.
+- Turn 2: gian31 plays Plains (object 293) from Hand (gian31) to Battlefield.
+- Turn 3: T3rd F3rg1s0n plays Swamp (object 297) from Hand (T3rd F3rg1s0n) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 299) from Hand (gian31) to Battlefield.
+- Turn 5: T3rd F3rg1s0n plays Swamp (object 305) from Hand (T3rd F3rg1s0n) to Battlefield.
+- Turn 6: gian31 plays Swamp (object 314) from Hand (gian31) to Battlefield.
+- Turn 8: gian31 plays Godless Shrine (object 326) from Hand (gian31) to Battlefield.
+- Turn 10: gian31 plays Swamp (object 349) from Hand (gian31) to Battlefield.
+- Turn 11: T3rd F3rg1s0n plays Swamp (object 365) from Hand (T3rd F3rg1s0n) to Battlefield.
+- Turn 13: T3rd F3rg1s0n plays Swamp (object 387) from Hand (T3rd F3rg1s0n) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+TRIGGER LOOP SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Case of the Uneaten Feast: casts=1; abilities=4 (triggered=4, activated=0) across turns [2, 4, 10, 10, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=4, other=0
+  observed effects: life +1
+- Unstoppable Slasher: casts=1; abilities=3 (triggered=3, activated=0) across turns [7, 9, 9, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: life -11, sacrifice
+- Leech Collector: casts=1; abilities=2 (triggered=2, activated=0) across turns [10, 10, 12]
+- Starscape Cleric: casts=1; abilities=2 (triggered=2, activated=0) across turns [10, 10, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=2
+  observed effects: life -1, life -2, synthetic event
+- Unholy Annex // Ritual Chamber: casts=1; abilities=2 (triggered=2, activated=0) across turns [9, 9, 11]
+  observed effect totals: draws=2, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=2
+  observed effects: draw, life +2, life -2, life -4, synthetic event
+- Bloodletter of Aclazotz: casts=2 across turns [11, 12]
+- Bloodletting: casts=2 across turns [10, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life -2, life -4
+- Rot-Curse Rakshasa: casts=1; abilities=1 (triggered=1, activated=0) across turns [4, 8]
+  observed effect totals: draws=0, tokens=0, counters=1, returns=0, damage=0, life_changes=0, other=0
+  observed effects: +1 counter(s)
+- Fell: casts=1 across turns [5]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Moment of Craving: casts=1 across turns [6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: P/T -2/-2, life +2
+- Rush of Dread: casts=1 across turns [13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: life -10, synthetic event
+- Tinybones, the Pickpocket: casts=1 across turns [5]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 9 â€” None (active=T3rd F3rg1s0n)
+  attacker: Unstoppable Slasher (T3rd F3rg1s0n) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 9: Ability of Unstoppable Slasher (active=T3rd F3rg1s0n) - Ability of Unstoppable Slasher resolves with no immediate observed mutation.
+- Turn 9: Ability of Unstoppable Slasher (active=T3rd F3rg1s0n) - Ability of Unstoppable Slasher: gian31 loses 11 life.
+- Turn 9: Ability of Unstoppable Slasher (active=T3rd F3rg1s0n) - Ability of Unstoppable Slasher: sacrifice.
+
+TECHNICAL APPENDIX â€” OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 231: Swamp | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 232: Godless Shrine | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 233: Swamp | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 234: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 235: Leech Collector | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 236: Moment of Craving | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 237: Plains | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 291: Swamp | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=Battlefield (latest_object_observation)
+- 292: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 293: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 294: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 297: Swamp | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=Battlefield (latest_object_observation)
+- 298: Rot-Curse Rakshasa | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 299: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 300: Rot-Curse Rakshasa | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 303: object 303 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 305: Swamp | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=Battlefield (latest_object_observation)
+- 306: Fell | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=Stack (latest_object_observation)
+- 309: Rot-Curse Rakshasa | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 310: Fell | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=Graveyard (latest_object_observation)
+- 311: Tinybones, the Pickpocket | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=Battlefield (latest_object_observation)
+- 313: Leech Collector | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 314: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 315: Moment of Craving | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 318: Moment of Craving | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 319: Tinybones, the Pickpocket | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=Graveyard (latest_object_observation)
+- 321: Unstoppable Slasher | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=Battlefield (latest_object_observation)
+- 325: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 326: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 327: object 327 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 331: Rot-Curse Rakshasa | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 335: Unholy Annex // Ritual Chamber | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=Stack (latest_object_observation)
+- 336: Unholy Annex | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=Battlefield (latest_object_observation)
+- 337: Ritual Chamber | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=Battlefield (latest_object_observation)
+- 341: object 341 | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=unknown (inferred unknown) (latest_object_observation)
+- 342: object 342 | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=Stack (latest_object_observation)
+- 343: object 343 | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=unknown (inferred unknown) (latest_object_observation)
+- 344: object 344 | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=unknown (inferred unknown) (latest_object_observation)
+- 345: Unstoppable Slasher | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=Graveyard (latest_object_observation)
+- 346: object 346 | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=unknown (inferred unknown) (latest_object_observation)
+- 348: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 349: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 350: Leech Collector | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 353: object 353 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 354: object 354 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 355: Bloodletting | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 356: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 359: object 359 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 360: object 360 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 361: Bloodletting | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 365: Swamp | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=Battlefield (latest_object_observation)
+- 366: Bloodletter of Aclazotz | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=Battlefield (latest_object_observation)
+- 371: object 371 | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=unknown (inferred unknown) (latest_object_observation)
+- 373: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 374: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 379: object 379 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 380: object 380 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 381: object 381 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 382: Bloodletting | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 383: Bloodletting | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 387: Swamp | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=Battlefield (latest_object_observation)
+- 388: Rush of Dread | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=Stack (latest_object_observation)
+- 394: Rush of Dread | controller=T3rd F3rg1s0n | owner=T3rd F3rg1s0n | zone=Graveyard (latest_object_observation)
+
+TECHNICAL APPENDIX â€” CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+T3rd F3rg1s0n: 23 total items
+  zones: Battlefield=10, Graveyard=4, Stack=4, unknown=5
+  objects: Swamp x5, Fell x2, Rush of Dread x2, Tinybones, the Pickpocket x2, Unstoppable Slasher x2, Bloodletter of Aclazotz, Ritual Chamber, Unholy Annex, Unholy Annex // Ritual Chamber, object 341, object 342, object 343
+gian31: 40 total items
+  zones: Battlefield=9, Exile=1, Graveyard=1, Hand=6, Stack=13, unknown=10
+  objects: Swamp x6, Bloodletting x4, Rot-Curse Rakshasa x4, Leech Collector x3, Moment of Craving x3, Starscape Cleric x3, Bloodletter of Aclazotz x2, Case of the Uneaten Feast x2, Godless Shrine x2, Plains x2, object 303, object 327
+
+TECHNICAL APPENDIX â€” LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+T3rd F3rg1s0n:
+  Battlefield (10): Bloodletter of Aclazotz, Ritual Chamber, Swamp, Swamp, Swamp, Swamp, Swamp, Tinybones, the Pickpocket, Unholy Annex, Unstoppable Slasher
+  Graveyard: 4 card(s)
+gian31:
+  Battlefield (9): Bloodletter of Aclazotz, Godless Shrine, Leech Collector, Plains, Rot-Curse Rakshasa, Starscape Cleric, Swamp, Swamp, Swamp
+  Graveyard: 1 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+15 objects have no resolved final zone and are omitted from the known board state.
+T3rd F3rg1s0n: 5 unknown object(s)
+gian31: 10 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=6, Stack=17
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+T3rd F3rg1s0n:
+  Battlefield (9): Swamp, Swamp, Swamp, Unholy Annex // Ritual Chamber, Unholy Annex, Ritual Chamber, Swamp, Bloodletter of Aclazotz, Swamp
+  Graveyard (4): Fell, Tinybones, the Pickpocket, Unstoppable Slasher, Rush of Dread
+gian31:
+  Battlefield (9): Plains, Case of the Uneaten Feast, Swamp, Swamp, Godless Shrine, Swamp, Leech Collector, Starscape Cleric, Bloodletter of Aclazotz
+  Graveyard (1): Moment of Craving
+  Exile (1): Rot-Curse Rakshasa
+Known non-persistent entries (counts only):
+  T3rd F3rg1s0n: Stack=1
+  gian31: Hand=2, Limbo=3
+  unknown: Hand=4, Library=92, Limbo=8
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: T3rd F3rg1s0n Battlefield=1
+- Turn 2: T3rd F3rg1s0n Battlefield=1; gian31 Battlefield=2
+- Turn 3: T3rd F3rg1s0n Battlefield=2; gian31 Battlefield=2
+- Turn 4: T3rd F3rg1s0n Battlefield=2; gian31 Battlefield=4
+- Turn 5: T3rd F3rg1s0n Battlefield=4; T3rd F3rg1s0n Graveyard=1; gian31 Battlefield=3; gian31 Graveyard=1
+- Turn 6: T3rd F3rg1s0n Battlefield=3; T3rd F3rg1s0n Graveyard=2; gian31 Battlefield=4; gian31 Graveyard=2
+- Turn 7: T3rd F3rg1s0n Battlefield=4; T3rd F3rg1s0n Graveyard=2; gian31 Battlefield=4; gian31 Graveyard=2
+- Turn 8: T3rd F3rg1s0n Battlefield=4; T3rd F3rg1s0n Graveyard=2; gian31 Battlefield=5; gian31 Graveyard=1; gian31 Exile=1
+- Turn 9: T3rd F3rg1s0n Battlefield=4; T3rd F3rg1s0n Graveyard=3; gian31 Battlefield=5; gian31 Graveyard=1; gian31 Exile=1
+- Turn 10: T3rd F3rg1s0n Battlefield=4; T3rd F3rg1s0n Graveyard=3; gian31 Battlefield=8; gian31 Graveyard=2; gian31 Exile=1
+- Turn 11: T3rd F3rg1s0n Battlefield=6; T3rd F3rg1s0n Graveyard=3; gian31 Battlefield=8; gian31 Graveyard=2; gian31 Exile=1
+- Turn 12: T3rd F3rg1s0n Battlefield=6; T3rd F3rg1s0n Graveyard=3; gian31 Battlefield=9; gian31 Graveyard=3; gian31 Exile=1
+- Turn 13: T3rd F3rg1s0n Battlefield=7; T3rd F3rg1s0n Graveyard=4; gian31 Battlefield=9; gian31 Graveyard=3; gian31 Exile=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Rot-Curse Rakshasa resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Tinybones, the Pickpocket resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Unstoppable Slasher resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Unholy Annex // Ritual Chamber resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Leech Collector resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
