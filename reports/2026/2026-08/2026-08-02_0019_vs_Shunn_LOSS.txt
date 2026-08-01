@@ -1,0 +1,837 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Shunn
+Seat map: Seat 1=gian31, Seat 2=Shunn
+Turn range (known): 1 - 15
+Records: 56
+Action chains: 28
+Winner: Shunn
+Final life: {'gian31': -8, 'Shunn': 29}
+Lethal life snapshot: gian31 10 -> -8 (at least 18 damage/life loss observed; exact source may be unavailable).
+Match conclusion: Life total reached 0 observed for gian31.
+Match-result payload was observed after the last captured action in Turn 15 (Phase_Main1); payload ordering within later uncaptured records is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 27 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 10 explicit PlayLand transfers across turns [1, 2, 3, 4, 5, 6, 8, 10, 11, 14]. Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: Shunn; observed final life totals: {'gian31': -8, 'Shunn': 29}.
+Last captured action before result payload: Turn 15 (Phase_Main1).
+Observed active tokens: Food [343], Cat [345], Cat [365], Cat [386], Cat [411].
+Specific win condition is unavailable unless separately stated by the match-result payload.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=9] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=287)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: Shunn gains 1 life.
+    net observed life change this turn: Shunn +1 (individual changes below; gains and losses may offset)
+    life: Shunn 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [287] Hand (Shunn) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shunn: Battlefield: Scoured Barrens [287]
+
+Turn 2
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=29] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=291)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 291) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 291) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [289] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 23).
+      Plains [290] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 26).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shunn: Battlefield: Scoured Barrens [287]
+      gian31: Battlefield: Case of the Uneaten Feast [291], Plains [290]
+
+Turn 3
+  - Sun-Blessed Healer [valid_resolution_no_immediate_mutation, seq=50] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=295)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sun-Blessed Healer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sun-Blessed Healer (object 295) Hand (Shunn) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sun-Blessed Healer (object 295) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [293] Library (Shunn) -> Hand (Shunn) (Draw; GRE sequence 43).
+      Plains [294] Hand (Shunn) -> Battlefield (PlayLand; GRE sequence 46).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shunn: Battlefield: Plains [294], Scoured Barrens [287], Sun-Blessed Healer [295]
+      gian31: Battlefield: Case of the Uneaten Feast [291], Plains [290]
+
+Turn 4
+  - Moment of Craving [observed_semantic_effect, seq=72] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=300)
+      effects: P/T -2/-2, life +2
+      narrative: Moment of Craving: Sun-Blessed Healer gets -2/-2; gian31 gains 2 life.
+      explicit effect object references: Sun-Blessed Healer [295] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Moment of Craving (object 300) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Moment of Craving (object 303) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 300 -> transfer object 303 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Sun-Blessed Healer (object 304) Battlefield -> Graveyard (Shunn) (SBA_ZeroToughness; shared object ID)
+    net observed life change this turn: gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 22
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [298] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 64).
+      Swamp [299] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 67).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shunn: Battlefield: Plains [294], Scoured Barrens [287]; Graveyard: Sun-Blessed Healer [304]
+      gian31: Battlefield: Case of the Uneaten Feast [291], Plains [290], Swamp [299]; Graveyard: Moment of Craving [303]
+
+Turn 5
+  - Mortify [observed_semantic_effect, seq=94] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=307)
+      effects: destroy
+      narrative: Mortify destroys Case of the Uneaten Feast.
+      explicit effect object references: Case of the Uneaten Feast [291], Case of the Uneaten Feast [311] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Mortify (object 307) Hand (Shunn) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 311) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Mortify (object 312) Stack -> Graveyard (Shunn) (Resolve; shared object ID)
+      identity continuity: source object 307 -> transfer object 312 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Cat Collector [305] Library (Shunn) -> Hand (Shunn) (Draw; GRE sequence 86).
+      Swamp [306] Hand (Shunn) -> Battlefield (PlayLand; GRE sequence 89).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shunn: Battlefield: Plains [294], Scoured Barrens [287], Swamp [306]; Graveyard: Mortify [312], Sun-Blessed Healer [304]
+      gian31: Battlefield: Plains [290], Swamp [299]; Graveyard: Case of the Uneaten Feast [311], Moment of Craving [303]
+
+Turn 6
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=114] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=315)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 315) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 315) Stack -> Battlefield (Resolve; shared object ID)
+  - Demon Wall [valid_resolution_no_immediate_mutation, seq=117] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=317)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Demon Wall resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Demon Wall (object 317) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Demon Wall (object 317) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=119] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=315)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 22 -> 23
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [313] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 108).
+      Swamp [314] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 111).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shunn: Battlefield: Plains [294], Scoured Barrens [287], Swamp [306]; Graveyard: Mortify [312], Sun-Blessed Healer [304]
+      gian31: Battlefield: Case of the Uneaten Feast [315], Demon Wall [317], Plains [290], Swamp [299], Swamp [314]; Graveyard: Case of the Uneaten Feast [311], Moment of Craving [303]
+
+Turn 7
+  - Dazzling Angel [valid_resolution_no_immediate_mutation, seq=138] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=322)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Dazzling Angel resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Dazzling Angel (object 322) Hand (Shunn) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Dazzling Angel (object 322) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hinterland Sanctifier [321] Library (Shunn) -> Hand (Shunn) (Draw; GRE sequence 133).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shunn: Battlefield: Dazzling Angel [322], Plains [294], Scoured Barrens [287], Swamp [306]; Graveyard: Mortify [312], Sun-Blessed Healer [304]
+      gian31: Battlefield: Case of the Uneaten Feast [315], Demon Wall [317], Plains [290], Swamp [299], Swamp [314]; Graveyard: Case of the Uneaten Feast [311], Moment of Craving [303]
+
+Turn 8
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=157] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=327)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 327) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 327) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=159] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=315)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=161] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=327)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Shunn loses 1 life.
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=164] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=333)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=166] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=327)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Shunn loses 1 life.
+    net observed life change this turn: Shunn -2; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 23 -> 24
+    life: Shunn 21 -> 20
+    life: gian31 24 -> 25
+    life: Shunn 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Authority of the Consuls [326] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 152).
+      Scoured Barrens [333] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 162).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shunn: Battlefield: Dazzling Angel [322], Plains [294], Scoured Barrens [287], Swamp [306]; Graveyard: Mortify [312], Sun-Blessed Healer [304]
+      gian31: Battlefield: Case of the Uneaten Feast [315], Demon Wall [317], Marauding Blight-Priest [327], Plains [290], Scoured Barrens [333], Swamp [299], Swamp [314]; Graveyard: Case of the Uneaten Feast [311], Moment of Craving [303]
+
+Turn 9
+  - Cat Collector [valid_resolution_no_immediate_mutation, seq=185] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=337)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Cat Collector resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Cat Collector (object 337) Hand (Shunn) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Cat Collector (object 337) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Cat Collector [observed_semantic_effect, seq=188] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=337)
+      effects: token creation
+      narrative: Ability of Cat Collector: a token is created.
+      explicit effect object references: Food [343] (role/targeting only where the protocol identifies it)
+      token created: Food (object 343, controller=Shunn)
+  - Ability of Dazzling Angel [observed_semantic_effect, seq=190] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=322)
+      effects: life +1
+      narrative: Ability of Dazzling Angel: Shunn gains 1 life.
+  - Ability of Cat Collector [observed_semantic_effect, seq=192] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=337)
+      effects: token creation
+      narrative: Ability of Cat Collector: a token is created.
+      explicit effect object references: Cat [345] (role/targeting only where the protocol identifies it)
+      token created: Cat (object 345, controller=Shunn) 1/1
+  - Ability of Dazzling Angel [observed_semantic_effect, seq=194] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=322)
+      effects: life +1
+      narrative: Ability of Dazzling Angel: Shunn gains 1 life.
+  Combat snapshots observed (active=Shunn; frames: DeclareAttack -> DeclareBlock):
+      attackers: Dazzling Angel [322] (unblocked, observed P/T 2/3)
+      blockers: none identified
+      observed attacker power total: 2; unattributed defending-player life loss: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Shunn +2; gian31 -2 (individual changes below; gains and losses may offset)
+    life: Shunn 19 -> 20
+    life: Shunn 20 -> 21
+    life (combat-related snapshot; exact source unavailable): gian31 25 -> 23
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mortify [336] Library (Shunn) -> Hand (Shunn) (Draw; GRE sequence 180).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shunn: Battlefield: Cat Collector [337], Dazzling Angel [322], Plains [294], Scoured Barrens [287], Swamp [306]; Graveyard: Mortify [312], Sun-Blessed Healer [304]
+      gian31: Battlefield: Case of the Uneaten Feast [315], Demon Wall [317], Marauding Blight-Priest [327], Plains [290], Scoured Barrens [333], Swamp [299], Swamp [314]; Graveyard: Case of the Uneaten Feast [311], Moment of Craving [303]
+
+Turn 10
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=219] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=348)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=221] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=327)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Shunn loses 1 life.
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=224] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=351)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 351) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 351) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: Shunn -1; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 23 -> 24
+    life: Shunn 21 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [347] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 214).
+      Scoured Barrens [348] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 217).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shunn: Battlefield: Cat Collector [337], Dazzling Angel [322], Plains [294], Scoured Barrens [287], Swamp [306]; Graveyard: Mortify [312], Sun-Blessed Healer [304]
+      gian31: Battlefield: Authority of the Consuls [351], Case of the Uneaten Feast [315], Demon Wall [317], Marauding Blight-Priest [327], Plains [290], Scoured Barrens [333], Scoured Barrens [348], Swamp [299], Swamp [314]; Graveyard: Case of the Uneaten Feast [311], Moment of Craving [303]
+
+Turn 11
+  - Mortify [observed_semantic_effect, seq=247] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=355)
+      effects: destroy
+      narrative: Mortify destroys Authority of the Consuls.
+      explicit effect object references: Authority of the Consuls [351], Authority of the Consuls [359] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Mortify (object 355) Hand (Shunn) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 359) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Mortify (object 360) Stack -> Graveyard (Shunn) (Resolve; shared object ID)
+      identity continuity: source object 355 -> transfer object 360 (explicit GRE ObjectIdChanged chain).
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=250] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=361)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 361) Hand (Shunn) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 361) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Dazzling Angel [observed_semantic_effect, seq=252] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=322)
+      effects: life +1
+      narrative: Ability of Dazzling Angel: Shunn gains 1 life.
+  - Ability of Cat Collector [observed_semantic_effect, seq=254] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=337)
+      effects: token creation
+      narrative: Ability of Cat Collector: a token is created.
+      explicit effect object references: Cat [365] (role/targeting only where the protocol identifies it)
+      token created: Cat (object 365, controller=Shunn) 1/1
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=257] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=361)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: Shunn gains 1 life.
+  - Ability of Dazzling Angel [observed_semantic_effect, seq=259] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=322)
+      effects: life +1
+      narrative: Ability of Dazzling Angel: Shunn gains 1 life.
+  Combat snapshots observed (active=Shunn; frames: DeclareAttack -> DeclareBlock):
+      attackers: Dazzling Angel [322] (unblocked, observed P/T 2/3)
+      blockers: none identified
+      observed attacker power total: 2; unattributed defending-player life loss: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Shunn +3; gian31 -2 (individual changes below; gains and losses may offset)
+    life: Shunn 20 -> 21
+    life: Shunn 21 -> 22
+    life: Shunn 22 -> 23
+    life (combat-related snapshot; exact source unavailable): gian31 24 -> 22
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [353] Library (Shunn) -> Hand (Shunn) (Draw; GRE sequence 239).
+      Swamp [354] Hand (Shunn) -> Battlefield (PlayLand; GRE sequence 242).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shunn: Battlefield: Cat Collector [337], Dazzling Angel [322], Hinterland Sanctifier [361], Plains [294], Scoured Barrens [287], Swamp [306], Swamp [354]; Graveyard: Mortify [312], Mortify [360], Sun-Blessed Healer [304]
+      gian31: Battlefield: Case of the Uneaten Feast [315], Demon Wall [317], Marauding Blight-Priest [327], Plains [290], Scoured Barrens [333], Scoured Barrens [348], Swamp [299], Swamp [314]; Graveyard: Authority of the Consuls [359], Case of the Uneaten Feast [311], Moment of Craving [303]
+
+Turn 12
+  - Sinister Monolith [valid_resolution_no_immediate_mutation, seq=284] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=369)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sinister Monolith resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sinister Monolith (object 369) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sinister Monolith (object 369) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Sinister Monolith [observed_semantic_effect, seq=288] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=369)
+      effects: life -1, life +1
+      narrative: Ability of Sinister Monolith: Shunn loses 1 life; gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=290] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=327)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Shunn loses 1 life.
+    net observed life change this turn: Shunn -2; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 22 -> 23
+    life: Shunn 23 -> 22
+    life: Shunn 22 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [368] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 279).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shunn: Battlefield: Cat Collector [337], Dazzling Angel [322], Hinterland Sanctifier [361], Plains [294], Scoured Barrens [287], Swamp [306], Swamp [354]; Graveyard: Mortify [312], Mortify [360], Sun-Blessed Healer [304]
+      gian31: Battlefield: Case of the Uneaten Feast [315], Demon Wall [317], Marauding Blight-Priest [327], Plains [290], Scoured Barrens [333], Scoured Barrens [348], Sinister Monolith [369], Swamp [299], Swamp [314]; Graveyard: Authority of the Consuls [359], Case of the Uneaten Feast [311], Moment of Craving [303]
+
+Turn 13
+  - Twinblade Paladin [valid_resolution_no_immediate_mutation, seq=308] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=377)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Twinblade Paladin resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Twinblade Paladin (object 377) Hand (Shunn) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Twinblade Paladin (object 377) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=311] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=361)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: Shunn gains 1 life.
+  - Ability of Twinblade Paladin [observed_semantic_effect, seq=314] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=377)
+      effects: P/T +1/+1, +1 counter(s)
+      narrative: Ability of Twinblade Paladin: Twinblade Paladin gets +1/+1; 1 counter(s) are added to target.
+  - Ability of Cat Collector [observed_semantic_effect, seq=316] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=337)
+      effects: token creation
+      narrative: Ability of Cat Collector: a token is created.
+      explicit effect object references: Cat [386] (role/targeting only where the protocol identifies it)
+      token created: Cat (object 386, controller=Shunn) 1/1
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=319] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=361)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: Shunn gains 1 life.
+  - Ability of Twinblade Paladin [observed_semantic_effect, seq=321] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=377)
+      effects: P/T +1/+1, +1 counter(s)
+      narrative: Ability of Twinblade Paladin: Twinblade Paladin gets +1/+1; 1 counter(s) are added to target.
+  - Ability of Dazzling Angel [observed_semantic_effect, seq=323] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=322)
+      effects: life +1
+      narrative: Ability of Dazzling Angel: Shunn gains 1 life.
+  - Ability of Twinblade Paladin [observed_semantic_effect, seq=325] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=377)
+      effects: P/T +1/+1, +1 counter(s)
+      narrative: Ability of Twinblade Paladin: Twinblade Paladin gets +1/+1; 1 counter(s) are added to target.
+  - Ability of Dazzling Angel [observed_semantic_effect, seq=327] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=322)
+      effects: life +1
+      narrative: Ability of Dazzling Angel: Shunn gains 1 life.
+  - Ability of Twinblade Paladin [observed_semantic_effect, seq=329] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=377)
+      effects: P/T +1/+1, +1 counter(s)
+      narrative: Ability of Twinblade Paladin: Twinblade Paladin gets +1/+1; 1 counter(s) are added to target.
+  Combat snapshots observed (active=Shunn; frames: DeclareAttack -> DeclareBlock):
+      attackers: Dazzling Angel [322] (unblocked, observed P/T 2/3)
+      blockers: none identified
+      observed attacker power total: 2; unattributed defending-player life loss: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Shunn +4; gian31 -2 (individual changes below; gains and losses may offset)
+    life: Shunn 21 -> 22
+    life: Shunn 22 -> 23
+    life: Shunn 23 -> 24
+    life: Shunn 24 -> 25
+    life (combat-related snapshot; exact source unavailable): gian31 23 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Healer's Hawk [376] Library (Shunn) -> Hand (Shunn) (Draw; GRE sequence 303).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shunn: Battlefield: Cat Collector [337], Dazzling Angel [322], Hinterland Sanctifier [361], Plains [294], Scoured Barrens [287], Swamp [306], Swamp [354], Twinblade Paladin [377]; Graveyard: Mortify [312], Mortify [360], Sun-Blessed Healer [304]
+      gian31: Battlefield: Case of the Uneaten Feast [315], Demon Wall [317], Marauding Blight-Priest [327], Plains [290], Scoured Barrens [333], Scoured Barrens [348], Sinister Monolith [369], Swamp [299], Swamp [314]; Graveyard: Authority of the Consuls [359], Case of the Uneaten Feast [311], Moment of Craving [303]
+
+Turn 14
+  - Ability of Demon Wall [observed_semantic_effect, seq=355] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=317)
+      effects: P/T +2/+2, +2 counter(s)
+      narrative: Ability of Demon Wall: Demon Wall gets +2/+2; 2 counter(s) are added to target.
+  - Ability of Sinister Monolith [observed_semantic_effect, seq=359] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=369)
+      effects: life -1, life +1
+      narrative: Ability of Sinister Monolith: Shunn loses 1 life; gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=361] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=327)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Shunn loses 1 life.
+    net observed life change this turn: Shunn -2; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    life: Shunn 25 -> 24
+    life: Shunn 24 -> 23
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [392] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 349).
+      Swamp [393] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 352).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shunn: Battlefield: Cat Collector [337], Dazzling Angel [322], Hinterland Sanctifier [361], Plains [294], Scoured Barrens [287], Swamp [306], Swamp [354], Twinblade Paladin [377]; Graveyard: Mortify [312], Mortify [360], Sun-Blessed Healer [304]
+      gian31: Battlefield: Case of the Uneaten Feast [315], Demon Wall [317], Marauding Blight-Priest [327], Plains [290], Scoured Barrens [333], Scoured Barrens [348], Sinister Monolith [369], Swamp [299], Swamp [314], Swamp [393]; Graveyard: Authority of the Consuls [359], Case of the Uneaten Feast [311], Moment of Craving [303]
+
+Turn 15
+  - Moment of Craving [observed_semantic_effect, seq=381] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=404)
+      effects: P/T -2/-2, life +2
+      narrative: Moment of Craving: Marauding Blight-Priest gets -2/-2; Shunn gains 2 life.
+      explicit effect object references: Marauding Blight-Priest [327] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Moment of Craving (object 404) Hand (Shunn) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Moment of Craving (object 409) Stack -> Graveyard (Shunn) (Resolve; shared object ID)
+      identity continuity: source object 404 -> transfer object 409 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Marauding Blight-Priest (object 410) Battlefield -> Graveyard (gian31) (SBA_ZeroToughness; shared object ID)
+  - Ability of Twinblade Paladin [observed_semantic_effect, seq=384] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=377)
+      effects: P/T +1/+1, +1 counter(s)
+      narrative: Ability of Twinblade Paladin: Twinblade Paladin gets +1/+1; 1 counter(s) are added to target.
+  - Ability of Cat Collector [observed_semantic_effect, seq=386] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=337)
+      effects: token creation
+      narrative: Ability of Cat Collector: a token is created.
+      explicit effect object references: Cat [411] (role/targeting only where the protocol identifies it)
+      token created: Cat (object 411, controller=Shunn) 1/1
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=389] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=361)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: Shunn gains 1 life.
+  - Ability of Twinblade Paladin [observed_semantic_effect, seq=391] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=377)
+      effects: P/T +1/+1, +1 counter(s)
+      narrative: Ability of Twinblade Paladin: Twinblade Paladin gets +1/+1; 1 counter(s) are added to target.
+  - Ability of Dazzling Angel [observed_semantic_effect, seq=393] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=322)
+      effects: life +1
+      narrative: Ability of Dazzling Angel: Shunn gains 1 life.
+  - Ability of Twinblade Paladin [observed_semantic_effect, seq=395] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=377)
+      effects: P/T +1/+1, +1 counter(s)
+      narrative: Ability of Twinblade Paladin: Twinblade Paladin gets +1/+1; 1 counter(s) are added to target.
+  - Healer's Hawk [valid_resolution_no_immediate_mutation, seq=398] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=416)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Healer's Hawk resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Healer's Hawk (object 416) Hand (Shunn) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Healer's Hawk (object 416) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=401] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=361)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: Shunn gains 1 life.
+  - Ability of Twinblade Paladin [observed_semantic_effect, seq=403] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=377)
+      effects: P/T +1/+1, +1 counter(s)
+      narrative: Ability of Twinblade Paladin: Twinblade Paladin gets +1/+1; 1 counter(s) are added to target.
+  - Ability of Dazzling Angel [observed_semantic_effect, seq=405] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=322)
+      effects: life +1
+      narrative: Ability of Dazzling Angel: Shunn gains 1 life.
+  - Ability of Twinblade Paladin [observed_semantic_effect, seq=407] (active=Shunn, phase=Phase_Main1, controller=Shunn, owner=Shunn, source_object=377)
+      effects: P/T +1/+1, +1 counter(s)
+      narrative: Ability of Twinblade Paladin: Twinblade Paladin gets +1/+1; 1 counter(s) are added to target.
+  Combat snapshots observed (active=Shunn; frames: DeclareAttack -> CombatDamage):
+      attackers: Dazzling Angel [322] (unblocked, observed P/T 2/3), Cat Collector [337] (unblocked, observed P/T 3/2), Cat [345] (unblocked, observed P/T 1/1), Hinterland Sanctifier [361] (unblocked, observed P/T 1/2), Cat [365] (unblocked, observed P/T 1/1), Twinblade Paladin [377] (unblocked, observed P/T 12/12), Cat [386] (unblocked, observed P/T 1/1)
+      blockers: Demon Wall [317]
+      observed attacker power total: 21; unattributed defending-player life loss: 30; snapshot comparison does not reconcile (exact assignment unavailable).
+      combat-result zone change: Cat Collector [422] Battlefield -> Graveyard (Shunn) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Shunn +6; gian31 -30 (individual changes below; gains and losses may offset)
+    life: Shunn 23 -> 25
+    life: Shunn 25 -> 26
+    life: Shunn 26 -> 27
+    life: Shunn 27 -> 28
+    life: Shunn 28 -> 29
+    life (combat-related snapshot; exact source unavailable): gian31 22 -> 10
+    life (combat-related snapshot; exact source unavailable): gian31 10 -> -8
+    additional protocol-observed zone movements not assigned to an action chain:
+      Moment of Craving [403] Library (Shunn) -> Hand (Shunn) (Draw; GRE sequence 374).
+      Cat Collector [422] Battlefield -> Graveyard (Shunn) (SBA_Damage; GRE sequence 421).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shunn: Battlefield: Dazzling Angel [322], Healer's Hawk [416], Hinterland Sanctifier [361], Plains [294], Scoured Barrens [287], Swamp [306], Swamp [354], Twinblade Paladin [377]; Graveyard: Cat Collector [422], Moment of Craving [409], Mortify [312], Mortify [360], Sun-Blessed Healer [304]
+      gian31: Battlefield: Case of the Uneaten Feast [315], Demon Wall [317], Plains [290], Scoured Barrens [333], Scoured Barrens [348], Sinister Monolith [369], Swamp [299], Swamp [314], Swamp [393]; Graveyard: Authority of the Consuls [359], Case of the Uneaten Feast [311], Marauding Blight-Priest [410], Moment of Craving [303]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+- Turn 9, seq 204, Phase_Main1: gian31 25 -> 23. Combat declaration observed; exact assignment unavailable. Previous captured action: Dazzling Angel.
+- Turn 11, seq 269, Phase_Main1: gian31 24 -> 22. Combat declaration observed; exact assignment unavailable. Previous captured action: Dazzling Angel.
+- Turn 13, seq 339, Phase_Main1: gian31 23 -> 21. Combat declaration observed; exact assignment unavailable. Previous captured action: Twinblade Paladin.
+- Turn 15, seq 419, Phase_Main1: gian31 22 -> 10; gian31 10 -> -8. Combat declaration observed; exact assignment unavailable. Previous captured action: Twinblade Paladin.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 15: gian31 10 -> -8 (required change 18). Explained by exact same-record evidence: 0/18; unattributed: 18/18.
+  Last combat snapshot at or before lethal: Turn 15; attackers=Dazzling Angel [322], Cat Collector [337], Cat [345], Hinterland Sanctifier [361], Cat [365], Twinblade Paladin [377], Cat [386]; observed power total=21; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 15, Moment of Craving (seq 381).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 5 token creations observed; 5 active as last observed; 0 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Food [343] controller=Shunn; created Turn 9 (unknown); active as last observed at Turn 9, object 343 (latest observed P/T unknown; current zone unconfirmed).
+- Cat [345] controller=Shunn; created Turn 9 (1/1); active as last observed at Turn 15, object 345 (latest observed P/T 1/1; current zone unconfirmed).
+- Cat [365] controller=Shunn; created Turn 11 (1/1); active as last observed at Turn 15, object 365 (latest observed P/T 1/1; current zone unconfirmed).
+- Cat [386] controller=Shunn; created Turn 13 (1/1); active as last observed at Turn 15, object 386 (latest observed P/T 1/1; current zone unconfirmed).
+- Cat [411] controller=Shunn; created Turn 15 (1/1); active as last observed at Turn 15, object 411 (latest observed P/T 1/1; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Scoured Barrens [owner=Shunn, controller=Shunn] moves Hand (Shunn) -> Battlefield (PlayLand).
+- Turn 2, seq 23: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 26: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 27: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 29: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 43: Plains [owner=unknown owner, controller=unknown controller] moves Library (Shunn) -> Hand (Shunn) (Draw).
+- Turn 3, seq 46: Plains [owner=Shunn, controller=Shunn] moves Hand (Shunn) -> Battlefield (PlayLand).
+- Turn 3, seq 47: Sun-Blessed Healer [owner=Shunn, controller=Shunn] moves Hand (Shunn) -> Stack (CastSpell).
+- Turn 3, seq 50: Sun-Blessed Healer [owner=Shunn, controller=Shunn] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 64: Scoured Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 67: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 68: Moment of Craving [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 72: Moment of Craving [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 4, seq 72: Sun-Blessed Healer [owner=Shunn, controller=Shunn] moves Battlefield -> Graveyard (Shunn) (SBA_ZeroToughness).
+- Turn 5, seq 86: Cat Collector [owner=unknown owner, controller=unknown controller] moves Library (Shunn) -> Hand (Shunn) (Draw).
+- Turn 5, seq 89: Swamp [owner=Shunn, controller=Shunn] moves Hand (Shunn) -> Battlefield (PlayLand).
+- Turn 5, seq 90: Mortify [owner=Shunn, controller=Shunn] moves Hand (Shunn) -> Stack (CastSpell).
+- Turn 5, seq 94: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 5, seq 94: Mortify [owner=Shunn, controller=Shunn] moves Stack -> Graveyard (Shunn) (Resolve).
+- Turn 6, seq 108: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 111: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 112: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 114: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 115: Demon Wall [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 117: Demon Wall [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 133: Hinterland Sanctifier [owner=unknown owner, controller=unknown controller] moves Library (Shunn) -> Hand (Shunn) (Draw).
+- Turn 7, seq 136: Dazzling Angel [owner=Shunn, controller=Shunn] moves Hand (Shunn) -> Stack (CastSpell).
+- Turn 7, seq 138: Dazzling Angel [owner=Shunn, controller=Shunn] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 152: Authority of the Consuls [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 155: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 157: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 162: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 180: Mortify [owner=unknown owner, controller=unknown controller] moves Library (Shunn) -> Hand (Shunn) (Draw).
+- Turn 9, seq 183: Cat Collector [owner=Shunn, controller=Shunn] moves Hand (Shunn) -> Stack (CastSpell).
+- Turn 9, seq 185: Cat Collector [owner=Shunn, controller=Shunn] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 214: Scoured Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 217: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 222: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 224: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 239: Swamp [owner=unknown owner, controller=unknown controller] moves Library (Shunn) -> Hand (Shunn) (Draw).
+- Turn 11, seq 242: Swamp [owner=Shunn, controller=Shunn] moves Hand (Shunn) -> Battlefield (PlayLand).
+- Turn 11, seq 243: Mortify [owner=Shunn, controller=Shunn] moves Hand (Shunn) -> Stack (CastSpell).
+- Turn 11, seq 247: Authority of the Consuls [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 11, seq 247: Mortify [owner=Shunn, controller=Shunn] moves Stack -> Graveyard (Shunn) (Resolve).
+- Turn 11, seq 248: Hinterland Sanctifier [owner=Shunn, controller=Shunn] moves Hand (Shunn) -> Stack (CastSpell).
+- Turn 11, seq 250: Hinterland Sanctifier [owner=Shunn, controller=Shunn] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 279: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 282: Sinister Monolith [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 284: Sinister Monolith [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 303: Healer's Hawk [owner=unknown owner, controller=unknown controller] moves Library (Shunn) -> Hand (Shunn) (Draw).
+- Turn 13, seq 306: Twinblade Paladin [owner=Shunn, controller=Shunn] moves Hand (Shunn) -> Stack (CastSpell).
+- Turn 13, seq 308: Twinblade Paladin [owner=Shunn, controller=Shunn] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 349: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 352: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 15, seq 374: Moment of Craving [owner=unknown owner, controller=unknown controller] moves Library (Shunn) -> Hand (Shunn) (Draw).
+- Turn 15, seq 377: Moment of Craving [owner=Shunn, controller=Shunn] moves Hand (Shunn) -> Stack (CastSpell).
+- Turn 15, seq 381: Moment of Craving [owner=Shunn, controller=Shunn] moves Stack -> Graveyard (Shunn) (Resolve).
+- Turn 15, seq 381: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_ZeroToughness).
+- Turn 15, seq 396: Healer's Hawk [owner=Shunn, controller=Shunn] moves Hand (Shunn) -> Stack (CastSpell).
+- Turn 15, seq 398: Healer's Hawk [owner=Shunn, controller=Shunn] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 421: Cat Collector [owner=Shunn, controller=Shunn] moves Battlefield -> Graveyard (Shunn) (SBA_Damage).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 227 becomes object 287 [Scoured Barrens].
+- Turn 2, seq 23: object 174 becomes object 289 [Swamp].
+- Turn 2, seq 26: object 171 becomes object 290 [Plains].
+- Turn 2, seq 27: object 167 becomes object 291 [Case of the Uneaten Feast].
+- Turn 3, seq 43: object 234 becomes object 293 [Plains].
+- Turn 3, seq 46: object 293 becomes object 294 [Plains].
+- Turn 3, seq 47: object 233 becomes object 295 [Sun-Blessed Healer].
+- Turn 4, seq 64: object 175 becomes object 298 [Scoured Barrens].
+- Turn 4, seq 67: object 289 becomes object 299 [Swamp].
+- Turn 4, seq 68: object 170 becomes object 300 [Moment of Craving].
+- Turn 4, seq 72: object 300 becomes object 303 [Moment of Craving].
+- Turn 4, seq 72: object 295 becomes object 304 [Sun-Blessed Healer].
+- Turn 5, seq 86: object 235 becomes object 305 [Cat Collector].
+- Turn 5, seq 89: object 229 becomes object 306 [Swamp].
+- Turn 5, seq 90: object 232 becomes object 307 [Mortify].
+- Turn 5, seq 94: object 291 becomes object 311 [Case of the Uneaten Feast].
+- Turn 5, seq 94: object 307 becomes object 312 [Mortify].
+- Turn 6, seq 108: object 176 becomes object 313 [Case of the Uneaten Feast].
+- Turn 6, seq 111: object 172 becomes object 314 [Swamp].
+- Turn 6, seq 112: object 313 becomes object 315 [Case of the Uneaten Feast].
+- Turn 6, seq 115: object 169 becomes object 317 [Demon Wall].
+- Turn 7, seq 133: object 236 becomes object 321 [Hinterland Sanctifier].
+- Turn 7, seq 136: object 231 becomes object 322 [Dazzling Angel].
+- Turn 8, seq 152: object 177 becomes object 326 [Authority of the Consuls].
+- Turn 8, seq 155: object 168 becomes object 327 [Marauding Blight-Priest].
+- Turn 8, seq 162: object 298 becomes object 333 [Scoured Barrens].
+- Turn 9, seq 180: object 237 becomes object 336 [Mortify].
+- Turn 9, seq 183: object 305 becomes object 337 [Cat Collector].
+- Turn 10, seq 214: object 178 becomes object 347 [Scoured Barrens].
+- Turn 10, seq 217: object 347 becomes object 348 [Scoured Barrens].
+- Turn 10, seq 222: object 326 becomes object 351 [Authority of the Consuls].
+- Turn 11, seq 239: object 238 becomes object 353 [Swamp].
+- Turn 11, seq 242: object 353 becomes object 354 [Swamp].
+- Turn 11, seq 243: object 336 becomes object 355 [Mortify].
+- Turn 11, seq 247: object 351 becomes object 359 [Authority of the Consuls].
+- Turn 11, seq 247: object 355 becomes object 360 [Mortify].
+- Turn 11, seq 248: object 321 becomes object 361 [Hinterland Sanctifier].
+- Turn 12, seq 279: object 179 becomes object 368 [Swamp].
+- Turn 12, seq 282: object 173 becomes object 369 [Sinister Monolith].
+- Turn 13, seq 303: object 239 becomes object 376 [Healer's Hawk].
+- Turn 13, seq 306: object 228 becomes object 377 [Twinblade Paladin].
+- Turn 14, seq 349: object 180 becomes object 392 [Swamp].
+- Turn 14, seq 352: object 368 becomes object 393 [Swamp].
+- Turn 15, seq 374: object 240 becomes object 403 [Moment of Craving].
+- Turn 15, seq 377: object 403 becomes object 404 [Moment of Craving].
+- Turn 15, seq 381: object 404 becomes object 409 [Moment of Craving].
+- Turn 15, seq 381: object 327 becomes object 410 [Marauding Blight-Priest].
+- Turn 15, seq 396: object 376 becomes object 416 [Healer's Hawk].
+- Turn 15, seq 421: object 337 becomes object 422 [Cat Collector].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: Shunn plays Scoured Barrens (object 287) from Hand (Shunn) to Battlefield.
+- Turn 2: gian31 plays Plains (object 290) from Hand (gian31) to Battlefield.
+- Turn 3: Shunn plays Plains (object 294) from Hand (Shunn) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 299) from Hand (gian31) to Battlefield.
+- Turn 5: Shunn plays Swamp (object 306) from Hand (Shunn) to Battlefield.
+- Turn 6: gian31 plays Swamp (object 314) from Hand (gian31) to Battlefield.
+- Turn 8: gian31 plays Scoured Barrens (object 333) from Hand (gian31) to Battlefield.
+- Turn 10: gian31 plays Scoured Barrens (object 348) from Hand (gian31) to Battlefield.
+- Turn 11: Shunn plays Swamp (object 354) from Hand (Shunn) to Battlefield.
+- Turn 14: gian31 plays Swamp (object 393) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- Turn 9: Cat Collector -> Dazzling Angel; observed repeated transitions=2; net life: Shunn +2.
+  Individual ability records remain in the timeline.
+- Turn 13: Hinterland Sanctifier -> Twinblade Paladin; observed repeated transitions=2; net life: Shunn +2.
+  Individual ability records remain in the timeline.
+- Turn 13: Twinblade Paladin -> Dazzling Angel; observed repeated transitions=2; net life: Shunn +2.
+  Individual ability records remain in the timeline.
+- Turn 15: Hinterland Sanctifier -> Twinblade Paladin; observed repeated transitions=2; net life: Shunn +2.
+  Individual ability records remain in the timeline.
+- Turn 15: Twinblade Paladin -> Dazzling Angel; observed repeated transitions=2; net life: Shunn +2.
+  Individual ability records remain in the timeline.
+TRIGGER LOOP SUMMARY
+------------------------------------------------------------
+- Turn 9: Cat Collector â†” Dazzling Angel; observed repetitions=2 (cycle length 2).
+  Raw ability events remain available in the turn timeline.
+- Turn 13: Twinblade Paladin â†” Dazzling Angel; observed repetitions=2 (cycle length 2).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Twinblade Paladin: casts=1; abilities=9 (triggered=9, activated=0) across turns [13, 13, 13, 13, 13, 15, 15, 15, 15, 15]
+  observed effect totals: draws=0, tokens=0, counters=9, returns=0, damage=0, life_changes=0, other=9
+  observed effects: +1 counter(s), P/T +1/+1
+- Dazzling Angel: casts=1; abilities=8 (triggered=8, activated=0) across turns [7, 9, 9, 11, 11, 13, 13, 15, 15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=8, other=0
+  observed effects: life +1
+- Cat Collector: casts=1; abilities=5 (triggered=5, activated=0) across turns [9, 9, 9, 11, 13, 15]
+  observed effect totals: draws=0, tokens=5, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Hinterland Sanctifier: casts=1; abilities=5 (triggered=5, activated=0) across turns [11, 11, 13, 13, 15, 15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=0
+  observed effects: life +1
+- Marauding Blight-Priest: casts=1; abilities=5 (triggered=5, activated=0) across turns [8, 8, 8, 10, 12, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=2
+  observed effects: life -1, synthetic event
+- Case of the Uneaten Feast: casts=2; abilities=2 (triggered=2, activated=0) across turns [2, 6, 6, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Scoured Barrens: abilities=3 (triggered=3, activated=0) across turns [1, 8, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=0
+  observed effects: life +1
+- Sinister Monolith: casts=1; abilities=2 (triggered=2, activated=0) across turns [12, 12, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=4, other=2
+  observed effects: life +1, life -1, synthetic event
+- Demon Wall: casts=1; abilities=1 (triggered=1, activated=0) across turns [6, 14]
+  observed effect totals: draws=0, tokens=0, counters=1, returns=0, damage=0, life_changes=0, other=1
+  observed effects: +2 counter(s), P/T +2/+2
+- Moment of Craving: casts=2 across turns [4, 15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=2
+  observed effects: P/T -2/-2, life +2
+- Mortify: casts=2 across turns [5, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: destroy
+- Authority of the Consuls: casts=1 across turns [10]
+- Healer's Hawk: casts=1 across turns [15]
+- Sun-Blessed Healer: casts=1 across turns [3]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 9 â€” None (active=Shunn)
+  attacker: Dazzling Angel (Shunn) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 â€” None (active=Shunn)
+  attacker: Dazzling Angel (Shunn) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 â€” None (active=Shunn)
+  attacker: Dazzling Angel (Shunn) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 15 â€” None (active=Shunn)
+  attacker: Dazzling Angel (Shunn) -> gian31; unblocked in this observed snapshot
+  attacker: Cat Collector (Shunn) -> gian31; unblocked in this observed snapshot
+  attacker: Cat (Shunn) -> gian31; unblocked in this observed snapshot
+  attacker: Hinterland Sanctifier (Shunn) -> gian31; unblocked in this observed snapshot
+  attacker: Cat (Shunn) -> gian31; unblocked in this observed snapshot
+  attacker: Twinblade Paladin (Shunn) -> gian31; unblocked in this observed snapshot
+  attacker: Cat (Shunn) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 12: Ability of Sinister Monolith (active=gian31) - Ability of Sinister Monolith: Shunn loses 1 life; gian31 gains 1 life.
+- Turn 12: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: Shunn loses 1 life.
+- Turn 14: Ability of Sinister Monolith (active=gian31) - Ability of Sinister Monolith: Shunn loses 1 life; gian31 gains 1 life.
+- Turn 14: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: Shunn loses 1 life.
+
+TECHNICAL APPENDIX â€” OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 167: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 168: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 169: Demon Wall | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 170: Moment of Craving | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 171: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 172: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 173: Sinister Monolith | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 287: Scoured Barrens | controller=Shunn | owner=Shunn | zone=Battlefield (latest_object_observation)
+- 288: object 288 | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 289: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 290: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 291: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 294: Plains | controller=Shunn | owner=Shunn | zone=Battlefield (latest_object_observation)
+- 295: Sun-Blessed Healer | controller=Shunn | owner=Shunn | zone=Battlefield (latest_object_observation)
+- 298: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 299: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 300: Moment of Craving | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 303: Moment of Craving | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 304: Sun-Blessed Healer | controller=Shunn | owner=Shunn | zone=Graveyard (latest_object_observation)
+- 306: Swamp | controller=Shunn | owner=Shunn | zone=Battlefield (latest_object_observation)
+- 307: Mortify | controller=Shunn | owner=Shunn | zone=Stack (latest_object_observation)
+- 311: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 312: Mortify | controller=Shunn | owner=Shunn | zone=Graveyard (latest_object_observation)
+- 313: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 314: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 315: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 317: Demon Wall | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 320: object 320 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 322: Dazzling Angel | controller=Shunn | owner=Shunn | zone=Battlefield (latest_object_observation)
+- 326: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 327: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 331: object 331 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 332: object 332 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 333: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 334: object 334 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 335: object 335 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 337: Cat Collector | controller=Shunn | owner=Shunn | zone=Battlefield (latest_object_observation)
+- 341: object 341 | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 342: object 342 | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 343: Food | controller=Shunn | owner=Shunn | zone=Battlefield (latest_object_observation)
+- 344: object 344 | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 345: Cat | controller=Shunn | owner=Shunn | zone=Battlefield (latest_object_observation)
+- 346: object 346 | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 347: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 348: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 349: object 349 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 350: object 350 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 351: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 354: Swamp | controller=Shunn | owner=Shunn | zone=Battlefield (latest_object_observation)
+- 355: Mortify | controller=Shunn | owner=Shunn | zone=Stack (latest_object_observation)
+- 359: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 360: Mortify | controller=Shunn | owner=Shunn | zone=Graveyard (latest_object_observation)
+- 361: Hinterland Sanctifier | controller=Shunn | owner=Shunn | zone=Battlefield (latest_object_observation)
+- 363: object 363 | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 364: object 364 | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 365: Cat | controller=Shunn | owner=Shunn | zone=Battlefield (latest_object_observation)
+- 366: object 366 | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 367: object 367 | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 368: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 369: Sinister Monolith | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 374: object 374 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 375: object 375 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 377: Twinblade Paladin | controller=Shunn | owner=Shunn | zone=Battlefield (latest_object_observation)
+- 382: object 382 | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 383: object 383 | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 384: Deal Gone Bad | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 385: object 385 | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 386: Cat | controller=Shunn | owner=Shunn | zone=Battlefield (latest_object_observation)
+- 387: object 387 | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 388: object 388 | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 389: Deal Gone Bad | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 390: Deal Gone Bad | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 391: Deal Gone Bad | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 392: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 393: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 394: object 394 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 401: object 401 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 402: object 402 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 404: Moment of Craving | controller=Shunn | owner=Shunn | zone=Stack (latest_object_observation)
+- 407: Deal Gone Bad | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 408: object 408 | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 409: Moment of Craving | controller=Shunn | owner=Shunn | zone=Graveyard (latest_object_observation)
+- 410: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 411: Cat | controller=Shunn | owner=Shunn | zone=Battlefield (latest_object_observation)
+- 412: object 412 | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 413: object 413 | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 414: Deal Gone Bad | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 415: Deal Gone Bad | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 416: Healer's Hawk | controller=Shunn | owner=Shunn | zone=Battlefield (latest_object_observation)
+- 418: object 418 | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 419: object 419 | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 420: Deal Gone Bad | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 421: Deal Gone Bad | controller=Shunn | owner=Shunn | zone=unknown (inferred unknown) (latest_object_observation)
+- 422: Cat Collector | controller=Shunn | owner=Shunn | zone=Battlefield (latest_object_observation)
+
+TECHNICAL APPENDIX â€” CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Shunn: 51 total items
+  zones: Battlefield=16, Graveyard=4, Stack=3, unknown=28
+  objects: Deal Gone Bad x9, Cat x4, Mortify x4, Cat Collector x2, Moment of Craving x2, Sun-Blessed Healer x2, Swamp x2, Dazzling Angel, Food, Healer's Hawk, Hinterland Sanctifier, Plains
+gian31: 43 total items
+  zones: Battlefield=8, Graveyard=4, Hand=14, Stack=5, unknown=12
+  objects: Swamp x7, Case of the Uneaten Feast x5, Scoured Barrens x4, Authority of the Consuls x3, Marauding Blight-Priest x3, Moment of Craving x3, Demon Wall x2, Plains x2, Sinister Monolith x2, object 320, object 331, object 332
+
+TECHNICAL APPENDIX â€” LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (8): Demon Wall, Marauding Blight-Priest, Plains, Scoured Barrens, Scoured Barrens, Swamp, Swamp, Swamp
+  Graveyard: 4 card(s)
+Shunn:
+  Battlefield (16): Cat, Cat, Cat, Cat, Cat Collector, Cat Collector, Dazzling Angel, Food, Healer's Hawk, Hinterland Sanctifier, Plains, Scoured Barrens, Sun-Blessed Healer, Swamp, Swamp, Twinblade Paladin
+  Graveyard: 4 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+40 objects have no resolved final zone and are omitted from the known board state.
+Shunn: 28 unknown object(s)
+gian31: 12 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=14, Stack=8
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Shunn:
+  Battlefield (13): Scoured Barrens, Plains, Swamp, Dazzling Angel, Food, Cat, Swamp, Hinterland Sanctifier, Cat, Twinblade Paladin, Cat, Cat, Healer's Hawk
+  Graveyard (5): Sun-Blessed Healer, Mortify, Mortify, Moment of Craving, Cat Collector
+gian31:
+  Battlefield (9): Plains, Swamp, Swamp, Case of the Uneaten Feast, Demon Wall, Scoured Barrens, Scoured Barrens, Sinister Monolith, Swamp
+  Graveyard (4): Moment of Craving, Case of the Uneaten Feast, Authority of the Consuls, Marauding Blight-Priest
+Known non-persistent entries (counts only):
+  Shunn: Limbo=2
+  gian31: Hand=1, Limbo=2
+  unknown: Hand=1, Library=92, Limbo=6
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: Shunn Battlefield=1
+- Turn 2: Shunn Battlefield=1; gian31 Battlefield=2
+- Turn 3: Shunn Battlefield=3; gian31 Battlefield=2
+- Turn 4: Shunn Battlefield=2; Shunn Graveyard=1; gian31 Battlefield=3; gian31 Graveyard=1
+- Turn 5: Shunn Battlefield=3; Shunn Graveyard=2; gian31 Battlefield=2; gian31 Graveyard=2
+- Turn 6: Shunn Battlefield=3; Shunn Graveyard=2; gian31 Battlefield=5; gian31 Graveyard=2
+- Turn 7: Shunn Battlefield=4; Shunn Graveyard=2; gian31 Battlefield=5; gian31 Graveyard=2
+- Turn 8: Shunn Battlefield=4; Shunn Graveyard=2; gian31 Battlefield=7; gian31 Graveyard=2
+- Turn 9: Shunn Battlefield=5; Shunn Graveyard=2; gian31 Battlefield=7; gian31 Graveyard=2
+- Turn 10: Shunn Battlefield=5; Shunn Graveyard=2; gian31 Battlefield=9; gian31 Graveyard=2
+- Turn 11: Shunn Battlefield=7; Shunn Graveyard=3; gian31 Battlefield=8; gian31 Graveyard=3
+- Turn 12: Shunn Battlefield=7; Shunn Graveyard=3; gian31 Battlefield=9; gian31 Graveyard=3
+- Turn 13: Shunn Battlefield=8; Shunn Graveyard=3; gian31 Battlefield=9; gian31 Graveyard=3
+- Turn 14: Shunn Battlefield=8; Shunn Graveyard=3; gian31 Battlefield=10; gian31 Graveyard=3
+- Turn 15: Shunn Battlefield=8; Shunn Graveyard=5; gian31 Battlefield=9; gian31 Graveyard=4
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Sun-Blessed Healer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Demon Wall resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Dazzling Angel resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Cat Collector resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Sinister Monolith resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Twinblade Paladin resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: Healer's Hawk resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
