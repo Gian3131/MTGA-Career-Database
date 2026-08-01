@@ -1,0 +1,797 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: pepesilvia, gian31
+Seat map: Seat 1=pepesilvia, Seat 2=gian31
+Turn range (known): 1 - 10
+Records: 69
+Action chains: 18
+Winner: gian31
+Final life: {'pepesilvia': 1, 'gian31': 37}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Match-result payload was observed after the last captured action: Turn 10 (Phase_Combat, Step_BeginCombat; Ability of Marauding Blight-Priest, seq 350); payload ordering within later uncaptured records is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 25 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 10 explicit PlayLand transfers across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]. Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 10 explicit Library -> Hand movement(s); named in the draw record=5, resolved through an explicit identity transition=4, unresolved=1.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'pepesilvia': 1, 'gian31': 37}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 10 (Phase_Combat, Step_BeginCombat; Ability of Marauding Blight-Priest, seq 350).
+Last captured life mutation: gian31 36 -> 37 (seq 348).
+Specific win condition is unavailable unless separately stated by the match-result payload.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Thinking Cap [valid_resolution_no_immediate_mutation, seq=10] (active=pepesilvia, phase=Phase_Main1, controller=pepesilvia, owner=pepesilvia, source_object=291)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Thinking Cap resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Thinking Cap (object 291) Hand (pepesilvia) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Thinking Cap (object 291) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [290] Hand (pepesilvia) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      pepesilvia: Battlefield: Plains [290], Thinking Cap [291]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [293] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 24).
+      Swamp [294] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 27).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      pepesilvia: Battlefield: Plains [290], Thinking Cap [291]
+      gian31: Battlefield: Swamp [294]
+
+Turn 3
+  - Perimeter Enforcer [valid_resolution_no_immediate_mutation, seq=47] (active=pepesilvia, phase=Phase_Main1, controller=pepesilvia, owner=pepesilvia, source_object=297)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Perimeter Enforcer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Perimeter Enforcer (object 297) Hand (pepesilvia) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Perimeter Enforcer (object 297) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Lonely Arroyo [295] Library (pepesilvia) -> Hand (pepesilvia) (Draw; GRE sequence 41).
+      Plains [296] Hand (pepesilvia) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      pepesilvia: Battlefield: Perimeter Enforcer [297], Plains [290], Plains [296], Thinking Cap [291]
+      gian31: Battlefield: Swamp [294]
+
+Turn 4
+  - Rot-Curse Rakshasa [valid_resolution_no_immediate_mutation, seq=67] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=302)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Rot-Curse Rakshasa resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Rot-Curse Rakshasa (object 302) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Rot-Curse Rakshasa (object 302) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [300] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 61).
+      Swamp [301] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 64).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      pepesilvia: Battlefield: Perimeter Enforcer [297], Plains [290], Plains [296], Thinking Cap [291]
+      gian31: Battlefield: Rot-Curse Rakshasa [302], Swamp [294], Swamp [301]
+
+Turn 5
+  - Magnifying Glass [valid_resolution_no_immediate_mutation, seq=87] (active=pepesilvia, phase=Phase_Main1, controller=pepesilvia, owner=pepesilvia, source_object=307)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Magnifying Glass resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Magnifying Glass (object 307) Hand (pepesilvia) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Magnifying Glass (object 307) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Thinking Cap [valid_resolution_no_immediate_mutation, seq=92] (active=pepesilvia, phase=Phase_Main1, controller=pepesilvia, owner=pepesilvia, source_object=291, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Thinking Cap resolves with no immediate observed mutation.
+  Combat snapshots observed (active=pepesilvia; frames: DeclareAttack -> DeclareBlock):
+      attackers: Perimeter Enforcer [297] (unblocked, observed P/T 2/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2; pepesilvia +2 (individual changes below; gains and losses may offset)
+    life (combat-related snapshot; exact source unavailable): pepesilvia 20 -> 22
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Island [305] Library (pepesilvia) -> Hand (pepesilvia) (Draw; GRE sequence 81).
+      Island [306] Hand (pepesilvia) -> Battlefield (PlayLand; GRE sequence 84).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      pepesilvia: Battlefield: Island [306], Magnifying Glass [307], Perimeter Enforcer [297], Plains [290], Plains [296], Thinking Cap [291]
+      gian31: Battlefield: Rot-Curse Rakshasa [302], Swamp [294], Swamp [301]
+
+Turn 6
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=118] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=315)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 315) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 315) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Sinister Monolith [313] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 112).
+      Plains [314] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 115).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      pepesilvia: Battlefield: Island [306], Magnifying Glass [307], Perimeter Enforcer [297], Plains [290], Plains [296], Thinking Cap [291]
+      gian31: Battlefield: Marauding Blight-Priest [315], Plains [314], Rot-Curse Rakshasa [302], Swamp [294], Swamp [301]
+
+Turn 7
+  - Novice Inspector [valid_resolution_no_immediate_mutation, seq=138] (active=pepesilvia, phase=Phase_Main1, controller=pepesilvia, owner=pepesilvia, source_object=320)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Novice Inspector resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Novice Inspector (object 320) Hand (pepesilvia) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Novice Inspector (object 320) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Perimeter Enforcer [observed_semantic_effect, seq=141] (active=pepesilvia, phase=Phase_Main1, controller=pepesilvia, owner=pepesilvia, source_object=297, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1
+      narrative: Ability of Perimeter Enforcer: Perimeter Enforcer gets +1/+1.
+  - Ability of Novice Inspector [observed_semantic_effect, seq=143] (active=pepesilvia, phase=Phase_Main1, controller=pepesilvia, owner=pepesilvia, source_object=320, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Novice Inspector: a token is created.
+      explicit effect object references: Clue [324] (role/targeting only where the protocol identifies it)
+      token created: Clue (object 324, controller=pepesilvia)
+  - Ability of Clue [observed_semantic_effect, seq=146] (active=pepesilvia, phase=Phase_Main1, controller=pepesilvia, owner=pepesilvia, source_object=324, source_last_explicit_zone=Graveyard (pepesilvia))
+      effects: draw
+      narrative: Ability of Clue: draw.
+      explicit effect object references: object 180 [180], object 329 [329] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Plains (object 329) Library (pepesilvia) -> Hand (pepesilvia) (Draw; shared object ID)
+  - Ability of Lonely Arroyo [observed_semantic_effect, seq=151] (active=pepesilvia, phase=Phase_Main1, controller=pepesilvia, owner=pepesilvia, source_object=330, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Lonely Arroyo: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: object 2 [2] (role/targeting only where the protocol identifies it)
+  - Ability of Thinking Cap [valid_resolution_no_immediate_mutation, seq=170] (active=pepesilvia, phase=Phase_Main2, controller=pepesilvia, owner=pepesilvia, source_object=291, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Thinking Cap resolves with no immediate observed mutation.
+  Combat snapshots observed (active=pepesilvia; frames: DeclareAttack -> DeclareBlock):
+      attackers: Perimeter Enforcer [297] (unblocked, observed P/T 3/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -4; pepesilvia +3 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Lonely Arroyo; direct protocol link unavailable): gian31 18 -> 17
+    life (combat-related snapshot; exact source unavailable): pepesilvia 22 -> 25
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 17 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Novice Inspector [319] Library (pepesilvia) -> Hand (pepesilvia) (Draw; GRE sequence 133).
+      Clue [328] Battlefield -> Graveyard (pepesilvia) (Sacrifice; GRE sequence 144).
+      Lonely Arroyo [330] Hand (pepesilvia) -> Battlefield (PlayLand; GRE sequence 147).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      pepesilvia: Battlefield: Island [306], Lonely Arroyo [330], Magnifying Glass [307], Novice Inspector [320], Perimeter Enforcer [297], Plains [290], Plains [296], Thinking Cap [291]
+      gian31: Battlefield: Marauding Blight-Priest [315], Plains [314], Rot-Curse Rakshasa [302], Swamp [294], Swamp [301]
+      unknown: Graveyard: object 328 [328]
+
+Turn 8
+  - Sinister Monolith [valid_resolution_no_immediate_mutation, seq=182] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=336)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sinister Monolith resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sinister Monolith (object 336) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sinister Monolith (object 336) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Sinister Monolith [observed_semantic_effect, seq=186] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1, life +1
+      narrative: Ability of Sinister Monolith: pepesilvia loses 1 life; gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=188] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+    net observed life change this turn: gian31 +1; pepesilvia -2 (individual changes below; gains and losses may offset)
+    life: pepesilvia 25 -> 24
+    life: gian31 14 -> 15
+    life: pepesilvia 24 -> 23
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodthirsty Conqueror [334] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 176).
+      Swamp [335] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 179).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      pepesilvia: Battlefield: Island [306], Lonely Arroyo [330], Magnifying Glass [307], Novice Inspector [320], Perimeter Enforcer [297], Plains [290], Plains [296], Thinking Cap [291]
+      gian31: Battlefield: Marauding Blight-Priest [315], Plains [314], Rot-Curse Rakshasa [302], Sinister Monolith [336], Swamp [294], Swamp [301], Swamp [335]
+      unknown: Graveyard: object 328 [328]
+
+Turn 9
+  - Agency Outfitter [valid_resolution_no_immediate_mutation, seq=207] (active=pepesilvia, phase=Phase_Main1, controller=pepesilvia, owner=pepesilvia, source_object=345)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Agency Outfitter resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Agency Outfitter (object 345) Hand (pepesilvia) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Agency Outfitter (object 345) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Perimeter Enforcer [observed_semantic_effect, seq=210] (active=pepesilvia, phase=Phase_Main1, controller=pepesilvia, owner=pepesilvia, source_object=297, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1
+      narrative: Ability of Perimeter Enforcer: Perimeter Enforcer gets +1/+1.
+  - Ability of Thinking Cap [valid_resolution_no_immediate_mutation, seq=221] (active=pepesilvia, phase=Phase_Main1, controller=pepesilvia, owner=pepesilvia, source_object=354, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Thinking Cap resolves with no immediate observed mutation.
+  Combat snapshots observed (active=pepesilvia; frames: DeclareAttack -> DeclareBlock):
+      attackers: Perimeter Enforcer [297] (unblocked, observed P/T 3/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -3; pepesilvia +3 (individual changes below; gains and losses may offset)
+    life (combat-related snapshot; exact source unavailable): pepesilvia 23 -> 26
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 15 -> 12
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 343 [343] Library (pepesilvia) -> Hand (pepesilvia) (Draw; GRE sequence 201).
+      Plains [344] Hand (pepesilvia) -> Battlefield (PlayLand; GRE sequence 204).
+      Magnifying Glass [355] Library (pepesilvia) -> Battlefield (Put; GRE sequence 214).
+      Thinking Cap [354] Library (pepesilvia) -> Battlefield (Put; GRE sequence 214).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      pepesilvia: Battlefield: Agency Outfitter [345], Island [306], Lonely Arroyo [330], Magnifying Glass [307], Magnifying Glass [355], Novice Inspector [320], Perimeter Enforcer [297], Plains [290], Plains [296], Plains [344], Thinking Cap [291], Thinking Cap [354]
+      gian31: Battlefield: Marauding Blight-Priest [315], Plains [314], Rot-Curse Rakshasa [302], Sinister Monolith [336], Swamp [294], Swamp [301], Swamp [335]
+      unknown: Graveyard: object 328 [328]
+
+Turn 10
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation, seq=247] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=406)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 406) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 406) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Sinister Monolith [observed_semantic_effect, seq=251] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1, life +1
+      narrative: Ability of Sinister Monolith: pepesilvia loses 1 life; gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=254] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=256] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=258] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=260] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=262] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=264] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=266] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=268] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=270] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=272] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=274] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=276] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=278] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=280] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=282] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=284] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=286] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=288] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=290] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=292] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=294] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=296] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=298] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=300] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=302] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=304] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=306] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=308] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=310] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=312] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=314] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=316] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=318] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=320] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=322] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=324] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=326] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=328] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=330] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=332] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=334] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=336] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=338] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=340] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=342] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=344] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=346] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=348] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=350] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+    net observed life change this turn: gian31 +25; pepesilvia -25 (individual changes below; gains and losses may offset)
+    life: pepesilvia 26 -> 25
+    life: gian31 12 -> 13
+    life: pepesilvia 25 -> 24
+    life: gian31 13 -> 14
+    life: pepesilvia 24 -> 23
+    life: gian31 14 -> 15
+    life: pepesilvia 23 -> 22
+    life: gian31 15 -> 16
+    life: pepesilvia 22 -> 21
+    life: gian31 16 -> 17
+    life: pepesilvia 21 -> 20
+    life: gian31 17 -> 18
+    life: pepesilvia 20 -> 19
+    life: gian31 18 -> 19
+    life: pepesilvia 19 -> 18
+    life: gian31 19 -> 20
+    life: pepesilvia 18 -> 17
+    life: gian31 20 -> 21
+    life: pepesilvia 17 -> 16
+    life: gian31 21 -> 22
+    life: pepesilvia 16 -> 15
+    life: gian31 22 -> 23
+    life: pepesilvia 15 -> 14
+    life: gian31 23 -> 24
+    life: pepesilvia 14 -> 13
+    life: gian31 24 -> 25
+    life: pepesilvia 13 -> 12
+    life: gian31 25 -> 26
+    life: pepesilvia 12 -> 11
+    life: gian31 26 -> 27
+    life: pepesilvia 11 -> 10
+    life: gian31 27 -> 28
+    life: pepesilvia 10 -> 9
+    life: gian31 28 -> 29
+    life: pepesilvia 9 -> 8
+    life: gian31 29 -> 30
+    life: pepesilvia 8 -> 7
+    life: gian31 30 -> 31
+    life: pepesilvia 7 -> 6
+    life: gian31 31 -> 32
+    life: pepesilvia 6 -> 5
+    life: gian31 32 -> 33
+    life: pepesilvia 5 -> 4
+    life: gian31 33 -> 34
+    life: pepesilvia 4 -> 3
+    life: gian31 34 -> 35
+    life: pepesilvia 3 -> 2
+    life: gian31 35 -> 36
+    life: pepesilvia 2 -> 1
+    life: gian31 36 -> 37
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [404] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 241).
+      Swamp [405] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 244).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      pepesilvia: Battlefield: Agency Outfitter [345], Island [306], Lonely Arroyo [330], Magnifying Glass [307], Magnifying Glass [355], Novice Inspector [320], Perimeter Enforcer [297], Plains [290], Plains [296], Plains [344], Thinking Cap [291], Thinking Cap [354]
+      gian31: Battlefield: Bloodthirsty Conqueror [406], Marauding Blight-Priest [315], Plains [314], Rot-Curse Rakshasa [302], Sinister Monolith [336], Swamp [294], Swamp [301], Swamp [335], Swamp [405]
+      unknown: Graveyard: object 328 [328]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+- Turn 5, seq 102, Phase_Main1: pepesilvia 20 -> 22; gian31 20 -> 18. Combat declaration observed; exact assignment unavailable. Previous captured action: Thinking Cap.
+- Turn 7, seq 151, Phase_Main1: gian31 18 -> 17; pepesilvia 22 -> 25; gian31 17 -> 14. Semantic attribution: Lonely Arroyo; direct protocol link unavailable. Previous captured action: Lonely Arroyo.
+- Turn 9, seq 231, Phase_Main1: pepesilvia 23 -> 26; gian31 15 -> 12. Combat declaration observed; exact assignment unavailable. Previous captured action: Thinking Cap.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 1 token creations observed; 0 active as last observed; 1 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Clue [324] controller=pepesilvia; created Turn 7 (unknown); left battlefield Turn 7 via Battlefield -> Graveyard (pepesilvia) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Plains [owner=pepesilvia, controller=pepesilvia] moves Hand (pepesilvia) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Thinking Cap [owner=pepesilvia, controller=pepesilvia] moves Hand (pepesilvia) -> Stack (CastSpell).
+- Turn 1, seq 10: Thinking Cap [owner=pepesilvia, controller=pepesilvia] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 24: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 27: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 41: Lonely Arroyo [owner/controller metadata unavailable] moves Library (pepesilvia) -> Hand (pepesilvia) (Draw).
+- Turn 3, seq 44: Plains [owner=pepesilvia, controller=pepesilvia] moves Hand (pepesilvia) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Perimeter Enforcer [owner=pepesilvia, controller=pepesilvia] moves Hand (pepesilvia) -> Stack (CastSpell).
+- Turn 3, seq 47: Perimeter Enforcer [owner=pepesilvia, controller=pepesilvia] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 61: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 64: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 65: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 67: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 81: Island [owner/controller metadata unavailable] moves Library (pepesilvia) -> Hand (pepesilvia) (Draw).
+- Turn 5, seq 84: Island [owner=pepesilvia, controller=pepesilvia] moves Hand (pepesilvia) -> Battlefield (PlayLand).
+- Turn 5, seq 85: Magnifying Glass [owner=pepesilvia, controller=pepesilvia] moves Hand (pepesilvia) -> Stack (CastSpell).
+- Turn 5, seq 87: Magnifying Glass [owner=pepesilvia, controller=pepesilvia] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 112: Sinister Monolith [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 115: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 116: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 118: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 133: Novice Inspector [owner/controller metadata unavailable] moves Library (pepesilvia) -> Hand (pepesilvia) (Draw).
+- Turn 7, seq 136: Novice Inspector [owner=pepesilvia, controller=pepesilvia] moves Hand (pepesilvia) -> Stack (CastSpell).
+- Turn 7, seq 138: Novice Inspector [owner=pepesilvia, controller=pepesilvia] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 144: Clue [owner/controller metadata unavailable] moves Battlefield -> Graveyard (pepesilvia) (Sacrifice).
+- Turn 7, seq 146: Plains [owner/controller metadata unavailable] moves Library (pepesilvia) -> Hand (pepesilvia) (Draw).
+- Turn 7, seq 147: Lonely Arroyo [owner=pepesilvia, controller=pepesilvia] moves Hand (pepesilvia) -> Battlefield (PlayLand).
+- Turn 8, seq 176: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 179: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 180: Sinister Monolith [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 182: Sinister Monolith [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 201: object 343 [owner/controller metadata unavailable] moves Library (pepesilvia) -> Hand (pepesilvia) (Draw).
+- Turn 9, seq 204: Plains [owner=pepesilvia, controller=pepesilvia] moves Hand (pepesilvia) -> Battlefield (PlayLand).
+- Turn 9, seq 205: Agency Outfitter [owner=pepesilvia, controller=pepesilvia] moves Hand (pepesilvia) -> Stack (CastSpell).
+- Turn 9, seq 207: Agency Outfitter [owner=pepesilvia, controller=pepesilvia] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 214: Magnifying Glass [owner=pepesilvia, controller=pepesilvia] moves Library (pepesilvia) -> Battlefield (Put).
+- Turn 9, seq 214: Thinking Cap [owner=pepesilvia, controller=pepesilvia] moves Library (pepesilvia) -> Battlefield (Put).
+- Turn 10, seq 241: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 244: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 245: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 247: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 171 becomes object 290 [Plains].
+- Turn 1, seq 8: object 174 becomes object 291 [Thinking Cap].
+- Turn 2, seq 24: object 237 becomes object 293 [Case of the Uneaten Feast].
+- Turn 2, seq 27: object 234 becomes object 294 [Swamp].
+- Turn 3, seq 41: object 177 becomes object 295 [Lonely Arroyo].
+- Turn 3, seq 44: object 172 becomes object 296 [Plains].
+- Turn 3, seq 45: object 176 becomes object 297 [Perimeter Enforcer].
+- Turn 4, seq 61: object 238 becomes object 300 [Plains].
+- Turn 4, seq 64: object 232 becomes object 301 [Swamp].
+- Turn 4, seq 65: object 231 becomes object 302 [Rot-Curse Rakshasa].
+- Turn 5, seq 81: object 178 becomes object 305 [Island].
+- Turn 5, seq 84: object 305 becomes object 306 [Island].
+- Turn 5, seq 85: object 175 becomes object 307 [Magnifying Glass].
+- Turn 6, seq 112: object 239 becomes object 313 [Sinister Monolith].
+- Turn 6, seq 115: object 300 becomes object 314 [Plains].
+- Turn 6, seq 116: object 233 becomes object 315 [Marauding Blight-Priest].
+- Turn 7, seq 133: object 179 becomes object 319 [Novice Inspector].
+- Turn 7, seq 136: object 319 becomes object 320 [Novice Inspector].
+- Turn 7, seq 144: object 324 becomes object 328 [Clue].
+- Turn 7, seq 146: object 180 becomes object 329 [Plains].
+- Turn 7, seq 147: object 295 becomes object 330 [Lonely Arroyo].
+- Turn 8, seq 176: object 240 becomes object 334 [Bloodthirsty Conqueror].
+- Turn 8, seq 179: object 235 becomes object 335 [Swamp].
+- Turn 8, seq 180: object 236 becomes object 336 [Sinister Monolith].
+- Turn 9, seq 201: object 181 becomes object 343 [object 181].
+- Turn 9, seq 204: object 329 becomes object 344 [Plains].
+- Turn 9, seq 205: object 170 becomes object 345 [Agency Outfitter].
+- Turn 9, seq 214: object 220 becomes object 355 [Magnifying Glass].
+- Turn 9, seq 214: object 202 becomes object 354 [Thinking Cap].
+- Turn 10, seq 241: object 241 becomes object 404 [Swamp].
+- Turn 10, seq 244: object 404 becomes object 405 [Swamp].
+- Turn 10, seq 245: object 334 becomes object 406 [Bloodthirsty Conqueror].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: pepesilvia plays Plains (object 290) from Hand (pepesilvia) to Battlefield.
+- Turn 2: gian31 plays Swamp (object 294) from Hand (gian31) to Battlefield.
+- Turn 3: pepesilvia plays Plains (object 296) from Hand (pepesilvia) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 301) from Hand (gian31) to Battlefield.
+- Turn 5: pepesilvia plays Island (object 306) from Hand (pepesilvia) to Battlefield.
+- Turn 6: gian31 plays Plains (object 314) from Hand (gian31) to Battlefield.
+- Turn 7: pepesilvia plays Lonely Arroyo (object 330) from Hand (pepesilvia) to Battlefield.
+- Turn 8: gian31 plays Swamp (object 335) from Hand (gian31) to Battlefield.
+- Turn 9: pepesilvia plays Plains (object 344) from Hand (pepesilvia) to Battlefield.
+- Turn 10: gian31 plays Swamp (object 405) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- Turn 10: Marauding Blight-Priest -> Bloodthirsty Conqueror; observed repeated transitions=24; net life: gian31 +24, pepesilvia -24.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED TRIGGER CYCLES
+------------------------------------------------------------
+- Turn 10: Marauding Blight-Priest â†” Bloodthirsty Conqueror; observed repetitions=24 (cycle length 2).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Marauding Blight-Priest: casts=1; abilities=26 (triggered=26, activated=0) across turns [6, 8, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=26, other=0
+  observed effects: life -1
+- Bloodthirsty Conqueror: casts=1; abilities=24 (triggered=24, activated=0) across turns [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=24, other=0
+  observed effects: life +1
+- Thinking Cap: casts=1; abilities=3 (triggered=3, activated=0) across turns [1, 5, 7, 9]
+- Perimeter Enforcer: casts=1; abilities=2 (triggered=2, activated=0) across turns [3, 7, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: P/T +1/+1
+- Sinister Monolith: casts=1; abilities=2 (triggered=2, activated=0) across turns [8, 8, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=4, other=2
+  observed effects: life +1, life -1, synthetic event
+- Novice Inspector: casts=1; abilities=1 (triggered=1, activated=0) across turns [7, 7]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Agency Outfitter: casts=1 across turns [9]
+- Clue: abilities=1 (triggered=1, activated=0) across turns [7]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Lonely Arroyo: abilities=1 (triggered=1, activated=0) across turns [7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=1, other=1
+  observed effects: 1 damage, life -1, synthetic event
+- Magnifying Glass: casts=1 across turns [5]
+- Rot-Curse Rakshasa: casts=1 across turns [4]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 - DeclareAttack, DeclareBlock (active=pepesilvia)
+  attacker: Perimeter Enforcer (pepesilvia) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=pepesilvia)
+  attacker: Perimeter Enforcer (pepesilvia) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=pepesilvia)
+  attacker: Perimeter Enforcer (pepesilvia) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 8: Ability of Sinister Monolith (active=gian31) - Ability of Sinister Monolith: pepesilvia loses 1 life; gian31 gains 1 life.
+- Turn 8: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Sinister Monolith (active=gian31) - Ability of Sinister Monolith: pepesilvia loses 1 life; gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: pepesilvia loses 1 life.
+
+TECHNICAL APPENDIX â€” OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 230: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 231: Rot-Curse Rakshasa | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 232: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 233: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 234: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 235: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 236: Sinister Monolith | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 290: Plains | controller=pepesilvia | owner=pepesilvia | zone=Battlefield (latest_object_observation)
+- 291: Thinking Cap | controller=pepesilvia | owner=pepesilvia | zone=Stack (latest_object_observation)
+- 293: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 294: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 296: Plains | controller=pepesilvia | owner=pepesilvia | zone=Battlefield (latest_object_observation)
+- 297: Perimeter Enforcer | controller=pepesilvia | owner=pepesilvia | zone=Battlefield (latest_object_observation)
+- 300: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 301: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 302: Rot-Curse Rakshasa | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 306: Island | controller=pepesilvia | owner=pepesilvia | zone=Battlefield (latest_object_observation)
+- 307: Magnifying Glass | controller=pepesilvia | owner=pepesilvia | zone=Stack (latest_object_observation)
+- 311: object 311 | controller=pepesilvia | owner=pepesilvia | zone=unknown (inferred unknown) (latest_object_observation)
+- 313: Sinister Monolith | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 314: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 315: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 320: Novice Inspector | controller=pepesilvia | owner=pepesilvia | zone=Battlefield (latest_object_observation)
+- 322: Rip the Seams | controller=pepesilvia | owner=pepesilvia | zone=unknown (inferred unknown) (latest_object_observation)
+- 323: object 323 | controller=pepesilvia | owner=pepesilvia | zone=unknown (inferred unknown) (latest_object_observation)
+- 324: Clue | controller=pepesilvia | owner=pepesilvia | zone=Hand (latest_object_observation)
+- 325: object 325 | controller=pepesilvia | owner=pepesilvia | zone=unknown (inferred unknown) (latest_object_observation)
+- 330: Lonely Arroyo | controller=pepesilvia | owner=pepesilvia | zone=Battlefield (latest_object_observation)
+- 331: object 331 | controller=pepesilvia | owner=pepesilvia | zone=unknown (inferred unknown) (latest_object_observation)
+- 332: object 332 | controller=pepesilvia | owner=pepesilvia | zone=unknown (inferred unknown) (latest_object_observation)
+- 334: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 335: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 336: Sinister Monolith | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 341: object 341 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 342: object 342 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 344: Plains | controller=pepesilvia | owner=pepesilvia | zone=Battlefield (latest_object_observation)
+- 345: Agency Outfitter | controller=pepesilvia | owner=pepesilvia | zone=Battlefield (latest_object_observation)
+- 352: object 352 | controller=pepesilvia | owner=pepesilvia | zone=unknown (inferred unknown) (latest_object_observation)
+- 353: object 353 | controller=pepesilvia | owner=pepesilvia | zone=unknown (inferred unknown) (latest_object_observation)
+- 354: Thinking Cap | controller=pepesilvia | owner=pepesilvia | zone=Battlefield (latest_object_observation)
+- 355: Magnifying Glass | controller=pepesilvia | owner=pepesilvia | zone=Battlefield (latest_object_observation)
+- 402: object 402 | controller=pepesilvia | owner=pepesilvia | zone=unknown (inferred unknown) (latest_object_observation)
+- 404: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 405: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 406: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 412: object 412 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 413: object 413 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 414: object 414 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 415: object 415 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 416: object 416 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 417: object 417 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 418: object 418 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 419: object 419 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 420: object 420 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 421: object 421 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 422: object 422 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 423: object 423 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 424: object 424 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 425: object 425 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 426: object 426 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 427: object 427 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 428: object 428 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 429: object 429 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 430: object 430 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 431: object 431 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 432: object 432 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 433: object 433 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 434: object 434 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 435: object 435 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 436: object 436 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 437: object 437 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 438: object 438 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 439: object 439 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 440: object 440 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 441: object 441 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 442: object 442 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 443: object 443 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 444: object 444 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 445: object 445 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 446: object 446 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 447: object 447 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 448: object 448 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 449: object 449 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 450: object 450 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 451: object 451 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 452: object 452 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 453: object 453 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 454: object 454 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 455: object 455 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 456: object 456 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 457: object 457 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 458: object 458 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 459: object 459 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 460: object 460 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 461: object 461 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 462: object 462 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 463: object 463 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX â€” CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 75 total items
+  zones: Battlefield=8, Hand=12, Stack=1, unknown=54
+  objects: Swamp x8, Sinister Monolith x3, Bloodthirsty Conqueror x2, Case of the Uneaten Feast x2, Marauding Blight-Priest x2, Plains x2, Rot-Curse Rakshasa x2, object 341, object 342, object 412, object 413, object 414
+pepesilvia: 22 total items
+  zones: Battlefield=10, Hand=1, Stack=2, unknown=9
+  objects: Plains x3, Magnifying Glass x2, Thinking Cap x2, Agency Outfitter, Clue, Island, Lonely Arroyo, Novice Inspector, Perimeter Enforcer, Rip the Seams, object 311, object 323
+
+TECHNICAL APPENDIX â€” LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+pepesilvia:
+  Battlefield (10): Agency Outfitter, Island, Lonely Arroyo, Magnifying Glass, Novice Inspector, Perimeter Enforcer, Plains, Plains, Plains, Thinking Cap
+  Graveyard: 0 card(s)
+gian31:
+  Battlefield (8): Bloodthirsty Conqueror, Marauding Blight-Priest, Plains, Rot-Curse Rakshasa, Swamp, Swamp, Swamp, Swamp
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+63 objects have no resolved final zone and are omitted from the known board state.
+gian31: 54 unknown object(s)
+pepesilvia: 9 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=13, Stack=3
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+gian31:
+  Battlefield (9): Swamp, Swamp, Rot-Curse Rakshasa, Plains, Marauding Blight-Priest, Swamp, Sinister Monolith, Swamp, Bloodthirsty Conqueror
+pepesilvia:
+  Battlefield (12): Plains, Thinking Cap, Plains, Perimeter Enforcer, Island, Magnifying Glass, Novice Inspector, Lonely Arroyo, Plains, Agency Outfitter, Thinking Cap, Magnifying Glass
+Known non-persistent entries (counts only):
+  gian31: Hand=3, Limbo=4, Pending=1, Stack=1
+  unknown: Hand=2, Library=94, Limbo=7
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: pepesilvia Battlefield=2
+- Turn 2: gian31 Battlefield=1; pepesilvia Battlefield=2
+- Turn 3: gian31 Battlefield=1; pepesilvia Battlefield=4
+- Turn 4: gian31 Battlefield=3; pepesilvia Battlefield=4
+- Turn 5: gian31 Battlefield=3; pepesilvia Battlefield=6
+- Turn 6: gian31 Battlefield=5; pepesilvia Battlefield=6
+- Turn 7: gian31 Battlefield=5; pepesilvia Battlefield=8; unknown Graveyard=1
+- Turn 8: gian31 Battlefield=7; pepesilvia Battlefield=8; unknown Graveyard=1
+- Turn 9: gian31 Battlefield=7; pepesilvia Battlefield=12; unknown Graveyard=1
+- Turn 10: gian31 Battlefield=9; pepesilvia Battlefield=12; unknown Graveyard=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Thinking Cap resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Perimeter Enforcer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Rot-Curse Rakshasa resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Magnifying Glass resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Novice Inspector resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Sinister Monolith resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Agency Outfitter resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
