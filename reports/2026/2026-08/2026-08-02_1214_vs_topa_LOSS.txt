@@ -1,0 +1,551 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, topa
+Seat map: Seat 1=gian31, Seat 2=topa
+Turn range (known): 1 - 11
+Records: 17
+Action chains: 16
+Winner: topa
+Final life: {'gian31': 19, 'topa': 18}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Match-result payload was observed after the last captured action: Turn 11 (Phase_Main1; Deep-Cavern Bat, seq 277); payload ordering within later uncaptured records is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 23 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 11 explicit PlayLand transfers across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]. Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 11 explicit Library -> Hand movement(s); named in the draw record=5, resolved through an explicit identity transition=6, unresolved=0.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: topa; observed final life totals: {'gian31': 19, 'topa': 18}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 11 (Phase_Main1; Deep-Cavern Bat, seq 277).
+Last captured life mutation: gian31 17 -> 19 (seq 258).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Faerie Dreamthief [valid_resolution_no_immediate_mutation, seq=10] (active=topa, phase=Phase_Main1, controller=topa, owner=topa, source_object=290)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Faerie Dreamthief resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Faerie Dreamthief (object 290) Hand (topa) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Faerie Dreamthief (object 290) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [289] Hand (topa) -> Battlefield (PlayLand; GRE sequence 7).
+      Faerie Dreamthief [293] Library (topa) -> Graveyard (topa) (Surveil; GRE sequence 13).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      topa: Battlefield: Faerie Dreamthief [290], Swamp [289]; Graveyard: Faerie Dreamthief [293]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Unholy Annex // Ritual Chamber [294] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 27).
+      Godless Shrine [297] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 31).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      topa: Battlefield: Faerie Dreamthief [290], Swamp [289]; Graveyard: Faerie Dreamthief [293]
+      gian31: Battlefield: Godless Shrine [297]
+
+Turn 3
+  - Hylderblade [valid_resolution_no_immediate_mutation, seq=52] (active=topa, phase=Phase_Main1, controller=topa, owner=topa, source_object=300)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hylderblade resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hylderblade (object 300) Hand (topa) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hylderblade (object 300) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=topa; frames: DeclareAttack -> DeclareBlock):
+      attackers: Faerie Dreamthief [290] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Gatekeeper of Malakir [298] Library (topa) -> Hand (topa) (Draw; GRE sequence 45).
+      Swamp [299] Hand (topa) -> Battlefield (PlayLand; GRE sequence 48).
+      Swamp [299] Hand (topa) -> Battlefield (PlayLand; GRE sequence 49).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      topa: Battlefield: Faerie Dreamthief [290], Hylderblade [300], Swamp [289], Swamp [299]; Graveyard: Faerie Dreamthief [293]
+      gian31: Battlefield: Godless Shrine [297]
+
+Turn 4
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=79] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=304)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 304) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 304) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Marauding Blight-Priest [302] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 72).
+      Swamp [303] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 75).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      topa: Battlefield: Faerie Dreamthief [290], Hylderblade [300], Swamp [289], Swamp [299]; Graveyard: Faerie Dreamthief [293]
+      gian31: Battlefield: Godless Shrine [297], Starscape Cleric [304], Swamp [303]
+
+Turn 5
+  - Gatekeeper of Malakir [valid_resolution_no_immediate_mutation, seq=100] (active=topa, phase=Phase_Main1, controller=topa, owner=topa, source_object=309)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Gatekeeper of Malakir resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Gatekeeper of Malakir (object 309) Hand (topa) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gatekeeper of Malakir (object 309) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hylderblade [valid_resolution_no_immediate_mutation, seq=125] (active=topa, phase=Phase_Ending, step=Step_End, controller=topa, owner=topa, source_object=300, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Hylderblade resolves with no immediate observed mutation.
+  Combat snapshots observed (active=topa; frames: DeclareAttack -> DeclareBlock):
+      attackers: Faerie Dreamthief [290] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mudflat Village [307] Library (topa) -> Hand (topa) (Draw; GRE sequence 93).
+      Mudflat Village [308] Hand (topa) -> Battlefield (PlayLand; GRE sequence 96).
+      Starscape Cleric [314] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 105).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      topa: Battlefield: Faerie Dreamthief [290], Gatekeeper of Malakir [309], Hylderblade [300], Mudflat Village [308], Swamp [289], Swamp [299]; Graveyard: Faerie Dreamthief [293]
+      gian31: Battlefield: Godless Shrine [297], Swamp [303]; Graveyard: Starscape Cleric [314]
+
+Turn 6
+  - Moment of Craving [observed_semantic_effect, seq=137] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=318)
+      effects: P/T -2/-2, life +2
+      narrative: Moment of Craving: Faerie Dreamthief gets -2/-2; gian31 gains 2 life.
+      explicit effect object references: Faerie Dreamthief [290] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Moment of Craving (object 318) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Moment of Craving (object 321) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 318 -> transfer object 321 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Faerie Dreamthief (object 322) Battlefield -> Graveyard (topa) (SBA_ZeroToughness; shared object ID)
+    net observed life change this turn: gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [316] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 129).
+      Swamp [317] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 132).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      topa: Battlefield: Gatekeeper of Malakir [309], Hylderblade [300], Mudflat Village [308], Swamp [289], Swamp [299]; Graveyard: Faerie Dreamthief [293], Faerie Dreamthief [322]
+      gian31: Battlefield: Godless Shrine [297], Swamp [303], Swamp [317]; Graveyard: Moment of Craving [321], Starscape Cleric [314]
+
+Turn 7
+  - Ability of Faerie Dreamthief [observed_semantic_effect, seq=157] (active=topa, phase=Phase_Main1, controller=topa, owner=topa, source_object=293, source_last_explicit_zone=Graveyard (topa))
+      effects: draw, life -1
+      narrative: Ability of Faerie Dreamthief: draw; topa loses 1 life.
+      explicit effect object references: object 239 [239], object 330 [330] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 330) Library (topa) -> Hand (topa) (Draw; shared object ID)
+  Combat snapshots observed (active=topa; frames: DeclareAttack -> DeclareBlock):
+      attackers: Gatekeeper of Malakir [309] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2; topa -1 (individual changes below; gains and losses may offset)
+    life: topa 20 -> 19
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [323] Library (topa) -> Hand (topa) (Draw; GRE sequence 151).
+      Swamp [324] Hand (topa) -> Battlefield (PlayLand; GRE sequence 154).
+      Faerie Dreamthief [329] Graveyard (topa) -> Exile (Exile; GRE sequence 155).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      topa: Battlefield: Gatekeeper of Malakir [309], Hylderblade [300], Mudflat Village [308], Swamp [289], Swamp [299], Swamp [324]; Graveyard: Faerie Dreamthief [322]; Exile: Faerie Dreamthief [329]
+      gian31: Battlefield: Godless Shrine [297], Swamp [303], Swamp [317]; Graveyard: Moment of Craving [321], Starscape Cleric [314]
+
+Turn 8
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=183] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=333)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 333) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 333) Stack -> Battlefield (Resolve; shared object ID)
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=186] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=335)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 335) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 335) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=188] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=333, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=190] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: topa loses 1 life.
+    net observed life change this turn: gian31 +1; topa -1 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 19
+    life: topa 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [331] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 177).
+      Swamp [332] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 180).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      topa: Battlefield: Gatekeeper of Malakir [309], Hylderblade [300], Mudflat Village [308], Swamp [289], Swamp [299], Swamp [324]; Graveyard: Faerie Dreamthief [322]; Exile: Faerie Dreamthief [329]
+      gian31: Battlefield: Case of the Uneaten Feast [333], Godless Shrine [297], Marauding Blight-Priest [335], Swamp [303], Swamp [317], Swamp [332]; Graveyard: Moment of Craving [321], Starscape Cleric [314]
+
+Turn 9
+  - Gatekeeper of Malakir [valid_resolution_no_immediate_mutation, seq=211] (active=topa, phase=Phase_Main1, controller=topa, owner=topa, source_object=343)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Gatekeeper of Malakir resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Gatekeeper of Malakir (object 343) Hand (topa) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gatekeeper of Malakir (object 343) Stack -> Battlefield (Resolve; shared object ID)
+  - Deep-Cavern Bat [valid_resolution_no_immediate_mutation, seq=219] (active=topa, phase=Phase_Main1, controller=topa, owner=topa, source_object=349)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deep-Cavern Bat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deep-Cavern Bat (object 349) Hand (topa) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 349) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hylderblade [valid_resolution_no_immediate_mutation, seq=244] (active=topa, phase=Phase_Ending, step=Step_End, controller=topa, owner=topa, source_object=300, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Hylderblade resolves with no immediate observed mutation.
+  Combat snapshots observed (active=topa; frames: DeclareAttack -> DeclareBlock):
+      attackers: Gatekeeper of Malakir [309] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 19 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [341] Library (topa) -> Hand (topa) (Draw; GRE sequence 204).
+      Swamp [342] Hand (topa) -> Battlefield (PlayLand; GRE sequence 207).
+      Marauding Blight-Priest [348] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 216).
+      Unholy Annex // Ritual Chamber [353] Hand (gian31) -> Exile (Exile; GRE sequence 224).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      topa: Battlefield: Deep-Cavern Bat [349], Gatekeeper of Malakir [309], Gatekeeper of Malakir [343], Hylderblade [300], Mudflat Village [308], Swamp [289], Swamp [299], Swamp [324], Swamp [342]; Graveyard: Faerie Dreamthief [322]; Exile: Faerie Dreamthief [329]
+      gian31: Battlefield: Case of the Uneaten Feast [333], Godless Shrine [297], Swamp [303], Swamp [317], Swamp [332]; Graveyard: Marauding Blight-Priest [348], Moment of Craving [321], Starscape Cleric [314]; Exile: Unholy Annex // Ritual Chamber [353]
+
+Turn 10
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=254] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=361)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 361) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 361) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=258] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: exile, return to battlefield, life +2
+      narrative: Ability of Makeshift Binding: exiles Deep-Cavern Bat; a card/permanent returns; gian31 gains 2 life.
+      explicit effect object references: Deep-Cavern Bat [349], Unholy Annex // Ritual Chamber [353], Deep-Cavern Bat [366], Unholy Annex // Ritual Chamber [367] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 366) Battlefield -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Unholy Annex // Ritual Chamber (object 367) Exile -> Hand (gian31) (Return; shared object ID)
+    net observed life change this turn: gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 17 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [359] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 248).
+      Swamp [360] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 251).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      topa: Battlefield: Gatekeeper of Malakir [309], Gatekeeper of Malakir [343], Hylderblade [300], Mudflat Village [308], Swamp [289], Swamp [299], Swamp [324], Swamp [342]; Graveyard: Faerie Dreamthief [322]; Exile: Deep-Cavern Bat [366], Faerie Dreamthief [329]
+      gian31: Battlefield: Case of the Uneaten Feast [333], Godless Shrine [297], Makeshift Binding [361], Swamp [303], Swamp [317], Swamp [332], Swamp [360]; Graveyard: Marauding Blight-Priest [348], Moment of Craving [321], Starscape Cleric [314]
+
+Turn 11
+  - Deep-Cavern Bat [valid_resolution_no_immediate_mutation, seq=277] (active=topa, phase=Phase_Main1, controller=topa, owner=topa, source_object=372)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deep-Cavern Bat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deep-Cavern Bat (object 372) Hand (topa) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 372) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Deep-Cavern Bat [371] Library (topa) -> Hand (topa) (Draw; GRE sequence 272).
+      Unholy Annex // Ritual Chamber [376] Hand (gian31) -> Exile (Exile; GRE sequence 282).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      topa: Battlefield: Deep-Cavern Bat [372], Gatekeeper of Malakir [309], Gatekeeper of Malakir [343], Hylderblade [300], Mudflat Village [308], Swamp [289], Swamp [299], Swamp [324], Swamp [342]; Graveyard: Faerie Dreamthief [322]; Exile: Deep-Cavern Bat [366], Faerie Dreamthief [329]
+      gian31: Battlefield: Case of the Uneaten Feast [333], Godless Shrine [297], Makeshift Binding [361], Swamp [303], Swamp [317], Swamp [332], Swamp [360]; Graveyard: Marauding Blight-Priest [348], Moment of Craving [321], Starscape Cleric [314]; Exile: Unholy Annex // Ritual Chamber [376]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+- Turn 3, seq 62, Phase_Main1: gian31 20 -> 19. Combat declaration observed; exact assignment unavailable. Previous captured action: Hylderblade.
+- Turn 5, seq 115, Phase_Main1: gian31 19 -> 18. Combat declaration observed; exact assignment unavailable. Previous captured action: Gatekeeper of Malakir.
+- Turn 7, seq 167, Phase_Main1: gian31 20 -> 18. Combat declaration observed; exact assignment unavailable. Previous captured action: Faerie Dreamthief.
+- Turn 9, seq 234, Phase_Main1: gian31 19 -> 17. Combat declaration observed; exact assignment unavailable. Previous captured action: Deep-Cavern Bat.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Swamp [owner=topa, controller=topa] moves Hand (topa) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Faerie Dreamthief [owner=topa, controller=topa] moves Hand (topa) -> Stack (CastSpell).
+- Turn 1, seq 10: Faerie Dreamthief [owner=topa, controller=topa] moves Stack -> Battlefield (Resolve).
+- Turn 1, seq 13: Faerie Dreamthief [owner=topa, controller=topa] moves Library (topa) -> Graveyard (topa) (Surveil).
+- Turn 2, seq 27: Unholy Annex // Ritual Chamber [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 31: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Gatekeeper of Malakir [owner/controller metadata unavailable] moves Library (topa) -> Hand (topa) (Draw).
+- Turn 3, seq 48: Swamp [owner=topa, controller=topa] moves Hand (topa) -> Battlefield (PlayLand).
+- Turn 3, seq 49: Swamp [owner=topa, controller=topa] moves Hand (topa) -> Battlefield (PlayLand).
+- Turn 3, seq 50: Hylderblade [owner=topa, controller=topa] moves Hand (topa) -> Stack (CastSpell).
+- Turn 3, seq 52: Hylderblade [owner=topa, controller=topa] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 72: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 75: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 76: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 79: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 93: Mudflat Village [owner/controller metadata unavailable] moves Library (topa) -> Hand (topa) (Draw).
+- Turn 5, seq 96: Mudflat Village [owner=topa, controller=topa] moves Hand (topa) -> Battlefield (PlayLand).
+- Turn 5, seq 97: Gatekeeper of Malakir [owner=topa, controller=topa] moves Hand (topa) -> Stack (CastSpell).
+- Turn 5, seq 100: Gatekeeper of Malakir [owner=topa, controller=topa] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 105: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 6, seq 129: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 132: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 133: Moment of Craving [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 137: Moment of Craving [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 6, seq 137: Faerie Dreamthief [owner=topa, controller=topa] moves Battlefield -> Graveyard (topa) (SBA_ZeroToughness).
+- Turn 7, seq 151: Swamp [owner/controller metadata unavailable] moves Library (topa) -> Hand (topa) (Draw).
+- Turn 7, seq 154: Swamp [owner=topa, controller=topa] moves Hand (topa) -> Battlefield (PlayLand).
+- Turn 7, seq 155: Faerie Dreamthief [owner=topa, controller=topa] moves Graveyard (topa) -> Exile (Exile).
+- Turn 7, seq 157: Deep-Cavern Bat [owner/controller metadata unavailable] moves Library (topa) -> Hand (topa) (Draw).
+- Turn 8, seq 177: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 180: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 181: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 183: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 184: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 186: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 204: Swamp [owner/controller metadata unavailable] moves Library (topa) -> Hand (topa) (Draw).
+- Turn 9, seq 207: Swamp [owner=topa, controller=topa] moves Hand (topa) -> Battlefield (PlayLand).
+- Turn 9, seq 208: Gatekeeper of Malakir [owner=topa, controller=topa] moves Hand (topa) -> Stack (CastSpell).
+- Turn 9, seq 211: Gatekeeper of Malakir [owner=topa, controller=topa] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 216: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 9, seq 217: Deep-Cavern Bat [owner=topa, controller=topa] moves Hand (topa) -> Stack (CastSpell).
+- Turn 9, seq 219: Deep-Cavern Bat [owner=topa, controller=topa] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 224: Unholy Annex // Ritual Chamber [owner=gian31, controller=gian31] moves Hand (gian31) -> Exile (Exile).
+- Turn 10, seq 248: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 251: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 252: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 254: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 258: Deep-Cavern Bat [owner=topa, controller=topa] moves Battlefield -> Exile (Exile).
+- Turn 10, seq 258: Unholy Annex // Ritual Chamber [owner=gian31, controller=gian31] moves Exile -> Hand (gian31) (Return).
+- Turn 11, seq 272: Deep-Cavern Bat [owner/controller metadata unavailable] moves Library (topa) -> Hand (topa) (Draw).
+- Turn 11, seq 275: Deep-Cavern Bat [owner=topa, controller=topa] moves Hand (topa) -> Stack (CastSpell).
+- Turn 11, seq 277: Deep-Cavern Bat [owner=topa, controller=topa] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 282: Unholy Annex // Ritual Chamber [owner=gian31, controller=gian31] moves Hand (gian31) -> Exile (Exile).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 228 becomes object 289 [Swamp].
+- Turn 1, seq 8: object 234 becomes object 290 [Faerie Dreamthief].
+- Turn 1, seq 13: object 235 becomes object 293 [Faerie Dreamthief].
+- Turn 2, seq 27: object 175 becomes object 294 [Unholy Annex // Ritual Chamber].
+- Turn 2, seq 31: object 169 becomes object 297 [Godless Shrine].
+- Turn 3, seq 45: object 236 becomes object 298 [Gatekeeper of Malakir].
+- Turn 3, seq 48: object 229 becomes object 299 [Swamp].
+- Turn 3, seq 49: object 229 becomes object 299 [Swamp].
+- Turn 3, seq 50: object 230 becomes object 300 [Hylderblade].
+- Turn 4, seq 72: object 176 becomes object 302 [Marauding Blight-Priest].
+- Turn 4, seq 75: object 168 becomes object 303 [Swamp].
+- Turn 4, seq 76: object 172 becomes object 304 [Starscape Cleric].
+- Turn 5, seq 93: object 237 becomes object 307 [Mudflat Village].
+- Turn 5, seq 96: object 307 becomes object 308 [Mudflat Village].
+- Turn 5, seq 97: object 298 becomes object 309 [Gatekeeper of Malakir].
+- Turn 5, seq 105: object 304 becomes object 314 [Starscape Cleric].
+- Turn 6, seq 129: object 177 becomes object 316 [Swamp].
+- Turn 6, seq 132: object 316 becomes object 317 [Swamp].
+- Turn 6, seq 133: object 173 becomes object 318 [Moment of Craving].
+- Turn 6, seq 137: object 318 becomes object 321 [Moment of Craving].
+- Turn 6, seq 137: object 290 becomes object 322 [Faerie Dreamthief].
+- Turn 7, seq 151: object 238 becomes object 323 [Swamp].
+- Turn 7, seq 154: object 323 becomes object 324 [Swamp].
+- Turn 7, seq 155: object 293 becomes object 329 [Faerie Dreamthief].
+- Turn 7, seq 157: object 239 becomes object 330 [Deep-Cavern Bat].
+- Turn 8, seq 177: object 178 becomes object 331 [Case of the Uneaten Feast].
+- Turn 8, seq 180: object 171 becomes object 332 [Swamp].
+- Turn 8, seq 181: object 331 becomes object 333 [Case of the Uneaten Feast].
+- Turn 8, seq 184: object 302 becomes object 335 [Marauding Blight-Priest].
+- Turn 9, seq 204: object 240 becomes object 341 [Swamp].
+- Turn 9, seq 207: object 341 becomes object 342 [Swamp].
+- Turn 9, seq 208: object 232 becomes object 343 [Gatekeeper of Malakir].
+- Turn 9, seq 216: object 335 becomes object 348 [Marauding Blight-Priest].
+- Turn 9, seq 217: object 330 becomes object 349 [Deep-Cavern Bat].
+- Turn 9, seq 224: object 294 becomes object 353 [Unholy Annex // Ritual Chamber].
+- Turn 10, seq 248: object 179 becomes object 359 [Swamp].
+- Turn 10, seq 251: object 359 becomes object 360 [Swamp].
+- Turn 10, seq 252: object 170 becomes object 361 [Makeshift Binding].
+- Turn 10, seq 258: object 349 becomes object 366 [Deep-Cavern Bat].
+- Turn 10, seq 258: object 353 becomes object 367 [Unholy Annex // Ritual Chamber].
+- Turn 11, seq 272: object 241 becomes object 371 [Deep-Cavern Bat].
+- Turn 11, seq 275: object 371 becomes object 372 [Deep-Cavern Bat].
+- Turn 11, seq 282: object 367 becomes object 376 [Unholy Annex // Ritual Chamber].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: topa plays Swamp (object 289) from Hand (topa) to Battlefield.
+- Turn 2: gian31 plays Godless Shrine (object 297) from Hand (gian31) to Battlefield.
+- Turn 3: topa plays Swamp (object 299) from Hand (topa) to Battlefield.
+- Turn 3: topa plays Swamp (object 299) from Hand (topa) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 303) from Hand (gian31) to Battlefield.
+- Turn 5: topa plays Mudflat Village (object 308) from Hand (topa) to Battlefield.
+- Turn 6: gian31 plays Swamp (object 317) from Hand (gian31) to Battlefield.
+- Turn 7: topa plays Swamp (object 324) from Hand (topa) to Battlefield.
+- Turn 8: gian31 plays Swamp (object 332) from Hand (gian31) to Battlefield.
+- Turn 9: topa plays Swamp (object 342) from Hand (topa) to Battlefield.
+- Turn 10: gian31 plays Swamp (object 360) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED TRIGGER CYCLES
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Hylderblade: casts=1; abilities=2 (triggered=2, activated=0) across turns [3, 5, 9]
+- Case of the Uneaten Feast: casts=1; abilities=1 (triggered=1, activated=0) across turns [8, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Deep-Cavern Bat: casts=2 across turns [9, 11]
+- Faerie Dreamthief: casts=1; abilities=1 (triggered=1, activated=0) across turns [1, 7]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: draw, life -1, synthetic event
+- Gatekeeper of Malakir: casts=2 across turns [5, 9]
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=1, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2, return to battlefield
+- Marauding Blight-Priest: casts=1; abilities=1 (triggered=1, activated=0) across turns [8, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: life -1, synthetic event
+- Moment of Craving: casts=1 across turns [6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: P/T -2/-2, life +2
+- Starscape Cleric: casts=1 across turns [4]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 3 - DeclareAttack, DeclareBlock (active=topa)
+  attacker: Faerie Dreamthief (topa) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 5 - DeclareAttack, DeclareBlock (active=topa)
+  attacker: Faerie Dreamthief (topa) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=topa)
+  attacker: Gatekeeper of Malakir (topa) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=topa)
+  attacker: Gatekeeper of Malakir (topa) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX â€” OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 168: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 169: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 170: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 171: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 172: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 173: Moment of Craving | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 174: Swamp | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 289: Swamp | controller=topa | owner=topa | zone=Battlefield (latest_object_observation)
+- 290: Faerie Dreamthief | controller=topa | owner=topa | zone=Battlefield (latest_object_observation)
+- 292: object 292 | controller=topa | owner=topa | zone=unknown (inferred unknown) (latest_object_observation)
+- 293: Faerie Dreamthief | controller=topa | owner=topa | zone=Battlefield (latest_object_observation)
+- 294: Unholy Annex // Ritual Chamber | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 295: Unholy Annex | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 296: Ritual Chamber | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 297: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 299: Swamp | controller=topa | owner=topa | zone=Battlefield (latest_object_observation)
+- 300: Hylderblade | controller=topa | owner=topa | zone=Stack (latest_object_observation)
+- 302: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 303: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 304: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 308: Mudflat Village | controller=topa | owner=topa | zone=Battlefield (latest_object_observation)
+- 309: Gatekeeper of Malakir | controller=topa | owner=topa | zone=Battlefield (latest_object_observation)
+- 313: Plow Through | controller=topa | owner=topa | zone=unknown (inferred unknown) (latest_object_observation)
+- 314: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 315: object 315 | controller=topa | owner=topa | zone=unknown (inferred unknown) (latest_object_observation)
+- 316: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 317: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 318: Moment of Craving | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 321: Moment of Craving | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 322: Faerie Dreamthief | controller=topa | owner=topa | zone=Graveyard (latest_object_observation)
+- 324: Swamp | controller=topa | owner=topa | zone=Battlefield (latest_object_observation)
+- 325: object 325 | controller=topa | owner=topa | zone=unknown (inferred unknown) (latest_object_observation)
+- 329: Faerie Dreamthief | controller=topa | owner=topa | zone=Exile (latest_object_observation)
+- 331: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 332: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 333: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 335: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 339: object 339 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 340: object 340 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 342: Swamp | controller=topa | owner=topa | zone=Battlefield (latest_object_observation)
+- 343: Gatekeeper of Malakir | controller=topa | owner=topa | zone=Battlefield (latest_object_observation)
+- 347: Plow Through | controller=topa | owner=topa | zone=unknown (inferred unknown) (latest_object_observation)
+- 348: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 349: Deep-Cavern Bat | controller=topa | owner=topa | zone=Battlefield (latest_object_observation)
+- 352: object 352 | controller=topa | owner=topa | zone=unknown (inferred unknown) (latest_object_observation)
+- 353: Unholy Annex // Ritual Chamber | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 354: Unholy Annex | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 355: Ritual Chamber | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 358: object 358 | controller=topa | owner=topa | zone=unknown (inferred unknown) (latest_object_observation)
+- 359: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 360: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 361: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 365: object 365 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 366: Deep-Cavern Bat | controller=topa | owner=topa | zone=Exile (latest_object_observation)
+- 367: Unholy Annex // Ritual Chamber | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 368: Unholy Annex | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 369: Ritual Chamber | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 370: Unholy Annex // Ritual Chamber | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 372: Deep-Cavern Bat | controller=topa | owner=topa | zone=Battlefield (latest_object_observation)
+- 375: object 375 | controller=topa | owner=topa | zone=unknown (inferred unknown) (latest_object_observation)
+- 376: Unholy Annex // Ritual Chamber | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 377: Unholy Annex | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 378: Ritual Chamber | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+
+TECHNICAL APPENDIX â€” CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 40 total items
+  zones: Battlefield=14, Exile=6, Graveyard=3, Hand=5, Stack=3, unknown=9
+  objects: Swamp x9, Unholy Annex // Ritual Chamber x5, Ritual Chamber x4, Unholy Annex x4, Marauding Blight-Priest x3, Moment of Craving x3, Starscape Cleric x3, Case of the Uneaten Feast x2, Godless Shrine x2, Makeshift Binding x2, object 339, object 340
+topa: 23 total items
+  zones: Battlefield=11, Exile=2, Graveyard=1, Stack=1, unknown=8
+  objects: Faerie Dreamthief x4, Swamp x4, Deep-Cavern Bat x3, Gatekeeper of Malakir x2, Plow Through x2, Hylderblade, Mudflat Village, object 292, object 315, object 325, object 352, object 358
+
+TECHNICAL APPENDIX â€” LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (14): Godless Shrine, Godless Shrine, Makeshift Binding, Marauding Blight-Priest, Moment of Craving, Starscape Cleric, Starscape Cleric, Swamp, Swamp, Swamp, Swamp, Swamp, Swamp, Unholy Annex // Ritual Chamber
+  Graveyard: 3 card(s)
+topa:
+  Battlefield (11): Deep-Cavern Bat, Deep-Cavern Bat, Faerie Dreamthief, Faerie Dreamthief, Gatekeeper of Malakir, Gatekeeper of Malakir, Mudflat Village, Swamp, Swamp, Swamp, Swamp
+  Graveyard: 1 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+17 objects have no resolved final zone and are omitted from the known board state.
+gian31: 9 unknown object(s)
+topa: 8 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=5, Stack=4
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+gian31:
+  Battlefield (7): Godless Shrine, Swamp, Swamp, Swamp, Case of the Uneaten Feast, Swamp, Makeshift Binding
+  Graveyard (3): Starscape Cleric, Moment of Craving, Marauding Blight-Priest
+  Exile (3): Unholy Annex // Ritual Chamber, Unholy Annex, Ritual Chamber
+topa:
+  Battlefield (9): Swamp, Swamp, Hylderblade, Mudflat Village, Gatekeeper of Malakir, Swamp, Swamp, Gatekeeper of Malakir, Deep-Cavern Bat
+  Graveyard (1): Faerie Dreamthief
+  Exile (2): Faerie Dreamthief, Deep-Cavern Bat
+Known non-persistent entries (counts only):
+  gian31: Hand=1, Limbo=6
+  topa: Limbo=1
+  unknown: Hand=2, Library=95, Limbo=7, Revealed=1
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: topa Battlefield=2; topa Graveyard=1
+- Turn 2: gian31 Battlefield=1; topa Battlefield=2; topa Graveyard=1
+- Turn 3: gian31 Battlefield=1; topa Battlefield=4; topa Graveyard=1
+- Turn 4: gian31 Battlefield=3; topa Battlefield=4; topa Graveyard=1
+- Turn 5: gian31 Battlefield=2; gian31 Graveyard=1; topa Battlefield=6; topa Graveyard=1
+- Turn 6: gian31 Battlefield=3; gian31 Graveyard=2; topa Battlefield=5; topa Graveyard=2
+- Turn 7: gian31 Battlefield=3; gian31 Graveyard=2; topa Battlefield=6; topa Graveyard=1; topa Exile=1
+- Turn 8: gian31 Battlefield=6; gian31 Graveyard=2; topa Battlefield=6; topa Graveyard=1; topa Exile=1
+- Turn 9: gian31 Battlefield=5; gian31 Graveyard=3; gian31 Exile=1; topa Battlefield=9; topa Graveyard=1; topa Exile=1
+- Turn 10: gian31 Battlefield=7; gian31 Graveyard=3; topa Battlefield=8; topa Graveyard=1; topa Exile=2
+- Turn 11: gian31 Battlefield=7; gian31 Graveyard=3; gian31 Exile=1; topa Battlefield=9; topa Graveyard=1; topa Exile=2
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Faerie Dreamthief resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Hylderblade resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Gatekeeper of Malakir resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Gatekeeper of Malakir resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Deep-Cavern Bat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Deep-Cavern Bat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
