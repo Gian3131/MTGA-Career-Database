@@ -1,0 +1,823 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Mykoze
+Seat map: Seat 1=gian31, Seat 2=Mykoze
+Turn range (known): 1 - 10
+Records: 76
+Action chains: 19
+Winner: Mykoze
+Final life: {'gian31': 1, 'Mykoze': 31}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 10 (Phase_Combat, Step_DeclareAttack; Ability of Starscape Cleric, seq 354).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 21 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 9 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 6, 7, 8, 9, 10] (raw records=9; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 9 explicit Library -> Hand movement(s); named in the draw record=4, resolved through an explicit identity transition=3, unresolved=2.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: Mykoze; observed final life totals: {'gian31': 1, 'Mykoze': 31}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 10 (Phase_Combat, Step_DeclareAttack; Ability of Starscape Cleric, seq 354).
+Last captured life snapshot: Mykoze 30 -> 31 (seq 352).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=10] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 288) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 288) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [287] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Plains [287]
+
+Turn 2
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=29] (active=Mykoze, phase=Phase_Main1, controller=Mykoze, owner=Mykoze, source_object=291, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: Mykoze gains 1 life.
+    net observed life change this turn: Mykoze +1 (individual changes below; gains and losses may offset)
+    life: Mykoze 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bogwater Lumaret [290] Library (Mykoze) -> Hand (Mykoze) (Draw; GRE sequence 24).
+      Scoured Barrens [291] Hand (Mykoze) -> Battlefield (PlayLand; GRE sequence 27).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Plains [287]
+      Mykoze: Battlefield: Scoured Barrens [291]
+
+Turn 3
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=50] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=295)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 295) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 295) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=52] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=54] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Mykoze loses 1 life.
+    net observed life change this turn: Mykoze -1; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life: Mykoze 21 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [293] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 43).
+      Swamp [294] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 46).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Plains [287], Starscape Cleric [295], Swamp [294]
+      Mykoze: Battlefield: Scoured Barrens [291]
+
+Turn 4
+  - Ability of Jungle Hollow [observed_semantic_effect, seq=73] (active=Mykoze, phase=Phase_Main1, controller=Mykoze, owner=Mykoze, source_object=301, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Jungle Hollow: Mykoze gains 1 life.
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=76] (active=Mykoze, phase=Phase_Main1, controller=Mykoze, owner=Mykoze, source_object=303)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 303) Hand (Mykoze) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 303) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: Mykoze +1 (individual changes below; gains and losses may offset)
+    life: Mykoze 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [300] Library (Mykoze) -> Hand (Mykoze) (Draw; GRE sequence 68).
+      Jungle Hollow [301] Hand (Mykoze) -> Battlefield (PlayLand; GRE sequence 71).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Plains [287], Starscape Cleric [295], Swamp [294]
+      Mykoze: Battlefield: Authority of the Consuls [303], Jungle Hollow [301], Scoured Barrens [291]
+
+Turn 5
+  - Leech Collector [valid_resolution_no_immediate_mutation, seq=95] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=306)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Leech Collector resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Leech Collector (object 306) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leech Collector (object 306) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=97] (active=gian31, phase=Phase_Main1, controller=Mykoze, owner=Mykoze, source_object=303, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: Mykoze gains 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=99] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=102] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Mykoze loses 1 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=104] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=306, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [295] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Mykoze -2; gian31 +1 (individual changes below; gains and losses may offset)
+    life: Mykoze 21 -> 22
+    life: gian31 21 -> 22
+    life: Mykoze 22 -> 21
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Mykoze 21 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodletter of Aclazotz [305] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 90).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Leech Collector [306], Plains [287], Starscape Cleric [295], Swamp [294]
+      Mykoze: Battlefield: Authority of the Consuls [303], Jungle Hollow [301], Scoured Barrens [291]
+
+Turn 6
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=129] (active=Mykoze, phase=Phase_Main1, controller=Mykoze, owner=Mykoze, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: Mykoze gains 1 life.
+  - Bogwater Lumaret [valid_resolution_no_immediate_mutation, seq=132] (active=Mykoze, phase=Phase_Main1, controller=Mykoze, owner=Mykoze, source_object=317)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bogwater Lumaret resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bogwater Lumaret (object 317) Hand (Mykoze) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bogwater Lumaret (object 317) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Bogwater Lumaret [observed_semantic_effect, seq=134] (active=Mykoze, phase=Phase_Main1, controller=Mykoze, owner=Mykoze, source_object=317, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bogwater Lumaret: Mykoze gains 1 life.
+    net observed life change this turn: Mykoze +2 (individual changes below; gains and losses may offset)
+    life: Mykoze 19 -> 20
+    life: Mykoze 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [314] Library (Mykoze) -> Hand (Mykoze) (Draw; GRE sequence 124).
+      Scoured Barrens [315] Hand (Mykoze) -> Battlefield (PlayLand; GRE sequence 127).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Leech Collector [306], Plains [287], Starscape Cleric [295], Swamp [294]
+      Mykoze: Battlefield: Authority of the Consuls [303], Bogwater Lumaret [317], Jungle Hollow [301], Scoured Barrens [291], Scoured Barrens [315]
+
+Turn 7
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=154] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=323)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 323) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 323) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=158] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=323, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Bogwater Lumaret; gian31 gains 2 life.
+      explicit effect object references: Bogwater Lumaret [317], Bogwater Lumaret [328] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bogwater Lumaret (object 328) Battlefield -> Exile (Exile; shared object ID)
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=161] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Mykoze loses 1 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=163] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=306, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [295] (unblocked, observed P/T 2/1), Leech Collector [306] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Mykoze -5; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 22 -> 24
+    life: Mykoze 21 -> 20
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): Mykoze 20 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [321] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 148).
+      Swamp [322] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 151).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Leech Collector [306], Makeshift Binding [323], Plains [287], Starscape Cleric [295], Swamp [294], Swamp [322]
+      Mykoze: Battlefield: Authority of the Consuls [303], Jungle Hollow [301], Scoured Barrens [291], Scoured Barrens [315]; Exile: Bogwater Lumaret [328]
+
+Turn 8
+  - Teacher's Pest [valid_resolution_no_immediate_mutation, seq=189] (active=Mykoze, phase=Phase_Main1, controller=Mykoze, owner=Mykoze, source_object=333)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Teacher's Pest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Teacher's Pest (object 333) Hand (Mykoze) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Teacher's Pest (object 333) Stack -> Battlefield (Resolve; shared object ID)
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=201] (active=Mykoze, phase=Phase_Main2, controller=Mykoze, owner=Mykoze, source_object=336)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 336) Hand (Mykoze) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 336) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 331 [331] Library (Mykoze) -> Hand (Mykoze) (Draw; GRE sequence 183).
+      Swamp [332] Hand (Mykoze) -> Battlefield (PlayLand; GRE sequence 186).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Leech Collector [306], Makeshift Binding [323], Plains [287], Starscape Cleric [295], Swamp [294], Swamp [322]
+      Mykoze: Battlefield: Authority of the Consuls [303], Jungle Hollow [301], Scoured Barrens [291], Scoured Barrens [315], Starscape Cleric [336], Swamp [332], Teacher's Pest [333]; Exile: Bogwater Lumaret [328]
+
+Turn 9
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation, seq=213] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=341)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 341) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 341) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=215] (active=gian31, phase=Phase_Main1, controller=Mykoze, owner=Mykoze, source_object=303, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=217] (active=gian31, phase=Phase_Main1, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=219] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=222] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Starscape Cleric: Mykoze loses 2 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=224] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=306, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Starscape Cleric [295] (unblocked, observed P/T 2/1), Leech Collector [306] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Mykoze -9; gian31 +0 (individual changes below; gains and losses may offset)
+    life: Mykoze 16 -> 17
+    life: gian31 24 -> 23
+    life: gian31 23 -> 24
+    life: Mykoze 17 -> 15
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): Mykoze 15 -> 7
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shattered Sanctum [339] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 207).
+      Shattered Sanctum [340] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 210).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodletter of Aclazotz [341], Case of the Uneaten Feast [288], Leech Collector [306], Makeshift Binding [323], Plains [287], Shattered Sanctum [340], Starscape Cleric [295], Swamp [294], Swamp [322]
+      Mykoze: Battlefield: Authority of the Consuls [303], Jungle Hollow [301], Scoured Barrens [291], Scoured Barrens [315], Starscape Cleric [336], Swamp [332], Teacher's Pest [333]; Exile: Bogwater Lumaret [328]
+
+Turn 10
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation, seq=252] (active=Mykoze, phase=Phase_Main1, controller=Mykoze, owner=Mykoze, source_object=353)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 353) Hand (Mykoze) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 353) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Teacher's Pest [observed_semantic_effect, seq=260] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=333, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Teacher's Pest: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=262] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=264] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=266] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=268] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=270] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=272] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=274] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=276] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=278] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=280] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=282] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=284] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=286] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=288] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=290] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=292] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=294] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=296] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=298] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=300] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=302] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=304] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=306] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=308] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=310] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=312] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=314] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=316] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=318] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=320] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=322] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=324] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=326] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=328] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=330] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=332] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=334] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=336] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=338] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=340] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=342] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=344] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=346] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=348] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=350] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=352] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=354] (active=Mykoze, phase=Phase_Combat, step=Step_DeclareAttack, controller=Mykoze, owner=Mykoze, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: gian31 loses 1 life.
+  Combat snapshots observed (active=Mykoze; frames: DeclareAttack):
+      attackers: Teacher's Pest [333] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Mykoze +24; gian31 -23 (individual changes below; gains and losses may offset)
+    life: Mykoze 7 -> 8
+    life: gian31 24 -> 23
+    life: Mykoze 8 -> 9
+    life: gian31 23 -> 22
+    life: Mykoze 9 -> 10
+    life: gian31 22 -> 21
+    life: Mykoze 10 -> 11
+    life: gian31 21 -> 20
+    life: Mykoze 11 -> 12
+    life: gian31 20 -> 19
+    life: Mykoze 12 -> 13
+    life: gian31 19 -> 18
+    life: Mykoze 13 -> 14
+    life: gian31 18 -> 17
+    life: Mykoze 14 -> 15
+    life: gian31 17 -> 16
+    life: Mykoze 15 -> 16
+    life: gian31 16 -> 15
+    life: Mykoze 16 -> 17
+    life: gian31 15 -> 14
+    life: Mykoze 17 -> 18
+    life: gian31 14 -> 13
+    life: Mykoze 18 -> 19
+    life: gian31 13 -> 12
+    life: Mykoze 19 -> 20
+    life: gian31 12 -> 11
+    life: Mykoze 20 -> 21
+    life: gian31 11 -> 10
+    life: Mykoze 21 -> 22
+    life: gian31 10 -> 9
+    life: Mykoze 22 -> 23
+    life: gian31 9 -> 8
+    life: Mykoze 23 -> 24
+    life: gian31 8 -> 7
+    life: Mykoze 24 -> 25
+    life: gian31 7 -> 6
+    life: Mykoze 25 -> 26
+    life: gian31 6 -> 5
+    life: Mykoze 26 -> 27
+    life: gian31 5 -> 4
+    life: Mykoze 27 -> 28
+    life: gian31 4 -> 3
+    life: Mykoze 28 -> 29
+    life: gian31 3 -> 2
+    life: Mykoze 29 -> 30
+    life: gian31 2 -> 1
+    life: Mykoze 30 -> 31
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 351 [351] Library (Mykoze) -> Hand (Mykoze) (Draw; GRE sequence 246).
+      Plains [352] Hand (Mykoze) -> Battlefield (PlayLand; GRE sequence 249).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodletter of Aclazotz [341], Case of the Uneaten Feast [288], Leech Collector [306], Makeshift Binding [323], Plains [287], Shattered Sanctum [340], Starscape Cleric [295], Swamp [294], Swamp [322]
+      Mykoze: Battlefield: Authority of the Consuls [303], Bloodthirsty Conqueror [353], Jungle Hollow [301], Plains [352], Scoured Barrens [291], Scoured Barrens [315], Starscape Cleric [336], Swamp [332], Teacher's Pest [333]; Exile: Bogwater Lumaret [328]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 9, seq 236, Phase_Main1: Mykoze 15 -> 7. Combat declaration observed; exact assignment unavailable. Previous captured action: Leech Collector.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 1, seq 10: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 24: Bogwater Lumaret [owner/controller metadata unavailable] moves Library (Mykoze) -> Hand (Mykoze) (Draw).
+- Turn 2, seq 27: Scoured Barrens [owner=Mykoze, controller=Mykoze] moves Hand (Mykoze) -> Battlefield (PlayLand).
+- Turn 3, seq 43: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 46: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 47: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 50: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 68: Swamp [owner/controller metadata unavailable] moves Library (Mykoze) -> Hand (Mykoze) (Draw).
+- Turn 4, seq 71: Jungle Hollow [owner=Mykoze, controller=Mykoze] moves Hand (Mykoze) -> Battlefield (PlayLand).
+- Turn 4, seq 74: Authority of the Consuls [owner=Mykoze, controller=Mykoze] moves Hand (Mykoze) -> Stack (CastSpell).
+- Turn 4, seq 76: Authority of the Consuls [owner=Mykoze, controller=Mykoze] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 90: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 93: Leech Collector [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 95: Leech Collector [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 124: Scoured Barrens [owner/controller metadata unavailable] moves Library (Mykoze) -> Hand (Mykoze) (Draw).
+- Turn 6, seq 127: Scoured Barrens [owner=Mykoze, controller=Mykoze] moves Hand (Mykoze) -> Battlefield (PlayLand).
+- Turn 6, seq 130: Bogwater Lumaret [owner=Mykoze, controller=Mykoze] moves Hand (Mykoze) -> Stack (CastSpell).
+- Turn 6, seq 132: Bogwater Lumaret [owner=Mykoze, controller=Mykoze] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 148: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 151: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 152: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 154: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 158: Bogwater Lumaret [owner=Mykoze, controller=Mykoze] moves Battlefield -> Exile (Exile).
+- Turn 8, seq 183: object 331 [owner/controller metadata unavailable] moves Library (Mykoze) -> Hand (Mykoze) (Draw).
+- Turn 8, seq 186: Swamp [owner=Mykoze, controller=Mykoze] moves Hand (Mykoze) -> Battlefield (PlayLand).
+- Turn 8, seq 187: Teacher's Pest [owner=Mykoze, controller=Mykoze] moves Hand (Mykoze) -> Stack (CastSpell).
+- Turn 8, seq 189: Teacher's Pest [owner=Mykoze, controller=Mykoze] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 198: Starscape Cleric [owner=Mykoze, controller=Mykoze] moves Hand (Mykoze) -> Stack (CastSpell).
+- Turn 8, seq 201: Starscape Cleric [owner=Mykoze, controller=Mykoze] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 207: Shattered Sanctum [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 210: Shattered Sanctum [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 211: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 213: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 246: object 351 [owner/controller metadata unavailable] moves Library (Mykoze) -> Hand (Mykoze) (Draw).
+- Turn 10, seq 249: Plains [owner=Mykoze, controller=Mykoze] moves Hand (Mykoze) -> Battlefield (PlayLand).
+- Turn 10, seq 250: Bloodthirsty Conqueror [owner=Mykoze, controller=Mykoze] moves Hand (Mykoze) -> Stack (CastSpell).
+- Turn 10, seq 252: Bloodthirsty Conqueror [owner=Mykoze, controller=Mykoze] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 167 becomes object 287 [Plains].
+- Turn 1, seq 8: object 170 becomes object 288 [Case of the Uneaten Feast].
+- Turn 2, seq 24: object 234 becomes object 290 [Bogwater Lumaret].
+- Turn 2, seq 27: object 233 becomes object 291 [Scoured Barrens].
+- Turn 3, seq 43: object 174 becomes object 293 [Starscape Cleric].
+- Turn 3, seq 46: object 173 becomes object 294 [Swamp].
+- Turn 3, seq 47: object 293 becomes object 295 [Starscape Cleric].
+- Turn 4, seq 68: object 235 becomes object 300 [Swamp].
+- Turn 4, seq 71: object 230 becomes object 301 [Jungle Hollow].
+- Turn 4, seq 74: object 228 becomes object 303 [Authority of the Consuls].
+- Turn 5, seq 90: object 175 becomes object 305 [Bloodletter of Aclazotz].
+- Turn 5, seq 93: object 171 becomes object 306 [Leech Collector].
+- Turn 6, seq 124: object 236 becomes object 314 [Scoured Barrens].
+- Turn 6, seq 127: object 314 becomes object 315 [Scoured Barrens].
+- Turn 6, seq 130: object 290 becomes object 317 [Bogwater Lumaret].
+- Turn 7, seq 148: object 176 becomes object 321 [Swamp].
+- Turn 7, seq 151: object 321 becomes object 322 [Swamp].
+- Turn 7, seq 152: object 169 becomes object 323 [Makeshift Binding].
+- Turn 7, seq 158: object 317 becomes object 328 [Bogwater Lumaret].
+- Turn 8, seq 183: object 237 becomes object 331 [object 237].
+- Turn 8, seq 186: object 300 becomes object 332 [Swamp].
+- Turn 8, seq 187: object 231 becomes object 333 [Teacher's Pest].
+- Turn 8, seq 198: object 232 becomes object 336 [Starscape Cleric].
+- Turn 9, seq 207: object 177 becomes object 339 [Shattered Sanctum].
+- Turn 9, seq 210: object 339 becomes object 340 [Shattered Sanctum].
+- Turn 9, seq 211: object 305 becomes object 341 [Bloodletter of Aclazotz].
+- Turn 10, seq 246: object 238 becomes object 351 [object 238].
+- Turn 10, seq 249: object 229 becomes object 352 [Plains].
+- Turn 10, seq 250: object 227 becomes object 353 [Bloodthirsty Conqueror].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Plains (object 287) from Hand (gian31) to Battlefield.
+- Turn 2: Mykoze plays Scoured Barrens (object 291) from Hand (Mykoze) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 294) from Hand (gian31) to Battlefield.
+- Turn 4: Mykoze plays Jungle Hollow (object 301) from Hand (Mykoze) to Battlefield.
+- Turn 6: Mykoze plays Scoured Barrens (object 315) from Hand (Mykoze) to Battlefield.
+- Turn 7: gian31 plays Swamp (object 322) from Hand (gian31) to Battlefield.
+- Turn 8: Mykoze plays Swamp (object 332) from Hand (Mykoze) to Battlefield.
+- Turn 9: gian31 plays Shattered Sanctum (object 340) from Hand (gian31) to Battlefield.
+- Turn 10: Mykoze plays Plains (object 352) from Hand (Mykoze) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- Turn 10: Starscape Cleric -> Bloodthirsty Conqueror; observed repeated transitions=23; net life: Mykoze +23, gian31 -23.
+  Same-turn ability records (including records outside the summarized chain): Bloodthirsty Conqueror=23, Starscape Cleric=24.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED TRIGGER CYCLES
+------------------------------------------------------------
+- Turn 10: Starscape Cleric -> Bloodthirsty Conqueror; observed repetitions=23 (cycle length 2).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Starscape Cleric: casts=2; abilities=29 (triggered=29, activated=0) across turns [3, 3, 5, 7, 8, 9, 9, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=29, other=6
+  observed effects: life -1, life -2, synthetic event
+- Bloodthirsty Conqueror: casts=1; abilities=23 (triggered=23, activated=0) across turns [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=23, other=0
+  observed effects: life +1
+- Case of the Uneaten Feast: casts=1; abilities=3 (triggered=3, activated=0) across turns [1, 3, 5, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=0
+  observed effects: life +1
+- Leech Collector: casts=1; abilities=3 (triggered=3, activated=0) across turns [5, 5, 7, 9]
+- Authority of the Consuls: casts=1; abilities=2 (triggered=2, activated=0) across turns [4, 5, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Bogwater Lumaret: casts=1; abilities=1 (triggered=1, activated=0) across turns [6, 6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [7, 7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Scoured Barrens: abilities=2 (triggered=2, activated=0) across turns [2, 6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Teacher's Pest: casts=1; abilities=1 (triggered=1, activated=0) across turns [8, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Bloodletter of Aclazotz: casts=1 across turns [9]
+- Jungle Hollow: abilities=1 (triggered=1, activated=0) across turns [4]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Mykoze; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Mykoze; unblocked in this observed snapshot
+  attacker: Leech Collector (gian31) -> Mykoze; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Mykoze; unblocked in this observed snapshot
+  attacker: Leech Collector (gian31) -> Mykoze; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack (active=Mykoze)
+  attacker: Teacher's Pest (Mykoze) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 10: Ability of Teacher's Pest (active=Mykoze) - Ability of Teacher's Pest: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=Mykoze) - Ability of Bloodthirsty Conqueror: Mykoze gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=Mykoze) - Ability of Starscape Cleric: gian31 loses 1 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 167: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 168: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 169: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 170: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 171: Leech Collector | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 172: Makeshift Binding | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 173: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 287: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 288: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 291: Scoured Barrens | controller=Mykoze | owner=Mykoze | zone=Battlefield (latest_object_observation)
+- 292: object 292 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 293: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 294: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 295: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 298: object 298 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 299: object 299 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 301: Jungle Hollow | controller=Mykoze | owner=Mykoze | zone=Battlefield (latest_object_observation)
+- 302: object 302 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 303: Authority of the Consuls | controller=Mykoze | owner=Mykoze | zone=Stack (latest_object_observation)
+- 305: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 306: Leech Collector | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 309: object 309 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 310: object 310 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 311: object 311 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 312: object 312 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 313: Bloodletting | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 315: Scoured Barrens | controller=Mykoze | owner=Mykoze | zone=Battlefield (latest_object_observation)
+- 316: object 316 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 317: Bogwater Lumaret | controller=Mykoze | owner=Mykoze | zone=Battlefield (latest_object_observation)
+- 320: Abrade | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 321: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 322: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 323: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 327: object 327 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 328: Bogwater Lumaret | controller=Mykoze | owner=Mykoze | zone=Exile (latest_object_observation)
+- 329: object 329 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 330: object 330 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 332: Swamp | controller=Mykoze | owner=Mykoze | zone=Battlefield (latest_object_observation)
+- 333: Teacher's Pest | controller=Mykoze | owner=Mykoze | zone=Battlefield (latest_object_observation)
+- 336: Starscape Cleric | controller=Mykoze | owner=Mykoze | zone=Battlefield (latest_object_observation)
+- 339: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 340: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 341: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 346: object 346 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 347: object 347 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 348: object 348 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 349: object 349 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 350: object 350 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 352: Plains | controller=Mykoze | owner=Mykoze | zone=Battlefield (latest_object_observation)
+- 353: Bloodthirsty Conqueror | controller=Mykoze | owner=Mykoze | zone=Battlefield (latest_object_observation)
+- 359: object 359 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 360: object 360 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 361: object 361 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 362: object 362 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 363: object 363 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 364: object 364 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 365: object 365 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 366: object 366 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 367: object 367 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 368: object 368 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 369: object 369 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 370: object 370 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 371: object 371 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 372: object 372 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 373: object 373 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 374: object 374 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 375: object 375 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 376: object 376 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 377: object 377 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 378: object 378 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 379: object 379 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 380: object 380 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 381: object 381 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 382: object 382 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 383: object 383 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 384: object 384 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 385: object 385 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 386: object 386 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 387: object 387 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 388: object 388 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 389: object 389 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 390: object 390 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 391: object 391 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 392: object 392 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 393: object 393 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 394: object 394 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 395: object 395 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 396: object 396 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 397: object 397 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 398: object 398 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 399: object 399 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 400: object 400 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 401: object 401 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 402: object 402 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 403: object 403 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 404: object 404 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 405: object 405 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 406: object 406 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+- 407: object 407 | controller=Mykoze | owner=Mykoze | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Mykoze: 67 total items
+  zones: Battlefield=9, Exile=1, Stack=1, unknown=56
+  objects: Bogwater Lumaret x2, Scoured Barrens x2, Abrade, Authority of the Consuls, Bloodthirsty Conqueror, Jungle Hollow, Plains, Starscape Cleric, Swamp, Teacher's Pest, object 292, object 302
+gian31: 32 total items
+  zones: Battlefield=7, Exile=1, Hand=9, Stack=2, unknown=13
+  objects: Swamp x4, Makeshift Binding x3, Bloodletter of Aclazotz x2, Case of the Uneaten Feast x2, Leech Collector x2, Plains x2, Shattered Sanctum x2, Starscape Cleric x2, Bloodletting, Bloodthirsty Conqueror, object 298, object 299
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (7): Bloodletter of Aclazotz, Leech Collector, Plains, Shattered Sanctum, Starscape Cleric, Swamp, Swamp
+  Graveyard: 0 card(s)
+Mykoze:
+  Battlefield (9): Bloodthirsty Conqueror, Bogwater Lumaret, Jungle Hollow, Plains, Scoured Barrens, Scoured Barrens, Starscape Cleric, Swamp, Teacher's Pest
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+69 objects have no resolved final zone and are omitted from the known board state.
+Mykoze: 56 unknown object(s)
+gian31: 13 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=9, Stack=3
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Mykoze:
+  Battlefield (9): Scoured Barrens, Jungle Hollow, Authority of the Consuls, Scoured Barrens, Swamp, Teacher's Pest, Starscape Cleric, Plains, Bloodthirsty Conqueror
+  Exile (1): Bogwater Lumaret
+gian31:
+  Battlefield (9): Plains, Case of the Uneaten Feast, Swamp, Starscape Cleric, Leech Collector, Swamp, Makeshift Binding, Shattered Sanctum, Bloodletter of Aclazotz
+  Exile (1): Bloodletting
+Known non-persistent entries (counts only):
+  Mykoze: Hand=2, Pending=1
+  gian31: Hand=2, Limbo=2
+  unknown: Library=97, Limbo=8
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=2
+- Turn 2: Mykoze Battlefield=1; gian31 Battlefield=2
+- Turn 3: Mykoze Battlefield=1; gian31 Battlefield=4
+- Turn 4: Mykoze Battlefield=3; gian31 Battlefield=4
+- Turn 5: Mykoze Battlefield=3; gian31 Battlefield=5
+- Turn 6: Mykoze Battlefield=5; gian31 Battlefield=5
+- Turn 7: Mykoze Battlefield=4; Mykoze Exile=1; gian31 Battlefield=7
+- Turn 8: Mykoze Battlefield=7; Mykoze Exile=1; gian31 Battlefield=7
+- Turn 9: Mykoze Battlefield=7; Mykoze Exile=1; gian31 Battlefield=9
+- Turn 10: Mykoze Battlefield=9; Mykoze Exile=1; gian31 Battlefield=9
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Leech Collector resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Bogwater Lumaret resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Teacher's Pest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
