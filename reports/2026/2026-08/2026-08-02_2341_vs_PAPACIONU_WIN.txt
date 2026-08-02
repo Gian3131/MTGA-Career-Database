@@ -1,0 +1,481 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, PAPACIONU
+Seat map: Seat 1=gian31, Seat 2=PAPACIONU
+Turn range (known): 1 - 8
+Records: 20
+Action chains: 13
+Winner: gian31
+Final life: {'gian31': 26, 'PAPACIONU': 6}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 8 (Phase_Main1; Ability of Starscape Cleric, seq 206).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 23 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 7 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7] (raw records=7; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 9 explicit Library -> Hand movement(s); named in the draw record=5, resolved through an explicit identity transition=3, unresolved=1.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 26, 'PAPACIONU': 6}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 8 (Phase_Main1; Ability of Starscape Cleric, seq 206).
+Last captured life snapshot: PAPACIONU 7 -> 6 (seq 206).
+Observed active tokens: Otter [385] controller=PAPACIONU, created Turn 6, last observed Turn 8 seq 182, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=11] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=340, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 339 [339] Hand (PAPACIONU) -> Library (PAPACIONU) (Put; GRE sequence 6).
+      Scoured Barrens [340] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 9).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Scoured Barrens [340]
+
+Turn 2
+    net observed life change this turn: PAPACIONU -2 (individual changes below; gains and losses may offset)
+    life: PAPACIONU 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Secret Identity [342] Library (PAPACIONU) -> Hand (PAPACIONU) (Draw; GRE sequence 25).
+      Steam Vents [343] Hand (PAPACIONU) -> Battlefield (PlayLand; GRE sequence 29).
+      Sleight of Hand [344] Hand (PAPACIONU) -> Stack (CastSpell; GRE sequence 30).
+      Spirebluff Canal [346] Library (PAPACIONU) -> Hand (PAPACIONU) (Put; GRE sequence 33).
+      object 347 [347] Library (PAPACIONU) -> Library (PAPACIONU) (Put; GRE sequence 33).
+      Sleight of Hand [348] Stack -> Graveyard (PAPACIONU) (Resolve; GRE sequence 33).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Scoured Barrens [340]
+      PAPACIONU: Battlefield: Steam Vents [343]; Graveyard: Sleight of Hand [348]
+
+Turn 3
+  - Deep-Cavern Bat [valid_resolution_no_immediate_mutation, seq=53] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=351)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deep-Cavern Bat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deep-Cavern Bat (object 351) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 351) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [349] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 47).
+      Swamp [350] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 50).
+      Slickshot Show-Off [355] Hand (PAPACIONU) -> Exile (Exile; GRE sequence 58).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Deep-Cavern Bat [351], Scoured Barrens [340], Swamp [350]
+      PAPACIONU: Battlefield: Steam Vents [343]; Graveyard: Sleight of Hand [348]; Exile: Slickshot Show-Off [355]
+
+Turn 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Island [361] Library (PAPACIONU) -> Hand (PAPACIONU) (Draw; GRE sequence 72).
+      Spirebluff Canal [362] Hand (PAPACIONU) -> Battlefield (PlayLand; GRE sequence 75).
+      Flow State [363] Hand (PAPACIONU) -> Stack (CastSpell; GRE sequence 76).
+      Stormchaser's Talent [366] Library (PAPACIONU) -> Hand (PAPACIONU) (Put; GRE sequence 79).
+      Flow State [367] Stack -> Graveyard (PAPACIONU) (Resolve; GRE sequence 80).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Deep-Cavern Bat [351], Scoured Barrens [340], Swamp [350]
+      PAPACIONU: Battlefield: Spirebluff Canal [362], Steam Vents [343]; Graveyard: Flow State [367], Sleight of Hand [348]; Exile: Slickshot Show-Off [355]
+
+Turn 5
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=100] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=370)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 370) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 370) Stack -> Battlefield (Resolve; shared object ID)
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=104] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=372)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 372) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 372) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=116] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=372, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: PAPACIONU loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [351] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: PAPACIONU -2; gian31 +1 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): gian31 21 -> 22
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): PAPACIONU 18 -> 17
+    life: PAPACIONU 17 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [368] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 94).
+      Swamp [369] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 97).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [370], Deep-Cavern Bat [351], Scoured Barrens [340], Starscape Cleric [372], Swamp [350], Swamp [369]
+      PAPACIONU: Battlefield: Spirebluff Canal [362], Steam Vents [343]; Graveyard: Flow State [367], Sleight of Hand [348]; Exile: Slickshot Show-Off [355]
+
+Turn 6
+  - Stormchaser's Talent [valid_resolution_no_immediate_mutation, seq=133] (active=PAPACIONU, phase=Phase_Main1, controller=PAPACIONU, owner=PAPACIONU, source_object=382)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Stormchaser's Talent resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Stormchaser's Talent (object 382) Hand (PAPACIONU) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Stormchaser's Talent (object 382) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Stormchaser's Talent [observed_semantic_effect, seq=135] (active=PAPACIONU, phase=Phase_Main1, controller=PAPACIONU, owner=PAPACIONU, source_object=382, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Stormchaser's Talent: a token is created.
+      explicit effect object references: Otter [385] (role/targeting only where the protocol identifies it)
+      token created: Otter (object 385, controller=PAPACIONU) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 384).
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=137] (active=PAPACIONU, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=370, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=139] (active=PAPACIONU, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=372, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: PAPACIONU loses 1 life.
+    net observed life change this turn: PAPACIONU -1; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 22 -> 23
+    life: PAPACIONU 16 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Slickshot Show-Off [376] Library (PAPACIONU) -> Hand (PAPACIONU) (Draw; GRE sequence 126).
+      Island [377] Hand (PAPACIONU) -> Battlefield (PlayLand; GRE sequence 129).
+      Slickshot Show-Off [381] Hand (PAPACIONU) -> Exile (Exile; GRE sequence 130).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [370], Deep-Cavern Bat [351], Scoured Barrens [340], Starscape Cleric [372], Swamp [350], Swamp [369]
+      PAPACIONU: Battlefield: Island [377], Spirebluff Canal [362], Steam Vents [343], Stormchaser's Talent [382]; Graveyard: Flow State [367], Sleight of Hand [348]; Exile: Slickshot Show-Off [355], Slickshot Show-Off [381]
+
+Turn 7
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=159] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 390) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 390) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=172] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: PAPACIONU loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=174] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=372, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: PAPACIONU loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [351] (unblocked, observed P/T 1/1), Starscape Cleric [372] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: PAPACIONU -5; gian31 +1 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): gian31 23 -> 24
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): PAPACIONU 15 -> 12
+    life: PAPACIONU 12 -> 11
+    life: PAPACIONU 11 -> 10
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [388] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 153).
+      Swamp [389] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 156).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [370], Deep-Cavern Bat [351], Marauding Blight-Priest [390], Scoured Barrens [340], Starscape Cleric [372], Swamp [350], Swamp [369], Swamp [389]
+      PAPACIONU: Battlefield: Island [377], Spirebluff Canal [362], Steam Vents [343], Stormchaser's Talent [382]; Graveyard: Flow State [367], Sleight of Hand [348]; Exile: Slickshot Show-Off [355], Slickshot Show-Off [381]
+
+Turn 8
+  - Colorstorm Stallion [valid_resolution_no_immediate_mutation, seq=189] (active=PAPACIONU, phase=Phase_Main1, controller=PAPACIONU, owner=PAPACIONU, source_object=397)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Colorstorm Stallion resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Colorstorm Stallion (object 397) Hand (PAPACIONU) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Colorstorm Stallion (object 397) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=191] (active=PAPACIONU, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=370, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=194] (active=PAPACIONU, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: PAPACIONU loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=196] (active=PAPACIONU, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=372, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: PAPACIONU loses 1 life.
+  - Slickshot Show-Off [valid_resolution_no_immediate_mutation, seq=199] (active=PAPACIONU, phase=Phase_Main1, controller=PAPACIONU, owner=PAPACIONU, source_object=404)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Slickshot Show-Off resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Slickshot Show-Off (object 404) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Slickshot Show-Off (object 404) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=201] (active=PAPACIONU, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=370, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=204] (active=PAPACIONU, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: PAPACIONU loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=206] (active=PAPACIONU, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=372, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: PAPACIONU loses 1 life.
+    net observed life change this turn: PAPACIONU -4; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 24 -> 25
+    life: PAPACIONU 10 -> 9
+    life: PAPACIONU 9 -> 8
+    life: gian31 25 -> 26
+    life: PAPACIONU 8 -> 7
+    life: PAPACIONU 7 -> 6
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 396 [396] Library (PAPACIONU) -> Hand (PAPACIONU) (Draw; GRE sequence 184).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [370], Deep-Cavern Bat [351], Marauding Blight-Priest [390], Scoured Barrens [340], Starscape Cleric [372], Swamp [350], Swamp [369], Swamp [389]
+      PAPACIONU: Battlefield: Colorstorm Stallion [397], Island [377], Slickshot Show-Off [404], Spirebluff Canal [362], Steam Vents [343], Stormchaser's Talent [382]; Graveyard: Flow State [367], Sleight of Hand [348]; Exile: Slickshot Show-Off [355]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 2, seq 29: PAPACIONU 20 -> 18. No source event correlated in captured records.
+- Turn 5, seq 114, Phase_Main1: gian31 21 -> 22. Combat declaration observed; exact assignment unavailable. Previous captured action: Starscape Cleric.
+- Turn 7, seq 169, Phase_Main1: gian31 23 -> 24. Combat declaration observed; exact assignment unavailable. Previous captured action: Marauding Blight-Priest.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 1 token creations observed; 1 active as last observed; 0 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Otter [385] controller=PAPACIONU; created Turn 6 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 8, object 385 (latest observed P/T 1/1; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 6: object 339 [owner/controller metadata unavailable] moves Hand (PAPACIONU) -> Library (PAPACIONU) (Put).
+- Turn 1, seq 9: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Secret Identity [owner=PAPACIONU, controller=PAPACIONU] moves Library (PAPACIONU) -> Hand (PAPACIONU) (Draw).
+- Turn 2, seq 29: Steam Vents [owner=PAPACIONU, controller=PAPACIONU] moves Hand (PAPACIONU) -> Battlefield (PlayLand).
+- Turn 2, seq 30: Sleight of Hand [owner=PAPACIONU, controller=PAPACIONU] moves Hand (PAPACIONU) -> Stack (CastSpell).
+- Turn 2, seq 33: Spirebluff Canal [owner=PAPACIONU, controller=PAPACIONU] moves Library (PAPACIONU) -> Hand (PAPACIONU) (Put).
+- Turn 2, seq 33: object 347 [owner/controller metadata unavailable] moves Library (PAPACIONU) -> Library (PAPACIONU) (Put).
+- Turn 2, seq 33: Sleight of Hand [owner=PAPACIONU, controller=PAPACIONU] moves Stack -> Graveyard (PAPACIONU) (Resolve).
+- Turn 3, seq 47: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 50: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 51: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 53: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 58: Slickshot Show-Off [owner=PAPACIONU, controller=PAPACIONU] moves Hand (PAPACIONU) -> Exile (Exile).
+- Turn 4, seq 72: Island [owner/controller metadata unavailable] moves Library (PAPACIONU) -> Hand (PAPACIONU) (Draw).
+- Turn 4, seq 75: Spirebluff Canal [owner=PAPACIONU, controller=PAPACIONU] moves Hand (PAPACIONU) -> Battlefield (PlayLand).
+- Turn 4, seq 76: Flow State [owner=PAPACIONU, controller=PAPACIONU] moves Hand (PAPACIONU) -> Stack (CastSpell).
+- Turn 4, seq 79: Stormchaser's Talent [owner/controller metadata unavailable] moves Library (PAPACIONU) -> Hand (PAPACIONU) (Put).
+- Turn 4, seq 80: Flow State [owner=PAPACIONU, controller=PAPACIONU] moves Stack -> Graveyard (PAPACIONU) (Resolve).
+- Turn 5, seq 94: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 97: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 98: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 100: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 101: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 104: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 126: Slickshot Show-Off [owner/controller metadata unavailable] moves Library (PAPACIONU) -> Hand (PAPACIONU) (Draw).
+- Turn 6, seq 129: Island [owner=PAPACIONU, controller=PAPACIONU] moves Hand (PAPACIONU) -> Battlefield (PlayLand).
+- Turn 6, seq 130: Slickshot Show-Off [owner=PAPACIONU, controller=PAPACIONU] moves Hand (PAPACIONU) -> Exile (Exile).
+- Turn 6, seq 131: Stormchaser's Talent [owner=PAPACIONU, controller=PAPACIONU] moves Hand (PAPACIONU) -> Stack (CastSpell).
+- Turn 6, seq 133: Stormchaser's Talent [owner=PAPACIONU, controller=PAPACIONU] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 153: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 156: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 157: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 159: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 184: object 396 [owner/controller metadata unavailable] moves Library (PAPACIONU) -> Hand (PAPACIONU) (Draw).
+- Turn 8, seq 187: Colorstorm Stallion [owner=PAPACIONU, controller=PAPACIONU] moves Hand (PAPACIONU) -> Stack (CastSpell).
+- Turn 8, seq 189: Colorstorm Stallion [owner=PAPACIONU, controller=PAPACIONU] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 197: Slickshot Show-Off [owner=PAPACIONU, controller=PAPACIONU] moves Exile -> Stack (CastSpell).
+- Turn 8, seq 199: Slickshot Show-Off [owner=PAPACIONU, controller=PAPACIONU] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 6: object 281 becomes object 339 [object 281].
+- Turn 1, seq 9: object 165 becomes object 340 [Scoured Barrens].
+- Turn 2, seq 25: object 286 becomes object 342 [Secret Identity].
+- Turn 2, seq 29: object 282 becomes object 343 [Steam Vents].
+- Turn 2, seq 30: object 283 becomes object 344 [Sleight of Hand].
+- Turn 2, seq 33: object 287 becomes object 346 [Spirebluff Canal].
+- Turn 2, seq 33: object 288 becomes object 347 [object 288].
+- Turn 2, seq 33: object 344 becomes object 348 [Sleight of Hand].
+- Turn 3, seq 47: object 166 becomes object 349 [Starscape Cleric].
+- Turn 3, seq 50: object 161 becomes object 350 [Swamp].
+- Turn 3, seq 51: object 160 becomes object 351 [Deep-Cavern Bat].
+- Turn 3, seq 58: object 280 becomes object 355 [Slickshot Show-Off].
+- Turn 4, seq 72: object 289 becomes object 361 [Island].
+- Turn 4, seq 75: object 285 becomes object 362 [Spirebluff Canal].
+- Turn 4, seq 76: object 279 becomes object 363 [Flow State].
+- Turn 4, seq 79: object 292 becomes object 366 [Stormchaser's Talent].
+- Turn 4, seq 80: object 363 becomes object 367 [Flow State].
+- Turn 5, seq 94: object 167 becomes object 368 [Swamp].
+- Turn 5, seq 97: object 163 becomes object 369 [Swamp].
+- Turn 5, seq 98: object 164 becomes object 370 [Authority of the Consuls].
+- Turn 5, seq 101: object 349 becomes object 372 [Starscape Cleric].
+- Turn 6, seq 126: object 293 becomes object 376 [Slickshot Show-Off].
+- Turn 6, seq 129: object 361 becomes object 377 [Island].
+- Turn 6, seq 130: object 376 becomes object 381 [Slickshot Show-Off].
+- Turn 6, seq 131: object 366 becomes object 382 [Stormchaser's Talent].
+- Turn 7, seq 153: object 168 becomes object 388 [Swamp].
+- Turn 7, seq 156: object 368 becomes object 389 [Swamp].
+- Turn 7, seq 157: object 159 becomes object 390 [Marauding Blight-Priest].
+- Turn 8, seq 184: object 294 becomes object 396 [object 294].
+- Turn 8, seq 187: object 284 becomes object 397 [Colorstorm Stallion].
+- Turn 8, seq 197: object 381 becomes object 404 [Slickshot Show-Off].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Scoured Barrens (object 340) from Hand (gian31) to Battlefield.
+- Turn 2: PAPACIONU plays Steam Vents (object 343) from Hand (PAPACIONU) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 350) from Hand (gian31) to Battlefield.
+- Turn 4: PAPACIONU plays Spirebluff Canal (object 362) from Hand (PAPACIONU) to Battlefield.
+- Turn 5: gian31 plays Swamp (object 369) from Hand (gian31) to Battlefield.
+- Turn 6: PAPACIONU plays Island (object 377) from Hand (PAPACIONU) to Battlefield.
+- Turn 7: gian31 plays Swamp (object 389) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- Turn 8: Authority of the Consuls -> Marauding Blight-Priest; observed repeated transitions=2; net life: PAPACIONU -2, gian31 +2.
+  Same-turn ability records (including records outside the summarized chain): Authority of the Consuls=2, Marauding Blight-Priest=2.
+  Individual ability records remain in the timeline.
+- Turn 8: Marauding Blight-Priest -> Starscape Cleric; observed repeated transitions=2; net life: PAPACIONU -4.
+  Same-turn ability records (including records outside the summarized chain): Marauding Blight-Priest=2, Starscape Cleric=2.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED TRIGGER CYCLES
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Starscape Cleric: casts=1; abilities=5 (triggered=5, activated=0) across turns [5, 5, 6, 7, 8, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=1
+  observed effects: life -1, synthetic event
+- Authority of the Consuls: casts=1; abilities=3 (triggered=3, activated=0) across turns [5, 6, 8, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=0
+  observed effects: life +1
+- Marauding Blight-Priest: casts=1; abilities=3 (triggered=3, activated=0) across turns [7, 7, 8, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=1
+  observed effects: life -1, synthetic event
+- Stormchaser's Talent: casts=1; abilities=1 (triggered=1, activated=0) across turns [6, 6]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Colorstorm Stallion: casts=1 across turns [8]
+- Deep-Cavern Bat: casts=1 across turns [3]
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [1]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Slickshot Show-Off: casts=1 across turns [8]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Deep-Cavern Bat (gian31) -> PAPACIONU; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Deep-Cavern Bat (gian31) -> PAPACIONU; unblocked in this observed snapshot
+  attacker: Starscape Cleric (gian31) -> PAPACIONU; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 5: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: PAPACIONU loses 1 life.
+- Turn 7: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: PAPACIONU loses 1 life.
+- Turn 7: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: PAPACIONU loses 1 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 160: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 161: Swamp | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 162: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Swamp | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 164: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 165: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 279: Flow State | controller=PAPACIONU | owner=PAPACIONU | zone=Hand (latest_object_observation)
+- 280: Slickshot Show-Off | controller=PAPACIONU | owner=PAPACIONU | zone=Stack (latest_object_observation)
+- 284: Colorstorm Stallion | controller=PAPACIONU | owner=PAPACIONU | zone=Hand (latest_object_observation)
+- 285: Spirebluff Canal | controller=PAPACIONU | owner=PAPACIONU | zone=Hand (latest_object_observation)
+- 340: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 341: object 341 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 342: Secret Identity | controller=PAPACIONU | owner=PAPACIONU | zone=Hand (latest_object_observation)
+- 343: Steam Vents | controller=PAPACIONU | owner=PAPACIONU | zone=Battlefield (latest_object_observation)
+- 344: Sleight of Hand | controller=PAPACIONU | owner=PAPACIONU | zone=Stack (latest_object_observation)
+- 346: Spirebluff Canal | controller=PAPACIONU | owner=PAPACIONU | zone=Battlefield (latest_object_observation)
+- 348: Sleight of Hand | controller=PAPACIONU | owner=PAPACIONU | zone=unknown (inferred unknown) (latest_object_observation)
+- 349: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 350: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 351: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 354: object 354 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 355: Slickshot Show-Off | controller=PAPACIONU | owner=PAPACIONU | zone=Exile (latest_object_observation)
+- 356: Flow State | controller=PAPACIONU | owner=PAPACIONU | zone=Hand (latest_object_observation)
+- 357: Spirebluff Canal | controller=PAPACIONU | owner=PAPACIONU | zone=Hand (latest_object_observation)
+- 358: Colorstorm Stallion | controller=PAPACIONU | owner=PAPACIONU | zone=Hand (latest_object_observation)
+- 359: Secret Identity | controller=PAPACIONU | owner=PAPACIONU | zone=Hand (latest_object_observation)
+- 360: Spirebluff Canal | controller=PAPACIONU | owner=PAPACIONU | zone=Hand (latest_object_observation)
+- 362: Spirebluff Canal | controller=PAPACIONU | owner=PAPACIONU | zone=Battlefield (latest_object_observation)
+- 363: Flow State | controller=PAPACIONU | owner=PAPACIONU | zone=Stack (latest_object_observation)
+- 367: Flow State | controller=PAPACIONU | owner=PAPACIONU | zone=unknown (inferred unknown) (latest_object_observation)
+- 368: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 369: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 370: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 372: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 375: object 375 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 377: Island | controller=PAPACIONU | owner=PAPACIONU | zone=Battlefield (latest_object_observation)
+- 381: Slickshot Show-Off | controller=PAPACIONU | owner=PAPACIONU | zone=Exile (latest_object_observation)
+- 382: Stormchaser's Talent | controller=PAPACIONU | owner=PAPACIONU | zone=Stack (latest_object_observation)
+- 384: object 384 | controller=PAPACIONU | owner=PAPACIONU | zone=unknown (inferred unknown) (latest_object_observation)
+- 385: Otter | controller=PAPACIONU | owner=PAPACIONU | zone=Battlefield (latest_object_observation)
+- 386: object 386 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 387: object 387 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 388: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 389: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 390: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 394: object 394 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 395: object 395 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 397: Colorstorm Stallion | controller=PAPACIONU | owner=PAPACIONU | zone=Battlefield (latest_object_observation)
+- 401: object 401 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 402: object 402 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 403: object 403 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 404: Slickshot Show-Off | controller=PAPACIONU | owner=PAPACIONU | zone=Battlefield (latest_object_observation)
+- 405: object 405 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 406: object 406 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 407: object 407 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+PAPACIONU: 25 total items
+  zones: Battlefield=7, Exile=2, Hand=9, Stack=4, unknown=3
+  objects: Spirebluff Canal x5, Flow State x4, Slickshot Show-Off x4, Colorstorm Stallion x3, Secret Identity x2, Sleight of Hand x2, Island, Otter, Steam Vents, Stormchaser's Talent, object 384
+gian31: 31 total items
+  zones: Battlefield=7, Hand=4, Stack=7, unknown=13
+  objects: Swamp x7, Authority of the Consuls x2, Deep-Cavern Bat x2, Marauding Blight-Priest x2, Scoured Barrens x2, Starscape Cleric x2, Bloodthirsty Conqueror, object 341, object 354, object 375, object 386, object 387
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (7): Deep-Cavern Bat, Marauding Blight-Priest, Scoured Barrens, Starscape Cleric, Swamp, Swamp, Swamp
+  Graveyard: 0 card(s)
+PAPACIONU:
+  Battlefield (7): Colorstorm Stallion, Island, Otter, Slickshot Show-Off, Spirebluff Canal, Spirebluff Canal, Steam Vents
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+16 objects have no resolved final zone and are omitted from the known board state.
+PAPACIONU: 3 unknown object(s)
+gian31: 13 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=13, Stack=11
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+PAPACIONU:
+  Battlefield (7): Steam Vents, Spirebluff Canal, Island, Stormchaser's Talent, Otter, Colorstorm Stallion, Slickshot Show-Off
+  Graveyard (2): Sleight of Hand, Flow State
+  Exile (1): Slickshot Show-Off
+gian31:
+  Battlefield (8): Scoured Barrens, Swamp, Deep-Cavern Bat, Swamp, Authority of the Consuls, Starscape Cleric, Swamp, Marauding Blight-Priest
+Known non-persistent entries (counts only):
+  PAPACIONU: Hand=3, Library=2, Limbo=1, Revealed=2
+  gian31: Hand=2, Limbo=2
+  unknown: Library=96, Limbo=7
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1
+- Turn 2: PAPACIONU Battlefield=1; PAPACIONU Graveyard=1; gian31 Battlefield=1
+- Turn 3: PAPACIONU Battlefield=1; PAPACIONU Graveyard=1; PAPACIONU Exile=1; gian31 Battlefield=3
+- Turn 4: PAPACIONU Battlefield=2; PAPACIONU Graveyard=2; PAPACIONU Exile=1; gian31 Battlefield=3
+- Turn 5: PAPACIONU Battlefield=2; PAPACIONU Graveyard=2; PAPACIONU Exile=1; gian31 Battlefield=6
+- Turn 6: PAPACIONU Battlefield=4; PAPACIONU Graveyard=2; PAPACIONU Exile=2; gian31 Battlefield=6
+- Turn 7: PAPACIONU Battlefield=4; PAPACIONU Graveyard=2; PAPACIONU Exile=2; gian31 Battlefield=8
+- Turn 8: PAPACIONU Battlefield=6; PAPACIONU Graveyard=2; PAPACIONU Exile=1; gian31 Battlefield=8
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 3: Deep-Cavern Bat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Stormchaser's Talent resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Colorstorm Stallion resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Slickshot Show-Off resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
