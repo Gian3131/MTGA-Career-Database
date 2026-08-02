@@ -1,0 +1,630 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, azor
+Seat map: Seat 1=gian31, Seat 2=azor
+Turn range (known): 1 - 9
+Records: 54
+Action chains: 16
+Winner: gian31
+Final life: {'gian31': 41, 'azor': 1}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 9 (Phase_Main1; Ability of Marauding Blight-Priest, seq 281).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 19 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 9 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9] (raw records=9; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 8 explicit Library -> Hand movement(s); named in the draw record=4, resolved through an explicit identity transition=3, unresolved=1.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 41, 'azor': 1}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 9 (Phase_Main1; Ability of Marauding Blight-Priest, seq 281).
+Last captured life snapshot: gian31 40 -> 41 (seq 279).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=12] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=341)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 341) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 341) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 339 [339] Hand (azor) -> Library (azor) (Put; GRE sequence 6).
+      Plains [340] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 9).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [341], Plains [340]
+
+Turn 2
+  - Ability of Tranquil Cove [observed_semantic_effect, seq=31] (active=azor, phase=Phase_Main1, controller=azor, owner=azor, source_object=344, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Tranquil Cove: azor gains 1 life.
+    net observed life change this turn: azor +1 (individual changes below; gains and losses may offset)
+    life: azor 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Aegis Turtle [343] Library (azor) -> Hand (azor) (Draw; GRE sequence 26).
+      Tranquil Cove [344] Hand (azor) -> Battlefield (PlayLand; GRE sequence 29).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [341], Plains [340]
+      azor: Battlefield: Tranquil Cove [344]
+
+Turn 3
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=52] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=348)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 348) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 348) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=54] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=341, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Godless Shrine [346] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 45).
+      Godless Shrine [347] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 49).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [341], Godless Shrine [347], Hinterland Sanctifier [348], Plains [340]
+      azor: Battlefield: Tranquil Cove [344]
+
+Turn 4
+  - Aegis Turtle [valid_resolution_no_immediate_mutation, seq=73] (active=azor, phase=Phase_Main1, controller=azor, owner=azor, source_object=352)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Aegis Turtle resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Aegis Turtle (object 352) Hand (azor) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Aegis Turtle (object 352) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tranquil Cove [351] Library (azor) -> Hand (azor) (Draw; GRE sequence 68).
+      Azorius Guildgate [354] Hand (azor) -> Battlefield (PlayLand; GRE sequence 74).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [341], Godless Shrine [347], Hinterland Sanctifier [348], Plains [340]
+      azor: Battlefield: Aegis Turtle [352], Azorius Guildgate [354], Tranquil Cove [344]
+
+Turn 5
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=94] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 357) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 357) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=97] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=99] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=101] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=341, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=103] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+    net observed life change this turn: azor -2; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    life: azor 21 -> 20
+    life: gian31 22 -> 23
+    life: azor 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [355] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 88).
+      Swamp [356] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 91).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [341], Godless Shrine [347], Hinterland Sanctifier [348], Marauding Blight-Priest [357], Plains [340], Swamp [356]
+      azor: Battlefield: Aegis Turtle [352], Azorius Guildgate [354], Tranquil Cove [344]
+
+Turn 6
+  - Ability of Tranquil Cove [observed_semantic_effect, seq=123] (active=azor, phase=Phase_Main1, controller=azor, owner=azor, source_object=366, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Tranquil Cove: azor gains 1 life.
+  - Healer's Hawk [valid_resolution_no_immediate_mutation, seq=126] (active=azor, phase=Phase_Main1, controller=azor, owner=azor, source_object=368)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Healer's Hawk resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Healer's Hawk (object 368) Hand (azor) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Healer's Hawk (object 368) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: azor +1 (individual changes below; gains and losses may offset)
+    life: azor 19 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 365 [365] Library (azor) -> Hand (azor) (Draw; GRE sequence 118).
+      Tranquil Cove [366] Hand (azor) -> Battlefield (PlayLand; GRE sequence 121).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [341], Godless Shrine [347], Hinterland Sanctifier [348], Marauding Blight-Priest [357], Plains [340], Swamp [356]
+      azor: Battlefield: Aegis Turtle [352], Azorius Guildgate [354], Healer's Hawk [368], Tranquil Cove [344], Tranquil Cove [366]
+
+Turn 7
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=146] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=371, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=148] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=151] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=374)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 374) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 374) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=155] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=374, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Aegis Turtle; gian31 gains 2 life.
+      explicit effect object references: Aegis Turtle [352], Aegis Turtle [379] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Aegis Turtle (object 379) Battlefield -> Exile (Exile; shared object ID)
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=157] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Hinterland Sanctifier [348] (unblocked, observed P/T 1/2), Marauding Blight-Priest [357] (unblocked, observed P/T 3/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: azor -6; gian31 +3 (individual changes below; gains and losses may offset)
+    life: gian31 23 -> 24
+    life: azor 20 -> 19
+    life: gian31 24 -> 26
+    life: azor 19 -> 18
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): azor 18 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodthirsty Conqueror [370] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 141).
+      Scoured Barrens [371] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 144).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [341], Godless Shrine [347], Hinterland Sanctifier [348], Makeshift Binding [374], Marauding Blight-Priest [357], Plains [340], Scoured Barrens [371], Swamp [356]
+      azor: Battlefield: Azorius Guildgate [354], Healer's Hawk [368], Tranquil Cove [344], Tranquil Cove [366]; Exile: Aegis Turtle [379]
+
+Turn 8
+  - Ability of Tranquil Cove [observed_semantic_effect, seq=183] (active=azor, phase=Phase_Main1, controller=azor, owner=azor, source_object=382, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Tranquil Cove: azor gains 1 life.
+  - Empyrean Eagle [valid_resolution_no_immediate_mutation, seq=186] (active=azor, phase=Phase_Main1, controller=azor, owner=azor, source_object=384)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Empyrean Eagle resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Empyrean Eagle (object 384) Hand (azor) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Empyrean Eagle (object 384) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=azor; frames: DeclareAttack -> DeclareBlock):
+      attackers: Healer's Hawk [368] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: azor +3; gian31 -2 (individual changes below; gains and losses may offset)
+    life: azor 14 -> 15
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 26 -> 24
+    life (gain observed during combat phase; exact source unavailable): azor 15 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tranquil Cove [381] Library (azor) -> Hand (azor) (Draw; GRE sequence 178).
+      Tranquil Cove [382] Hand (azor) -> Battlefield (PlayLand; GRE sequence 181).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [341], Godless Shrine [347], Hinterland Sanctifier [348], Makeshift Binding [374], Marauding Blight-Priest [357], Plains [340], Scoured Barrens [371], Swamp [356]
+      azor: Battlefield: Azorius Guildgate [354], Empyrean Eagle [384], Healer's Hawk [368], Tranquil Cove [344], Tranquil Cove [366], Tranquil Cove [382]; Exile: Aegis Turtle [379]
+
+Turn 9
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation, seq=212] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 390) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 390) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=215] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=217] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=219] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=221] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=223] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=225] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=227] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=229] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=231] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=233] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=235] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=237] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=239] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=241] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=243] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=245] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=247] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=249] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=251] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=253] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=255] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=257] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=259] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=261] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=263] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=265] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=267] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=269] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=271] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=273] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=275] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=277] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=279] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=281] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=357, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: azor loses 1 life.
+    net observed life change this turn: azor -16; gian31 +17 (individual changes below; gains and losses may offset)
+    life: gian31 24 -> 25
+    life: azor 17 -> 16
+    life: gian31 25 -> 26
+    life: azor 16 -> 15
+    life: gian31 26 -> 27
+    life: azor 15 -> 14
+    life: gian31 27 -> 28
+    life: azor 14 -> 13
+    life: gian31 28 -> 29
+    life: azor 13 -> 12
+    life: gian31 29 -> 30
+    life: azor 12 -> 11
+    life: gian31 30 -> 31
+    life: azor 11 -> 10
+    life: gian31 31 -> 32
+    life: azor 10 -> 9
+    life: gian31 32 -> 33
+    life: azor 9 -> 8
+    life: gian31 33 -> 34
+    life: azor 8 -> 7
+    life: gian31 34 -> 35
+    life: azor 7 -> 6
+    life: gian31 35 -> 36
+    life: azor 6 -> 5
+    life: gian31 36 -> 37
+    life: azor 5 -> 4
+    life: gian31 37 -> 38
+    life: azor 4 -> 3
+    life: gian31 38 -> 39
+    life: azor 3 -> 2
+    life: gian31 39 -> 40
+    life: azor 2 -> 1
+    life: gian31 40 -> 41
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [388] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 206).
+      Swamp [389] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 209).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodthirsty Conqueror [390], Case of the Uneaten Feast [341], Godless Shrine [347], Hinterland Sanctifier [348], Makeshift Binding [374], Marauding Blight-Priest [357], Plains [340], Scoured Barrens [371], Swamp [356], Swamp [389]
+      azor: Battlefield: Azorius Guildgate [354], Empyrean Eagle [384], Healer's Hawk [368], Tranquil Cove [344], Tranquil Cove [366], Tranquil Cove [382]; Exile: Aegis Turtle [379]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 8, seq 196, Phase_Main1: azor 15 -> 17. Combat declaration observed; exact assignment unavailable. Previous captured action: Empyrean Eagle.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 6: object 339 [owner/controller metadata unavailable] moves Hand (azor) -> Library (azor) (Put).
+- Turn 1, seq 9: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 1, seq 10: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 1, seq 12: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 26: Aegis Turtle [owner/controller metadata unavailable] moves Library (azor) -> Hand (azor) (Draw).
+- Turn 2, seq 29: Tranquil Cove [owner=azor, controller=azor] moves Hand (azor) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Godless Shrine [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 49: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 50: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 52: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 68: Tranquil Cove [owner/controller metadata unavailable] moves Library (azor) -> Hand (azor) (Draw).
+- Turn 4, seq 71: Aegis Turtle [owner=azor, controller=azor] moves Hand (azor) -> Stack (CastSpell).
+- Turn 4, seq 73: Aegis Turtle [owner=azor, controller=azor] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 74: Azorius Guildgate [owner=azor, controller=azor] moves Hand (azor) -> Battlefield (PlayLand).
+- Turn 5, seq 88: Scoured Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 91: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 92: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 94: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 118: object 365 [owner/controller metadata unavailable] moves Library (azor) -> Hand (azor) (Draw).
+- Turn 6, seq 121: Tranquil Cove [owner=azor, controller=azor] moves Hand (azor) -> Battlefield (PlayLand).
+- Turn 6, seq 124: Healer's Hawk [owner=azor, controller=azor] moves Hand (azor) -> Stack (CastSpell).
+- Turn 6, seq 126: Healer's Hawk [owner=azor, controller=azor] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 141: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 144: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 149: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 151: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 155: Aegis Turtle [owner=azor, controller=azor] moves Battlefield -> Exile (Exile).
+- Turn 8, seq 178: Tranquil Cove [owner/controller metadata unavailable] moves Library (azor) -> Hand (azor) (Draw).
+- Turn 8, seq 181: Tranquil Cove [owner=azor, controller=azor] moves Hand (azor) -> Battlefield (PlayLand).
+- Turn 8, seq 184: Empyrean Eagle [owner=azor, controller=azor] moves Hand (azor) -> Stack (CastSpell).
+- Turn 8, seq 186: Empyrean Eagle [owner=azor, controller=azor] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 206: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 209: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 210: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 212: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 6: object 282 becomes object 339 [object 282].
+- Turn 1, seq 9: object 162 becomes object 340 [Plains].
+- Turn 1, seq 10: object 164 becomes object 341 [Case of the Uneaten Feast].
+- Turn 2, seq 26: object 286 becomes object 343 [Aegis Turtle].
+- Turn 2, seq 29: object 280 becomes object 344 [Tranquil Cove].
+- Turn 3, seq 45: object 166 becomes object 346 [Godless Shrine].
+- Turn 3, seq 49: object 346 becomes object 347 [Godless Shrine].
+- Turn 3, seq 50: object 165 becomes object 348 [Hinterland Sanctifier].
+- Turn 4, seq 68: object 287 becomes object 351 [Tranquil Cove].
+- Turn 4, seq 71: object 343 becomes object 352 [Aegis Turtle].
+- Turn 4, seq 74: object 281 becomes object 354 [Azorius Guildgate].
+- Turn 5, seq 88: object 167 becomes object 355 [Scoured Barrens].
+- Turn 5, seq 91: object 160 becomes object 356 [Swamp].
+- Turn 5, seq 92: object 159 becomes object 357 [Marauding Blight-Priest].
+- Turn 6, seq 118: object 288 becomes object 365 [object 288].
+- Turn 6, seq 121: object 351 becomes object 366 [Tranquil Cove].
+- Turn 6, seq 124: object 284 becomes object 368 [Healer's Hawk].
+- Turn 7, seq 141: object 168 becomes object 370 [Bloodthirsty Conqueror].
+- Turn 7, seq 144: object 355 becomes object 371 [Scoured Barrens].
+- Turn 7, seq 149: object 163 becomes object 374 [Makeshift Binding].
+- Turn 7, seq 155: object 352 becomes object 379 [Aegis Turtle].
+- Turn 8, seq 178: object 289 becomes object 381 [Tranquil Cove].
+- Turn 8, seq 181: object 381 becomes object 382 [Tranquil Cove].
+- Turn 8, seq 184: object 283 becomes object 384 [Empyrean Eagle].
+- Turn 9, seq 206: object 169 becomes object 388 [Swamp].
+- Turn 9, seq 209: object 388 becomes object 389 [Swamp].
+- Turn 9, seq 210: object 370 becomes object 390 [Bloodthirsty Conqueror].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Plains (object 340) from Hand (gian31) to Battlefield.
+- Turn 2: azor plays Tranquil Cove (object 344) from Hand (azor) to Battlefield.
+- Turn 3: gian31 plays Godless Shrine (object 347) from Hand (gian31) to Battlefield.
+- Turn 4: azor plays Azorius Guildgate (object 354) from Hand (azor) to Battlefield.
+- Turn 5: gian31 plays Swamp (object 356) from Hand (gian31) to Battlefield.
+- Turn 6: azor plays Tranquil Cove (object 366) from Hand (azor) to Battlefield.
+- Turn 7: gian31 plays Scoured Barrens (object 371) from Hand (gian31) to Battlefield.
+- Turn 8: azor plays Tranquil Cove (object 382) from Hand (azor) to Battlefield.
+- Turn 9: gian31 plays Swamp (object 389) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- Turn 9: Marauding Blight-Priest -> Bloodthirsty Conqueror; observed repeated transitions=16; net life: azor -16, gian31 +16.
+  Same-turn ability records (including records outside the summarized chain): Bloodthirsty Conqueror=16, Marauding Blight-Priest=17.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED TRIGGER CYCLES
+------------------------------------------------------------
+- Turn 9: Marauding Blight-Priest -> Bloodthirsty Conqueror; observed repetitions=16 (cycle length 2).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Marauding Blight-Priest: casts=1; abilities=21 (triggered=21, activated=0) across turns [5, 5, 5, 7, 7, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=21, other=3
+  observed effects: life -1, synthetic event
+- Bloodthirsty Conqueror: casts=1; abilities=16 (triggered=16, activated=0) across turns [9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=16, other=0
+  observed effects: life +1
+- Case of the Uneaten Feast: casts=1; abilities=2 (triggered=2, activated=0) across turns [1, 3, 5]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Hinterland Sanctifier: casts=1; abilities=2 (triggered=2, activated=0) across turns [3, 5, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Tranquil Cove: abilities=3 (triggered=3, activated=0) across turns [2, 6, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=0
+  observed effects: life +1
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [7, 7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Aegis Turtle: casts=1 across turns [4]
+- Empyrean Eagle: casts=1 across turns [8]
+- Healer's Hawk: casts=1 across turns [6]
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 7 - DeclareAttack (active=gian31)
+  attacker: Hinterland Sanctifier (gian31) -> azor; unblocked in this observed snapshot
+  attacker: Marauding Blight-Priest (gian31) -> azor; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=azor)
+  attacker: Healer's Hawk (azor) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 160: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 161: Plains | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 162: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 340: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 341: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 344: Tranquil Cove | controller=azor | owner=azor | zone=Battlefield (latest_object_observation)
+- 345: object 345 | controller=azor | owner=azor | zone=unknown (inferred unknown) (latest_object_observation)
+- 346: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 347: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 348: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 350: object 350 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 352: Aegis Turtle | controller=azor | owner=azor | zone=Battlefield (latest_object_observation)
+- 354: Azorius Guildgate | controller=azor | owner=azor | zone=Battlefield (latest_object_observation)
+- 355: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 356: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 357: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 361: object 361 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 362: object 362 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 363: object 363 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 364: object 364 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 366: Tranquil Cove | controller=azor | owner=azor | zone=Battlefield (latest_object_observation)
+- 367: object 367 | controller=azor | owner=azor | zone=unknown (inferred unknown) (latest_object_observation)
+- 368: Healer's Hawk | controller=azor | owner=azor | zone=Battlefield (latest_object_observation)
+- 370: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 371: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 372: object 372 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 373: object 373 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 374: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 378: object 378 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 379: Aegis Turtle | controller=azor | owner=azor | zone=Exile (latest_object_observation)
+- 380: object 380 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 382: Tranquil Cove | controller=azor | owner=azor | zone=Battlefield (latest_object_observation)
+- 383: object 383 | controller=azor | owner=azor | zone=unknown (inferred unknown) (latest_object_observation)
+- 384: Empyrean Eagle | controller=azor | owner=azor | zone=Battlefield (latest_object_observation)
+- 388: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 389: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 390: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 396: object 396 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 397: object 397 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 398: object 398 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 399: object 399 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 400: object 400 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 401: object 401 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 402: object 402 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 403: object 403 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 404: object 404 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 405: object 405 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 406: object 406 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 407: object 407 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 408: object 408 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 409: object 409 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 410: object 410 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 411: object 411 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 412: object 412 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 413: object 413 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 414: object 414 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 415: object 415 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 416: object 416 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 417: object 417 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 418: object 418 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 419: object 419 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 420: object 420 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 421: object 421 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 422: object 422 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 423: object 423 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 424: object 424 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 425: object 425 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 426: object 426 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 427: object 427 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 428: object 428 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 429: object 429 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 430: object 430 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 431: object 431 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+azor: 11 total items
+  zones: Battlefield=7, Exile=1, unknown=3
+  objects: Tranquil Cove x3, Aegis Turtle x2, Azorius Guildgate, Empyrean Eagle, Healer's Hawk, object 345, object 367, object 383
+gian31: 66 total items
+  zones: Battlefield=8, Hand=10, Stack=2, unknown=46
+  objects: Swamp x4, Plains x3, Bloodthirsty Conqueror x2, Case of the Uneaten Feast x2, Godless Shrine x2, Hinterland Sanctifier x2, Makeshift Binding x2, Marauding Blight-Priest x2, Scoured Barrens x2, object 350, object 361, object 362
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (8): Bloodthirsty Conqueror, Godless Shrine, Hinterland Sanctifier, Marauding Blight-Priest, Plains, Scoured Barrens, Swamp, Swamp
+  Graveyard: 0 card(s)
+azor:
+  Battlefield (7): Aegis Turtle, Azorius Guildgate, Empyrean Eagle, Healer's Hawk, Tranquil Cove, Tranquil Cove, Tranquil Cove
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+49 objects have no resolved final zone and are omitted from the known board state.
+azor: 3 unknown object(s)
+gian31: 46 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=10, Stack=2
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+azor:
+  Battlefield (6): Tranquil Cove, Azorius Guildgate, Tranquil Cove, Healer's Hawk, Tranquil Cove, Empyrean Eagle
+  Exile (1): Aegis Turtle
+gian31:
+  Battlefield (10): Plains, Case of the Uneaten Feast, Godless Shrine, Hinterland Sanctifier, Swamp, Marauding Blight-Priest, Scoured Barrens, Makeshift Binding, Swamp, Bloodthirsty Conqueror
+Known non-persistent entries (counts only):
+  azor: Hand=1, Library=1, Limbo=1
+  gian31: Hand=1, Limbo=4, Pending=1, Stack=1
+  unknown: Hand=2, Library=98, Limbo=5
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=2
+- Turn 2: azor Battlefield=1; gian31 Battlefield=2
+- Turn 3: azor Battlefield=1; gian31 Battlefield=4
+- Turn 4: azor Battlefield=3; gian31 Battlefield=4
+- Turn 5: azor Battlefield=3; gian31 Battlefield=6
+- Turn 6: azor Battlefield=5; gian31 Battlefield=6
+- Turn 7: azor Battlefield=4; azor Exile=1; gian31 Battlefield=8
+- Turn 8: azor Battlefield=6; azor Exile=1; gian31 Battlefield=8
+- Turn 9: azor Battlefield=6; azor Exile=1; gian31 Battlefield=10
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Aegis Turtle resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Healer's Hawk resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Empyrean Eagle resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
