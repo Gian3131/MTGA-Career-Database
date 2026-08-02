@@ -1,0 +1,260 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, FlareonXIII
+Seat map: Seat 1=gian31, Seat 2=FlareonXIII
+Turn range (known): 1 - 5
+Records: 6
+Action chains: 5
+Winner: FlareonXIII
+Final life: {'gian31': 16, 'FlareonXIII': 20}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 4 (Phase_Combat, Step_DeclareAttack; Ability of Hired Claw, seq 86).
+Later numbered GRE record(s): 4 after action sequence 86 across turn(s) [5]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 11 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 4 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4] (raw records=4; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 4 explicit Library -> Hand movement(s); named in the draw record=2, resolved through an explicit identity transition=1, unresolved=1.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: FlareonXIII; observed final life totals: {'gian31': 16, 'FlareonXIII': 20}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 4 (Phase_Combat, Step_DeclareAttack; Ability of Hired Claw, seq 86).
+Last captured life snapshot: gian31 18 -> 16 (seq 90).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [289] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [289]
+
+Turn 2
+  - Hired Claw [valid_resolution_no_immediate_mutation, seq=27] (active=FlareonXIII, phase=Phase_Main1, controller=FlareonXIII, owner=FlareonXIII, source_object=292)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hired Claw resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hired Claw (object 292) Hand (FlareonXIII) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hired Claw (object 292) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 290 [290] Library (FlareonXIII) -> Hand (FlareonXIII) (Draw; GRE sequence 21).
+      Mountain [291] Hand (FlareonXIII) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [289]
+      FlareonXIII: Battlefield: Hired Claw [292], Mountain [291]
+
+Turn 3
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=48] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=296)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 296) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 296) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [294] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 41).
+      Swamp [295] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [289], Starscape Cleric [296], Swamp [295]
+      FlareonXIII: Battlefield: Hired Claw [292], Mountain [291]
+
+Turn 4
+  - Hired Claw [valid_resolution_no_immediate_mutation, seq=68] (active=FlareonXIII, phase=Phase_Main1, controller=FlareonXIII, owner=FlareonXIII, source_object=301)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hired Claw resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hired Claw (object 301) Hand (FlareonXIII) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hired Claw (object 301) Stack -> Battlefield (Resolve; shared object ID)
+  - Quicksilver, Brash Blur [valid_resolution_no_immediate_mutation, seq=71] (active=FlareonXIII, phase=Phase_Main1, controller=FlareonXIII, owner=FlareonXIII, source_object=303)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Quicksilver, Brash Blur resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Quicksilver, Brash Blur (object 303) Hand (FlareonXIII) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Quicksilver, Brash Blur (object 303) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hired Claw [observed_semantic_effect, seq=84] (active=FlareonXIII, phase=Phase_Combat, step=Step_DeclareAttack, controller=FlareonXIII, owner=FlareonXIII, source_object=301, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Hired Claw: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 1] (role/targeting only where the protocol identifies it)
+  - Ability of Hired Claw [observed_semantic_effect, seq=86] (active=FlareonXIII, phase=Phase_Combat, step=Step_DeclareAttack, controller=FlareonXIII, owner=FlareonXIII, source_object=292, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Hired Claw: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 1] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=FlareonXIII; frames: DeclareAttack -> DeclareBlock):
+      attackers: Hired Claw [292] (unblocked, observed P/T 1/2), Quicksilver, Brash Blur [303] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -4 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Hired Claw; direct protocol link unavailable): gian31 20 -> 19
+    life (semantically attributed to Hired Claw; direct protocol link unavailable): gian31 19 -> 18
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 18 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Quicksilver, Brash Blur [299] Library (FlareonXIII) -> Hand (FlareonXIII) (Draw; GRE sequence 62).
+      Fire Nation Palace [300] Hand (FlareonXIII) -> Battlefield (PlayLand; GRE sequence 65).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [289], Starscape Cleric [296], Swamp [295]
+      FlareonXIII: Battlefield: Fire Nation Palace [300], Hired Claw [292], Hired Claw [301], Mountain [291], Quicksilver, Brash Blur [303]
+
+Turn 5
+    additional protocol-observed zone movements not assigned to an action chain:
+      Unholy Annex // Ritual Chamber [309] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 100).
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 4, seq 84, Phase_Combat: gian31 20 -> 19; gian31 19 -> 18. Semantic attribution: Hired Claw; direct protocol link unavailable. Previous captured action: Hired Claw.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 21: object 290 [owner/controller metadata unavailable] moves Library (FlareonXIII) -> Hand (FlareonXIII) (Draw).
+- Turn 2, seq 24: Mountain [owner=FlareonXIII, controller=FlareonXIII] moves Hand (FlareonXIII) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Hired Claw [owner=FlareonXIII, controller=FlareonXIII] moves Hand (FlareonXIII) -> Stack (CastSpell).
+- Turn 2, seq 27: Hired Claw [owner=FlareonXIII, controller=FlareonXIII] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 41: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 44: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 48: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 62: Quicksilver, Brash Blur [owner/controller metadata unavailable] moves Library (FlareonXIII) -> Hand (FlareonXIII) (Draw).
+- Turn 4, seq 65: Fire Nation Palace [owner=FlareonXIII, controller=FlareonXIII] moves Hand (FlareonXIII) -> Battlefield (PlayLand).
+- Turn 4, seq 66: Hired Claw [owner=FlareonXIII, controller=FlareonXIII] moves Hand (FlareonXIII) -> Stack (CastSpell).
+- Turn 4, seq 68: Hired Claw [owner=FlareonXIII, controller=FlareonXIII] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 69: Quicksilver, Brash Blur [owner=FlareonXIII, controller=FlareonXIII] moves Hand (FlareonXIII) -> Stack (CastSpell).
+- Turn 4, seq 71: Quicksilver, Brash Blur [owner=FlareonXIII, controller=FlareonXIII] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 100: Unholy Annex // Ritual Chamber [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 173 becomes object 289 [Plains].
+- Turn 2, seq 21: object 236 becomes object 290 [object 236].
+- Turn 2, seq 24: object 233 becomes object 291 [Mountain].
+- Turn 2, seq 25: object 232 becomes object 292 [Hired Claw].
+- Turn 3, seq 41: object 176 becomes object 294 [Makeshift Binding].
+- Turn 3, seq 44: object 175 becomes object 295 [Swamp].
+- Turn 3, seq 45: object 174 becomes object 296 [Starscape Cleric].
+- Turn 4, seq 62: object 237 becomes object 299 [Quicksilver, Brash Blur].
+- Turn 4, seq 65: object 229 becomes object 300 [Fire Nation Palace].
+- Turn 4, seq 66: object 230 becomes object 301 [Hired Claw].
+- Turn 4, seq 69: object 299 becomes object 303 [Quicksilver, Brash Blur].
+- Turn 5, seq 100: object 177 becomes object 309 [Unholy Annex // Ritual Chamber].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Plains (object 289) from Hand (gian31) to Battlefield.
+- Turn 2: FlareonXIII plays Mountain (object 291) from Hand (FlareonXIII) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 295) from Hand (gian31) to Battlefield.
+- Turn 4: FlareonXIII plays Fire Nation Palace (object 300) from Hand (FlareonXIII) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED TRIGGER CYCLES
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Hired Claw: casts=2; abilities=2 (triggered=2, activated=0) across turns [2, 4, 4, 4]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=2, life_changes=2, other=1
+  observed effects: 1 damage, life -1, synthetic event
+- Quicksilver, Brash Blur: casts=1 across turns [4]
+- Starscape Cleric: casts=1 across turns [3]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 4 - DeclareAttack, DeclareBlock (active=FlareonXIII)
+  attacker: Hired Claw (FlareonXIII) -> gian31; unblocked in this observed snapshot
+  attacker: Quicksilver, Brash Blur (FlareonXIII) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 4: Ability of Hired Claw (active=FlareonXIII) - Ability of Hired Claw: gian31 takes 1 damage; gian31 loses 1 life.
+- Turn 4: Ability of Hired Claw (active=FlareonXIII) - Ability of Hired Claw: gian31 takes 1 damage; gian31 loses 1 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 67: Unholy Annex | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 68: Ritual Chamber | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 169: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 170: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 171: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 172: Unholy Annex // Ritual Chamber | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 173: Plains | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 174: Starscape Cleric | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 175: Swamp | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 289: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 291: Mountain | controller=FlareonXIII | owner=FlareonXIII | zone=Battlefield (latest_object_observation)
+- 292: Hired Claw | controller=FlareonXIII | owner=FlareonXIII | zone=Battlefield (latest_object_observation)
+- 294: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 295: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 296: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 300: Fire Nation Palace | controller=FlareonXIII | owner=FlareonXIII | zone=Battlefield (latest_object_observation)
+- 301: Hired Claw | controller=FlareonXIII | owner=FlareonXIII | zone=Battlefield (latest_object_observation)
+- 303: Quicksilver, Brash Blur | controller=FlareonXIII | owner=FlareonXIII | zone=Battlefield (latest_object_observation)
+- 307: object 307 | controller=FlareonXIII | owner=FlareonXIII | zone=unknown (inferred unknown) (latest_object_observation)
+- 308: object 308 | controller=FlareonXIII | owner=FlareonXIII | zone=unknown (inferred unknown) (latest_object_observation)
+- 309: Unholy Annex // Ritual Chamber | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 310: Unholy Annex | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 311: Ritual Chamber | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+FlareonXIII: 7 total items
+  zones: Battlefield=5, unknown=2
+  objects: Hired Claw x2, Fire Nation Palace, Mountain, Quicksilver, Brash Blur, object 307, object 308
+gian31: 16 total items
+  zones: Battlefield=3, Hand=10, unknown=3
+  objects: Plains x2, Ritual Chamber x2, Starscape Cleric x2, Swamp x2, Unholy Annex x2, Unholy Annex // Ritual Chamber x2, Bloodletter of Aclazotz, Enduring Tenacity, Makeshift Binding, Marauding Blight-Priest
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (3): Plains, Starscape Cleric, Swamp
+  Graveyard: 0 card(s)
+FlareonXIII:
+  Battlefield (5): Fire Nation Palace, Hired Claw, Hired Claw, Mountain, Quicksilver, Brash Blur
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+5 objects have no resolved final zone and are omitted from the known board state.
+FlareonXIII: 2 unknown object(s)
+gian31: 3 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=10
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+FlareonXIII:
+  Battlefield (5): Mountain, Hired Claw, Fire Nation Palace, Hired Claw, Quicksilver, Brash Blur
+gian31:
+  Battlefield (3): Plains, Swamp, Starscape Cleric
+Known non-persistent entries (counts only):
+  FlareonXIII: Hand=1
+  gian31: Hand=10, Limbo=2
+  unknown: Hand=3, Library=102, Limbo=6
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1
+- Turn 2: FlareonXIII Battlefield=2; gian31 Battlefield=1
+- Turn 3: FlareonXIII Battlefield=2; gian31 Battlefield=3
+- Turn 4: FlareonXIII Battlefield=5; gian31 Battlefield=3
+- Turn 5: FlareonXIII Battlefield=5; gian31 Battlefield=3
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Hired Claw resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Hired Claw resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Quicksilver, Brash Blur resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
