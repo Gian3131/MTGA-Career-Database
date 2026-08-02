@@ -1,0 +1,777 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: HorseChoker, gian31
+Seat map: Seat 1=HorseChoker, Seat 2=gian31
+Turn range (known): 1 - 12
+Records: 44
+Action chains: 28
+Winner: HorseChoker
+Final life: {'HorseChoker': 26, 'gian31': -3}
+Lethal life snapshot: gian31 9 -> -3 (at least 12 damage/life loss observed; exact source may be unavailable).
+Match conclusion: Life total reached 0 observed for gian31.
+Last captured action before match-result payload: Turn 12 (Phase_Combat, Step_DeclareAttack; Ability of Arabella, Abandoned Doll, seq 337).
+Later numbered GRE record(s): 4 after action sequence 337 across turn(s) [12]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 37 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 10 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 8, 9, 10, 12] (raw records=10; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 18 explicit Library -> Hand movement(s); named in the draw record=7, resolved through an explicit identity transition=6, unresolved=5.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: HorseChoker; observed final life totals: {'HorseChoker': 26, 'gian31': -3}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 12 (Phase_Combat, Step_DeclareAttack; Ability of Arabella, Abandoned Doll, seq 337).
+Last captured life mutation: HorseChoker 20 -> 26 (seq 344).
+Observed active tokens: Warrior [409] controller=HorseChoker, created Turn 12, last observed Turn 12 seq 330, P/T 1/1 (current zone unconfirmed); Warrior [410] controller=HorseChoker, created Turn 12, last observed Turn 12 seq 330, P/T 1/1 (current zone unconfirmed).
+Terminal condition observed: gian31 reached -3 life; exact lethal-source coverage is reported separately.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=11] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 288) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 288) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Godless Shrine [287] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 8).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Godless Shrine [287]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Elspeth, Storm Slayer [290] Library (HorseChoker) -> Hand (HorseChoker) (Draw; GRE sequence 25).
+      Dalkovan Encampment [291] Hand (HorseChoker) -> Battlefield (PlayLand; GRE sequence 28).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Godless Shrine [287]
+      HorseChoker: Battlefield: Dalkovan Encampment [291]
+
+Turn 3
+  - Leech Collector [valid_resolution_no_immediate_mutation, seq=48] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=294)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Leech Collector resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Leech Collector (object 294) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leech Collector (object 294) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=50] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=52] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=294, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [292] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 42).
+      Swamp [293] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 45).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Godless Shrine [287], Leech Collector [294], Swamp [293]
+      HorseChoker: Battlefield: Dalkovan Encampment [291]
+
+Turn 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [300] Library (HorseChoker) -> Hand (HorseChoker) (Draw; GRE sequence 66).
+      Plains [301] Hand (HorseChoker) -> Battlefield (PlayLand; GRE sequence 69).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Godless Shrine [287], Leech Collector [294], Swamp [293]
+      HorseChoker: Battlefield: Dalkovan Encampment [291], Plains [301]
+
+Turn 5
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=89] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=304)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 304) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 304) Stack -> Battlefield (Resolve; shared object ID)
+  - Leech Collector [valid_resolution_no_immediate_mutation, seq=92] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=306)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Leech Collector resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Leech Collector (object 306) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leech Collector (object 306) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=95] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=304, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=98] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=306, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=100] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=294, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=102] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Leech Collector [294] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: HorseChoker -2; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 19 -> 20
+    life: gian31 20 -> 21
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): HorseChoker 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Sinister Monolith [302] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 83).
+      Swamp [303] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 86).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Case of the Uneaten Feast [304], Godless Shrine [287], Leech Collector [294], Leech Collector [306], Swamp [293], Swamp [303]
+      HorseChoker: Battlefield: Dalkovan Encampment [291], Plains [301]
+
+Turn 6
+  - Enduring Innocence [valid_resolution_no_immediate_mutation, seq=128] (active=HorseChoker, phase=Phase_Main1, controller=HorseChoker, owner=HorseChoker, source_object=316)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Enduring Innocence resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Enduring Innocence (object 316) Hand (HorseChoker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Enduring Innocence (object 316) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Voice of Victory [314] Library (HorseChoker) -> Hand (HorseChoker) (Draw; GRE sequence 122).
+      Dark Fortress [315] Hand (HorseChoker) -> Battlefield (PlayLand; GRE sequence 125).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Case of the Uneaten Feast [304], Godless Shrine [287], Leech Collector [294], Leech Collector [306], Swamp [293], Swamp [303]
+      HorseChoker: Battlefield: Dalkovan Encampment [291], Dark Fortress [315], Enduring Innocence [316], Plains [301]
+
+Turn 7
+  - Bloodletting [observed_semantic_effect, seq=147] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=321)
+      effects: life -2
+      narrative: Bloodletting: HorseChoker loses 2 life.
+      protocol-linked zone transfer: Bloodletting (object 321) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Bloodletting (object 323) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 321 -> transfer object 323 (explicit GRE ObjectIdChanged chain).
+  - Bloodletting [observed_semantic_effect, seq=150] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=324)
+      effects: life -2
+      narrative: Bloodletting: HorseChoker loses 2 life.
+      protocol-linked zone transfer: Bloodletting (object 324) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Bloodletting (object 326) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 324 -> transfer object 326 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: HorseChoker -4 (individual changes below; gains and losses may offset)
+    life: HorseChoker 18 -> 16
+    life: HorseChoker 16 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodthirsty Conqueror [320] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 142).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Case of the Uneaten Feast [304], Godless Shrine [287], Leech Collector [294], Leech Collector [306], Swamp [293], Swamp [303]; Graveyard: Bloodletting [323], Bloodletting [326]
+      HorseChoker: Battlefield: Dalkovan Encampment [291], Dark Fortress [315], Enduring Innocence [316], Plains [301]
+
+Turn 8
+  - Cinder Strike [observed_semantic_effect, seq=174] (active=HorseChoker, phase=Phase_Main1, controller=HorseChoker, owner=HorseChoker, source_object=329)
+      effects: 2 damage
+      narrative: Cinder Strike: Leech Collector takes 2 damage.
+      explicit effect object references: Leech Collector [294] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Cinder Strike (object 329) Hand (HorseChoker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Cinder Strike (object 331) Stack -> Graveyard (HorseChoker) (Resolve; shared object ID)
+      identity continuity: source object 329 -> transfer object 331 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Leech Collector (object 332) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+  - Voice of Victory [valid_resolution_no_immediate_mutation, seq=177] (active=HorseChoker, phase=Phase_Main1, controller=HorseChoker, owner=HorseChoker, source_object=333)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Voice of Victory resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Voice of Victory (object 333) Hand (HorseChoker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Voice of Victory (object 333) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Enduring Innocence [observed_semantic_effect, seq=179] (active=HorseChoker, phase=Phase_Main1, controller=HorseChoker, owner=HorseChoker, source_object=316, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Enduring Innocence: draw.
+      explicit effect object references: object 178 [178], object 338 [338] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 338 (object 338) Library (HorseChoker) -> Hand (HorseChoker) (Draw; shared object ID)
+  Combat snapshots observed (active=HorseChoker; frames: DeclareAttack):
+      attackers: Enduring Innocence [316] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: HorseChoker +2; gian31 -2 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): HorseChoker 14 -> 16
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 21 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [327] Library (HorseChoker) -> Hand (HorseChoker) (Draw; GRE sequence 165).
+      Plains [328] Hand (HorseChoker) -> Battlefield (PlayLand; GRE sequence 168).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Case of the Uneaten Feast [304], Godless Shrine [287], Leech Collector [306], Swamp [293], Swamp [303]; Graveyard: Bloodletting [323], Bloodletting [326], Leech Collector [332]
+      HorseChoker: Battlefield: Dalkovan Encampment [291], Dark Fortress [315], Enduring Innocence [316], Plains [301], Plains [328], Voice of Victory [333]; Graveyard: Cinder Strike [331]
+
+Turn 9
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=205] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=340, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=207] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=306, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  - Unholy Annex // Ritual Chamber [valid_resolution_no_immediate_mutation, seq=210] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=344)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Unholy Annex // Ritual Chamber resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Unholy Annex // Ritual Chamber (object 344) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Unholy Annex // Ritual Chamber (object 344) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect, seq=223] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=344, source_last_explicit_zone=Battlefield)
+      effects: draw, life -2
+      narrative: Ability of Unholy Annex // Ritual Chamber: draw; gian31 loses 2 life.
+      explicit effect object references: object 238 [238], Starscape Cleric [351] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Starscape Cleric (object 351) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 19 -> 20
+    life: gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [339] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 200).
+      Scoured Barrens [340] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 203).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Case of the Uneaten Feast [304], Godless Shrine [287], Leech Collector [306], Scoured Barrens [340], Swamp [293], Swamp [303], Unholy Annex // Ritual Chamber [344]; Graveyard: Bloodletting [323], Bloodletting [326], Leech Collector [332]
+      HorseChoker: Battlefield: Dalkovan Encampment [291], Dark Fortress [315], Enduring Innocence [316], Plains [301], Plains [328], Voice of Victory [333]; Graveyard: Cinder Strike [331]
+
+Turn 10
+  - Arabella, Abandoned Doll [valid_resolution_no_immediate_mutation, seq=233] (active=HorseChoker, phase=Phase_Main1, controller=HorseChoker, owner=HorseChoker, source_object=354)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Arabella, Abandoned Doll resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Arabella, Abandoned Doll (object 354) Hand (HorseChoker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Arabella, Abandoned Doll (object 354) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Enduring Innocence [observed_semantic_effect, seq=235] (active=HorseChoker, phase=Phase_Main1, controller=HorseChoker, owner=HorseChoker, source_object=316, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Enduring Innocence: draw.
+      explicit effect object references: object 180 [180], object 359 [359] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Enduring Innocence (object 359) Library (HorseChoker) -> Hand (HorseChoker) (Draw; shared object ID)
+  - Enduring Innocence [valid_resolution_no_immediate_mutation, seq=238] (active=HorseChoker, phase=Phase_Main1, controller=HorseChoker, owner=HorseChoker, source_object=360)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Enduring Innocence resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Enduring Innocence (object 360) Hand (HorseChoker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Enduring Innocence (object 360) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Voice of Victory [observed_semantic_effect, seq=246] (active=HorseChoker, phase=Phase_Combat, step=Step_DeclareAttack, controller=HorseChoker, owner=HorseChoker, source_object=333, source_last_explicit_zone=Battlefield)
+      effects: token creation, token creation
+      narrative: Ability of Voice of Victory: a token is created; a token is created.
+      explicit effect object references: Warrior [367], Warrior [368] (role/targeting only where the protocol identifies it)
+      token created: Warrior (object 367, controller=HorseChoker) 1/1
+      token created: Warrior (object 368, controller=HorseChoker) 1/1
+  - Ability of Enduring Innocence [observed_semantic_effect, seq=248] (active=HorseChoker, phase=Phase_Combat, step=Step_DeclareAttack, controller=HorseChoker, owner=HorseChoker, source_object=360, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Enduring Innocence: draw.
+      explicit effect object references: object 181 [181], object 374 [374] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 374 (object 374) Library (HorseChoker) -> Hand (HorseChoker) (Draw; shared object ID)
+  - Ability of Voice of Victory [observed_semantic_effect, seq=261] (active=HorseChoker, phase=Phase_Ending, step=Step_End, controller=HorseChoker, owner=HorseChoker, source_object=333, source_last_explicit_zone=Battlefield)
+      effects: sacrifice, sacrifice
+      narrative: Ability of Voice of Victory: sacrifice; sacrifice.
+      explicit effect object references: Warrior [367], Warrior [368], object 376 [376], object 377 [377] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Warrior (object 376) Battlefield -> Graveyard (HorseChoker) (Sacrifice; shared object ID)
+      protocol-linked zone transfer: Warrior (object 377) Battlefield -> Graveyard (HorseChoker) (Sacrifice; shared object ID)
+  Combat snapshots observed (active=HorseChoker; frames: DeclareAttack):
+      attackers: Enduring Innocence [316] (unblocked, observed P/T 2/1), Voice of Victory [333] (unblocked, observed P/T 1/3), Warrior [367] (unblocked, observed P/T 1/1), Warrior [368] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: HorseChoker +2; gian31 -5 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): HorseChoker 16 -> 18
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 18 -> 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 352 [352] Library (HorseChoker) -> Hand (HorseChoker) (Draw; GRE sequence 227).
+      Plains [353] Hand (HorseChoker) -> Battlefield (PlayLand; GRE sequence 230).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Case of the Uneaten Feast [304], Godless Shrine [287], Leech Collector [306], Scoured Barrens [340], Swamp [293], Swamp [303], Unholy Annex // Ritual Chamber [344]; Graveyard: Bloodletting [323], Bloodletting [326], Leech Collector [332]
+      HorseChoker: Battlefield: Arabella, Abandoned Doll [354], Dalkovan Encampment [291], Dark Fortress [315], Enduring Innocence [316], Enduring Innocence [360], Plains [301], Plains [328], Plains [353], Voice of Victory [333]; Graveyard: Cinder Strike [331], object 376 [376], object 377 [377]
+
+Turn 11
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=271] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=379)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 379) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 379) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=274] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=304, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=277] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=379, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: HorseChoker loses 1 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=279] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=306, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=281] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=283] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=379, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: HorseChoker loses 1 life.
+  - Leech Collector [valid_resolution_no_immediate_mutation, seq=286] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=387)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Leech Collector resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Leech Collector (object 387) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leech Collector (object 387) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=289] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=304, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=291] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=379, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: HorseChoker loses 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=293] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=295] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=379, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: HorseChoker loses 1 life.
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect, seq=308] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=344, source_last_explicit_zone=Battlefield)
+      effects: draw, life -2
+      narrative: Ability of Unholy Annex // Ritual Chamber: draw; gian31 loses 2 life.
+      explicit effect object references: object 240 [240], Starscape Cleric [395] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Starscape Cleric (object 395) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+    net observed life change this turn: HorseChoker -4; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 13 -> 14
+    life: HorseChoker 18 -> 17
+    life: gian31 14 -> 15
+    life: HorseChoker 17 -> 16
+    life: gian31 15 -> 16
+    life: HorseChoker 16 -> 15
+    life: gian31 16 -> 17
+    life: HorseChoker 15 -> 14
+    life: gian31 17 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Leech Collector [378] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 265).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Case of the Uneaten Feast [304], Godless Shrine [287], Leech Collector [306], Leech Collector [387], Scoured Barrens [340], Starscape Cleric [379], Swamp [293], Swamp [303], Unholy Annex // Ritual Chamber [344]; Graveyard: Bloodletting [323], Bloodletting [326], Leech Collector [332]
+      HorseChoker: Battlefield: Arabella, Abandoned Doll [354], Dalkovan Encampment [291], Dark Fortress [315], Enduring Innocence [316], Enduring Innocence [360], Plains [301], Plains [328], Plains [353], Voice of Victory [333]; Graveyard: Cinder Strike [331], object 376 [376], object 377 [377]
+
+Turn 12
+  - Elspeth, Storm Slayer [valid_resolution_no_immediate_mutation, seq=318] (active=HorseChoker, phase=Phase_Main1, controller=HorseChoker, owner=HorseChoker, source_object=398)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Elspeth, Storm Slayer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Elspeth, Storm Slayer (object 398) Hand (HorseChoker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Elspeth, Storm Slayer (object 398) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Elspeth, Storm Slayer [observed_semantic_effect, seq=321] (active=HorseChoker, phase=Phase_Main1, controller=HorseChoker, owner=HorseChoker, source_object=398, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, P/T +1/+1, P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s), +1 counter(s), +1 counter(s)
+      narrative: Ability of Elspeth, Storm Slayer: Enduring Innocence gets +1/+1; Voice of Victory gets +1/+1; Arabella, Abandoned Doll gets +1/+1; Enduring Innocence gets +1/+1; 1 counter(s) are added to Enduring Innocence [316]; 1 counter(s) are added to Voice of Victory [333]; 1 counter(s) are added to Arabella, Abandoned Doll [354]; 1 counter(s) are added to Enduring Innocence [360].
+      explicit effect object references: Enduring Innocence [316], Voice of Victory [333], Arabella, Abandoned Doll [354], Enduring Innocence [360] (role/targeting only where the protocol identifies it)
+  - Ability of Voice of Victory [observed_semantic_effect, seq=330] (active=HorseChoker, phase=Phase_Combat, step=Step_DeclareAttack, controller=HorseChoker, owner=HorseChoker, source_object=333, source_last_explicit_zone=Battlefield)
+      effects: token creation, token creation, token creation, token creation
+      narrative: Ability of Voice of Victory: a token is created; a token is created; a token is created; a token is created.
+      explicit effect object references: Warrior [407], Warrior [408], Warrior [409], Warrior [410] (role/targeting only where the protocol identifies it)
+      token created: Warrior (object 407, controller=HorseChoker) 1/1
+      token created: Warrior (object 408, controller=HorseChoker) 1/1
+      token created: Warrior (object 409, controller=HorseChoker) 1/1
+      token created: Warrior (object 410, controller=HorseChoker) 1/1
+  - Ability of Enduring Innocence [observed_semantic_effect, seq=333] (active=HorseChoker, phase=Phase_Combat, step=Step_DeclareAttack, controller=HorseChoker, owner=HorseChoker, source_object=360, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Enduring Innocence: draw.
+      explicit effect object references: object 183 [183], object 416 [416] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 416 (object 416) Library (HorseChoker) -> Hand (HorseChoker) (Draw; shared object ID)
+  - Ability of Enduring Innocence [observed_semantic_effect, seq=335] (active=HorseChoker, phase=Phase_Combat, step=Step_DeclareAttack, controller=HorseChoker, owner=HorseChoker, source_object=316, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Enduring Innocence: draw.
+      explicit effect object references: object 184 [184], object 417 [417] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 417 (object 417) Library (HorseChoker) -> Hand (HorseChoker) (Draw; shared object ID)
+  - Ability of Arabella, Abandoned Doll [observed_semantic_effect, seq=337] (active=HorseChoker, phase=Phase_Combat, step=Step_DeclareAttack, controller=HorseChoker, owner=HorseChoker, source_object=354, source_last_explicit_zone=Battlefield)
+      effects: 6 damage; life -6; life +6 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Arabella, Abandoned Doll: gian31 takes 6 damage (resulting in 6 life lost); HorseChoker gains 6 life.
+      explicit effect object references: gian31 [player seat 2] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=HorseChoker; frames: DeclareAttack -> CombatDamage):
+      attackers: Enduring Innocence [316] (unblocked, observed P/T 3/2), Voice of Victory [333] (unblocked, observed P/T 2/4), Arabella, Abandoned Doll [354] (unblocked, observed P/T 2/4), Enduring Innocence [360] (unblocked, observed P/T 3/2), Warrior [407] (unblocked, observed P/T 1/1), Warrior [408] (unblocked, observed P/T 1/1), Warrior [409] (unblocked, observed P/T 1/1), Warrior [410] (unblocked, observed P/T 1/1)
+      blockers: Leech Collector [306], Leech Collector [387]
+      combat-result zone change: Warrior [418] Battlefield -> Graveyard (HorseChoker) (SBA_Damage).
+      combat-result zone change: Warrior [419] Battlefield -> Graveyard (HorseChoker) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: HorseChoker +12; gian31 -18 (individual changes below; gains and losses may offset)
+    life: HorseChoker 14 -> 20
+    life (semantically attributed to Arabella, Abandoned Doll; direct protocol link unavailable): gian31 15 -> 9
+    life (semantically attributed to Arabella, Abandoned Doll; direct protocol link unavailable): HorseChoker 20 -> 26
+    life (semantically attributed to Arabella, Abandoned Doll; direct protocol link unavailable): gian31 9 -> -3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [396] Library (HorseChoker) -> Hand (HorseChoker) (Draw; GRE sequence 312).
+      Plains [397] Hand (HorseChoker) -> Battlefield (PlayLand; GRE sequence 315).
+      Warrior [418] Battlefield -> Graveyard (HorseChoker) (SBA_Damage; GRE sequence 344).
+      Warrior [419] Battlefield -> Graveyard (HorseChoker) (SBA_Damage; GRE sequence 344).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Case of the Uneaten Feast [304], Godless Shrine [287], Leech Collector [306], Leech Collector [387], Scoured Barrens [340], Starscape Cleric [379], Swamp [293], Swamp [303], Unholy Annex // Ritual Chamber [344]; Graveyard: Bloodletting [323], Bloodletting [326], Leech Collector [332]
+      HorseChoker: Battlefield: Arabella, Abandoned Doll [354], Dalkovan Encampment [291], Dark Fortress [315], Elspeth, Storm Slayer [398], Enduring Innocence [316], Enduring Innocence [360], Plains [301], Plains [328], Plains [353], Plains [397], Voice of Victory [333]; Graveyard: Cinder Strike [331], Warrior [418], Warrior [419], object 376 [376], object 377 [377]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 1, seq 8: gian31 20 -> 18. No source event correlated in captured records.
+- Turn 8, seq 190, Phase_Main1: HorseChoker 14 -> 16. Combat declaration observed; exact assignment unavailable. Previous captured action: Enduring Innocence.
+- Turn 10, seq 253, Phase_Combat: HorseChoker 16 -> 18. Combat declaration observed; exact assignment unavailable. Previous captured action: Enduring Innocence.
+- Turn 12, seq 337, Phase_Combat: gian31 15 -> 9; HorseChoker 20 -> 26; gian31 9 -> -3. Semantic attribution: Arabella, Abandoned Doll; direct protocol link unavailable. Previous captured action: Arabella, Abandoned Doll.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 12: gian31 9 -> -3 (required change 12). Explained by exact same-record evidence: 0/12; unattributed: 12/12.
+  Last combat snapshot at or before lethal: Turn 12; attackers=Enduring Innocence [316], Voice of Victory [333], Arabella, Abandoned Doll [354], Enduring Innocence [360], Warrior [407], Warrior [408], Warrior [409], Warrior [410]; observed snapshot power total=14; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 12, Ability of Arabella, Abandoned Doll (seq 337).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 6 token creations observed; 2 active as last observed; 4 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Warrior [367] controller=HorseChoker; created Turn 10 (1/1); left battlefield Turn 10 via Battlefield -> Graveyard (HorseChoker) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+- Warrior [368] controller=HorseChoker; created Turn 10 (1/1); left battlefield Turn 10 via Battlefield -> Graveyard (HorseChoker) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+- Warrior [407] controller=HorseChoker; created Turn 12 (1/1); left battlefield Turn 12 via Battlefield -> Graveyard (HorseChoker) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Warrior [408] controller=HorseChoker; created Turn 12 (1/1); left battlefield Turn 12 via Battlefield -> Graveyard (HorseChoker) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Warrior [409] controller=HorseChoker; created Turn 12 (1/1); active as last observed at Turn 12, object 409 (latest observed P/T 1/1; current zone unconfirmed).
+- Warrior [410] controller=HorseChoker; created Turn 12 (1/1); active as last observed at Turn 12, object 410 (latest observed P/T 1/1; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 8: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 1, seq 9: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 1, seq 11: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 25: Elspeth, Storm Slayer [owner/controller metadata unavailable] moves Library (HorseChoker) -> Hand (HorseChoker) (Draw).
+- Turn 2, seq 28: Dalkovan Encampment [owner=HorseChoker, controller=HorseChoker] moves Hand (HorseChoker) -> Battlefield (PlayLand).
+- Turn 3, seq 42: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 45: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 46: Leech Collector [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 48: Leech Collector [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 66: Plains [owner/controller metadata unavailable] moves Library (HorseChoker) -> Hand (HorseChoker) (Draw).
+- Turn 4, seq 69: Plains [owner=HorseChoker, controller=HorseChoker] moves Hand (HorseChoker) -> Battlefield (PlayLand).
+- Turn 5, seq 83: Sinister Monolith [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 86: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 87: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 89: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 90: Leech Collector [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 92: Leech Collector [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 122: Voice of Victory [owner/controller metadata unavailable] moves Library (HorseChoker) -> Hand (HorseChoker) (Draw).
+- Turn 6, seq 125: Dark Fortress [owner=HorseChoker, controller=HorseChoker] moves Hand (HorseChoker) -> Battlefield (PlayLand).
+- Turn 6, seq 126: Enduring Innocence [owner=HorseChoker, controller=HorseChoker] moves Hand (HorseChoker) -> Stack (CastSpell).
+- Turn 6, seq 128: Enduring Innocence [owner=HorseChoker, controller=HorseChoker] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 142: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 145: Bloodletting [owner=gian31, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 7, seq 147: Bloodletting [owner/controller metadata unavailable] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 7, seq 148: Bloodletting [owner=gian31, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 7, seq 150: Bloodletting [owner/controller metadata unavailable] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 8, seq 165: Plains [owner/controller metadata unavailable] moves Library (HorseChoker) -> Hand (HorseChoker) (Draw).
+- Turn 8, seq 168: Plains [owner=HorseChoker, controller=HorseChoker] moves Hand (HorseChoker) -> Battlefield (PlayLand).
+- Turn 8, seq 169: Cinder Strike [owner=HorseChoker, controller=HorseChoker] moves Hand (HorseChoker) -> Stack (CastSpell).
+- Turn 8, seq 174: Cinder Strike [owner=HorseChoker, controller=HorseChoker] moves Stack -> Graveyard (HorseChoker) (Resolve).
+- Turn 8, seq 174: Leech Collector [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 8, seq 175: Voice of Victory [owner=HorseChoker, controller=HorseChoker] moves Hand (HorseChoker) -> Stack (CastSpell).
+- Turn 8, seq 177: Voice of Victory [owner=HorseChoker, controller=HorseChoker] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 179: object 338 [owner/controller metadata unavailable] moves Library (HorseChoker) -> Hand (HorseChoker) (Draw).
+- Turn 9, seq 200: Scoured Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 203: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 208: Unholy Annex // Ritual Chamber [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 210: Unholy Annex // Ritual Chamber [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 223: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 227: object 352 [owner/controller metadata unavailable] moves Library (HorseChoker) -> Hand (HorseChoker) (Draw).
+- Turn 10, seq 230: Plains [owner=HorseChoker, controller=HorseChoker] moves Hand (HorseChoker) -> Battlefield (PlayLand).
+- Turn 10, seq 231: Arabella, Abandoned Doll [owner=HorseChoker, controller=HorseChoker] moves Hand (HorseChoker) -> Stack (CastSpell).
+- Turn 10, seq 233: Arabella, Abandoned Doll [owner=HorseChoker, controller=HorseChoker] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 235: Enduring Innocence [owner/controller metadata unavailable] moves Library (HorseChoker) -> Hand (HorseChoker) (Draw).
+- Turn 10, seq 236: Enduring Innocence [owner=HorseChoker, controller=HorseChoker] moves Hand (HorseChoker) -> Stack (CastSpell).
+- Turn 10, seq 238: Enduring Innocence [owner=HorseChoker, controller=HorseChoker] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 248: object 374 [owner/controller metadata unavailable] moves Library (HorseChoker) -> Hand (HorseChoker) (Draw).
+- Turn 10, seq 261: Warrior [owner/controller metadata unavailable] moves Battlefield -> Graveyard (HorseChoker) (Sacrifice).
+- Turn 10, seq 261: Warrior [owner/controller metadata unavailable] moves Battlefield -> Graveyard (HorseChoker) (Sacrifice).
+- Turn 11, seq 265: Leech Collector [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 268: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 271: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 284: Leech Collector [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 286: Leech Collector [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 308: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 312: Plains [owner/controller metadata unavailable] moves Library (HorseChoker) -> Hand (HorseChoker) (Draw).
+- Turn 12, seq 315: Plains [owner=HorseChoker, controller=HorseChoker] moves Hand (HorseChoker) -> Battlefield (PlayLand).
+- Turn 12, seq 316: Elspeth, Storm Slayer [owner=HorseChoker, controller=HorseChoker] moves Hand (HorseChoker) -> Stack (CastSpell).
+- Turn 12, seq 318: Elspeth, Storm Slayer [owner=HorseChoker, controller=HorseChoker] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 333: object 416 [owner/controller metadata unavailable] moves Library (HorseChoker) -> Hand (HorseChoker) (Draw).
+- Turn 12, seq 335: object 417 [owner/controller metadata unavailable] moves Library (HorseChoker) -> Hand (HorseChoker) (Draw).
+- Turn 12, seq 344: Warrior [owner=HorseChoker, controller=HorseChoker] moves Battlefield -> Graveyard (HorseChoker) (SBA_Damage).
+- Turn 12, seq 344: Warrior [owner=HorseChoker, controller=HorseChoker] moves Battlefield -> Graveyard (HorseChoker) (SBA_Damage).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 8: object 230 becomes object 287 [Godless Shrine].
+- Turn 1, seq 9: object 233 becomes object 288 [Case of the Uneaten Feast].
+- Turn 2, seq 25: object 174 becomes object 290 [Elspeth, Storm Slayer].
+- Turn 2, seq 28: object 168 becomes object 291 [Dalkovan Encampment].
+- Turn 3, seq 42: object 234 becomes object 292 [Swamp].
+- Turn 3, seq 45: object 231 becomes object 293 [Swamp].
+- Turn 3, seq 46: object 232 becomes object 294 [Leech Collector].
+- Turn 4, seq 66: object 175 becomes object 300 [Plains].
+- Turn 4, seq 69: object 169 becomes object 301 [Plains].
+- Turn 5, seq 83: object 235 becomes object 302 [Sinister Monolith].
+- Turn 5, seq 86: object 292 becomes object 303 [Swamp].
+- Turn 5, seq 87: object 228 becomes object 304 [Case of the Uneaten Feast].
+- Turn 5, seq 90: object 227 becomes object 306 [Leech Collector].
+- Turn 6, seq 122: object 176 becomes object 314 [Voice of Victory].
+- Turn 6, seq 125: object 170 becomes object 315 [Dark Fortress].
+- Turn 6, seq 126: object 173 becomes object 316 [Enduring Innocence].
+- Turn 7, seq 142: object 236 becomes object 320 [Bloodthirsty Conqueror].
+- Turn 7, seq 145: object 299 becomes object 321 [Bloodletting].
+- Turn 7, seq 147: object 321 becomes object 323 [Bloodletting].
+- Turn 7, seq 148: object 313 becomes object 324 [Bloodletting].
+- Turn 7, seq 150: object 324 becomes object 326 [Bloodletting].
+- Turn 8, seq 165: object 177 becomes object 327 [Plains].
+- Turn 8, seq 168: object 327 becomes object 328 [Plains].
+- Turn 8, seq 169: object 172 becomes object 329 [Cinder Strike].
+- Turn 8, seq 174: object 329 becomes object 331 [Cinder Strike].
+- Turn 8, seq 174: object 294 becomes object 332 [Leech Collector].
+- Turn 8, seq 175: object 314 becomes object 333 [Voice of Victory].
+- Turn 8, seq 179: object 178 becomes object 338 [object 178].
+- Turn 9, seq 200: object 237 becomes object 339 [Scoured Barrens].
+- Turn 9, seq 203: object 339 becomes object 340 [Scoured Barrens].
+- Turn 9, seq 208: object 229 becomes object 344 [Unholy Annex // Ritual Chamber].
+- Turn 9, seq 223: object 238 becomes object 351 [Starscape Cleric].
+- Turn 10, seq 227: object 179 becomes object 352 [object 179].
+- Turn 10, seq 230: object 300 becomes object 353 [Plains].
+- Turn 10, seq 231: object 167 becomes object 354 [Arabella, Abandoned Doll].
+- Turn 10, seq 235: object 180 becomes object 359 [Enduring Innocence].
+- Turn 10, seq 236: object 359 becomes object 360 [Enduring Innocence].
+- Turn 10, seq 248: object 181 becomes object 374 [object 181].
+- Turn 10, seq 261: object 367 becomes object 376 [Warrior].
+- Turn 10, seq 261: object 368 becomes object 377 [Warrior].
+- Turn 11, seq 265: object 239 becomes object 378 [Leech Collector].
+- Turn 11, seq 268: object 351 becomes object 379 [Starscape Cleric].
+- Turn 11, seq 284: object 378 becomes object 387 [Leech Collector].
+- Turn 11, seq 308: object 240 becomes object 395 [Starscape Cleric].
+- Turn 12, seq 312: object 182 becomes object 396 [Plains].
+- Turn 12, seq 315: object 396 becomes object 397 [Plains].
+- Turn 12, seq 316: object 290 becomes object 398 [Elspeth, Storm Slayer].
+- Turn 12, seq 333: object 183 becomes object 416 [object 183].
+- Turn 12, seq 335: object 184 becomes object 417 [object 184].
+- Turn 12, seq 344: object 407 becomes object 418 [Warrior].
+- Turn 12, seq 344: object 408 becomes object 419 [Warrior].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Godless Shrine (object 287) from Hand (gian31) to Battlefield.
+- Turn 2: HorseChoker plays Dalkovan Encampment (object 291) from Hand (HorseChoker) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 293) from Hand (gian31) to Battlefield.
+- Turn 4: HorseChoker plays Plains (object 301) from Hand (HorseChoker) to Battlefield.
+- Turn 5: gian31 plays Swamp (object 303) from Hand (gian31) to Battlefield.
+- Turn 6: HorseChoker plays Dark Fortress (object 315) from Hand (HorseChoker) to Battlefield.
+- Turn 8: HorseChoker plays Plains (object 328) from Hand (HorseChoker) to Battlefield.
+- Turn 9: gian31 plays Scoured Barrens (object 340) from Hand (gian31) to Battlefield.
+- Turn 10: HorseChoker plays Plains (object 353) from Hand (HorseChoker) to Battlefield.
+- Turn 12: HorseChoker plays Plains (object 397) from Hand (HorseChoker) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- Turn 10: Enduring Innocence -> Voice of Victory; observed repeated transitions=2; net life: net life unavailable.
+  Same-turn ability records (including records outside the summarized chain): Enduring Innocence=2, Voice of Victory=2.
+  Individual ability records remain in the timeline.
+- Turn 11: Case of the Uneaten Feast -> Starscape Cleric; observed repeated transitions=4; net life: HorseChoker -4, gian31 +4.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=4, Starscape Cleric=4.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED TRIGGER CYCLES
+------------------------------------------------------------
+- Turn 11: Case of the Uneaten Feast -> Starscape Cleric; observed repetitions=2 (cycle length 2).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Case of the Uneaten Feast: casts=2; abilities=7 (triggered=7, activated=0) across turns [1, 3, 5, 5, 5, 11, 11, 11, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=7, other=0
+  observed effects: life +1
+- Leech Collector: casts=3; abilities=5 (triggered=5, activated=0) across turns [3, 3, 5, 5, 5, 9, 11, 11]
+- Enduring Innocence: casts=2; abilities=5 (triggered=5, activated=0) across turns [6, 8, 10, 10, 10, 12, 12]
+  observed effect totals: draws=5, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Starscape Cleric: casts=1; abilities=4 (triggered=4, activated=0) across turns [11, 11, 11, 11, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=4, other=1
+  observed effects: life -1, synthetic event
+- Voice of Victory: casts=1; abilities=3 (triggered=3, activated=0) across turns [8, 10, 10, 12]
+  observed effect totals: draws=0, tokens=6, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: sacrifice, token creation
+- Unholy Annex // Ritual Chamber: casts=1; abilities=2 (triggered=2, activated=0) across turns [9, 9, 11]
+  observed effect totals: draws=2, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=2
+  observed effects: draw, life -2, synthetic event
+- Arabella, Abandoned Doll: casts=1; abilities=1 (triggered=1, activated=0) across turns [10, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=2, other=1
+  observed effects: 6 damage, life +6, life -6, synthetic event
+- Bloodletting: casts=2 across turns [7, 7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=1
+  observed effects: life -2, synthetic event
+- Elspeth, Storm Slayer: casts=1; abilities=1 (triggered=1, activated=0) across turns [12, 12]
+  observed effect totals: draws=0, tokens=0, counters=4, returns=0, damage=0, life_changes=0, other=4
+  observed effects: +1 counter(s), P/T +1/+1
+- Cinder Strike: casts=1 across turns [8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 2 damage
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Leech Collector (gian31) -> HorseChoker; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack (active=HorseChoker)
+  attacker: Enduring Innocence (HorseChoker) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack (active=HorseChoker)
+  attacker: Enduring Innocence (HorseChoker) -> gian31; unblocked in this observed snapshot
+  attacker: Voice of Victory (HorseChoker) -> gian31; unblocked in this observed snapshot
+  attacker: Warrior (HorseChoker) -> gian31; unblocked in this observed snapshot
+  attacker: Warrior (HorseChoker) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack, CombatDamage (active=HorseChoker)
+  attacker: Enduring Innocence (HorseChoker) -> gian31; unblocked in this observed snapshot
+  attacker: Voice of Victory (HorseChoker) -> gian31; unblocked in this observed snapshot
+  attacker: Arabella, Abandoned Doll (HorseChoker) -> gian31; unblocked in this observed snapshot
+  attacker: Enduring Innocence (HorseChoker) -> gian31; unblocked in this observed snapshot
+  attacker: Warrior (HorseChoker) -> gian31; unblocked in this observed snapshot
+  attacker: Warrior (HorseChoker) -> gian31; unblocked in this observed snapshot
+  attacker: Warrior (HorseChoker) -> gian31; unblocked in this observed snapshot
+  attacker: Warrior (HorseChoker) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 10: Ability of Voice of Victory (active=HorseChoker) - Ability of Voice of Victory: a token is created; a token is created.
+- Turn 10: Ability of Enduring Innocence (active=HorseChoker) - Ability of Enduring Innocence: draw.
+- Turn 12: Ability of Voice of Victory (active=HorseChoker) - Ability of Voice of Victory: a token is created; a token is created; a token is created; a token is created.
+- Turn 12: Ability of Enduring Innocence (active=HorseChoker) - Ability of Enduring Innocence: draw.
+- Turn 12: Ability of Enduring Innocence (active=HorseChoker) - Ability of Enduring Innocence: draw.
+- Turn 12: Ability of Arabella, Abandoned Doll (active=HorseChoker) - Ability of Arabella, Abandoned Doll: gian31 takes 6 damage; gian31 loses 6 life; HorseChoker gains 6 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 116: Unholy Annex | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 117: Ritual Chamber | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 227: Leech Collector | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 228: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 229: Unholy Annex // Ritual Chamber | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 230: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 231: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 232: Leech Collector | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 233: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 287: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 288: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 291: Dalkovan Encampment | controller=HorseChoker | owner=HorseChoker | zone=Battlefield (latest_object_observation)
+- 292: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 293: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 294: Leech Collector | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 297: object 297 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 298: object 298 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 299: Bloodletting | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 301: Plains | controller=HorseChoker | owner=HorseChoker | zone=Battlefield (latest_object_observation)
+- 302: Sinister Monolith | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 303: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 304: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 306: Leech Collector | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 309: object 309 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 310: object 310 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 311: object 311 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 312: object 312 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 313: Bloodletting | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 315: Dark Fortress | controller=HorseChoker | owner=HorseChoker | zone=Battlefield (latest_object_observation)
+- 316: Enduring Innocence | controller=HorseChoker | owner=HorseChoker | zone=Battlefield (latest_object_observation)
+- 320: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 321: Bloodletting | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 324: Bloodletting | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 328: Plains | controller=HorseChoker | owner=HorseChoker | zone=Battlefield (latest_object_observation)
+- 329: Cinder Strike | controller=HorseChoker | owner=HorseChoker | zone=Stack (latest_object_observation)
+- 331: Cinder Strike | controller=HorseChoker | owner=HorseChoker | zone=Battlefield (latest_object_observation)
+- 332: Leech Collector | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 333: Voice of Victory | controller=HorseChoker | owner=HorseChoker | zone=Battlefield (latest_object_observation)
+- 337: object 337 | controller=HorseChoker | owner=HorseChoker | zone=unknown (inferred unknown) (latest_object_observation)
+- 339: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 340: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 341: object 341 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 342: object 342 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 343: Bloodletting | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 344: Unholy Annex // Ritual Chamber | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 345: Unholy Annex | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 346: Ritual Chamber | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 350: object 350 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 351: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 353: Plains | controller=HorseChoker | owner=HorseChoker | zone=Battlefield (latest_object_observation)
+- 354: Arabella, Abandoned Doll | controller=HorseChoker | owner=HorseChoker | zone=Battlefield (latest_object_observation)
+- 358: object 358 | controller=HorseChoker | owner=HorseChoker | zone=unknown (inferred unknown) (latest_object_observation)
+- 360: Enduring Innocence | controller=HorseChoker | owner=HorseChoker | zone=Battlefield (latest_object_observation)
+- 366: object 366 | controller=HorseChoker | owner=HorseChoker | zone=unknown (inferred unknown) (latest_object_observation)
+- 367: Warrior | controller=HorseChoker | owner=HorseChoker | zone=Hand (latest_object_observation)
+- 368: Warrior | controller=HorseChoker | owner=HorseChoker | zone=Hand (latest_object_observation)
+- 372: object 372 | controller=HorseChoker | owner=HorseChoker | zone=unknown (inferred unknown) (latest_object_observation)
+- 373: object 373 | controller=HorseChoker | owner=HorseChoker | zone=Hand (latest_object_observation)
+- 375: object 375 | controller=HorseChoker | owner=HorseChoker | zone=unknown (inferred unknown) (latest_object_observation)
+- 378: Leech Collector | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 379: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 382: object 382 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 383: object 383 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 384: object 384 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 385: object 385 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 386: object 386 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 387: Leech Collector | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 390: object 390 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 391: object 391 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 392: object 392 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 393: object 393 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 394: object 394 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 395: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 397: Plains | controller=HorseChoker | owner=HorseChoker | zone=Battlefield (latest_object_observation)
+- 398: Elspeth, Storm Slayer | controller=HorseChoker | owner=HorseChoker | zone=Stack (latest_object_observation)
+- 404: object 404 | controller=HorseChoker | owner=HorseChoker | zone=unknown (inferred unknown) (latest_object_observation)
+- 405: object 405 | controller=HorseChoker | owner=HorseChoker | zone=unknown (inferred unknown) (latest_object_observation)
+- 406: object 406 | controller=HorseChoker | owner=HorseChoker | zone=unknown (inferred unknown) (latest_object_observation)
+- 407: Warrior | controller=HorseChoker | owner=HorseChoker | zone=Hand (latest_object_observation)
+- 408: Warrior | controller=HorseChoker | owner=HorseChoker | zone=Hand (latest_object_observation)
+- 409: Warrior | controller=HorseChoker | owner=HorseChoker | zone=Battlefield (latest_object_observation)
+- 410: Warrior | controller=HorseChoker | owner=HorseChoker | zone=Battlefield (latest_object_observation)
+- 413: object 413 | controller=HorseChoker | owner=HorseChoker | zone=unknown (inferred unknown) (latest_object_observation)
+- 414: object 414 | controller=HorseChoker | owner=HorseChoker | zone=unknown (inferred unknown) (latest_object_observation)
+- 415: object 415 | controller=HorseChoker | owner=HorseChoker | zone=Hand (latest_object_observation)
+- 418: Warrior | controller=HorseChoker | owner=HorseChoker | zone=Battlefield (latest_object_observation)
+- 419: Warrior | controller=HorseChoker | owner=HorseChoker | zone=Battlefield (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+HorseChoker: 33 total items
+  zones: Battlefield=15, Hand=6, Stack=2, unknown=10
+  objects: Warrior x8, Plains x4, Cinder Strike x2, Enduring Innocence x2, Arabella, Abandoned Doll, Dalkovan Encampment, Dark Fortress, Elspeth, Storm Slayer, Voice of Victory, object 337, object 358, object 366
+gian31: 54 total items
+  zones: Battlefield=11, Hand=19, Stack=4, unknown=20
+  objects: Leech Collector x7, Bloodletting x5, Case of the Uneaten Feast x4, Swamp x4, Starscape Cleric x3, Godless Shrine x2, Ritual Chamber x2, Scoured Barrens x2, Unholy Annex x2, Unholy Annex // Ritual Chamber x2, Bloodthirsty Conqueror, Sinister Monolith
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+HorseChoker:
+  Battlefield (15): Arabella, Abandoned Doll, Cinder Strike, Dalkovan Encampment, Dark Fortress, Enduring Innocence, Enduring Innocence, Plains, Plains, Plains, Plains, Voice of Victory, Warrior, Warrior, Warrior, Warrior
+  Graveyard: 0 card(s)
+gian31:
+  Battlefield (11): Godless Shrine, Leech Collector, Leech Collector, Leech Collector, Leech Collector, Ritual Chamber, Scoured Barrens, Starscape Cleric, Swamp, Swamp, Unholy Annex
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+30 objects have no resolved final zone and are omitted from the known board state.
+HorseChoker: 10 unknown object(s)
+gian31: 20 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=25, Stack=6
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+HorseChoker:
+  Battlefield (13): Dalkovan Encampment, Plains, Dark Fortress, Enduring Innocence, Plains, Voice of Victory, Plains, Arabella, Abandoned Doll, Enduring Innocence, Plains, Elspeth, Storm Slayer, Warrior, Warrior
+  Graveyard (3): Cinder Strike, Warrior, Warrior
+gian31:
+  Battlefield (12): Godless Shrine, Case of the Uneaten Feast, Swamp, Swamp, Case of the Uneaten Feast, Leech Collector, Scoured Barrens, Unholy Annex // Ritual Chamber, Unholy Annex, Ritual Chamber, Starscape Cleric, Leech Collector
+  Graveyard (1): Leech Collector
+  Exile (1): Bloodletting
+Known non-persistent entries (counts only):
+  HorseChoker: Limbo=5
+  gian31: Hand=3, Limbo=2
+  unknown: Hand=6, Library=88, Limbo=13
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=2
+- Turn 2: HorseChoker Battlefield=1; gian31 Battlefield=2
+- Turn 3: HorseChoker Battlefield=1; gian31 Battlefield=4
+- Turn 4: HorseChoker Battlefield=2; gian31 Battlefield=4
+- Turn 5: HorseChoker Battlefield=2; gian31 Battlefield=7
+- Turn 6: HorseChoker Battlefield=4; gian31 Battlefield=7
+- Turn 7: HorseChoker Battlefield=4; gian31 Battlefield=7; gian31 Graveyard=2
+- Turn 8: HorseChoker Battlefield=6; HorseChoker Graveyard=1; gian31 Battlefield=6; gian31 Graveyard=3
+- Turn 9: HorseChoker Battlefield=6; HorseChoker Graveyard=1; gian31 Battlefield=8; gian31 Graveyard=3
+- Turn 10: HorseChoker Battlefield=9; HorseChoker Graveyard=3; gian31 Battlefield=8; gian31 Graveyard=3
+- Turn 11: HorseChoker Battlefield=9; HorseChoker Graveyard=3; gian31 Battlefield=10; gian31 Graveyard=3
+- Turn 12: HorseChoker Battlefield=11; HorseChoker Graveyard=5; gian31 Battlefield=10; gian31 Graveyard=3
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Leech Collector resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Leech Collector resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Enduring Innocence resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Voice of Victory resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Unholy Annex // Ritual Chamber resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Arabella, Abandoned Doll resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Enduring Innocence resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Leech Collector resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Elspeth, Storm Slayer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
