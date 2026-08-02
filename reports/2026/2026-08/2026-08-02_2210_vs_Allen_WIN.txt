@@ -1,0 +1,765 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Allen
+Seat map: Seat 1=gian31, Seat 2=Allen
+Turn range (known): 1 - 14
+Unnumbered turn groups retained: 1
+Records: 43
+Action chains: 27
+Winner: gian31
+Final life: {'gian31': 25, 'Allen': 9}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 14 (Phase_Main1; Starscape Cleric, seq 409).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 28 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 8 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 8, 11] (raw records=8; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 14 explicit Library -> Hand movement(s); named in the draw record=7, resolved through an explicit identity transition=6, unresolved=1.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 25, 'Allen': 9}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 14 (Phase_Main1; Starscape Cleric, seq 409).
+Last captured life snapshot: Allen 11 -> 9 (seq 370).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Fabled Passage [279] Hand (Allen) -> Battlefield (PlayLand; GRE sequence 7).
+      Fabled Passage [281] Battlefield -> Graveyard (Allen) (Sacrifice; GRE sequence 8).
+      Island [282] Library (Allen) -> Battlefield (Put; GRE sequence 11).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Allen: Graveyard: Fabled Passage [281]; Battlefield: Island [282]
+
+Turn 2
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=32] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=337)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 337) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 337) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [335] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 26).
+      Plains [336] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 29).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Allen: Graveyard: Fabled Passage [281]; Battlefield: Island [282]
+      gian31: Battlefield: Case of the Uneaten Feast [337], Plains [336]
+
+Turn 3
+  - Nicanzil, Current Conductor [valid_resolution_no_immediate_mutation, seq=52] (active=Allen, phase=Phase_Main1, controller=Allen, owner=Allen, source_object=341)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Nicanzil, Current Conductor resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Nicanzil, Current Conductor (object 341) Hand (Allen) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Nicanzil, Current Conductor (object 341) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Nicanzil, Current Conductor [339] Library (Allen) -> Hand (Allen) (Draw; GRE sequence 46).
+      Forest [340] Hand (Allen) -> Battlefield (PlayLand; GRE sequence 49).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Allen: Graveyard: Fabled Passage [281]; Battlefield: Forest [340], Island [282], Nicanzil, Current Conductor [341]
+      gian31: Battlefield: Case of the Uneaten Feast [337], Plains [336]
+
+Turn 4
+  - Lifecreed Duo [valid_resolution_no_immediate_mutation, seq=72] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=346)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lifecreed Duo resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lifecreed Duo (object 346) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lifecreed Duo (object 346) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=74] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=337, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hinterland Sanctifier [344] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 66).
+      Plains [345] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 69).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Allen: Graveyard: Fabled Passage [281]; Battlefield: Forest [340], Island [282], Nicanzil, Current Conductor [341]
+      gian31: Battlefield: Case of the Uneaten Feast [337], Lifecreed Duo [346], Plains [336], Plains [345]
+
+Turn 5
+  Combat snapshots observed (active=Allen; frames: DeclareAttack -> DeclareBlock):
+      attackers: Nicanzil, Current Conductor [341] (unblocked, observed P/T 2/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 21 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Temple of Mystery [350] Library (Allen) -> Hand (Allen) (Draw; GRE sequence 88).
+      Temple of Mystery [351] Hand (Allen) -> Battlefield (PlayLand; GRE sequence 91).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Allen: Graveyard: Fabled Passage [281]; Battlefield: Forest [340], Island [282], Nicanzil, Current Conductor [341], Temple of Mystery [351]
+      gian31: Battlefield: Case of the Uneaten Feast [337], Lifecreed Duo [346], Plains [336], Plains [345]
+
+Turn 6
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=121] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=355)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 355) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 355) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lifecreed Duo [observed_semantic_effect, seq=124] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=346, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Lifecreed Duo: gian31 gains 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=126] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=337, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Lifecreed Duo [valid_resolution_no_immediate_mutation, seq=129] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=359)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lifecreed Duo resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lifecreed Duo (object 359) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lifecreed Duo (object 359) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=132] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Lifecreed Duo [observed_semantic_effect, seq=134] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=346, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Lifecreed Duo: gian31 gains 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=136] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=337, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=149] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=337, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 136 and 149; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Case of the Uneaten Feast resolves with no immediate observed mutation.
+    net observed life change this turn: gian31 +5 (individual changes below; gains and losses may offset)
+    life: gian31 19 -> 20
+    life: gian31 20 -> 21
+    life: gian31 21 -> 22
+    life: gian31 22 -> 23
+    life: gian31 23 -> 24
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [353] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 115).
+      Plains [354] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 118).
+      Brineborn Cutthroat [366] Hand (Allen) -> Stack (CastSpell; GRE sequence 151).
+      Brineborn Cutthroat [366] Stack -> Battlefield (Resolve; GRE sequence 153).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Allen: Graveyard: Fabled Passage [281]; Battlefield: Brineborn Cutthroat [366], Forest [340], Island [282], Nicanzil, Current Conductor [341], Temple of Mystery [351]
+      gian31: Battlefield: Case of the Uneaten Feast [337], Hinterland Sanctifier [355], Lifecreed Duo [346], Lifecreed Duo [359], Plains [336], Plains [345], Plains [354]
+
+Turn 7
+  - Jadelight Spelunker [valid_resolution_no_immediate_mutation, seq=164] (active=Allen, phase=Phase_Main1, controller=Allen, owner=Allen, source_object=370)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Jadelight Spelunker resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Jadelight Spelunker (object 370) Hand (Allen) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Jadelight Spelunker (object 370) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Nicanzil, Current Conductor [observed_semantic_effect, seq=171] (active=Allen, phase=Phase_Main1, controller=Allen, owner=Allen, source_object=341, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, +1 counter(s)
+      narrative: Ability of Nicanzil, Current Conductor: Nicanzil, Current Conductor gets +1/+1; 1 counter(s) are added to Nicanzil, Current Conductor [341].
+  - Ability of Nicanzil, Current Conductor [observed_semantic_effect, seq=173] (active=Allen, phase=Phase_Main1, controller=Allen, owner=Allen, source_object=341, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 171 and 173; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: P/T +1/+1, +1 counter(s)
+      narrative: Ability of Nicanzil, Current Conductor: Nicanzil, Current Conductor gets +1/+1; 1 counter(s) are added to Nicanzil, Current Conductor [341].
+  Combat snapshots observed (active=Allen; frames: DeclareAttack):
+      attackers: Nicanzil, Current Conductor [341] (unblocked, observed P/T 4/5)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): gian31 24 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 369 [369] Library (Allen) -> Hand (Allen) (Draw; GRE sequence 157).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Allen: Graveyard: Fabled Passage [281]; Battlefield: Brineborn Cutthroat [366], Forest [340], Island [282], Jadelight Spelunker [370], Nicanzil, Current Conductor [341], Temple of Mystery [351]
+      gian31: Battlefield: Case of the Uneaten Feast [337], Hinterland Sanctifier [355], Lifecreed Duo [346], Lifecreed Duo [359], Plains [336], Plains [345], Plains [354]
+
+Turn 8
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=200] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=381)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 381) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 381) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=204] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=381, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Nicanzil, Current Conductor; gian31 gains 2 life.
+      explicit effect object references: Nicanzil, Current Conductor [341], Nicanzil, Current Conductor [386] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Nicanzil, Current Conductor (object 386) Battlefield -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Lifecreed Duo [346] (unblocked, observed P/T 1/2), Lifecreed Duo [359] (unblocked, observed P/T 1/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Allen -2; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 22
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Allen 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [379] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 194).
+      Swamp [380] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 197).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Allen: Graveyard: Fabled Passage [281]; Battlefield: Brineborn Cutthroat [366], Forest [340], Island [282], Jadelight Spelunker [370], Temple of Mystery [351]; Exile: Nicanzil, Current Conductor [386]
+      gian31: Battlefield: Case of the Uneaten Feast [337], Hinterland Sanctifier [355], Lifecreed Duo [346], Lifecreed Duo [359], Makeshift Binding [381], Plains [336], Plains [345], Plains [354], Swamp [380]
+
+Turn 9
+  - Nicanzil, Current Conductor [valid_resolution_no_immediate_mutation, seq=230] (active=Allen, phase=Phase_Main1, controller=Allen, owner=Allen, source_object=389)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Nicanzil, Current Conductor resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Nicanzil, Current Conductor (object 389) Hand (Allen) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Nicanzil, Current Conductor (object 389) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=Allen; frames: DeclareAttack):
+      attackers: Jadelight Spelunker [370] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -3 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 22 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Summon: Leviathan [387] Library (Allen) -> Hand (Allen) (Draw; GRE sequence 225).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Allen: Graveyard: Fabled Passage [281]; Battlefield: Brineborn Cutthroat [366], Forest [340], Island [282], Jadelight Spelunker [370], Nicanzil, Current Conductor [389], Temple of Mystery [351]; Exile: Nicanzil, Current Conductor [386]
+      gian31: Battlefield: Case of the Uneaten Feast [337], Hinterland Sanctifier [355], Lifecreed Duo [346], Lifecreed Duo [359], Makeshift Binding [381], Plains [336], Plains [345], Plains [354], Swamp [380]
+
+Turn 10
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=256] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=393)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 393) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 393) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lifecreed Duo [observed_semantic_effect, seq=259] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=359, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Lifecreed Duo: gian31 gains 1 life.
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=261] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Lifecreed Duo [observed_semantic_effect, seq=263] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=346, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Lifecreed Duo: gian31 gains 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=265] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=337, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=268] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=399)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 399) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 399) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=271] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=393, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=273] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=399, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Allen loses 1 life.
+  - Ability of Lifecreed Duo [observed_semantic_effect, seq=275] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=359, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Lifecreed Duo: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=277] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=399, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Allen loses 1 life.
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=279] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=281] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=399, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Allen loses 1 life.
+  - Ability of Lifecreed Duo [observed_semantic_effect, seq=283] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=346, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Lifecreed Duo: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=285] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=399, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Allen loses 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=287] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=337, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=289] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=399, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Allen loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Lifecreed Duo [346] (unblocked, observed P/T 1/2), Lifecreed Duo [359] (unblocked, observed P/T 1/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Allen -7; gian31 +9 (individual changes below; gains and losses may offset)
+    life: gian31 19 -> 20
+    life: gian31 20 -> 21
+    life: gian31 21 -> 22
+    life: gian31 22 -> 23
+    life: gian31 23 -> 24
+    life: Allen 18 -> 17
+    life: gian31 24 -> 25
+    life: Allen 17 -> 16
+    life: gian31 25 -> 26
+    life: Allen 16 -> 15
+    life: gian31 26 -> 27
+    life: Allen 15 -> 14
+    life: gian31 27 -> 28
+    life: Allen 14 -> 13
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Allen 13 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hinterland Sanctifier [392] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 251).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Allen: Graveyard: Fabled Passage [281]; Battlefield: Brineborn Cutthroat [366], Forest [340], Island [282], Jadelight Spelunker [370], Nicanzil, Current Conductor [389], Temple of Mystery [351]; Exile: Nicanzil, Current Conductor [386]
+      gian31: Battlefield: Case of the Uneaten Feast [337], Hinterland Sanctifier [355], Hinterland Sanctifier [393], Lifecreed Duo [346], Lifecreed Duo [359], Makeshift Binding [381], Marauding Blight-Priest [399], Plains [336], Plains [345], Plains [354], Swamp [380]
+
+Turn 11
+  - Cenote Scout [valid_resolution_no_immediate_mutation, seq=315] (active=Allen, phase=Phase_Main1, controller=Allen, owner=Allen, source_object=414)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Cenote Scout resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Cenote Scout (object 414) Hand (Allen) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Cenote Scout (object 414) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Cenote Scout [observed_semantic_effect, seq=317] (active=Allen, phase=Phase_Main1, controller=Allen, owner=Allen, source_object=414, source_last_explicit_zone=Battlefield)
+      effects: none immediately observed
+      narrative: Observed zone movements: Cavern of Souls.
+      explicit effect object references: Cavern of Souls [288], object 418 [418] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Cavern of Souls (object 418) Library (Allen) -> Hand (Allen) (Put; shared object ID)
+  Combat snapshots observed (active=Allen; frames: DeclareAttack -> DeclareBlock):
+      attackers: Jadelight Spelunker [370] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -3 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 28 -> 25
+    additional protocol-observed zone movements not assigned to an action chain:
+      Cenote Scout [413] Library (Allen) -> Hand (Allen) (Draw; GRE sequence 310).
+      Cavern of Souls [421] Hand (Allen) -> Battlefield (PlayLand; GRE sequence 322).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Allen: Graveyard: Fabled Passage [281]; Battlefield: Brineborn Cutthroat [366], Cavern of Souls [421], Cenote Scout [414], Forest [340], Island [282], Jadelight Spelunker [370], Nicanzil, Current Conductor [389], Temple of Mystery [351]; Exile: Nicanzil, Current Conductor [386]
+      gian31: Battlefield: Case of the Uneaten Feast [337], Hinterland Sanctifier [355], Hinterland Sanctifier [393], Lifecreed Duo [346], Lifecreed Duo [359], Makeshift Binding [381], Marauding Blight-Priest [399], Plains [336], Plains [345], Plains [354], Swamp [380]
+
+Turn 12
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=348] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=423)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 423) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 423) Stack -> Battlefield (Resolve; shared object ID)
+  - Three Steps Ahead [observed_semantic_effect, seq=359] (active=gian31, phase=Phase_Main1, controller=Allen, owner=Allen, source_object=428)
+      effects: none immediately observed
+      narrative: Observed zone movements: Three Steps Ahead, Starscape Cleric, Three Steps Ahead.
+      explicit effect object references: Starscape Cleric [425], Starscape Cleric [433] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Three Steps Ahead (object 428) Hand (Allen) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 433) Stack -> Graveyard (gian31) (Countered; shared object ID)
+      protocol-linked zone transfer: Three Steps Ahead (object 434) Stack -> Graveyard (Allen) (Resolve; shared object ID)
+      identity continuity: source object 428 -> transfer object 434 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Lifecreed Duo [346] (unblocked, observed P/T 1/2), Lifecreed Duo [359] (unblocked, observed P/T 1/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Allen -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Allen 11 -> 9
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [422] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 343).
+      Starscape Cleric [425] Hand (gian31) -> Stack (CastSpell; GRE sequence 349).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Allen: Graveyard: Fabled Passage [281], Three Steps Ahead [434]; Battlefield: Brineborn Cutthroat [366], Cavern of Souls [421], Cenote Scout [414], Forest [340], Island [282], Jadelight Spelunker [370], Nicanzil, Current Conductor [389], Temple of Mystery [351]; Exile: Nicanzil, Current Conductor [386]
+      gian31: Battlefield: Case of the Uneaten Feast [337], Case of the Uneaten Feast [423], Hinterland Sanctifier [355], Hinterland Sanctifier [393], Lifecreed Duo [346], Lifecreed Duo [359], Makeshift Binding [381], Marauding Blight-Priest [399], Plains [336], Plains [345], Plains [354], Swamp [380]; Graveyard: Starscape Cleric [433]
+
+Turn 13
+  - Deeproot Pilgrimage [valid_resolution_no_immediate_mutation, seq=385] (active=Allen, phase=Phase_Main1, controller=Allen, owner=Allen, source_object=436)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deeproot Pilgrimage resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deeproot Pilgrimage (object 436) Hand (Allen) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deeproot Pilgrimage (object 436) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Deeproot Pilgrimage [435] Library (Allen) -> Hand (Allen) (Draw; GRE sequence 380).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Allen: Graveyard: Fabled Passage [281], Three Steps Ahead [434]; Battlefield: Brineborn Cutthroat [366], Cavern of Souls [421], Cenote Scout [414], Deeproot Pilgrimage [436], Forest [340], Island [282], Jadelight Spelunker [370], Nicanzil, Current Conductor [389], Temple of Mystery [351]; Exile: Nicanzil, Current Conductor [386]
+      gian31: Battlefield: Case of the Uneaten Feast [337], Case of the Uneaten Feast [423], Hinterland Sanctifier [355], Hinterland Sanctifier [393], Lifecreed Duo [346], Lifecreed Duo [359], Makeshift Binding [381], Marauding Blight-Priest [399], Plains [336], Plains [345], Plains [354], Swamp [380]; Graveyard: Starscape Cleric [433]
+
+Turn 14
+  - Brineborn Cutthroat [valid_resolution_no_immediate_mutation, seq=153] (active=unknown, controller=Allen, owner=Allen, source_object=366)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Brineborn Cutthroat resolves with no immediate observed mutation.
+  - Ability of Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=405] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=337, source_last_explicit_zone=Battlefield, source_successor=441 observed Battlefield -> Graveyard (gian31) (Sacrifice))
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Case of the Uneaten Feast resolves with no immediate observed mutation.
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=409] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=442)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 442) Graveyard (gian31) -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Graveyard (gian31); enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Starscape Cleric (object 442) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Enduring Tenacity [439] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 400).
+      Case of the Uneaten Feast [441] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 403).
+        sacrifice observed after Brineborn Cutthroat (seq 153); direct causal linkage is unavailable.
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Allen: Graveyard: Fabled Passage [281], Three Steps Ahead [434]; Battlefield: Brineborn Cutthroat [366], Cavern of Souls [421], Cenote Scout [414], Deeproot Pilgrimage [436], Forest [340], Island [282], Jadelight Spelunker [370], Nicanzil, Current Conductor [389], Temple of Mystery [351]; Exile: Nicanzil, Current Conductor [386]
+      gian31: Battlefield: Case of the Uneaten Feast [423], Hinterland Sanctifier [355], Hinterland Sanctifier [393], Lifecreed Duo [346], Lifecreed Duo [359], Makeshift Binding [381], Marauding Blight-Priest [399], Plains [336], Plains [345], Plains [354], Starscape Cleric [442], Swamp [380]; Graveyard: Case of the Uneaten Feast [441]
+
+Turn None
+  - Ability of Brineborn Cutthroat [observed_semantic_effect, seq=357] (active=unknown, controller=Allen, owner=Allen, source_object=366, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, +1 counter(s)
+      narrative: Ability of Brineborn Cutthroat: Brineborn Cutthroat gets +1/+1; 1 counter(s) are added to Brineborn Cutthroat [366].
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- No life mutation without an exact same-record source was observed.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Fabled Passage [owner=Allen, controller=Allen] moves Hand (Allen) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Fabled Passage [owner=Allen, controller=Allen] moves Battlefield -> Graveyard (Allen) (Sacrifice).
+- Turn 1, seq 11: Island [owner=Allen, controller=Allen] moves Library (Allen) -> Battlefield (Put).
+- Turn 2, seq 26: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 29: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 30: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 32: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 46: Nicanzil, Current Conductor [owner/controller metadata unavailable] moves Library (Allen) -> Hand (Allen) (Draw).
+- Turn 3, seq 49: Forest [owner=Allen, controller=Allen] moves Hand (Allen) -> Battlefield (PlayLand).
+- Turn 3, seq 50: Nicanzil, Current Conductor [owner=Allen, controller=Allen] moves Hand (Allen) -> Stack (CastSpell).
+- Turn 3, seq 52: Nicanzil, Current Conductor [owner=Allen, controller=Allen] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 66: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 69: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 70: Lifecreed Duo [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 72: Lifecreed Duo [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 88: Temple of Mystery [owner/controller metadata unavailable] moves Library (Allen) -> Hand (Allen) (Draw).
+- Turn 5, seq 91: Temple of Mystery [owner=Allen, controller=Allen] moves Hand (Allen) -> Battlefield (PlayLand).
+- Turn 6, seq 115: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 118: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 119: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 121: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 127: Lifecreed Duo [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 129: Lifecreed Duo [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 151: Brineborn Cutthroat [owner=Allen, controller=Allen] moves Hand (Allen) -> Stack (CastSpell).
+- Turn 6, seq 153: Brineborn Cutthroat [owner=Allen, controller=Allen] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 157: object 369 [owner/controller metadata unavailable] moves Library (Allen) -> Hand (Allen) (Draw).
+- Turn 7, seq 160: Jadelight Spelunker [owner=Allen, controller=Allen] moves Hand (Allen) -> Stack (CastSpell).
+- Turn 7, seq 164: Jadelight Spelunker [owner=Allen, controller=Allen] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 194: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 197: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 198: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 200: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 204: Nicanzil, Current Conductor [owner=Allen, controller=Allen] moves Battlefield -> Exile (Exile).
+- Turn 9, seq 225: Summon: Leviathan [owner/controller metadata unavailable] moves Library (Allen) -> Hand (Allen) (Draw).
+- Turn 9, seq 228: Nicanzil, Current Conductor [owner=Allen, controller=Allen] moves Hand (Allen) -> Stack (CastSpell).
+- Turn 9, seq 230: Nicanzil, Current Conductor [owner=Allen, controller=Allen] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 251: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 254: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 256: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 266: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 268: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 310: Cenote Scout [owner/controller metadata unavailable] moves Library (Allen) -> Hand (Allen) (Draw).
+- Turn 11, seq 313: Cenote Scout [owner=Allen, controller=Allen] moves Hand (Allen) -> Stack (CastSpell).
+- Turn 11, seq 315: Cenote Scout [owner=Allen, controller=Allen] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 317: Cavern of Souls [owner/controller metadata unavailable] moves Library (Allen) -> Hand (Allen) (Put).
+- Turn 11, seq 322: Cavern of Souls [owner=Allen, controller=Allen] moves Hand (Allen) -> Battlefield (PlayLand).
+- Turn 12, seq 343: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 346: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 348: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 349: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 352: Three Steps Ahead [owner=Allen, controller=Allen] moves Hand (Allen) -> Stack (CastSpell).
+- Turn 12, seq 359: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Countered).
+- Turn 12, seq 359: Three Steps Ahead [owner=Allen, controller=Allen] moves Stack -> Graveyard (Allen) (Resolve).
+- Turn 13, seq 380: Deeproot Pilgrimage [owner/controller metadata unavailable] moves Library (Allen) -> Hand (Allen) (Draw).
+- Turn 13, seq 383: Deeproot Pilgrimage [owner=Allen, controller=Allen] moves Hand (Allen) -> Stack (CastSpell).
+- Turn 13, seq 385: Deeproot Pilgrimage [owner=Allen, controller=Allen] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 400: Enduring Tenacity [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 403: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 14, seq 406: Starscape Cleric [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Stack (CastSpell).
+- Turn 14, seq 409: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 221 becomes object 279 [Fabled Passage].
+- Turn 1, seq 8: object 279 becomes object 281 [Fabled Passage].
+- Turn 1, seq 11: object 242 becomes object 282 [Island].
+- Turn 2, seq 26: object 166 becomes object 335 [Starscape Cleric].
+- Turn 2, seq 29: object 163 becomes object 336 [Plains].
+- Turn 2, seq 30: object 159 becomes object 337 [Case of the Uneaten Feast].
+- Turn 3, seq 46: object 283 becomes object 339 [Nicanzil, Current Conductor].
+- Turn 3, seq 49: object 222 becomes object 340 [Forest].
+- Turn 3, seq 50: object 223 becomes object 341 [Nicanzil, Current Conductor].
+- Turn 4, seq 66: object 167 becomes object 344 [Hinterland Sanctifier].
+- Turn 4, seq 69: object 161 becomes object 345 [Plains].
+- Turn 4, seq 70: object 162 becomes object 346 [Lifecreed Duo].
+- Turn 5, seq 88: object 284 becomes object 350 [Temple of Mystery].
+- Turn 5, seq 91: object 350 becomes object 351 [Temple of Mystery].
+- Turn 6, seq 115: object 168 becomes object 353 [Plains].
+- Turn 6, seq 118: object 353 becomes object 354 [Plains].
+- Turn 6, seq 119: object 344 becomes object 355 [Hinterland Sanctifier].
+- Turn 6, seq 127: object 165 becomes object 359 [Lifecreed Duo].
+- Turn 6, seq 151: object 225 becomes object 366 [Brineborn Cutthroat].
+- Turn 7, seq 157: object 285 becomes object 369 [object 285].
+- Turn 7, seq 160: object 224 becomes object 370 [Jadelight Spelunker].
+- Turn 8, seq 194: object 169 becomes object 379 [Swamp].
+- Turn 8, seq 197: object 379 becomes object 380 [Swamp].
+- Turn 8, seq 198: object 164 becomes object 381 [Makeshift Binding].
+- Turn 8, seq 204: object 341 becomes object 386 [Nicanzil, Current Conductor].
+- Turn 9, seq 225: object 286 becomes object 387 [Summon: Leviathan].
+- Turn 9, seq 228: object 339 becomes object 389 [Nicanzil, Current Conductor].
+- Turn 10, seq 251: object 170 becomes object 392 [Hinterland Sanctifier].
+- Turn 10, seq 254: object 392 becomes object 393 [Hinterland Sanctifier].
+- Turn 10, seq 266: object 160 becomes object 399 [Marauding Blight-Priest].
+- Turn 11, seq 310: object 287 becomes object 413 [Cenote Scout].
+- Turn 11, seq 313: object 413 becomes object 414 [Cenote Scout].
+- Turn 11, seq 317: object 288 becomes object 418 [Cavern of Souls].
+- Turn 11, seq 322: object 418 becomes object 421 [Cavern of Souls].
+- Turn 12, seq 343: object 171 becomes object 422 [Case of the Uneaten Feast].
+- Turn 12, seq 346: object 422 becomes object 423 [Case of the Uneaten Feast].
+- Turn 12, seq 349: object 335 becomes object 425 [Starscape Cleric].
+- Turn 12, seq 352: object 219 becomes object 428 [Three Steps Ahead].
+- Turn 12, seq 359: object 425 becomes object 433 [Starscape Cleric].
+- Turn 12, seq 359: object 428 becomes object 434 [Three Steps Ahead].
+- Turn 13, seq 380: object 289 becomes object 435 [Deeproot Pilgrimage].
+- Turn 13, seq 383: object 435 becomes object 436 [Deeproot Pilgrimage].
+- Turn 14, seq 400: object 172 becomes object 439 [Enduring Tenacity].
+- Turn 14, seq 403: object 337 becomes object 441 [Case of the Uneaten Feast].
+- Turn 14, seq 406: object 433 becomes object 442 [Starscape Cleric].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: Allen plays Fabled Passage (object 279) from Hand (Allen) to Battlefield.
+- Turn 2: gian31 plays Plains (object 336) from Hand (gian31) to Battlefield.
+- Turn 3: Allen plays Forest (object 340) from Hand (Allen) to Battlefield.
+- Turn 4: gian31 plays Plains (object 345) from Hand (gian31) to Battlefield.
+- Turn 5: Allen plays Temple of Mystery (object 351) from Hand (Allen) to Battlefield.
+- Turn 6: gian31 plays Plains (object 354) from Hand (gian31) to Battlefield.
+- Turn 8: gian31 plays Swamp (object 380) from Hand (gian31) to Battlefield.
+- Turn 11: Allen plays Cavern of Souls (object 421) from Hand (Allen) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- Turn 6: Lifecreed Duo -> Case of the Uneaten Feast; observed repeated transitions=2; net life: gian31 +4.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=3, Lifecreed Duo=2.
+  Individual ability records remain in the timeline.
+- Turn 10: Hinterland Sanctifier -> Marauding Blight-Priest; observed repeated transitions=2; net life: Allen -2, gian31 +2.
+  Same-turn ability records (including records outside the summarized chain): Hinterland Sanctifier=3, Marauding Blight-Priest=5.
+  Individual ability records remain in the timeline.
+- Turn 10: Marauding Blight-Priest -> Lifecreed Duo; observed repeated transitions=2; net life: Allen -2, gian31 +2.
+  Same-turn ability records (including records outside the summarized chain): Lifecreed Duo=4, Marauding Blight-Priest=5.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED TRIGGER CYCLES
+------------------------------------------------------------
+- Turn 10: Hinterland Sanctifier -> Marauding Blight-Priest -> Lifecreed Duo -> Marauding Blight-Priest; observed repetitions=2 (cycle length 4).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Case of the Uneaten Feast: casts=2; abilities=7 (triggered=7, activated=0) across turns [2, 4, 6, 6, 6, 10, 10, 12, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=0
+  observed effects: life +1
+- Lifecreed Duo: casts=2; abilities=6 (triggered=6, activated=0) across turns [4, 6, 6, 6, 10, 10, 10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=6, other=0
+  observed effects: life +1
+- Hinterland Sanctifier: casts=2; abilities=4 (triggered=4, activated=0) across turns [6, 6, 10, 10, 10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=4, other=0
+  observed effects: life +1
+- Marauding Blight-Priest: casts=1; abilities=5 (triggered=5, activated=0) across turns [10, 10, 10, 10, 10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=1
+  observed effects: life -1, synthetic event
+- Nicanzil, Current Conductor: casts=2; abilities=2 (triggered=2, activated=0) across turns [3, 7, 7, 9]
+  observed effect totals: draws=0, tokens=0, counters=2, returns=0, damage=0, life_changes=0, other=2
+  observed effects: +1 counter(s), P/T +1/+1
+- Brineborn Cutthroat: casts=1; abilities=1 (triggered=1, activated=0) across turns [14, 'None']
+  observed effect totals: draws=0, tokens=0, counters=1, returns=0, damage=0, life_changes=0, other=1
+  observed effects: +1 counter(s), P/T +1/+1
+- Cenote Scout: casts=1; abilities=1 (triggered=1, activated=0) across turns [11, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: zone_transfer
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [8, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Deeproot Pilgrimage: casts=1 across turns [13]
+- Jadelight Spelunker: casts=1 across turns [7]
+- Starscape Cleric: casts=1 across turns [14]
+- Three Steps Ahead: casts=1 across turns [12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: zone_transfer
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 - DeclareAttack, DeclareBlock (active=Allen)
+  attacker: Nicanzil, Current Conductor (Allen) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack (active=Allen)
+  attacker: Nicanzil, Current Conductor (Allen) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Lifecreed Duo (gian31) -> Allen; unblocked in this observed snapshot
+  attacker: Lifecreed Duo (gian31) -> Allen; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack (active=Allen)
+  attacker: Jadelight Spelunker (Allen) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Lifecreed Duo (gian31) -> Allen; unblocked in this observed snapshot
+  attacker: Lifecreed Duo (gian31) -> Allen; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=Allen)
+  attacker: Jadelight Spelunker (Allen) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Lifecreed Duo (gian31) -> Allen; unblocked in this observed snapshot
+  attacker: Lifecreed Duo (gian31) -> Allen; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 160: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 161: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Lifecreed Duo | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Lifecreed Duo | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 279: Fabled Passage | controller=Allen | owner=Allen | zone=Battlefield (latest_object_observation)
+- 280: object 280 | controller=Allen | owner=Allen | zone=unknown (inferred unknown) (latest_object_observation)
+- 281: Fabled Passage | controller=Allen | owner=Allen | zone=Graveyard (latest_object_observation)
+- 282: Island | controller=Allen | owner=Allen | zone=Battlefield (latest_object_observation)
+- 286: Summon: Leviathan | controller=Allen | owner=Allen | zone=Hand (latest_object_observation)
+- 288: Cavern of Souls | controller=Allen | owner=Allen | zone=Hand (latest_object_observation)
+- 335: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 336: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 337: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 340: Forest | controller=Allen | owner=Allen | zone=Battlefield (latest_object_observation)
+- 341: Nicanzil, Current Conductor | controller=Allen | owner=Allen | zone=Battlefield (latest_object_observation)
+- 344: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 345: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 346: Lifecreed Duo | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 349: object 349 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 351: Temple of Mystery | controller=Allen | owner=Allen | zone=Battlefield (latest_object_observation)
+- 352: object 352 | controller=Allen | owner=Allen | zone=unknown (inferred unknown) (latest_object_observation)
+- 353: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 354: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 355: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 357: object 357 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 358: object 358 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 359: Lifecreed Duo | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 362: object 362 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 363: object 363 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 364: object 364 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 365: object 365 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 366: Brineborn Cutthroat | controller=Allen | owner=Allen | zone=Battlefield (latest_object_observation)
+- 370: Jadelight Spelunker | controller=Allen | owner=Allen | zone=Battlefield (latest_object_observation)
+- 374: object 374 | controller=Allen | owner=Allen | zone=unknown (inferred unknown) (latest_object_observation)
+- 375: Summon: Leviathan | controller=Allen | owner=Allen | zone=unknown (inferred unknown) (latest_object_observation)
+- 376: object 376 | controller=Allen | owner=Allen | zone=unknown (inferred unknown) (latest_object_observation)
+- 377: Summon: Leviathan | controller=Allen | owner=Allen | zone=unknown (inferred unknown) (latest_object_observation)
+- 378: object 378 | controller=Allen | owner=Allen | zone=unknown (inferred unknown) (latest_object_observation)
+- 379: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 380: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 381: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 385: object 385 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 386: Nicanzil, Current Conductor | controller=Allen | owner=Allen | zone=Exile (latest_object_observation)
+- 388: Summon: Leviathan | controller=Allen | owner=Allen | zone=unknown (inferred unknown) (latest_object_observation)
+- 389: Nicanzil, Current Conductor | controller=Allen | owner=Allen | zone=Battlefield (latest_object_observation)
+- 392: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 393: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 395: object 395 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 396: object 396 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 397: object 397 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 398: object 398 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 399: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 403: object 403 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 404: object 404 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 405: object 405 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 406: object 406 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 407: object 407 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 408: object 408 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 409: object 409 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 410: object 410 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 411: object 411 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 412: object 412 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 414: Cenote Scout | controller=Allen | owner=Allen | zone=Battlefield (latest_object_observation)
+- 416: object 416 | controller=Allen | owner=Allen | zone=unknown (inferred unknown) (latest_object_observation)
+- 417: Cavern of Souls | controller=Allen | owner=Allen | zone=unknown (inferred unknown) (latest_object_observation)
+- 419: Cavern of Souls | controller=Allen | owner=Allen | zone=unknown (inferred unknown) (latest_object_observation)
+- 420: object 420 | controller=Allen | owner=Allen | zone=unknown (inferred unknown) (latest_object_observation)
+- 421: Cavern of Souls | controller=Allen | owner=Allen | zone=Battlefield (latest_object_observation)
+- 422: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 423: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 425: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 428: Three Steps Ahead | controller=Allen | owner=Allen | zone=Stack (latest_object_observation)
+- 432: object 432 | controller=Allen | owner=Allen | zone=unknown (inferred unknown) (latest_object_observation)
+- 433: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 434: Three Steps Ahead | controller=Allen | owner=Allen | zone=Graveyard (latest_object_observation)
+- 436: Deeproot Pilgrimage | controller=Allen | owner=Allen | zone=Stack (latest_object_observation)
+- 439: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 440: object 440 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 441: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 442: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 445: object 445 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 446: object 446 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 447: object 447 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 448: object 448 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 449: object 449 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Allen: 30 total items
+  zones: Battlefield=10, Exile=1, Graveyard=2, Hand=2, Stack=2, unknown=13
+  objects: Cavern of Souls x4, Summon: Leviathan x4, Nicanzil, Current Conductor x3, Fabled Passage x2, Three Steps Ahead x2, Brineborn Cutthroat, Cenote Scout, Deeproot Pilgrimage, Forest, Island, Jadelight Spelunker, Temple of Mystery
+gian31: 58 total items
+  zones: Battlefield=10, Graveyard=1, Hand=15, Stack=4, unknown=28
+  objects: Plains x6, Case of the Uneaten Feast x5, Hinterland Sanctifier x4, Lifecreed Duo x4, Starscape Cleric x4, Makeshift Binding x2, Marauding Blight-Priest x2, Swamp x2, Enduring Tenacity, object 349, object 357, object 358
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (10): Hinterland Sanctifier, Hinterland Sanctifier, Lifecreed Duo, Lifecreed Duo, Marauding Blight-Priest, Plains, Plains, Plains, Starscape Cleric, Swamp
+  Graveyard: 1 card(s)
+Allen:
+  Battlefield (10): Brineborn Cutthroat, Cavern of Souls, Cenote Scout, Fabled Passage, Forest, Island, Jadelight Spelunker, Nicanzil, Current Conductor, Nicanzil, Current Conductor, Temple of Mystery
+  Graveyard: 2 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+41 objects have no resolved final zone and are omitted from the known board state.
+Allen: 13 unknown object(s)
+gian31: 28 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=17, Stack=6
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Allen:
+  Battlefield (9): Island, Forest, Temple of Mystery, Brineborn Cutthroat, Jadelight Spelunker, Nicanzil, Current Conductor, Cenote Scout, Cavern of Souls, Deeproot Pilgrimage
+  Graveyard (2): Fabled Passage, Three Steps Ahead
+  Exile (1): Nicanzil, Current Conductor
+gian31:
+  Battlefield (12): Plains, Plains, Lifecreed Duo, Plains, Hinterland Sanctifier, Lifecreed Duo, Swamp, Makeshift Binding, Hinterland Sanctifier, Marauding Blight-Priest, Case of the Uneaten Feast, Starscape Cleric
+  Graveyard (1): Case of the Uneaten Feast
+Known non-persistent entries (counts only):
+  Allen: Hand=2, Limbo=1, Revealed=1
+  gian31: Hand=1, Limbo=5, Pending=5
+  unknown: Hand=1, Library=91, Limbo=5
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: Allen Battlefield=1; Allen Graveyard=1
+- Turn 2: Allen Battlefield=1; Allen Graveyard=1; gian31 Battlefield=2
+- Turn 3: Allen Battlefield=3; Allen Graveyard=1; gian31 Battlefield=2
+- Turn 4: Allen Battlefield=3; Allen Graveyard=1; gian31 Battlefield=4
+- Turn 5: Allen Battlefield=4; Allen Graveyard=1; gian31 Battlefield=4
+- Turn 6: Allen Battlefield=5; Allen Graveyard=1; gian31 Battlefield=7
+- Turn 7: Allen Battlefield=6; Allen Graveyard=1; gian31 Battlefield=7
+- Turn 8: Allen Battlefield=5; Allen Graveyard=1; Allen Exile=1; gian31 Battlefield=9
+- Turn 9: Allen Battlefield=6; Allen Graveyard=1; Allen Exile=1; gian31 Battlefield=9
+- Turn 10: Allen Battlefield=6; Allen Graveyard=1; Allen Exile=1; gian31 Battlefield=11
+- Turn 11: Allen Battlefield=8; Allen Graveyard=1; Allen Exile=1; gian31 Battlefield=11
+- Turn 12: Allen Battlefield=8; Allen Graveyard=2; Allen Exile=1; gian31 Battlefield=12; gian31 Graveyard=1
+- Turn 13: Allen Battlefield=9; Allen Graveyard=2; Allen Exile=1; gian31 Battlefield=12; gian31 Graveyard=1
+- Turn 14: Allen Battlefield=9; Allen Graveyard=2; Allen Exile=1; gian31 Battlefield=12; gian31 Graveyard=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Nicanzil, Current Conductor resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Lifecreed Duo resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Lifecreed Duo resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Jadelight Spelunker resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Nicanzil, Current Conductor resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Cenote Scout resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Deeproot Pilgrimage resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Brineborn Cutthroat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
