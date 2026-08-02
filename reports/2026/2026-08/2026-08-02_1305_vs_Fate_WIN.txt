@@ -1,0 +1,574 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Fate
+Seat map: Seat 1=gian31, Seat 2=Fate
+Turn range (known): 1 - 9
+Records: 42
+Action chains: 14
+Winner: gian31
+Final life: {'gian31': 29, 'Fate': 1}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Match-result payload was observed after the last captured action: Turn 9 (Phase_Main1; Ability of Marauding Blight-Priest, seq 261); payload ordering within later uncaptured records is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 18 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 9 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9] (raw records=9; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 8 explicit Library -> Hand movement(s); named in the draw record=4, resolved through an explicit identity transition=4, unresolved=0.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 29, 'Fate': 1}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 9 (Phase_Main1; Ability of Marauding Blight-Priest, seq 261).
+Last captured life mutation: gian31 28 -> 29 (seq 258).
+Observed active tokens: Dog [341] controller=Fate, created Turn 9, last observed Turn 9 seq 206, P/T 1/1 (current zone unconfirmed); Dog [342] controller=Fate, created Turn 9, last observed Turn 9 seq 206, P/T 1/1 (current zone unconfirmed); Dog [343] controller=Fate, created Turn 9, last observed Turn 9 seq 206, P/T 1/1 (current zone unconfirmed); Dog [344] controller=Fate, created Turn 9, last observed Turn 9 seq 206, P/T 1/1 (current zone unconfirmed).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [287] Hand (Fate) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Fate: Battlefield: Plains [287]
+
+Turn 2
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=28] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 290) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 290) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Marauding Blight-Priest [288] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 21).
+      Godless Shrine [289] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 25).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Fate: Battlefield: Plains [287]
+      gian31: Battlefield: Authority of the Consuls [290], Godless Shrine [289]
+
+Turn 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Wind-Scarred Crag [292] Library (Fate) -> Hand (Fate) (Draw; GRE sequence 42).
+      Plains [293] Hand (Fate) -> Battlefield (PlayLand; GRE sequence 45).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Fate: Battlefield: Plains [287], Plains [293]
+      gian31: Battlefield: Authority of the Consuls [290], Godless Shrine [289]
+
+Turn 4
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=65] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=296)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 296) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 296) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Marauding Blight-Priest [294] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 59).
+      Swamp [295] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 62).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Fate: Battlefield: Plains [287], Plains [293]
+      gian31: Battlefield: Authority of the Consuls [290], Authority of the Consuls [296], Godless Shrine [289], Swamp [295]
+
+Turn 5
+  - Axgard Cavalry [valid_resolution_no_immediate_mutation, seq=85] (active=Fate, phase=Phase_Main1, controller=Fate, owner=Fate, source_object=300)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Axgard Cavalry resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Axgard Cavalry (object 300) Hand (Fate) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Axgard Cavalry (object 300) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=88] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=296, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=90] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+    net observed life change this turn: gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 19
+    life: gian31 19 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [298] Library (Fate) -> Hand (Fate) (Draw; GRE sequence 79).
+      Mountain [299] Hand (Fate) -> Battlefield (PlayLand; GRE sequence 82).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Fate: Battlefield: Axgard Cavalry [300], Mountain [299], Plains [287], Plains [293]
+      gian31: Battlefield: Authority of the Consuls [290], Authority of the Consuls [296], Godless Shrine [289], Swamp [295]
+
+Turn 6
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=110] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 307) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 307) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [305] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 104).
+      Shattered Sanctum [306] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 107).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Fate: Battlefield: Axgard Cavalry [300], Mountain [299], Plains [287], Plains [293]
+      gian31: Battlefield: Authority of the Consuls [290], Authority of the Consuls [296], Godless Shrine [289], Marauding Blight-Priest [307], Shattered Sanctum [306], Swamp [295]
+
+Turn 7
+  - Ability of Wind-Scarred Crag [observed_semantic_effect, seq=129] (active=Fate, phase=Phase_Main1, controller=Fate, owner=Fate, source_object=312, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Wind-Scarred Crag: Fate gains 1 life.
+  - Crusader of Odric [valid_resolution_no_immediate_mutation, seq=132] (active=Fate, phase=Phase_Main1, controller=Fate, owner=Fate, source_object=314)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Crusader of Odric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Crusader of Odric (object 314) Hand (Fate) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Crusader of Odric (object 314) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=135] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=296, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=137] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Fate loses 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=139] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=141] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Fate loses 1 life.
+  Combat snapshots observed (active=Fate; frames: DeclareAttack):
+      attackers: Axgard Cavalry [300] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Fate -1; gian31 +0 (individual changes below; gains and losses may offset)
+    life: Fate 20 -> 21
+    life: gian31 20 -> 21
+    life: Fate 21 -> 20
+    life: gian31 21 -> 22
+    life: Fate 20 -> 19
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 22 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Wind-Scarred Crag [311] Library (Fate) -> Hand (Fate) (Draw; GRE sequence 124).
+      Wind-Scarred Crag [312] Hand (Fate) -> Battlefield (PlayLand; GRE sequence 127).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Fate: Battlefield: Axgard Cavalry [300], Crusader of Odric [314], Mountain [299], Plains [287], Plains [293], Wind-Scarred Crag [312]
+      gian31: Battlefield: Authority of the Consuls [290], Authority of the Consuls [296], Godless Shrine [289], Marauding Blight-Priest [307], Shattered Sanctum [306], Swamp [295]
+
+Turn 8
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=168] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=324)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 324) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 324) Stack -> Battlefield (Resolve; shared object ID)
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=171] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 326) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 326) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=173] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=324, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=176] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Fate loses 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=178] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Fate loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Marauding Blight-Priest [307] (unblocked, observed P/T 3/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Fate -5; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life: Fate 19 -> 18
+    life: Fate 18 -> 17
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): Fate 17 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [322] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 162).
+      Swamp [323] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 165).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Fate: Battlefield: Axgard Cavalry [300], Crusader of Odric [314], Mountain [299], Plains [287], Plains [293], Wind-Scarred Crag [312]
+      gian31: Battlefield: Authority of the Consuls [290], Authority of the Consuls [296], Case of the Uneaten Feast [324], Godless Shrine [289], Marauding Blight-Priest [307], Marauding Blight-Priest [326], Shattered Sanctum [306], Swamp [295], Swamp [323]
+
+Turn 9
+  - Ability of Wind-Scarred Crag [observed_semantic_effect, seq=203] (active=Fate, phase=Phase_Main1, controller=Fate, owner=Fate, source_object=334, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Wind-Scarred Crag: Fate gains 1 life.
+  - Release the Dogs [observed_semantic_effect, seq=206] (active=Fate, phase=Phase_Main1, controller=Fate, owner=Fate, source_object=336)
+      effects: token creation, token creation, token creation, token creation
+      narrative: Release the Dogs: a token is created; a token is created; a token is created; a token is created.
+      explicit effect object references: Dog [341], Dog [342], Dog [343], Dog [344] (role/targeting only where the protocol identifies it)
+      token created: Dog (object 341, controller=Fate) 1/1
+      token created: Dog (object 342, controller=Fate) 1/1
+      token created: Dog (object 343, controller=Fate) 1/1
+      token created: Dog (object 344, controller=Fate) 1/1
+      protocol-linked zone transfer: Release the Dogs (object 336) Hand (Fate) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Release the Dogs (object 353) Stack -> Graveyard (Fate) (Resolve; shared object ID)
+      identity continuity: source object 336 -> transfer object 353 (explicit GRE ObjectIdChanged chain).
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=209] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=296, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=212] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Fate loses 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=214] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Fate loses 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=216] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=296, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=219] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Fate loses 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=221] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Fate loses 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=223] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=296, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=226] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Fate loses 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=228] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Fate loses 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=230] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=296, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=233] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Fate loses 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=235] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Fate loses 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=237] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=240] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Fate loses 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=242] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Fate loses 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=244] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=247] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Fate loses 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=249] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Fate loses 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=251] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=254] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Fate loses 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=256] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Fate loses 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=258] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=261] (active=Fate, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Fate loses 1 life.
+    net observed life change this turn: Fate -13; gian31 +8 (individual changes below; gains and losses may offset)
+    life: Fate 14 -> 15
+    life: gian31 21 -> 22
+    life: Fate 15 -> 14
+    life: Fate 14 -> 13
+    life: gian31 22 -> 23
+    life: Fate 13 -> 12
+    life: Fate 12 -> 11
+    life: gian31 23 -> 24
+    life: Fate 11 -> 10
+    life: Fate 10 -> 9
+    life: gian31 24 -> 25
+    life: Fate 9 -> 8
+    life: Fate 8 -> 7
+    life: gian31 25 -> 26
+    life: Fate 7 -> 6
+    life: Fate 6 -> 5
+    life: gian31 26 -> 27
+    life: Fate 5 -> 4
+    life: Fate 4 -> 3
+    life: gian31 27 -> 28
+    life: Fate 3 -> 2
+    life: Fate 2 -> 1
+    life: gian31 28 -> 29
+    additional protocol-observed zone movements not assigned to an action chain:
+      Release the Dogs [333] Library (Fate) -> Hand (Fate) (Draw; GRE sequence 198).
+      Wind-Scarred Crag [334] Hand (Fate) -> Battlefield (PlayLand; GRE sequence 201).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Fate: Battlefield: Axgard Cavalry [300], Crusader of Odric [314], Mountain [299], Plains [287], Plains [293], Wind-Scarred Crag [312], Wind-Scarred Crag [334]; Graveyard: Release the Dogs [353]
+      gian31: Battlefield: Authority of the Consuls [290], Authority of the Consuls [296], Case of the Uneaten Feast [324], Godless Shrine [289], Marauding Blight-Priest [307], Marauding Blight-Priest [326], Shattered Sanctum [306], Swamp [295], Swamp [323]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+- Turn 2, seq 25: gian31 20 -> 18. No source event correlated in captured records.
+- Turn 7, seq 152, Phase_Main1: gian31 22 -> 20. Combat declaration observed; exact assignment unavailable. Previous captured action: Marauding Blight-Priest.
+- Turn 8, seq 188, Phase_Main1: Fate 17 -> 14. Combat declaration observed; exact assignment unavailable. Previous captured action: Marauding Blight-Priest.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 4 token creations observed; 4 active as last observed; 0 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Dog [341] controller=Fate; created Turn 9 (1/1); active as last observed at Turn 9, object 341 (latest observed P/T 1/1; current zone unconfirmed).
+- Dog [342] controller=Fate; created Turn 9 (1/1); active as last observed at Turn 9, object 342 (latest observed P/T 1/1; current zone unconfirmed).
+- Dog [343] controller=Fate; created Turn 9 (1/1); active as last observed at Turn 9, object 343 (latest observed P/T 1/1; current zone unconfirmed).
+- Dog [344] controller=Fate; created Turn 9 (1/1); active as last observed at Turn 9, object 344 (latest observed P/T 1/1; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Plains [owner=Fate, controller=Fate] moves Hand (Fate) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 25: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 26: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 28: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 42: Wind-Scarred Crag [owner/controller metadata unavailable] moves Library (Fate) -> Hand (Fate) (Draw).
+- Turn 3, seq 45: Plains [owner=Fate, controller=Fate] moves Hand (Fate) -> Battlefield (PlayLand).
+- Turn 4, seq 59: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 62: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 63: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 65: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 79: Mountain [owner/controller metadata unavailable] moves Library (Fate) -> Hand (Fate) (Draw).
+- Turn 5, seq 82: Mountain [owner=Fate, controller=Fate] moves Hand (Fate) -> Battlefield (PlayLand).
+- Turn 5, seq 83: Axgard Cavalry [owner=Fate, controller=Fate] moves Hand (Fate) -> Stack (CastSpell).
+- Turn 5, seq 85: Axgard Cavalry [owner=Fate, controller=Fate] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 104: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 107: Shattered Sanctum [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 108: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 110: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 124: Wind-Scarred Crag [owner/controller metadata unavailable] moves Library (Fate) -> Hand (Fate) (Draw).
+- Turn 7, seq 127: Wind-Scarred Crag [owner=Fate, controller=Fate] moves Hand (Fate) -> Battlefield (PlayLand).
+- Turn 7, seq 130: Crusader of Odric [owner=Fate, controller=Fate] moves Hand (Fate) -> Stack (CastSpell).
+- Turn 7, seq 132: Crusader of Odric [owner=Fate, controller=Fate] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 162: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 165: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 166: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 168: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 169: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 171: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 198: Release the Dogs [owner/controller metadata unavailable] moves Library (Fate) -> Hand (Fate) (Draw).
+- Turn 9, seq 201: Wind-Scarred Crag [owner=Fate, controller=Fate] moves Hand (Fate) -> Battlefield (PlayLand).
+- Turn 9, seq 204: Release the Dogs [owner=Fate, controller=Fate] moves Hand (Fate) -> Stack (CastSpell).
+- Turn 9, seq 206: Release the Dogs [owner=Fate, controller=Fate] moves Stack -> Graveyard (Fate) (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 227 becomes object 287 [Plains].
+- Turn 2, seq 21: object 174 becomes object 288 [Marauding Blight-Priest].
+- Turn 2, seq 25: object 168 becomes object 289 [Godless Shrine].
+- Turn 2, seq 26: object 169 becomes object 290 [Authority of the Consuls].
+- Turn 3, seq 42: object 234 becomes object 292 [Wind-Scarred Crag].
+- Turn 3, seq 45: object 228 becomes object 293 [Plains].
+- Turn 4, seq 59: object 175 becomes object 294 [Marauding Blight-Priest].
+- Turn 4, seq 62: object 171 becomes object 295 [Swamp].
+- Turn 4, seq 63: object 172 becomes object 296 [Authority of the Consuls].
+- Turn 5, seq 79: object 235 becomes object 298 [Mountain].
+- Turn 5, seq 82: object 298 becomes object 299 [Mountain].
+- Turn 5, seq 83: object 231 becomes object 300 [Axgard Cavalry].
+- Turn 6, seq 104: object 176 becomes object 305 [Case of the Uneaten Feast].
+- Turn 6, seq 107: object 170 becomes object 306 [Shattered Sanctum].
+- Turn 6, seq 108: object 288 becomes object 307 [Marauding Blight-Priest].
+- Turn 7, seq 124: object 236 becomes object 311 [Wind-Scarred Crag].
+- Turn 7, seq 127: object 292 becomes object 312 [Wind-Scarred Crag].
+- Turn 7, seq 130: object 232 becomes object 314 [Crusader of Odric].
+- Turn 8, seq 162: object 177 becomes object 322 [Case of the Uneaten Feast].
+- Turn 8, seq 165: object 173 becomes object 323 [Swamp].
+- Turn 8, seq 166: object 305 becomes object 324 [Case of the Uneaten Feast].
+- Turn 8, seq 169: object 294 becomes object 326 [Marauding Blight-Priest].
+- Turn 9, seq 198: object 237 becomes object 333 [Release the Dogs].
+- Turn 9, seq 201: object 311 becomes object 334 [Wind-Scarred Crag].
+- Turn 9, seq 204: object 333 becomes object 336 [Release the Dogs].
+- Turn 9, seq 206: object 336 becomes object 353 [Release the Dogs].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: Fate plays Plains (object 287) from Hand (Fate) to Battlefield.
+- Turn 2: gian31 plays Godless Shrine (object 289) from Hand (gian31) to Battlefield.
+- Turn 3: Fate plays Plains (object 293) from Hand (Fate) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 295) from Hand (gian31) to Battlefield.
+- Turn 5: Fate plays Mountain (object 299) from Hand (Fate) to Battlefield.
+- Turn 6: gian31 plays Shattered Sanctum (object 306) from Hand (gian31) to Battlefield.
+- Turn 7: Fate plays Wind-Scarred Crag (object 312) from Hand (Fate) to Battlefield.
+- Turn 8: gian31 plays Swamp (object 323) from Hand (gian31) to Battlefield.
+- Turn 9: Fate plays Wind-Scarred Crag (object 334) from Hand (Fate) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- Turn 7: Authority of the Consuls -> Marauding Blight-Priest; observed repeated transitions=2; net life: Fate -2, gian31 +2.
+  Same-turn ability records (including records outside the summarized chain): Authority of the Consuls=2, Marauding Blight-Priest=2.
+  Individual ability records remain in the timeline.
+- Turn 9: Authority of the Consuls -> Marauding Blight-Priest; observed repeated transitions=8; net life: Fate -8, gian31 +8.
+  Same-turn ability records (including records outside the summarized chain): Authority of the Consuls=8, Marauding Blight-Priest=15.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED TRIGGER CYCLES
+------------------------------------------------------------
+- Turn 7: Authority of the Consuls -> Marauding Blight-Priest; observed repetitions=2 (cycle length 2).
+  Raw ability events remain available in the turn timeline.
+- Turn 9: Authority of the Consuls -> Marauding Blight-Priest -> Marauding Blight-Priest; observed repetitions=7 (cycle length 3).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Marauding Blight-Priest: casts=2; abilities=19 (triggered=19, activated=0) across turns [6, 7, 7, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=19, other=3
+  observed effects: life -1, synthetic event
+- Authority of the Consuls: casts=2; abilities=12 (triggered=12, activated=0) across turns [2, 4, 5, 5, 7, 7, 9, 9, 9, 9, 9, 9, 9, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=12, other=0
+  observed effects: life +1
+- Case of the Uneaten Feast: casts=1; abilities=1 (triggered=1, activated=0) across turns [8, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Wind-Scarred Crag: abilities=2 (triggered=2, activated=0) across turns [7, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Axgard Cavalry: casts=1 across turns [5]
+- Crusader of Odric: casts=1 across turns [7]
+- Release the Dogs: casts=1 across turns [9]
+  observed effect totals: draws=0, tokens=4, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 7 - DeclareAttack (active=Fate)
+  attacker: Axgard Cavalry (Fate) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Marauding Blight-Priest (gian31) -> Fate; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX â€” OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 167: Sinister Monolith | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 168: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 169: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 170: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 171: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 172: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 173: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 287: Plains | controller=Fate | owner=Fate | zone=Battlefield (latest_object_observation)
+- 288: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 289: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 290: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 293: Plains | controller=Fate | owner=Fate | zone=Battlefield (latest_object_observation)
+- 294: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 295: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 296: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 299: Mountain | controller=Fate | owner=Fate | zone=Battlefield (latest_object_observation)
+- 300: Axgard Cavalry | controller=Fate | owner=Fate | zone=Battlefield (latest_object_observation)
+- 303: object 303 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 304: object 304 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 305: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 306: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 307: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 312: Wind-Scarred Crag | controller=Fate | owner=Fate | zone=Battlefield (latest_object_observation)
+- 313: object 313 | controller=Fate | owner=Fate | zone=unknown (inferred unknown) (latest_object_observation)
+- 314: Crusader of Odric | controller=Fate | owner=Fate | zone=Battlefield (latest_object_observation)
+- 318: object 318 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 319: object 319 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 320: object 320 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 321: object 321 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 322: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 323: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 324: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 326: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 330: object 330 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 331: object 331 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 332: object 332 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 334: Wind-Scarred Crag | controller=Fate | owner=Fate | zone=Battlefield (latest_object_observation)
+- 335: object 335 | controller=Fate | owner=Fate | zone=unknown (inferred unknown) (latest_object_observation)
+- 336: Release the Dogs | controller=Fate | owner=Fate | zone=Stack (latest_object_observation)
+- 341: Dog | controller=Fate | owner=Fate | zone=Battlefield (latest_object_observation)
+- 342: Dog | controller=Fate | owner=Fate | zone=Battlefield (latest_object_observation)
+- 343: Dog | controller=Fate | owner=Fate | zone=Battlefield (latest_object_observation)
+- 344: Dog | controller=Fate | owner=Fate | zone=Battlefield (latest_object_observation)
+- 345: object 345 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 346: object 346 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 347: object 347 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 348: object 348 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 349: object 349 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 350: object 350 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 351: object 351 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 352: object 352 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 353: Release the Dogs | controller=Fate | owner=Fate | zone=unknown (inferred unknown) (latest_object_observation)
+- 354: object 354 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 355: object 355 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 356: object 356 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 357: object 357 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 358: object 358 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 359: object 359 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 360: object 360 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 361: object 361 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 362: object 362 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 363: object 363 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 364: object 364 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 365: object 365 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 366: object 366 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 367: object 367 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 368: object 368 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 369: object 369 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX â€” CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Fate: 15 total items
+  zones: Battlefield=11, Stack=1, unknown=3
+  objects: Dog x4, Plains x2, Release the Dogs x2, Wind-Scarred Crag x2, Axgard Cavalry, Crusader of Odric, Mountain, object 313, object 335
+gian31: 53 total items
+  zones: Battlefield=6, Hand=11, Stack=3, unknown=33
+  objects: Authority of the Consuls x4, Marauding Blight-Priest x4, Swamp x4, Case of the Uneaten Feast x3, Godless Shrine x2, Shattered Sanctum x2, Sinister Monolith, object 303, object 304, object 318, object 319, object 320
+
+TECHNICAL APPENDIX â€” LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (6): Godless Shrine, Marauding Blight-Priest, Marauding Blight-Priest, Shattered Sanctum, Swamp, Swamp
+  Graveyard: 0 card(s)
+Fate:
+  Battlefield (11): Axgard Cavalry, Crusader of Odric, Dog, Dog, Dog, Dog, Mountain, Plains, Plains, Wind-Scarred Crag, Wind-Scarred Crag
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+36 objects have no resolved final zone and are omitted from the known board state.
+Fate: 3 unknown object(s)
+gian31: 33 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=11, Stack=4
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Fate:
+  Battlefield (11): Plains, Plains, Mountain, Axgard Cavalry, Wind-Scarred Crag, Crusader of Odric, Wind-Scarred Crag, Dog, Dog, Dog, Dog
+  Graveyard (1): Release the Dogs
+gian31:
+  Battlefield (9): Godless Shrine, Authority of the Consuls, Swamp, Authority of the Consuls, Shattered Sanctum, Marauding Blight-Priest, Swamp, Case of the Uneaten Feast, Marauding Blight-Priest
+Known non-persistent entries (counts only):
+  Fate: Limbo=1
+  gian31: Hand=2, Limbo=3, Pending=1
+  unknown: Hand=3, Library=98, Limbo=7
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: Fate Battlefield=1
+- Turn 2: Fate Battlefield=1; gian31 Battlefield=2
+- Turn 3: Fate Battlefield=2; gian31 Battlefield=2
+- Turn 4: Fate Battlefield=2; gian31 Battlefield=4
+- Turn 5: Fate Battlefield=4; gian31 Battlefield=4
+- Turn 6: Fate Battlefield=4; gian31 Battlefield=6
+- Turn 7: Fate Battlefield=6; gian31 Battlefield=6
+- Turn 8: Fate Battlefield=6; gian31 Battlefield=9
+- Turn 9: Fate Battlefield=7; Fate Graveyard=1; gian31 Battlefield=9
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Axgard Cavalry resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Crusader of Odric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
