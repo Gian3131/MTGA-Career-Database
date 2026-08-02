@@ -1,0 +1,684 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: Zanadar, gian31
+Seat map: Seat 1=Zanadar, Seat 2=gian31
+Turn range (known): 1 - 12
+Records: 34
+Action chains: 22
+Winner: Zanadar
+Final life: {'Zanadar': 46, 'gian31': -3}
+Lethal combat transition: gian31 12 -> -3. 1 unblocked attackers and observed P/T modifiers reconcile to 15 power; individual combat assignment unavailable.
+Match conclusion: Life total reached 0 observed for gian31.
+Last captured action before match-result payload: Turn 12 (Phase_Main1; Ability of Optimistic Scavenger, seq 365).
+Later numbered GRE record(s): 1 after action sequence 365 across turn(s) [12]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 26 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 9 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 7, 9, 11, 12] (raw records=9; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 12 explicit Library -> Hand movement(s); named in the draw record=5, resolved through an explicit identity transition=2, unresolved=5.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: Zanadar; observed final life totals: {'Zanadar': 46, 'gian31': -3}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 12 (Phase_Main1; Ability of Optimistic Scavenger, seq 365).
+Last captured life snapshot: Zanadar 31 -> 46; gian31 12 -> -3 (seq 375).
+Terminal condition observed: gian31 reached -3 life; exact lethal-source coverage is reported separately.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=10] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=330)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 330) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 330) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [329] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Hinterland Sanctifier [330], Plains [329]
+
+Turn 2
+  - Optimistic Scavenger [valid_resolution_no_immediate_mutation, seq=30] (active=Zanadar, phase=Phase_Main1, controller=Zanadar, owner=Zanadar, source_object=334)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Optimistic Scavenger resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Optimistic Scavenger (object 334) Hand (Zanadar) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Optimistic Scavenger (object 334) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 332 [332] Library (Zanadar) -> Hand (Zanadar) (Draw; GRE sequence 24).
+      Plains [333] Hand (Zanadar) -> Battlefield (PlayLand; GRE sequence 27).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Hinterland Sanctifier [330], Plains [329]
+      Zanadar: Battlefield: Optimistic Scavenger [334], Plains [333]
+
+Turn 3
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=50] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=338)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 338) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 338) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=52] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=330, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=55] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=341)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 341) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 341) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=58] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=338, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=60] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=330, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Hinterland Sanctifier [330] (unblocked, observed P/T 1/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Zanadar -1; gian31 +3 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life: gian31 21 -> 22
+    life: gian31 22 -> 23
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Zanadar 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hinterland Sanctifier [336] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 44).
+      Plains [337] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 47).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Hinterland Sanctifier [330], Hinterland Sanctifier [338], Hinterland Sanctifier [341], Plains [329], Plains [337]
+      Zanadar: Battlefield: Optimistic Scavenger [334], Plains [333]
+
+Turn 4
+  - Sheltered by Ghosts [valid_resolution_no_immediate_mutation, seq=89] (active=Zanadar, phase=Phase_Main1, controller=Zanadar, owner=Zanadar, source_object=347)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sheltered by Ghosts resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sheltered by Ghosts (object 347) Hand (Zanadar) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sheltered by Ghosts (object 347) Stack -> Battlefield (Resolve; shared object ID)
+      Aura attachment target: unavailable in captured GRE records.
+  - Ability of Optimistic Scavenger [observed_semantic_effect, seq=96] (active=Zanadar, phase=Phase_Main1, controller=Zanadar, owner=Zanadar, source_object=334, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, +1 counter(s)
+      narrative: Ability of Optimistic Scavenger: Optimistic Scavenger gets +1/+1; 1 counter(s) are added to Optimistic Scavenger [334].
+  - Ability of Sheltered by Ghosts [observed_semantic_effect, seq=98] (active=Zanadar, phase=Phase_Main1, controller=Zanadar, owner=Zanadar, source_object=347, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Sheltered by Ghosts: exiles Hinterland Sanctifier.
+      explicit effect object references: Hinterland Sanctifier [338], Hinterland Sanctifier [352] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 352) Battlefield -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=Zanadar; frames: DeclareAttack):
+      attackers: Optimistic Scavenger [334] (unblocked, observed P/T 3/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Zanadar +3; gian31 -3 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): Zanadar 19 -> 22
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 23 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 345 [345] Library (Zanadar) -> Hand (Zanadar) (Draw; GRE sequence 81).
+      Plains [346] Hand (Zanadar) -> Battlefield (PlayLand; GRE sequence 84).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Hinterland Sanctifier [330], Hinterland Sanctifier [341], Plains [329], Plains [337]; Exile: Hinterland Sanctifier [352]
+      Zanadar: Battlefield: Optimistic Scavenger [334], Plains [333], Plains [346], Sheltered by Ghosts [347]
+
+Turn 5
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=126] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=355)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 355) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 355) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=129] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=341, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=131] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Zanadar loses 1 life.
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=133] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=330, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=135] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Zanadar loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Hinterland Sanctifier [330] (unblocked, observed P/T 1/2), Hinterland Sanctifier [341] (unblocked, observed P/T 1/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      other-player life loss not explained by observed attacker damage: gian31 20 -> 18 (-2; phase=unknown; source unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Zanadar -4; gian31 +0 (individual changes below; gains and losses may offset)
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): gian31 20 -> 18
+    life: gian31 18 -> 19
+    life: Zanadar 22 -> 21
+    life: gian31 19 -> 20
+    life: Zanadar 21 -> 20
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Zanadar 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Marauding Blight-Priest [353] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 119).
+      Godless Shrine [354] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 123).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [354], Hinterland Sanctifier [330], Hinterland Sanctifier [341], Marauding Blight-Priest [355], Plains [329], Plains [337]; Exile: Hinterland Sanctifier [352]
+      Zanadar: Battlefield: Optimistic Scavenger [334], Plains [333], Plains [346], Sheltered by Ghosts [347]
+
+Turn 6
+  - Sheltered by Ghosts [valid_resolution_no_immediate_mutation, seq=162] (active=Zanadar, phase=Phase_Main1, controller=Zanadar, owner=Zanadar, source_object=364)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sheltered by Ghosts resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sheltered by Ghosts (object 364) Hand (Zanadar) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sheltered by Ghosts (object 364) Stack -> Battlefield (Resolve; shared object ID)
+      Aura attachment target: unavailable in captured GRE records.
+  - Ability of Optimistic Scavenger [observed_semantic_effect, seq=169] (active=Zanadar, phase=Phase_Main1, controller=Zanadar, owner=Zanadar, source_object=334, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, +1 counter(s)
+      narrative: Ability of Optimistic Scavenger: Optimistic Scavenger gets +1/+1; 1 counter(s) are added to Optimistic Scavenger [334].
+  - Ability of Sheltered by Ghosts [observed_semantic_effect, seq=171] (active=Zanadar, phase=Phase_Main1, controller=Zanadar, owner=Zanadar, source_object=364, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Sheltered by Ghosts: exiles Marauding Blight-Priest.
+      explicit effect object references: Marauding Blight-Priest [355], Marauding Blight-Priest [369] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 369) Battlefield -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=Zanadar; frames: DeclareAttack -> DeclareBlock):
+      attackers: Optimistic Scavenger [334] (unblocked, observed P/T 5/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Zanadar +5; gian31 -5 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): Zanadar 18 -> 23
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 20 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 363 [363] Library (Zanadar) -> Hand (Zanadar) (Draw; GRE sequence 155).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [354], Hinterland Sanctifier [330], Hinterland Sanctifier [341], Plains [329], Plains [337]; Exile: Hinterland Sanctifier [352], Marauding Blight-Priest [369]
+      Zanadar: Battlefield: Optimistic Scavenger [334], Plains [333], Plains [346], Sheltered by Ghosts [347], Sheltered by Ghosts [364]
+
+Turn 7
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=197] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=372)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 372) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 372) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=200] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=341, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=202] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=372, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Zanadar loses 1 life.
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=204] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=330, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=206] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=372, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Zanadar loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Hinterland Sanctifier [330] (unblocked, observed P/T 1/2), Hinterland Sanctifier [341] (unblocked, observed P/T 1/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Zanadar -4; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 15 -> 16
+    life: Zanadar 23 -> 22
+    life: gian31 16 -> 17
+    life: Zanadar 22 -> 21
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Zanadar 21 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [370] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 191).
+      Plains [371] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 194).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [354], Hinterland Sanctifier [330], Hinterland Sanctifier [341], Marauding Blight-Priest [372], Plains [329], Plains [337], Plains [371]; Exile: Hinterland Sanctifier [352], Marauding Blight-Priest [369]
+      Zanadar: Battlefield: Optimistic Scavenger [334], Plains [333], Plains [346], Sheltered by Ghosts [347], Sheltered by Ghosts [364]
+
+Turn 8
+  - Sheltered by Ghosts [valid_resolution_no_immediate_mutation, seq=233] (active=Zanadar, phase=Phase_Main1, controller=Zanadar, owner=Zanadar, source_object=381)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sheltered by Ghosts resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sheltered by Ghosts (object 381) Hand (Zanadar) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sheltered by Ghosts (object 381) Stack -> Battlefield (Resolve; shared object ID)
+      Aura attachment target: unavailable in captured GRE records.
+  - Ability of Optimistic Scavenger [observed_semantic_effect, seq=240] (active=Zanadar, phase=Phase_Main1, controller=Zanadar, owner=Zanadar, source_object=334, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, +1 counter(s)
+      narrative: Ability of Optimistic Scavenger: Optimistic Scavenger gets +1/+1; 1 counter(s) are added to Optimistic Scavenger [334].
+  - Ability of Sheltered by Ghosts [observed_semantic_effect, seq=242] (active=Zanadar, phase=Phase_Main1, controller=Zanadar, owner=Zanadar, source_object=381, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Sheltered by Ghosts: exiles Marauding Blight-Priest.
+      explicit effect object references: Marauding Blight-Priest [372], Marauding Blight-Priest [386] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 386) Battlefield -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=Zanadar; frames: DeclareAttack -> DeclareBlock):
+      attackers: Optimistic Scavenger [334] (unblocked, observed P/T 7/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 7; observed attacker power total: 7; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Zanadar +7; gian31 -7 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): Zanadar 19 -> 26
+    life (combat fully reconciled: snapshot power 7 + observed modifiers 0 = 7; individual assignment unavailable): gian31 17 -> 10
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 380 [380] Library (Zanadar) -> Hand (Zanadar) (Draw; GRE sequence 226).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [354], Hinterland Sanctifier [330], Hinterland Sanctifier [341], Plains [329], Plains [337], Plains [371]; Exile: Hinterland Sanctifier [352], Marauding Blight-Priest [369], Marauding Blight-Priest [386]
+      Zanadar: Battlefield: Optimistic Scavenger [334], Plains [333], Plains [346], Sheltered by Ghosts [347], Sheltered by Ghosts [364], Sheltered by Ghosts [381]
+
+Turn 9
+  - Lifecreed Duo [valid_resolution_no_immediate_mutation, seq=268] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lifecreed Duo resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lifecreed Duo (object 389) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lifecreed Duo (object 389) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=271] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=341, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=273] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=330, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Hinterland Sanctifier [330] (unblocked, observed P/T 1/2), Hinterland Sanctifier [341] (unblocked, observed P/T 1/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Zanadar -2; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 10 -> 11
+    life: gian31 11 -> 12
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Zanadar 26 -> 24
+    additional protocol-observed zone movements not assigned to an action chain:
+      Lifecreed Duo [387] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 262).
+      Swamp [388] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 265).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [354], Hinterland Sanctifier [330], Hinterland Sanctifier [341], Lifecreed Duo [389], Plains [329], Plains [337], Plains [371], Swamp [388]; Exile: Hinterland Sanctifier [352], Marauding Blight-Priest [369], Marauding Blight-Priest [386]
+      Zanadar: Battlefield: Optimistic Scavenger [334], Plains [333], Plains [346], Sheltered by Ghosts [347], Sheltered by Ghosts [364], Sheltered by Ghosts [381]
+
+Turn 10
+  - Feather of Flight [valid_resolution_no_immediate_mutation, seq=300] (active=Zanadar, phase=Phase_Main1, controller=Zanadar, owner=Zanadar, source_object=395)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Feather of Flight resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Feather of Flight (object 395) Hand (Zanadar) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Feather of Flight (object 395) Stack -> Battlefield (Resolve; shared object ID)
+      Aura attachment target: unavailable in captured GRE records.
+  - Ability of Optimistic Scavenger [observed_semantic_effect, seq=305] (active=Zanadar, phase=Phase_Main1, controller=Zanadar, owner=Zanadar, source_object=334, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, +1 counter(s)
+      narrative: Ability of Optimistic Scavenger: Optimistic Scavenger gets +1/+1; 1 counter(s) are added to Optimistic Scavenger [334].
+  - Ability of Feather of Flight [observed_semantic_effect, seq=307] (active=Zanadar, phase=Phase_Main1, controller=Zanadar, owner=Zanadar, source_object=395, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Feather of Flight: draw.
+      explicit effect object references: object 196 [196], object 400 [400] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 400 (object 400) Library (Zanadar) -> Hand (Zanadar) (Draw; shared object ID)
+  Combat snapshots observed (active=Zanadar; frames: DeclareAttack -> CombatDamage):
+      attackers: Optimistic Scavenger [334] (blocked, observed P/T 9/5)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat-result zone change: Lifecreed Duo [401] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Zanadar +9 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): Zanadar 24 -> 33
+    additional protocol-observed zone movements not assigned to an action chain:
+      Feather of Flight [394] Library (Zanadar) -> Hand (Zanadar) (Draw; GRE sequence 293).
+      Lifecreed Duo [401] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 319).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [354], Hinterland Sanctifier [330], Hinterland Sanctifier [341], Plains [329], Plains [337], Plains [371], Swamp [388]; Exile: Hinterland Sanctifier [352], Marauding Blight-Priest [369], Marauding Blight-Priest [386]; Graveyard: Lifecreed Duo [401]
+      Zanadar: Battlefield: Feather of Flight [395], Optimistic Scavenger [334], Plains [333], Plains [346], Sheltered by Ghosts [347], Sheltered by Ghosts [364], Sheltered by Ghosts [381]
+
+Turn 11
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Hinterland Sanctifier [330] (unblocked, observed P/T 1/2), Hinterland Sanctifier [341] (unblocked, observed P/T 1/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Zanadar -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Zanadar 33 -> 31
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [402] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 329).
+      Swamp [403] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 332).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [354], Hinterland Sanctifier [330], Hinterland Sanctifier [341], Plains [329], Plains [337], Plains [371], Swamp [388], Swamp [403]; Exile: Hinterland Sanctifier [352], Marauding Blight-Priest [369], Marauding Blight-Priest [386]; Graveyard: Lifecreed Duo [401]
+      Zanadar: Battlefield: Feather of Flight [395], Optimistic Scavenger [334], Plains [333], Plains [346], Sheltered by Ghosts [347], Sheltered by Ghosts [364], Sheltered by Ghosts [381]
+
+Turn 12
+  - Ethereal Armor [valid_resolution_no_immediate_mutation, seq=361] (active=Zanadar, phase=Phase_Main1, controller=Zanadar, owner=Zanadar, source_object=406)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ethereal Armor resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ethereal Armor (object 406) Hand (Zanadar) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ethereal Armor (object 406) Stack -> Battlefield (Resolve; shared object ID)
+      Aura attachment target: unavailable in captured GRE records.
+  - Ability of Optimistic Scavenger [observed_semantic_effect, seq=365] (active=Zanadar, phase=Phase_Main1, controller=Zanadar, owner=Zanadar, source_object=334, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, +1 counter(s)
+      narrative: Ability of Optimistic Scavenger: Optimistic Scavenger gets +1/+1; 1 counter(s) are added to Optimistic Scavenger [334].
+  Combat snapshots observed (active=Zanadar; frames: DeclareAttack -> DeclareBlock):
+      attackers: Optimistic Scavenger [334] (unblocked, observed P/T 15/11)
+      blockers: none identified
+      combat-correlated defending-player life loss: 15; observed attacker power total: 15; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Zanadar +15; gian31 -15 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): Zanadar 31 -> 46
+    life (combat fully reconciled: snapshot power 15 + observed modifiers 0 = 15; individual assignment unavailable): gian31 12 -> -3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Godless Shrine [404] Library (Zanadar) -> Hand (Zanadar) (Draw; GRE sequence 352).
+      Godless Shrine [405] Hand (Zanadar) -> Battlefield (PlayLand; GRE sequence 356).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [354], Hinterland Sanctifier [330], Hinterland Sanctifier [341], Plains [329], Plains [337], Plains [371], Swamp [388], Swamp [403]; Exile: Hinterland Sanctifier [352], Marauding Blight-Priest [369], Marauding Blight-Priest [386]; Graveyard: Lifecreed Duo [401]
+      Zanadar: Battlefield: Ethereal Armor [406], Feather of Flight [395], Godless Shrine [405], Optimistic Scavenger [334], Plains [333], Plains [346], Sheltered by Ghosts [347], Sheltered by Ghosts [364], Sheltered by Ghosts [381]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 4, seq 109, Phase_Main1: Zanadar 19 -> 22. Combat declaration observed; exact assignment unavailable. Previous captured action: Sheltered by Ghosts.
+- Turn 5, seq 123: gian31 20 -> 18. Combat declaration observed; exact assignment unavailable.
+- Turn 6, seq 181, Phase_Main1: Zanadar 18 -> 23. Combat declaration observed; exact assignment unavailable. Previous captured action: Sheltered by Ghosts.
+- Turn 8, seq 252, Phase_Main1: Zanadar 19 -> 26. Combat declaration observed; exact assignment unavailable. Previous captured action: Sheltered by Ghosts.
+- Turn 10, seq 319, Phase_Main1: Zanadar 24 -> 33. Combat declaration observed; exact assignment unavailable. Previous captured action: Feather of Flight.
+- Turn 12, seq 375, Phase_Main1: Zanadar 31 -> 46. Combat declaration observed; exact assignment unavailable. Previous captured action: Optimistic Scavenger.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 12: gian31 12 -> -3 (required change 15). Explained by exact same-record evidence: 0/15; semantically attributed: 0/15; fully unattributed: 0/15.
+  Fully reconciled from observed combat state and modifiers: 15/15 (pre-modifier power=15; explicit modifier power=+0; reconstructed post-modifier power=15; individual assignment unavailable).
+  Combat snapshot observed at or before lethal: Turn 12; attackers=Optimistic Scavenger [334]; observed snapshot power total=15; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 12, Ability of Optimistic Scavenger (seq 365).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 1, seq 10: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 24: object 332 [owner/controller metadata unavailable] moves Library (Zanadar) -> Hand (Zanadar) (Draw).
+- Turn 2, seq 27: Plains [owner=Zanadar, controller=Zanadar] moves Hand (Zanadar) -> Battlefield (PlayLand).
+- Turn 2, seq 28: Optimistic Scavenger [owner=Zanadar, controller=Zanadar] moves Hand (Zanadar) -> Stack (CastSpell).
+- Turn 2, seq 30: Optimistic Scavenger [owner=Zanadar, controller=Zanadar] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 44: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 47: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 48: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 50: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 53: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 55: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 81: object 345 [owner/controller metadata unavailable] moves Library (Zanadar) -> Hand (Zanadar) (Draw).
+- Turn 4, seq 84: Plains [owner=Zanadar, controller=Zanadar] moves Hand (Zanadar) -> Battlefield (PlayLand).
+- Turn 4, seq 85: Sheltered by Ghosts [owner=Zanadar, controller=Zanadar] moves Hand (Zanadar) -> Stack (CastSpell).
+- Turn 4, seq 89: Sheltered by Ghosts [owner=Zanadar, controller=Zanadar] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 98: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Battlefield -> Exile (Exile).
+- Turn 5, seq 119: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 123: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 124: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 126: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 155: object 363 [owner/controller metadata unavailable] moves Library (Zanadar) -> Hand (Zanadar) (Draw).
+- Turn 6, seq 158: Sheltered by Ghosts [owner=Zanadar, controller=Zanadar] moves Hand (Zanadar) -> Stack (CastSpell).
+- Turn 6, seq 162: Sheltered by Ghosts [owner=Zanadar, controller=Zanadar] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 171: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Battlefield -> Exile (Exile).
+- Turn 7, seq 191: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 194: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 195: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 197: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 226: object 380 [owner/controller metadata unavailable] moves Library (Zanadar) -> Hand (Zanadar) (Draw).
+- Turn 8, seq 229: Sheltered by Ghosts [owner=Zanadar, controller=Zanadar] moves Hand (Zanadar) -> Stack (CastSpell).
+- Turn 8, seq 233: Sheltered by Ghosts [owner=Zanadar, controller=Zanadar] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 242: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Battlefield -> Exile (Exile).
+- Turn 9, seq 262: Lifecreed Duo [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 265: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 266: Lifecreed Duo [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 268: Lifecreed Duo [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 293: Feather of Flight [owner/controller metadata unavailable] moves Library (Zanadar) -> Hand (Zanadar) (Draw).
+- Turn 10, seq 296: Feather of Flight [owner=Zanadar, controller=Zanadar] moves Hand (Zanadar) -> Stack (CastSpell).
+- Turn 10, seq 300: Feather of Flight [owner=Zanadar, controller=Zanadar] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 307: object 400 [owner/controller metadata unavailable] moves Library (Zanadar) -> Hand (Zanadar) (Draw).
+- Turn 10, seq 319: Lifecreed Duo [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 11, seq 329: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 332: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 352: Godless Shrine [owner/controller metadata unavailable] moves Library (Zanadar) -> Hand (Zanadar) (Draw).
+- Turn 12, seq 356: Godless Shrine [owner=Zanadar, controller=Zanadar] moves Hand (Zanadar) -> Battlefield (PlayLand).
+- Turn 12, seq 357: Ethereal Armor [owner=Zanadar, controller=Zanadar] moves Hand (Zanadar) -> Stack (CastSpell).
+- Turn 12, seq 361: Ethereal Armor [owner=Zanadar, controller=Zanadar] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 274 becomes object 329 [Plains].
+- Turn 1, seq 8: object 273 becomes object 330 [Hinterland Sanctifier].
+- Turn 2, seq 24: object 191 becomes object 332 [object 191].
+- Turn 2, seq 27: object 187 becomes object 333 [Plains].
+- Turn 2, seq 28: object 185 becomes object 334 [Optimistic Scavenger].
+- Turn 3, seq 44: object 276 becomes object 336 [Hinterland Sanctifier].
+- Turn 3, seq 47: object 269 becomes object 337 [Plains].
+- Turn 3, seq 48: object 272 becomes object 338 [Hinterland Sanctifier].
+- Turn 3, seq 53: object 336 becomes object 341 [Hinterland Sanctifier].
+- Turn 4, seq 81: object 192 becomes object 345 [object 192].
+- Turn 4, seq 84: object 188 becomes object 346 [Plains].
+- Turn 4, seq 85: object 186 becomes object 347 [Sheltered by Ghosts].
+- Turn 4, seq 98: object 338 becomes object 352 [Hinterland Sanctifier].
+- Turn 5, seq 119: object 277 becomes object 353 [Marauding Blight-Priest].
+- Turn 5, seq 123: object 270 becomes object 354 [Godless Shrine].
+- Turn 5, seq 124: object 275 becomes object 355 [Marauding Blight-Priest].
+- Turn 6, seq 155: object 193 becomes object 363 [object 193].
+- Turn 6, seq 158: object 190 becomes object 364 [Sheltered by Ghosts].
+- Turn 6, seq 171: object 355 becomes object 369 [Marauding Blight-Priest].
+- Turn 7, seq 191: object 278 becomes object 370 [Swamp].
+- Turn 7, seq 194: object 271 becomes object 371 [Plains].
+- Turn 7, seq 195: object 353 becomes object 372 [Marauding Blight-Priest].
+- Turn 8, seq 226: object 194 becomes object 380 [object 194].
+- Turn 8, seq 229: object 189 becomes object 381 [Sheltered by Ghosts].
+- Turn 8, seq 242: object 372 becomes object 386 [Marauding Blight-Priest].
+- Turn 9, seq 262: object 279 becomes object 387 [Lifecreed Duo].
+- Turn 9, seq 265: object 370 becomes object 388 [Swamp].
+- Turn 9, seq 266: object 387 becomes object 389 [Lifecreed Duo].
+- Turn 10, seq 293: object 195 becomes object 394 [Feather of Flight].
+- Turn 10, seq 296: object 394 becomes object 395 [Feather of Flight].
+- Turn 10, seq 307: object 196 becomes object 400 [object 196].
+- Turn 10, seq 319: object 389 becomes object 401 [Lifecreed Duo].
+- Turn 11, seq 329: object 280 becomes object 402 [Swamp].
+- Turn 11, seq 332: object 402 becomes object 403 [Swamp].
+- Turn 12, seq 352: object 197 becomes object 404 [Godless Shrine].
+- Turn 12, seq 356: object 404 becomes object 405 [Godless Shrine].
+- Turn 12, seq 357: object 184 becomes object 406 [Ethereal Armor].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Plains (object 329) from Hand (gian31) to Battlefield.
+- Turn 2: Zanadar plays Plains (object 333) from Hand (Zanadar) to Battlefield.
+- Turn 3: gian31 plays Plains (object 337) from Hand (gian31) to Battlefield.
+- Turn 4: Zanadar plays Plains (object 346) from Hand (Zanadar) to Battlefield.
+- Turn 5: gian31 plays Godless Shrine (object 354) from Hand (gian31) to Battlefield.
+- Turn 7: gian31 plays Plains (object 371) from Hand (gian31) to Battlefield.
+- Turn 9: gian31 plays Swamp (object 388) from Hand (gian31) to Battlefield.
+- Turn 11: gian31 plays Swamp (object 403) from Hand (gian31) to Battlefield.
+- Turn 12: Zanadar plays Godless Shrine (object 405) from Hand (Zanadar) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- Turn 5: Hinterland Sanctifier -> Marauding Blight-Priest; observed repeated transitions=2; net life: Zanadar -2, gian31 +2.
+  Same-turn ability records (including records outside the summarized chain): Hinterland Sanctifier=2, Marauding Blight-Priest=2.
+  Individual ability records remain in the timeline.
+- Turn 7: Hinterland Sanctifier -> Marauding Blight-Priest; observed repeated transitions=2; net life: Zanadar -2, gian31 +2.
+  Same-turn ability records (including records outside the summarized chain): Hinterland Sanctifier=2, Marauding Blight-Priest=2.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED TRIGGER CYCLES
+------------------------------------------------------------
+- Turn 5: Hinterland Sanctifier -> Marauding Blight-Priest; observed repetitions=2 (cycle length 2).
+  Raw ability events remain available in the turn timeline.
+- Turn 7: Hinterland Sanctifier -> Marauding Blight-Priest; observed repetitions=2 (cycle length 2).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Hinterland Sanctifier: casts=3; abilities=9 (triggered=9, activated=0) across turns [1, 3, 3, 3, 3, 3, 5, 5, 7, 7, 9, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=9, other=0
+  observed effects: life +1
+- Marauding Blight-Priest: casts=2; abilities=4 (triggered=4, activated=0) across turns [5, 5, 5, 7, 7, 7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=4, other=2
+  observed effects: life -1, synthetic event
+- Optimistic Scavenger: casts=1; abilities=5 (triggered=5, activated=0) across turns [2, 4, 6, 8, 10, 12]
+  observed effect totals: draws=0, tokens=0, counters=5, returns=0, damage=0, life_changes=0, other=5
+  observed effects: +1 counter(s), P/T +1/+1
+- Sheltered by Ghosts: casts=3; abilities=3 (triggered=3, activated=0) across turns [4, 4, 6, 6, 8, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=3
+  observed effects: exile
+- Feather of Flight: casts=1; abilities=1 (triggered=1, activated=0) across turns [10, 10]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Ethereal Armor: casts=1 across turns [12]
+- Lifecreed Duo: casts=1 across turns [9]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 3 - DeclareAttack (active=gian31)
+  attacker: Hinterland Sanctifier (gian31) -> Zanadar; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 4 - DeclareAttack (active=Zanadar)
+  attacker: Optimistic Scavenger (Zanadar) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 5 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Hinterland Sanctifier (gian31) -> Zanadar; unblocked in this observed snapshot
+  attacker: Hinterland Sanctifier (gian31) -> Zanadar; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 6 - DeclareAttack, DeclareBlock (active=Zanadar)
+  attacker: Optimistic Scavenger (Zanadar) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Hinterland Sanctifier (gian31) -> Zanadar; unblocked in this observed snapshot
+  attacker: Hinterland Sanctifier (gian31) -> Zanadar; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=Zanadar)
+  attacker: Optimistic Scavenger (Zanadar) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Hinterland Sanctifier (gian31) -> Zanadar; unblocked in this observed snapshot
+  attacker: Hinterland Sanctifier (gian31) -> Zanadar; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, CombatDamage (active=Zanadar)
+  attacker: Optimistic Scavenger (Zanadar) -> gian31; blocked by unknown blocker
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Hinterland Sanctifier (gian31) -> Zanadar; unblocked in this observed snapshot
+  attacker: Hinterland Sanctifier (gian31) -> Zanadar; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack, DeclareBlock (active=Zanadar)
+  attacker: Optimistic Scavenger (Zanadar) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 269: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 270: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 271: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 272: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 273: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 274: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 275: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 329: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 330: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 333: Plains | controller=Zanadar | owner=Zanadar | zone=Battlefield (latest_object_observation)
+- 334: Optimistic Scavenger | controller=Zanadar | owner=Zanadar | zone=Battlefield (latest_object_observation)
+- 336: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 337: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 338: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 340: object 340 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 341: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 343: object 343 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 344: object 344 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 346: Plains | controller=Zanadar | owner=Zanadar | zone=Battlefield (latest_object_observation)
+- 347: Sheltered by Ghosts | controller=Zanadar | owner=Zanadar | zone=Stack (latest_object_observation)
+- 350: object 350 | controller=Zanadar | owner=Zanadar | zone=unknown (inferred unknown) (latest_object_observation)
+- 351: object 351 | controller=Zanadar | owner=Zanadar | zone=unknown (inferred unknown) (latest_object_observation)
+- 352: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 353: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 354: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 355: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 359: object 359 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 360: object 360 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 361: object 361 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 362: object 362 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 364: Sheltered by Ghosts | controller=Zanadar | owner=Zanadar | zone=Stack (latest_object_observation)
+- 367: object 367 | controller=Zanadar | owner=Zanadar | zone=unknown (inferred unknown) (latest_object_observation)
+- 368: object 368 | controller=Zanadar | owner=Zanadar | zone=unknown (inferred unknown) (latest_object_observation)
+- 369: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 370: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 371: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 372: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 376: object 376 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 377: object 377 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 378: object 378 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 379: object 379 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 381: Sheltered by Ghosts | controller=Zanadar | owner=Zanadar | zone=Stack (latest_object_observation)
+- 384: object 384 | controller=Zanadar | owner=Zanadar | zone=unknown (inferred unknown) (latest_object_observation)
+- 385: object 385 | controller=Zanadar | owner=Zanadar | zone=unknown (inferred unknown) (latest_object_observation)
+- 386: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 387: Lifecreed Duo | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 388: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 389: Lifecreed Duo | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 392: object 392 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 393: object 393 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 395: Feather of Flight | controller=Zanadar | owner=Zanadar | zone=Stack (latest_object_observation)
+- 398: object 398 | controller=Zanadar | owner=Zanadar | zone=unknown (inferred unknown) (latest_object_observation)
+- 399: Gumdrop Poisoner | controller=Zanadar | owner=Zanadar | zone=unknown (inferred unknown) (latest_object_observation)
+- 401: Lifecreed Duo | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 402: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 403: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 405: Godless Shrine | controller=Zanadar | owner=Zanadar | zone=Battlefield (latest_object_observation)
+- 406: Ethereal Armor | controller=Zanadar | owner=Zanadar | zone=Stack (latest_object_observation)
+- 408: object 408 | controller=Zanadar | owner=Zanadar | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Zanadar: 18 total items
+  zones: Battlefield=4, Stack=5, unknown=9
+  objects: Sheltered by Ghosts x3, Plains x2, Ethereal Armor, Feather of Flight, Godless Shrine, Gumdrop Poisoner, Optimistic Scavenger, object 350, object 351, object 367, object 368, object 384
+gian31: 41 total items
+  zones: Battlefield=13, Exile=3, Hand=12, unknown=13
+  objects: Hinterland Sanctifier x7, Marauding Blight-Priest x6, Plains x6, Swamp x4, Lifecreed Duo x3, Godless Shrine x2, object 340, object 343, object 344, object 359, object 360, object 361
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+Zanadar:
+  Battlefield (4): Godless Shrine, Optimistic Scavenger, Plains, Plains
+  Graveyard: 0 card(s)
+gian31:
+  Battlefield (13): Godless Shrine, Hinterland Sanctifier, Hinterland Sanctifier, Hinterland Sanctifier, Lifecreed Duo, Lifecreed Duo, Marauding Blight-Priest, Marauding Blight-Priest, Plains, Plains, Plains, Swamp, Swamp
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+22 objects have no resolved final zone and are omitted from the known board state.
+Zanadar: 9 unknown object(s)
+gian31: 13 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=12, Stack=5
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Zanadar:
+  Battlefield (9): Plains, Optimistic Scavenger, Plains, Sheltered by Ghosts, Sheltered by Ghosts, Sheltered by Ghosts, Feather of Flight, Godless Shrine, Ethereal Armor
+gian31:
+  Battlefield (8): Plains, Hinterland Sanctifier, Plains, Hinterland Sanctifier, Godless Shrine, Plains, Swamp, Swamp
+  Graveyard (1): Lifecreed Duo
+  Exile (3): Hinterland Sanctifier, Marauding Blight-Priest, Marauding Blight-Priest
+Known non-persistent entries (counts only):
+  Zanadar: Hand=5
+  gian31: Limbo=2
+  unknown: Library=119, Limbo=7
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=2
+- Turn 2: Zanadar Battlefield=2; gian31 Battlefield=2
+- Turn 3: Zanadar Battlefield=2; gian31 Battlefield=5
+- Turn 4: Zanadar Battlefield=4; gian31 Battlefield=4; gian31 Exile=1
+- Turn 5: Zanadar Battlefield=4; gian31 Battlefield=6; gian31 Exile=1
+- Turn 6: Zanadar Battlefield=5; gian31 Battlefield=5; gian31 Exile=2
+- Turn 7: Zanadar Battlefield=5; gian31 Battlefield=7; gian31 Exile=2
+- Turn 8: Zanadar Battlefield=6; gian31 Battlefield=6; gian31 Exile=3
+- Turn 9: Zanadar Battlefield=6; gian31 Battlefield=8; gian31 Exile=3
+- Turn 10: Zanadar Battlefield=7; gian31 Battlefield=7; gian31 Graveyard=1; gian31 Exile=3
+- Turn 11: Zanadar Battlefield=7; gian31 Battlefield=8; gian31 Graveyard=1; gian31 Exile=3
+- Turn 12: Zanadar Battlefield=9; gian31 Battlefield=8; gian31 Graveyard=1; gian31 Exile=3
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 2: Optimistic Scavenger resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Sheltered by Ghosts resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Sheltered by Ghosts resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Sheltered by Ghosts resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Lifecreed Duo resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Feather of Flight resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Ethereal Armor resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
