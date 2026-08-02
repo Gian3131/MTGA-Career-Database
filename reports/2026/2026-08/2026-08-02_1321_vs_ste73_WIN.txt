@@ -1,0 +1,578 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, ste73
+Seat map: Seat 1=gian31, Seat 2=ste73
+Turn range (known): 1 - 8
+Records: 49
+Action chains: 10
+Winner: gian31
+Final life: {'gian31': 40, 'ste73': 1}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Match-result payload was observed after the last captured action: Turn 8 (Phase_Main1; Ability of Starscape Cleric, seq 242); payload ordering within later uncaptured records is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 21 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 8 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8] (raw records=8; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 10 explicit Library -> Hand movement(s); named in the draw record=5, resolved through an explicit identity transition=4, unresolved=1.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 40, 'ste73': 1}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 8 (Phase_Main1; Ability of Starscape Cleric, seq 242).
+Last captured life mutation: gian31 39 -> 40 (seq 240).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Ability of Clamorous Ironclad [observed_semantic_effect, seq=10] (active=ste73, phase=Phase_Main1, controller=ste73, owner=ste73, source_object=230, source_successor=294 observed Hand (ste73) -> Graveyard (ste73) (Discard))
+      effects: draw
+      narrative: Ability of Clamorous Ironclad: draw.
+      explicit effect object references: object 236 [236], object 295 [295] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Plains (object 295) Library (ste73) -> Hand (ste73) (Draw; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Inspiring Vantage [291] Hand (ste73) -> Battlefield (PlayLand; GRE sequence 7).
+      Clamorous Ironclad [294] Hand (ste73) -> Graveyard (ste73) (Discard; GRE sequence 8).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ste73: Battlefield: Inspiring Vantage [291]; Graveyard: Clamorous Ironclad [294]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [296] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 24).
+      Swamp [297] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 27).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ste73: Battlefield: Inspiring Vantage [291]; Graveyard: Clamorous Ironclad [294]
+      gian31: Battlefield: Swamp [297]
+
+Turn 3
+  - Ability of Detention Chariot [observed_semantic_effect, seq=47] (active=ste73, phase=Phase_Main1, controller=ste73, owner=ste73, source_object=298, source_last_explicit_zone=Hand (ste73))
+      effects: draw
+      narrative: Ability of Detention Chariot: draw.
+      explicit effect object references: object 238 [238], object 303 [303] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 303 (object 303) Library (ste73) -> Hand (ste73) (Draw; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Detention Chariot [298] Library (ste73) -> Hand (ste73) (Draw; GRE sequence 41).
+      Plains [299] Hand (ste73) -> Battlefield (PlayLand; GRE sequence 44).
+      Detention Chariot [302] Hand (ste73) -> Graveyard (ste73) (Discard; GRE sequence 45).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ste73: Battlefield: Inspiring Vantage [291], Plains [299]; Graveyard: Clamorous Ironclad [294], Detention Chariot [302]
+      gian31: Battlefield: Swamp [297]
+
+Turn 4
+  - Rot-Curse Rakshasa [valid_resolution_no_immediate_mutation, seq=67] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=306)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Rot-Curse Rakshasa resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Rot-Curse Rakshasa (object 306) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Rot-Curse Rakshasa (object 306) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Leech Collector [304] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 61).
+      Swamp [305] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 64).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ste73: Battlefield: Inspiring Vantage [291], Plains [299]; Graveyard: Clamorous Ironclad [294], Detention Chariot [302]
+      gian31: Battlefield: Rot-Curse Rakshasa [306], Swamp [297], Swamp [305]
+
+Turn 5
+  - Ability of Valor's Flagship [valid_resolution_no_immediate_mutation, seq=88] (active=ste73, phase=Phase_Main1, controller=ste73, owner=ste73, source_object=315, source_last_explicit_zone=Graveyard (ste73))
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Valor's Flagship resolves with no immediate observed mutation.
+  - Ability of Valor's Flagship [observed_semantic_effect, seq=90] (active=ste73, phase=Phase_Main1, controller=ste73, owner=ste73, source_object=235, source_successor=315 observed Hand (ste73) -> Graveyard (ste73) (Discard))
+      effects: draw
+      narrative: Ability of Valor's Flagship: draw.
+      explicit effect object references: object 240 [240], object 317 [317] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Erode (object 317) Library (ste73) -> Hand (ste73) (Draw; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [309] Library (ste73) -> Hand (ste73) (Draw; GRE sequence 81).
+      Plains [310] Hand (ste73) -> Battlefield (PlayLand; GRE sequence 84).
+      Valor's Flagship [315] Hand (ste73) -> Graveyard (ste73) (Discard; GRE sequence 86).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ste73: Battlefield: Inspiring Vantage [291], Plains [299], Plains [310]; Graveyard: Clamorous Ironclad [294], Detention Chariot [302], Valor's Flagship [315]
+      gian31: Battlefield: Rot-Curse Rakshasa [306], Swamp [297], Swamp [305]
+
+Turn 6
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=110] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=320)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 320) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 320) Stack -> Battlefield (Resolve; shared object ID)
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=114] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 322) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 322) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=116] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=320, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=118] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+    net observed life change this turn: gian31 +1; ste73 -1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life: ste73 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [318] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 104).
+      Plains [319] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 107).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ste73: Battlefield: Inspiring Vantage [291], Plains [299], Plains [310]; Graveyard: Clamorous Ironclad [294], Detention Chariot [302], Valor's Flagship [315]
+      gian31: Battlefield: Case of the Uneaten Feast [320], Plains [319], Rot-Curse Rakshasa [306], Starscape Cleric [322], Swamp [297], Swamp [305]
+
+Turn 7
+  - Monument to Endurance [valid_resolution_no_immediate_mutation, seq=139] (active=ste73, phase=Phase_Main1, controller=ste73, owner=ste73, source_object=329)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Monument to Endurance resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Monument to Endurance (object 329) Hand (ste73) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Monument to Endurance (object 329) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Monument to Endurance [327] Library (ste73) -> Hand (ste73) (Draw; GRE sequence 133).
+      Mountain [328] Hand (ste73) -> Battlefield (PlayLand; GRE sequence 136).
+      Erode [333] Hand (ste73) -> Stack (CastSpell; GRE sequence 140).
+      Rot-Curse Rakshasa [335] Battlefield -> Graveyard (gian31) (Destroy; GRE sequence 144).
+      Plains [336] Library (gian31) -> Battlefield (Put; GRE sequence 145).
+      Erode [386] Stack -> Graveyard (ste73) (Resolve; GRE sequence 146).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ste73: Battlefield: Inspiring Vantage [291], Monument to Endurance [329], Mountain [328], Plains [299], Plains [310]; Graveyard: Clamorous Ironclad [294], Detention Chariot [302], Erode [386], Valor's Flagship [315]
+      gian31: Battlefield: Case of the Uneaten Feast [320], Plains [319], Plains [336], Starscape Cleric [322], Swamp [297], Swamp [305]; Graveyard: Rot-Curse Rakshasa [335]
+
+Turn 8
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation, seq=166] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 389) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 389) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=168] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=320, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=170] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=172] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=174] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=176] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=178] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=180] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=182] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=184] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=186] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=188] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=190] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=192] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=194] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=196] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=198] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=200] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=202] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=204] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=206] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=208] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=210] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=212] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=214] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=216] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=218] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=220] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=222] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=224] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=226] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=228] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=230] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=232] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=234] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=236] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=238] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=240] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=242] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ste73 loses 1 life.
+    net observed life change this turn: gian31 +19; ste73 -18 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    life: ste73 19 -> 18
+    life: gian31 22 -> 23
+    life: ste73 18 -> 17
+    life: gian31 23 -> 24
+    life: ste73 17 -> 16
+    life: gian31 24 -> 25
+    life: ste73 16 -> 15
+    life: gian31 25 -> 26
+    life: ste73 15 -> 14
+    life: gian31 26 -> 27
+    life: ste73 14 -> 13
+    life: gian31 27 -> 28
+    life: ste73 13 -> 12
+    life: gian31 28 -> 29
+    life: ste73 12 -> 11
+    life: gian31 29 -> 30
+    life: ste73 11 -> 10
+    life: gian31 30 -> 31
+    life: ste73 10 -> 9
+    life: gian31 31 -> 32
+    life: ste73 9 -> 8
+    life: gian31 32 -> 33
+    life: ste73 8 -> 7
+    life: gian31 33 -> 34
+    life: ste73 7 -> 6
+    life: gian31 34 -> 35
+    life: ste73 6 -> 5
+    life: gian31 35 -> 36
+    life: ste73 5 -> 4
+    life: gian31 36 -> 37
+    life: ste73 4 -> 3
+    life: gian31 37 -> 38
+    life: ste73 3 -> 2
+    life: gian31 38 -> 39
+    life: ste73 2 -> 1
+    life: gian31 39 -> 40
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [387] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 160).
+      Swamp [388] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 163).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ste73: Battlefield: Inspiring Vantage [291], Monument to Endurance [329], Mountain [328], Plains [299], Plains [310]; Graveyard: Clamorous Ironclad [294], Detention Chariot [302], Erode [386], Valor's Flagship [315]
+      gian31: Battlefield: Bloodthirsty Conqueror [389], Case of the Uneaten Feast [320], Plains [319], Plains [336], Starscape Cleric [322], Swamp [297], Swamp [305], Swamp [388]; Graveyard: Rot-Curse Rakshasa [335]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+- No life mutation without an exact same-record source was observed.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Inspiring Vantage [owner=ste73, controller=ste73] moves Hand (ste73) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Clamorous Ironclad [owner=ste73, controller=ste73] moves Hand (ste73) -> Graveyard (ste73) (Discard).
+- Turn 1, seq 10: Plains [owner/controller metadata unavailable] moves Library (ste73) -> Hand (ste73) (Draw).
+- Turn 2, seq 24: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 27: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 41: Detention Chariot [owner=ste73, controller=ste73] moves Library (ste73) -> Hand (ste73) (Draw).
+- Turn 3, seq 44: Plains [owner=ste73, controller=ste73] moves Hand (ste73) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Detention Chariot [owner=ste73, controller=ste73] moves Hand (ste73) -> Graveyard (ste73) (Discard).
+- Turn 3, seq 47: object 303 [owner/controller metadata unavailable] moves Library (ste73) -> Hand (ste73) (Draw).
+- Turn 4, seq 61: Leech Collector [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 64: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 65: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 67: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 81: Mountain [owner/controller metadata unavailable] moves Library (ste73) -> Hand (ste73) (Draw).
+- Turn 5, seq 84: Plains [owner=ste73, controller=ste73] moves Hand (ste73) -> Battlefield (PlayLand).
+- Turn 5, seq 86: Valor's Flagship [owner=ste73, controller=ste73] moves Hand (ste73) -> Graveyard (ste73) (Discard).
+- Turn 5, seq 90: Erode [owner/controller metadata unavailable] moves Library (ste73) -> Hand (ste73) (Draw).
+- Turn 6, seq 104: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 107: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 108: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 110: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 111: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 114: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 133: Monument to Endurance [owner/controller metadata unavailable] moves Library (ste73) -> Hand (ste73) (Draw).
+- Turn 7, seq 136: Mountain [owner=ste73, controller=ste73] moves Hand (ste73) -> Battlefield (PlayLand).
+- Turn 7, seq 137: Monument to Endurance [owner=ste73, controller=ste73] moves Hand (ste73) -> Stack (CastSpell).
+- Turn 7, seq 139: Monument to Endurance [owner=ste73, controller=ste73] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 140: Erode [owner=ste73, controller=ste73] moves Hand (ste73) -> Stack (CastSpell).
+- Turn 7, seq 144: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 7, seq 145: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Battlefield (Put).
+- Turn 7, seq 146: Erode [owner=ste73, controller=ste73] moves Stack -> Graveyard (ste73) (Resolve).
+- Turn 8, seq 160: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 163: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 164: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 166: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 234 becomes object 291 [Inspiring Vantage].
+- Turn 1, seq 8: object 230 becomes object 294 [Clamorous Ironclad].
+- Turn 1, seq 10: object 236 becomes object 295 [Plains].
+- Turn 2, seq 24: object 176 becomes object 296 [Swamp].
+- Turn 2, seq 27: object 169 becomes object 297 [Swamp].
+- Turn 3, seq 41: object 237 becomes object 298 [Detention Chariot].
+- Turn 3, seq 44: object 295 becomes object 299 [Plains].
+- Turn 3, seq 45: object 298 becomes object 302 [Detention Chariot].
+- Turn 3, seq 47: object 238 becomes object 303 [object 238].
+- Turn 4, seq 61: object 177 becomes object 304 [Leech Collector].
+- Turn 4, seq 64: object 296 becomes object 305 [Swamp].
+- Turn 4, seq 65: object 172 becomes object 306 [Rot-Curse Rakshasa].
+- Turn 5, seq 81: object 239 becomes object 309 [Mountain].
+- Turn 5, seq 84: object 233 becomes object 310 [Plains].
+- Turn 5, seq 86: object 235 becomes object 315 [Valor's Flagship].
+- Turn 5, seq 90: object 240 becomes object 317 [Erode].
+- Turn 6, seq 104: object 178 becomes object 318 [Plains].
+- Turn 6, seq 107: object 318 becomes object 319 [Plains].
+- Turn 6, seq 108: object 173 becomes object 320 [Case of the Uneaten Feast].
+- Turn 6, seq 111: object 174 becomes object 322 [Starscape Cleric].
+- Turn 7, seq 133: object 241 becomes object 327 [Monument to Endurance].
+- Turn 7, seq 136: object 309 becomes object 328 [Mountain].
+- Turn 7, seq 137: object 327 becomes object 329 [Monument to Endurance].
+- Turn 7, seq 140: object 317 becomes object 333 [Erode].
+- Turn 7, seq 144: object 306 becomes object 335 [Rot-Curse Rakshasa].
+- Turn 7, seq 145: object 192 becomes object 336 [Plains].
+- Turn 7, seq 146: object 333 becomes object 386 [Erode].
+- Turn 8, seq 160: object 337 becomes object 387 [Makeshift Binding].
+- Turn 8, seq 163: object 175 becomes object 388 [Swamp].
+- Turn 8, seq 164: object 171 becomes object 389 [Bloodthirsty Conqueror].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: ste73 plays Inspiring Vantage (object 291) from Hand (ste73) to Battlefield.
+- Turn 2: gian31 plays Swamp (object 297) from Hand (gian31) to Battlefield.
+- Turn 3: ste73 plays Plains (object 299) from Hand (ste73) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 305) from Hand (gian31) to Battlefield.
+- Turn 5: ste73 plays Plains (object 310) from Hand (ste73) to Battlefield.
+- Turn 6: gian31 plays Plains (object 319) from Hand (gian31) to Battlefield.
+- Turn 7: ste73 plays Mountain (object 328) from Hand (ste73) to Battlefield.
+- Turn 8: gian31 plays Swamp (object 388) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- Turn 8: Starscape Cleric -> Bloodthirsty Conqueror; observed repeated transitions=18; net life: gian31 +18, ste73 -18.
+  Same-turn ability records (including records outside the summarized chain): Bloodthirsty Conqueror=18, Starscape Cleric=19.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED TRIGGER CYCLES
+------------------------------------------------------------
+- Turn 8: Starscape Cleric -> Bloodthirsty Conqueror; observed repetitions=18 (cycle length 2).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Starscape Cleric: casts=1; abilities=20 (triggered=20, activated=0) across turns [6, 6, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=20, other=2
+  observed effects: life -1, synthetic event
+- Bloodthirsty Conqueror: casts=1; abilities=18 (triggered=18, activated=0) across turns [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=18, other=0
+  observed effects: life +1
+- Case of the Uneaten Feast: casts=1; abilities=2 (triggered=2, activated=0) across turns [6, 6, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Valor's Flagship: abilities=2 (triggered=2, activated=0) across turns [5, 5]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Clamorous Ironclad: abilities=1 (triggered=1, activated=0) across turns [1]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Detention Chariot: abilities=1 (triggered=1, activated=0) across turns [3]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Monument to Endurance: casts=1 across turns [7]
+- Rot-Curse Rakshasa: casts=1 across turns [4]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+- No explicit attacker/blocker state was available in the captured GRE snapshots.
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX â€” OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 169: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 170: Leech Collector | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 171: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 172: Rot-Curse Rakshasa | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 173: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 174: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 175: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 192: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 230: Clamorous Ironclad | controller=ste73 | owner=ste73 | zone=Hand (latest_object_observation)
+- 235: Valor's Flagship | controller=ste73 | owner=ste73 | zone=Hand (latest_object_observation)
+- 291: Inspiring Vantage | controller=ste73 | owner=ste73 | zone=Battlefield (latest_object_observation)
+- 292: object 292 | controller=ste73 | owner=ste73 | zone=unknown (inferred unknown) (latest_object_observation)
+- 294: Clamorous Ironclad | controller=ste73 | owner=ste73 | zone=Graveyard (latest_object_observation)
+- 296: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 297: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 298: Detention Chariot | controller=ste73 | owner=ste73 | zone=Hand (latest_object_observation)
+- 299: Plains | controller=ste73 | owner=ste73 | zone=Battlefield (latest_object_observation)
+- 300: object 300 | controller=ste73 | owner=ste73 | zone=unknown (inferred unknown) (latest_object_observation)
+- 302: Detention Chariot | controller=ste73 | owner=ste73 | zone=Graveyard (latest_object_observation)
+- 304: Leech Collector | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 305: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 306: Rot-Curse Rakshasa | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 310: Plains | controller=ste73 | owner=ste73 | zone=Battlefield (latest_object_observation)
+- 311: object 311 | controller=ste73 | owner=ste73 | zone=unknown (inferred unknown) (latest_object_observation)
+- 315: Valor's Flagship | controller=ste73 | owner=ste73 | zone=Graveyard (latest_object_observation)
+- 316: object 316 | controller=ste73 | owner=ste73 | zone=unknown (inferred unknown) (latest_object_observation)
+- 318: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 319: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 320: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 322: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 325: object 325 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 326: object 326 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 328: Mountain | controller=ste73 | owner=ste73 | zone=Battlefield (latest_object_observation)
+- 329: Monument to Endurance | controller=ste73 | owner=ste73 | zone=Stack (latest_object_observation)
+- 333: Erode | controller=ste73 | owner=ste73 | zone=Stack (latest_object_observation)
+- 335: Rot-Curse Rakshasa | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 336: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 386: Erode | controller=ste73 | owner=ste73 | zone=Graveyard (latest_object_observation)
+- 387: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 388: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 389: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 395: object 395 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 396: object 396 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 397: object 397 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 398: object 398 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 399: object 399 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 400: object 400 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 401: object 401 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 402: object 402 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 403: object 403 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 404: object 404 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 405: object 405 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 406: object 406 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 407: object 407 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 408: object 408 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 409: object 409 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 410: object 410 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 411: object 411 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 412: object 412 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 413: object 413 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 414: object 414 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 415: object 415 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 416: object 416 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 417: object 417 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 418: object 418 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 419: object 419 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 420: object 420 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 421: object 421 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 422: object 422 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 423: object 423 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 424: object 424 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 425: object 425 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 426: object 426 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 427: object 427 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 428: object 428 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 429: object 429 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 430: object 430 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 431: object 431 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 432: object 432 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 433: object 433 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX â€” CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 63 total items
+  zones: Battlefield=8, Graveyard=1, Hand=12, Stack=1, unknown=41
+  objects: Swamp x6, Plains x4, Rot-Curse Rakshasa x3, Bloodthirsty Conqueror x2, Case of the Uneaten Feast x2, Leech Collector x2, Starscape Cleric x2, Makeshift Binding, object 325, object 326, object 395, object 396
+ste73: 17 total items
+  zones: Battlefield=4, Graveyard=4, Hand=3, Stack=2, unknown=4
+  objects: Clamorous Ironclad x2, Detention Chariot x2, Erode x2, Plains x2, Valor's Flagship x2, Inspiring Vantage, Monument to Endurance, Mountain, object 292, object 300, object 311, object 316
+
+TECHNICAL APPENDIX â€” LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (8): Bloodthirsty Conqueror, Plains, Plains, Rot-Curse Rakshasa, Starscape Cleric, Swamp, Swamp, Swamp
+  Graveyard: 1 card(s)
+ste73:
+  Battlefield (4): Inspiring Vantage, Mountain, Plains, Plains
+  Graveyard: 4 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+45 objects have no resolved final zone and are omitted from the known board state.
+gian31: 41 unknown object(s)
+ste73: 4 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=15, Stack=3
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+gian31:
+  Battlefield (8): Swamp, Swamp, Plains, Case of the Uneaten Feast, Starscape Cleric, Plains, Swamp, Bloodthirsty Conqueror
+  Graveyard (1): Rot-Curse Rakshasa
+ste73:
+  Battlefield (5): Inspiring Vantage, Plains, Plains, Mountain, Monument to Endurance
+  Graveyard (4): Clamorous Ironclad, Detention Chariot, Valor's Flagship, Erode
+Known non-persistent entries (counts only):
+  gian31: Hand=3, Limbo=7, Pending=1
+  ste73: Limbo=1
+  unknown: Hand=4, Library=97, Limbo=6
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: ste73 Battlefield=1; ste73 Graveyard=1
+- Turn 2: gian31 Battlefield=1; ste73 Battlefield=1; ste73 Graveyard=1
+- Turn 3: gian31 Battlefield=1; ste73 Battlefield=2; ste73 Graveyard=2
+- Turn 4: gian31 Battlefield=3; ste73 Battlefield=2; ste73 Graveyard=2
+- Turn 5: gian31 Battlefield=3; ste73 Battlefield=3; ste73 Graveyard=3
+- Turn 6: gian31 Battlefield=6; ste73 Battlefield=3; ste73 Graveyard=3
+- Turn 7: gian31 Battlefield=6; gian31 Graveyard=1; ste73 Battlefield=5; ste73 Graveyard=4
+- Turn 8: gian31 Battlefield=8; gian31 Graveyard=1; ste73 Battlefield=5; ste73 Graveyard=4
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 4: Rot-Curse Rakshasa resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Monument to Endurance resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
