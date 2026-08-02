@@ -1,0 +1,1090 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Goedro
+Seat map: Seat 1=gian31, Seat 2=Goedro
+Turn range (known): 1 - 17
+Unnumbered turn groups retained: 1
+Records: 81
+Action chains: 47
+Winner: gian31
+Final life: {'gian31': 32, 'Goedro': 1}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 17 (Phase_Main1; Ability of Marauding Blight-Priest, seq 545).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 42 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 15 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 16, 17] (raw records=15; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 27 explicit Library -> Hand movement(s); named in the draw record=18, resolved through an explicit identity transition=9, unresolved=0.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 32, 'Goedro': 1}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 17 (Phase_Main1; Ability of Marauding Blight-Priest, seq 545).
+Last captured life snapshot: gian31 31 -> 32 (seq 543).
+Observed active tokens: Sword [369] controller=Goedro, created Turn 12, last observed Turn 12 seq 288, P/T unavailable; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Wicked [402] controller=Goedro, created Turn 14, last observed Turn 14 seq 364, P/T unavailable; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=9] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=281, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [281] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Scoured Barrens [281]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swiftfoot Boots [283] Library (Goedro) -> Hand (Goedro) (Draw; GRE sequence 23).
+      Mountain [284] Hand (Goedro) -> Battlefield (PlayLand; GRE sequence 26).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Scoured Barrens [281]
+      Goedro: Battlefield: Mountain [284]
+
+Turn 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bitter Triumph [285] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 40).
+      Plains [286] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 43).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [286], Scoured Barrens [281]
+      Goedro: Battlefield: Mountain [284]
+
+Turn 4
+  - Swiftfoot Boots [valid_resolution_no_immediate_mutation, seq=63] (active=Goedro, phase=Phase_Main1, controller=Goedro, owner=Goedro, source_object=289)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Swiftfoot Boots resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Swiftfoot Boots (object 289) Hand (Goedro) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Swiftfoot Boots (object 289) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [287] Library (Goedro) -> Hand (Goedro) (Draw; GRE sequence 57).
+      Mountain [288] Hand (Goedro) -> Battlefield (PlayLand; GRE sequence 60).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [286], Scoured Barrens [281]
+      Goedro: Battlefield: Mountain [284], Mountain [288], Swiftfoot Boots [289]
+
+Turn 5
+  - Phyrexian Arena [valid_resolution_no_immediate_mutation, seq=83] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=294)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Phyrexian Arena resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Phyrexian Arena (object 294) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Phyrexian Arena (object 294) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [292] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 77).
+      Swamp [293] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 80).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Phyrexian Arena [294], Plains [286], Scoured Barrens [281], Swamp [293]
+      Goedro: Battlefield: Mountain [284], Mountain [288], Swiftfoot Boots [289]
+
+Turn 6
+  - Swiftfoot Boots [valid_resolution_no_immediate_mutation, seq=104] (active=Goedro, phase=Phase_Main1, controller=Goedro, owner=Goedro, source_object=300)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Swiftfoot Boots resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Swiftfoot Boots (object 300) Hand (Goedro) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Swiftfoot Boots (object 300) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swiftfoot Boots [298] Library (Goedro) -> Hand (Goedro) (Draw; GRE sequence 97).
+      Cavern of Souls [299] Hand (Goedro) -> Battlefield (PlayLand; GRE sequence 101).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Phyrexian Arena [294], Plains [286], Scoured Barrens [281], Swamp [293]
+      Goedro: Battlefield: Cavern of Souls [299], Mountain [284], Mountain [288], Swiftfoot Boots [289], Swiftfoot Boots [300]
+
+Turn 7
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=118] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=294, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 170 [170], Plains [304] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Plains (object 304) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=126] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 307) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 307) Stack -> Battlefield (Resolve; shared object ID)
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=129] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=309)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 309) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 309) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=131] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=133] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=309, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Goedro loses 1 life.
+    net observed life change this turn: Goedro -1; gian31 +0 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 20
+    life: gian31 20 -> 21
+    life: Goedro 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [305] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 120).
+      Plains [306] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 123).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [307], Marauding Blight-Priest [309], Phyrexian Arena [294], Plains [286], Plains [306], Scoured Barrens [281], Swamp [293]
+      Goedro: Battlefield: Cavern of Souls [299], Mountain [284], Mountain [288], Swiftfoot Boots [289], Swiftfoot Boots [300]
+
+Turn 8
+  - Lightning Strike [observed_semantic_effect, seq=155] (active=Goedro, phase=Phase_Main1, controller=Goedro, owner=Goedro, source_object=317)
+      effects: 3 damage
+      narrative: Lightning Strike: Marauding Blight-Priest takes 3 damage.
+      explicit effect object references: Marauding Blight-Priest [309] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Lightning Strike (object 317) Hand (Goedro) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lightning Strike (object 320) Stack -> Graveyard (Goedro) (Resolve; shared object ID)
+      identity continuity: source object 317 -> transfer object 320 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Marauding Blight-Priest (object 321) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [315] Library (Goedro) -> Hand (Goedro) (Draw; GRE sequence 147).
+      Mountain [316] Hand (Goedro) -> Battlefield (PlayLand; GRE sequence 150).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [307], Phyrexian Arena [294], Plains [286], Plains [306], Scoured Barrens [281], Swamp [293]; Graveyard: Marauding Blight-Priest [321]
+      Goedro: Battlefield: Cavern of Souls [299], Mountain [284], Mountain [288], Mountain [316], Swiftfoot Boots [289], Swiftfoot Boots [300]; Graveyard: Lightning Strike [320]
+
+Turn 9
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=169] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=294, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 172 [172], Lunar Convocation [323] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Lunar Convocation (object 323) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=177] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 326) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 326) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=180] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 174 [174], Phyrexian Arena [332] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Phyrexian Arena (object 332) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+    net observed life change this turn: gian31 -3 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 20
+    life: gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [324] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 171).
+      Plains [325] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 174).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [307], Lunar Convocation [326], Phyrexian Arena [294], Plains [286], Plains [306], Plains [325], Scoured Barrens [281], Swamp [293]; Graveyard: Marauding Blight-Priest [321]
+      Goedro: Battlefield: Cavern of Souls [299], Mountain [284], Mountain [288], Mountain [316], Swiftfoot Boots [289], Swiftfoot Boots [300]; Graveyard: Lightning Strike [320]
+
+Turn 10
+  - Reckless Lackey [valid_resolution_no_immediate_mutation, seq=199] (active=Goedro, phase=Phase_Main1, controller=Goedro, owner=Goedro, source_object=334)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Reckless Lackey resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Reckless Lackey (object 334) Hand (Goedro) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Reckless Lackey (object 334) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Swiftfoot Boots [valid_resolution_no_immediate_mutation, seq=204] (active=Goedro, phase=Phase_Main1, controller=Goedro, owner=Goedro, source_object=289, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Swiftfoot Boots resolves with no immediate observed mutation.
+  Combat snapshots observed (active=Goedro; frames: DeclareAttack -> DeclareBlock):
+      attackers: Reckless Lackey [334] (unblocked, observed P/T 1/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 18 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Reckless Lackey [333] Library (Goedro) -> Hand (Goedro) (Draw; GRE sequence 194).
+      Cavern of Souls [338] Hand (Goedro) -> Battlefield (PlayLand; GRE sequence 222).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [307], Lunar Convocation [326], Phyrexian Arena [294], Plains [286], Plains [306], Plains [325], Scoured Barrens [281], Swamp [293]; Graveyard: Marauding Blight-Priest [321]
+      Goedro: Battlefield: Cavern of Souls [299], Cavern of Souls [338], Mountain [284], Mountain [288], Mountain [316], Reckless Lackey [334], Swiftfoot Boots [289], Swiftfoot Boots [300]; Graveyard: Lightning Strike [320]
+
+Turn 11
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=228] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=294, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 175 [175], Marauding Blight-Priest [340] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 340) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=236] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=343)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 343) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 343) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=238] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=246] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=343, source_last_explicit_zone=Battlefield, source_successor=353 observed Battlefield -> Graveyard (gian31) (SBA_Damage))
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Goedro loses 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=249] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 177 [177], Bloodthirsty Conqueror [357] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 357) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=252] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=358)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 358) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 358) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=265] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Lunar Convocation: a token is created.
+      explicit effect object references: Bat [362] (role/targeting only where the protocol identifies it)
+      token created: Bat (object 362, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 361).
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=268] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=358, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=270] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=272] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: Goedro loses 1 life.
+  - Lightning Strike [observed_semantic_effect, seq=244] (active=unknown, controller=Goedro, owner=Goedro, source_object=349)
+      chronology reconciliation: parser turn group 17 conflicts with Turn 11; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: 3 damage
+      narrative: Lightning Strike: Marauding Blight-Priest takes 3 damage.
+      explicit effect object references: Marauding Blight-Priest [343] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Lightning Strike (object 349) Hand (Goedro) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lightning Strike (object 352) Stack -> Graveyard (Goedro) (Resolve; shared object ID)
+      identity continuity: source object 349 -> transfer object 352 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Marauding Blight-Priest (object 353) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+    net observed life change this turn: Goedro -2; gian31 +0 (individual changes below; gains and losses may offset)
+    life: gian31 17 -> 16
+    life: gian31 16 -> 17
+    life: Goedro 19 -> 18
+    life: gian31 17 -> 15
+    life: gian31 15 -> 16
+    life: gian31 16 -> 17
+    life: Goedro 18 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [341] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 230).
+      Swamp [342] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 233).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [307], Case of the Uneaten Feast [358], Lunar Convocation [326], Phyrexian Arena [294], Plains [286], Plains [306], Plains [325], Scoured Barrens [281], Swamp [293], Swamp [342]; Graveyard: Marauding Blight-Priest [321], Marauding Blight-Priest [353]
+      Goedro: Battlefield: Cavern of Souls [299], Cavern of Souls [338], Mountain [284], Mountain [288], Mountain [316], Reckless Lackey [334], Swiftfoot Boots [289], Swiftfoot Boots [300]; Graveyard: Lightning Strike [320], Lightning Strike [352]
+
+Turn 12
+  - Blacksmith's Talent [valid_resolution_no_immediate_mutation, seq=281] (active=Goedro, phase=Phase_Main1, controller=Goedro, owner=Goedro, source_object=366)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Blacksmith's Talent resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Blacksmith's Talent (object 366) Hand (Goedro) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Blacksmith's Talent (object 366) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Blacksmith's Talent [observed_semantic_effect, seq=283] (active=Goedro, phase=Phase_Main1, controller=Goedro, owner=Goedro, source_object=366, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Blacksmith's Talent: a token is created.
+      explicit effect object references: Sword [369] (role/targeting only where the protocol identifies it)
+      token created: Sword (object 369, controller=Goedro); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 368).
+  - Ability of Sword [valid_resolution_no_immediate_mutation, seq=288] (active=Goedro, phase=Phase_Main1, controller=Goedro, owner=Goedro, source_object=369)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Sword resolves with no immediate observed mutation.
+  Combat snapshots observed (active=Goedro; frames: DeclareAttack -> DeclareBlock):
+      attackers: Reckless Lackey [334] (blocked, observed P/T 2/3)
+      blockers: Bat [362]
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat-result zone change: Bat [373] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    additional protocol-observed zone movements not assigned to an action chain:
+      Blacksmith's Talent [365] Library (Goedro) -> Hand (Goedro) (Draw; GRE sequence 276).
+      Bat [373] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 300).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [307], Case of the Uneaten Feast [358], Lunar Convocation [326], Phyrexian Arena [294], Plains [286], Plains [306], Plains [325], Scoured Barrens [281], Swamp [293], Swamp [342]; Graveyard: Bat [373], Marauding Blight-Priest [321], Marauding Blight-Priest [353]
+      Goedro: Battlefield: Blacksmith's Talent [366], Cavern of Souls [299], Cavern of Souls [338], Mountain [284], Mountain [288], Mountain [316], Reckless Lackey [334], Swiftfoot Boots [289], Swiftfoot Boots [300]; Graveyard: Lightning Strike [320], Lightning Strike [352]
+
+Turn 13
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=312] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=294, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 178 [178], Makeshift Binding [375] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Makeshift Binding (object 375) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation, seq=320] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=378)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 378) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 378) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=323] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=358, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=325] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=328] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 180 [180], Plains [389] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Plains (object 389) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=341] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 328 and 341; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: token creation
+      narrative: Ability of Lunar Convocation: a token is created.
+      explicit effect object references: Bat [392] (role/targeting only where the protocol identifies it)
+      token created: Bat (object 392, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 391).
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=344] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=358, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=346] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=348] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: Goedro loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=350] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=378, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+    net observed life change this turn: Goedro -1; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 17 -> 16
+    life: gian31 16 -> 17
+    life: gian31 17 -> 18
+    life: gian31 18 -> 16
+    life: gian31 16 -> 17
+    life: gian31 17 -> 18
+    life: Goedro 17 -> 16
+    life: gian31 18 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [376] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 314).
+      Plains [377] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 317).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodthirsty Conqueror [378], Case of the Uneaten Feast [307], Case of the Uneaten Feast [358], Lunar Convocation [326], Phyrexian Arena [294], Plains [286], Plains [306], Plains [325], Plains [377], Scoured Barrens [281], Swamp [293], Swamp [342]; Graveyard: Bat [373], Marauding Blight-Priest [321], Marauding Blight-Priest [353]
+      Goedro: Battlefield: Blacksmith's Talent [366], Cavern of Souls [299], Cavern of Souls [338], Mountain [284], Mountain [288], Mountain [316], Reckless Lackey [334], Swiftfoot Boots [289], Swiftfoot Boots [300]; Graveyard: Lightning Strike [320], Lightning Strike [352]
+
+Turn 14
+  - Charming Scoundrel [valid_resolution_no_immediate_mutation, seq=359] (active=Goedro, phase=Phase_Main1, controller=Goedro, owner=Goedro, source_object=397)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Charming Scoundrel resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Charming Scoundrel (object 397) Hand (Goedro) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Charming Scoundrel (object 397) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Charming Scoundrel [observed_semantic_effect, seq=364] (active=Goedro, phase=Phase_Main1, controller=Goedro, owner=Goedro, source_object=397, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Charming Scoundrel: a token is created.
+      explicit effect object references: Wicked [402] (role/targeting only where the protocol identifies it)
+      token created: Wicked (object 402, controller=Goedro); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 400).
+  - Ability of Blacksmith's Talent [valid_resolution_no_immediate_mutation, seq=385] (active=Goedro, phase=Phase_Main2, controller=Goedro, owner=Goedro, source_object=366, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Blacksmith's Talent resolves with no immediate observed mutation.
+  Combat snapshots observed (active=Goedro; frames: DeclareAttack -> DeclareBlock):
+      attackers: Reckless Lackey [334] (blocked, observed P/T 3/4)
+      blockers: Bat [392]
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat-result zone change: Bat [403] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    additional protocol-observed zone movements not assigned to an action chain:
+      Charming Scoundrel [396] Library (Goedro) -> Hand (Goedro) (Draw; GRE sequence 354).
+      Bat [403] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 376).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodthirsty Conqueror [378], Case of the Uneaten Feast [307], Case of the Uneaten Feast [358], Lunar Convocation [326], Phyrexian Arena [294], Plains [286], Plains [306], Plains [325], Plains [377], Scoured Barrens [281], Swamp [293], Swamp [342]; Graveyard: Bat [373], Bat [403], Marauding Blight-Priest [321], Marauding Blight-Priest [353]
+      Goedro: Battlefield: Blacksmith's Talent [366], Cavern of Souls [299], Cavern of Souls [338], Charming Scoundrel [397], Mountain [284], Mountain [288], Mountain [316], Reckless Lackey [334], Swiftfoot Boots [289], Swiftfoot Boots [300]; Graveyard: Lightning Strike [320], Lightning Strike [352]
+
+Turn 15
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=391] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=294, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 181 [181], Shattered Sanctum [409] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shattered Sanctum (object 409) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=399] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=412)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 412) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 412) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=403] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=412, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Charming Scoundrel; gian31 gains 2 life.
+      explicit effect object references: Charming Scoundrel [397], Charming Scoundrel [417] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Charming Scoundrel (object 417) Battlefield -> Exile (Exile; shared object ID)
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=415] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=378, source_last_explicit_zone=Battlefield)
+      effects: life +5
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 5 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=422] (active=gian31, phase=Phase_Main2, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 183 [183], Plains [422] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Plains (object 422) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Ability of Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=427] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=358, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Case of the Uneaten Feast resolves with no immediate observed mutation.
+  - Ability of Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=429] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Case of the Uneaten Feast resolves with no immediate observed mutation.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=431] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Lunar Convocation: a token is created.
+      explicit effect object references: Bat [427] (role/targeting only where the protocol identifies it)
+      token created: Bat (object 427, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 426).
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=434] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=358, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=436] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=438] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: Goedro loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=440] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=378, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=443] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield, source_successor=432 observed Battlefield -> Graveyard (gian31) (Sacrifice))
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Case of the Uneaten Feast resolves with no immediate observed mutation.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Bloodthirsty Conqueror [378] (unblocked, observed P/T 5/5)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      other-player life loss not explained by observed attacker damage: gian31 25 -> 23 (-2; phase=Phase_Combat; source unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Goedro -6; gian31 +7 (individual changes below; gains and losses may offset)
+    life: gian31 19 -> 18
+    life: gian31 18 -> 20
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): Goedro 16 -> 11
+    life: gian31 20 -> 25
+    life (unattributed loss during combat phase; not explained by observed attacker damage): gian31 25 -> 23
+    life: gian31 23 -> 24
+    life: gian31 24 -> 25
+    life: Goedro 11 -> 10
+    life: gian31 25 -> 26
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [410] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 393).
+      Shattered Sanctum [411] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 396).
+      Case of the Uneaten Feast [432] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 441).
+        sacrifice observed after Ability of Bloodthirsty Conqueror (seq 440); direct causal linkage is unavailable.
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodthirsty Conqueror [378], Case of the Uneaten Feast [358], Lunar Convocation [326], Makeshift Binding [412], Phyrexian Arena [294], Plains [286], Plains [306], Plains [325], Plains [377], Scoured Barrens [281], Shattered Sanctum [411], Swamp [293], Swamp [342]; Graveyard: Bat [373], Bat [403], Case of the Uneaten Feast [432], Marauding Blight-Priest [321], Marauding Blight-Priest [353]
+      Goedro: Battlefield: Blacksmith's Talent [366], Cavern of Souls [299], Cavern of Souls [338], Mountain [284], Mountain [288], Mountain [316], Reckless Lackey [334], Swiftfoot Boots [289], Swiftfoot Boots [300]; Graveyard: Lightning Strike [320], Lightning Strike [352]; Exile: Charming Scoundrel [417]
+
+Turn 16
+  - Charming Scoundrel [valid_resolution_no_immediate_mutation, seq=452] (active=Goedro, phase=Phase_Main1, controller=Goedro, owner=Goedro, source_object=434)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Charming Scoundrel resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Charming Scoundrel (object 434) Hand (Goedro) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Charming Scoundrel (object 434) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Blacksmith's Talent [valid_resolution_no_immediate_mutation, seq=468] (active=Goedro, phase=Phase_Main1, controller=Goedro, owner=Goedro, source_object=366, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Blacksmith's Talent resolves with no immediate observed mutation.
+  - Ability of Blacksmith's Talent [valid_resolution_no_immediate_mutation, seq=475] (active=Goedro, phase=Phase_Combat, step=Step_BeginCombat, controller=Goedro, owner=Goedro, source_object=366, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 468 and 475; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Blacksmith's Talent resolves with no immediate observed mutation.
+  - Bitter Triumph [observed_semantic_effect, seq=466] (active=unknown, controller=gian31, owner=gian31, source_object=447)
+      chronology reconciliation: parser turn group None conflicts with Turn 16; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: destroy
+      narrative: Bitter Triumph destroys Charming Scoundrel.
+      explicit effect object references: Charming Scoundrel [434], Charming Scoundrel [450] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bitter Triumph (object 447) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Charming Scoundrel (object 450) Battlefield -> Graveyard (Goedro) (Destroy; shared object ID)
+      protocol-linked zone transfer: Bitter Triumph (object 451) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 447 -> transfer object 451 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=Goedro; frames: DeclareAttack):
+      attackers: Reckless Lackey [334] (unblocked, observed P/T 3/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat-result zone change: Bat [453] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -3 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 26 -> 23
+    additional protocol-observed zone movements not assigned to an action chain:
+      Charming Scoundrel [433] Library (Goedro) -> Hand (Goedro) (Draw; GRE sequence 447).
+      Swiftfoot Boots [439] Hand (Goedro) -> Graveyard (Goedro) (Discard; GRE sequence 456).
+      Cavern of Souls [440] Library (Goedro) -> Hand (Goedro) (Draw; GRE sequence 456).
+      Cavern of Souls [441] Hand (Goedro) -> Battlefield (PlayLand; GRE sequence 458).
+      Bat [453] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 485).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodthirsty Conqueror [378], Case of the Uneaten Feast [358], Lunar Convocation [326], Makeshift Binding [412], Phyrexian Arena [294], Plains [286], Plains [306], Plains [325], Plains [377], Scoured Barrens [281], Shattered Sanctum [411], Swamp [293], Swamp [342]; Graveyard: Bat [373], Bat [403], Bat [453], Bitter Triumph [451], Case of the Uneaten Feast [432], Marauding Blight-Priest [321], Marauding Blight-Priest [353]
+      Goedro: Battlefield: Blacksmith's Talent [366], Cavern of Souls [299], Cavern of Souls [338], Cavern of Souls [441], Mountain [284], Mountain [288], Mountain [316], Reckless Lackey [334], Swiftfoot Boots [289], Swiftfoot Boots [300]; Graveyard: Charming Scoundrel [450], Lightning Strike [320], Lightning Strike [352], Swiftfoot Boots [439]; Exile: Charming Scoundrel [417]
+
+Turn 17
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=497] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=294, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 184 [184], Marauding Blight-Priest [455] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 455) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=505] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=458)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 458) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 458) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=507] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=358, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=509] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=458, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Goedro loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=511] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=378, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=513] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=458, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Goedro loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=515] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=378, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=517] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=458, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Goedro loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=519] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=378, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=521] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=458, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Goedro loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=523] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=378, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=525] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=458, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Goedro loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=527] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=378, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=529] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=458, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Goedro loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=531] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=378, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=533] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=458, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Goedro loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=535] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=378, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=537] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=458, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Goedro loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=539] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=378, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=541] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=458, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Goedro loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=543] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=378, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=545] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=458, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Goedro loses 1 life.
+    net observed life change this turn: Goedro -9; gian31 +9 (individual changes below; gains and losses may offset)
+    life: gian31 23 -> 22
+    life: gian31 22 -> 23
+    life: Goedro 10 -> 9
+    life: gian31 23 -> 24
+    life: Goedro 9 -> 8
+    life: gian31 24 -> 25
+    life: Goedro 8 -> 7
+    life: gian31 25 -> 26
+    life: Goedro 7 -> 6
+    life: gian31 26 -> 27
+    life: Goedro 6 -> 5
+    life: gian31 27 -> 28
+    life: Goedro 5 -> 4
+    life: gian31 28 -> 29
+    life: Goedro 4 -> 3
+    life: gian31 29 -> 30
+    life: Goedro 3 -> 2
+    life: gian31 30 -> 31
+    life: Goedro 2 -> 1
+    life: gian31 31 -> 32
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [456] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 499).
+      Swamp [457] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 502).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodthirsty Conqueror [378], Case of the Uneaten Feast [358], Lunar Convocation [326], Makeshift Binding [412], Marauding Blight-Priest [458], Phyrexian Arena [294], Plains [286], Plains [306], Plains [325], Plains [377], Scoured Barrens [281], Shattered Sanctum [411], Swamp [293], Swamp [342], Swamp [457]; Graveyard: Bat [373], Bat [403], Bat [453], Bitter Triumph [451], Case of the Uneaten Feast [432], Marauding Blight-Priest [321], Marauding Blight-Priest [353]
+      Goedro: Battlefield: Blacksmith's Talent [366], Cavern of Souls [299], Cavern of Souls [338], Cavern of Souls [441], Mountain [284], Mountain [288], Mountain [316], Reckless Lackey [334], Swiftfoot Boots [289], Swiftfoot Boots [300]; Graveyard: Charming Scoundrel [450], Lightning Strike [320], Lightning Strike [352], Swiftfoot Boots [439]; Exile: Charming Scoundrel [417]
+
+UNNUMBERED / UNRESOLVED TURN GROUP
+  - The captured records do not provide a verified numbered turn for the following events.
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 9, seq 178, Phase_Main1: gian31 20 -> 18. No source event correlated in captured records. Previous captured action: Lunar Convocation.
+- Turn 11, seq 247, Phase_Main1: gian31 17 -> 15. No source event correlated in captured records. Previous captured action: Marauding Blight-Priest.
+- Turn 13, seq 326, Phase_Main1: gian31 18 -> 16. No source event correlated in captured records. Previous captured action: Case of the Uneaten Feast.
+- Turn 15, seq 420, Phase_Combat: gian31 25 -> 23. Combat declaration observed; exact assignment unavailable. Previous captured action: Bloodthirsty Conqueror.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 5 token creations observed; 2 active as last observed; 3 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Bat [362] controller=gian31; created Turn 11 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 12 via Battlefield -> Graveyard (gian31) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Sword [369] controller=Goedro; created Turn 12 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 12, object 369 (latest observed P/T unknown; current zone unconfirmed).
+- Bat [392] controller=gian31; created Turn 13 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 14 via Battlefield -> Graveyard (gian31) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Wicked [402] controller=Goedro; created Turn 14 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 14, object 402 (latest observed P/T unknown; current zone unconfirmed).
+- Bat [427] controller=gian31; created Turn 15 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 16 via Battlefield -> Graveyard (gian31) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 23: Swiftfoot Boots [owner/controller metadata unavailable] moves Library (Goedro) -> Hand (Goedro) (Draw).
+- Turn 2, seq 26: Mountain [owner=Goedro, controller=Goedro] moves Hand (Goedro) -> Battlefield (PlayLand).
+- Turn 3, seq 40: Bitter Triumph [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 43: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 57: Mountain [owner/controller metadata unavailable] moves Library (Goedro) -> Hand (Goedro) (Draw).
+- Turn 4, seq 60: Mountain [owner=Goedro, controller=Goedro] moves Hand (Goedro) -> Battlefield (PlayLand).
+- Turn 4, seq 61: Swiftfoot Boots [owner=Goedro, controller=Goedro] moves Hand (Goedro) -> Stack (CastSpell).
+- Turn 4, seq 63: Swiftfoot Boots [owner=Goedro, controller=Goedro] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 77: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 80: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 81: Phyrexian Arena [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 83: Phyrexian Arena [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 97: Swiftfoot Boots [owner/controller metadata unavailable] moves Library (Goedro) -> Hand (Goedro) (Draw).
+- Turn 6, seq 101: Cavern of Souls [owner=Goedro, controller=Goedro] moves Hand (Goedro) -> Battlefield (PlayLand).
+- Turn 6, seq 102: Swiftfoot Boots [owner=Goedro, controller=Goedro] moves Hand (Goedro) -> Stack (CastSpell).
+- Turn 6, seq 104: Swiftfoot Boots [owner=Goedro, controller=Goedro] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 118: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 120: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 123: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 124: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 126: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 127: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 129: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 147: Mountain [owner/controller metadata unavailable] moves Library (Goedro) -> Hand (Goedro) (Draw).
+- Turn 8, seq 150: Mountain [owner=Goedro, controller=Goedro] moves Hand (Goedro) -> Battlefield (PlayLand).
+- Turn 8, seq 151: Lightning Strike [owner=Goedro, controller=Goedro] moves Hand (Goedro) -> Stack (CastSpell).
+- Turn 8, seq 155: Lightning Strike [owner=Goedro, controller=Goedro] moves Stack -> Graveyard (Goedro) (Resolve).
+- Turn 8, seq 155: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 9, seq 169: Lunar Convocation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 171: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 174: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 175: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 177: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 180: Phyrexian Arena [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 194: Reckless Lackey [owner/controller metadata unavailable] moves Library (Goedro) -> Hand (Goedro) (Draw).
+- Turn 10, seq 197: Reckless Lackey [owner=Goedro, controller=Goedro] moves Hand (Goedro) -> Stack (CastSpell).
+- Turn 10, seq 199: Reckless Lackey [owner=Goedro, controller=Goedro] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 222: Cavern of Souls [owner=Goedro, controller=Goedro] moves Hand (Goedro) -> Battlefield (PlayLand).
+- Turn 11, seq 228: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 230: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 233: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 11, seq 234: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 236: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 240: Lightning Strike [owner=Goedro, controller=Goedro] moves Hand (Goedro) -> Stack (CastSpell).
+- Turn 11, seq 244: Lightning Strike [owner=Goedro, controller=Goedro] moves Stack -> Graveyard (Goedro) (Resolve).
+- Turn 11, seq 244: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 11, seq 249: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 250: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 252: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 276: Blacksmith's Talent [owner/controller metadata unavailable] moves Library (Goedro) -> Hand (Goedro) (Draw).
+- Turn 12, seq 279: Blacksmith's Talent [owner=Goedro, controller=Goedro] moves Hand (Goedro) -> Stack (CastSpell).
+- Turn 12, seq 281: Blacksmith's Talent [owner=Goedro, controller=Goedro] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 300: Bat [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 13, seq 312: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 314: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 317: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 13, seq 318: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 13, seq 320: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 328: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 354: Charming Scoundrel [owner/controller metadata unavailable] moves Library (Goedro) -> Hand (Goedro) (Draw).
+- Turn 14, seq 357: Charming Scoundrel [owner=Goedro, controller=Goedro] moves Hand (Goedro) -> Stack (CastSpell).
+- Turn 14, seq 359: Charming Scoundrel [owner=Goedro, controller=Goedro] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 376: Bat [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 15, seq 391: Shattered Sanctum [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 15, seq 393: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 15, seq 396: Shattered Sanctum [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 15, seq 397: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 15, seq 399: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 403: Charming Scoundrel [owner=Goedro, controller=Goedro] moves Battlefield -> Exile (Exile).
+- Turn 15, seq 422: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 15, seq 441: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 16, seq 447: Charming Scoundrel [owner/controller metadata unavailable] moves Library (Goedro) -> Hand (Goedro) (Draw).
+- Turn 16, seq 450: Charming Scoundrel [owner=Goedro, controller=Goedro] moves Hand (Goedro) -> Stack (CastSpell).
+- Turn 16, seq 452: Charming Scoundrel [owner=Goedro, controller=Goedro] moves Stack -> Battlefield (Resolve).
+- Turn 16, seq 456: Swiftfoot Boots [owner=Goedro, controller=Goedro] moves Hand (Goedro) -> Graveyard (Goedro) (Discard).
+- Turn 16, seq 456: Cavern of Souls [owner/controller metadata unavailable] moves Library (Goedro) -> Hand (Goedro) (Draw).
+- Turn 16, seq 458: Cavern of Souls [owner=Goedro, controller=Goedro] moves Hand (Goedro) -> Battlefield (PlayLand).
+- Turn 16, seq 461: Bitter Triumph [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 466: Charming Scoundrel [owner=Goedro, controller=Goedro] moves Battlefield -> Graveyard (Goedro) (Destroy).
+- Turn 16, seq 466: Bitter Triumph [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 16, seq 485: Bat [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 17, seq 497: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 17, seq 499: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 17, seq 502: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 17, seq 503: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 17, seq 505: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 163 becomes object 281 [Scoured Barrens].
+- Turn 2, seq 23: object 228 becomes object 283 [Swiftfoot Boots].
+- Turn 2, seq 26: object 221 becomes object 284 [Mountain].
+- Turn 3, seq 40: object 168 becomes object 285 [Bitter Triumph].
+- Turn 3, seq 43: object 164 becomes object 286 [Plains].
+- Turn 4, seq 57: object 229 becomes object 287 [Mountain].
+- Turn 4, seq 60: object 287 becomes object 288 [Mountain].
+- Turn 4, seq 61: object 283 becomes object 289 [Swiftfoot Boots].
+- Turn 5, seq 77: object 169 becomes object 292 [Swamp].
+- Turn 5, seq 80: object 292 becomes object 293 [Swamp].
+- Turn 5, seq 81: object 166 becomes object 294 [Phyrexian Arena].
+- Turn 6, seq 97: object 230 becomes object 298 [Swiftfoot Boots].
+- Turn 6, seq 101: object 224 becomes object 299 [Cavern of Souls].
+- Turn 6, seq 102: object 298 becomes object 300 [Swiftfoot Boots].
+- Turn 7, seq 118: object 170 becomes object 304 [Plains].
+- Turn 7, seq 120: object 171 becomes object 305 [Case of the Uneaten Feast].
+- Turn 7, seq 123: object 304 becomes object 306 [Plains].
+- Turn 7, seq 124: object 305 becomes object 307 [Case of the Uneaten Feast].
+- Turn 7, seq 127: object 162 becomes object 309 [Marauding Blight-Priest].
+- Turn 8, seq 147: object 231 becomes object 315 [Mountain].
+- Turn 8, seq 150: object 315 becomes object 316 [Mountain].
+- Turn 8, seq 151: object 223 becomes object 317 [Lightning Strike].
+- Turn 8, seq 155: object 317 becomes object 320 [Lightning Strike].
+- Turn 8, seq 155: object 309 becomes object 321 [Marauding Blight-Priest].
+- Turn 9, seq 169: object 172 becomes object 323 [Lunar Convocation].
+- Turn 9, seq 171: object 173 becomes object 324 [Plains].
+- Turn 9, seq 174: object 324 becomes object 325 [Plains].
+- Turn 9, seq 175: object 323 becomes object 326 [Lunar Convocation].
+- Turn 9, seq 180: object 174 becomes object 332 [Phyrexian Arena].
+- Turn 10, seq 194: object 232 becomes object 333 [Reckless Lackey].
+- Turn 10, seq 197: object 333 becomes object 334 [Reckless Lackey].
+- Turn 10, seq 222: object 227 becomes object 338 [Cavern of Souls].
+- Turn 11, seq 228: object 175 becomes object 340 [Marauding Blight-Priest].
+- Turn 11, seq 230: object 176 becomes object 341 [Case of the Uneaten Feast].
+- Turn 11, seq 233: object 165 becomes object 342 [Swamp].
+- Turn 11, seq 234: object 340 becomes object 343 [Marauding Blight-Priest].
+- Turn 11, seq 240: object 222 becomes object 349 [Lightning Strike].
+- Turn 11, seq 244: object 349 becomes object 352 [Lightning Strike].
+- Turn 11, seq 244: object 343 becomes object 353 [Marauding Blight-Priest].
+- Turn 11, seq 249: object 177 becomes object 357 [Bloodthirsty Conqueror].
+- Turn 11, seq 250: object 341 becomes object 358 [Case of the Uneaten Feast].
+- Turn 12, seq 276: object 233 becomes object 365 [Blacksmith's Talent].
+- Turn 12, seq 279: object 365 becomes object 366 [Blacksmith's Talent].
+- Turn 12, seq 300: object 362 becomes object 373 [Bat].
+- Turn 13, seq 312: object 178 becomes object 375 [Makeshift Binding].
+- Turn 13, seq 314: object 179 becomes object 376 [Plains].
+- Turn 13, seq 317: object 376 becomes object 377 [Plains].
+- Turn 13, seq 318: object 161 becomes object 378 [Bloodthirsty Conqueror].
+- Turn 13, seq 328: object 180 becomes object 389 [Plains].
+- Turn 14, seq 354: object 234 becomes object 396 [Charming Scoundrel].
+- Turn 14, seq 357: object 396 becomes object 397 [Charming Scoundrel].
+- Turn 14, seq 376: object 392 becomes object 403 [Bat].
+- Turn 15, seq 391: object 181 becomes object 409 [Shattered Sanctum].
+- Turn 15, seq 393: object 182 becomes object 410 [Swamp].
+- Turn 15, seq 396: object 409 becomes object 411 [Shattered Sanctum].
+- Turn 15, seq 397: object 375 becomes object 412 [Makeshift Binding].
+- Turn 15, seq 403: object 397 becomes object 417 [Charming Scoundrel].
+- Turn 15, seq 422: object 183 becomes object 422 [Plains].
+- Turn 15, seq 441: object 307 becomes object 432 [Case of the Uneaten Feast].
+- Turn 16, seq 447: object 235 becomes object 433 [Charming Scoundrel].
+- Turn 16, seq 450: object 433 becomes object 434 [Charming Scoundrel].
+- Turn 16, seq 456: object 225 becomes object 439 [Swiftfoot Boots].
+- Turn 16, seq 456: object 236 becomes object 440 [Cavern of Souls].
+- Turn 16, seq 458: object 440 becomes object 441 [Cavern of Souls].
+- Turn 16, seq 461: object 285 becomes object 447 [Bitter Triumph].
+- Turn 16, seq 466: object 434 becomes object 450 [Charming Scoundrel].
+- Turn 16, seq 466: object 447 becomes object 451 [Bitter Triumph].
+- Turn 16, seq 485: object 427 becomes object 453 [Bat].
+- Turn 17, seq 497: object 184 becomes object 455 [Marauding Blight-Priest].
+- Turn 17, seq 499: object 185 becomes object 456 [Plains].
+- Turn 17, seq 502: object 410 becomes object 457 [Swamp].
+- Turn 17, seq 503: object 455 becomes object 458 [Marauding Blight-Priest].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Scoured Barrens (object 281) from Hand (gian31) to Battlefield.
+- Turn 2: Goedro plays Mountain (object 284) from Hand (Goedro) to Battlefield.
+- Turn 3: gian31 plays Plains (object 286) from Hand (gian31) to Battlefield.
+- Turn 4: Goedro plays Mountain (object 288) from Hand (Goedro) to Battlefield.
+- Turn 5: gian31 plays Swamp (object 293) from Hand (gian31) to Battlefield.
+- Turn 6: Goedro plays Cavern of Souls (object 299) from Hand (Goedro) to Battlefield.
+- Turn 7: gian31 plays Plains (object 306) from Hand (gian31) to Battlefield.
+- Turn 8: Goedro plays Mountain (object 316) from Hand (Goedro) to Battlefield.
+- Turn 9: gian31 plays Plains (object 325) from Hand (gian31) to Battlefield.
+- Turn 10: Goedro plays Cavern of Souls (object 338) from Hand (Goedro) to Battlefield.
+- Turn 11: gian31 plays Swamp (object 342) from Hand (gian31) to Battlefield.
+- Turn 13: gian31 plays Plains (object 377) from Hand (gian31) to Battlefield.
+- Turn 15: gian31 plays Shattered Sanctum (object 411) from Hand (gian31) to Battlefield.
+- Turn 16: Goedro plays Cavern of Souls (object 441) from Hand (Goedro) to Battlefield.
+- Turn 17: gian31 plays Swamp (object 457) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 13: ordered adjacent records Case of the Uneaten Feast -> Lunar Convocation; observed repetitions=2; net life: Goedro -1, gian31 +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=4, Lunar Convocation=3.
+  Individual ability records remain in the timeline.
+- Turn 15: ordered adjacent records Lunar Convocation -> Case of the Uneaten Feast; observed repetitions=2; net life: gian31 +1. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=5, Lunar Convocation=3.
+  Individual ability records remain in the timeline.
+- Turn 17: ordered adjacent records Marauding Blight-Priest -> Bloodthirsty Conqueror; observed repetitions=9; net life: Goedro -9, gian31 +9. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Bloodthirsty Conqueror=9, Marauding Blight-Priest=10.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 15: ordered adjacent records Lunar Convocation -> Case of the Uneaten Feast -> Case of the Uneaten Feast; observed repetitions=2 (pattern length 3; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+- Turn 17: ordered adjacent records Marauding Blight-Priest -> Bloodthirsty Conqueror; observed repetitions=9 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Case of the Uneaten Feast: casts=2; abilities=14 (triggered=14, activated=0) across turns [7, 7, 11, 11, 11, 11, 13, 13, 13, 13, 15, 15, 15, 15, 15, 17]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=11, other=0
+  observed effects: life +1
+- Marauding Blight-Priest: casts=3; abilities=12 (triggered=12, activated=0) across turns [7, 7, 11, 11, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=12, other=3
+  observed effects: life -1, synthetic event
+- Bloodthirsty Conqueror: casts=1; abilities=12 (triggered=12, activated=0) across turns [13, 13, 15, 15, 17, 17, 17, 17, 17, 17, 17, 17, 17]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=12, other=0
+  observed effects: life +1, life +5
+- Lunar Convocation: casts=1; abilities=10 (triggered=10, activated=0) across turns [9, 9, 11, 11, 11, 13, 13, 13, 15, 15, 15]
+  observed effect totals: draws=4, tokens=3, counters=0, returns=0, damage=0, life_changes=3, other=1
+  observed effects: draw, life -1, synthetic event, token creation
+- Phyrexian Arena: casts=1; abilities=6 (triggered=6, activated=0) across turns [5, 7, 9, 11, 13, 15, 17]
+  observed effect totals: draws=6, tokens=0, counters=0, returns=0, damage=0, life_changes=6, other=6
+  observed effects: draw, life -1, synthetic event
+- Blacksmith's Talent: casts=1; abilities=4 (triggered=4, activated=0) across turns [12, 12, 14, 16, 16]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Charming Scoundrel: casts=2; abilities=1 (triggered=1, activated=0) across turns [14, 14, 16]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Swiftfoot Boots: casts=2; abilities=1 (triggered=1, activated=0) across turns [4, 6, 10]
+- Lightning Strike: casts=2 across turns [8, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=2, life_changes=0, other=0
+  observed effects: 3 damage
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [15, 15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Bitter Triumph: casts=1 across turns [16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Reckless Lackey: casts=1 across turns [10]
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [1]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Sword: abilities=1 (triggered=1, activated=0) across turns [12]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 10 - DeclareAttack, DeclareBlock (active=Goedro)
+  attacker: Reckless Lackey (Goedro) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack, DeclareBlock (active=Goedro)
+  attacker: Reckless Lackey (Goedro) -> gian31; blocked by Bat
+  combat damage assignment: unknown unless explicitly observed
+Turn 14 - DeclareAttack, DeclareBlock (active=Goedro)
+  attacker: Reckless Lackey (Goedro) -> gian31; blocked by Bat
+  combat damage assignment: unknown unless explicitly observed
+Turn 15 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Bloodthirsty Conqueror (gian31) -> Goedro; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 16 - DeclareAttack (active=Goedro)
+  attacker: Reckless Lackey (Goedro) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 5 life.
+- Turn 16: Ability of Blacksmith's Talent (active=Goedro) - Ability of Blacksmith's Talent resolves with no immediate observed mutation.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 161: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 166: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 167: Bitter Triumph | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 281: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 282: object 282 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 284: Mountain | controller=Goedro | owner=Goedro | zone=Battlefield (latest_object_observation)
+- 285: Bitter Triumph | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 286: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 288: Mountain | controller=Goedro | owner=Goedro | zone=Battlefield (latest_object_observation)
+- 289: Swiftfoot Boots | controller=Goedro | owner=Goedro | zone=Stack (latest_object_observation)
+- 292: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 293: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 294: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 299: Cavern of Souls | controller=Goedro | owner=Goedro | zone=Battlefield (latest_object_observation)
+- 300: Swiftfoot Boots | controller=Goedro | owner=Goedro | zone=Stack (latest_object_observation)
+- 303: object 303 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 304: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 305: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 306: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 307: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 309: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 313: object 313 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 314: object 314 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 316: Mountain | controller=Goedro | owner=Goedro | zone=Battlefield (latest_object_observation)
+- 317: Lightning Strike | controller=Goedro | owner=Goedro | zone=Stack (latest_object_observation)
+- 320: Lightning Strike | controller=Goedro | owner=Goedro | zone=Graveyard (latest_object_observation)
+- 321: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 322: object 322 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 323: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 324: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 325: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 326: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 329: object 329 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 332: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 334: Reckless Lackey | controller=Goedro | owner=Goedro | zone=Battlefield (latest_object_observation)
+- 336: object 336 | controller=Goedro | owner=Goedro | zone=unknown (inferred unknown) (latest_object_observation)
+- 338: Cavern of Souls | controller=Goedro | owner=Goedro | zone=Battlefield (latest_object_observation)
+- 339: object 339 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 340: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 341: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 342: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 343: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 347: object 347 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 348: object 348 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 349: Lightning Strike | controller=Goedro | owner=Goedro | zone=Stack (latest_object_observation)
+- 352: Lightning Strike | controller=Goedro | owner=Goedro | zone=Graveyard (latest_object_observation)
+- 353: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 354: object 354 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 357: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 358: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 360: object 360 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 361: object 361 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 362: Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 363: object 363 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 364: object 364 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 366: Blacksmith's Talent | controller=Goedro | owner=Goedro | zone=Stack (latest_object_observation)
+- 368: object 368 | controller=Goedro | owner=Goedro | zone=unknown (inferred unknown) (latest_object_observation)
+- 369: Sword | controller=Goedro | owner=Goedro | zone=Battlefield (latest_object_observation)
+- 370: object 370 | controller=Goedro | owner=Goedro | zone=unknown (inferred unknown) (latest_object_observation)
+- 374: object 374 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 375: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 376: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 377: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 378: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 384: object 384 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 385: object 385 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 386: object 386 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 389: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 390: object 390 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 391: object 391 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 392: Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 393: object 393 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 394: object 394 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 395: object 395 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 397: Charming Scoundrel | controller=Goedro | owner=Goedro | zone=Battlefield (latest_object_observation)
+- 400: object 400 | controller=Goedro | owner=Goedro | zone=unknown (inferred unknown) (latest_object_observation)
+- 402: Wicked | controller=Goedro | owner=Goedro | zone=Battlefield (latest_object_observation)
+- 404: object 404 | controller=Goedro | owner=Goedro | zone=unknown (inferred unknown) (latest_object_observation)
+- 408: object 408 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 409: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 410: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 411: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 412: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 416: object 416 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 417: Charming Scoundrel | controller=Goedro | owner=Goedro | zone=Exile (latest_object_observation)
+- 418: object 418 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 419: object 419 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 422: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 423: object 423 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 424: object 424 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 425: object 425 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 426: object 426 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 427: Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 428: object 428 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 429: object 429 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 430: object 430 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 431: object 431 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 432: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 434: Charming Scoundrel | controller=Goedro | owner=Goedro | zone=Battlefield (latest_object_observation)
+- 437: object 437 | controller=Goedro | owner=Goedro | zone=unknown (inferred unknown) (latest_object_observation)
+- 439: Swiftfoot Boots | controller=Goedro | owner=Goedro | zone=Graveyard (latest_object_observation)
+- 441: Cavern of Souls | controller=Goedro | owner=Goedro | zone=Battlefield (latest_object_observation)
+- 442: object 442 | controller=Goedro | owner=Goedro | zone=unknown (inferred unknown) (latest_object_observation)
+- 447: Bitter Triumph | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 450: Charming Scoundrel | controller=Goedro | owner=Goedro | zone=Graveyard (latest_object_observation)
+- 451: Bitter Triumph | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 452: object 452 | controller=Goedro | owner=Goedro | zone=unknown (inferred unknown) (latest_object_observation)
+- 454: object 454 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 455: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 456: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 457: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 458: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 462: object 462 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 463: object 463 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 464: object 464 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 465: object 465 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 466: object 466 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 467: object 467 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 468: object 468 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 469: object 469 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 470: object 470 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 471: object 471 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 472: object 472 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 473: object 473 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 474: object 474 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 475: object 475 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 476: object 476 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 477: object 477 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 478: object 478 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 479: object 479 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 480: object 480 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 481: object 481 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 482: object 482 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Goedro: 29 total items
+  zones: Battlefield=11, Exile=1, Graveyard=4, Stack=5, unknown=8
+  objects: Charming Scoundrel x4, Lightning Strike x4, Cavern of Souls x3, Mountain x3, Swiftfoot Boots x3, Blacksmith's Talent, Reckless Lackey, Sword, Wicked, object 336, object 368, object 370
+gian31: 108 total items
+  zones: Battlefield=16, Graveyard=1, Hand=28, Stack=6, unknown=57
+  objects: Plains x11, Marauding Blight-Priest x8, Swamp x6, Case of the Uneaten Feast x5, Bitter Triumph x4, Bat x3, Bloodthirsty Conqueror x3, Phyrexian Arena x3, Lunar Convocation x2, Makeshift Binding x2, Scoured Barrens x2, Shattered Sanctum x2
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (16): Bitter Triumph, Bloodthirsty Conqueror, Marauding Blight-Priest, Marauding Blight-Priest, Marauding Blight-Priest, Marauding Blight-Priest, Marauding Blight-Priest, Plains, Plains, Plains, Plains, Scoured Barrens, Shattered Sanctum, Swamp, Swamp, Swamp
+  Graveyard: 1 card(s)
+Goedro:
+  Battlefield (11): Cavern of Souls, Cavern of Souls, Cavern of Souls, Charming Scoundrel, Charming Scoundrel, Mountain, Mountain, Mountain, Reckless Lackey, Sword, Wicked
+  Graveyard: 4 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+65 objects have no resolved final zone and are omitted from the known board state.
+Goedro: 8 unknown object(s)
+gian31: 57 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=28, Stack=11
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Goedro:
+  Battlefield (12): Mountain, Mountain, Swiftfoot Boots, Cavern of Souls, Swiftfoot Boots, Mountain, Reckless Lackey, Cavern of Souls, Blacksmith's Talent, Sword, Wicked, Cavern of Souls
+  Graveyard (4): Lightning Strike, Lightning Strike, Swiftfoot Boots, Charming Scoundrel
+  Exile (1): Charming Scoundrel
+gian31:
+  Battlefield (15): Scoured Barrens, Plains, Swamp, Phyrexian Arena, Plains, Plains, Lunar Convocation, Swamp, Case of the Uneaten Feast, Plains, Bloodthirsty Conqueror, Shattered Sanctum, Makeshift Binding, Swamp, Marauding Blight-Priest
+  Graveyard (4): Marauding Blight-Priest, Marauding Blight-Priest, Case of the Uneaten Feast, Bitter Triumph
+Known non-persistent entries (counts only):
+  Goedro: Limbo=2
+  gian31: Hand=6, Limbo=8, Pending=1
+  unknown: Hand=1, Library=79, Limbo=10
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1
+- Turn 2: Goedro Battlefield=1; gian31 Battlefield=1
+- Turn 3: Goedro Battlefield=1; gian31 Battlefield=2
+- Turn 4: Goedro Battlefield=3; gian31 Battlefield=2
+- Turn 5: Goedro Battlefield=3; gian31 Battlefield=4
+- Turn 6: Goedro Battlefield=5; gian31 Battlefield=4
+- Turn 7: Goedro Battlefield=5; gian31 Battlefield=7
+- Turn 8: Goedro Battlefield=6; Goedro Graveyard=1; gian31 Battlefield=6; gian31 Graveyard=1
+- Turn 9: Goedro Battlefield=6; Goedro Graveyard=1; gian31 Battlefield=8; gian31 Graveyard=1
+- Turn 10: Goedro Battlefield=8; Goedro Graveyard=1; gian31 Battlefield=8; gian31 Graveyard=1
+- Turn 11: Goedro Battlefield=8; Goedro Graveyard=2; gian31 Battlefield=10; gian31 Graveyard=2
+- Turn 12: Goedro Battlefield=9; Goedro Graveyard=2; gian31 Battlefield=10; gian31 Graveyard=3
+- Turn 13: Goedro Battlefield=9; Goedro Graveyard=2; gian31 Battlefield=12; gian31 Graveyard=3
+- Turn 14: Goedro Battlefield=10; Goedro Graveyard=2; gian31 Battlefield=12; gian31 Graveyard=4
+- Turn 15: Goedro Battlefield=9; Goedro Graveyard=2; Goedro Exile=1; gian31 Battlefield=13; gian31 Graveyard=5
+- Turn 16: Goedro Battlefield=10; Goedro Graveyard=4; Goedro Exile=1; gian31 Battlefield=13; gian31 Graveyard=7
+- Turn 17: Goedro Battlefield=10; Goedro Graveyard=4; Goedro Exile=1; gian31 Battlefield=15; gian31 Graveyard=7
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 4: Swiftfoot Boots resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Phyrexian Arena resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Swiftfoot Boots resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Reckless Lackey resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Blacksmith's Talent resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Charming Scoundrel resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Charming Scoundrel resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 17: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
