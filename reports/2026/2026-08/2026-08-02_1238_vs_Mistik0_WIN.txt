@@ -1,0 +1,723 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: Mistik0, gian31
+Seat map: Seat 1=Mistik0, Seat 2=gian31
+Turn range (known): 1 - 15
+Records: 31
+Action chains: 23
+Winner: gian31
+Final life: {'Mistik0': 1, 'gian31': 16}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Match-result payload was observed after the last captured action: Turn 15 (Phase_Ending, Step_End; Ability of Starscape Cleric, seq 373); payload ordering within later uncaptured records is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 31 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 12 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 7, 9, 11, 12, 13, 14, 15] (raw records=12; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 18 explicit Library -> Hand movement(s); named in the draw record=11, resolved through an explicit identity transition=7, unresolved=0.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'Mistik0': 1, 'gian31': 16}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 15 (Phase_Ending, Step_End; Ability of Starscape Cleric, seq 373).
+Last captured life mutation: Mistik0 2 -> 1 (seq 371).
+Observed active tokens: Demon [362] controller=gian31, created Turn 11, last observed Turn 15 seq 335, P/T 6/6 (current zone unconfirmed); Starscape Cleric [383] controller=gian31, created Turn 13, last observed Turn 15 seq 373, P/T 1/1 (current zone unconfirmed).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=11] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 288) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 288) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Godless Shrine [287] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 8).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Godless Shrine [287]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Barkform Harvester [290] Library (Mistik0) -> Hand (Mistik0) (Draw; GRE sequence 25).
+      Swamp [291] Hand (Mistik0) -> Battlefield (PlayLand; GRE sequence 28).
+      Intimidation Tactics [292] Hand (Mistik0) -> Stack (CastSpell; GRE sequence 29).
+      Starscape Cleric [299] Hand (gian31) -> Exile (Exile; GRE sequence 34).
+      Intimidation Tactics [300] Stack -> Graveyard (Mistik0) (Resolve; GRE sequence 34).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Godless Shrine [287]; Exile: Starscape Cleric [299]
+      Mistik0: Battlefield: Swamp [291]; Graveyard: Intimidation Tactics [300]
+
+Turn 3
+  - Leech Collector [valid_resolution_no_immediate_mutation, seq=54] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=303)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Leech Collector resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Leech Collector (object 303) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leech Collector (object 303) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=56] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=58] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=303, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [301] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 48).
+      Plains [302] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 51).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Godless Shrine [287], Leech Collector [303], Plains [302]; Exile: Starscape Cleric [299]
+      Mistik0: Battlefield: Swamp [291]; Graveyard: Intimidation Tactics [300]
+
+Turn 4
+  - Tragic Trajectory [observed_semantic_effect, seq=80] (active=Mistik0, phase=Phase_Main1, controller=Mistik0, owner=Mistik0, source_object=311)
+      effects: P/T -2/-2
+      narrative: Tragic Trajectory: Leech Collector gets -2/-2.
+      explicit effect object references: Leech Collector [303] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Tragic Trajectory (object 311) Hand (Mistik0) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tragic Trajectory (object 313) Stack -> Graveyard (Mistik0) (Resolve; shared object ID)
+      identity continuity: source object 311 -> transfer object 313 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Leech Collector (object 314) Battlefield -> Graveyard (gian31) (SBA_ZeroToughness; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Intimidation Tactics [309] Library (Mistik0) -> Hand (Mistik0) (Draw; GRE sequence 72).
+      Swamp [310] Hand (Mistik0) -> Battlefield (PlayLand; GRE sequence 75).
+      Intimidation Tactics [315] Hand (Mistik0) -> Stack (CastSpell; GRE sequence 81).
+      Leech Collector [317] Hand (gian31) -> Exile (Exile; GRE sequence 86).
+      Intimidation Tactics [318] Stack -> Graveyard (Mistik0) (Resolve; GRE sequence 86).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Godless Shrine [287], Plains [302]; Exile: Leech Collector [317], Starscape Cleric [299]; Graveyard: Leech Collector [314]
+      Mistik0: Battlefield: Swamp [291], Swamp [310]; Graveyard: Intimidation Tactics [300], Intimidation Tactics [318], Tragic Trajectory [313]
+
+Turn 5
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=105] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=320, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 19 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [319] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 100).
+      Scoured Barrens [320] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 103).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [288], Godless Shrine [287], Plains [302], Scoured Barrens [320]; Exile: Leech Collector [317], Starscape Cleric [299]; Graveyard: Leech Collector [314]
+      Mistik0: Battlefield: Swamp [291], Swamp [310]; Graveyard: Intimidation Tactics [300], Intimidation Tactics [318], Tragic Trajectory [313]
+
+Turn 6
+  - Feed the Swarm [observed_semantic_effect, seq=126] (active=Mistik0, phase=Phase_Main1, controller=Mistik0, owner=Mistik0, source_object=323)
+      effects: destroy, life -1
+      narrative: Feed the Swarm destroys Case of the Uneaten Feast.
+      explicit effect object references: Case of the Uneaten Feast [288], Case of the Uneaten Feast [326] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Feed the Swarm (object 323) Hand (Mistik0) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 326) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Feed the Swarm (object 327) Stack -> Graveyard (Mistik0) (Resolve; shared object ID)
+      identity continuity: source object 323 -> transfer object 327 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: Mistik0 -1 (individual changes below; gains and losses may offset)
+    life: Mistik0 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shoot the Sheriff [322] Library (Mistik0) -> Hand (Mistik0) (Draw; GRE sequence 119).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [287], Plains [302], Scoured Barrens [320]; Exile: Leech Collector [317], Starscape Cleric [299]; Graveyard: Case of the Uneaten Feast [326], Leech Collector [314]
+      Mistik0: Battlefield: Swamp [291], Swamp [310]; Graveyard: Feed the Swarm [327], Intimidation Tactics [300], Intimidation Tactics [318], Tragic Trajectory [313]
+
+Turn 7
+  - Demon Wall [valid_resolution_no_immediate_mutation, seq=146] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=330)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Demon Wall resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Demon Wall (object 330) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Demon Wall (object 330) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Demon Wall [328] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 140).
+      Swamp [329] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 143).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Demon Wall [330], Godless Shrine [287], Plains [302], Scoured Barrens [320], Swamp [329]; Exile: Leech Collector [317], Starscape Cleric [299]; Graveyard: Case of the Uneaten Feast [326], Leech Collector [314]
+      Mistik0: Battlefield: Swamp [291], Swamp [310]; Graveyard: Feed the Swarm [327], Intimidation Tactics [300], Intimidation Tactics [318], Tragic Trajectory [313]
+
+Turn 8
+  - Shoot the Sheriff [observed_semantic_effect, seq=167] (active=Mistik0, phase=Phase_Main1, controller=Mistik0, owner=Mistik0, source_object=334)
+      effects: destroy
+      narrative: Shoot the Sheriff destroys Demon Wall.
+      explicit effect object references: Demon Wall [330], Demon Wall [337] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 334) Hand (Mistik0) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Demon Wall (object 337) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 338) Stack -> Graveyard (Mistik0) (Resolve; shared object ID)
+      identity continuity: source object 334 -> transfer object 338 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Corpses of the Lost [333] Library (Mistik0) -> Hand (Mistik0) (Draw; GRE sequence 160).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [287], Plains [302], Scoured Barrens [320], Swamp [329]; Exile: Leech Collector [317], Starscape Cleric [299]; Graveyard: Case of the Uneaten Feast [326], Demon Wall [337], Leech Collector [314]
+      Mistik0: Battlefield: Swamp [291], Swamp [310]; Graveyard: Feed the Swarm [327], Intimidation Tactics [300], Intimidation Tactics [318], Shoot the Sheriff [338], Tragic Trajectory [313]
+
+Turn 9
+  - Unholy Annex // Ritual Chamber [valid_resolution_no_immediate_mutation, seq=187] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=343)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Unholy Annex // Ritual Chamber resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Unholy Annex // Ritual Chamber (object 343) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Unholy Annex // Ritual Chamber (object 343) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect, seq=199] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=343, source_last_explicit_zone=Battlefield)
+      effects: draw, life -2
+      narrative: Ability of Unholy Annex // Ritual Chamber: draw; gian31 loses 2 life.
+      explicit effect object references: object 238 [238], Swamp [350] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Swamp (object 350) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Unholy Annex // Ritual Chamber [339] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 181).
+      Swamp [342] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 184).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [287], Plains [302], Scoured Barrens [320], Swamp [329], Swamp [342], Unholy Annex // Ritual Chamber [343]; Exile: Leech Collector [317], Starscape Cleric [299]; Graveyard: Case of the Uneaten Feast [326], Demon Wall [337], Leech Collector [314]
+      Mistik0: Battlefield: Swamp [291], Swamp [310]; Graveyard: Feed the Swarm [327], Intimidation Tactics [300], Intimidation Tactics [318], Shoot the Sheriff [338], Tragic Trajectory [313]
+
+Turn 10
+  - Forsaken Miner [valid_resolution_no_immediate_mutation, seq=208] (active=Mistik0, phase=Phase_Main1, controller=Mistik0, owner=Mistik0, source_object=352)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Forsaken Miner resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Forsaken Miner (object 352) Hand (Mistik0) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Forsaken Miner (object 352) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forsaken Miner [351] Library (Mistik0) -> Hand (Mistik0) (Draw; GRE sequence 203).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [287], Plains [302], Scoured Barrens [320], Swamp [329], Swamp [342], Unholy Annex // Ritual Chamber [343]; Exile: Leech Collector [317], Starscape Cleric [299]; Graveyard: Case of the Uneaten Feast [326], Demon Wall [337], Leech Collector [314]
+      Mistik0: Battlefield: Forsaken Miner [352], Swamp [291], Swamp [310]; Graveyard: Feed the Swarm [327], Intimidation Tactics [300], Intimidation Tactics [318], Shoot the Sheriff [338], Tragic Trajectory [313]
+
+Turn 11
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect, seq=228] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=343, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Unholy Annex // Ritual Chamber: a token is created.
+      explicit effect object references: Demon [362] (role/targeting only where the protocol identifies it)
+      token created: Demon (object 362, controller=gian31) 6/6
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect, seq=240] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=343, source_last_explicit_zone=Battlefield)
+      effects: draw, life -2, life +2
+      narrative: Ability of Unholy Annex // Ritual Chamber: draw; Mistik0 loses 2 life; gian31 gains 2 life.
+      explicit effect object references: object 240 [240], Marauding Blight-Priest [364] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 364) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+    net observed life change this turn: Mistik0 -2; gian31 +2 (individual changes below; gains and losses may offset)
+    life: Mistik0 19 -> 17
+    life: gian31 18 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [354] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 222).
+      Swamp [355] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 225).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [287], Plains [302], Scoured Barrens [320], Swamp [329], Swamp [342], Swamp [355], Unholy Annex // Ritual Chamber [343]; Exile: Leech Collector [317], Starscape Cleric [299]; Graveyard: Case of the Uneaten Feast [326], Demon Wall [337], Leech Collector [314]
+      Mistik0: Battlefield: Forsaken Miner [352], Swamp [291], Swamp [310]; Graveyard: Feed the Swarm [327], Intimidation Tactics [300], Intimidation Tactics [318], Shoot the Sheriff [338], Tragic Trajectory [313]
+
+Turn 12
+  - Corpses of the Lost [valid_resolution_no_immediate_mutation, seq=250] (active=Mistik0, phase=Phase_Main1, controller=Mistik0, owner=Mistik0, source_object=367)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Corpses of the Lost resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Corpses of the Lost (object 367) Hand (Mistik0) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Corpses of the Lost (object 367) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Corpses of the Lost [observed_semantic_effect, seq=252] (active=Mistik0, phase=Phase_Main1, controller=Mistik0, owner=Mistik0, source_object=367, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Corpses of the Lost: a token is created.
+      explicit effect object references: Skeleton Pirate [372] (role/targeting only where the protocol identifies it)
+      token created: Skeleton Pirate (object 372, controller=Mistik0) 3/2
+  Combat snapshots observed (active=Mistik0; frames: DeclareAttack -> CombatDamage):
+      attackers: Forsaken Miner [352] (unblocked, observed P/T 3/2), Skeleton Pirate [372] (unblocked, observed P/T 3/2)
+      blockers: Demon [362]
+      combat-result zone change: Skeleton Pirate [373] Battlefield -> Graveyard (Mistik0) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -3 (individual changes below; gains and losses may offset)
+    life (mutation observed during combat window; exact source unavailable): gian31 20 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [365] Library (Mistik0) -> Hand (Mistik0) (Draw; GRE sequence 244).
+      Swamp [366] Hand (Mistik0) -> Battlefield (PlayLand; GRE sequence 247).
+      Skeleton Pirate [373] Battlefield -> Graveyard (Mistik0) (SBA_Damage; GRE sequence 264).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [287], Plains [302], Scoured Barrens [320], Swamp [329], Swamp [342], Swamp [355], Unholy Annex // Ritual Chamber [343]; Exile: Leech Collector [317], Starscape Cleric [299]; Graveyard: Case of the Uneaten Feast [326], Demon Wall [337], Leech Collector [314]
+      Mistik0: Battlefield: Corpses of the Lost [367], Forsaken Miner [352], Swamp [291], Swamp [310], Swamp [366]; Graveyard: Feed the Swarm [327], Intimidation Tactics [300], Intimidation Tactics [318], Shoot the Sheriff [338], Tragic Trajectory [313], object 373 [373]
+
+Turn 13
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=282] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=376)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 376) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 376) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=284] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=376, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Starscape Cleric: a token is created.
+      explicit effect object references: Starscape Cleric [383] (role/targeting only where the protocol identifies it)
+      token created: Starscape Cleric (object 383, controller=gian31) 1/1
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect, seq=302] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=343, source_last_explicit_zone=Battlefield)
+      effects: draw, life -2, life +2
+      narrative: Ability of Unholy Annex // Ritual Chamber: draw; Mistik0 loses 2 life; gian31 gains 2 life.
+      explicit effect object references: object 242 [242], Shattered Sanctum [385] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shattered Sanctum (object 385) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=305] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=383)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Mistik0 loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=307] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=376, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Mistik0 loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Demon [362] (unblocked, observed P/T 6/6)
+      blockers: none identified
+      combat-correlated defending-player life loss: 6; observed attacker power total: 6; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Mistik0 -10; gian31 +2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 6 + observed modifiers 0 = 6; individual assignment unavailable): Mistik0 17 -> 11
+    life: Mistik0 11 -> 9
+    life: gian31 17 -> 19
+    life: Mistik0 9 -> 8
+    life: Mistik0 8 -> 7
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [374] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 274).
+      Swamp [375] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 277).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [287], Plains [302], Scoured Barrens [320], Starscape Cleric [376], Swamp [329], Swamp [342], Swamp [355], Swamp [375], Unholy Annex // Ritual Chamber [343]; Exile: Leech Collector [317], Starscape Cleric [299]; Graveyard: Case of the Uneaten Feast [326], Demon Wall [337], Leech Collector [314]
+      Mistik0: Battlefield: Corpses of the Lost [367], Forsaken Miner [352], Swamp [291], Swamp [310], Swamp [366]; Graveyard: Feed the Swarm [327], Intimidation Tactics [300], Intimidation Tactics [318], Shoot the Sheriff [338], Tragic Trajectory [313], object 373 [373]
+
+Turn 14
+  - Barkform Harvester [valid_resolution_no_immediate_mutation, seq=317] (active=Mistik0, phase=Phase_Main1, controller=Mistik0, owner=Mistik0, source_object=390)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Barkform Harvester resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Barkform Harvester (object 390) Hand (Mistik0) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Barkform Harvester (object 390) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=Mistik0; frames: DeclareAttack -> DeclareBlock):
+      attackers: Forsaken Miner [352] (unblocked, observed P/T 3/2), Barkform Harvester [390] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 6; observed attacker power total: 6; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -6 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 6 + observed modifiers 0 = 6; individual assignment unavailable): gian31 19 -> 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [388] Library (Mistik0) -> Hand (Mistik0) (Draw; GRE sequence 311).
+      Swamp [389] Hand (Mistik0) -> Battlefield (PlayLand; GRE sequence 314).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [287], Plains [302], Scoured Barrens [320], Starscape Cleric [376], Swamp [329], Swamp [342], Swamp [355], Swamp [375], Unholy Annex // Ritual Chamber [343]; Exile: Leech Collector [317], Starscape Cleric [299]; Graveyard: Case of the Uneaten Feast [326], Demon Wall [337], Leech Collector [314]
+      Mistik0: Battlefield: Barkform Harvester [390], Corpses of the Lost [367], Forsaken Miner [352], Swamp [291], Swamp [310], Swamp [366], Swamp [389]; Graveyard: Feed the Swarm [327], Intimidation Tactics [300], Intimidation Tactics [318], Shoot the Sheriff [338], Tragic Trajectory [313], object 373 [373]
+
+Turn 15
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=343] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=396)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 396) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 396) Stack -> Battlefield (Resolve; shared object ID)
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=346] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=398)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 398) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 398) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=348] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=396, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=351] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=398, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Mistik0 loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=353] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=383)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Mistik0 loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=355] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=376, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Mistik0 loses 1 life.
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect, seq=368] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=343, source_last_explicit_zone=Battlefield)
+      effects: draw, life -2, life +2
+      narrative: Ability of Unholy Annex // Ritual Chamber: draw; Mistik0 loses 2 life; gian31 gains 2 life.
+      explicit effect object references: object 244 [244], Swamp [407] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Swamp (object 407) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=371] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=398, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Mistik0 loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=373] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=383)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Mistik0 loses 1 life.
+    net observed life change this turn: Mistik0 -6; gian31 +3 (individual changes below; gains and losses may offset)
+    life: gian31 13 -> 14
+    life: Mistik0 7 -> 6
+    life: Mistik0 6 -> 5
+    life: Mistik0 5 -> 4
+    life: Mistik0 4 -> 2
+    life: gian31 14 -> 16
+    life: Mistik0 2 -> 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [394] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 337).
+      Shattered Sanctum [395] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 340).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [396], Godless Shrine [287], Marauding Blight-Priest [398], Plains [302], Scoured Barrens [320], Shattered Sanctum [395], Starscape Cleric [376], Swamp [329], Swamp [342], Swamp [355], Swamp [375], Unholy Annex // Ritual Chamber [343]; Exile: Leech Collector [317], Starscape Cleric [299]; Graveyard: Case of the Uneaten Feast [326], Demon Wall [337], Leech Collector [314]
+      Mistik0: Battlefield: Barkform Harvester [390], Corpses of the Lost [367], Forsaken Miner [352], Swamp [291], Swamp [310], Swamp [366], Swamp [389]; Graveyard: Feed the Swarm [327], Intimidation Tactics [300], Intimidation Tactics [318], Shoot the Sheriff [338], Tragic Trajectory [313], object 373 [373]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+- Turn 1, seq 8: gian31 20 -> 18. No source event correlated in captured records.
+- Turn 12, seq 264, Phase_Main1: gian31 20 -> 17. Combat declaration observed; exact assignment unavailable. Previous captured action: Corpses of the Lost.
+- Turn 13, seq 294, Phase_Main1: Mistik0 17 -> 11. Combat declaration observed; exact assignment unavailable. Previous captured action: Starscape Cleric.
+- Turn 14, seq 327, Phase_Main1: gian31 19 -> 13. Combat declaration observed; exact assignment unavailable. Previous captured action: Barkform Harvester.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 3 token creations observed; 2 active as last observed; 1 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Demon [362] controller=gian31; created Turn 11 (6/6); active as last observed at Turn 15, object 362 (latest observed P/T 6/6; current zone unconfirmed).
+- Skeleton Pirate [372] controller=Mistik0; created Turn 12 (3/2); left battlefield Turn 12 via Battlefield -> Graveyard (Mistik0) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Starscape Cleric [383] controller=gian31; created Turn 13 (1/1); active as last observed at Turn 15, object 383 (latest observed P/T 1/1; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 8: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 1, seq 9: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 1, seq 11: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 25: Barkform Harvester [owner/controller metadata unavailable] moves Library (Mistik0) -> Hand (Mistik0) (Draw).
+- Turn 2, seq 28: Swamp [owner=Mistik0, controller=Mistik0] moves Hand (Mistik0) -> Battlefield (PlayLand).
+- Turn 2, seq 29: Intimidation Tactics [owner=Mistik0, controller=Mistik0] moves Hand (Mistik0) -> Stack (CastSpell).
+- Turn 2, seq 34: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Exile (Exile).
+- Turn 2, seq 34: Intimidation Tactics [owner=Mistik0, controller=Mistik0] moves Stack -> Graveyard (Mistik0) (Resolve).
+- Turn 3, seq 48: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 51: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 52: Leech Collector [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 54: Leech Collector [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 72: Intimidation Tactics [owner/controller metadata unavailable] moves Library (Mistik0) -> Hand (Mistik0) (Draw).
+- Turn 4, seq 75: Swamp [owner=Mistik0, controller=Mistik0] moves Hand (Mistik0) -> Battlefield (PlayLand).
+- Turn 4, seq 76: Tragic Trajectory [owner=Mistik0, controller=Mistik0] moves Hand (Mistik0) -> Stack (CastSpell).
+- Turn 4, seq 80: Tragic Trajectory [owner=Mistik0, controller=Mistik0] moves Stack -> Graveyard (Mistik0) (Resolve).
+- Turn 4, seq 80: Leech Collector [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_ZeroToughness).
+- Turn 4, seq 81: Intimidation Tactics [owner=Mistik0, controller=Mistik0] moves Hand (Mistik0) -> Stack (CastSpell).
+- Turn 4, seq 86: Leech Collector [owner=gian31, controller=gian31] moves Hand (gian31) -> Exile (Exile).
+- Turn 4, seq 86: Intimidation Tactics [owner=Mistik0, controller=Mistik0] moves Stack -> Graveyard (Mistik0) (Resolve).
+- Turn 5, seq 100: Scoured Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 103: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 119: Shoot the Sheriff [owner/controller metadata unavailable] moves Library (Mistik0) -> Hand (Mistik0) (Draw).
+- Turn 6, seq 122: Feed the Swarm [owner=Mistik0, controller=Mistik0] moves Hand (Mistik0) -> Stack (CastSpell).
+- Turn 6, seq 126: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 6, seq 126: Feed the Swarm [owner=Mistik0, controller=Mistik0] moves Stack -> Graveyard (Mistik0) (Resolve).
+- Turn 7, seq 140: Demon Wall [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 143: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 144: Demon Wall [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 146: Demon Wall [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 160: Corpses of the Lost [owner/controller metadata unavailable] moves Library (Mistik0) -> Hand (Mistik0) (Draw).
+- Turn 8, seq 163: Shoot the Sheriff [owner=Mistik0, controller=Mistik0] moves Hand (Mistik0) -> Stack (CastSpell).
+- Turn 8, seq 167: Demon Wall [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 8, seq 167: Shoot the Sheriff [owner=Mistik0, controller=Mistik0] moves Stack -> Graveyard (Mistik0) (Resolve).
+- Turn 9, seq 181: Unholy Annex // Ritual Chamber [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 184: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 185: Unholy Annex // Ritual Chamber [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 187: Unholy Annex // Ritual Chamber [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 199: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 203: Forsaken Miner [owner/controller metadata unavailable] moves Library (Mistik0) -> Hand (Mistik0) (Draw).
+- Turn 10, seq 206: Forsaken Miner [owner=Mistik0, controller=Mistik0] moves Hand (Mistik0) -> Stack (CastSpell).
+- Turn 10, seq 208: Forsaken Miner [owner=Mistik0, controller=Mistik0] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 222: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 225: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 11, seq 240: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 244: Swamp [owner/controller metadata unavailable] moves Library (Mistik0) -> Hand (Mistik0) (Draw).
+- Turn 12, seq 247: Swamp [owner=Mistik0, controller=Mistik0] moves Hand (Mistik0) -> Battlefield (PlayLand).
+- Turn 12, seq 248: Corpses of the Lost [owner=Mistik0, controller=Mistik0] moves Hand (Mistik0) -> Stack (CastSpell).
+- Turn 12, seq 250: Corpses of the Lost [owner=Mistik0, controller=Mistik0] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 264: Skeleton Pirate [owner/controller metadata unavailable] moves Battlefield -> Graveyard (Mistik0) (SBA_Damage).
+- Turn 13, seq 274: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 277: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 13, seq 278: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 13, seq 282: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 302: Shattered Sanctum [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 311: Swamp [owner/controller metadata unavailable] moves Library (Mistik0) -> Hand (Mistik0) (Draw).
+- Turn 14, seq 314: Swamp [owner=Mistik0, controller=Mistik0] moves Hand (Mistik0) -> Battlefield (PlayLand).
+- Turn 14, seq 315: Barkform Harvester [owner=Mistik0, controller=Mistik0] moves Hand (Mistik0) -> Stack (CastSpell).
+- Turn 14, seq 317: Barkform Harvester [owner=Mistik0, controller=Mistik0] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 337: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 15, seq 340: Shattered Sanctum [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 15, seq 341: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 15, seq 343: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 344: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 15, seq 346: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 368: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 8: object 227 becomes object 287 [Godless Shrine].
+- Turn 1, seq 9: object 229 becomes object 288 [Case of the Uneaten Feast].
+- Turn 2, seq 25: object 174 becomes object 290 [Barkform Harvester].
+- Turn 2, seq 28: object 168 becomes object 291 [Swamp].
+- Turn 2, seq 29: object 169 becomes object 292 [Intimidation Tactics].
+- Turn 2, seq 34: object 233 becomes object 299 [Starscape Cleric].
+- Turn 2, seq 34: object 292 becomes object 300 [Intimidation Tactics].
+- Turn 3, seq 48: object 234 becomes object 301 [Plains].
+- Turn 3, seq 51: object 301 becomes object 302 [Plains].
+- Turn 3, seq 52: object 230 becomes object 303 [Leech Collector].
+- Turn 4, seq 72: object 175 becomes object 309 [Intimidation Tactics].
+- Turn 4, seq 75: object 171 becomes object 310 [Swamp].
+- Turn 4, seq 76: object 170 becomes object 311 [Tragic Trajectory].
+- Turn 4, seq 80: object 311 becomes object 313 [Tragic Trajectory].
+- Turn 4, seq 80: object 303 becomes object 314 [Leech Collector].
+- Turn 4, seq 81: object 309 becomes object 315 [Intimidation Tactics].
+- Turn 4, seq 86: object 232 becomes object 317 [Leech Collector].
+- Turn 4, seq 86: object 315 becomes object 318 [Intimidation Tactics].
+- Turn 5, seq 100: object 235 becomes object 319 [Scoured Barrens].
+- Turn 5, seq 103: object 319 becomes object 320 [Scoured Barrens].
+- Turn 6, seq 119: object 176 becomes object 322 [Shoot the Sheriff].
+- Turn 6, seq 122: object 167 becomes object 323 [Feed the Swarm].
+- Turn 6, seq 126: object 288 becomes object 326 [Case of the Uneaten Feast].
+- Turn 6, seq 126: object 323 becomes object 327 [Feed the Swarm].
+- Turn 7, seq 140: object 236 becomes object 328 [Demon Wall].
+- Turn 7, seq 143: object 228 becomes object 329 [Swamp].
+- Turn 7, seq 144: object 328 becomes object 330 [Demon Wall].
+- Turn 8, seq 160: object 177 becomes object 333 [Corpses of the Lost].
+- Turn 8, seq 163: object 322 becomes object 334 [Shoot the Sheriff].
+- Turn 8, seq 167: object 330 becomes object 337 [Demon Wall].
+- Turn 8, seq 167: object 334 becomes object 338 [Shoot the Sheriff].
+- Turn 9, seq 181: object 237 becomes object 339 [Unholy Annex // Ritual Chamber].
+- Turn 9, seq 184: object 231 becomes object 342 [Swamp].
+- Turn 9, seq 185: object 339 becomes object 343 [Unholy Annex // Ritual Chamber].
+- Turn 9, seq 199: object 238 becomes object 350 [Swamp].
+- Turn 10, seq 203: object 178 becomes object 351 [Forsaken Miner].
+- Turn 10, seq 206: object 351 becomes object 352 [Forsaken Miner].
+- Turn 11, seq 222: object 239 becomes object 354 [Starscape Cleric].
+- Turn 11, seq 225: object 350 becomes object 355 [Swamp].
+- Turn 11, seq 240: object 240 becomes object 364 [Marauding Blight-Priest].
+- Turn 12, seq 244: object 179 becomes object 365 [Swamp].
+- Turn 12, seq 247: object 365 becomes object 366 [Swamp].
+- Turn 12, seq 248: object 333 becomes object 367 [Corpses of the Lost].
+- Turn 12, seq 264: object 372 becomes object 373 [Skeleton Pirate].
+- Turn 13, seq 274: object 241 becomes object 374 [Swamp].
+- Turn 13, seq 277: object 374 becomes object 375 [Swamp].
+- Turn 13, seq 278: object 354 becomes object 376 [Starscape Cleric].
+- Turn 13, seq 302: object 242 becomes object 385 [Shattered Sanctum].
+- Turn 14, seq 311: object 180 becomes object 388 [Swamp].
+- Turn 14, seq 314: object 388 becomes object 389 [Swamp].
+- Turn 14, seq 315: object 290 becomes object 390 [Barkform Harvester].
+- Turn 15, seq 337: object 243 becomes object 394 [Case of the Uneaten Feast].
+- Turn 15, seq 340: object 385 becomes object 395 [Shattered Sanctum].
+- Turn 15, seq 341: object 394 becomes object 396 [Case of the Uneaten Feast].
+- Turn 15, seq 344: object 364 becomes object 398 [Marauding Blight-Priest].
+- Turn 15, seq 368: object 244 becomes object 407 [Swamp].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Godless Shrine (object 287) from Hand (gian31) to Battlefield.
+- Turn 2: Mistik0 plays Swamp (object 291) from Hand (Mistik0) to Battlefield.
+- Turn 3: gian31 plays Plains (object 302) from Hand (gian31) to Battlefield.
+- Turn 4: Mistik0 plays Swamp (object 310) from Hand (Mistik0) to Battlefield.
+- Turn 5: gian31 plays Scoured Barrens (object 320) from Hand (gian31) to Battlefield.
+- Turn 7: gian31 plays Swamp (object 329) from Hand (gian31) to Battlefield.
+- Turn 9: gian31 plays Swamp (object 342) from Hand (gian31) to Battlefield.
+- Turn 11: gian31 plays Swamp (object 355) from Hand (gian31) to Battlefield.
+- Turn 12: Mistik0 plays Swamp (object 366) from Hand (Mistik0) to Battlefield.
+- Turn 13: gian31 plays Swamp (object 375) from Hand (gian31) to Battlefield.
+- Turn 14: Mistik0 plays Swamp (object 389) from Hand (Mistik0) to Battlefield.
+- Turn 15: gian31 plays Shattered Sanctum (object 395) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- Turn 15: Marauding Blight-Priest -> Starscape Cleric; observed repeated transitions=2; net life: Mistik0 -4.
+  Same-turn ability records (including records outside the summarized chain): Marauding Blight-Priest=2, Starscape Cleric=3.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED TRIGGER CYCLES
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Starscape Cleric: casts=1; abilities=6 (triggered=6, activated=0) across turns [13, 13, 13, 13, 15, 15, 15]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=5, other=0
+  observed effects: life -1, token creation
+- Unholy Annex // Ritual Chamber: casts=1; abilities=5 (triggered=5, activated=0) across turns [9, 9, 11, 11, 13, 15]
+  observed effect totals: draws=4, tokens=1, counters=0, returns=0, damage=0, life_changes=7, other=2
+  observed effects: draw, life +2, life -2, synthetic event, token creation
+- Case of the Uneaten Feast: casts=2; abilities=2 (triggered=2, activated=0) across turns [1, 3, 15, 15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Marauding Blight-Priest: casts=1; abilities=2 (triggered=2, activated=0) across turns [15, 15, 15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=1
+  observed effects: life -1, synthetic event
+- Corpses of the Lost: casts=1; abilities=1 (triggered=1, activated=0) across turns [12, 12]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Leech Collector: casts=1; abilities=1 (triggered=1, activated=0) across turns [3, 3]
+- Barkform Harvester: casts=1 across turns [14]
+- Demon Wall: casts=1 across turns [7]
+- Feed the Swarm: casts=1 across turns [6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=2
+  observed effects: destroy, life -1, synthetic event
+- Forsaken Miner: casts=1 across turns [10]
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [5]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Shoot the Sheriff: casts=1 across turns [8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Tragic Trajectory: casts=1 across turns [4]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: P/T -2/-2
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 12 - DeclareAttack, CombatDamage (active=Mistik0)
+  attacker: Forsaken Miner (Mistik0) -> gian31; unblocked in this observed snapshot
+  attacker: Skeleton Pirate (Mistik0) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Demon (gian31) -> Mistik0; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 14 - DeclareAttack, DeclareBlock (active=Mistik0)
+  attacker: Forsaken Miner (Mistik0) -> gian31; unblocked in this observed snapshot
+  attacker: Barkform Harvester (Mistik0) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX â€” OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 227: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 228: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 229: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 230: Leech Collector | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 231: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 232: Leech Collector | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 233: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 287: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 288: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 291: Swamp | controller=Mistik0 | owner=Mistik0 | zone=Battlefield (latest_object_observation)
+- 292: Intimidation Tactics | controller=Mistik0 | owner=Mistik0 | zone=Stack (latest_object_observation)
+- 294: Leech Collector | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 295: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 296: Leech Collector | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 297: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 298: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 299: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 300: Intimidation Tactics | controller=Mistik0 | owner=Mistik0 | zone=unknown (inferred unknown) (latest_object_observation)
+- 301: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 302: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 303: Leech Collector | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 306: object 306 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 307: object 307 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 308: Bloodletting | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 310: Swamp | controller=Mistik0 | owner=Mistik0 | zone=Battlefield (latest_object_observation)
+- 311: Tragic Trajectory | controller=Mistik0 | owner=Mistik0 | zone=Stack (latest_object_observation)
+- 313: Tragic Trajectory | controller=Mistik0 | owner=Mistik0 | zone=unknown (inferred unknown) (latest_object_observation)
+- 314: Leech Collector | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 315: Intimidation Tactics | controller=Mistik0 | owner=Mistik0 | zone=Stack (latest_object_observation)
+- 317: Leech Collector | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 318: Intimidation Tactics | controller=Mistik0 | owner=Mistik0 | zone=unknown (inferred unknown) (latest_object_observation)
+- 319: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 320: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 321: object 321 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 323: Feed the Swarm | controller=Mistik0 | owner=Mistik0 | zone=Stack (latest_object_observation)
+- 326: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 327: Feed the Swarm | controller=Mistik0 | owner=Mistik0 | zone=unknown (inferred unknown) (latest_object_observation)
+- 328: Demon Wall | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 329: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 330: Demon Wall | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 334: Shoot the Sheriff | controller=Mistik0 | owner=Mistik0 | zone=Stack (latest_object_observation)
+- 337: Demon Wall | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 338: Shoot the Sheriff | controller=Mistik0 | owner=Mistik0 | zone=unknown (inferred unknown) (latest_object_observation)
+- 339: Unholy Annex // Ritual Chamber | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 340: Unholy Annex | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 341: Ritual Chamber | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 342: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 343: Unholy Annex // Ritual Chamber | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 344: Unholy Annex | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 345: Ritual Chamber | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 349: object 349 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 350: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 352: Forsaken Miner | controller=Mistik0 | owner=Mistik0 | zone=Battlefield (latest_object_observation)
+- 354: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 355: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 361: object 361 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 362: Demon | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 363: object 363 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 364: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 366: Swamp | controller=Mistik0 | owner=Mistik0 | zone=Battlefield (latest_object_observation)
+- 367: Corpses of the Lost | controller=Mistik0 | owner=Mistik0 | zone=Stack (latest_object_observation)
+- 371: object 371 | controller=Mistik0 | owner=Mistik0 | zone=unknown (inferred unknown) (latest_object_observation)
+- 372: Skeleton Pirate | controller=Mistik0 | owner=Mistik0 | zone=Hand (latest_object_observation)
+- 374: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 375: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 376: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 382: object 382 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 383: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 384: object 384 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 385: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 386: object 386 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 387: object 387 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 389: Swamp | controller=Mistik0 | owner=Mistik0 | zone=Battlefield (latest_object_observation)
+- 390: Barkform Harvester | controller=Mistik0 | owner=Mistik0 | zone=Battlefield (latest_object_observation)
+- 394: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 395: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 396: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 398: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 402: object 402 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 403: object 403 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 404: object 404 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 405: object 405 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 406: object 406 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 407: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 408: object 408 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 409: object 409 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 410: object 410 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX â€” CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Mistik0: 19 total items
+  zones: Battlefield=6, Hand=1, Stack=6, unknown=6
+  objects: Intimidation Tactics x4, Swamp x4, Feed the Swarm x2, Shoot the Sheriff x2, Tragic Trajectory x2, Barkform Harvester, Corpses of the Lost, Forsaken Miner, Skeleton Pirate, object 371
+gian31: 68 total items
+  zones: Battlefield=15, Exile=3, Graveyard=3, Hand=25, Stack=4, unknown=18
+  objects: Swamp x11, Leech Collector x7, Starscape Cleric x6, Case of the Uneaten Feast x5, Demon Wall x3, Godless Shrine x2, Marauding Blight-Priest x2, Plains x2, Ritual Chamber x2, Scoured Barrens x2, Shattered Sanctum x2, Unholy Annex x2
+
+TECHNICAL APPENDIX â€” LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+Mistik0:
+  Battlefield (6): Barkform Harvester, Forsaken Miner, Swamp, Swamp, Swamp, Swamp
+  Graveyard: 0 card(s)
+gian31:
+  Battlefield (15): Demon, Demon Wall, Godless Shrine, Marauding Blight-Priest, Plains, Ritual Chamber, Scoured Barrens, Shattered Sanctum, Starscape Cleric, Starscape Cleric, Swamp, Swamp, Swamp, Swamp, Unholy Annex
+  Graveyard: 3 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+24 objects have no resolved final zone and are omitted from the known board state.
+Mistik0: 6 unknown object(s)
+gian31: 18 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=26, Stack=10
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Mistik0:
+  Battlefield (7): Swamp, Swamp, Forsaken Miner, Swamp, Corpses of the Lost, Swamp, Barkform Harvester
+  Graveyard (5): Intimidation Tactics, Tragic Trajectory, Intimidation Tactics, Feed the Swarm, Shoot the Sheriff
+gian31:
+  Battlefield (16): Godless Shrine, Plains, Scoured Barrens, Swamp, Swamp, Unholy Annex // Ritual Chamber, Unholy Annex, Ritual Chamber, Swamp, Demon, Swamp, Starscape Cleric, Starscape Cleric, Shattered Sanctum, Case of the Uneaten Feast, Marauding Blight-Priest
+  Graveyard (3): Leech Collector, Case of the Uneaten Feast, Demon Wall
+  Exile (2): Starscape Cleric, Leech Collector
+Known non-persistent entries (counts only):
+  gian31: Hand=1, Limbo=5, Pending=1
+  unknown: Hand=2, Library=88, Limbo=7
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=2
+- Turn 2: Mistik0 Battlefield=1; Mistik0 Graveyard=1; gian31 Battlefield=2; gian31 Exile=1
+- Turn 3: Mistik0 Battlefield=1; Mistik0 Graveyard=1; gian31 Battlefield=4; gian31 Exile=1
+- Turn 4: Mistik0 Battlefield=2; Mistik0 Graveyard=3; gian31 Battlefield=3; gian31 Graveyard=1; gian31 Exile=2
+- Turn 5: Mistik0 Battlefield=2; Mistik0 Graveyard=3; gian31 Battlefield=4; gian31 Graveyard=1; gian31 Exile=2
+- Turn 6: Mistik0 Battlefield=2; Mistik0 Graveyard=4; gian31 Battlefield=3; gian31 Graveyard=2; gian31 Exile=2
+- Turn 7: Mistik0 Battlefield=2; Mistik0 Graveyard=4; gian31 Battlefield=5; gian31 Graveyard=2; gian31 Exile=2
+- Turn 8: Mistik0 Battlefield=2; Mistik0 Graveyard=5; gian31 Battlefield=4; gian31 Graveyard=3; gian31 Exile=2
+- Turn 9: Mistik0 Battlefield=2; Mistik0 Graveyard=5; gian31 Battlefield=6; gian31 Graveyard=3; gian31 Exile=2
+- Turn 10: Mistik0 Battlefield=3; Mistik0 Graveyard=5; gian31 Battlefield=6; gian31 Graveyard=3; gian31 Exile=2
+- Turn 11: Mistik0 Battlefield=3; Mistik0 Graveyard=5; gian31 Battlefield=7; gian31 Graveyard=3; gian31 Exile=2
+- Turn 12: Mistik0 Battlefield=5; Mistik0 Graveyard=6; gian31 Battlefield=7; gian31 Graveyard=3; gian31 Exile=2
+- Turn 13: Mistik0 Battlefield=5; Mistik0 Graveyard=6; gian31 Battlefield=9; gian31 Graveyard=3; gian31 Exile=2
+- Turn 14: Mistik0 Battlefield=7; Mistik0 Graveyard=6; gian31 Battlefield=9; gian31 Graveyard=3; gian31 Exile=2
+- Turn 15: Mistik0 Battlefield=7; Mistik0 Graveyard=6; gian31 Battlefield=12; gian31 Graveyard=3; gian31 Exile=2
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Leech Collector resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Demon Wall resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Unholy Annex // Ritual Chamber resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Forsaken Miner resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Corpses of the Lost resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Barkform Harvester resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
