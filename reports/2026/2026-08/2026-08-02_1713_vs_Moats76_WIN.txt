@@ -1,0 +1,742 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Moats76
+Seat map: Seat 1=gian31, Seat 2=Moats76
+Turn range (known): 1 - 15
+Records: 42
+Action chains: 28
+Winner: gian31
+Final life: {'gian31': 22, 'Moats76': 2}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 15 (Phase_Main1; Bloodletting, seq 391).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 30 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 11 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 6, 8, 9, 10, 11, 12, 14] (raw records=11; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 16 explicit Library -> Hand movement(s); named in the draw record=7, resolved through an explicit identity transition=8, unresolved=1.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 22, 'Moats76': 2}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 15 (Phase_Main1; Bloodletting, seq 391).
+Last captured life snapshot: Moats76 3 -> 2 (seq 371).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shattered Sanctum [292] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Shattered Sanctum [292]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      The Mind Stone [293] Library (Moats76) -> Hand (Moats76) (Draw; GRE sequence 21).
+      Gleaming Bastion [294] Hand (Moats76) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Shattered Sanctum [292]
+      Moats76: Battlefield: Gleaming Bastion [294]
+
+Turn 3
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=44] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=297)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 297) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 297) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [295] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 38).
+      Swamp [296] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 41).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [297], Shattered Sanctum [292], Swamp [296]
+      Moats76: Battlefield: Gleaming Bastion [294]
+
+Turn 4
+  - The Mind Stone [valid_resolution_no_immediate_mutation, seq=64] (active=Moats76, phase=Phase_Main1, controller=Moats76, owner=Moats76, source_object=302)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: The Mind Stone resolves with no immediate observed mutation.
+      protocol-linked zone transfer: The Mind Stone (object 302) Hand (Moats76) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: The Mind Stone (object 302) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Black Panther, Hope Enduring [299] Library (Moats76) -> Hand (Moats76) (Draw; GRE sequence 58).
+      Plains [301] Hand (Moats76) -> Battlefield (PlayLand; GRE sequence 61).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [297], Shattered Sanctum [292], Swamp [296]
+      Moats76: Battlefield: Gleaming Bastion [294], Plains [301], The Mind Stone [302]
+
+Turn 5
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=83] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=306)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 306) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 306) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [305] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 78).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [297], Case of the Uneaten Feast [306], Shattered Sanctum [292], Swamp [296]
+      Moats76: Battlefield: Gleaming Bastion [294], Plains [301], The Mind Stone [302]
+
+Turn 6
+  - Black Panther, Hope Enduring [valid_resolution_no_immediate_mutation, seq=103] (active=Moats76, phase=Phase_Main1, controller=Moats76, owner=Moats76, source_object=310)
+      runtime-name note: object 310 is observed as Black Panther, Hope Enduring, King T'Challa in captured records; the name relationship is not explicitly identified.
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Black Panther, Hope Enduring resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Black Panther, Hope Enduring (object 310) Hand (Moats76) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Black Panther, Hope Enduring (object 310) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=105] (active=Moats76, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=297, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [308] Library (Moats76) -> Hand (Moats76) (Draw; GRE sequence 97).
+      Island [309] Hand (Moats76) -> Battlefield (PlayLand; GRE sequence 100).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [297], Case of the Uneaten Feast [306], Shattered Sanctum [292], Swamp [296]
+      Moats76: Battlefield: Black Panther, Hope Enduring [310], Gleaming Bastion [294], Island [309], Plains [301], The Mind Stone [302]
+
+Turn 7
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=125] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=317)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 317) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 317) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=127] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=306, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=129] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=317, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Moats76 loses 1 life.
+    net observed life change this turn: Moats76 -1; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    life: Moats76 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Enduring Tenacity [316] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 119).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [297], Case of the Uneaten Feast [306], Shattered Sanctum [292], Starscape Cleric [317], Swamp [296]
+      Moats76: Battlefield: Black Panther, Hope Enduring [310], Gleaming Bastion [294], Island [309], Plains [301], The Mind Stone [302]
+
+Turn 8
+  - Spider-Byte, Web Warden [valid_resolution_no_immediate_mutation, seq=149] (active=Moats76, phase=Phase_Main1, controller=Moats76, owner=Moats76, source_object=324)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Spider-Byte, Web Warden resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Spider-Byte, Web Warden (object 324) Hand (Moats76) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Spider-Byte, Web Warden (object 324) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=153] (active=Moats76, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=297, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=155] (active=Moats76, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=317, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Moats76 loses 1 life.
+  - Ability of Spider-Byte, Web Warden [observed_semantic_effect, seq=157] (active=Moats76, phase=Phase_Main1, controller=Moats76, owner=Moats76, source_object=324, source_last_explicit_zone=Battlefield)
+      effects: return to battlefield
+      narrative: Ability of Spider-Byte, Web Warden: a card/permanent returns.
+      explicit effect object references: Case of the Uneaten Feast [306], Case of the Uneaten Feast [331] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 331) Battlefield -> Hand (gian31) (Return; shared object ID)
+  Combat snapshots observed (active=Moats76; frames: DeclareAttack -> DeclareBlock):
+      attackers: King T'Challa [310] (unblocked, observed P/T 3/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Moats76 -1; gian31 -2 (individual changes below; gains and losses may offset)
+    life: gian31 22 -> 23
+    life: Moats76 19 -> 18
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 23 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Spider-Byte, Web Warden [322] Library (Moats76) -> Hand (Moats76) (Draw; GRE sequence 143).
+      Plains [323] Hand (Moats76) -> Battlefield (PlayLand; GRE sequence 146).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [297], Shattered Sanctum [292], Starscape Cleric [317], Swamp [296]
+      Moats76: Battlefield: Black Panther, Hope Enduring [310], Gleaming Bastion [294], Island [309], Plains [301], Plains [323], Spider-Byte, Web Warden [324], The Mind Stone [302]
+
+Turn 9
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=183] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=335)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 335) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 335) Stack -> Battlefield (Resolve; shared object ID)
+  - Leech Collector [valid_resolution_no_immediate_mutation, seq=186] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=337)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Leech Collector resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Leech Collector (object 337) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leech Collector (object 337) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=188] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=191] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=317, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Moats76 loses 1 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=193] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=337, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [317] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Moats76 -3; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life: Moats76 18 -> 17
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Moats76 17 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [333] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 177).
+      Swamp [334] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 180).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [297], Case of the Uneaten Feast [335], Leech Collector [337], Shattered Sanctum [292], Starscape Cleric [317], Swamp [296], Swamp [334]
+      Moats76: Battlefield: Black Panther, Hope Enduring [310], Gleaming Bastion [294], Island [309], Plains [301], Plains [323], Spider-Byte, Web Warden [324], The Mind Stone [302]
+
+Turn 10
+  - Ability of King T'Challa [valid_resolution_no_immediate_mutation, seq=219] (active=Moats76, phase=Phase_Main1, controller=Moats76, owner=Moats76, source_object=310, source_last_explicit_zone=Battlefield)
+      runtime-name note: object 310 is observed as Black Panther, Hope Enduring, King T'Challa in captured records; the name relationship is not explicitly identified.
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of King T'Challa resolves with no immediate observed mutation.
+  - Ability of Black Panther, Hope Enduring [observed_semantic_effect, seq=232] (active=Moats76, phase=Phase_Combat, step=Step_FirstStrikeDamage, controller=Moats76, owner=Moats76, source_object=310, source_last_explicit_zone=Battlefield)
+      runtime-name note: object 310 is observed as Black Panther, Hope Enduring, King T'Challa in captured records; the name relationship is not explicitly identified.
+      effects: draw
+      narrative: Ability of Black Panther, Hope Enduring: draw.
+      explicit effect object references: object 243 [243], object 354 [354] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Island (object 354) Library (Moats76) -> Hand (Moats76) (Draw; shared object ID)
+  - Ability of Black Panther, Hope Enduring [observed_semantic_effect, seq=236] (active=Moats76, phase=Phase_Combat, step=Step_CombatDamage, controller=Moats76, owner=Moats76, source_object=310, source_last_explicit_zone=Battlefield)
+      runtime-name note: object 310 is observed as Black Panther, Hope Enduring, King T'Challa in captured records; the name relationship is not explicitly identified.
+      diagnostic: distinct consecutive ability records observed at seq 232 and 236; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: draw
+      narrative: Ability of Black Panther, Hope Enduring: draw.
+      explicit effect object references: object 244 [244], object 356 [356] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Plains (object 356) Library (Moats76) -> Hand (Moats76) (Draw; shared object ID)
+  Combat snapshots observed (active=Moats76; frames: DeclareAttack):
+      attackers: Black Panther, Hope Enduring [310] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 6; observed attacker power total: 3; snapshot comparison does not reconcile (exact assignment unavailable).
+      numerical observation: defending-player life loss is 2x the observed snapshot power; an exact modifying source was not protocol-linked.
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -6 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 21 -> 18
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 18 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Island [344] Library (Moats76) -> Hand (Moats76) (Draw; GRE sequence 213).
+      Island [345] Hand (Moats76) -> Battlefield (PlayLand; GRE sequence 216).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [297], Case of the Uneaten Feast [335], Leech Collector [337], Shattered Sanctum [292], Starscape Cleric [317], Swamp [296], Swamp [334]
+      Moats76: Battlefield: Black Panther, Hope Enduring [310], Gleaming Bastion [294], Island [309], Island [345], Plains [301], Plains [323], Spider-Byte, Web Warden [324], The Mind Stone [302]
+
+Turn 11
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=252] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=359)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 359) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 359) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=256] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=359, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles King T'Challa; gian31 gains 2 life.
+      explicit effect object references: Black Panther, Hope Enduring [310], King T'Challa [364] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: King T'Challa (object 364) Battlefield -> Exile (Exile; shared object ID)
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=259] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=317, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Moats76 loses 1 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=261] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=337, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  - Bloodletting [observed_semantic_effect, seq=264] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=368)
+      effects: life -2
+      narrative: Bloodletting: Moats76 loses 2 life.
+      protocol-linked zone transfer: Bloodletting (object 368) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Bloodletting (object 370) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 368 -> transfer object 370 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [317] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Moats76 -5; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 15 -> 17
+    life: Moats76 15 -> 14
+    life: Moats76 14 -> 12
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Moats76 12 -> 10
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [357] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 246).
+      Swamp [358] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 249).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [297], Case of the Uneaten Feast [335], Leech Collector [337], Makeshift Binding [359], Shattered Sanctum [292], Starscape Cleric [317], Swamp [296], Swamp [334], Swamp [358]; Graveyard: Bloodletting [370]
+      Moats76: Battlefield: Gleaming Bastion [294], Island [309], Island [345], Plains [301], Plains [323], Spider-Byte, Web Warden [324], The Mind Stone [302]; Exile: King T'Challa [364]
+
+Turn 12
+  - Black Panther, Hope Enduring [valid_resolution_no_immediate_mutation, seq=290] (active=Moats76, phase=Phase_Main1, controller=Moats76, owner=Moats76, source_object=373)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Black Panther, Hope Enduring resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Black Panther, Hope Enduring (object 373) Hand (Moats76) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Black Panther, Hope Enduring (object 373) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=292] (active=Moats76, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=297, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=295] (active=Moats76, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=317, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Moats76 loses 1 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=297] (active=Moats76, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=337, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+    net observed life change this turn: Moats76 -1; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 17 -> 18
+    life: Moats76 10 -> 9
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 371 [371] Library (Moats76) -> Hand (Moats76) (Draw; GRE sequence 284).
+      Island [372] Hand (Moats76) -> Battlefield (PlayLand; GRE sequence 287).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [297], Case of the Uneaten Feast [335], Leech Collector [337], Makeshift Binding [359], Shattered Sanctum [292], Starscape Cleric [317], Swamp [296], Swamp [334], Swamp [358]; Graveyard: Bloodletting [370]
+      Moats76: Battlefield: Black Panther, Hope Enduring [373], Gleaming Bastion [294], Island [309], Island [345], Island [372], Plains [301], Plains [323], Spider-Byte, Web Warden [324], The Mind Stone [302]; Exile: King T'Challa [364]
+
+Turn 13
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=317] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=386)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 386) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 386) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=321] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=386, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles King T'Challa; gian31 gains 2 life.
+      explicit effect object references: Black Panther, Hope Enduring [373], King T'Challa [391] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: King T'Challa (object 391) Battlefield -> Exile (Exile; shared object ID)
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=324] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=317, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Moats76 loses 1 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=326] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=337, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  - Bloodletting [observed_semantic_effect, seq=329] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=395)
+      effects: life -2
+      narrative: Bloodletting: Moats76 loses 2 life.
+      protocol-linked zone transfer: Bloodletting (object 395) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Bloodletting (object 397) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 395 -> transfer object 397 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [317] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Moats76 -5; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 20
+    life: Moats76 9 -> 8
+    life: Moats76 8 -> 6
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Moats76 6 -> 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Sinister Monolith [385] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 312).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [297], Case of the Uneaten Feast [335], Leech Collector [337], Makeshift Binding [359], Makeshift Binding [386], Shattered Sanctum [292], Starscape Cleric [317], Swamp [296], Swamp [334], Swamp [358]; Graveyard: Bloodletting [370], Bloodletting [397]
+      Moats76: Battlefield: Gleaming Bastion [294], Island [309], Island [345], Island [372], Plains [301], Plains [323], Spider-Byte, Web Warden [324], The Mind Stone [302]; Exile: King T'Challa [364], King T'Challa [391]
+
+Turn 14
+  - Crystal Barricade [valid_resolution_no_immediate_mutation, seq=357] (active=Moats76, phase=Phase_Main1, controller=Moats76, owner=Moats76, source_object=400)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Crystal Barricade resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Crystal Barricade (object 400) Hand (Moats76) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Crystal Barricade (object 400) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=359] (active=Moats76, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=297, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=362] (active=Moats76, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=317, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Moats76 loses 1 life.
+  - Ability of Leech Collector [valid_resolution_no_immediate_mutation, seq=364] (active=Moats76, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=337, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Leech Collector resolves with no immediate observed mutation.
+  - Kang the Conqueror [valid_resolution_no_immediate_mutation, seq=367] (active=Moats76, phase=Phase_Main1, controller=Moats76, owner=Moats76, source_object=407)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Kang the Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Kang the Conqueror (object 407) Hand (Moats76) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Kang the Conqueror (object 407) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=369] (active=Moats76, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=297, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=371] (active=Moats76, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=317, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Moats76 loses 1 life.
+    net observed life change this turn: Moats76 -2; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life: Moats76 4 -> 3
+    life: gian31 21 -> 22
+    life: Moats76 3 -> 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Crystal Barricade [398] Library (Moats76) -> Hand (Moats76) (Draw; GRE sequence 351).
+      Plains [399] Hand (Moats76) -> Battlefield (PlayLand; GRE sequence 354).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [297], Case of the Uneaten Feast [335], Leech Collector [337], Makeshift Binding [359], Makeshift Binding [386], Shattered Sanctum [292], Starscape Cleric [317], Swamp [296], Swamp [334], Swamp [358]; Graveyard: Bloodletting [370], Bloodletting [397]
+      Moats76: Battlefield: Crystal Barricade [400], Gleaming Bastion [294], Island [309], Island [345], Island [372], Kang the Conqueror [407], Plains [301], Plains [323], Plains [399], Spider-Byte, Web Warden [324], The Mind Stone [302]; Exile: King T'Challa [364], King T'Challa [391]
+
+Turn 15
+  - Bloodletting [observed_semantic_effect, seq=391] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=415)
+      effects: life -2
+      narrative: Bloodletting: Moats76 loses 2 life.
+      protocol-linked zone transfer: Bloodletting (object 415) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Bloodletting (object 417) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 415 -> transfer object 417 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Rot-Curse Rakshasa [414] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 386).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [297], Case of the Uneaten Feast [335], Leech Collector [337], Makeshift Binding [359], Makeshift Binding [386], Shattered Sanctum [292], Starscape Cleric [317], Swamp [296], Swamp [334], Swamp [358]; Graveyard: Bloodletting [370], Bloodletting [397], Bloodletting [417]
+      Moats76: Battlefield: Crystal Barricade [400], Gleaming Bastion [294], Island [309], Island [345], Island [372], Kang the Conqueror [407], Plains [301], Plains [323], Plains [399], Spider-Byte, Web Warden [324], The Mind Stone [302]; Exile: King T'Challa [364], King T'Challa [391]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- No life mutation without an exact same-record source was observed.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Shattered Sanctum [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 21: The Mind Stone [owner/controller metadata unavailable] moves Library (Moats76) -> Hand (Moats76) (Draw).
+- Turn 2, seq 24: Gleaming Bastion [owner=Moats76, controller=Moats76] moves Hand (Moats76) -> Battlefield (PlayLand).
+- Turn 3, seq 38: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 41: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 42: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 44: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 58: Black Panther, Hope Enduring [owner/controller metadata unavailable] moves Library (Moats76) -> Hand (Moats76) (Draw).
+- Turn 4, seq 61: Plains [owner=Moats76, controller=Moats76] moves Hand (Moats76) -> Battlefield (PlayLand).
+- Turn 4, seq 62: The Mind Stone [owner=Moats76, controller=Moats76] moves Hand (Moats76) -> Stack (CastSpell).
+- Turn 4, seq 64: The Mind Stone [owner=Moats76, controller=Moats76] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 78: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 81: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 83: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 97: Plains [owner/controller metadata unavailable] moves Library (Moats76) -> Hand (Moats76) (Draw).
+- Turn 6, seq 100: Island [owner=Moats76, controller=Moats76] moves Hand (Moats76) -> Battlefield (PlayLand).
+- Turn 6, seq 101: Black Panther, Hope Enduring [owner=Moats76, controller=Moats76] moves Hand (Moats76) -> Stack (CastSpell).
+- Turn 6, seq 103: Black Panther, Hope Enduring [owner=Moats76, controller=Moats76] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 119: Enduring Tenacity [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 122: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 125: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 143: Spider-Byte, Web Warden [owner/controller metadata unavailable] moves Library (Moats76) -> Hand (Moats76) (Draw).
+- Turn 8, seq 146: Plains [owner=Moats76, controller=Moats76] moves Hand (Moats76) -> Battlefield (PlayLand).
+- Turn 8, seq 147: Spider-Byte, Web Warden [owner=Moats76, controller=Moats76] moves Hand (Moats76) -> Stack (CastSpell).
+- Turn 8, seq 149: Spider-Byte, Web Warden [owner=Moats76, controller=Moats76] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 157: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Battlefield -> Hand (gian31) (Return).
+- Turn 9, seq 177: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 180: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 181: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 183: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 184: Leech Collector [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 186: Leech Collector [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 213: Island [owner/controller metadata unavailable] moves Library (Moats76) -> Hand (Moats76) (Draw).
+- Turn 10, seq 216: Island [owner=Moats76, controller=Moats76] moves Hand (Moats76) -> Battlefield (PlayLand).
+- Turn 10, seq 232: Island [owner/controller metadata unavailable] moves Library (Moats76) -> Hand (Moats76) (Draw).
+- Turn 10, seq 236: Plains [owner/controller metadata unavailable] moves Library (Moats76) -> Hand (Moats76) (Draw).
+- Turn 11, seq 246: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 249: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 11, seq 250: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 252: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 256: King T'Challa [owner=Moats76, controller=Moats76] moves Battlefield -> Exile (Exile).
+- Turn 11, seq 262: Bloodletting [owner=gian31, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 11, seq 264: Bloodletting [owner/controller metadata unavailable] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 12, seq 284: object 371 [owner/controller metadata unavailable] moves Library (Moats76) -> Hand (Moats76) (Draw).
+- Turn 12, seq 287: Island [owner=Moats76, controller=Moats76] moves Hand (Moats76) -> Battlefield (PlayLand).
+- Turn 12, seq 288: Black Panther, Hope Enduring [owner=Moats76, controller=Moats76] moves Hand (Moats76) -> Stack (CastSpell).
+- Turn 12, seq 290: Black Panther, Hope Enduring [owner=Moats76, controller=Moats76] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 312: Sinister Monolith [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 315: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 13, seq 317: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 321: King T'Challa [owner=Moats76, controller=Moats76] moves Battlefield -> Exile (Exile).
+- Turn 13, seq 327: Bloodletting [owner=gian31, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 13, seq 329: Bloodletting [owner/controller metadata unavailable] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 14, seq 351: Crystal Barricade [owner/controller metadata unavailable] moves Library (Moats76) -> Hand (Moats76) (Draw).
+- Turn 14, seq 354: Plains [owner=Moats76, controller=Moats76] moves Hand (Moats76) -> Battlefield (PlayLand).
+- Turn 14, seq 355: Crystal Barricade [owner=Moats76, controller=Moats76] moves Hand (Moats76) -> Stack (CastSpell).
+- Turn 14, seq 357: Crystal Barricade [owner=Moats76, controller=Moats76] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 365: Kang the Conqueror [owner=Moats76, controller=Moats76] moves Hand (Moats76) -> Stack (CastSpell).
+- Turn 14, seq 367: Kang the Conqueror [owner=Moats76, controller=Moats76] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 386: Rot-Curse Rakshasa [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 15, seq 389: Bloodletting [owner=gian31, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 15, seq 391: Bloodletting [owner/controller metadata unavailable] moves Stack -> Graveyard (gian31) (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 177 becomes object 292 [Shattered Sanctum].
+- Turn 2, seq 21: object 238 becomes object 293 [The Mind Stone].
+- Turn 2, seq 24: object 234 becomes object 294 [Gleaming Bastion].
+- Turn 3, seq 38: object 178 becomes object 295 [Starscape Cleric].
+- Turn 3, seq 41: object 171 becomes object 296 [Swamp].
+- Turn 3, seq 42: object 176 becomes object 297 [Authority of the Consuls].
+- Turn 4, seq 58: object 239 becomes object 299 [Black Panther, Hope Enduring].
+- Turn 4, seq 61: object 233 becomes object 301 [Plains].
+- Turn 4, seq 62: object 293 becomes object 302 [The Mind Stone].
+- Turn 5, seq 78: object 179 becomes object 305 [Makeshift Binding].
+- Turn 5, seq 81: object 174 becomes object 306 [Case of the Uneaten Feast].
+- Turn 6, seq 97: object 240 becomes object 308 [Plains].
+- Turn 6, seq 100: object 231 becomes object 309 [Island].
+- Turn 6, seq 101: object 232 becomes object 310 [Black Panther, Hope Enduring].
+- Turn 7, seq 119: object 180 becomes object 316 [Enduring Tenacity].
+- Turn 7, seq 122: object 295 becomes object 317 [Starscape Cleric].
+- Turn 8, seq 143: object 241 becomes object 322 [Spider-Byte, Web Warden].
+- Turn 8, seq 146: object 308 becomes object 323 [Plains].
+- Turn 8, seq 147: object 322 becomes object 324 [Spider-Byte, Web Warden].
+- Turn 8, seq 157: object 306 becomes object 331 [Case of the Uneaten Feast].
+- Turn 9, seq 177: object 181 becomes object 333 [Swamp].
+- Turn 9, seq 180: object 333 becomes object 334 [Swamp].
+- Turn 9, seq 181: object 331 becomes object 335 [Case of the Uneaten Feast].
+- Turn 9, seq 184: object 173 becomes object 337 [Leech Collector].
+- Turn 10, seq 213: object 242 becomes object 344 [Island].
+- Turn 10, seq 216: object 344 becomes object 345 [Island].
+- Turn 10, seq 232: object 243 becomes object 354 [Island].
+- Turn 10, seq 236: object 244 becomes object 356 [Plains].
+- Turn 11, seq 246: object 182 becomes object 357 [Swamp].
+- Turn 11, seq 249: object 357 becomes object 358 [Swamp].
+- Turn 11, seq 250: object 175 becomes object 359 [Makeshift Binding].
+- Turn 11, seq 256: object 310 becomes object 364 (Black Panther, Hope Enduring -> King T'Challa).
+- Turn 11, seq 262: object 343 becomes object 368 [Bloodletting].
+- Turn 11, seq 264: object 368 becomes object 370 [Bloodletting].
+- Turn 12, seq 284: object 245 becomes object 371 [object 245].
+- Turn 12, seq 287: object 354 becomes object 372 [Island].
+- Turn 12, seq 288: object 299 becomes object 373 [Black Panther, Hope Enduring].
+- Turn 13, seq 312: object 183 becomes object 385 [Sinister Monolith].
+- Turn 13, seq 315: object 305 becomes object 386 [Makeshift Binding].
+- Turn 13, seq 321: object 373 becomes object 391 (Black Panther, Hope Enduring -> King T'Challa).
+- Turn 13, seq 327: object 384 becomes object 395 [Bloodletting].
+- Turn 13, seq 329: object 395 becomes object 397 [Bloodletting].
+- Turn 14, seq 351: object 246 becomes object 398 [Crystal Barricade].
+- Turn 14, seq 354: object 356 becomes object 399 [Plains].
+- Turn 14, seq 355: object 398 becomes object 400 [Crystal Barricade].
+- Turn 14, seq 365: object 235 becomes object 407 [Kang the Conqueror].
+- Turn 15, seq 386: object 184 becomes object 414 [Rot-Curse Rakshasa].
+- Turn 15, seq 389: object 406 becomes object 415 [Bloodletting].
+- Turn 15, seq 391: object 415 becomes object 417 [Bloodletting].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Shattered Sanctum (object 292) from Hand (gian31) to Battlefield.
+- Turn 2: Moats76 plays Gleaming Bastion (object 294) from Hand (Moats76) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 296) from Hand (gian31) to Battlefield.
+- Turn 4: Moats76 plays Plains (object 301) from Hand (Moats76) to Battlefield.
+- Turn 6: Moats76 plays Island (object 309) from Hand (Moats76) to Battlefield.
+- Turn 8: Moats76 plays Plains (object 323) from Hand (Moats76) to Battlefield.
+- Turn 9: gian31 plays Swamp (object 334) from Hand (gian31) to Battlefield.
+- Turn 10: Moats76 plays Island (object 345) from Hand (Moats76) to Battlefield.
+- Turn 11: gian31 plays Swamp (object 358) from Hand (gian31) to Battlefield.
+- Turn 12: Moats76 plays Island (object 372) from Hand (Moats76) to Battlefield.
+- Turn 14: Moats76 plays Plains (object 399) from Hand (Moats76) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- Turn 14: Authority of the Consuls -> Starscape Cleric; observed repeated transitions=2; net life: Moats76 -2, gian31 +2.
+  Same-turn ability records (including records outside the summarized chain): Authority of the Consuls=2, Starscape Cleric=2.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED TRIGGER CYCLES
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Starscape Cleric: casts=1; abilities=8 (triggered=8, activated=0) across turns [7, 7, 8, 9, 11, 12, 13, 14, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=8, other=7
+  observed effects: life -1, synthetic event
+- Authority of the Consuls: casts=1; abilities=5 (triggered=5, activated=0) across turns [3, 6, 8, 12, 14, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=0
+  observed effects: life +1
+- Leech Collector: casts=1; abilities=5 (triggered=5, activated=0) across turns [9, 9, 11, 12, 13, 14]
+- Black Panther, Hope Enduring: casts=2; abilities=2 (triggered=2, activated=0) across turns [6, 10, 10, 12]
+  runtime-name lineage: object 310 is also observed as Black Panther, Hope Enduring, King T'Challa; relationship not explicitly identified.
+  observed effect totals: draws=2, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Case of the Uneaten Feast: casts=2; abilities=2 (triggered=2, activated=0) across turns [5, 7, 9, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Makeshift Binding: casts=2; abilities=2 (triggered=2, activated=0) across turns [11, 11, 13, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=2
+  observed effects: exile, life +2
+- Bloodletting: casts=3 across turns [11, 13, 15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=1
+  observed effects: life -2, synthetic event
+- Spider-Byte, Web Warden: casts=1; abilities=1 (triggered=1, activated=0) across turns [8, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=1, damage=0, life_changes=0, other=0
+  observed effects: return to battlefield
+- Crystal Barricade: casts=1 across turns [14]
+- Kang the Conqueror: casts=1 across turns [14]
+- King T'Challa: abilities=1 (triggered=1, activated=0) across turns [10]
+  runtime-name lineage: object 310 is also observed as Black Panther, Hope Enduring, King T'Challa; relationship not explicitly identified.
+- The Mind Stone: casts=1 across turns [4]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 8 - DeclareAttack, DeclareBlock (active=Moats76)
+  attacker: King T'Challa (Moats76) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Moats76; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack (active=Moats76)
+  attacker: Black Panther, Hope Enduring (Moats76) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Moats76; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Moats76; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 10: Ability of Black Panther, Hope Enduring (active=Moats76) - Ability of Black Panther, Hope Enduring: draw.
+- Turn 10: Ability of Black Panther, Hope Enduring (active=Moats76) - Ability of Black Panther, Hope Enduring: draw.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 171: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 172: Demon Wall | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 173: Leech Collector | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 174: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 175: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 176: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 177: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 292: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 294: Gleaming Bastion | controller=Moats76 | owner=Moats76 | zone=Battlefield (latest_object_observation)
+- 295: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 296: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 297: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 301: Plains | controller=Moats76 | owner=Moats76 | zone=Battlefield (latest_object_observation)
+- 302: The Mind Stone | controller=Moats76 | owner=Moats76 | zone=Stack (latest_object_observation)
+- 305: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 306: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 309: Island | controller=Moats76 | owner=Moats76 | zone=Battlefield (latest_object_observation)
+- 310: Black Panther, Hope Enduring | controller=Moats76 | owner=Moats76 | zone=Battlefield (latest_object_observation)
+- 311: Black Panther, Hope Enduring | controller=Moats76 | owner=Moats76 | zone=Battlefield (latest_object_observation)
+- 315: object 315 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 316: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 317: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 320: object 320 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 321: object 321 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 323: Plains | controller=Moats76 | owner=Moats76 | zone=Battlefield (latest_object_observation)
+- 324: Spider-Byte, Web Warden | controller=Moats76 | owner=Moats76 | zone=Battlefield (latest_object_observation)
+- 328: object 328 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 329: object 329 | controller=Moats76 | owner=Moats76 | zone=unknown (inferred unknown) (latest_object_observation)
+- 330: object 330 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 331: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 332: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 333: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 334: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 335: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 337: Leech Collector | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 340: object 340 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 341: object 341 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 342: object 342 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 343: Bloodletting | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 345: Island | controller=Moats76 | owner=Moats76 | zone=Battlefield (latest_object_observation)
+- 346: object 346 | controller=Moats76 | owner=Moats76 | zone=unknown (inferred unknown) (latest_object_observation)
+- 353: Volley Veteran | controller=Moats76 | owner=Moats76 | zone=unknown (inferred unknown) (latest_object_observation)
+- 355: Volley Veteran | controller=Moats76 | owner=Moats76 | zone=unknown (inferred unknown) (latest_object_observation)
+- 357: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 358: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 359: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 363: object 363 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 364: King T'Challa | controller=Moats76 | owner=Moats76 | zone=Exile (latest_object_observation)
+- 365: Black Panther, Hope Enduring | controller=Moats76 | owner=Moats76 | zone=Exile (latest_object_observation)
+- 366: object 366 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 367: object 367 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 368: Bloodletting | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 372: Island | controller=Moats76 | owner=Moats76 | zone=Battlefield (latest_object_observation)
+- 373: Black Panther, Hope Enduring | controller=Moats76 | owner=Moats76 | zone=Battlefield (latest_object_observation)
+- 374: Black Panther, Hope Enduring | controller=Moats76 | owner=Moats76 | zone=Battlefield (latest_object_observation)
+- 381: object 381 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 382: object 382 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 383: object 383 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 384: Bloodletting | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 385: Sinister Monolith | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 386: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 390: object 390 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 391: King T'Challa | controller=Moats76 | owner=Moats76 | zone=Exile (latest_object_observation)
+- 392: Black Panther, Hope Enduring | controller=Moats76 | owner=Moats76 | zone=Exile (latest_object_observation)
+- 393: object 393 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 394: object 394 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 395: Bloodletting | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 399: Plains | controller=Moats76 | owner=Moats76 | zone=Battlefield (latest_object_observation)
+- 400: Crystal Barricade | controller=Moats76 | owner=Moats76 | zone=Battlefield (latest_object_observation)
+- 403: object 403 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 404: object 404 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 405: object 405 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 406: Bloodletting | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 407: Kang the Conqueror | controller=Moats76 | owner=Moats76 | zone=Battlefield (latest_object_observation)
+- 412: object 412 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 413: object 413 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 414: Rot-Curse Rakshasa | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 415: Bloodletting | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Moats76: 23 total items
+  zones: Battlefield=14, Exile=4, Stack=1, unknown=4
+  objects: Black Panther, Hope Enduring x6, Island x3, Plains x3, King T'Challa x2, Volley Veteran x2, Crystal Barricade, Gleaming Bastion, Kang the Conqueror, Spider-Byte, Web Warden, The Mind Stone, object 329, object 346
+gian31: 55 total items
+  zones: Battlefield=7, Hand=18, Stack=8, unknown=22
+  objects: Bloodletting x6, Swamp x6, Case of the Uneaten Feast x5, Makeshift Binding x4, Authority of the Consuls x2, Leech Collector x2, Shattered Sanctum x2, Starscape Cleric x2, Demon Wall, Enduring Tenacity, Rot-Curse Rakshasa, Sinister Monolith
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (7): Case of the Uneaten Feast, Leech Collector, Shattered Sanctum, Starscape Cleric, Swamp, Swamp, Swamp
+  Graveyard: 0 card(s)
+Moats76:
+  Battlefield (14): Black Panther, Hope Enduring, Black Panther, Hope Enduring, Black Panther, Hope Enduring, Black Panther, Hope Enduring, Crystal Barricade, Gleaming Bastion, Island, Island, Island, Kang the Conqueror, Plains, Plains, Plains, Spider-Byte, Web Warden
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+26 objects have no resolved final zone and are omitted from the known board state.
+Moats76: 4 unknown object(s)
+gian31: 22 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=18, Stack=9
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Moats76:
+  Battlefield (11): Gleaming Bastion, Plains, The Mind Stone, Island, Plains, Spider-Byte, Web Warden, Island, Island, Plains, Crystal Barricade, Kang the Conqueror
+  Exile (4): King T'Challa, Black Panther, Hope Enduring, King T'Challa, Black Panther, Hope Enduring
+gian31:
+  Battlefield (10): Shattered Sanctum, Swamp, Authority of the Consuls, Starscape Cleric, Swamp, Case of the Uneaten Feast, Leech Collector, Swamp, Makeshift Binding, Makeshift Binding
+Known non-persistent entries (counts only):
+  Moats76: Limbo=1
+  gian31: Hand=4, Limbo=4, Stack=1
+  unknown: Hand=3, Library=91, Limbo=6
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1
+- Turn 2: Moats76 Battlefield=1; gian31 Battlefield=1
+- Turn 3: Moats76 Battlefield=1; gian31 Battlefield=3
+- Turn 4: Moats76 Battlefield=3; gian31 Battlefield=3
+- Turn 5: Moats76 Battlefield=3; gian31 Battlefield=4
+- Turn 6: Moats76 Battlefield=5; gian31 Battlefield=4
+- Turn 7: Moats76 Battlefield=5; gian31 Battlefield=5
+- Turn 8: Moats76 Battlefield=7; gian31 Battlefield=4
+- Turn 9: Moats76 Battlefield=7; gian31 Battlefield=7
+- Turn 10: Moats76 Battlefield=8; gian31 Battlefield=7
+- Turn 11: Moats76 Battlefield=7; Moats76 Exile=1; gian31 Battlefield=9; gian31 Graveyard=1
+- Turn 12: Moats76 Battlefield=9; Moats76 Exile=1; gian31 Battlefield=9; gian31 Graveyard=1
+- Turn 13: Moats76 Battlefield=8; Moats76 Exile=2; gian31 Battlefield=10; gian31 Graveyard=2
+- Turn 14: Moats76 Battlefield=11; Moats76 Exile=2; gian31 Battlefield=10; gian31 Graveyard=2
+- Turn 15: Moats76 Battlefield=11; Moats76 Exile=2; gian31 Battlefield=10; gian31 Graveyard=3
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 3: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: The Mind Stone resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Black Panther, Hope Enduring resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Spider-Byte, Web Warden resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Leech Collector resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Black Panther, Hope Enduring resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Crystal Barricade resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Kang the Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
