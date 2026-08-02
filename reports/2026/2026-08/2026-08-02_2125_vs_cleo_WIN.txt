@@ -1,0 +1,557 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, cleo
+Seat map: Seat 1=gian31, Seat 2=cleo
+Turn range (known): 1 - 9
+Records: 31
+Action chains: 17
+Winner: gian31
+Final life: {'gian31': 9, 'cleo': 5}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 9 (Phase_Combat, Step_CombatDamage; Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn., seq 274).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 24 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 8 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 8, 9] (raw records=8; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 8 explicit Library -> Hand movement(s); named in the draw record=4, resolved through an explicit identity transition=2, unresolved=2.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 9, 'cleo': 5}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 9 (Phase_Combat, Step_CombatDamage; Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn., seq 274).
+Last captured life snapshot: gian31 14 -> 9 (seq 271).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Tinybones, the Pickpocket [valid_resolution_no_immediate_mutation, seq=10] (active=cleo, phase=Phase_Main1, controller=cleo, owner=cleo, source_object=435)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, the Pickpocket resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 435) Hand (cleo) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 435) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [434] Hand (cleo) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cleo: Battlefield: Swamp [434], Tinybones, the Pickpocket [435]
+
+Turn 2
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=31] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=439)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 439) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 439) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bitter Triumph [437] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 24).
+      Godless Shrine [438] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 28).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cleo: Battlefield: Swamp [434], Tinybones, the Pickpocket [435]
+      gian31: Battlefield: Godless Shrine [438], Hinterland Sanctifier [439]
+
+Turn 3
+  - Rot-Curse Rakshasa [valid_resolution_no_immediate_mutation, seq=51] (active=cleo, phase=Phase_Main1, controller=cleo, owner=cleo, source_object=443)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Rot-Curse Rakshasa resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Rot-Curse Rakshasa (object 443) Hand (cleo) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Rot-Curse Rakshasa (object 443) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Conduit Pylons [441] Library (cleo) -> Hand (cleo) (Draw; GRE sequence 45).
+      Capital City [442] Hand (cleo) -> Battlefield (PlayLand; GRE sequence 48).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cleo: Battlefield: Capital City [442], Rot-Curse Rakshasa [443], Swamp [434], Tinybones, the Pickpocket [435]
+      gian31: Battlefield: Godless Shrine [438], Hinterland Sanctifier [439]
+
+Turn 4
+  - Lifecreed Duo [valid_resolution_no_immediate_mutation, seq=72] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=448)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lifecreed Duo resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lifecreed Duo (object 448) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lifecreed Duo (object 448) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=74] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=439, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Marauding Blight-Priest [446] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 66).
+      Swamp [447] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 69).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cleo: Battlefield: Capital City [442], Rot-Curse Rakshasa [443], Swamp [434], Tinybones, the Pickpocket [435]
+      gian31: Battlefield: Godless Shrine [438], Hinterland Sanctifier [439], Lifecreed Duo [448], Swamp [447]
+
+Turn 5
+  - Ability of Rot-Curse Rakshasa [valid_resolution_no_immediate_mutation, seq=103] (active=cleo, phase=Phase_Combat, step=Step_DeclareAttack, controller=cleo, owner=cleo, source_object=443, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Rot-Curse Rakshasa resolves with no immediate observed mutation.
+  - Ability of Rot-Curse Rakshasa [observed_semantic_effect, seq=112] (active=cleo, phase=Phase_Combat, step=Step_EndCombat, controller=cleo, owner=cleo, source_object=443, source_last_explicit_zone=Battlefield, source_successor=458 observed Battlefield -> Graveyard (cleo) (Sacrifice))
+      diagnostic: distinct consecutive ability records observed at seq 103 and 112; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: sacrifice
+      narrative: Ability of Rot-Curse Rakshasa sacrifices Rot-Curse Rakshasa.
+      explicit effect object references: Rot-Curse Rakshasa [458] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Rot-Curse Rakshasa (object 458) Battlefield -> Graveyard (cleo) (Sacrifice; shared object ID)
+  - Souls of the Lost [valid_resolution_no_immediate_mutation, seq=119] (active=cleo, phase=Phase_Main2, controller=cleo, owner=cleo, source_object=459)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Souls of the Lost resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Souls of the Lost (object 459) Hand (cleo) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Souls of the Lost (object 459) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=cleo; frames: DeclareAttack):
+      attackers: Rot-Curse Rakshasa [443] (unblocked, observed P/T 5/5)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -5 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 19 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 452 [452] Library (cleo) -> Hand (cleo) (Draw; GRE sequence 89).
+      Conduit Pylons [453] Hand (cleo) -> Battlefield (PlayLand; GRE sequence 92).
+      Broodrage Mycoid [462] Hand (cleo) -> Graveyard (cleo) (Discard; GRE sequence 117).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cleo: Battlefield: Capital City [442], Conduit Pylons [453], Souls of the Lost [459], Swamp [434], Tinybones, the Pickpocket [435]; Graveyard: Broodrage Mycoid [462], Rot-Curse Rakshasa [458]
+      gian31: Battlefield: Godless Shrine [438], Hinterland Sanctifier [439], Lifecreed Duo [448], Swamp [447]
+
+Turn 6
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=131] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=464)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 464) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 464) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lifecreed Duo [observed_semantic_effect, seq=134] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=448, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Lifecreed Duo: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=136] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=464, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: cleo loses 1 life.
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=138] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=439, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=140] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=464, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: cleo loses 1 life.
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=143] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=471, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=145] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=464, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: cleo loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Lifecreed Duo [448] (unblocked, observed P/T 1/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: cleo -4; gian31 +3 (individual changes below; gains and losses may offset)
+    life: gian31 14 -> 15
+    life: cleo 20 -> 19
+    life: gian31 15 -> 16
+    life: cleo 19 -> 18
+    life: gian31 16 -> 17
+    life: cleo 18 -> 17
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): cleo 17 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [463] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 125).
+      Scoured Barrens [471] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 141).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cleo: Battlefield: Capital City [442], Conduit Pylons [453], Souls of the Lost [459], Swamp [434], Tinybones, the Pickpocket [435]; Graveyard: Broodrage Mycoid [462], Rot-Curse Rakshasa [458]
+      gian31: Battlefield: Godless Shrine [438], Hinterland Sanctifier [439], Lifecreed Duo [448], Scoured Barrens [471], Starscape Cleric [464], Swamp [447]
+
+Turn 7
+  - Deathcap Marionette [valid_resolution_no_immediate_mutation, seq=170] (active=cleo, phase=Phase_Main1, controller=cleo, owner=cleo, source_object=475)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deathcap Marionette resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deathcap Marionette (object 475) Hand (cleo) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deathcap Marionette (object 475) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=cleo; frames: DeclareAttack):
+      attackers: Tinybones, the Pickpocket [435] (unblocked, observed P/T 1/1), Souls of the Lost [459] (unblocked, observed P/T 4/5)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -5 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 17 -> 12
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 474 [474] Library (cleo) -> Hand (cleo) (Draw; GRE sequence 165).
+      Avishkar Raceway [479] Library (cleo) -> Graveyard (cleo) (Mill; GRE sequence 173).
+      Bloodletter of Aclazotz [480] Library (cleo) -> Graveyard (cleo) (Mill; GRE sequence 173).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cleo: Battlefield: Capital City [442], Conduit Pylons [453], Deathcap Marionette [475], Souls of the Lost [459], Swamp [434], Tinybones, the Pickpocket [435]; Graveyard: Avishkar Raceway [479], Bloodletter of Aclazotz [480], Broodrage Mycoid [462], Rot-Curse Rakshasa [458]
+      gian31: Battlefield: Godless Shrine [438], Hinterland Sanctifier [439], Lifecreed Duo [448], Scoured Barrens [471], Starscape Cleric [464], Swamp [447]
+
+Turn 8
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=202] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=484)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 484) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 484) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lifecreed Duo [observed_semantic_effect, seq=205] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=448, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Lifecreed Duo: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=208] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=484, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: cleo loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=210] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=464, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: cleo loses 1 life.
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=212] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=439, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=215] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=484, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: cleo loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=217] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=464, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: cleo loses 1 life.
+  - Lifecreed Duo [valid_resolution_no_immediate_mutation, seq=220] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=493)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lifecreed Duo resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lifecreed Duo (object 493) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lifecreed Duo (object 493) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lifecreed Duo [observed_semantic_effect, seq=223] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=448, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Lifecreed Duo: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=226] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=484, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: cleo loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=228] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=464, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: cleo loses 1 life.
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=230] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=439, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=233] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=484, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: cleo loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=235] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=464, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: cleo loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Lifecreed Duo [448] (unblocked, observed P/T 1/2), Starscape Cleric [464] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      other-player life loss not explained by observed attacker damage: gian31 12 -> 10 (-2; phase=unknown; source unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: cleo -11; gian31 +2 (individual changes below; gains and losses may offset)
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): gian31 12 -> 10
+    life: gian31 10 -> 11
+    life: cleo 16 -> 15
+    life: cleo 15 -> 14
+    life: gian31 11 -> 12
+    life: cleo 14 -> 13
+    life: cleo 13 -> 12
+    life: gian31 12 -> 13
+    life: cleo 12 -> 11
+    life: cleo 11 -> 10
+    life: gian31 13 -> 14
+    life: cleo 10 -> 9
+    life: cleo 9 -> 8
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): cleo 8 -> 5
+    additional protocol-observed zone movements not assigned to an action chain:
+      Lifecreed Duo [482] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 194).
+      Godless Shrine [483] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 198).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cleo: Battlefield: Capital City [442], Conduit Pylons [453], Deathcap Marionette [475], Souls of the Lost [459], Swamp [434], Tinybones, the Pickpocket [435]; Graveyard: Avishkar Raceway [479], Bloodletter of Aclazotz [480], Broodrage Mycoid [462], Rot-Curse Rakshasa [458]
+      gian31: Battlefield: Godless Shrine [438], Godless Shrine [483], Hinterland Sanctifier [439], Lifecreed Duo [448], Lifecreed Duo [493], Scoured Barrens [471], Starscape Cleric [464], Starscape Cleric [484], Swamp [447]
+
+Turn 9
+  - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. [valid_resolution_no_immediate_mutation, seq=274] (active=cleo, phase=Phase_Combat, step=Step_CombatDamage, controller=cleo, owner=cleo, source_object=504)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+  Combat snapshots observed (active=cleo; frames: DeclareAttack):
+      attackers: Tinybones, the Pickpocket [435] (unblocked, observed P/T 1/1), Souls of the Lost [459] (unblocked, observed P/T 4/5)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -5 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 14 -> 9
+    additional protocol-observed zone movements not assigned to an action chain:
+      Avishkar Raceway [502] Library (cleo) -> Hand (cleo) (Draw; GRE sequence 256).
+      Avishkar Raceway [503] Hand (cleo) -> Battlefield (PlayLand; GRE sequence 259).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cleo: Battlefield: Avishkar Raceway [503], Capital City [442], Conduit Pylons [453], Deathcap Marionette [475], Souls of the Lost [459], Swamp [434], Tinybones, the Pickpocket [435]; Graveyard: Avishkar Raceway [479], Bloodletter of Aclazotz [480], Broodrage Mycoid [462], Rot-Curse Rakshasa [458]
+      gian31: Battlefield: Godless Shrine [438], Godless Shrine [483], Hinterland Sanctifier [439], Lifecreed Duo [448], Lifecreed Duo [493], Scoured Barrens [471], Starscape Cleric [464], Starscape Cleric [484], Swamp [447]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 2, seq 28: gian31 20 -> 18. No source event correlated in captured records.
+- Turn 8, seq 198: gian31 12 -> 10. Combat declaration observed; exact assignment unavailable.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Swamp [owner=cleo, controller=cleo] moves Hand (cleo) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Tinybones, the Pickpocket [owner=cleo, controller=cleo] moves Hand (cleo) -> Stack (CastSpell).
+- Turn 1, seq 10: Tinybones, the Pickpocket [owner=cleo, controller=cleo] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 24: Bitter Triumph [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 28: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 29: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 31: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 45: Conduit Pylons [owner/controller metadata unavailable] moves Library (cleo) -> Hand (cleo) (Draw).
+- Turn 3, seq 48: Capital City [owner=cleo, controller=cleo] moves Hand (cleo) -> Battlefield (PlayLand).
+- Turn 3, seq 49: Rot-Curse Rakshasa [owner=cleo, controller=cleo] moves Hand (cleo) -> Stack (CastSpell).
+- Turn 3, seq 51: Rot-Curse Rakshasa [owner=cleo, controller=cleo] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 66: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 69: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 70: Lifecreed Duo [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 72: Lifecreed Duo [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 89: object 452 [owner/controller metadata unavailable] moves Library (cleo) -> Hand (cleo) (Draw).
+- Turn 5, seq 92: Conduit Pylons [owner=cleo, controller=cleo] moves Hand (cleo) -> Battlefield (PlayLand).
+- Turn 5, seq 112: Rot-Curse Rakshasa [owner=cleo, controller=cleo] moves Battlefield -> Graveyard (cleo) (Sacrifice).
+- Turn 5, seq 115: Souls of the Lost [owner=cleo, controller=cleo] moves Hand (cleo) -> Stack (CastSpell).
+- Turn 5, seq 117: Broodrage Mycoid [owner=cleo, controller=cleo] moves Hand (cleo) -> Graveyard (cleo) (Discard).
+- Turn 5, seq 119: Souls of the Lost [owner=cleo, controller=cleo] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 125: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 128: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 131: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 141: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 165: object 474 [owner/controller metadata unavailable] moves Library (cleo) -> Hand (cleo) (Draw).
+- Turn 7, seq 168: Deathcap Marionette [owner=cleo, controller=cleo] moves Hand (cleo) -> Stack (CastSpell).
+- Turn 7, seq 170: Deathcap Marionette [owner=cleo, controller=cleo] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 173: Avishkar Raceway [owner=cleo, controller=cleo] moves Library (cleo) -> Graveyard (cleo) (Mill).
+- Turn 7, seq 173: Bloodletter of Aclazotz [owner=cleo, controller=cleo] moves Library (cleo) -> Graveyard (cleo) (Mill).
+- Turn 8, seq 194: Lifecreed Duo [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 198: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 199: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 202: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 218: Lifecreed Duo [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 220: Lifecreed Duo [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 256: Avishkar Raceway [owner/controller metadata unavailable] moves Library (cleo) -> Hand (cleo) (Draw).
+- Turn 9, seq 259: Avishkar Raceway [owner=cleo, controller=cleo] moves Hand (cleo) -> Battlefield (PlayLand).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 305 becomes object 434 [Swamp].
+- Turn 1, seq 8: object 300 becomes object 435 [Tinybones, the Pickpocket].
+- Turn 2, seq 24: object 246 becomes object 437 [Bitter Triumph].
+- Turn 2, seq 28: object 240 becomes object 438 [Godless Shrine].
+- Turn 2, seq 29: object 241 becomes object 439 [Hinterland Sanctifier].
+- Turn 3, seq 45: object 306 becomes object 441 [Conduit Pylons].
+- Turn 3, seq 48: object 302 becomes object 442 [Capital City].
+- Turn 3, seq 49: object 299 becomes object 443 [Rot-Curse Rakshasa].
+- Turn 4, seq 66: object 247 becomes object 446 [Marauding Blight-Priest].
+- Turn 4, seq 69: object 239 becomes object 447 [Swamp].
+- Turn 4, seq 70: object 243 becomes object 448 [Lifecreed Duo].
+- Turn 5, seq 89: object 307 becomes object 452 [object 307].
+- Turn 5, seq 92: object 441 becomes object 453 [Conduit Pylons].
+- Turn 5, seq 112: object 443 becomes object 458 [Rot-Curse Rakshasa].
+- Turn 5, seq 115: object 301 becomes object 459 [Souls of the Lost].
+- Turn 5, seq 117: object 303 becomes object 462 [Broodrage Mycoid].
+- Turn 6, seq 125: object 248 becomes object 463 [Starscape Cleric].
+- Turn 6, seq 128: object 245 becomes object 464 [Starscape Cleric].
+- Turn 6, seq 141: object 244 becomes object 471 [Scoured Barrens].
+- Turn 7, seq 165: object 308 becomes object 474 [object 308].
+- Turn 7, seq 168: object 304 becomes object 475 [Deathcap Marionette].
+- Turn 7, seq 173: object 309 becomes object 479 [Avishkar Raceway].
+- Turn 7, seq 173: object 310 becomes object 480 [Bloodletter of Aclazotz].
+- Turn 8, seq 194: object 249 becomes object 482 [Lifecreed Duo].
+- Turn 8, seq 198: object 242 becomes object 483 [Godless Shrine].
+- Turn 8, seq 199: object 463 becomes object 484 [Starscape Cleric].
+- Turn 8, seq 218: object 482 becomes object 493 [Lifecreed Duo].
+- Turn 9, seq 256: object 311 becomes object 502 [Avishkar Raceway].
+- Turn 9, seq 259: object 502 becomes object 503 [Avishkar Raceway].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: cleo plays Swamp (object 434) from Hand (cleo) to Battlefield.
+- Turn 2: gian31 plays Godless Shrine (object 438) from Hand (gian31) to Battlefield.
+- Turn 3: cleo plays Capital City (object 442) from Hand (cleo) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 447) from Hand (gian31) to Battlefield.
+- Turn 5: cleo plays Conduit Pylons (object 453) from Hand (cleo) to Battlefield.
+- Turn 6: gian31 plays Scoured Barrens (object 471) from Hand (gian31) to Battlefield.
+- Turn 8: gian31 plays Godless Shrine (object 483) from Hand (gian31) to Battlefield.
+- Turn 9: cleo plays Avishkar Raceway (object 503) from Hand (cleo) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ABILITY CHAIN SUMMARY
+------------------------------------------------------------
+- Turn 8: Lifecreed Duo -> Starscape Cleric; observed repeated transitions=2; net life: cleo -2, gian31 +2.
+  Same-turn ability records (including records outside the summarized chain): Lifecreed Duo=2, Starscape Cleric=8.
+  Individual ability records remain in the timeline.
+- Turn 8: Starscape Cleric -> Hinterland Sanctifier; observed repeated transitions=2; net life: cleo -2, gian31 +2.
+  Same-turn ability records (including records outside the summarized chain): Hinterland Sanctifier=2, Starscape Cleric=8.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED TRIGGER CYCLES
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Starscape Cleric: casts=2; abilities=11 (triggered=11, activated=0) across turns [6, 6, 6, 6, 8, 8, 8, 8, 8, 8, 8, 8, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=11, other=2
+  observed effects: life -1, synthetic event
+- Hinterland Sanctifier: casts=1; abilities=4 (triggered=4, activated=0) across turns [2, 4, 6, 8, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=4, other=0
+  observed effects: life +1
+- Lifecreed Duo: casts=2; abilities=3 (triggered=3, activated=0) across turns [4, 6, 8, 8, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=0
+  observed effects: life +1
+- Rot-Curse Rakshasa: casts=1; abilities=2 (triggered=2, activated=0) across turns [3, 5, 5]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: sacrifice
+- Deathcap Marionette: casts=1 across turns [7]
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Souls of the Lost: casts=1 across turns [5]
+- Tinybones, the Pickpocket: casts=1 across turns [1]
+- Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn.: abilities=1 (triggered=0, activated=1) across turns [9]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 - DeclareAttack (active=cleo)
+  attacker: Rot-Curse Rakshasa (cleo) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 6 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Lifecreed Duo (gian31) -> cleo; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack (active=cleo)
+  attacker: Tinybones, the Pickpocket (cleo) -> gian31; unblocked in this observed snapshot
+  attacker: Souls of the Lost (cleo) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Lifecreed Duo (gian31) -> cleo; unblocked in this observed snapshot
+  attacker: Starscape Cleric (gian31) -> cleo; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack (active=cleo)
+  attacker: Tinybones, the Pickpocket (cleo) -> gian31; unblocked in this observed snapshot
+  attacker: Souls of the Lost (cleo) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 5: Ability of Rot-Curse Rakshasa (active=cleo) - Ability of Rot-Curse Rakshasa resolves with no immediate observed mutation.
+- Turn 5: Ability of Rot-Curse Rakshasa (active=cleo) - Ability of Rot-Curse Rakshasa: sacrifice.
+- Turn 9: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. (active=cleo) - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 239: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 240: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 241: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 242: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 243: Lifecreed Duo | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 244: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 245: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 434: Swamp | controller=cleo | owner=cleo | zone=Battlefield (latest_object_observation)
+- 435: Tinybones, the Pickpocket | controller=cleo | owner=cleo | zone=Battlefield (latest_object_observation)
+- 437: Bitter Triumph | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 438: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 439: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 442: Capital City | controller=cleo | owner=cleo | zone=Battlefield (latest_object_observation)
+- 443: Rot-Curse Rakshasa | controller=cleo | owner=cleo | zone=Battlefield (latest_object_observation)
+- 446: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 447: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 448: Lifecreed Duo | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 451: object 451 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 453: Conduit Pylons | controller=cleo | owner=cleo | zone=Battlefield (latest_object_observation)
+- 454: object 454 | controller=cleo | owner=cleo | zone=unknown (inferred unknown) (latest_object_observation)
+- 455: object 455 | controller=cleo | owner=cleo | zone=unknown (inferred unknown) (latest_object_observation)
+- 456: object 456 | controller=cleo | owner=cleo | zone=Hand (latest_object_observation)
+- 457: object 457 | controller=cleo | owner=cleo | zone=unknown (inferred unknown) (latest_object_observation)
+- 458: Rot-Curse Rakshasa | controller=cleo | owner=cleo | zone=Graveyard (latest_object_observation)
+- 459: Souls of the Lost | controller=cleo | owner=cleo | zone=Battlefield (latest_object_observation)
+- 462: Broodrage Mycoid | controller=cleo | owner=cleo | zone=Graveyard (latest_object_observation)
+- 463: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 464: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 467: object 467 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 468: object 468 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 469: object 469 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 470: object 470 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 471: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 472: object 472 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 473: object 473 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 475: Deathcap Marionette | controller=cleo | owner=cleo | zone=Battlefield (latest_object_observation)
+- 478: object 478 | controller=cleo | owner=cleo | zone=unknown (inferred unknown) (latest_object_observation)
+- 479: Avishkar Raceway | controller=cleo | owner=cleo | zone=Graveyard (latest_object_observation)
+- 480: Bloodletter of Aclazotz | controller=cleo | owner=cleo | zone=Graveyard (latest_object_observation)
+- 482: Lifecreed Duo | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 483: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 484: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 487: object 487 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 488: object 488 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 489: object 489 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 490: object 490 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 491: object 491 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 492: object 492 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 493: Lifecreed Duo | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 496: object 496 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 497: object 497 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 498: object 498 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 499: object 499 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 500: object 500 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 501: object 501 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 503: Avishkar Raceway | controller=cleo | owner=cleo | zone=Battlefield (latest_object_observation)
+- 504: object 504 | controller=cleo | owner=cleo | zone=Hand (latest_object_observation)
+- 505: object 505 | controller=cleo | owner=cleo | zone=unknown (inferred unknown) (latest_object_observation)
+- 507: object 507 | controller=cleo | owner=cleo | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+cleo: 20 total items
+  zones: Battlefield=8, Graveyard=4, Hand=2, unknown=6
+  objects: Avishkar Raceway x2, Rot-Curse Rakshasa x2, Bloodletter of Aclazotz, Broodrage Mycoid, Capital City, Conduit Pylons, Deathcap Marionette, Souls of the Lost, Swamp, Tinybones, the Pickpocket, object 454, object 455
+gian31: 39 total items
+  zones: Battlefield=9, Hand=11, unknown=19
+  objects: Godless Shrine x4, Lifecreed Duo x4, Starscape Cleric x4, Hinterland Sanctifier x2, Scoured Barrens x2, Swamp x2, Bitter Triumph, Marauding Blight-Priest, object 451, object 467, object 468, object 469
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (9): Godless Shrine, Godless Shrine, Hinterland Sanctifier, Lifecreed Duo, Lifecreed Duo, Scoured Barrens, Starscape Cleric, Starscape Cleric, Swamp
+  Graveyard: 0 card(s)
+cleo:
+  Battlefield (8): Avishkar Raceway, Capital City, Conduit Pylons, Deathcap Marionette, Rot-Curse Rakshasa, Souls of the Lost, Swamp, Tinybones, the Pickpocket
+  Graveyard: 4 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+25 objects have no resolved final zone and are omitted from the known board state.
+cleo: 6 unknown object(s)
+gian31: 19 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=13
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+cleo:
+  Battlefield (7): Swamp, Tinybones, the Pickpocket, Capital City, Conduit Pylons, Souls of the Lost, Deathcap Marionette, Avishkar Raceway
+  Graveyard (4): Rot-Curse Rakshasa, Broodrage Mycoid, Avishkar Raceway, Bloodletter of Aclazotz
+gian31:
+  Battlefield (9): Godless Shrine, Hinterland Sanctifier, Swamp, Lifecreed Duo, Starscape Cleric, Scoured Barrens, Godless Shrine, Starscape Cleric, Lifecreed Duo
+Known non-persistent entries (counts only):
+  cleo: Hand=2, Limbo=1
+  gian31: Hand=2, Limbo=3
+  unknown: Library=171, Limbo=8
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: cleo Battlefield=2
+- Turn 2: cleo Battlefield=2; gian31 Battlefield=2
+- Turn 3: cleo Battlefield=4; gian31 Battlefield=2
+- Turn 4: cleo Battlefield=4; gian31 Battlefield=4
+- Turn 5: cleo Battlefield=5; cleo Graveyard=2; gian31 Battlefield=4
+- Turn 6: cleo Battlefield=5; cleo Graveyard=2; gian31 Battlefield=6
+- Turn 7: cleo Battlefield=6; cleo Graveyard=4; gian31 Battlefield=6
+- Turn 8: cleo Battlefield=6; cleo Graveyard=4; gian31 Battlefield=9
+- Turn 9: cleo Battlefield=7; cleo Graveyard=4; gian31 Battlefield=9
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Tinybones, the Pickpocket resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 2: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Rot-Curse Rakshasa resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Lifecreed Duo resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Souls of the Lost resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Deathcap Marionette resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Lifecreed Duo resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
