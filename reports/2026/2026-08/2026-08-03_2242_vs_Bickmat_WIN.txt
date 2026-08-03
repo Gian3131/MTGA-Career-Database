@@ -1,0 +1,786 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Bickmat
+Seat map: Seat 1=gian31, Seat 2=Bickmat
+Turn range (known): 1 - 10
+Records: 64
+Action chains: 15
+Winner: gian31
+Final life: {'gian31': 36, 'Bickmat': 1}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 10 (Phase_Combat, Step_CombatDamage; Ability of Starscape Cleric, seq 341).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 19 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 8 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 8, 10] (raw records=8; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 10 explicit Library -> Hand movement(s); named in the draw record=6, resolved through an explicit identity transition=4, unresolved=0.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Swamp [159], Starscape Cleric [160], Swamp [161], Godless Shrine [162], Stroke of Midnight [163], Shoot the Sheriff [164], Lunar Convocation [165].
+  - unknown: 7 observed card(s): object 219 [219], object 220 [220], object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 36, 'Bickmat': 1}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 10 (Phase_Combat, Step_CombatDamage; Ability of Starscape Cleric, seq 341).
+Last captured life snapshot: gian31 35 -> 36 (seq 339).
+Tokens on battlefield at their last observation (not confirmed at match end): Rabbit [303] controller=Bickmat, created Turn 5, last observed Turn 9 seq 219, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Hinterland Sanctifier.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Godless Shrine.
+- Turn 3: actions: cards=1, abilities=2; combat snapshots=1; life mutations=2; explicit battlefield entries=Forest, Hare Apparent.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Lunar Convocation.
+- Turn 5: actions: cards=1, abilities=3; combat snapshots=1; life mutations=3; explicit battlefield entries=Plains, Hare Apparent.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Shattered Sanctum, Starscape Cleric.
+- Turn 7: actions: cards=1, abilities=2; combat snapshots=1; life mutations=2; explicit battlefield entries=Tigra, Feline Fury.
+- Turn 8: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Plains; explicit battlefield exits=Tigra, Feline Fury.
+- Turn 9: actions: cards=1, abilities=1; combat snapshots=1; life mutations=2; explicit battlefield entries=Good-Fortune Unicorn.
+- Turn 10: actions: cards=1, abilities=46; combat snapshots=1; life mutations=46; explicit battlefield entries=Swamp, Bloodthirsty Conqueror.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=10] (active=Bickmat, phase=Phase_Main1, controller=Bickmat, owner=Bickmat, source_object=280)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 280) Hand (Bickmat) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 280) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [279] Hand (Bickmat) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Bickmat: Battlefield: Hinterland Sanctifier [280], Plains [279]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodthirsty Conqueror [282] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 24).
+      Godless Shrine [283] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 28).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Bickmat: Battlefield: Hinterland Sanctifier [280], Plains [279]
+      gian31: Battlefield: Godless Shrine [283]
+
+Turn 3
+  - Hare Apparent [valid_resolution_no_immediate_mutation, seq=48] (active=Bickmat, phase=Phase_Main1, controller=Bickmat, owner=Bickmat, source_object=286)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hare Apparent resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hare Apparent (object 286) Hand (Bickmat) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hare Apparent (object 286) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hare Apparent [valid_resolution_no_immediate_mutation, seq=51] (active=Bickmat, phase=Phase_Main1, controller=Bickmat, owner=Bickmat, source_object=286, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Hare Apparent resolves with no immediate observed mutation.
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=53] (active=Bickmat, phase=Phase_Main1, controller=Bickmat, owner=Bickmat, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: Bickmat gains 1 life.
+  Combat snapshots observed (active=Bickmat; frames: DeclareAttack -> DeclareBlock):
+      attackers: Hinterland Sanctifier [280] (unblocked, observed P/T 1/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Bickmat +1; gian31 -1 (individual changes below; gains and losses may offset)
+    life: Bickmat 20 -> 21
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hare Apparent [284] Library (Bickmat) -> Hand (Bickmat) (Draw; GRE sequence 42).
+      Forest [285] Hand (Bickmat) -> Battlefield (PlayLand; GRE sequence 45).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Bickmat: Battlefield: Forest [285], Hare Apparent [286], Hinterland Sanctifier [280], Plains [279]
+      gian31: Battlefield: Godless Shrine [283]
+
+Turn 4
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=79] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=293)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 293) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 293) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shoot the Sheriff [291] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 73).
+      Swamp [292] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 76).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Bickmat: Battlefield: Forest [285], Hare Apparent [286], Hinterland Sanctifier [280], Plains [279]
+      gian31: Battlefield: Godless Shrine [283], Lunar Convocation [293], Swamp [292]
+
+Turn 5
+  - Hare Apparent [valid_resolution_no_immediate_mutation, seq=99] (active=Bickmat, phase=Phase_Main1, controller=Bickmat, owner=Bickmat, source_object=298)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hare Apparent resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hare Apparent (object 298) Hand (Bickmat) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hare Apparent (object 298) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hare Apparent [observed_semantic_effect, seq=102] (active=Bickmat, phase=Phase_Main1, controller=Bickmat, owner=Bickmat, source_object=298, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Hare Apparent: a token is created.
+      explicit effect object references: Rabbit [303] (role/targeting only where the protocol identifies it)
+      token created: Rabbit (object 303, controller=Bickmat) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 302).
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=104] (active=Bickmat, phase=Phase_Main1, controller=Bickmat, owner=Bickmat, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: Bickmat gains 1 life.
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=106] (active=Bickmat, phase=Phase_Main1, controller=Bickmat, owner=Bickmat, source_object=280, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 104 and 106; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: Bickmat gains 1 life.
+  Combat snapshots observed (active=Bickmat; frames: DeclareAttack -> DeclareBlock):
+      attackers: Hinterland Sanctifier [280] (unblocked, observed P/T 1/2), Hare Apparent [286] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Bickmat +2; gian31 -3 (individual changes below; gains and losses may offset)
+    life: Bickmat 21 -> 22
+    life: Bickmat 22 -> 23
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 19 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [296] Library (Bickmat) -> Hand (Bickmat) (Draw; GRE sequence 93).
+      Plains [297] Hand (Bickmat) -> Battlefield (PlayLand; GRE sequence 96).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Bickmat: Battlefield: Forest [285], Hare Apparent [286], Hare Apparent [298], Hinterland Sanctifier [280], Plains [279], Plains [297]
+      gian31: Battlefield: Godless Shrine [283], Lunar Convocation [293], Swamp [292]
+
+Turn 6
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=133] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 307) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 307) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shattered Sanctum [305] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 126).
+      Shattered Sanctum [306] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 129).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Bickmat: Battlefield: Forest [285], Hare Apparent [286], Hare Apparent [298], Hinterland Sanctifier [280], Plains [279], Plains [297]
+      gian31: Battlefield: Godless Shrine [283], Lunar Convocation [293], Shattered Sanctum [306], Starscape Cleric [307], Swamp [292]
+
+Turn 7
+  - Tigra, Feline Fury [valid_resolution_no_immediate_mutation, seq=152] (active=Bickmat, phase=Phase_Main1, controller=Bickmat, owner=Bickmat, source_object=311)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tigra, Feline Fury resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tigra, Feline Fury (object 311) Hand (Bickmat) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tigra, Feline Fury (object 311) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=154] (active=Bickmat, phase=Phase_Main1, controller=Bickmat, owner=Bickmat, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: Bickmat gains 1 life.
+  - Ability of Tigra, Feline Fury [observed_semantic_effect, seq=156] (active=Bickmat, phase=Phase_Main1, controller=Bickmat, owner=Bickmat, source_object=311, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Tigra, Feline Fury: Tigra, Feline Fury gets +1/+1; 1 counter(s) are added to Tigra, Feline Fury [311].
+  Combat snapshots observed (active=Bickmat; frames: DeclareAttack -> DeclareBlock):
+      attackers: Rabbit [303] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Bickmat +1; gian31 -1 (individual changes below; gains and losses may offset)
+    life: Bickmat 23 -> 24
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 16 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tigra, Feline Fury [310] Library (Bickmat) -> Hand (Bickmat) (Draw; GRE sequence 147).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Bickmat: Battlefield: Forest [285], Hare Apparent [286], Hare Apparent [298], Hinterland Sanctifier [280], Plains [279], Plains [297], Tigra, Feline Fury [311]
+      gian31: Battlefield: Godless Shrine [283], Lunar Convocation [293], Shattered Sanctum [306], Starscape Cleric [307], Swamp [292]
+
+Turn 8
+  - Shoot the Sheriff [observed_semantic_effect, seq=188] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=318)
+      effects: destroy
+      narrative: Shoot the Sheriff destroys Tigra, Feline Fury.
+      explicit effect object references: Tigra, Feline Fury [311], Tigra, Feline Fury [321] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 318) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tigra, Feline Fury (object 321) Battlefield -> Graveyard (Bickmat) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 322) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 318 -> transfer object 322 (explicit GRE ObjectIdChanged chain).
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=191] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 170 [170], Case of the Uneaten Feast [326] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 326) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life: gian31 15 -> 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [316] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 180).
+      Plains [317] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 183).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Bickmat: Battlefield: Forest [285], Hare Apparent [286], Hare Apparent [298], Hinterland Sanctifier [280], Plains [279], Plains [297]; Graveyard: Tigra, Feline Fury [321]
+      gian31: Battlefield: Godless Shrine [283], Lunar Convocation [293], Plains [317], Shattered Sanctum [306], Starscape Cleric [307], Swamp [292]; Graveyard: Shoot the Sheriff [322]
+
+Turn 9
+  - Good-Fortune Unicorn [valid_resolution_no_immediate_mutation, seq=211] (active=Bickmat, phase=Phase_Main1, controller=Bickmat, owner=Bickmat, source_object=328)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Good-Fortune Unicorn resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Good-Fortune Unicorn (object 328) Hand (Bickmat) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Good-Fortune Unicorn (object 328) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=213] (active=Bickmat, phase=Phase_Main1, controller=Bickmat, owner=Bickmat, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: Bickmat gains 1 life.
+  Combat snapshots observed (active=Bickmat; frames: DeclareAttack -> DeclareBlock):
+      attackers: Rabbit [303] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Bickmat +1; gian31 -1 (individual changes below; gains and losses may offset)
+    life: Bickmat 24 -> 25
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 13 -> 12
+    additional protocol-observed zone movements not assigned to an action chain:
+      Good-Fortune Unicorn [327] Library (Bickmat) -> Hand (Bickmat) (Draw; GRE sequence 206).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Bickmat: Battlefield: Forest [285], Good-Fortune Unicorn [328], Hare Apparent [286], Hare Apparent [298], Hinterland Sanctifier [280], Plains [279], Plains [297]; Graveyard: Tigra, Feline Fury [321]
+      gian31: Battlefield: Godless Shrine [283], Lunar Convocation [293], Plains [317], Shattered Sanctum [306], Starscape Cleric [307], Swamp [292]; Graveyard: Shoot the Sheriff [322]
+
+Turn 10
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation, seq=239] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=335)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 335) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 335) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=251] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +2
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 2 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=253] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=255] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=257] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=259] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=261] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=263] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=265] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=267] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=269] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=271] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=273] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=275] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=277] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=279] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=281] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=283] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=285] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=287] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=289] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=291] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=293] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=295] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=297] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=299] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=301] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=303] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=305] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=307] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=309] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=311] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=313] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=315] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=317] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=319] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=321] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=323] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=325] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=327] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=329] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=331] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=333] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=335] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=337] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=339] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=341] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Bickmat loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [307] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Bickmat -24; gian31 +24 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Bickmat 25 -> 23
+    life: gian31 12 -> 14
+    life: Bickmat 23 -> 22
+    life: gian31 14 -> 15
+    life: Bickmat 22 -> 21
+    life: gian31 15 -> 16
+    life: Bickmat 21 -> 20
+    life: gian31 16 -> 17
+    life: Bickmat 20 -> 19
+    life: gian31 17 -> 18
+    life: Bickmat 19 -> 18
+    life: gian31 18 -> 19
+    life: Bickmat 18 -> 17
+    life: gian31 19 -> 20
+    life: Bickmat 17 -> 16
+    life: gian31 20 -> 21
+    life: Bickmat 16 -> 15
+    life: gian31 21 -> 22
+    life: Bickmat 15 -> 14
+    life: gian31 22 -> 23
+    life: Bickmat 14 -> 13
+    life: gian31 23 -> 24
+    life: Bickmat 13 -> 12
+    life: gian31 24 -> 25
+    life: Bickmat 12 -> 11
+    life: gian31 25 -> 26
+    life: Bickmat 11 -> 10
+    life: gian31 26 -> 27
+    life: Bickmat 10 -> 9
+    life: gian31 27 -> 28
+    life: Bickmat 9 -> 8
+    life: gian31 28 -> 29
+    life: Bickmat 8 -> 7
+    life: gian31 29 -> 30
+    life: Bickmat 7 -> 6
+    life: gian31 30 -> 31
+    life: Bickmat 6 -> 5
+    life: gian31 31 -> 32
+    life: Bickmat 5 -> 4
+    life: gian31 32 -> 33
+    life: Bickmat 4 -> 3
+    life: gian31 33 -> 34
+    life: Bickmat 3 -> 2
+    life: gian31 34 -> 35
+    life: Bickmat 2 -> 1
+    life: gian31 35 -> 36
+    additional protocol-observed zone movements not assigned to an action chain:
+      Phyrexian Arena [333] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 233).
+      Swamp [334] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 236).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Bickmat: Battlefield: Forest [285], Good-Fortune Unicorn [328], Hare Apparent [286], Hare Apparent [298], Hinterland Sanctifier [280], Plains [279], Plains [297]; Graveyard: Tigra, Feline Fury [321]
+      gian31: Battlefield: Bloodthirsty Conqueror [335], Godless Shrine [283], Lunar Convocation [293], Plains [317], Shattered Sanctum [306], Starscape Cleric [307], Swamp [292], Swamp [334]; Graveyard: Shoot the Sheriff [322]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 8, seq 189, Phase_Main1: gian31 15 -> 13. No source event correlated in captured records. Previous captured action: Shoot the Sheriff.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 1 token creations observed; 1 active as last observed; 0 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Rabbit [303] controller=Bickmat; created Turn 5 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 9, object 303 (latest observed P/T 1/1; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Plains [owner=Bickmat, controller=Bickmat] moves Hand (Bickmat) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Hinterland Sanctifier [owner=Bickmat, controller=Bickmat] moves Hand (Bickmat) -> Stack (CastSpell).
+- Turn 1, seq 10: Hinterland Sanctifier [owner=Bickmat, controller=Bickmat] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 24: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 28: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 42: Hare Apparent [owner/controller metadata unavailable] moves Library (Bickmat) -> Hand (Bickmat) (Draw).
+- Turn 3, seq 45: Forest [owner=Bickmat, controller=Bickmat] moves Hand (Bickmat) -> Battlefield (PlayLand).
+- Turn 3, seq 46: Hare Apparent [owner=Bickmat, controller=Bickmat] moves Hand (Bickmat) -> Stack (CastSpell).
+- Turn 3, seq 48: Hare Apparent [owner=Bickmat, controller=Bickmat] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 73: Shoot the Sheriff [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 76: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 77: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 79: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 93: Plains [owner/controller metadata unavailable] moves Library (Bickmat) -> Hand (Bickmat) (Draw).
+- Turn 5, seq 96: Plains [owner=Bickmat, controller=Bickmat] moves Hand (Bickmat) -> Battlefield (PlayLand).
+- Turn 5, seq 97: Hare Apparent [owner=Bickmat, controller=Bickmat] moves Hand (Bickmat) -> Stack (CastSpell).
+- Turn 5, seq 99: Hare Apparent [owner=Bickmat, controller=Bickmat] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 126: Shattered Sanctum [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 129: Shattered Sanctum [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 130: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 133: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 147: Tigra, Feline Fury [owner/controller metadata unavailable] moves Library (Bickmat) -> Hand (Bickmat) (Draw).
+- Turn 7, seq 150: Tigra, Feline Fury [owner=Bickmat, controller=Bickmat] moves Hand (Bickmat) -> Stack (CastSpell).
+- Turn 7, seq 152: Tigra, Feline Fury [owner=Bickmat, controller=Bickmat] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 180: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 183: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 184: Shoot the Sheriff [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 188: Tigra, Feline Fury [owner=Bickmat, controller=Bickmat] moves Battlefield -> Graveyard (Bickmat) (Destroy).
+- Turn 8, seq 188: Shoot the Sheriff [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 8, seq 191: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 206: Good-Fortune Unicorn [owner/controller metadata unavailable] moves Library (Bickmat) -> Hand (Bickmat) (Draw).
+- Turn 9, seq 209: Good-Fortune Unicorn [owner=Bickmat, controller=Bickmat] moves Hand (Bickmat) -> Stack (CastSpell).
+- Turn 9, seq 211: Good-Fortune Unicorn [owner=Bickmat, controller=Bickmat] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 233: Phyrexian Arena [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 236: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 237: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 239: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 223 becomes object 279 [Plains].
+- Turn 1, seq 8: object 219 becomes object 280 [Hinterland Sanctifier].
+- Turn 2, seq 24: object 166 becomes object 282 [Bloodthirsty Conqueror].
+- Turn 2, seq 28: object 162 becomes object 283 [Godless Shrine].
+- Turn 3, seq 42: object 226 becomes object 284 [Hare Apparent].
+- Turn 3, seq 45: object 224 becomes object 285 [Forest].
+- Turn 3, seq 46: object 225 becomes object 286 [Hare Apparent].
+- Turn 4, seq 73: object 167 becomes object 291 [Shoot the Sheriff].
+- Turn 4, seq 76: object 159 becomes object 292 [Swamp].
+- Turn 4, seq 77: object 165 becomes object 293 [Lunar Convocation].
+- Turn 5, seq 93: object 227 becomes object 296 [Plains].
+- Turn 5, seq 96: object 296 becomes object 297 [Plains].
+- Turn 5, seq 97: object 284 becomes object 298 [Hare Apparent].
+- Turn 6, seq 126: object 168 becomes object 305 [Shattered Sanctum].
+- Turn 6, seq 129: object 305 becomes object 306 [Shattered Sanctum].
+- Turn 6, seq 130: object 160 becomes object 307 [Starscape Cleric].
+- Turn 7, seq 147: object 228 becomes object 310 [Tigra, Feline Fury].
+- Turn 7, seq 150: object 310 becomes object 311 [Tigra, Feline Fury].
+- Turn 8, seq 180: object 169 becomes object 316 [Plains].
+- Turn 8, seq 183: object 316 becomes object 317 [Plains].
+- Turn 8, seq 184: object 291 becomes object 318 [Shoot the Sheriff].
+- Turn 8, seq 188: object 311 becomes object 321 [Tigra, Feline Fury].
+- Turn 8, seq 188: object 318 becomes object 322 [Shoot the Sheriff].
+- Turn 8, seq 191: object 170 becomes object 326 [Case of the Uneaten Feast].
+- Turn 9, seq 206: object 229 becomes object 327 [Good-Fortune Unicorn].
+- Turn 9, seq 209: object 327 becomes object 328 [Good-Fortune Unicorn].
+- Turn 10, seq 233: object 171 becomes object 333 [Phyrexian Arena].
+- Turn 10, seq 236: object 161 becomes object 334 [Swamp].
+- Turn 10, seq 237: object 282 becomes object 335 [Bloodthirsty Conqueror].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: Bickmat plays Plains (object 279) from Hand (Bickmat) to Battlefield.
+- Turn 2: gian31 plays Godless Shrine (object 283) from Hand (gian31) to Battlefield.
+- Turn 3: Bickmat plays Forest (object 285) from Hand (Bickmat) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 292) from Hand (gian31) to Battlefield.
+- Turn 5: Bickmat plays Plains (object 297) from Hand (Bickmat) to Battlefield.
+- Turn 6: gian31 plays Shattered Sanctum (object 306) from Hand (gian31) to Battlefield.
+- Turn 8: gian31 plays Plains (object 317) from Hand (gian31) to Battlefield.
+- Turn 10: gian31 plays Swamp (object 334) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 10: ordered adjacent records Bloodthirsty Conqueror -> Starscape Cleric; observed repetitions=23; net life: Bickmat -23, gian31 +24. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Bloodthirsty Conqueror=23, Starscape Cleric=23.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 10: ordered adjacent records Bloodthirsty Conqueror -> Starscape Cleric; observed repetitions=23 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Bloodthirsty Conqueror: casts=1; abilities=23 (triggered=23, activated=0) across turns [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=23, other=0
+  observed effects: life +1, life +2
+- Starscape Cleric: casts=1; abilities=23 (triggered=23, activated=0) across turns [6, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=23, other=0
+  observed effects: life -1
+- Hinterland Sanctifier: casts=1; abilities=5 (triggered=5, activated=0) across turns [1, 3, 5, 5, 7, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=0
+  observed effects: life +1
+- Hare Apparent: casts=2; abilities=2 (triggered=2, activated=0) across turns [3, 3, 5, 5]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Lunar Convocation: casts=1; abilities=1 (triggered=1, activated=0) across turns [4, 8]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Tigra, Feline Fury: casts=1; abilities=1 (triggered=1, activated=0) across turns [7, 7]
+  observed effect totals: draws=0, tokens=0, counters=1, returns=0, damage=0, life_changes=0, other=1
+  observed effects: +1 counter(s), P/T +1/+1
+- Good-Fortune Unicorn: casts=1 across turns [9]
+- Shoot the Sheriff: casts=1 across turns [8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 3 - DeclareAttack, DeclareBlock (active=Bickmat)
+  attacker: Hinterland Sanctifier (Bickmat) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 5 - DeclareAttack, DeclareBlock (active=Bickmat)
+  attacker: Hinterland Sanctifier (Bickmat) -> gian31; unblocked in this observed snapshot
+  attacker: Hare Apparent (Bickmat) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=Bickmat)
+  attacker: Rabbit (Bickmat) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=Bickmat)
+  attacker: Rabbit (Bickmat) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Bickmat; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 2 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+- Turn 10: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Bickmat loses 1 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 160: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 161: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 279: Plains | controller=Bickmat | owner=Bickmat | zone=Battlefield (latest_object_observation)
+- 280: Hinterland Sanctifier | controller=Bickmat | owner=Bickmat | zone=Battlefield (latest_object_observation)
+- 282: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 283: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 285: Forest | controller=Bickmat | owner=Bickmat | zone=Battlefield (latest_object_observation)
+- 286: Hare Apparent | controller=Bickmat | owner=Bickmat | zone=Battlefield (latest_object_observation)
+- 289: object 289 | controller=Bickmat | owner=Bickmat | zone=unknown (inferred unknown) (latest_object_observation)
+- 290: object 290 | controller=Bickmat | owner=Bickmat | zone=unknown (inferred unknown) (latest_object_observation)
+- 291: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 292: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 293: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 297: Plains | controller=Bickmat | owner=Bickmat | zone=Battlefield (latest_object_observation)
+- 298: Hare Apparent | controller=Bickmat | owner=Bickmat | zone=Battlefield (latest_object_observation)
+- 301: object 301 | controller=Bickmat | owner=Bickmat | zone=unknown (inferred unknown) (latest_object_observation)
+- 302: object 302 | controller=Bickmat | owner=Bickmat | zone=unknown (inferred unknown) (latest_object_observation)
+- 303: Rabbit | controller=Bickmat | owner=Bickmat | zone=Battlefield (latest_object_observation)
+- 304: object 304 | controller=Bickmat | owner=Bickmat | zone=unknown (inferred unknown) (latest_object_observation)
+- 305: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 306: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 307: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 311: Tigra, Feline Fury | controller=Bickmat | owner=Bickmat | zone=Battlefield (latest_object_observation)
+- 314: object 314 | controller=Bickmat | owner=Bickmat | zone=unknown (inferred unknown) (latest_object_observation)
+- 315: Deal Gone Bad | controller=Bickmat | owner=Bickmat | zone=unknown (inferred unknown) (latest_object_observation)
+- 316: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 317: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 318: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 321: Tigra, Feline Fury | controller=Bickmat | owner=Bickmat | zone=Graveyard (latest_object_observation)
+- 322: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 323: object 323 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 326: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 328: Good-Fortune Unicorn | controller=Bickmat | owner=Bickmat | zone=Battlefield (latest_object_observation)
+- 332: object 332 | controller=Bickmat | owner=Bickmat | zone=unknown (inferred unknown) (latest_object_observation)
+- 333: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 334: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 335: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 341: object 341 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 342: object 342 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 343: object 343 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 344: object 344 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 345: object 345 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 346: object 346 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 347: object 347 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 348: object 348 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 349: object 349 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 350: object 350 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 351: object 351 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 352: object 352 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 353: object 353 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 354: object 354 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 355: object 355 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 356: object 356 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 357: object 357 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 358: object 358 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 359: object 359 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 360: object 360 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 361: object 361 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 362: object 362 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 363: object 363 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 364: object 364 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 365: object 365 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 366: object 366 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 367: object 367 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 368: object 368 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 369: object 369 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 370: object 370 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 371: object 371 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 372: object 372 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 373: object 373 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 374: object 374 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 375: object 375 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 376: object 376 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 377: object 377 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 378: object 378 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 379: object 379 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 380: object 380 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 381: object 381 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 382: object 382 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 383: object 383 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 384: object 384 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 385: object 385 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 386: object 386 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 387: object 387 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Bickmat: 18 total items
+  zones: Battlefield=9, Graveyard=1, unknown=8
+  objects: Hare Apparent x2, Plains x2, Tigra, Feline Fury x2, Deal Gone Bad, Forest, Good-Fortune Unicorn, Hinterland Sanctifier, Rabbit, object 289, object 290, object 301, object 302
+gian31: 71 total items
+  zones: Battlefield=7, Hand=13, Stack=2, unknown=49
+  objects: Shoot the Sheriff x4, Swamp x4, Bloodthirsty Conqueror x2, Godless Shrine x2, Lunar Convocation x2, Plains x2, Shattered Sanctum x2, Starscape Cleric x2, Case of the Uneaten Feast, Phyrexian Arena, Stroke of Midnight, object 323
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (7): Bloodthirsty Conqueror, Godless Shrine, Plains, Shattered Sanctum, Starscape Cleric, Swamp, Swamp
+  Graveyard: 0 card(s)
+Bickmat:
+  Battlefield (9): Forest, Good-Fortune Unicorn, Hare Apparent, Hare Apparent, Hinterland Sanctifier, Plains, Plains, Rabbit, Tigra, Feline Fury
+  Graveyard: 1 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+57 objects have no resolved final zone and are omitted from the known board state.
+Bickmat: 8 unknown object(s)
+gian31: 49 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=13, Stack=2
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Bickmat:
+  Battlefield (8): Plains, Hinterland Sanctifier, Forest, Hare Apparent, Plains, Hare Apparent, Rabbit, Good-Fortune Unicorn
+  Graveyard (1): Tigra, Feline Fury
+gian31:
+  Battlefield (8): Godless Shrine, Swamp, Lunar Convocation, Shattered Sanctum, Starscape Cleric, Plains, Swamp, Bloodthirsty Conqueror
+  Graveyard (1): Shoot the Sheriff
+Known non-persistent entries (counts only):
+  Bickmat: Limbo=1
+  gian31: Hand=4, Limbo=5, Pending=1
+  unknown: Hand=3, Library=96, Limbo=5
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: Bickmat Battlefield=2
+- Turn 2: Bickmat Battlefield=2; gian31 Battlefield=1
+- Turn 3: Bickmat Battlefield=4; gian31 Battlefield=1
+- Turn 4: Bickmat Battlefield=4; gian31 Battlefield=3
+- Turn 5: Bickmat Battlefield=6; gian31 Battlefield=3
+- Turn 6: Bickmat Battlefield=6; gian31 Battlefield=5
+- Turn 7: Bickmat Battlefield=7; gian31 Battlefield=5
+- Turn 8: Bickmat Battlefield=6; Bickmat Graveyard=1; gian31 Battlefield=6; gian31 Graveyard=1
+- Turn 9: Bickmat Battlefield=7; Bickmat Graveyard=1; gian31 Battlefield=6; gian31 Graveyard=1
+- Turn 10: Bickmat Battlefield=7; Bickmat Graveyard=1; gian31 Battlefield=8; gian31 Graveyard=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Hare Apparent resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Hare Apparent resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Tigra, Feline Fury resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Good-Fortune Unicorn resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
