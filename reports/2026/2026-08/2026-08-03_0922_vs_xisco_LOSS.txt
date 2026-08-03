@@ -1,0 +1,885 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: xisco, gian31
+Seat map: Seat 1=xisco, Seat 2=gian31
+Turn range (known): 1 - 15
+Records: 56
+Action chains: 30
+Winner: xisco
+Final life: {'xisco': 3, 'gian31': -11}
+Lethal life snapshot: gian31 14 -> -11 (at least 25 damage/life loss observed; exact source may be unavailable).
+Match conclusion: Life total reached 0 observed for gian31.
+Last captured action before match-result payload: Turn 15 (Phase_Main1; Ability of Simulacrum Synthesizer, seq 432).
+Later numbered GRE record(s): 5 after action sequence 432 across turn(s) [15]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 33 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 11 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15] (raw records=11; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 17 explicit Library -> Hand movement(s); named in the draw record=9, resolved through an explicit identity transition=8, unresolved=0.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: xisco; observed final life totals: {'xisco': 3, 'gian31': -11}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 15 (Phase_Main1; Ability of Simulacrum Synthesizer, seq 432).
+Last captured life snapshot: gian31 14 -> -11 (seq 444).
+Observed active tokens: Construct [402] controller=xisco, created Turn 13, last observed Turn 15 seq 438, P/T 13/13; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Construct [410] controller=xisco, created Turn 13, last observed Turn 15 seq 438, P/T 13/13; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Construct [411] controller=xisco, created Turn 13, last observed Turn 15 seq 438, P/T 13/13; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Gnome Soldier [438] controller=xisco, created Turn 15, last observed Turn 15 seq 428, P/T 13/13; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Construct [439] controller=xisco, created Turn 15, last observed Turn 15 seq 430, P/T 13/13; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Construct [440] controller=xisco, created Turn 15, last observed Turn 15 seq 432, P/T 13/13; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: gian31 reached -11 life; exact lethal-source coverage is reported separately.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Gleaming Bastion [279] Hand (xisco) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      xisco: Battlefield: Gleaming Bastion [279]
+
+Turn 2
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=27] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 282) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 282) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [280] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 21).
+      Plains [281] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      xisco: Battlefield: Gleaming Bastion [279]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Plains [281]
+
+Turn 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Interdimensional Web Watch [284] Library (xisco) -> Hand (xisco) (Draw; GRE sequence 41).
+      Plains [285] Hand (xisco) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      xisco: Battlefield: Gleaming Bastion [279], Plains [285]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Plains [281]
+
+Turn 4
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=64] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 288) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 288) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=66] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [286] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 58).
+      Swamp [287] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 61).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      xisco: Battlefield: Gleaming Bastion [279], Plains [285]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Hinterland Sanctifier [288], Plains [281], Swamp [287]
+
+Turn 5
+  - Simulacrum Synthesizer [valid_resolution_no_immediate_mutation, seq=87] (active=xisco, phase=Phase_Main1, controller=xisco, owner=xisco, source_object=293)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Simulacrum Synthesizer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Simulacrum Synthesizer (object 293) Hand (xisco) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Simulacrum Synthesizer (object 293) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: xisco -2 (individual changes below; gains and losses may offset)
+    life: xisco 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hallowed Fountain [291] Library (xisco) -> Hand (xisco) (Draw; GRE sequence 80).
+      Hallowed Fountain [292] Hand (xisco) -> Battlefield (PlayLand; GRE sequence 84).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      xisco: Battlefield: Gleaming Bastion [279], Hallowed Fountain [292], Plains [285], Simulacrum Synthesizer [293]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Hinterland Sanctifier [288], Plains [281], Swamp [287]
+
+Turn 6
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=111] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=300)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 300) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 300) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=114] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=116] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=300, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: xisco loses 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=118] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=120] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=300, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: xisco loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Hinterland Sanctifier [288] (unblocked, observed P/T 1/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 +2; xisco -3 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    life: xisco 18 -> 17
+    life: gian31 22 -> 23
+    life: xisco 17 -> 16
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): xisco 16 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Lunar Convocation [298] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 104).
+      Shattered Sanctum [299] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 107).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      xisco: Battlefield: Gleaming Bastion [279], Hallowed Fountain [292], Plains [285], Simulacrum Synthesizer [293]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Hinterland Sanctifier [288], Plains [281], Shattered Sanctum [299], Starscape Cleric [300], Swamp [287]
+
+Turn 7
+  - White Auracite [valid_resolution_no_immediate_mutation, seq=146] (active=xisco, phase=Phase_Main1, controller=xisco, owner=xisco, source_object=309)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: White Auracite resolves with no immediate observed mutation.
+      protocol-linked zone transfer: White Auracite (object 309) Hand (xisco) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: White Auracite (object 309) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Simulacrum Synthesizer [observed_semantic_effect, seq=151] (active=xisco, phase=Phase_Main1, controller=xisco, owner=xisco, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Simulacrum Synthesizer: a token is created.
+      explicit effect object references: Construct [316] (role/targeting only where the protocol identifies it)
+      token created: Construct (object 316, controller=xisco) 5/5; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 314).
+  - Ability of White Auracite [observed_semantic_effect, seq=153] (active=xisco, phase=Phase_Main1, controller=xisco, owner=xisco, source_object=309, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of White Auracite: exiles Starscape Cleric.
+      explicit effect object references: Starscape Cleric [300], Starscape Cleric [317] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Starscape Cleric (object 317) Battlefield -> Exile (Exile; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Floodfarm Verge [307] Library (xisco) -> Hand (xisco) (Draw; GRE sequence 140).
+      Floodfarm Verge [308] Hand (xisco) -> Battlefield (PlayLand; GRE sequence 143).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      xisco: Battlefield: Floodfarm Verge [308], Gleaming Bastion [279], Hallowed Fountain [292], Plains [285], Simulacrum Synthesizer [293], White Auracite [309]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Hinterland Sanctifier [288], Plains [281], Shattered Sanctum [299], Swamp [287]; Exile: Starscape Cleric [317]
+
+Turn 8
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=173] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=320)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 320) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 320) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=176] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=178] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=320, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: xisco loses 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=180] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=182] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=320, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: xisco loses 1 life.
+    net observed life change this turn: gian31 +2; xisco -2 (individual changes below; gains and losses may offset)
+    life: gian31 23 -> 24
+    life: xisco 15 -> 14
+    life: gian31 24 -> 25
+    life: xisco 14 -> 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [318] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 167).
+      Swamp [319] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 170).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      xisco: Battlefield: Floodfarm Verge [308], Gleaming Bastion [279], Hallowed Fountain [292], Plains [285], Simulacrum Synthesizer [293], White Auracite [309]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Hinterland Sanctifier [288], Marauding Blight-Priest [320], Plains [281], Shattered Sanctum [299], Swamp [287], Swamp [319]; Exile: Starscape Cleric [317]
+
+Turn 9
+  - Perilous Snare [valid_resolution_no_immediate_mutation, seq=203] (active=xisco, phase=Phase_Main1, controller=xisco, owner=xisco, source_object=330)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Perilous Snare resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Perilous Snare (object 330) Hand (xisco) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Perilous Snare (object 330) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Simulacrum Synthesizer [observed_semantic_effect, seq=208] (active=xisco, phase=Phase_Main1, controller=xisco, owner=xisco, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Simulacrum Synthesizer: a token is created.
+      explicit effect object references: Construct [337] (role/targeting only where the protocol identifies it)
+      token created: Construct (object 337, controller=xisco) 5/5; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 334).
+  - Ability of Perilous Snare [observed_semantic_effect, seq=210] (active=xisco, phase=Phase_Main1, controller=xisco, owner=xisco, source_object=330, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Perilous Snare: exiles Marauding Blight-Priest.
+      explicit effect object references: Marauding Blight-Priest [320], Marauding Blight-Priest [338] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 338) Battlefield -> Exile (Exile; shared object ID)
+  - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. [valid_resolution_no_immediate_mutation, seq=228] (active=xisco, phase=Phase_Combat, step=Step_CombatDamage, controller=xisco, owner=xisco, source_object=336)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+  Combat snapshots observed (active=xisco; frames: DeclareAttack):
+      attackers: Construct [316] (unblocked, observed P/T 5/5)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -5 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 25 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Stock Up [328] Library (xisco) -> Hand (xisco) (Draw; GRE sequence 197).
+      Fountainport [329] Hand (xisco) -> Battlefield (PlayLand; GRE sequence 200).
+      Stock Up [339] Hand (xisco) -> Stack (CastSpell; GRE sequence 211).
+      Simulacrum Synthesizer [344] Library (xisco) -> Hand (xisco) (Put; GRE sequence 214).
+      The Mind Stone [343] Library (xisco) -> Hand (xisco) (Put; GRE sequence 214).
+      Stock Up [345] Stack -> Graveyard (xisco) (Resolve; GRE sequence 215).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      xisco: Battlefield: Floodfarm Verge [308], Fountainport [329], Gleaming Bastion [279], Hallowed Fountain [292], Perilous Snare [330], Plains [285], Simulacrum Synthesizer [293], White Auracite [309]; Graveyard: Stock Up [345]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Hinterland Sanctifier [288], Plains [281], Shattered Sanctum [299], Swamp [287], Swamp [319]; Exile: Marauding Blight-Priest [338], Starscape Cleric [317]
+
+Turn 10
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=246] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=350)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 350) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 350) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=249] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=350, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Starscape Cleric: a token is created.
+      explicit effect object references: Starscape Cleric [359] (role/targeting only where the protocol identifies it)
+      token created: Starscape Cleric (object 359, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 356).
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=252] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=255] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=359)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: xisco loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=257] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=350, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: xisco loses 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=259] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=262] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=359)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: xisco loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=264] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=350, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: xisco loses 1 life.
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=266] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=269] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=359)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: xisco loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=271] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=350, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: xisco loses 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=273] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=276] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=359)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: xisco loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=278] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=350, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: xisco loses 1 life.
+    net observed life change this turn: gian31 +4; xisco -8 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life: xisco 13 -> 12
+    life: xisco 12 -> 11
+    life: gian31 21 -> 22
+    life: xisco 11 -> 10
+    life: xisco 10 -> 9
+    life: gian31 22 -> 23
+    life: xisco 9 -> 8
+    life: xisco 8 -> 7
+    life: gian31 23 -> 24
+    life: xisco 7 -> 6
+    life: xisco 6 -> 5
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [348] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 238).
+      Plains [349] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 241).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      xisco: Battlefield: Floodfarm Verge [308], Fountainport [329], Gleaming Bastion [279], Hallowed Fountain [292], Perilous Snare [330], Plains [285], Simulacrum Synthesizer [293], White Auracite [309]; Graveyard: Stock Up [345]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Hinterland Sanctifier [288], Plains [281], Plains [349], Shattered Sanctum [299], Starscape Cleric [350], Swamp [287], Swamp [319]; Exile: Marauding Blight-Priest [338], Starscape Cleric [317]
+
+Turn 11
+  - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. [valid_resolution_no_immediate_mutation, seq=308] (active=xisco, phase=Phase_Combat, step=Step_CombatDamage, controller=xisco, owner=xisco, source_object=336)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+  - Day of Judgment [observed_semantic_effect, seq=315] (active=xisco, phase=Phase_Main2, controller=xisco, owner=xisco, source_object=373)
+      effects: destroy, destroy, destroy, destroy, destroy
+      narrative: Day of Judgment destroys Hinterland Sanctifier, Construct, Construct, Starscape Cleric, Starscape Cleric.
+      explicit effect object references: Hinterland Sanctifier [288], Construct [316], Construct [337], Starscape Cleric [350], Starscape Cleric [359], Hinterland Sanctifier [378], object 379 [379], object 380 [380], Starscape Cleric [381], object 382 [382] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Day of Judgment (object 373) Hand (xisco) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 378) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Construct (object 379) Battlefield -> Graveyard (xisco) (Destroy; shared object ID)
+      protocol-linked zone transfer: Construct (object 380) Battlefield -> Graveyard (xisco) (Destroy; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 381) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 382) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Day of Judgment (object 383) Stack -> Graveyard (xisco) (Resolve; shared object ID)
+      identity continuity: source object 373 -> transfer object 383 (explicit GRE ObjectIdChanged chain).
+  - The Mind Stone [valid_resolution_no_immediate_mutation, seq=318] (active=xisco, phase=Phase_Main2, controller=xisco, owner=xisco, source_object=384)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: The Mind Stone resolves with no immediate observed mutation.
+      protocol-linked zone transfer: The Mind Stone (object 384) Hand (xisco) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: The Mind Stone (object 384) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=xisco; frames: DeclareAttack -> DeclareBlock):
+      attackers: Construct [316] (unblocked, observed P/T 5/5), Construct [337] (unblocked, observed P/T 5/5)
+      blockers: none identified
+      combat-correlated defending-player life loss: 10; observed attacker power total: 10; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -10 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 10 + observed modifiers 0 = 10; individual assignment unavailable): gian31 24 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Day of Judgment [370] Library (xisco) -> Hand (xisco) (Draw; GRE sequence 293).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      xisco: Battlefield: Floodfarm Verge [308], Fountainport [329], Gleaming Bastion [279], Hallowed Fountain [292], Perilous Snare [330], Plains [285], Simulacrum Synthesizer [293], The Mind Stone [384], White Auracite [309]; Graveyard: Construct [379], Construct [380], Day of Judgment [383], Stock Up [345]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Plains [281], Plains [349], Shattered Sanctum [299], Swamp [287], Swamp [319]; Exile: Marauding Blight-Priest [338], Starscape Cleric [317]; Graveyard: Hinterland Sanctifier [378], Starscape Cleric [381], Starscape Cleric [382]
+
+Turn 12
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=329] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=388)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 388) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 388) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=332] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=388, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 232 [232], Marauding Blight-Priest [394] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 394) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life: gian31 14 -> 12
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [387] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 324).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      xisco: Battlefield: Floodfarm Verge [308], Fountainport [329], Gleaming Bastion [279], Hallowed Fountain [292], Perilous Snare [330], Plains [285], Simulacrum Synthesizer [293], The Mind Stone [384], White Auracite [309]; Graveyard: Construct [379], Construct [380], Day of Judgment [383], Stock Up [345]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Lunar Convocation [388], Plains [281], Plains [349], Shattered Sanctum [299], Swamp [287], Swamp [319]; Exile: Marauding Blight-Priest [338], Starscape Cleric [317]; Graveyard: Hinterland Sanctifier [378], Starscape Cleric [381], Starscape Cleric [382]
+
+Turn 13
+  - Simulacrum Synthesizer [valid_resolution_no_immediate_mutation, seq=351] (active=xisco, phase=Phase_Main1, controller=xisco, owner=xisco, source_object=396)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Simulacrum Synthesizer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Simulacrum Synthesizer (object 396) Hand (xisco) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Simulacrum Synthesizer (object 396) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Simulacrum Synthesizer [observed_semantic_effect, seq=354] (active=xisco, phase=Phase_Main1, controller=xisco, owner=xisco, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Simulacrum Synthesizer: a token is created.
+      explicit effect object references: Construct [402] (role/targeting only where the protocol identifies it)
+      token created: Construct (object 402, controller=xisco) 13/13; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 401).
+  - Perilous Snare [valid_resolution_no_immediate_mutation, seq=360] (active=xisco, phase=Phase_Main1, controller=xisco, owner=xisco, source_object=403)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Perilous Snare resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Perilous Snare (object 403) Hand (xisco) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Perilous Snare (object 403) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Simulacrum Synthesizer [observed_semantic_effect, seq=365] (active=xisco, phase=Phase_Main1, controller=xisco, owner=xisco, source_object=396, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Simulacrum Synthesizer: a token is created.
+      explicit effect object references: Construct [410] (role/targeting only where the protocol identifies it)
+      token created: Construct (object 410, controller=xisco) 13/13; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 408).
+  - Ability of Simulacrum Synthesizer [observed_semantic_effect, seq=367] (active=xisco, phase=Phase_Main1, controller=xisco, owner=xisco, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Simulacrum Synthesizer: a token is created.
+      explicit effect object references: Construct [411] (role/targeting only where the protocol identifies it)
+      token created: Construct (object 411, controller=xisco) 13/13; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 407).
+  - Ability of Perilous Snare [observed_semantic_effect, seq=369] (active=xisco, phase=Phase_Main1, controller=xisco, owner=xisco, source_object=403, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Perilous Snare: exiles Lunar Convocation.
+      explicit effect object references: Lunar Convocation [388], Lunar Convocation [412] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Lunar Convocation (object 412) Battlefield -> Exile (Exile; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Perilous Snare [395] Library (xisco) -> Hand (xisco) (Draw; GRE sequence 346).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      xisco: Battlefield: Floodfarm Verge [308], Fountainport [329], Gleaming Bastion [279], Hallowed Fountain [292], Perilous Snare [330], Perilous Snare [403], Plains [285], Simulacrum Synthesizer [293], Simulacrum Synthesizer [396], The Mind Stone [384], White Auracite [309]; Graveyard: Construct [379], Construct [380], Day of Judgment [383], Stock Up [345]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Plains [281], Plains [349], Shattered Sanctum [299], Swamp [287], Swamp [319]; Exile: Lunar Convocation [412], Marauding Blight-Priest [338], Starscape Cleric [317]; Graveyard: Hinterland Sanctifier [378], Starscape Cleric [381], Starscape Cleric [382]
+
+Turn 14
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=388] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=414)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 414) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 414) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=390] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=392] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=414, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: xisco loses 1 life.
+  - Deep-Cavern Bat [valid_resolution_no_immediate_mutation, seq=395] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=420)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deep-Cavern Bat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deep-Cavern Bat (object 420) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 420) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=403] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=405] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=414, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: xisco loses 1 life.
+    net observed life change this turn: gian31 +2; xisco -2 (individual changes below; gains and losses may offset)
+    life: gian31 12 -> 13
+    life: xisco 5 -> 4
+    life: gian31 13 -> 14
+    life: xisco 4 -> 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Deep-Cavern Bat [413] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 383).
+      Interdimensional Web Watch [425] Hand (xisco) -> Exile (Exile; GRE sequence 401).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      xisco: Battlefield: Floodfarm Verge [308], Fountainport [329], Gleaming Bastion [279], Hallowed Fountain [292], Perilous Snare [330], Perilous Snare [403], Plains [285], Simulacrum Synthesizer [293], Simulacrum Synthesizer [396], The Mind Stone [384], White Auracite [309]; Graveyard: Construct [379], Construct [380], Day of Judgment [383], Stock Up [345]; Exile: Interdimensional Web Watch [425]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Deep-Cavern Bat [420], Marauding Blight-Priest [414], Plains [281], Plains [349], Shattered Sanctum [299], Swamp [287], Swamp [319]; Exile: Lunar Convocation [412], Marauding Blight-Priest [338], Starscape Cleric [317]; Graveyard: Hinterland Sanctifier [378], Starscape Cleric [381], Starscape Cleric [382]
+
+Turn 15
+  - Thousand Moons Smithy [valid_resolution_no_immediate_mutation, seq=425] (active=xisco, phase=Phase_Main1, controller=xisco, owner=xisco, source_object=430)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Thousand Moons Smithy resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Thousand Moons Smithy (object 430) Hand (xisco) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Thousand Moons Smithy (object 430) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Thousand Moons Smithy [observed_semantic_effect, seq=428] (active=xisco, phase=Phase_Main1, controller=xisco, owner=xisco, source_object=430, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Thousand Moons Smithy: a token is created.
+      explicit effect object references: Gnome Soldier [438] (role/targeting only where the protocol identifies it)
+      token created: Gnome Soldier (object 438, controller=xisco) 13/13; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 437).
+  - Ability of Simulacrum Synthesizer [observed_semantic_effect, seq=430] (active=xisco, phase=Phase_Main1, controller=xisco, owner=xisco, source_object=396, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Simulacrum Synthesizer: a token is created.
+      explicit effect object references: Construct [439] (role/targeting only where the protocol identifies it)
+      token created: Construct (object 439, controller=xisco) 13/13; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 436).
+  - Ability of Simulacrum Synthesizer [observed_semantic_effect, seq=432] (active=xisco, phase=Phase_Main1, controller=xisco, owner=xisco, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Simulacrum Synthesizer: a token is created.
+      explicit effect object references: Construct [440] (role/targeting only where the protocol identifies it)
+      token created: Construct (object 440, controller=xisco) 13/13; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 435).
+  Combat snapshots observed (active=xisco; frames: DeclareAttack -> DeclareBlock -> CombatDamage):
+      attackers: Construct [402] (blocked, observed P/T 13/13), Construct [410] (unblocked, observed P/T 13/13), Construct [411] (unblocked, observed P/T 13/13)
+      blockers: Deep-Cavern Bat [420]
+      combat-result zone change: Deep-Cavern Bat [444] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -25 (individual changes below; gains and losses may offset)
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): gian31 14 -> -11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Floodfarm Verge [428] Library (xisco) -> Hand (xisco) (Draw; GRE sequence 419).
+      Floodfarm Verge [429] Hand (xisco) -> Battlefield (PlayLand; GRE sequence 422).
+      Deep-Cavern Bat [444] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 444).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      xisco: Battlefield: Floodfarm Verge [308], Floodfarm Verge [429], Fountainport [329], Gleaming Bastion [279], Hallowed Fountain [292], Perilous Snare [330], Perilous Snare [403], Plains [285], Simulacrum Synthesizer [293], Simulacrum Synthesizer [396], The Mind Stone [384], Thousand Moons Smithy [430], White Auracite [309]; Graveyard: Construct [379], Construct [380], Day of Judgment [383], Stock Up [345]; Exile: Interdimensional Web Watch [425]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Marauding Blight-Priest [414], Plains [281], Plains [349], Shattered Sanctum [299], Swamp [287], Swamp [319]; Exile: Lunar Convocation [412], Marauding Blight-Priest [338], Starscape Cleric [317]; Graveyard: Deep-Cavern Bat [444], Hinterland Sanctifier [378], Starscape Cleric [381], Starscape Cleric [382]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 5, seq 84: xisco 20 -> 18. No source event correlated in captured records.
+- Turn 12, seq 330, Phase_Main1: gian31 14 -> 12. No source event correlated in captured records. Previous captured action: Lunar Convocation.
+- Turn 15, seq 444, Phase_Main1: gian31 14 -> -11. Combat declaration observed; exact assignment unavailable. Previous captured action: Simulacrum Synthesizer.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 15: gian31 14 -> -11 (required change 25). Explained by exact same-record evidence: 0/25; semantically attributed: 0/25; unexplained residual: 25/25.
+  Combat snapshot observed at or before lethal: Turn 15; attackers=Construct [402], Construct [410], Construct [411]; observed snapshot power total=39; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 15, Ability of Simulacrum Synthesizer (seq 432).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 9 token creations observed; 6 active as last observed; 3 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Construct [316] controller=xisco; created Turn 7 (5/5); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 11 via Battlefield -> Graveyard (xisco) (Destroy); ceases to exist after that observed move (token rules consequence).
+- Construct [337] controller=xisco; created Turn 9 (5/5); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 11 via Battlefield -> Graveyard (xisco) (Destroy); ceases to exist after that observed move (token rules consequence).
+- Starscape Cleric [359] controller=gian31; created Turn 10 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 11 via Battlefield -> Graveyard (gian31) (Destroy); ceases to exist after that observed move (token rules consequence).
+- Construct [402] controller=xisco; created Turn 13 (13/13); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 15, object 402 (latest observed P/T 13/13; current zone unconfirmed).
+- Construct [410] controller=xisco; created Turn 13 (13/13); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 15, object 410 (latest observed P/T 13/13; current zone unconfirmed).
+- Construct [411] controller=xisco; created Turn 13 (13/13); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 15, object 411 (latest observed P/T 13/13; current zone unconfirmed).
+- Gnome Soldier [438] controller=xisco; created Turn 15 (13/13); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 15, object 438 (latest observed P/T 13/13; current zone unconfirmed).
+- Construct [439] controller=xisco; created Turn 15 (13/13); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 15, object 439 (latest observed P/T 13/13; current zone unconfirmed).
+- Construct [440] controller=xisco; created Turn 15 (13/13); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 15, object 440 (latest observed P/T 13/13; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Gleaming Bastion [owner=xisco, controller=xisco] moves Hand (xisco) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 24: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 27: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 41: Interdimensional Web Watch [owner=xisco, controller=xisco] moves Library (xisco) -> Hand (xisco) (Draw).
+- Turn 3, seq 44: Plains [owner=xisco, controller=xisco] moves Hand (xisco) -> Battlefield (PlayLand).
+- Turn 4, seq 58: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 61: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 62: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 64: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 80: Hallowed Fountain [owner/controller metadata unavailable] moves Library (xisco) -> Hand (xisco) (Draw).
+- Turn 5, seq 84: Hallowed Fountain [owner=xisco, controller=xisco] moves Hand (xisco) -> Battlefield (PlayLand).
+- Turn 5, seq 85: Simulacrum Synthesizer [owner=xisco, controller=xisco] moves Hand (xisco) -> Stack (CastSpell).
+- Turn 5, seq 87: Simulacrum Synthesizer [owner=xisco, controller=xisco] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 104: Lunar Convocation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 107: Shattered Sanctum [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 108: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 111: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 140: Floodfarm Verge [owner/controller metadata unavailable] moves Library (xisco) -> Hand (xisco) (Draw).
+- Turn 7, seq 143: Floodfarm Verge [owner=xisco, controller=xisco] moves Hand (xisco) -> Battlefield (PlayLand).
+- Turn 7, seq 144: White Auracite [owner=xisco, controller=xisco] moves Hand (xisco) -> Stack (CastSpell).
+- Turn 7, seq 146: White Auracite [owner=xisco, controller=xisco] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 153: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Exile (Exile).
+- Turn 8, seq 167: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 170: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 171: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 173: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 197: Stock Up [owner/controller metadata unavailable] moves Library (xisco) -> Hand (xisco) (Draw).
+- Turn 9, seq 200: Fountainport [owner=xisco, controller=xisco] moves Hand (xisco) -> Battlefield (PlayLand).
+- Turn 9, seq 201: Perilous Snare [owner=xisco, controller=xisco] moves Hand (xisco) -> Stack (CastSpell).
+- Turn 9, seq 203: Perilous Snare [owner=xisco, controller=xisco] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 210: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Battlefield -> Exile (Exile).
+- Turn 9, seq 211: Stock Up [owner=xisco, controller=xisco] moves Hand (xisco) -> Stack (CastSpell).
+- Turn 9, seq 214: Simulacrum Synthesizer [owner/controller metadata unavailable] moves Library (xisco) -> Hand (xisco) (Put).
+- Turn 9, seq 214: The Mind Stone [owner/controller metadata unavailable] moves Library (xisco) -> Hand (xisco) (Put).
+- Turn 9, seq 215: Stock Up [owner=xisco, controller=xisco] moves Stack -> Graveyard (xisco) (Resolve).
+- Turn 10, seq 238: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 241: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 242: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 246: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 293: Day of Judgment [owner/controller metadata unavailable] moves Library (xisco) -> Hand (xisco) (Draw).
+- Turn 11, seq 313: Day of Judgment [owner=xisco, controller=xisco] moves Hand (xisco) -> Stack (CastSpell).
+- Turn 11, seq 315: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 11, seq 315: Construct [owner/controller metadata unavailable] moves Battlefield -> Graveyard (xisco) (Destroy).
+- Turn 11, seq 315: Construct [owner/controller metadata unavailable] moves Battlefield -> Graveyard (xisco) (Destroy).
+- Turn 11, seq 315: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 11, seq 315: Starscape Cleric [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 11, seq 315: Day of Judgment [owner=xisco, controller=xisco] moves Stack -> Graveyard (xisco) (Resolve).
+- Turn 11, seq 316: The Mind Stone [owner=xisco, controller=xisco] moves Hand (xisco) -> Stack (CastSpell).
+- Turn 11, seq 318: The Mind Stone [owner=xisco, controller=xisco] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 324: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 327: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 329: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 332: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 346: Perilous Snare [owner/controller metadata unavailable] moves Library (xisco) -> Hand (xisco) (Draw).
+- Turn 13, seq 349: Simulacrum Synthesizer [owner=xisco, controller=xisco] moves Hand (xisco) -> Stack (CastSpell).
+- Turn 13, seq 351: Simulacrum Synthesizer [owner=xisco, controller=xisco] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 358: Perilous Snare [owner=xisco, controller=xisco] moves Hand (xisco) -> Stack (CastSpell).
+- Turn 13, seq 360: Perilous Snare [owner=xisco, controller=xisco] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 369: Lunar Convocation [owner=gian31, controller=gian31] moves Battlefield -> Exile (Exile).
+- Turn 14, seq 383: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 386: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 388: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 393: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 395: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 401: Interdimensional Web Watch [owner=xisco, controller=xisco] moves Hand (xisco) -> Exile (Exile).
+- Turn 15, seq 419: Floodfarm Verge [owner/controller metadata unavailable] moves Library (xisco) -> Hand (xisco) (Draw).
+- Turn 15, seq 422: Floodfarm Verge [owner=xisco, controller=xisco] moves Hand (xisco) -> Battlefield (PlayLand).
+- Turn 15, seq 423: Thousand Moons Smithy [owner=xisco, controller=xisco] moves Hand (xisco) -> Stack (CastSpell).
+- Turn 15, seq 425: Thousand Moons Smithy [owner=xisco, controller=xisco] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 444: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 161 becomes object 279 [Gleaming Bastion].
+- Turn 2, seq 21: object 226 becomes object 280 [Starscape Cleric].
+- Turn 2, seq 24: object 220 becomes object 281 [Plains].
+- Turn 2, seq 25: object 225 becomes object 282 [Case of the Uneaten Feast].
+- Turn 3, seq 41: object 166 becomes object 284 [Interdimensional Web Watch].
+- Turn 3, seq 44: object 165 becomes object 285 [Plains].
+- Turn 4, seq 58: object 227 becomes object 286 [Swamp].
+- Turn 4, seq 61: object 286 becomes object 287 [Swamp].
+- Turn 4, seq 62: object 221 becomes object 288 [Hinterland Sanctifier].
+- Turn 5, seq 80: object 167 becomes object 291 [Hallowed Fountain].
+- Turn 5, seq 84: object 291 becomes object 292 [Hallowed Fountain].
+- Turn 5, seq 85: object 162 becomes object 293 [Simulacrum Synthesizer].
+- Turn 6, seq 104: object 228 becomes object 298 [Lunar Convocation].
+- Turn 6, seq 107: object 222 becomes object 299 [Shattered Sanctum].
+- Turn 6, seq 108: object 280 becomes object 300 [Starscape Cleric].
+- Turn 7, seq 140: object 168 becomes object 307 [Floodfarm Verge].
+- Turn 7, seq 143: object 307 becomes object 308 [Floodfarm Verge].
+- Turn 7, seq 144: object 159 becomes object 309 [White Auracite].
+- Turn 7, seq 153: object 300 becomes object 317 [Starscape Cleric].
+- Turn 8, seq 167: object 229 becomes object 318 [Swamp].
+- Turn 8, seq 170: object 318 becomes object 319 [Swamp].
+- Turn 8, seq 171: object 224 becomes object 320 [Marauding Blight-Priest].
+- Turn 9, seq 197: object 170 becomes object 328 [Stock Up].
+- Turn 9, seq 200: object 160 becomes object 329 [Fountainport].
+- Turn 9, seq 201: object 163 becomes object 330 [Perilous Snare].
+- Turn 9, seq 210: object 320 becomes object 338 [Marauding Blight-Priest].
+- Turn 9, seq 211: object 328 becomes object 339 [Stock Up].
+- Turn 9, seq 214: object 173 becomes object 344 [Simulacrum Synthesizer].
+- Turn 9, seq 214: object 172 becomes object 343 [The Mind Stone].
+- Turn 9, seq 215: object 339 becomes object 345 [Stock Up].
+- Turn 10, seq 238: object 230 becomes object 348 [Starscape Cleric].
+- Turn 10, seq 241: object 223 becomes object 349 [Plains].
+- Turn 10, seq 242: object 348 becomes object 350 [Starscape Cleric].
+- Turn 11, seq 293: object 176 becomes object 370 [Day of Judgment].
+- Turn 11, seq 313: object 370 becomes object 373 [Day of Judgment].
+- Turn 11, seq 315: object 288 becomes object 378 [Hinterland Sanctifier].
+- Turn 11, seq 315: object 316 becomes object 379 [Construct].
+- Turn 11, seq 315: object 337 becomes object 380 [Construct].
+- Turn 11, seq 315: object 350 becomes object 381 [Starscape Cleric].
+- Turn 11, seq 315: object 359 becomes object 382 [Starscape Cleric].
+- Turn 11, seq 315: object 373 becomes object 383 [Day of Judgment].
+- Turn 11, seq 316: object 343 becomes object 384 [The Mind Stone].
+- Turn 12, seq 324: object 231 becomes object 387 [Makeshift Binding].
+- Turn 12, seq 327: object 298 becomes object 388 [Lunar Convocation].
+- Turn 12, seq 332: object 232 becomes object 394 [Marauding Blight-Priest].
+- Turn 13, seq 346: object 177 becomes object 395 [Perilous Snare].
+- Turn 13, seq 349: object 344 becomes object 396 [Simulacrum Synthesizer].
+- Turn 13, seq 358: object 395 becomes object 403 [Perilous Snare].
+- Turn 13, seq 369: object 388 becomes object 412 [Lunar Convocation].
+- Turn 14, seq 383: object 233 becomes object 413 [Deep-Cavern Bat].
+- Turn 14, seq 386: object 394 becomes object 414 [Marauding Blight-Priest].
+- Turn 14, seq 393: object 413 becomes object 420 [Deep-Cavern Bat].
+- Turn 14, seq 401: object 284 becomes object 425 [Interdimensional Web Watch].
+- Turn 15, seq 419: object 180 becomes object 428 [Floodfarm Verge].
+- Turn 15, seq 422: object 428 becomes object 429 [Floodfarm Verge].
+- Turn 15, seq 423: object 164 becomes object 430 [Thousand Moons Smithy].
+- Turn 15, seq 444: object 420 becomes object 444 [Deep-Cavern Bat].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: xisco plays Gleaming Bastion (object 279) from Hand (xisco) to Battlefield.
+- Turn 2: gian31 plays Plains (object 281) from Hand (gian31) to Battlefield.
+- Turn 3: xisco plays Plains (object 285) from Hand (xisco) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 287) from Hand (gian31) to Battlefield.
+- Turn 5: xisco plays Hallowed Fountain (object 292) from Hand (xisco) to Battlefield.
+- Turn 6: gian31 plays Shattered Sanctum (object 299) from Hand (gian31) to Battlefield.
+- Turn 7: xisco plays Floodfarm Verge (object 308) from Hand (xisco) to Battlefield.
+- Turn 8: gian31 plays Swamp (object 319) from Hand (gian31) to Battlefield.
+- Turn 9: xisco plays Fountainport (object 329) from Hand (xisco) to Battlefield.
+- Turn 10: gian31 plays Plains (object 349) from Hand (gian31) to Battlefield.
+- Turn 15: xisco plays Floodfarm Verge (object 429) from Hand (xisco) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 10: ordered adjacent records Starscape Cleric -> Hinterland Sanctifier; observed repetitions=2; net life: gian31 +2, xisco -1. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Hinterland Sanctifier=2, Starscape Cleric=9.
+  Individual ability records remain in the timeline.
+- Turn 10: ordered adjacent records Starscape Cleric -> Case of the Uneaten Feast; observed repetitions=2; net life: gian31 +2, xisco -2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=2, Starscape Cleric=9.
+  Individual ability records remain in the timeline.
+- Turn 14: ordered adjacent records Case of the Uneaten Feast -> Marauding Blight-Priest; observed repetitions=2; net life: gian31 +2, xisco -2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=2, Marauding Blight-Priest=2.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Starscape Cleric: casts=2; abilities=11 (triggered=11, activated=0) across turns [6, 6, 6, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=10, other=2
+  observed effects: life -1, synthetic event, token creation
+- Simulacrum Synthesizer: casts=2; abilities=7 (triggered=7, activated=0) across turns [5, 7, 9, 13, 13, 13, 13, 15, 15]
+  observed effect totals: draws=0, tokens=7, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Case of the Uneaten Feast: casts=1; abilities=7 (triggered=7, activated=0) across turns [2, 4, 6, 8, 10, 10, 14, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=7, other=0
+  observed effects: life +1
+- Marauding Blight-Priest: casts=2; abilities=4 (triggered=4, activated=0) across turns [8, 8, 8, 14, 14, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=4, other=2
+  observed effects: life -1, synthetic event
+- Hinterland Sanctifier: casts=1; abilities=4 (triggered=4, activated=0) across turns [4, 6, 8, 10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=4, other=0
+  observed effects: life +1
+- Perilous Snare: casts=2; abilities=2 (triggered=2, activated=0) across turns [9, 9, 13, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: exile
+- Lunar Convocation: casts=1; abilities=1 (triggered=1, activated=0) across turns [12, 12]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Thousand Moons Smithy: casts=1; abilities=1 (triggered=1, activated=0) across turns [15, 15]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn.: abilities=2 (triggered=0, activated=2) across turns [9, 11]
+- White Auracite: casts=1; abilities=1 (triggered=1, activated=0) across turns [7, 7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: exile
+- Day of Judgment: casts=1 across turns [11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=5
+  observed effects: destroy
+- Deep-Cavern Bat: casts=1 across turns [14]
+- The Mind Stone: casts=1 across turns [11]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 6 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Hinterland Sanctifier (gian31) -> xisco; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack (active=xisco)
+  attacker: Construct (xisco) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=xisco)
+  attacker: Construct (xisco) -> gian31; unblocked in this observed snapshot
+  attacker: Construct (xisco) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 15 - DeclareAttack, DeclareBlock, CombatDamage (active=xisco)
+  attacker: Construct (xisco) -> gian31; blocked by Deep-Cavern Bat
+  attacker: Construct (xisco) -> gian31; unblocked in this observed snapshot
+  attacker: Construct (xisco) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 9: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. (active=xisco) - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+- Turn 11: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. (active=xisco) - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 164: Thousand Moons Smithy | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 219: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 220: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 221: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 222: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 223: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 224: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 225: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 279: Gleaming Bastion | controller=xisco | owner=xisco | zone=Battlefield (latest_object_observation)
+- 280: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 281: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 282: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 284: Interdimensional Web Watch | controller=xisco | owner=xisco | zone=Hand (latest_object_observation)
+- 285: Plains | controller=xisco | owner=xisco | zone=Battlefield (latest_object_observation)
+- 286: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 287: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 288: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 290: object 290 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 292: Hallowed Fountain | controller=xisco | owner=xisco | zone=Battlefield (latest_object_observation)
+- 293: Simulacrum Synthesizer | controller=xisco | owner=xisco | zone=Stack (latest_object_observation)
+- 297: Splinter, the Mentor | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 298: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 299: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 300: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 303: object 303 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 304: object 304 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 305: object 305 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 306: object 306 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 308: Floodfarm Verge | controller=xisco | owner=xisco | zone=Battlefield (latest_object_observation)
+- 309: White Auracite | controller=xisco | owner=xisco | zone=Stack (latest_object_observation)
+- 314: object 314 | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 315: object 315 | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 316: Construct | controller=xisco | owner=xisco | zone=Hand (latest_object_observation)
+- 317: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 318: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 319: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 320: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 324: object 324 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 325: object 325 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 326: object 326 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 327: object 327 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 329: Fountainport | controller=xisco | owner=xisco | zone=Battlefield (latest_object_observation)
+- 330: Perilous Snare | controller=xisco | owner=xisco | zone=Stack (latest_object_observation)
+- 334: object 334 | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 335: object 335 | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 336: object 336 | controller=xisco | owner=xisco | zone=Hand (latest_object_observation)
+- 337: Construct | controller=xisco | owner=xisco | zone=Hand (latest_object_observation)
+- 338: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 339: Stock Up | controller=xisco | owner=xisco | zone=Stack (latest_object_observation)
+- 345: Stock Up | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 347: object 347 | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 348: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 349: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 350: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 356: object 356 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 357: object 357 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 358: object 358 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 359: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 360: object 360 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 361: object 361 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 362: object 362 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 363: object 363 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 364: object 364 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 365: object 365 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 366: object 366 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 367: object 367 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 368: object 368 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 369: object 369 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 372: object 372 | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 373: Day of Judgment | controller=xisco | owner=xisco | zone=Stack (latest_object_observation)
+- 378: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 381: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 383: Day of Judgment | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 384: The Mind Stone | controller=xisco | owner=xisco | zone=Stack (latest_object_observation)
+- 387: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 388: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 391: object 391 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 394: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 396: Simulacrum Synthesizer | controller=xisco | owner=xisco | zone=Stack (latest_object_observation)
+- 400: Splinter, the Mentor | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 401: object 401 | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 402: Construct | controller=xisco | owner=xisco | zone=Battlefield (latest_object_observation)
+- 403: Perilous Snare | controller=xisco | owner=xisco | zone=Stack (latest_object_observation)
+- 407: object 407 | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 408: object 408 | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 409: object 409 | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 410: Construct | controller=xisco | owner=xisco | zone=Battlefield (latest_object_observation)
+- 411: Construct | controller=xisco | owner=xisco | zone=Battlefield (latest_object_observation)
+- 412: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 413: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 414: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 418: object 418 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 419: object 419 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 420: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 423: object 423 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 424: object 424 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 425: Interdimensional Web Watch | controller=xisco | owner=xisco | zone=Exile (latest_object_observation)
+- 426: Thousand Moons Smithy | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 427: object 427 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 429: Floodfarm Verge | controller=xisco | owner=xisco | zone=Battlefield (latest_object_observation)
+- 430: Thousand Moons Smithy | controller=xisco | owner=xisco | zone=Stack (latest_object_observation)
+- 435: object 435 | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 436: object 436 | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 437: object 437 | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 438: Gnome Soldier | controller=xisco | owner=xisco | zone=Battlefield (latest_object_observation)
+- 439: Construct | controller=xisco | owner=xisco | zone=Battlefield (latest_object_observation)
+- 440: Construct | controller=xisco | owner=xisco | zone=Battlefield (latest_object_observation)
+- 443: object 443 | controller=xisco | owner=xisco | zone=unknown (inferred unknown) (latest_object_observation)
+- 444: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 63 total items
+  zones: Battlefield=12, Exile=3, Graveyard=2, Hand=16, Stack=2, unknown=28
+  objects: Starscape Cleric x7, Marauding Blight-Priest x5, Plains x4, Swamp x4, Deep-Cavern Bat x3, Hinterland Sanctifier x3, Lunar Convocation x3, Case of the Uneaten Feast x2, Shattered Sanctum x2, Bloodthirsty Conqueror, Makeshift Binding, object 290
+xisco: 46 total items
+  zones: Battlefield=12, Exile=1, Hand=4, Stack=9, unknown=20
+  objects: Construct x7, Thousand Moons Smithy x3, Day of Judgment x2, Floodfarm Verge x2, Interdimensional Web Watch x2, Perilous Snare x2, Simulacrum Synthesizer x2, Splinter, the Mentor x2, Stock Up x2, Fountainport, Gleaming Bastion, Gnome Soldier
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+xisco:
+  Battlefield (12): Construct, Construct, Construct, Construct, Construct, Floodfarm Verge, Floodfarm Verge, Fountainport, Gleaming Bastion, Gnome Soldier, Hallowed Fountain, Plains
+  Graveyard: 0 card(s)
+gian31:
+  Battlefield (12): Deep-Cavern Bat, Deep-Cavern Bat, Hinterland Sanctifier, Marauding Blight-Priest, Marauding Blight-Priest, Plains, Plains, Shattered Sanctum, Starscape Cleric, Starscape Cleric, Swamp, Swamp
+  Graveyard: 2 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+48 objects have no resolved final zone and are omitted from the known board state.
+gian31: 28 unknown object(s)
+xisco: 20 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=20, Stack=11
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+gian31:
+  Battlefield (7): Plains, Case of the Uneaten Feast, Swamp, Shattered Sanctum, Swamp, Plains, Marauding Blight-Priest
+  Graveyard (3): Hinterland Sanctifier, Starscape Cleric, Deep-Cavern Bat
+  Exile (3): Starscape Cleric, Marauding Blight-Priest, Lunar Convocation
+xisco:
+  Battlefield (19): Gleaming Bastion, Plains, Hallowed Fountain, Simulacrum Synthesizer, Floodfarm Verge, White Auracite, Fountainport, Perilous Snare, The Mind Stone, Simulacrum Synthesizer, Construct, Perilous Snare, Construct, Construct, Floodfarm Verge, Thousand Moons Smithy, Gnome Soldier, Construct, Construct
+  Graveyard (2): Stock Up, Day of Judgment
+  Exile (1): Interdimensional Web Watch
+Known non-persistent entries (counts only):
+  gian31: Hand=2, Limbo=4
+  unknown: Library=89, Limbo=7
+  xisco: Limbo=2, Pending=1
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: xisco Battlefield=1
+- Turn 2: gian31 Battlefield=2; xisco Battlefield=1
+- Turn 3: gian31 Battlefield=2; xisco Battlefield=2
+- Turn 4: gian31 Battlefield=4; xisco Battlefield=2
+- Turn 5: gian31 Battlefield=4; xisco Battlefield=4
+- Turn 6: gian31 Battlefield=6; xisco Battlefield=4
+- Turn 7: gian31 Battlefield=5; gian31 Exile=1; xisco Battlefield=6
+- Turn 8: gian31 Battlefield=7; gian31 Exile=1; xisco Battlefield=6
+- Turn 9: gian31 Battlefield=6; gian31 Exile=2; xisco Battlefield=8; xisco Graveyard=1
+- Turn 10: gian31 Battlefield=8; gian31 Exile=2; xisco Battlefield=8; xisco Graveyard=1
+- Turn 11: gian31 Battlefield=6; gian31 Graveyard=3; gian31 Exile=2; xisco Battlefield=9; xisco Graveyard=4
+- Turn 12: gian31 Battlefield=7; gian31 Graveyard=3; gian31 Exile=2; xisco Battlefield=9; xisco Graveyard=4
+- Turn 13: gian31 Battlefield=6; gian31 Graveyard=3; gian31 Exile=3; xisco Battlefield=11; xisco Graveyard=4
+- Turn 14: gian31 Battlefield=8; gian31 Graveyard=3; gian31 Exile=3; xisco Battlefield=11; xisco Graveyard=4; xisco Exile=1
+- Turn 15: gian31 Battlefield=7; gian31 Graveyard=4; gian31 Exile=3; xisco Battlefield=13; xisco Graveyard=4; xisco Exile=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Simulacrum Synthesizer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: White Auracite resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Perilous Snare resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: The Mind Stone resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Simulacrum Synthesizer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Perilous Snare resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Deep-Cavern Bat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: Thousand Moons Smithy resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
