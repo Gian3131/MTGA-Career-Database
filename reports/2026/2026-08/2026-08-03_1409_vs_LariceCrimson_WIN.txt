@@ -1,0 +1,675 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: LariceCrimson, gian31
+Seat map: Seat 1=LariceCrimson, Seat 2=gian31
+Turn range (known): 1 - 14
+Records: 30
+Action chains: 27
+Winner: gian31
+Final life: {'LariceCrimson': 16, 'gian31': 18}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 14 (Phase_Main1; Ability of Enduring Tenacity, seq 341).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 30 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 11 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 14] (raw records=11; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 17 explicit Library -> Hand movement(s); named in the draw record=11, resolved through an explicit identity transition=4, unresolved=2.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'LariceCrimson': 16, 'gian31': 18}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 14 (Phase_Main1; Ability of Enduring Tenacity, seq 341).
+Last captured life snapshot: LariceCrimson 18 -> 16 (seq 341).
+Observed active tokens: Bat [343] controller=gian31, created Turn 10, last observed Turn 14 seq 319, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [281] Hand (LariceCrimson) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LariceCrimson: Battlefield: Swamp [281]
+
+Turn 2
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=27] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=284)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 284) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 284) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Phyrexian Arena [282] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 21).
+      Plains [283] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LariceCrimson: Battlefield: Swamp [281]
+      gian31: Battlefield: Hinterland Sanctifier [284], Plains [283]
+
+Turn 3
+  - Nowhere to Run [valid_resolution_no_immediate_mutation, seq=47] (active=LariceCrimson, phase=Phase_Main1, controller=LariceCrimson, owner=LariceCrimson, source_object=288)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Nowhere to Run resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Nowhere to Run (object 288) Hand (LariceCrimson) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Nowhere to Run (object 288) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Nowhere to Run [observed_semantic_effect, seq=51] (active=LariceCrimson, phase=Phase_Main1, controller=LariceCrimson, owner=LariceCrimson, source_object=288, source_last_explicit_zone=Battlefield)
+      effects: P/T -3/-3
+      narrative: Ability of Nowhere to Run: Hinterland Sanctifier gets -3/-3.
+      explicit effect object references: Hinterland Sanctifier [284] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 292) Battlefield -> Graveyard (gian31) (SBA_ZeroToughness; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 286 [286] Library (LariceCrimson) -> Hand (LariceCrimson) (Draw; GRE sequence 41).
+      Blazemire Verge [287] Hand (LariceCrimson) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LariceCrimson: Battlefield: Blazemire Verge [287], Nowhere to Run [288], Swamp [281]
+      gian31: Battlefield: Plains [283]; Graveyard: Hinterland Sanctifier [292]
+
+Turn 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [293] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 65).
+      Godless Shrine [294] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 69).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LariceCrimson: Battlefield: Blazemire Verge [287], Nowhere to Run [288], Swamp [281]
+      gian31: Battlefield: Godless Shrine [294], Plains [283]; Graveyard: Hinterland Sanctifier [292]
+
+Turn 5
+  - Firdoch Core [valid_resolution_no_immediate_mutation, seq=90] (active=LariceCrimson, phase=Phase_Main1, controller=LariceCrimson, owner=LariceCrimson, source_object=297)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Firdoch Core resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Firdoch Core (object 297) Hand (LariceCrimson) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Firdoch Core (object 297) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Firdoch Core [295] Library (LariceCrimson) -> Hand (LariceCrimson) (Draw; GRE sequence 83).
+      Cavern of Souls [296] Hand (LariceCrimson) -> Battlefield (PlayLand; GRE sequence 87).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LariceCrimson: Battlefield: Blazemire Verge [287], Cavern of Souls [296], Firdoch Core [297], Nowhere to Run [288], Swamp [281]
+      gian31: Battlefield: Godless Shrine [294], Plains [283]; Graveyard: Hinterland Sanctifier [292]
+
+Turn 6
+  - Phyrexian Arena [valid_resolution_no_immediate_mutation, seq=110] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=303)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Phyrexian Arena resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Phyrexian Arena (object 303) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Phyrexian Arena (object 303) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [301] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 104).
+      Swamp [302] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 107).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LariceCrimson: Battlefield: Blazemire Verge [287], Cavern of Souls [296], Firdoch Core [297], Nowhere to Run [288], Swamp [281]
+      gian31: Battlefield: Godless Shrine [294], Phyrexian Arena [303], Plains [283], Swamp [302]; Graveyard: Hinterland Sanctifier [292]
+
+Turn 7
+  - Nullpriest of Oblivion [valid_resolution_no_immediate_mutation, seq=130] (active=LariceCrimson, phase=Phase_Main1, controller=LariceCrimson, owner=LariceCrimson, source_object=308)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Nullpriest of Oblivion resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Nullpriest of Oblivion (object 308) Hand (LariceCrimson) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Nullpriest of Oblivion (object 308) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Gatekeeper of Malakir [307] Library (LariceCrimson) -> Hand (LariceCrimson) (Draw; GRE sequence 124).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LariceCrimson: Battlefield: Blazemire Verge [287], Cavern of Souls [296], Firdoch Core [297], Nowhere to Run [288], Nullpriest of Oblivion [308], Swamp [281]
+      gian31: Battlefield: Godless Shrine [294], Phyrexian Arena [303], Plains [283], Swamp [302]; Graveyard: Hinterland Sanctifier [292]
+
+Turn 8
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=144] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=303, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 231 [231], Lunar Convocation [312] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Lunar Convocation (object 312) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=151] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=314, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=154] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=316)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 316) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 316) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=167] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=316, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Lunar Convocation: a token is created.
+      explicit effect object references: Bat [321] (role/targeting only where the protocol identifies it)
+      token created: Bat (object 321, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 320).
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=169] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=316, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 167 and 169; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life -1
+      narrative: Ability of Lunar Convocation: LariceCrimson loses 1 life.
+    net observed life change this turn: LariceCrimson -1; gian31 +0 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 19
+    life: gian31 19 -> 20
+    life: LariceCrimson 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [313] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 146).
+      Scoured Barrens [314] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 149).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LariceCrimson: Battlefield: Blazemire Verge [287], Cavern of Souls [296], Firdoch Core [297], Nowhere to Run [288], Nullpriest of Oblivion [308], Swamp [281]
+      gian31: Battlefield: Godless Shrine [294], Lunar Convocation [316], Phyrexian Arena [303], Plains [283], Scoured Barrens [314], Swamp [302]; Graveyard: Hinterland Sanctifier [292]
+
+Turn 9
+  Combat snapshots observed (active=LariceCrimson; frames: DeclareAttack -> DeclareBlock):
+      attackers: Nullpriest of Oblivion [308] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: LariceCrimson +2; gian31 -2 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): LariceCrimson 19 -> 21
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [322] Library (LariceCrimson) -> Hand (LariceCrimson) (Draw; GRE sequence 173).
+      Mountain [323] Hand (LariceCrimson) -> Battlefield (PlayLand; GRE sequence 176).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LariceCrimson: Battlefield: Blazemire Verge [287], Cavern of Souls [296], Firdoch Core [297], Mountain [323], Nowhere to Run [288], Nullpriest of Oblivion [308], Swamp [281]
+      gian31: Battlefield: Godless Shrine [294], Lunar Convocation [316], Phyrexian Arena [303], Plains [283], Scoured Barrens [314], Swamp [302]; Graveyard: Hinterland Sanctifier [292]
+
+Turn 10
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=196] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=303, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 233 [233], Hinterland Sanctifier [325] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 325) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=204] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=328)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 328) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 328) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=208] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=328, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Nullpriest of Oblivion; gian31 gains 2 life.
+      explicit effect object references: Nullpriest of Oblivion [308], Nullpriest of Oblivion [333] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Nullpriest of Oblivion (object 333) Battlefield -> Exile (Exile; shared object ID)
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=211] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=334)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 334) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 334) Stack -> Battlefield (Resolve; shared object ID)
+  - Nowhere to Run [valid_resolution_no_immediate_mutation, seq=217] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=LariceCrimson, owner=LariceCrimson, source_object=336)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Nowhere to Run resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Nowhere to Run (object 336) Hand (LariceCrimson) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Nowhere to Run (object 336) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Nowhere to Run [observed_semantic_effect, seq=221] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=LariceCrimson, owner=LariceCrimson, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: P/T -3/-3
+      narrative: Ability of Nowhere to Run: Hinterland Sanctifier gets -3/-3.
+      explicit effect object references: Hinterland Sanctifier [334] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 340) Battlefield -> Graveyard (gian31) (SBA_ZeroToughness; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=238] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=316, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Lunar Convocation: a token is created.
+      explicit effect object references: Bat [343] (role/targeting only where the protocol identifies it)
+      token created: Bat (object 343, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 342).
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=240] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=316, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 238 and 240; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life -1
+      narrative: Ability of Lunar Convocation: LariceCrimson loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Bat [321] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat-result zone change: Hinterland Sanctifier [340] Battlefield -> Graveyard (gian31) (SBA_ZeroToughness).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: LariceCrimson -2; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 17
+    life: gian31 17 -> 19
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): LariceCrimson 21 -> 20
+    life: LariceCrimson 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [326] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 198).
+      Swamp [327] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 201).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LariceCrimson: Battlefield: Blazemire Verge [287], Cavern of Souls [296], Firdoch Core [297], Mountain [323], Nowhere to Run [288], Nowhere to Run [336], Swamp [281]; Exile: Nullpriest of Oblivion [333]
+      gian31: Battlefield: Godless Shrine [294], Lunar Convocation [316], Makeshift Binding [328], Phyrexian Arena [303], Plains [283], Scoured Barrens [314], Swamp [302], Swamp [327]; Graveyard: Hinterland Sanctifier [292], Hinterland Sanctifier [340]
+
+Turn 11
+  - Gatekeeper of Malakir [valid_resolution_no_immediate_mutation, seq=250] (active=LariceCrimson, phase=Phase_Main1, controller=LariceCrimson, owner=LariceCrimson, source_object=345)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Gatekeeper of Malakir resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Gatekeeper of Malakir (object 345) Hand (LariceCrimson) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gatekeeper of Malakir (object 345) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 344 [344] Library (LariceCrimson) -> Hand (LariceCrimson) (Draw; GRE sequence 244).
+      Bat [350] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 255).
+        sacrifice observed after Gatekeeper of Malakir (seq 250); direct causal linkage is unavailable.
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LariceCrimson: Battlefield: Blazemire Verge [287], Cavern of Souls [296], Firdoch Core [297], Gatekeeper of Malakir [345], Mountain [323], Nowhere to Run [288], Nowhere to Run [336], Swamp [281]; Exile: Nullpriest of Oblivion [333]
+      gian31: Battlefield: Godless Shrine [294], Lunar Convocation [316], Makeshift Binding [328], Phyrexian Arena [303], Plains [283], Scoured Barrens [314], Swamp [302], Swamp [327]; Graveyard: Bat [350], Hinterland Sanctifier [292], Hinterland Sanctifier [340]
+
+Turn 12
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=269] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=303, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 235 [235], Swamp [352] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Swamp (object 352) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Shoot the Sheriff [observed_semantic_effect, seq=279] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=355)
+      effects: destroy
+      narrative: Shoot the Sheriff destroys Gatekeeper of Malakir.
+      explicit effect object references: Gatekeeper of Malakir [345], Gatekeeper of Malakir [358] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 355) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gatekeeper of Malakir (object 358) Battlefield -> Graveyard (LariceCrimson) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 359) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 355 -> transfer object 359 (explicit GRE ObjectIdChanged chain).
+  - Enduring Tenacity [valid_resolution_no_immediate_mutation, seq=282] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=360)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Enduring Tenacity resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Enduring Tenacity (object 360) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Enduring Tenacity (object 360) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Bat [343] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: LariceCrimson -1; gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 19 -> 18
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): LariceCrimson 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shoot the Sheriff [353] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 271).
+      Swamp [354] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 274).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LariceCrimson: Battlefield: Blazemire Verge [287], Cavern of Souls [296], Firdoch Core [297], Mountain [323], Nowhere to Run [288], Nowhere to Run [336], Swamp [281]; Exile: Nullpriest of Oblivion [333]; Graveyard: Gatekeeper of Malakir [358]
+      gian31: Battlefield: Enduring Tenacity [360], Godless Shrine [294], Lunar Convocation [316], Makeshift Binding [328], Phyrexian Arena [303], Plains [283], Scoured Barrens [314], Swamp [302], Swamp [327], Swamp [354]; Graveyard: Bat [350], Hinterland Sanctifier [292], Hinterland Sanctifier [340], Shoot the Sheriff [359]
+
+Turn 13
+  - Leyline Axe [valid_resolution_no_immediate_mutation, seq=307] (active=LariceCrimson, phase=Phase_Main1, controller=LariceCrimson, owner=LariceCrimson, source_object=366)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Leyline Axe resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Leyline Axe (object 366) Hand (LariceCrimson) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leyline Axe (object 366) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Leyline Axe [365] Library (LariceCrimson) -> Hand (LariceCrimson) (Draw; GRE sequence 302).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LariceCrimson: Battlefield: Blazemire Verge [287], Cavern of Souls [296], Firdoch Core [297], Leyline Axe [366], Mountain [323], Nowhere to Run [288], Nowhere to Run [336], Swamp [281]; Exile: Nullpriest of Oblivion [333]; Graveyard: Gatekeeper of Malakir [358]
+      gian31: Battlefield: Enduring Tenacity [360], Godless Shrine [294], Lunar Convocation [316], Makeshift Binding [328], Phyrexian Arena [303], Plains [283], Scoured Barrens [314], Swamp [302], Swamp [327], Swamp [354]; Graveyard: Bat [350], Hinterland Sanctifier [292], Hinterland Sanctifier [340], Shoot the Sheriff [359]
+
+Turn 14
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=321] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=303, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 237 [237], Case of the Uneaten Feast [372] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 372) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=329] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 375) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 375) Stack -> Battlefield (Resolve; shared object ID)
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=332] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=377)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 377) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 377) Stack -> Battlefield (Resolve; shared object ID)
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation, seq=335] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=379)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 379) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 379) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=337] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=341] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=360, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Enduring Tenacity: LariceCrimson loses 2 life.
+    net observed life change this turn: LariceCrimson -2; gian31 +0 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 17
+    life: gian31 17 -> 18
+    life: LariceCrimson 18 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Authority of the Consuls [373] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 323).
+      Swamp [374] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 326).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LariceCrimson: Battlefield: Blazemire Verge [287], Cavern of Souls [296], Firdoch Core [297], Leyline Axe [366], Mountain [323], Nowhere to Run [288], Nowhere to Run [336], Swamp [281]; Exile: Nullpriest of Oblivion [333]; Graveyard: Gatekeeper of Malakir [358]
+      gian31: Battlefield: Authority of the Consuls [377], Bloodletter of Aclazotz [379], Case of the Uneaten Feast [375], Enduring Tenacity [360], Godless Shrine [294], Lunar Convocation [316], Makeshift Binding [328], Phyrexian Arena [303], Plains [283], Scoured Barrens [314], Swamp [302], Swamp [327], Swamp [354], Swamp [374]; Graveyard: Bat [350], Hinterland Sanctifier [292], Hinterland Sanctifier [340], Shoot the Sheriff [359]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 9, seq 186: LariceCrimson 19 -> 21. Combat declaration observed; exact assignment unavailable.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 2 token creations observed; 1 active as last observed; 1 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Bat [321] controller=gian31; created Turn 8 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 11 via Battlefield -> Graveyard (gian31) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+- Bat [343] controller=gian31; created Turn 10 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 14, object 343 (latest observed P/T 1/1; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Swamp [owner=LariceCrimson, controller=LariceCrimson] moves Hand (LariceCrimson) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Phyrexian Arena [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 24: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 27: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 41: object 286 [owner/controller metadata unavailable] moves Library (LariceCrimson) -> Hand (LariceCrimson) (Draw).
+- Turn 3, seq 44: Blazemire Verge [owner=LariceCrimson, controller=LariceCrimson] moves Hand (LariceCrimson) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Nowhere to Run [owner=LariceCrimson, controller=LariceCrimson] moves Hand (LariceCrimson) -> Stack (CastSpell).
+- Turn 3, seq 47: Nowhere to Run [owner=LariceCrimson, controller=LariceCrimson] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 51: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_ZeroToughness).
+- Turn 4, seq 65: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 69: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 83: Firdoch Core [owner/controller metadata unavailable] moves Library (LariceCrimson) -> Hand (LariceCrimson) (Draw).
+- Turn 5, seq 87: Cavern of Souls [owner=LariceCrimson, controller=LariceCrimson] moves Hand (LariceCrimson) -> Battlefield (PlayLand).
+- Turn 5, seq 88: Firdoch Core [owner=LariceCrimson, controller=LariceCrimson] moves Hand (LariceCrimson) -> Stack (CastSpell).
+- Turn 5, seq 90: Firdoch Core [owner=LariceCrimson, controller=LariceCrimson] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 104: Scoured Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 107: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 108: Phyrexian Arena [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 110: Phyrexian Arena [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 124: Gatekeeper of Malakir [owner/controller metadata unavailable] moves Library (LariceCrimson) -> Hand (LariceCrimson) (Draw).
+- Turn 7, seq 127: Nullpriest of Oblivion [owner=LariceCrimson, controller=LariceCrimson] moves Hand (LariceCrimson) -> Stack (CastSpell).
+- Turn 7, seq 130: Nullpriest of Oblivion [owner=LariceCrimson, controller=LariceCrimson] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 144: Lunar Convocation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 146: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 149: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 152: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 154: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 173: Mountain [owner/controller metadata unavailable] moves Library (LariceCrimson) -> Hand (LariceCrimson) (Draw).
+- Turn 9, seq 176: Mountain [owner=LariceCrimson, controller=LariceCrimson] moves Hand (LariceCrimson) -> Battlefield (PlayLand).
+- Turn 10, seq 196: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 198: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 201: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 202: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 204: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 208: Nullpriest of Oblivion [owner=LariceCrimson, controller=LariceCrimson] moves Battlefield -> Exile (Exile).
+- Turn 10, seq 209: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 211: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 215: Nowhere to Run [owner=LariceCrimson, controller=LariceCrimson] moves Hand (LariceCrimson) -> Stack (CastSpell).
+- Turn 10, seq 217: Nowhere to Run [owner=LariceCrimson, controller=LariceCrimson] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 221: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_ZeroToughness).
+- Turn 11, seq 244: object 344 [owner/controller metadata unavailable] moves Library (LariceCrimson) -> Hand (LariceCrimson) (Draw).
+- Turn 11, seq 247: Gatekeeper of Malakir [owner=LariceCrimson, controller=LariceCrimson] moves Hand (LariceCrimson) -> Stack (CastSpell).
+- Turn 11, seq 250: Gatekeeper of Malakir [owner=LariceCrimson, controller=LariceCrimson] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 255: Bat [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 12, seq 269: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 271: Shoot the Sheriff [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 274: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 275: Shoot the Sheriff [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 279: Gatekeeper of Malakir [owner=LariceCrimson, controller=LariceCrimson] moves Battlefield -> Graveyard (LariceCrimson) (Destroy).
+- Turn 12, seq 279: Shoot the Sheriff [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 12, seq 280: Enduring Tenacity [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 282: Enduring Tenacity [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 302: Leyline Axe [owner/controller metadata unavailable] moves Library (LariceCrimson) -> Hand (LariceCrimson) (Draw).
+- Turn 13, seq 305: Leyline Axe [owner=LariceCrimson, controller=LariceCrimson] moves Hand (LariceCrimson) -> Stack (CastSpell).
+- Turn 13, seq 307: Leyline Axe [owner=LariceCrimson, controller=LariceCrimson] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 321: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 323: Authority of the Consuls [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 326: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 14, seq 327: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 329: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 330: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 332: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 333: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 335: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 162 becomes object 281 [Swamp].
+- Turn 2, seq 21: object 228 becomes object 282 [Phyrexian Arena].
+- Turn 2, seq 24: object 224 becomes object 283 [Plains].
+- Turn 2, seq 25: object 226 becomes object 284 [Hinterland Sanctifier].
+- Turn 3, seq 41: object 167 becomes object 286 [object 167].
+- Turn 3, seq 44: object 166 becomes object 287 [Blazemire Verge].
+- Turn 3, seq 45: object 163 becomes object 288 [Nowhere to Run].
+- Turn 3, seq 51: object 284 becomes object 292 [Hinterland Sanctifier].
+- Turn 4, seq 65: object 229 becomes object 293 [Makeshift Binding].
+- Turn 4, seq 69: object 223 becomes object 294 [Godless Shrine].
+- Turn 5, seq 83: object 168 becomes object 295 [Firdoch Core].
+- Turn 5, seq 87: object 160 becomes object 296 [Cavern of Souls].
+- Turn 5, seq 88: object 295 becomes object 297 [Firdoch Core].
+- Turn 6, seq 104: object 230 becomes object 301 [Scoured Barrens].
+- Turn 6, seq 107: object 222 becomes object 302 [Swamp].
+- Turn 6, seq 108: object 282 becomes object 303 [Phyrexian Arena].
+- Turn 7, seq 124: object 169 becomes object 307 [Gatekeeper of Malakir].
+- Turn 7, seq 127: object 165 becomes object 308 [Nullpriest of Oblivion].
+- Turn 8, seq 144: object 231 becomes object 312 [Lunar Convocation].
+- Turn 8, seq 146: object 232 becomes object 313 [Swamp].
+- Turn 8, seq 149: object 301 becomes object 314 [Scoured Barrens].
+- Turn 8, seq 152: object 312 becomes object 316 [Lunar Convocation].
+- Turn 9, seq 173: object 170 becomes object 322 [Mountain].
+- Turn 9, seq 176: object 322 becomes object 323 [Mountain].
+- Turn 10, seq 196: object 233 becomes object 325 [Hinterland Sanctifier].
+- Turn 10, seq 198: object 234 becomes object 326 [Swamp].
+- Turn 10, seq 201: object 313 becomes object 327 [Swamp].
+- Turn 10, seq 202: object 293 becomes object 328 [Makeshift Binding].
+- Turn 10, seq 208: object 308 becomes object 333 [Nullpriest of Oblivion].
+- Turn 10, seq 209: object 325 becomes object 334 [Hinterland Sanctifier].
+- Turn 10, seq 215: object 164 becomes object 336 [Nowhere to Run].
+- Turn 10, seq 221: object 334 becomes object 340 [Hinterland Sanctifier].
+- Turn 11, seq 244: object 171 becomes object 344 [object 171].
+- Turn 11, seq 247: object 307 becomes object 345 [Gatekeeper of Malakir].
+- Turn 11, seq 255: object 321 becomes object 350 [Bat].
+- Turn 12, seq 269: object 235 becomes object 352 [Swamp].
+- Turn 12, seq 271: object 236 becomes object 353 [Shoot the Sheriff].
+- Turn 12, seq 274: object 326 becomes object 354 [Swamp].
+- Turn 12, seq 275: object 353 becomes object 355 [Shoot the Sheriff].
+- Turn 12, seq 279: object 345 becomes object 358 [Gatekeeper of Malakir].
+- Turn 12, seq 279: object 355 becomes object 359 [Shoot the Sheriff].
+- Turn 12, seq 280: object 221 becomes object 360 [Enduring Tenacity].
+- Turn 13, seq 302: object 172 becomes object 365 [Leyline Axe].
+- Turn 13, seq 305: object 365 becomes object 366 [Leyline Axe].
+- Turn 14, seq 321: object 237 becomes object 372 [Case of the Uneaten Feast].
+- Turn 14, seq 323: object 238 becomes object 373 [Authority of the Consuls].
+- Turn 14, seq 326: object 352 becomes object 374 [Swamp].
+- Turn 14, seq 327: object 372 becomes object 375 [Case of the Uneaten Feast].
+- Turn 14, seq 330: object 373 becomes object 377 [Authority of the Consuls].
+- Turn 14, seq 333: object 227 becomes object 379 [Bloodletter of Aclazotz].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: LariceCrimson plays Swamp (object 281) from Hand (LariceCrimson) to Battlefield.
+- Turn 2: gian31 plays Plains (object 283) from Hand (gian31) to Battlefield.
+- Turn 3: LariceCrimson plays Blazemire Verge (object 287) from Hand (LariceCrimson) to Battlefield.
+- Turn 4: gian31 plays Godless Shrine (object 294) from Hand (gian31) to Battlefield.
+- Turn 5: LariceCrimson plays Cavern of Souls (object 296) from Hand (LariceCrimson) to Battlefield.
+- Turn 6: gian31 plays Swamp (object 302) from Hand (gian31) to Battlefield.
+- Turn 8: gian31 plays Scoured Barrens (object 314) from Hand (gian31) to Battlefield.
+- Turn 9: LariceCrimson plays Mountain (object 323) from Hand (LariceCrimson) to Battlefield.
+- Turn 10: gian31 plays Swamp (object 327) from Hand (gian31) to Battlefield.
+- Turn 12: gian31 plays Swamp (object 354) from Hand (gian31) to Battlefield.
+- Turn 14: gian31 plays Swamp (object 374) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Lunar Convocation: casts=1; abilities=4 (triggered=4, activated=0) across turns [8, 8, 8, 10, 10]
+  observed effect totals: draws=0, tokens=2, counters=0, returns=0, damage=0, life_changes=2, other=1
+  observed effects: life -1, synthetic event, token creation
+- Phyrexian Arena: casts=1; abilities=4 (triggered=4, activated=0) across turns [6, 8, 10, 12, 14]
+  observed effect totals: draws=4, tokens=0, counters=0, returns=0, damage=0, life_changes=4, other=4
+  observed effects: draw, life -1, synthetic event
+- Nowhere to Run: casts=2; abilities=2 (triggered=2, activated=0) across turns [3, 3, 10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: P/T -3/-3
+- Case of the Uneaten Feast: casts=1; abilities=1 (triggered=1, activated=0) across turns [14, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Enduring Tenacity: casts=1; abilities=1 (triggered=1, activated=0) across turns [12, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: life -2, synthetic event
+- Hinterland Sanctifier: casts=2 across turns [2, 10]
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Authority of the Consuls: casts=1 across turns [14]
+- Bloodletter of Aclazotz: casts=1 across turns [14]
+- Firdoch Core: casts=1 across turns [5]
+- Gatekeeper of Malakir: casts=1 across turns [11]
+- Leyline Axe: casts=1 across turns [13]
+- Nullpriest of Oblivion: casts=1 across turns [7]
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Shoot the Sheriff: casts=1 across turns [12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 9 - DeclareAttack, DeclareBlock (active=LariceCrimson)
+  attacker: Nullpriest of Oblivion (LariceCrimson) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Bat (gian31) -> LariceCrimson; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Bat (gian31) -> LariceCrimson; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 10: Nowhere to Run (active=gian31 controller=LariceCrimson) - Nowhere to Run resolves with no immediate observed mutation.
+- Turn 10: Ability of Nowhere to Run (active=gian31 controller=LariceCrimson) - Ability of Nowhere to Run: Hinterland Sanctifier gets -3/-3.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 221: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 222: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 223: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 224: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 225: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 226: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 227: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 281: Swamp | controller=LariceCrimson | owner=LariceCrimson | zone=Battlefield (latest_object_observation)
+- 282: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 283: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 284: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 287: Blazemire Verge | controller=LariceCrimson | owner=LariceCrimson | zone=Battlefield (latest_object_observation)
+- 288: Nowhere to Run | controller=LariceCrimson | owner=LariceCrimson | zone=Stack (latest_object_observation)
+- 291: object 291 | controller=LariceCrimson | owner=LariceCrimson | zone=unknown (inferred unknown) (latest_object_observation)
+- 292: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 293: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 294: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 296: Cavern of Souls | controller=LariceCrimson | owner=LariceCrimson | zone=Battlefield (latest_object_observation)
+- 297: Firdoch Core | controller=LariceCrimson | owner=LariceCrimson | zone=Stack (latest_object_observation)
+- 301: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 302: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 303: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 308: Nullpriest of Oblivion | controller=LariceCrimson | owner=LariceCrimson | zone=Battlefield (latest_object_observation)
+- 310: object 310 | controller=LariceCrimson | owner=LariceCrimson | zone=unknown (inferred unknown) (latest_object_observation)
+- 311: object 311 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 312: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 313: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 314: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 315: object 315 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 316: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 319: object 319 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 320: object 320 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 321: Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 323: Mountain | controller=LariceCrimson | owner=LariceCrimson | zone=Battlefield (latest_object_observation)
+- 324: object 324 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 325: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 326: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 327: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 328: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 332: object 332 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 333: Nullpriest of Oblivion | controller=LariceCrimson | owner=LariceCrimson | zone=Exile (latest_object_observation)
+- 334: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 336: Nowhere to Run | controller=LariceCrimson | owner=LariceCrimson | zone=Stack (latest_object_observation)
+- 339: object 339 | controller=LariceCrimson | owner=LariceCrimson | zone=unknown (inferred unknown) (latest_object_observation)
+- 340: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 341: object 341 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 342: object 342 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 343: Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 345: Gatekeeper of Malakir | controller=LariceCrimson | owner=LariceCrimson | zone=Battlefield (latest_object_observation)
+- 347: object 347 | controller=LariceCrimson | owner=LariceCrimson | zone=unknown (inferred unknown) (latest_object_observation)
+- 349: Plow Through | controller=LariceCrimson | owner=LariceCrimson | zone=unknown (inferred unknown) (latest_object_observation)
+- 351: object 351 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 352: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 353: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 354: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 355: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 358: Gatekeeper of Malakir | controller=LariceCrimson | owner=LariceCrimson | zone=Graveyard (latest_object_observation)
+- 359: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 360: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 366: Leyline Axe | controller=LariceCrimson | owner=LariceCrimson | zone=Stack (latest_object_observation)
+- 371: object 371 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 372: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 373: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 374: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 375: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 377: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 379: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 384: object 384 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 385: object 385 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+LariceCrimson: 17 total items
+  zones: Battlefield=6, Exile=1, Graveyard=1, Stack=4, unknown=5
+  objects: Gatekeeper of Malakir x2, Nowhere to Run x2, Nullpriest of Oblivion x2, Blazemire Verge, Cavern of Souls, Firdoch Core, Leyline Axe, Mountain, Plow Through, Swamp, object 291, object 310
+gian31: 52 total items
+  zones: Battlefield=12, Graveyard=3, Hand=18, Stack=6, unknown=13
+  objects: Swamp x8, Hinterland Sanctifier x6, Shoot the Sheriff x4, Authority of the Consuls x2, Bat x2, Bloodletter of Aclazotz x2, Case of the Uneaten Feast x2, Enduring Tenacity x2, Godless Shrine x2, Lunar Convocation x2, Makeshift Binding x2, Phyrexian Arena x2
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+LariceCrimson:
+  Battlefield (6): Blazemire Verge, Cavern of Souls, Gatekeeper of Malakir, Mountain, Nullpriest of Oblivion, Swamp
+  Graveyard: 1 card(s)
+gian31:
+  Battlefield (12): Bat, Bloodletter of Aclazotz, Enduring Tenacity, Godless Shrine, Hinterland Sanctifier, Hinterland Sanctifier, Plains, Scoured Barrens, Swamp, Swamp, Swamp, Swamp
+  Graveyard: 3 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+18 objects have no resolved final zone and are omitted from the known board state.
+LariceCrimson: 5 unknown object(s)
+gian31: 13 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=18, Stack=10
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+LariceCrimson:
+  Battlefield (8): Swamp, Blazemire Verge, Nowhere to Run, Cavern of Souls, Firdoch Core, Mountain, Nowhere to Run, Leyline Axe
+  Graveyard (1): Gatekeeper of Malakir
+  Exile (1): Nullpriest of Oblivion
+gian31:
+  Battlefield (15): Plains, Godless Shrine, Swamp, Phyrexian Arena, Scoured Barrens, Lunar Convocation, Swamp, Makeshift Binding, Bat, Swamp, Enduring Tenacity, Swamp, Case of the Uneaten Feast, Authority of the Consuls, Bloodletter of Aclazotz
+  Graveyard (3): Hinterland Sanctifier, Hinterland Sanctifier, Shoot the Sheriff
+Known non-persistent entries (counts only):
+  LariceCrimson: Hand=2, Limbo=1
+  gian31: Hand=1, Limbo=8
+  unknown: Hand=1, Library=90, Limbo=6
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: LariceCrimson Battlefield=1
+- Turn 2: LariceCrimson Battlefield=1; gian31 Battlefield=2
+- Turn 3: LariceCrimson Battlefield=3; gian31 Battlefield=1; gian31 Graveyard=1
+- Turn 4: LariceCrimson Battlefield=3; gian31 Battlefield=2; gian31 Graveyard=1
+- Turn 5: LariceCrimson Battlefield=5; gian31 Battlefield=2; gian31 Graveyard=1
+- Turn 6: LariceCrimson Battlefield=5; gian31 Battlefield=4; gian31 Graveyard=1
+- Turn 7: LariceCrimson Battlefield=6; gian31 Battlefield=4; gian31 Graveyard=1
+- Turn 8: LariceCrimson Battlefield=6; gian31 Battlefield=6; gian31 Graveyard=1
+- Turn 9: LariceCrimson Battlefield=7; gian31 Battlefield=6; gian31 Graveyard=1
+- Turn 10: LariceCrimson Battlefield=7; LariceCrimson Exile=1; gian31 Battlefield=8; gian31 Graveyard=2
+- Turn 11: LariceCrimson Battlefield=8; LariceCrimson Exile=1; gian31 Battlefield=8; gian31 Graveyard=3
+- Turn 12: LariceCrimson Battlefield=7; LariceCrimson Graveyard=1; LariceCrimson Exile=1; gian31 Battlefield=10; gian31 Graveyard=4
+- Turn 13: LariceCrimson Battlefield=8; LariceCrimson Graveyard=1; LariceCrimson Exile=1; gian31 Battlefield=10; gian31 Graveyard=4
+- Turn 14: LariceCrimson Battlefield=8; LariceCrimson Graveyard=1; LariceCrimson Exile=1; gian31 Battlefield=14; gian31 Graveyard=4
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Nowhere to Run resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Firdoch Core resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Phyrexian Arena resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Nullpriest of Oblivion resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Nowhere to Run resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Gatekeeper of Malakir resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Enduring Tenacity resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Leyline Axe resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
