@@ -1,0 +1,261 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, thanosgauntlet
+Seat map: Seat 1=gian31, Seat 2=thanosgauntlet
+Turn range (known): 1 - 6
+Records: 4
+Action chains: 4
+Winner: thanosgauntlet
+Final life: {'gian31': 20, 'thanosgauntlet': 20}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 5 (Phase_Main1; Springbloom Druid, seq 88).
+Later numbered GRE record(s): 9 after action sequence 88 across turn(s) [5, 6]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 14 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 5 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5] (raw records=5; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 5 explicit Library -> Hand movement(s); named in the draw record=3, resolved through an explicit identity transition=1, unresolved=1.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: thanosgauntlet; observed final life totals: {'gian31': 20, 'thanosgauntlet': 20}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 5 (Phase_Main1; Springbloom Druid, seq 88).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Restless Cottage [377] Hand (thanosgauntlet) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      thanosgauntlet: Battlefield: Restless Cottage [377]
+
+Turn 2
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=27] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=380)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 380) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 380) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Deep-Cavern Bat [378] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 21).
+      Plains [379] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      thanosgauntlet: Battlefield: Restless Cottage [377]
+      gian31: Battlefield: Hinterland Sanctifier [380], Plains [379]
+
+Turn 3
+  - Thornweald Archer [valid_resolution_no_immediate_mutation, seq=47] (active=thanosgauntlet, phase=Phase_Main1, controller=thanosgauntlet, owner=thanosgauntlet, source_object=384)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Thornweald Archer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Thornweald Archer (object 384) Hand (thanosgauntlet) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Thornweald Archer (object 384) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Springbloom Druid [382] Library (thanosgauntlet) -> Hand (thanosgauntlet) (Draw; GRE sequence 41).
+      Forest [383] Hand (thanosgauntlet) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      thanosgauntlet: Battlefield: Forest [383], Restless Cottage [377], Thornweald Archer [384]
+      gian31: Battlefield: Hinterland Sanctifier [380], Plains [379]
+
+Turn 4
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=67] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=389)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 389) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 389) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [387] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 61).
+      Plains [388] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 64).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      thanosgauntlet: Battlefield: Forest [383], Restless Cottage [377], Thornweald Archer [384]
+      gian31: Battlefield: Case of the Uneaten Feast [389], Hinterland Sanctifier [380], Plains [379], Plains [388]
+
+Turn 5
+  - Springbloom Druid [valid_resolution_no_immediate_mutation, seq=88] (active=thanosgauntlet, phase=Phase_Main1, controller=thanosgauntlet, owner=thanosgauntlet, source_object=393)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Springbloom Druid resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Springbloom Druid (object 393) Hand (thanosgauntlet) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Springbloom Druid (object 393) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 391 [391] Library (thanosgauntlet) -> Hand (thanosgauntlet) (Draw; GRE sequence 82).
+      Wastewood Verge [392] Hand (thanosgauntlet) -> Battlefield (PlayLand; GRE sequence 85).
+      Forest [398] Battlefield -> Graveyard (thanosgauntlet) (Sacrifice; GRE sequence 91).
+        sacrifice observed after Springbloom Druid (seq 88); direct causal linkage is unavailable.
+      Forest [400] Library (thanosgauntlet) -> Battlefield (Put; GRE sequence 92).
+      Swamp [399] Library (thanosgauntlet) -> Battlefield (Put; GRE sequence 92).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      thanosgauntlet: Battlefield: Forest [400], Restless Cottage [377], Springbloom Druid [393], Swamp [399], Thornweald Archer [384], Wastewood Verge [392]; Graveyard: Forest [398]
+      gian31: Battlefield: Case of the Uneaten Feast [389], Hinterland Sanctifier [380], Plains [379], Plains [388]
+
+Turn 6
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [499] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 109).
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- No life mutation without an exact same-record source was observed.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Restless Cottage [owner=thanosgauntlet, controller=thanosgauntlet] moves Hand (thanosgauntlet) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 24: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 27: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 41: Springbloom Druid [owner/controller metadata unavailable] moves Library (thanosgauntlet) -> Hand (thanosgauntlet) (Draw).
+- Turn 3, seq 44: Forest [owner=thanosgauntlet, controller=thanosgauntlet] moves Hand (thanosgauntlet) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Thornweald Archer [owner=thanosgauntlet, controller=thanosgauntlet] moves Hand (thanosgauntlet) -> Stack (CastSpell).
+- Turn 3, seq 47: Thornweald Archer [owner=thanosgauntlet, controller=thanosgauntlet] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 61: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 64: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 65: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 67: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 82: object 391 [owner/controller metadata unavailable] moves Library (thanosgauntlet) -> Hand (thanosgauntlet) (Draw).
+- Turn 5, seq 85: Wastewood Verge [owner=thanosgauntlet, controller=thanosgauntlet] moves Hand (thanosgauntlet) -> Battlefield (PlayLand).
+- Turn 5, seq 86: Springbloom Druid [owner=thanosgauntlet, controller=thanosgauntlet] moves Hand (thanosgauntlet) -> Stack (CastSpell).
+- Turn 5, seq 88: Springbloom Druid [owner=thanosgauntlet, controller=thanosgauntlet] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 91: Forest [owner=thanosgauntlet, controller=thanosgauntlet] moves Battlefield -> Graveyard (thanosgauntlet) (Sacrifice).
+- Turn 5, seq 92: Forest [owner=thanosgauntlet, controller=thanosgauntlet] moves Library (thanosgauntlet) -> Battlefield (Put).
+- Turn 5, seq 92: Swamp [owner=thanosgauntlet, controller=thanosgauntlet] moves Library (thanosgauntlet) -> Battlefield (Put).
+- Turn 6, seq 109: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 272 becomes object 377 [Restless Cottage].
+- Turn 2, seq 21: object 215 becomes object 378 [Deep-Cavern Bat].
+- Turn 2, seq 24: object 210 becomes object 379 [Plains].
+- Turn 2, seq 25: object 209 becomes object 380 [Hinterland Sanctifier].
+- Turn 3, seq 41: object 275 becomes object 382 [Springbloom Druid].
+- Turn 3, seq 44: object 268 becomes object 383 [Forest].
+- Turn 3, seq 45: object 274 becomes object 384 [Thornweald Archer].
+- Turn 4, seq 61: object 216 becomes object 387 [Case of the Uneaten Feast].
+- Turn 4, seq 64: object 213 becomes object 388 [Plains].
+- Turn 4, seq 65: object 387 becomes object 389 [Case of the Uneaten Feast].
+- Turn 5, seq 82: object 276 becomes object 391 [object 276].
+- Turn 5, seq 85: object 273 becomes object 392 [Wastewood Verge].
+- Turn 5, seq 86: object 382 becomes object 393 [Springbloom Druid].
+- Turn 5, seq 91: object 383 becomes object 398 [Forest].
+- Turn 5, seq 92: object 367 becomes object 400 [Forest].
+- Turn 5, seq 92: object 282 becomes object 399 [Swamp].
+- Turn 6, seq 109: object 217 becomes object 499 [Case of the Uneaten Feast].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: thanosgauntlet plays Restless Cottage (object 377) from Hand (thanosgauntlet) to Battlefield.
+- Turn 2: gian31 plays Plains (object 379) from Hand (gian31) to Battlefield.
+- Turn 3: thanosgauntlet plays Forest (object 383) from Hand (thanosgauntlet) to Battlefield.
+- Turn 4: gian31 plays Plains (object 388) from Hand (gian31) to Battlefield.
+- Turn 5: thanosgauntlet plays Wastewood Verge (object 392) from Hand (thanosgauntlet) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Case of the Uneaten Feast: casts=1 across turns [4]
+- Hinterland Sanctifier: casts=1 across turns [2]
+- Springbloom Druid: casts=1 across turns [5]
+- Thornweald Archer: casts=1 across turns [3]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+- No explicit attacker/blocker state was available in the captured GRE snapshots.
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 208: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 209: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 210: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 211: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 212: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 213: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 214: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 377: Restless Cottage | controller=thanosgauntlet | owner=thanosgauntlet | zone=Battlefield (latest_object_observation)
+- 378: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 379: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 380: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 383: Forest | controller=thanosgauntlet | owner=thanosgauntlet | zone=Battlefield (latest_object_observation)
+- 384: Thornweald Archer | controller=thanosgauntlet | owner=thanosgauntlet | zone=Battlefield (latest_object_observation)
+- 387: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 388: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 389: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 392: Wastewood Verge | controller=thanosgauntlet | owner=thanosgauntlet | zone=Battlefield (latest_object_observation)
+- 393: Springbloom Druid | controller=thanosgauntlet | owner=thanosgauntlet | zone=Battlefield (latest_object_observation)
+- 397: object 397 | controller=thanosgauntlet | owner=thanosgauntlet | zone=unknown (inferred unknown) (latest_object_observation)
+- 398: Forest | controller=thanosgauntlet | owner=thanosgauntlet | zone=Graveyard (latest_object_observation)
+- 399: Swamp | controller=thanosgauntlet | owner=thanosgauntlet | zone=Battlefield (latest_object_observation)
+- 400: Forest | controller=thanosgauntlet | owner=thanosgauntlet | zone=Battlefield (latest_object_observation)
+- 499: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 14 total items
+  zones: Battlefield=6, Hand=7, Stack=1
+  objects: Plains x4, Case of the Uneaten Feast x3, Hinterland Sanctifier x2, Bloodletter of Aclazotz, Bloodthirsty Conqueror, Deep-Cavern Bat, Phyrexian Arena, Starscape Cleric
+thanosgauntlet: 9 total items
+  zones: Battlefield=7, Graveyard=1, unknown=1
+  objects: Forest x3, Restless Cottage, Springbloom Druid, Swamp, Thornweald Archer, Wastewood Verge, object 397
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (6): Hinterland Sanctifier, Hinterland Sanctifier, Plains, Plains, Plains, Plains
+  Graveyard: 0 card(s)
+thanosgauntlet:
+  Battlefield (7): Forest, Forest, Restless Cottage, Springbloom Druid, Swamp, Thornweald Archer, Wastewood Verge
+  Graveyard: 1 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+1 objects have no resolved final zone and are omitted from the known board state.
+thanosgauntlet: 1 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=7, Stack=1
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+gian31:
+  Battlefield (4): Plains, Hinterland Sanctifier, Plains, Case of the Uneaten Feast
+thanosgauntlet:
+  Battlefield (6): Restless Cottage, Thornweald Archer, Wastewood Verge, Springbloom Druid, Swamp, Forest
+  Graveyard (1): Forest
+Known non-persistent entries (counts only):
+  gian31: Hand=6, Limbo=2
+  thanosgauntlet: Hand=1, Limbo=1
+  unknown: Hand=3, Library=148, Limbo=7
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: thanosgauntlet Battlefield=1
+- Turn 2: gian31 Battlefield=2; thanosgauntlet Battlefield=1
+- Turn 3: gian31 Battlefield=2; thanosgauntlet Battlefield=3
+- Turn 4: gian31 Battlefield=4; thanosgauntlet Battlefield=3
+- Turn 5: gian31 Battlefield=4; thanosgauntlet Battlefield=6; thanosgauntlet Graveyard=1
+- Turn 6: gian31 Battlefield=4; thanosgauntlet Battlefield=6; thanosgauntlet Graveyard=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Thornweald Archer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Springbloom Druid resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
