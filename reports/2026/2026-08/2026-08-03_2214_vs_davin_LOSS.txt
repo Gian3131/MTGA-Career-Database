@@ -1,0 +1,1045 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: davin, gian31
+Seat map: Seat 1=davin, Seat 2=gian31
+Turn range (known): 1 - 24
+Unnumbered turn groups retained: 1
+Records: 33
+Action chains: 31
+Winner: davin
+Final life: {'davin': 11, 'gian31': -4}
+Lethal combat transition: gian31 3 -> -4. 1 unblocked attackers and observed P/T modifiers reconcile to 7 power; individual combat assignment unavailable.
+Lethal coverage (normalized): complete; explained=7/7; unexplained=0.
+Match conclusion: Life total reached 0 observed for gian31.
+Last captured action before match-result payload: Turn 22 (Phase_Main1; Ability of Balamb T-Rexaur, seq 549).
+Later numbered GRE record(s): 18 after action sequence 549 across turn(s) [22, 23, 24]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+POST-ACTION GRE RECORDS - RESULT ORDER UNRESOLVED
+  - Turn 22, seq 555: tapped_changed.
+  - Turn 23, seq 567: tapped_changed.
+  - Turn 23, seq 567: tapped_changed.
+  - Turn 23, seq 569: identity_changed.
+  - Turn 23, seq 569: zone_transfer (Draw).
+  - Turn 23, seq 572: identity_changed.
+  - Turn 23, seq 572: zone_transfer (PlayLand).
+  - Turn 24, seq 584: tapped_changed.
+  - Turn 24, seq 584: tapped_changed.
+  - Turn 24, seq 584: tapped_changed.
+  - Turn 24, seq 584: tapped_changed.
+  - Turn 24, seq 584: tapped_changed.
+  - Turn 24, seq 584: tapped_changed.
+  - Turn 24, seq 584: tapped_changed.
+  - Turn 24, seq 584: tapped_changed.
+  - Turn 24, seq 586: identity_changed.
+  - Turn 24, seq 586: zone_transfer (Draw).
+  - Turn 24, seq 594: tapped_changed.
+  These records are retained for traceability; their order relative to the match-result payload is not asserted.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 45 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+WARNING: 1 player-zone assignment conflict(s) were observed. The ledger groups affected objects by explicit zone-transfer provenance; controller/owner metadata remains separately traceable.
+Land-drop coverage: 16 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 10, 14, 15, 16, 17, 20, 22, 23] (raw records=16; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 27 explicit Library -> Hand movement(s); named in the draw record=12, resolved through an explicit identity transition=10, unresolved=5.
+Unresolved draw identities (explicit movements retained): Turn 2, seq 23, object 344; Turn 18, seq 441, object 571; Turn 18, seq 446, object 577; Turn 20, seq 499, object 628; Turn 24, seq 586, object 647.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 6).
+  - gian31: 6 observed card(s): Shattered Sanctum [283], Makeshift Binding [284], Plains [285], Swamp [286], Stroke of Midnight [287], Starscape Cleric [288].
+  - unknown: 7 observed card(s): object 162 [162], object 163 [163], object 164 [164], object 165 [165], object 166 [166], object 167 [167], object 168 [168].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: davin; observed final life totals: {'davin': 11, 'gian31': -4}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 22 (Phase_Main1; Ability of Balamb T-Rexaur, seq 549).
+Last captured life snapshot: gian31 3 -> -4 (seq 598).
+Tokens on battlefield at their last observation (not confirmed at match end): Everywhere [446] controller=davin, created Turn 10, last observed Turn 18 seq 439, P/T unavailable; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: gian31 reached -4 life; exact lethal-source coverage is reported separately.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Plains.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Fabled Passage.
+- Turn 3: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Starscape Cleric, Plains; explicit battlefield exits=Fabled Passage.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Ghost Vacuum, Sunken Citadel.
+- Turn 5: actions: cards=0, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Shattered Sanctum.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Hushwood Verge, Ghost Vacuum.
+- Turn 7: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Plains, Hinterland Sanctifier.
+- Turn 8: actions: cards=1, abilities=0; explicit battlefield entries=Forest, Leatherhead, Swamp Stalker.
+- Turn 9: actions: cards=1, abilities=2; combat snapshots=1; life mutations=3; explicit battlefield entries=Brightblade Stoat.
+- Turn 10: actions: cards=2, abilities=1; explicit battlefield entries=Baxter Building, Overlord of the Hauntwoods; explicit battlefield exits=Overlord of the Hauntwoods.
+- Turn 11: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Phyrexian Arena.
+- Turn 12: actions: cards=1, abilities=1; explicit battlefield exits=Phyrexian Arena.
+- Turn 13: actions: cards=1, abilities=2; combat snapshots=1; life mutations=3; explicit battlefield entries=Hinterland Sanctifier.
+- Turn 14: actions: cards=1, abilities=0; explicit battlefield entries=Overgrown Tomb; explicit battlefield exits=Starscape Cleric, Hinterland Sanctifier, Leatherhead, Swamp Stalker, Brightblade Stoat, Hinterland Sanctifier.
+- Turn 15: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 16: actions: cards=2, abilities=1; explicit battlefield entries=Saber-Tooth Moose-Lion, Hushwood Verge; explicit battlefield exits=Ghost Vacuum.
+- Turn 17: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Swamp, Makeshift Binding; explicit battlefield exits=Human.
+- Turn 18: actions: cards=0, abilities=1; combat snapshots=1; life mutations=1.
+- Turn 19: actions: cards=0, abilities=0.
+- Turn 20: actions: cards=0, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Fabled Passage, Swamp; explicit battlefield exits=Fabled Passage.
+- Turn 21: actions: cards=0, abilities=0.
+- Turn 22: actions: cards=2, abilities=1; combat snapshots=1; life mutations=2; explicit battlefield entries=Restless Cottage, Balamb T-Rexaur; explicit battlefield exits=Balamb T-Rexaur.
+- Turn 23: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 24: actions: cards=0, abilities=0; combat snapshots=1; life mutations=1.
+- Turn None: actions: cards=0, abilities=5.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Rush of Dread [342] Hand (gian31) -> Library (gian31) (Put; GRE sequence 6).
+      Plains [343] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 9).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [343]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 344 [344] Library (davin) -> Hand (davin) (Draw; GRE sequence 23).
+      Fabled Passage [345] Hand (davin) -> Battlefield (PlayLand; GRE sequence 26).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [343]
+      davin: Battlefield: Fabled Passage [345]
+
+Turn 3
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=47] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=348)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 348) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 348) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shoot the Sheriff [346] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 40).
+      Swamp [347] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 43).
+      Fabled Passage [352] Battlefield -> Graveyard (davin) (Sacrifice; GRE sequence 51).
+        sacrifice observed after Starscape Cleric (seq 47); direct causal linkage is unavailable.
+      Plains [353] Library (davin) -> Battlefield (Put; GRE sequence 54).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [343], Starscape Cleric [348], Swamp [347]
+      davin: Graveyard: Fabled Passage [352]; Battlefield: Plains [353]
+
+Turn 4
+  - Ghost Vacuum [valid_resolution_no_immediate_mutation, seq=72] (active=davin, phase=Phase_Main1, controller=davin, owner=davin, source_object=406)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ghost Vacuum resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ghost Vacuum (object 406) Hand (davin) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ghost Vacuum (object 406) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Sunken Citadel [405] Library (davin) -> Hand (davin) (Draw; GRE sequence 67).
+      Sunken Citadel [408] Hand (davin) -> Battlefield (PlayLand; GRE sequence 74).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [343], Starscape Cleric [348], Swamp [347]
+      davin: Graveyard: Fabled Passage [352]; Battlefield: Ghost Vacuum [406], Plains [353], Sunken Citadel [408]
+
+Turn 5
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [348] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: davin -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): davin 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [409] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 88).
+      Shattered Sanctum [410] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 91).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [343], Shattered Sanctum [410], Starscape Cleric [348], Swamp [347]
+      davin: Graveyard: Fabled Passage [352]; Battlefield: Ghost Vacuum [406], Plains [353], Sunken Citadel [408]
+
+Turn 6
+  - Ghost Vacuum [valid_resolution_no_immediate_mutation, seq=117] (active=davin, phase=Phase_Main1, controller=davin, owner=davin, source_object=413)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ghost Vacuum resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ghost Vacuum (object 413) Hand (davin) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ghost Vacuum (object 413) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Perennation [411] Library (davin) -> Hand (davin) (Draw; GRE sequence 111).
+      Hushwood Verge [412] Hand (davin) -> Battlefield (PlayLand; GRE sequence 114).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [343], Shattered Sanctum [410], Starscape Cleric [348], Swamp [347]
+      davin: Graveyard: Fabled Passage [352]; Battlefield: Ghost Vacuum [406], Ghost Vacuum [413], Hushwood Verge [412], Plains [353], Sunken Citadel [408]
+
+Turn 7
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=137] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=417)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 417) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 417) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [348] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: davin -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): davin 18 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hinterland Sanctifier [415] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 131).
+      Plains [416] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 134).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Hinterland Sanctifier [417], Plains [343], Plains [416], Shattered Sanctum [410], Starscape Cleric [348], Swamp [347]
+      davin: Graveyard: Fabled Passage [352]; Battlefield: Ghost Vacuum [406], Ghost Vacuum [413], Hushwood Verge [412], Plains [353], Sunken Citadel [408]
+
+Turn 8
+  - Leatherhead, Swamp Stalker [valid_resolution_no_immediate_mutation, seq=163] (active=davin, phase=Phase_Main1, controller=davin, owner=davin, source_object=421)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Leatherhead, Swamp Stalker resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Leatherhead, Swamp Stalker (object 421) Hand (davin) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leatherhead, Swamp Stalker (object 421) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Overlord of the Hauntwoods [419] Library (davin) -> Hand (davin) (Draw; GRE sequence 157).
+      Forest [420] Hand (davin) -> Battlefield (PlayLand; GRE sequence 160).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Hinterland Sanctifier [417], Plains [343], Plains [416], Shattered Sanctum [410], Starscape Cleric [348], Swamp [347]
+      davin: Graveyard: Fabled Passage [352]; Battlefield: Forest [420], Ghost Vacuum [406], Ghost Vacuum [413], Hushwood Verge [412], Leatherhead, Swamp Stalker [421], Plains [353], Sunken Citadel [408]
+
+Turn 9
+  - Brightblade Stoat [valid_resolution_no_immediate_mutation, seq=182] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=427)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Brightblade Stoat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Brightblade Stoat (object 427) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Brightblade Stoat (object 427) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=184] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=417, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=186] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: davin loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [348] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: davin -3; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life: davin 16 -> 15
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): davin 15 -> 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Brightblade Stoat [426] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 177).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Brightblade Stoat [427], Hinterland Sanctifier [417], Plains [343], Plains [416], Shattered Sanctum [410], Starscape Cleric [348], Swamp [347]
+      davin: Graveyard: Fabled Passage [352]; Battlefield: Forest [420], Ghost Vacuum [406], Ghost Vacuum [413], Hushwood Verge [412], Leatherhead, Swamp Stalker [421], Plains [353], Sunken Citadel [408]
+
+Turn 10
+  - Overlord of the Hauntwoods [valid_resolution_no_immediate_mutation, seq=212] (active=davin, phase=Phase_Main1, controller=davin, owner=davin, source_object=434)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Overlord of the Hauntwoods resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Overlord of the Hauntwoods (object 434) Hand (davin) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Overlord of the Hauntwoods (object 434) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Overlord of the Hauntwoods [observed_semantic_effect, seq=220] (active=davin, phase=Phase_Main1, controller=davin, owner=davin, source_object=434, source_last_explicit_zone=Battlefield, source_successor=444 observed Battlefield -> Graveyard (davin) (Destroy))
+      effects: token creation
+      narrative: Ability of Overlord of the Hauntwoods: a token is created.
+      explicit effect object references: Everywhere [446] (role/targeting only where the protocol identifies it)
+      token created: Everywhere (object 446, controller=davin); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 440).
+  - Shoot the Sheriff [observed_semantic_effect, seq=218] (active=unknown, controller=gian31, owner=gian31, source_object=441)
+      chronology reconciliation: parser turn group None conflicts with Turn 10; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: destroy
+      narrative: Shoot the Sheriff destroys Overlord of the Hauntwoods.
+      explicit effect object references: Overlord of the Hauntwoods [434], Overlord of the Hauntwoods [444] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 441) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Overlord of the Hauntwoods (object 444) Battlefield -> Graveyard (davin) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 445) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 441 -> transfer object 445 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Baxter Building [432] Library (davin) -> Hand (davin) (Draw; GRE sequence 206).
+      Baxter Building [433] Hand (davin) -> Battlefield (PlayLand; GRE sequence 209).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Brightblade Stoat [427], Hinterland Sanctifier [417], Plains [343], Plains [416], Shattered Sanctum [410], Starscape Cleric [348], Swamp [347]; Graveyard: Shoot the Sheriff [445]
+      davin: Graveyard: Fabled Passage [352], Overlord of the Hauntwoods [444]; Battlefield: Baxter Building [433], Forest [420], Ghost Vacuum [406], Ghost Vacuum [413], Hushwood Verge [412], Leatherhead, Swamp Stalker [421], Plains [353], Sunken Citadel [408]
+
+Turn 11
+  - Phyrexian Arena [valid_resolution_no_immediate_mutation, seq=240] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=448)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Phyrexian Arena resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Phyrexian Arena (object 448) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Phyrexian Arena (object 448) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [348] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: davin -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): davin 13 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Phyrexian Arena [447] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 235).
+      Shoot the Sheriff [453] Graveyard (gian31) -> Exile (Exile; GRE sequence 252).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Brightblade Stoat [427], Hinterland Sanctifier [417], Phyrexian Arena [448], Plains [343], Plains [416], Shattered Sanctum [410], Starscape Cleric [348], Swamp [347]; Exile: Shoot the Sheriff [453]
+      davin: Graveyard: Fabled Passage [352], Overlord of the Hauntwoods [444]; Battlefield: Baxter Building [433], Forest [420], Ghost Vacuum [406], Ghost Vacuum [413], Hushwood Verge [412], Leatherhead, Swamp Stalker [421], Plains [353], Sunken Citadel [408]
+
+Turn 12
+  - Bear Down [observed_semantic_effect, seq=273] (active=davin, phase=Phase_Main1, controller=davin, owner=davin, source_object=455)
+      effects: destroy
+      narrative: Bear Down destroys Phyrexian Arena.
+      explicit effect object references: Phyrexian Arena [448], Phyrexian Arena [459] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bear Down (object 455) Hand (davin) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Phyrexian Arena (object 459) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Stormkeld Vanguard (object 460) Stack -> Exile (Resolve; shared object ID)
+      identity continuity: source object 455 -> transfer object 460 (explicit GRE ObjectIdChanged chain).
+  - Ability of Baxter Building [observed_semantic_effect, seq=276] (active=davin, phase=Phase_Main1, controller=davin, owner=davin, source_object=433, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Baxter Building: draw.
+      explicit effect object references: object 359 [359], Saber-Tooth Moose-Lion [466] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Saber-Tooth Moose-Lion (object 466) Library (davin) -> Hand (davin) (Draw; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Balamb T-Rexaur [454] Library (davin) -> Hand (davin) (Draw; GRE sequence 266).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Brightblade Stoat [427], Hinterland Sanctifier [417], Plains [343], Plains [416], Shattered Sanctum [410], Starscape Cleric [348], Swamp [347]; Exile: Shoot the Sheriff [453]; Graveyard: Phyrexian Arena [459]
+      davin: Graveyard: Fabled Passage [352], Overlord of the Hauntwoods [444]; Battlefield: Baxter Building [433], Forest [420], Ghost Vacuum [406], Ghost Vacuum [413], Hushwood Verge [412], Leatherhead, Swamp Stalker [421], Plains [353], Sunken Citadel [408]; Exile: Stormkeld Vanguard [460]
+
+Turn 13
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=296] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=468)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 468) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 468) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=298] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=417, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=300] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: davin loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [348] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: davin -3; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    life: davin 11 -> 10
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): davin 10 -> 8
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hinterland Sanctifier [467] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 291).
+      Phyrexian Arena [473] Graveyard (gian31) -> Exile (Exile; GRE sequence 322).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Brightblade Stoat [427], Hinterland Sanctifier [417], Hinterland Sanctifier [468], Plains [343], Plains [416], Shattered Sanctum [410], Starscape Cleric [348], Swamp [347]; Exile: Phyrexian Arena [473], Shoot the Sheriff [453]
+      davin: Graveyard: Fabled Passage [352], Overlord of the Hauntwoods [444]; Battlefield: Baxter Building [433], Forest [420], Ghost Vacuum [406], Ghost Vacuum [413], Hushwood Verge [412], Leatherhead, Swamp Stalker [421], Plains [353], Sunken Citadel [408]; Exile: Stormkeld Vanguard [460]
+
+Turn 14
+  - Day of Judgment [observed_semantic_effect, seq=331] (active=davin, phase=Phase_Main1, controller=davin, owner=davin, source_object=475)
+      effects: destroy, destroy, destroy, destroy, destroy
+      narrative: Day of Judgment destroys Starscape Cleric, Hinterland Sanctifier, Leatherhead, Swamp Stalker, Brightblade Stoat, Hinterland Sanctifier.
+      explicit effect object references: Starscape Cleric [348], Hinterland Sanctifier [417], Leatherhead, Swamp Stalker [421], Brightblade Stoat [427], Hinterland Sanctifier [468], Starscape Cleric [480], Hinterland Sanctifier [481], Leatherhead, Swamp Stalker [482], Brightblade Stoat [483], Hinterland Sanctifier [484] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Day of Judgment (object 475) Hand (davin) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 480) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 481) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Leatherhead, Swamp Stalker (object 482) Battlefield -> Graveyard (davin) (Destroy; shared object ID)
+      protocol-linked zone transfer: Brightblade Stoat (object 483) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 484) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Day of Judgment (object 485) Stack -> Graveyard (davin) (Resolve; shared object ID)
+      identity continuity: source object 475 -> transfer object 485 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Day of Judgment [474] Library (davin) -> Hand (davin) (Draw; GRE sequence 326).
+      Saber-Tooth Moose-Lion [489] Hand (davin) -> Graveyard (davin) (Discard; GRE sequence 332).
+      Overgrown Tomb [490] Hand (gian31) -> Stack (CastSpell; GRE sequence 334).
+      Overgrown Tomb [491] Library (davin) -> Hand (davin) (Put; GRE sequence 337).
+      Overgrown Tomb [536] Hand (davin) -> Battlefield (PlayLand; GRE sequence 340).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [343], Plains [416], Shattered Sanctum [410], Swamp [347]; Exile: Phyrexian Arena [473], Shoot the Sheriff [453]; Graveyard: Brightblade Stoat [483], Hinterland Sanctifier [481], Hinterland Sanctifier [484], Starscape Cleric [480]
+      davin: Graveyard: Day of Judgment [485], Fabled Passage [352], Leatherhead, Swamp Stalker [482], Overlord of the Hauntwoods [444], Saber-Tooth Moose-Lion [489]; Battlefield: Baxter Building [433], Forest [420], Ghost Vacuum [406], Ghost Vacuum [413], Hushwood Verge [412], Overgrown Tomb [536], Plains [353], Sunken Citadel [408]; Exile: Stormkeld Vanguard [460]
+
+Turn 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [537] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 354).
+      Swamp [538] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 357).
+      Starscape Cleric [540] Graveyard (gian31) -> Exile (Exile; GRE sequence 373).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [343], Plains [416], Shattered Sanctum [410], Swamp [347], Swamp [538]; Exile: Phyrexian Arena [473], Shoot the Sheriff [453], Starscape Cleric [540]; Graveyard: Brightblade Stoat [483], Hinterland Sanctifier [481], Hinterland Sanctifier [484]
+      davin: Graveyard: Day of Judgment [485], Fabled Passage [352], Leatherhead, Swamp Stalker [482], Overlord of the Hauntwoods [444], Saber-Tooth Moose-Lion [489]; Battlefield: Baxter Building [433], Forest [420], Ghost Vacuum [406], Ghost Vacuum [413], Hushwood Verge [412], Overgrown Tomb [536], Plains [353], Sunken Citadel [408]; Exile: Stormkeld Vanguard [460]
+
+Turn 16
+  - Ability of Ghost Vacuum [observed_semantic_effect, seq=392] (active=davin, phase=Phase_Main1, controller=davin, owner=davin, source_object=413, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Ghost Vacuum: exiles Hinterland Sanctifier.
+      explicit effect object references: Hinterland Sanctifier [484], Hinterland Sanctifier [554] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 554) Graveyard (gian31) -> Exile (Exile; shared object ID)
+  - Stroke of Midnight [observed_semantic_effect, seq=394] (active=davin, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=549)
+      effects: destroy, token creation
+      narrative: Stroke of Midnight destroys Ghost Vacuum.
+      explicit effect object references: Ghost Vacuum [413], Ghost Vacuum [555], Human [556] (role/targeting only where the protocol identifies it)
+      token created: Human (object 556, controller=davin) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 549).
+      protocol-linked zone transfer: Stroke of Midnight (object 549) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ghost Vacuum (object 555) Battlefield -> Graveyard (davin) (Destroy; shared object ID)
+      protocol-linked zone transfer: Stroke of Midnight (object 557) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 549 -> transfer object 557 (explicit GRE ObjectIdChanged chain).
+  - Perennation [observed_semantic_effect, seq=396] (active=davin, phase=Phase_Main1, controller=davin, owner=davin, source_object=542)
+      effects: return to battlefield, +1 counter(s), +1 counter(s)
+      narrative: Perennation: a card/permanent returns; 1 counter(s) are added to Saber-Tooth Moose-Lion [558]; 1 counter(s) are added to Saber-Tooth Moose-Lion [558].
+      explicit effect object references: Saber-Tooth Moose-Lion [489], Saber-Tooth Moose-Lion [558] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Perennation (object 542) Hand (davin) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Saber-Tooth Moose-Lion (object 558) Graveyard (davin) -> Battlefield (Return; shared object ID)
+      protocol-linked zone transfer: Perennation (object 559) Stack -> Graveyard (davin) (Resolve; shared object ID)
+      identity continuity: source object 542 -> transfer object 559 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hushwood Verge [541] Library (davin) -> Hand (davin) (Draw; GRE sequence 377).
+      Hushwood Verge [560] Hand (davin) -> Battlefield (PlayLand; GRE sequence 397).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [343], Plains [416], Shattered Sanctum [410], Swamp [347], Swamp [538]; Exile: Hinterland Sanctifier [554], Phyrexian Arena [473], Shoot the Sheriff [453], Starscape Cleric [540]; Graveyard: Brightblade Stoat [483], Hinterland Sanctifier [481], Stroke of Midnight [557]
+      davin: Graveyard: Day of Judgment [485], Fabled Passage [352], Ghost Vacuum [555], Leatherhead, Swamp Stalker [482], Overlord of the Hauntwoods [444], Perennation [559]; Battlefield: Baxter Building [433], Forest [420], Ghost Vacuum [406], Hushwood Verge [412], Hushwood Verge [560], Overgrown Tomb [536], Plains [353], Saber-Tooth Moose-Lion [558], Sunken Citadel [408]; Exile: Stormkeld Vanguard [460]
+
+Turn 17
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=423] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=563)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 563) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 563) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=427] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=563, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Human; gian31 gains 2 life.
+      explicit effect object references: Human [556], object 570 [570] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Human (object 570) Battlefield -> Exile (Exile; shared object ID)
+    net observed life change this turn: gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 22 -> 24
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [561] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 411).
+      Swamp [562] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 414).
+      Hinterland Sanctifier [568] Graveyard (gian31) -> Exile (Exile; GRE sequence 421).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Makeshift Binding [563], Plains [343], Plains [416], Shattered Sanctum [410], Swamp [347], Swamp [538], Swamp [562]; Exile: Hinterland Sanctifier [554], Hinterland Sanctifier [568], Phyrexian Arena [473], Shoot the Sheriff [453], Starscape Cleric [540]; Graveyard: Brightblade Stoat [483], Stroke of Midnight [557]
+      davin: Graveyard: Day of Judgment [485], Fabled Passage [352], Ghost Vacuum [555], Leatherhead, Swamp Stalker [482], Overlord of the Hauntwoods [444], Perennation [559]; Battlefield: Baxter Building [433], Forest [420], Ghost Vacuum [406], Hushwood Verge [412], Hushwood Verge [560], Overgrown Tomb [536], Plains [353], Saber-Tooth Moose-Lion [558], Sunken Citadel [408]; Exile: Human [570], Stormkeld Vanguard [460]
+
+Turn 18
+  - Ability of Baxter Building [observed_semantic_effect, seq=446] (active=davin, phase=Phase_Main1, controller=davin, owner=davin, source_object=433, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Baxter Building: draw.
+      explicit effect object references: object 495 [495], object 577 [577] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 577 (object 577) Library (davin) -> Hand (davin) (Draw; shared object ID)
+  Combat snapshots observed (active=davin; frames: DeclareAttack -> DeclareBlock):
+      attackers: Saber-Tooth Moose-Lion [558] (unblocked, observed P/T 7/7)
+      blockers: none identified
+      combat-correlated defending-player life loss: 7; observed attacker power total: 7; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -7 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 7 + observed modifiers 0 = 7; individual assignment unavailable): gian31 24 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 571 [571] Library (davin) -> Hand (davin) (Draw; GRE sequence 441).
+
+Turn 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shoot the Sheriff [578] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 466).
+      Brightblade Stoat [580] Graveyard (gian31) -> Exile (Exile; GRE sequence 484).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Makeshift Binding [563], Plains [343], Plains [416], Shattered Sanctum [410], Swamp [347], Swamp [538], Swamp [562]; Exile: Brightblade Stoat [580], Hinterland Sanctifier [554], Hinterland Sanctifier [568], Phyrexian Arena [473], Shoot the Sheriff [453], Starscape Cleric [540]; Graveyard: Stroke of Midnight [557]
+      davin: Graveyard: Day of Judgment [485], Fabled Passage [352], Ghost Vacuum [555], Leatherhead, Swamp Stalker [482], Overlord of the Hauntwoods [444], Perennation [559]; Battlefield: Baxter Building [433], Forest [420], Ghost Vacuum [406], Hushwood Verge [412], Hushwood Verge [560], Overgrown Tomb [536], Plains [353], Saber-Tooth Moose-Lion [558], Sunken Citadel [408]; Exile: Human [570], Stormkeld Vanguard [460]
+
+Turn 20
+  - Ability of Baxter Building [observed_semantic_effect, seq=499] (active=davin, phase=Phase_Main1, controller=davin, owner=davin, source_object=433, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Baxter Building: draw.
+      explicit effect object references: object 586 [586], object 628 [628] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 628 (object 628) Library (davin) -> Hand (davin) (Draw; shared object ID)
+  Combat snapshots observed (active=davin; frames: DeclareAttack -> DeclareBlock):
+      attackers: Saber-Tooth Moose-Lion [558] (unblocked, observed P/T 7/7)
+      blockers: none identified
+      combat-correlated defending-player life loss: 7; observed attacker power total: 7; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -7 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 7 + observed modifiers 0 = 7; individual assignment unavailable): gian31 17 -> 10
+    additional protocol-observed zone movements not assigned to an action chain:
+      Fabled Passage [581] Library (davin) -> Hand (davin) (Draw; GRE sequence 488).
+      Fabled Passage [582] Hand (davin) -> Battlefield (PlayLand; GRE sequence 491).
+      Fabled Passage [584] Battlefield -> Graveyard (davin) (Sacrifice; GRE sequence 492).
+      Swamp [585] Library (davin) -> Battlefield (Put; GRE sequence 495).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Makeshift Binding [563], Plains [343], Plains [416], Shattered Sanctum [410], Swamp [347], Swamp [538], Swamp [562]; Exile: Brightblade Stoat [580], Hinterland Sanctifier [554], Hinterland Sanctifier [568], Phyrexian Arena [473], Shoot the Sheriff [453], Starscape Cleric [540]; Graveyard: Stroke of Midnight [557]
+      davin: Graveyard: Day of Judgment [485], Fabled Passage [352], Fabled Passage [584], Ghost Vacuum [555], Leatherhead, Swamp Stalker [482], Overlord of the Hauntwoods [444], Perennation [559]; Battlefield: Baxter Building [433], Forest [420], Ghost Vacuum [406], Hushwood Verge [412], Hushwood Verge [560], Overgrown Tomb [536], Plains [353], Saber-Tooth Moose-Lion [558], Sunken Citadel [408], Swamp [585]; Exile: Human [570], Stormkeld Vanguard [460]
+
+Turn 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [629] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 519).
+
+Turn 22
+  - Balamb T-Rexaur [valid_resolution_no_immediate_mutation, seq=541] (active=davin, phase=Phase_Main1, controller=davin, owner=davin, source_object=632)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Balamb T-Rexaur resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Balamb T-Rexaur (object 632) Hand (davin) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Balamb T-Rexaur (object 632) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Balamb T-Rexaur [observed_semantic_effect, seq=549] (active=davin, phase=Phase_Main1, controller=davin, owner=davin, source_object=632, source_last_explicit_zone=Battlefield, source_successor=643 observed Battlefield -> Graveyard (davin) (Destroy))
+      effects: life +3
+      narrative: Ability of Balamb T-Rexaur: davin gains 3 life.
+  - Shoot the Sheriff [observed_semantic_effect, seq=547] (active=unknown, controller=gian31, owner=gian31, source_object=640)
+      chronology reconciliation: parser turn group None conflicts with Turn 22; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: destroy
+      narrative: Shoot the Sheriff destroys Balamb T-Rexaur.
+      explicit effect object references: Balamb T-Rexaur [632], Balamb T-Rexaur [643] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 640) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Balamb T-Rexaur (object 643) Battlefield -> Graveyard (davin) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 644) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 640 -> transfer object 644 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=davin; frames: DeclareAttack -> DeclareBlock):
+      attackers: Saber-Tooth Moose-Lion [558] (unblocked, observed P/T 7/7)
+      blockers: none identified
+      combat-correlated defending-player life loss: 7; observed attacker power total: 7; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: davin +3; gian31 -7 (individual changes below; gains and losses may offset)
+    life: davin 8 -> 11
+    life (combat fully reconciled: snapshot power 7 + observed modifiers 0 = 7; individual assignment unavailable): gian31 10 -> 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Restless Cottage [630] Library (davin) -> Hand (davin) (Draw; GRE sequence 535).
+      Restless Cottage [631] Hand (davin) -> Battlefield (PlayLand; GRE sequence 538).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Makeshift Binding [563], Plains [343], Plains [416], Shattered Sanctum [410], Swamp [347], Swamp [538], Swamp [562]; Exile: Brightblade Stoat [580], Hinterland Sanctifier [554], Hinterland Sanctifier [568], Phyrexian Arena [473], Shoot the Sheriff [453], Starscape Cleric [540]; Graveyard: Shoot the Sheriff [644], Stroke of Midnight [557]
+      davin: Graveyard: Balamb T-Rexaur [643], Day of Judgment [485], Fabled Passage [352], Fabled Passage [584], Ghost Vacuum [555], Leatherhead, Swamp Stalker [482], Overlord of the Hauntwoods [444], Perennation [559]; Battlefield: Baxter Building [433], Forest [420], Ghost Vacuum [406], Hushwood Verge [412], Hushwood Verge [560], Overgrown Tomb [536], Plains [353], Restless Cottage [631], Saber-Tooth Moose-Lion [558], Sunken Citadel [408], Swamp [585]; Exile: Human [570], Stormkeld Vanguard [460]
+
+Turn 23
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [645] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 569).
+      Swamp [646] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 572).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Makeshift Binding [563], Plains [343], Plains [416], Shattered Sanctum [410], Swamp [347], Swamp [538], Swamp [562], Swamp [646]; Exile: Brightblade Stoat [580], Hinterland Sanctifier [554], Hinterland Sanctifier [568], Phyrexian Arena [473], Shoot the Sheriff [453], Starscape Cleric [540]; Graveyard: Shoot the Sheriff [644], Stroke of Midnight [557]
+      davin: Graveyard: Balamb T-Rexaur [643], Day of Judgment [485], Fabled Passage [352], Fabled Passage [584], Ghost Vacuum [555], Leatherhead, Swamp Stalker [482], Overlord of the Hauntwoods [444], Perennation [559]; Battlefield: Baxter Building [433], Forest [420], Ghost Vacuum [406], Hushwood Verge [412], Hushwood Verge [560], Overgrown Tomb [536], Plains [353], Restless Cottage [631], Saber-Tooth Moose-Lion [558], Sunken Citadel [408], Swamp [585]; Exile: Human [570], Stormkeld Vanguard [460]
+
+Turn 24
+  Combat snapshots observed (active=davin; frames: DeclareAttack -> DeclareBlock):
+      attackers: Saber-Tooth Moose-Lion [558] (unblocked, observed P/T 7/7)
+      blockers: none identified
+      combat-correlated defending-player life loss: 7; observed attacker power total: 7; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -7 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 7 + observed modifiers 0 = 7; individual assignment unavailable): gian31 3 -> -4
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 647 [647] Library (davin) -> Hand (davin) (Draw; GRE sequence 586).
+
+UNNUMBERED / UNRESOLVED TURN GROUP
+  - The captured records do not provide a verified numbered turn for the following events.
+  - Ability of Ghost Vacuum [observed_semantic_effect, seq=252] (active=unknown, controller=davin, owner=davin, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Ghost Vacuum: exile.
+      explicit effect object references: Shoot the Sheriff [445], Shoot the Sheriff [453] (role/targeting only where the protocol identifies it)
+  - Ability of Ghost Vacuum [observed_semantic_effect, seq=322] (active=unknown, controller=davin, owner=davin, source_object=406, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 252 and 322; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: exile
+      narrative: Ability of Ghost Vacuum: exile.
+      explicit effect object references: Phyrexian Arena [459], Phyrexian Arena [473] (role/targeting only where the protocol identifies it)
+  - Ability of Ghost Vacuum [observed_semantic_effect, seq=373] (active=unknown, controller=davin, owner=davin, source_object=413, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Ghost Vacuum: exile.
+      explicit effect object references: Starscape Cleric [480], Starscape Cleric [540] (role/targeting only where the protocol identifies it)
+  - Ability of Ghost Vacuum [observed_semantic_effect, seq=421] (active=unknown, controller=davin, owner=davin, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Ghost Vacuum: exile.
+      explicit effect object references: Hinterland Sanctifier [481], Hinterland Sanctifier [568] (role/targeting only where the protocol identifies it)
+  - Ability of Ghost Vacuum [observed_semantic_effect, seq=484] (active=unknown, controller=davin, owner=davin, source_object=406, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 421 and 484; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: exile
+      narrative: Ability of Ghost Vacuum: exile.
+      explicit effect object references: Brightblade Stoat [483], Brightblade Stoat [580] (role/targeting only where the protocol identifies it)
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- No life mutation without an exact same-record source was observed.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 24: gian31 3 -> -4 (required change 7). Explained by exact same-record evidence: 0/7; semantically attributed: 0/7; unexplained residual: 0/7.
+  Fully reconciled from observed combat state and modifiers: 7/7 (pre-modifier power=7; explicit modifier power=+0; reconstructed post-modifier power=7; individual assignment unavailable).
+  Combat snapshot observed at or before lethal: Turn 24; attackers=Saber-Tooth Moose-Lion [558]; observed snapshot power total=7; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 22, Ability of Balamb T-Rexaur (seq 549).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 2 token creations observed; 1 active as last observed; 1 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Everywhere [446] controller=davin; created Turn 10 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 18, object 446 (latest observed P/T unknown; current zone unconfirmed).
+- Human [556] controller=davin; created Turn 16 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 17 via Battlefield -> Exile (Exile); ceases to exist after that observed move (token rules consequence).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 6: Rush of Dread [owner=gian31, controller=gian31] moves Hand (gian31) -> Library (gian31) (Put).
+- Turn 1, seq 9: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 23: object 344 [owner/controller metadata unavailable] moves Library (davin) -> Hand (davin) (Draw).
+- Turn 2, seq 26: Fabled Passage [owner=davin, controller=davin] moves Hand (davin) -> Battlefield (PlayLand).
+- Turn 3, seq 40: Shoot the Sheriff [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 43: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 44: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 47: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 51: Fabled Passage [owner=davin, controller=davin] moves Battlefield -> Graveyard (davin) (Sacrifice).
+- Turn 3, seq 54: Plains [owner=davin, controller=davin] moves Library (davin) -> Battlefield (Put).
+- Turn 4, seq 67: Sunken Citadel [owner/controller metadata unavailable] moves Library (davin) -> Hand (davin) (Draw).
+- Turn 4, seq 70: Ghost Vacuum [owner=davin, controller=davin] moves Hand (davin) -> Stack (CastSpell).
+- Turn 4, seq 72: Ghost Vacuum [owner=davin, controller=davin] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 74: Sunken Citadel [owner=davin, controller=davin] moves Hand (davin) -> Battlefield (PlayLand).
+- Turn 5, seq 88: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 91: Shattered Sanctum [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 111: Perennation [owner/controller metadata unavailable] moves Library (davin) -> Hand (davin) (Draw).
+- Turn 6, seq 114: Hushwood Verge [owner=davin, controller=davin] moves Hand (davin) -> Battlefield (PlayLand).
+- Turn 6, seq 115: Ghost Vacuum [owner=davin, controller=davin] moves Hand (davin) -> Stack (CastSpell).
+- Turn 6, seq 117: Ghost Vacuum [owner=davin, controller=davin] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 131: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 134: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 135: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 137: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 157: Overlord of the Hauntwoods [owner/controller metadata unavailable] moves Library (davin) -> Hand (davin) (Draw).
+- Turn 8, seq 160: Forest [owner=davin, controller=davin] moves Hand (davin) -> Battlefield (PlayLand).
+- Turn 8, seq 161: Leatherhead, Swamp Stalker [owner=davin, controller=davin] moves Hand (davin) -> Stack (CastSpell).
+- Turn 8, seq 163: Leatherhead, Swamp Stalker [owner=davin, controller=davin] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 177: Brightblade Stoat [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 180: Brightblade Stoat [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 182: Brightblade Stoat [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 206: Baxter Building [owner/controller metadata unavailable] moves Library (davin) -> Hand (davin) (Draw).
+- Turn 10, seq 209: Baxter Building [owner=davin, controller=davin] moves Hand (davin) -> Battlefield (PlayLand).
+- Turn 10, seq 210: Overlord of the Hauntwoods [owner=davin, controller=davin] moves Hand (davin) -> Stack (CastSpell).
+- Turn 10, seq 212: Overlord of the Hauntwoods [owner=davin, controller=davin] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 214: Shoot the Sheriff [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 218: Overlord of the Hauntwoods [owner=davin, controller=davin] moves Battlefield -> Graveyard (davin) (Destroy).
+- Turn 10, seq 218: Shoot the Sheriff [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 11, seq 235: Phyrexian Arena [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 238: Phyrexian Arena [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 240: Phyrexian Arena [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 252: Shoot the Sheriff [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Exile (Exile).
+- Turn 12, seq 266: Balamb T-Rexaur [owner/controller metadata unavailable] moves Library (davin) -> Hand (davin) (Draw).
+- Turn 12, seq 269: Bear Down [owner=davin, controller=davin] moves Hand (davin) -> Stack (CastSpell).
+- Turn 12, seq 273: Phyrexian Arena [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 12, seq 273: Stormkeld Vanguard [owner=davin, controller=davin] moves Stack -> Exile (Resolve).
+- Turn 12, seq 276: Saber-Tooth Moose-Lion [owner=davin, controller=davin] moves Library (davin) -> Hand (davin) (Draw).
+- Turn 13, seq 291: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 294: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 13, seq 296: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 322: Phyrexian Arena [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Exile (Exile).
+- Turn 14, seq 326: Day of Judgment [owner/controller metadata unavailable] moves Library (davin) -> Hand (davin) (Draw).
+- Turn 14, seq 329: Day of Judgment [owner=davin, controller=davin] moves Hand (davin) -> Stack (CastSpell).
+- Turn 14, seq 331: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 14, seq 331: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 14, seq 331: Leatherhead, Swamp Stalker [owner=davin, controller=davin] moves Battlefield -> Graveyard (davin) (Destroy).
+- Turn 14, seq 331: Brightblade Stoat [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 14, seq 331: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 14, seq 331: Day of Judgment [owner=davin, controller=davin] moves Stack -> Graveyard (davin) (Resolve).
+- Turn 14, seq 332: Saber-Tooth Moose-Lion [owner=davin, controller=davin] moves Hand (davin) -> Graveyard (davin) (Discard).
+- Turn 14, seq 334: Overgrown Tomb [owner=davin, controller=davin] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 337: Overgrown Tomb [owner/controller metadata unavailable] moves Library (davin) -> Hand (davin) (Put).
+- Turn 14, seq 340: Overgrown Tomb [owner=davin, controller=davin] moves Hand (davin) -> Battlefield (PlayLand).
+- Turn 15, seq 354: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 15, seq 357: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 15, seq 373: Starscape Cleric [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Exile (Exile).
+- Turn 16, seq 377: Hushwood Verge [owner/controller metadata unavailable] moves Library (davin) -> Hand (davin) (Draw).
+- Turn 16, seq 380: Perennation [owner=davin, controller=davin] moves Hand (davin) -> Stack (CastSpell).
+- Turn 16, seq 384: Stroke of Midnight [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 392: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Exile (Exile).
+- Turn 16, seq 394: Ghost Vacuum [owner=davin, controller=davin] moves Battlefield -> Graveyard (davin) (Destroy).
+- Turn 16, seq 394: Stroke of Midnight [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 16, seq 396: Saber-Tooth Moose-Lion [owner=davin, controller=davin] moves Graveyard (davin) -> Battlefield (Return).
+- Turn 16, seq 396: Perennation [owner=davin, controller=davin] moves Stack -> Graveyard (davin) (Resolve).
+- Turn 16, seq 397: Hushwood Verge [owner=davin, controller=davin] moves Hand (davin) -> Battlefield (PlayLand).
+- Turn 17, seq 411: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 17, seq 414: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 17, seq 415: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 17, seq 421: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Exile (Exile).
+- Turn 17, seq 423: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 17, seq 427: Human [owner/controller metadata unavailable] moves Battlefield -> Exile (Exile).
+- Turn 18, seq 441: object 571 [owner/controller metadata unavailable] moves Library (davin) -> Hand (davin) (Draw).
+- Turn 18, seq 446: object 577 [owner/controller metadata unavailable] moves Library (davin) -> Hand (davin) (Draw).
+- Turn 19, seq 466: Shoot the Sheriff [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 19, seq 484: Brightblade Stoat [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Exile (Exile).
+- Turn 20, seq 488: Fabled Passage [owner/controller metadata unavailable] moves Library (davin) -> Hand (davin) (Draw).
+- Turn 20, seq 491: Fabled Passage [owner=davin, controller=davin] moves Hand (davin) -> Battlefield (PlayLand).
+- Turn 20, seq 492: Fabled Passage [owner=davin, controller=davin] moves Battlefield -> Graveyard (davin) (Sacrifice).
+- Turn 20, seq 495: Swamp [owner=davin, controller=davin] moves Library (davin) -> Battlefield (Put).
+- Turn 20, seq 499: object 628 [owner/controller metadata unavailable] moves Library (davin) -> Hand (davin) (Draw).
+- Turn 21, seq 519: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 22, seq 535: Restless Cottage [owner/controller metadata unavailable] moves Library (davin) -> Hand (davin) (Draw).
+- Turn 22, seq 538: Restless Cottage [owner=davin, controller=davin] moves Hand (davin) -> Battlefield (PlayLand).
+- Turn 22, seq 539: Balamb T-Rexaur [owner=davin, controller=davin] moves Hand (davin) -> Stack (CastSpell).
+- Turn 22, seq 541: Balamb T-Rexaur [owner=davin, controller=davin] moves Stack -> Battlefield (Resolve).
+- Turn 22, seq 543: Shoot the Sheriff [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 22, seq 547: Balamb T-Rexaur [owner=davin, controller=davin] moves Battlefield -> Graveyard (davin) (Destroy).
+- Turn 22, seq 547: Shoot the Sheriff [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 23, seq 569: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 23, seq 572: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 24, seq 586: object 647 [owner/controller metadata unavailable] moves Library (davin) -> Hand (davin) (Draw).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 6: object 282 becomes object 342 [Rush of Dread].
+- Turn 1, seq 9: object 285 becomes object 343 [Plains].
+- Turn 2, seq 23: object 169 becomes object 344 [object 169].
+- Turn 2, seq 26: object 165 becomes object 345 [Fabled Passage].
+- Turn 3, seq 40: object 289 becomes object 346 [Shoot the Sheriff].
+- Turn 3, seq 43: object 286 becomes object 347 [Swamp].
+- Turn 3, seq 44: object 288 becomes object 348 [Starscape Cleric].
+- Turn 3, seq 51: object 345 becomes object 352 [Fabled Passage].
+- Turn 3, seq 54: object 171 becomes object 353 [Plains].
+- Turn 4, seq 67: object 354 becomes object 405 [Sunken Citadel].
+- Turn 4, seq 70: object 166 becomes object 406 [Ghost Vacuum].
+- Turn 4, seq 74: object 405 becomes object 408 [Sunken Citadel].
+- Turn 5, seq 88: object 290 becomes object 409 [Plains].
+- Turn 5, seq 91: object 283 becomes object 410 [Shattered Sanctum].
+- Turn 6, seq 111: object 355 becomes object 411 [Perennation].
+- Turn 6, seq 114: object 163 becomes object 412 [Hushwood Verge].
+- Turn 6, seq 115: object 162 becomes object 413 [Ghost Vacuum].
+- Turn 7, seq 131: object 291 becomes object 415 [Hinterland Sanctifier].
+- Turn 7, seq 134: object 409 becomes object 416 [Plains].
+- Turn 7, seq 135: object 415 becomes object 417 [Hinterland Sanctifier].
+- Turn 8, seq 157: object 356 becomes object 419 [Overlord of the Hauntwoods].
+- Turn 8, seq 160: object 167 becomes object 420 [Forest].
+- Turn 8, seq 161: object 168 becomes object 421 [Leatherhead, Swamp Stalker].
+- Turn 9, seq 177: object 292 becomes object 426 [Brightblade Stoat].
+- Turn 9, seq 180: object 426 becomes object 427 [Brightblade Stoat].
+- Turn 10, seq 206: object 357 becomes object 432 [Baxter Building].
+- Turn 10, seq 209: object 432 becomes object 433 [Baxter Building].
+- Turn 10, seq 210: object 419 becomes object 434 [Overlord of the Hauntwoods].
+- Turn 10, seq 214: object 346 becomes object 441 [Shoot the Sheriff].
+- Turn 10, seq 218: object 434 becomes object 444 [Overlord of the Hauntwoods].
+- Turn 10, seq 218: object 441 becomes object 445 [Shoot the Sheriff].
+- Turn 11, seq 235: object 293 becomes object 447 [Phyrexian Arena].
+- Turn 11, seq 238: object 447 becomes object 448 [Phyrexian Arena].
+- Turn 11, seq 252: object 445 becomes object 453 [Shoot the Sheriff].
+- Turn 12, seq 266: object 358 becomes object 454 [Balamb T-Rexaur].
+- Turn 12, seq 269: object 164 becomes object 455 [Bear Down].
+- Turn 12, seq 273: object 448 becomes object 459 [Phyrexian Arena].
+- Turn 12, seq 273: object 455 becomes object 460 (Bear Down -> Stormkeld Vanguard).
+- Turn 12, seq 276: object 359 becomes object 466 [Saber-Tooth Moose-Lion].
+- Turn 13, seq 291: object 294 becomes object 467 [Hinterland Sanctifier].
+- Turn 13, seq 294: object 467 becomes object 468 [Hinterland Sanctifier].
+- Turn 13, seq 322: object 459 becomes object 473 [Phyrexian Arena].
+- Turn 14, seq 326: object 360 becomes object 474 [Day of Judgment].
+- Turn 14, seq 329: object 474 becomes object 475 [Day of Judgment].
+- Turn 14, seq 331: object 348 becomes object 480 [Starscape Cleric].
+- Turn 14, seq 331: object 417 becomes object 481 [Hinterland Sanctifier].
+- Turn 14, seq 331: object 421 becomes object 482 [Leatherhead, Swamp Stalker].
+- Turn 14, seq 331: object 427 becomes object 483 [Brightblade Stoat].
+- Turn 14, seq 331: object 468 becomes object 484 [Hinterland Sanctifier].
+- Turn 14, seq 331: object 475 becomes object 485 [Day of Judgment].
+- Turn 14, seq 332: object 466 becomes object 489 [Saber-Tooth Moose-Lion].
+- Turn 14, seq 334: object 287 becomes object 490 (Stroke of Midnight -> Overgrown Tomb).
+- Turn 14, seq 337: object 403 becomes object 491 [Overgrown Tomb].
+- Turn 14, seq 340: object 491 becomes object 536 [Overgrown Tomb].
+- Turn 15, seq 354: object 295 becomes object 537 [Swamp].
+- Turn 15, seq 357: object 537 becomes object 538 [Swamp].
+- Turn 15, seq 373: object 480 becomes object 540 [Starscape Cleric].
+- Turn 16, seq 377: object 493 becomes object 541 [Hushwood Verge].
+- Turn 16, seq 380: object 411 becomes object 542 [Perennation].
+- Turn 16, seq 384: object 287 becomes object 549 [Stroke of Midnight].
+- Turn 16, seq 392: object 484 becomes object 554 [Hinterland Sanctifier].
+- Turn 16, seq 394: object 413 becomes object 555 [Ghost Vacuum].
+- Turn 16, seq 394: object 549 becomes object 557 [Stroke of Midnight].
+- Turn 16, seq 396: object 489 becomes object 558 [Saber-Tooth Moose-Lion].
+- Turn 16, seq 396: object 542 becomes object 559 [Perennation].
+- Turn 16, seq 397: object 541 becomes object 560 [Hushwood Verge].
+- Turn 17, seq 411: object 296 becomes object 561 [Swamp].
+- Turn 17, seq 414: object 561 becomes object 562 [Swamp].
+- Turn 17, seq 415: object 284 becomes object 563 [Makeshift Binding].
+- Turn 17, seq 421: object 481 becomes object 568 [Hinterland Sanctifier].
+- Turn 17, seq 427: object 556 becomes object 570 [Human].
+- Turn 18, seq 441: object 494 becomes object 571 [object 494].
+- Turn 18, seq 446: object 495 becomes object 577 [object 495].
+- Turn 19, seq 466: object 297 becomes object 578 [Shoot the Sheriff].
+- Turn 19, seq 484: object 483 becomes object 580 [Brightblade Stoat].
+- Turn 20, seq 488: object 496 becomes object 581 [Fabled Passage].
+- Turn 20, seq 491: object 581 becomes object 582 [Fabled Passage].
+- Turn 20, seq 492: object 582 becomes object 584 [Fabled Passage].
+- Turn 20, seq 495: object 519 becomes object 585 [Swamp].
+- Turn 20, seq 499: object 586 becomes object 628 [object 586].
+- Turn 21, seq 519: object 298 becomes object 629 [Case of the Uneaten Feast].
+- Turn 22, seq 535: object 587 becomes object 630 [Restless Cottage].
+- Turn 22, seq 538: object 630 becomes object 631 [Restless Cottage].
+- Turn 22, seq 539: object 454 becomes object 632 [Balamb T-Rexaur].
+- Turn 22, seq 543: object 578 becomes object 640 [Shoot the Sheriff].
+- Turn 22, seq 547: object 632 becomes object 643 [Balamb T-Rexaur].
+- Turn 22, seq 547: object 640 becomes object 644 [Shoot the Sheriff].
+- Turn 23, seq 569: object 299 becomes object 645 [Swamp].
+- Turn 23, seq 572: object 645 becomes object 646 [Swamp].
+- Turn 24, seq 586: object 588 becomes object 647 [object 588].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Plains (object 343) from Hand (gian31) to Battlefield.
+- Turn 2: davin plays Fabled Passage (object 345) from Hand (davin) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 347) from Hand (gian31) to Battlefield.
+- Turn 4: davin plays Sunken Citadel (object 408) from Hand (davin) to Battlefield.
+- Turn 5: gian31 plays Shattered Sanctum (object 410) from Hand (gian31) to Battlefield.
+- Turn 6: davin plays Hushwood Verge (object 412) from Hand (davin) to Battlefield.
+- Turn 7: gian31 plays Plains (object 416) from Hand (gian31) to Battlefield.
+- Turn 8: davin plays Forest (object 420) from Hand (davin) to Battlefield.
+- Turn 10: davin plays Baxter Building (object 433) from Hand (davin) to Battlefield.
+- Turn 14: davin plays Overgrown Tomb (object 536) from Hand (davin) to Battlefield.
+- Turn 15: gian31 plays Swamp (object 538) from Hand (gian31) to Battlefield.
+- Turn 16: davin plays Hushwood Verge (object 560) from Hand (davin) to Battlefield.
+- Turn 17: gian31 plays Swamp (object 562) from Hand (gian31) to Battlefield.
+- Turn 20: davin plays Fabled Passage (object 582) from Hand (davin) to Battlefield.
+- Turn 22: davin plays Restless Cottage (object 631) from Hand (davin) to Battlefield.
+- Turn 23: gian31 plays Swamp (object 646) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn None: ordered adjacent records Ghost Vacuum -> Ghost Vacuum; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Ghost Vacuum: casts=2; abilities=6 (triggered=6, activated=0) across turns [4, 6, 16, 'None', 'None', 'None', 'None', 'None']
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=6
+  observed effects: exile
+- Hinterland Sanctifier: casts=2; abilities=2 (triggered=2, activated=0) across turns [7, 9, 13, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Baxter Building: abilities=3 (triggered=3, activated=0) across turns [12, 18, 20]
+  observed effect totals: draws=3, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Starscape Cleric: casts=1; abilities=2 (triggered=2, activated=0) across turns [3, 9, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=2
+  observed effects: life -1, synthetic event
+- Balamb T-Rexaur: casts=1; abilities=1 (triggered=1, activated=0) across turns [22, 22]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +3
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [17, 17]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Overlord of the Hauntwoods: casts=1; abilities=1 (triggered=1, activated=0) across turns [10, 10]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Shoot the Sheriff: casts=2 across turns [10, 22]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: destroy
+- Bear Down: casts=1 across turns [12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Brightblade Stoat: casts=1 across turns [9]
+- Day of Judgment: casts=1 across turns [14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=5
+  observed effects: destroy
+- Leatherhead, Swamp Stalker: casts=1 across turns [8]
+- Perennation: casts=1 across turns [16]
+  observed effect totals: draws=0, tokens=0, counters=2, returns=1, damage=0, life_changes=0, other=0
+  observed effects: +1 counter(s), return to battlefield
+- Phyrexian Arena: casts=1 across turns [11]
+- Stroke of Midnight: casts=1 across turns [16]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy, token creation
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> davin; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> davin; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> davin; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> davin; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> davin; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 18 - DeclareAttack, DeclareBlock (active=davin)
+  attacker: Saber-Tooth Moose-Lion (davin) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 20 - DeclareAttack, DeclareBlock (active=davin)
+  attacker: Saber-Tooth Moose-Lion (davin) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 22 - DeclareAttack, DeclareBlock (active=davin)
+  attacker: Saber-Tooth Moose-Lion (davin) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 24 - DeclareAttack, DeclareBlock (active=davin)
+  attacker: Saber-Tooth Moose-Lion (davin) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 222: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 223: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 224: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 225: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 226: Rush of Dread | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 227: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 228: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 282: Rush of Dread | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 283: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 284: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 285: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 286: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 287: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 288: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 342: Rush of Dread | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 343: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 345: Fabled Passage | controller=davin | owner=davin | zone=Battlefield (latest_object_observation)
+- 346: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 347: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 348: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 351: object 351 | controller=davin | owner=davin | zone=unknown (inferred unknown) (latest_object_observation)
+- 352: Fabled Passage | controller=davin | owner=davin | zone=Graveyard (latest_object_observation)
+- 353: Plains | controller=davin | owner=davin | zone=Battlefield (latest_object_observation)
+- 403: Overgrown Tomb | controller=davin | owner=davin | zone=Hand (latest_object_observation)
+- 406: Ghost Vacuum | controller=davin | owner=davin | zone=Stack (latest_object_observation)
+- 408: Sunken Citadel | controller=davin | owner=davin | zone=Battlefield (latest_object_observation)
+- 409: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 410: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 412: Hushwood Verge | controller=davin | owner=davin | zone=Battlefield (latest_object_observation)
+- 413: Ghost Vacuum | controller=davin | owner=davin | zone=Stack (latest_object_observation)
+- 415: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 416: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 417: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 420: Forest | controller=davin | owner=davin | zone=Battlefield (latest_object_observation)
+- 421: Leatherhead, Swamp Stalker | controller=davin | owner=davin | zone=Battlefield (latest_object_observation)
+- 426: Brightblade Stoat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 427: Brightblade Stoat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 430: object 430 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 431: object 431 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 433: Baxter Building | controller=davin | owner=davin | zone=Battlefield (latest_object_observation)
+- 434: Overlord of the Hauntwoods | controller=davin | owner=davin | zone=Battlefield (latest_object_observation)
+- 440: object 440 | controller=davin | owner=davin | zone=unknown (inferred unknown) (latest_object_observation)
+- 441: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 444: Overlord of the Hauntwoods | controller=davin | owner=davin | zone=Graveyard (latest_object_observation)
+- 445: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 446: Everywhere | controller=davin | owner=davin | zone=Battlefield (latest_object_observation)
+- 447: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 448: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 452: object 452 | controller=davin | owner=davin | zone=unknown (inferred unknown) (latest_object_observation)
+- 453: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 455: Bear Down | controller=davin | owner=davin | zone=Stack (latest_object_observation)
+- 456: Bear Down | controller=davin | owner=davin | zone=unknown (inferred unknown) (latest_object_observation)
+- 459: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 460: Stormkeld Vanguard | controller=davin | owner=davin | zone=Battlefield (latest_object_observation)
+- 461: Bear Down | controller=davin | owner=davin | zone=Exile (latest_object_observation)
+- 462: object 462 | controller=davin | owner=davin | zone=unknown (inferred unknown) (latest_object_observation)
+- 466: Saber-Tooth Moose-Lion | controller=davin | owner=davin | zone=Hand (latest_object_observation)
+- 467: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 468: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 470: object 470 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 471: object 471 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 472: object 472 | controller=davin | owner=davin | zone=unknown (inferred unknown) (latest_object_observation)
+- 473: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 475: Day of Judgment | controller=davin | owner=davin | zone=Stack (latest_object_observation)
+- 480: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 481: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 482: Leatherhead, Swamp Stalker | controller=davin | owner=davin | zone=Graveyard (latest_object_observation)
+- 483: Brightblade Stoat | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 484: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 485: Day of Judgment | controller=davin | owner=davin | zone=Graveyard (latest_object_observation)
+- 486: object 486 | controller=davin | owner=davin | zone=unknown (inferred unknown) (latest_object_observation)
+- 489: Saber-Tooth Moose-Lion | controller=davin | owner=davin | zone=Graveyard (latest_object_observation)
+- 490: Overgrown Tomb | controller=davin | owner=davin | zone=Stack (latest_object_observation)
+- 492: Overgrown Tomb | controller=davin | owner=davin | zone=unknown (inferred unknown) (latest_object_observation)
+- 536: Overgrown Tomb | controller=davin | owner=davin | zone=Battlefield (latest_object_observation)
+- 537: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 538: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 539: object 539 | controller=davin | owner=davin | zone=unknown (inferred unknown) (latest_object_observation)
+- 540: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 542: Perennation | controller=davin | owner=davin | zone=Stack (latest_object_observation)
+- 549: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 553: object 553 | controller=davin | owner=davin | zone=unknown (inferred unknown) (latest_object_observation)
+- 554: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 555: Ghost Vacuum | controller=davin | owner=davin | zone=Graveyard (latest_object_observation)
+- 556: Human | controller=davin | owner=davin | zone=Hand (latest_object_observation)
+- 557: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 558: Saber-Tooth Moose-Lion | controller=davin | owner=davin | zone=Battlefield (latest_object_observation)
+- 559: Perennation | controller=davin | owner=davin | zone=Graveyard (latest_object_observation)
+- 560: Hushwood Verge | controller=davin | owner=davin | zone=Battlefield (latest_object_observation)
+- 561: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 562: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 563: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 567: object 567 | controller=davin | owner=davin | zone=unknown (inferred unknown) (latest_object_observation)
+- 568: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 569: object 569 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 573: object 573 | controller=davin | owner=davin | zone=unknown (inferred unknown) (latest_object_observation)
+- 578: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 579: object 579 | controller=davin | owner=davin | zone=unknown (inferred unknown) (latest_object_observation)
+- 580: Brightblade Stoat | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 582: Fabled Passage | controller=davin | owner=davin | zone=Battlefield (latest_object_observation)
+- 583: object 583 | controller=davin | owner=davin | zone=unknown (inferred unknown) (latest_object_observation)
+- 584: Fabled Passage | controller=davin | owner=davin | zone=Graveyard (latest_object_observation)
+- 585: Swamp | controller=davin | owner=davin | zone=Battlefield (latest_object_observation)
+- 624: object 624 | controller=davin | owner=davin | zone=unknown (inferred unknown) (latest_object_observation)
+- 629: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 631: Restless Cottage | controller=davin | owner=davin | zone=Battlefield (latest_object_observation)
+- 632: Balamb T-Rexaur | controller=davin | owner=davin | zone=Battlefield (latest_object_observation)
+- 639: object 639 | controller=davin | owner=davin | zone=unknown (inferred unknown) (latest_object_observation)
+- 640: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 643: Balamb T-Rexaur | controller=davin | owner=davin | zone=Graveyard (latest_object_observation)
+- 644: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 645: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 646: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+davin: 52 total items
+  zones: Battlefield=17, Exile=1, Graveyard=9, Hand=3, Stack=6, unknown=16
+  objects: Fabled Passage x4, Overgrown Tomb x4, Bear Down x3, Ghost Vacuum x3, Saber-Tooth Moose-Lion x3, Balamb T-Rexaur x2, Day of Judgment x2, Hushwood Verge x2, Leatherhead, Swamp Stalker x2, Overlord of the Hauntwoods x2, Perennation x2, Baxter Building
+gian31: 61 total items
+  zones: Battlefield=12, Exile=6, Graveyard=4, Hand=27, Stack=5, unknown=7
+  objects: Hinterland Sanctifier x8, Swamp x8, Shoot the Sheriff x7, Brightblade Stoat x4, Makeshift Binding x4, Phyrexian Arena x4, Plains x4, Starscape Cleric x4, Rush of Dread x3, Stroke of Midnight x3, Case of the Uneaten Feast x2, Shattered Sanctum x2
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+davin:
+  Battlefield (17): Balamb T-Rexaur, Baxter Building, Everywhere, Fabled Passage, Fabled Passage, Forest, Hushwood Verge, Hushwood Verge, Leatherhead, Swamp Stalker, Overgrown Tomb, Overlord of the Hauntwoods, Plains, Restless Cottage, Saber-Tooth Moose-Lion, Stormkeld Vanguard, Sunken Citadel, Swamp
+  Graveyard: 9 card(s)
+gian31:
+  Battlefield (12): Brightblade Stoat, Hinterland Sanctifier, Hinterland Sanctifier, Plains, Plains, Rush of Dread, Shattered Sanctum, Starscape Cleric, Swamp, Swamp, Swamp, Swamp
+  Graveyard: 4 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+23 objects have no resolved final zone and are omitted from the known board state.
+davin: 16 unknown object(s)
+gian31: 7 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=30, Stack=11
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Player-zone assignment has explicit transfer conflicts in this match. Where a safe Hand -> Stack -> Battlefield or PlayLand provenance exists, that zone holder is used; other controller assignments remain protocol-observed rather than fully reconciled.
+davin:
+  Battlefield (12): Plains, Ghost Vacuum, Sunken Citadel, Hushwood Verge, Forest, Baxter Building, Everywhere, Overgrown Tomb, Saber-Tooth Moose-Lion, Hushwood Verge, Swamp, Restless Cottage
+  Graveyard (8): Fabled Passage, Overlord of the Hauntwoods, Leatherhead, Swamp Stalker, Day of Judgment, Ghost Vacuum, Perennation, Fabled Passage, Balamb T-Rexaur
+  Exile (2): Stormkeld Vanguard, Bear Down
+gian31:
+  Battlefield (8): Plains, Swamp, Shattered Sanctum, Plains, Swamp, Swamp, Makeshift Binding, Swamp
+  Graveyard (2): Stroke of Midnight, Shoot the Sheriff
+  Exile (6): Shoot the Sheriff, Phyrexian Arena, Starscape Cleric, Hinterland Sanctifier, Hinterland Sanctifier, Brightblade Stoat
+Known non-persistent entries (counts only):
+  davin: Hand=5, Limbo=1
+  gian31: Hand=1, Library=1, Limbo=3
+  unknown: Library=77, Limbo=5
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1
+- Turn 2: davin Battlefield=1; gian31 Battlefield=1
+- Turn 3: davin Battlefield=1; davin Graveyard=1; gian31 Battlefield=3
+- Turn 4: davin Battlefield=3; davin Graveyard=1; gian31 Battlefield=3
+- Turn 5: davin Battlefield=3; davin Graveyard=1; gian31 Battlefield=4
+- Turn 6: davin Battlefield=5; davin Graveyard=1; gian31 Battlefield=4
+- Turn 7: davin Battlefield=5; davin Graveyard=1; gian31 Battlefield=6
+- Turn 8: davin Battlefield=7; davin Graveyard=1; gian31 Battlefield=6
+- Turn 9: davin Battlefield=7; davin Graveyard=1; gian31 Battlefield=7
+- Turn 10: davin Battlefield=8; davin Graveyard=2; gian31 Battlefield=7; gian31 Graveyard=1
+- Turn 11: davin Battlefield=8; davin Graveyard=2; gian31 Battlefield=8; gian31 Exile=1
+- Turn 12: davin Battlefield=8; davin Graveyard=2; davin Exile=1; gian31 Battlefield=7; gian31 Graveyard=1; gian31 Exile=1
+- Turn 13: davin Battlefield=8; davin Graveyard=2; davin Exile=1; gian31 Battlefield=8; gian31 Exile=2
+- Turn 14: davin Battlefield=8; davin Graveyard=5; davin Exile=1; gian31 Battlefield=4; gian31 Graveyard=4; gian31 Exile=2
+- Turn 15: davin Battlefield=8; davin Graveyard=5; davin Exile=1; gian31 Battlefield=5; gian31 Graveyard=3; gian31 Exile=3
+- Turn 16: davin Battlefield=9; davin Graveyard=6; davin Exile=1; gian31 Battlefield=5; gian31 Graveyard=3; gian31 Exile=4
+- Turn 17: davin Battlefield=9; davin Graveyard=6; davin Exile=2; gian31 Battlefield=7; gian31 Graveyard=2; gian31 Exile=5
+- Turn 18: davin Battlefield=9; davin Graveyard=6; davin Exile=2; gian31 Battlefield=7; gian31 Graveyard=2; gian31 Exile=5
+- Turn 19: davin Battlefield=9; davin Graveyard=6; davin Exile=2; gian31 Battlefield=7; gian31 Graveyard=1; gian31 Exile=6
+- Turn 20: davin Battlefield=10; davin Graveyard=7; davin Exile=2; gian31 Battlefield=7; gian31 Graveyard=1; gian31 Exile=6
+- Turn 21: davin Battlefield=10; davin Graveyard=7; davin Exile=2; gian31 Battlefield=7; gian31 Graveyard=1; gian31 Exile=6
+- Turn 22: davin Battlefield=11; davin Graveyard=8; davin Exile=2; gian31 Battlefield=7; gian31 Graveyard=2; gian31 Exile=6
+- Turn 23: davin Battlefield=11; davin Graveyard=8; davin Exile=2; gian31 Battlefield=8; gian31 Graveyard=2; gian31 Exile=6
+- Turn 24: davin Battlefield=11; davin Graveyard=8; davin Exile=2; gian31 Battlefield=8; gian31 Graveyard=2; gian31 Exile=6
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 3: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Ghost Vacuum resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Ghost Vacuum resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Leatherhead, Swamp Stalker resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Brightblade Stoat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Overlord of the Hauntwoods resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Phyrexian Arena resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 17: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 22: Balamb T-Rexaur resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
