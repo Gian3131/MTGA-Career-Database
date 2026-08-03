@@ -1,0 +1,1065 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: autocall, gian31
+Seat map: Seat 1=autocall, Seat 2=gian31
+Turn range (known): 1 - 19
+Unnumbered turn groups retained: 1
+Records: 53
+Action chains: 49
+Winner: autocall
+Final life: {'autocall': 10, 'gian31': 8}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 19 (Phase_Main1; Ability of Authority of the Consuls, seq 514).
+Later numbered GRE record(s): 4 after action sequence 514 across turn(s) [19]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+POST-ACTION GRE RECORDS - RESULT ORDER UNRESOLVED
+  - Turn 19, seq 520: tapped_changed.
+  - Turn 19, seq 520: tapped_changed.
+  - Turn 19, seq 520: tapped_changed.
+  - Turn 19, seq 520: tapped_changed.
+  These records are retained for traceability; their order relative to the match-result payload is not asserted.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 40 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 13 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 11, 12, 13, 14, 15, 16] (raw records=13; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 25 explicit Library -> Hand movement(s); named in the draw record=9, resolved through an explicit identity transition=12, unresolved=4.
+Unresolved draw identities (explicit movements retained): Turn 5, seq 111, object 317; Turn 13, seq 350, object 400; Turn 15, seq 414, object 429; Turn 19, seq 507, object 464.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Shoot the Sheriff [227], Plains [228], Makeshift Binding [229], Shoot the Sheriff [230], Bloodletter of Aclazotz [231], Authority of the Consuls [232], Scoured Barrens [233].
+  - unknown: 7 observed card(s): object 167 [167], object 168 [168], object 169 [169], object 170 [170], object 171 [171], object 172 [172], object 173 [173].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: autocall; observed final life totals: {'autocall': 10, 'gian31': 8}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 19 (Phase_Main1; Ability of Authority of the Consuls, seq 514).
+Last captured life snapshot: gian31 7 -> 8 (seq 514).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Authority of the Consuls.
+- Turn 3: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Swamp, Deep-Cavern Bat.
+- Turn 4: actions: cards=0, abilities=1; life mutations=1; explicit battlefield entries=Scoured Barrens.
+- Turn 5: actions: cards=1, abilities=1; combat snapshots=1; life mutations=3; explicit battlefield entries=Swamp, Unholy Annex // Ritual Chamber.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Starscape Cleric.
+- Turn 7: actions: cards=1, abilities=3; combat snapshots=1; life mutations=6; explicit battlefield entries=Swamp, Bloodletter of Aclazotz.
+- Turn 8: actions: cards=2, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Case of the Uneaten Feast; explicit battlefield exits=Bloodletter of Aclazotz.
+- Turn 9: actions: cards=2, abilities=2; combat snapshots=1; life mutations=6; explicit battlefield entries=Demon Wall; explicit battlefield exits=Starscape Cleric.
+- Turn 10: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Makeshift Binding; explicit battlefield exits=Demon Wall.
+- Turn 11: actions: cards=3, abilities=5; combat snapshots=1; life mutations=7; explicit battlefield entries=Swamp, Cecil, Dark Knight, Unstoppable Slasher, Timeline Culler; explicit battlefield exits=Timeline Culler.
+- Turn 12: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Swamp, Makeshift Binding; explicit battlefield exits=Unstoppable Slasher.
+- Turn 13: actions: cards=0, abilities=4; combat snapshots=1; life mutations=6; explicit battlefield entries=Swamp.
+- Turn 14: actions: cards=2, abilities=0; explicit battlefield entries=Plains; explicit battlefield exits=Deep-Cavern Bat, Demon.
+- Turn 15: actions: cards=2, abilities=4; combat snapshots=1; life mutations=5; explicit battlefield entries=Swamp, Timeline Culler, Unstoppable Slasher.
+- Turn 16: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Swamp, Bloodletter of Aclazotz.
+- Turn 17: actions: cards=1, abilities=4; combat snapshots=1; life mutations=5; explicit battlefield entries=Gatekeeper of Malakir; explicit battlefield exits=Bloodletter of Aclazotz.
+- Turn 18: actions: cards=2, abilities=1; life mutations=1; explicit battlefield entries=Bloodthirsty Conqueror; explicit battlefield exits=Bloodthirsty Conqueror.
+- Turn 19: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Unstoppable Slasher.
+- Turn None: actions: cards=0, abilities=0.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [287] Hand (autocall) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      autocall: Battlefield: Swamp [287]
+
+Turn 2
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=27] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 290) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 290) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shoot the Sheriff [288] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 21).
+      Plains [289] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      autocall: Battlefield: Swamp [287]
+      gian31: Battlefield: Authority of the Consuls [290], Plains [289]
+
+Turn 3
+  - Deep-Cavern Bat [valid_resolution_no_immediate_mutation, seq=47] (active=autocall, phase=Phase_Main1, controller=autocall, owner=autocall, source_object=294)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deep-Cavern Bat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deep-Cavern Bat (object 294) Hand (autocall) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 294) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=51] (active=autocall, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Unstoppable Slasher [292] Library (autocall) -> Hand (autocall) (Draw; GRE sequence 41).
+      Swamp [293] Hand (autocall) -> Battlefield (PlayLand; GRE sequence 44).
+      Shoot the Sheriff [299] Hand (gian31) -> Exile (Exile; GRE sequence 54).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      autocall: Battlefield: Deep-Cavern Bat [294], Swamp [287], Swamp [293]
+      gian31: Battlefield: Authority of the Consuls [290], Plains [289]; Exile: Shoot the Sheriff [299]
+
+Turn 4
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=73] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=306, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [305] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 68).
+      Scoured Barrens [306] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 71).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      autocall: Battlefield: Deep-Cavern Bat [294], Swamp [287], Swamp [293]
+      gian31: Battlefield: Authority of the Consuls [290], Plains [289], Scoured Barrens [306]; Exile: Shoot the Sheriff [299]
+
+Turn 5
+  - Unholy Annex // Ritual Chamber [valid_resolution_no_immediate_mutation, seq=93] (active=autocall, phase=Phase_Main1, controller=autocall, owner=autocall, source_object=310)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Unholy Annex // Ritual Chamber resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Unholy Annex // Ritual Chamber (object 310) Hand (autocall) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Unholy Annex // Ritual Chamber (object 310) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect, seq=111] (active=autocall, phase=Phase_Ending, step=Step_End, controller=autocall, owner=autocall, source_object=310, source_last_explicit_zone=Battlefield)
+      effects: draw, life -2
+      narrative: Ability of Unholy Annex // Ritual Chamber: draw; autocall loses 2 life.
+      explicit effect object references: object 176 [176], object 317 [317] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 317 (object 317) Library (autocall) -> Hand (autocall) (Draw; shared object ID)
+  Combat snapshots observed (active=autocall; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [294] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: autocall -1; gian31 -1 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): autocall 20 -> 21
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 22 -> 21
+    life: autocall 21 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [308] Library (autocall) -> Hand (autocall) (Draw; GRE sequence 87).
+      Swamp [309] Hand (autocall) -> Battlefield (PlayLand; GRE sequence 90).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      autocall: Battlefield: Deep-Cavern Bat [294], Swamp [287], Swamp [293], Swamp [309], Unholy Annex // Ritual Chamber [310]
+      gian31: Battlefield: Authority of the Consuls [290], Plains [289], Scoured Barrens [306]; Exile: Shoot the Sheriff [299]
+
+Turn 6
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=122] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=320)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 320) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 320) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [318] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 115).
+      Plains [319] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 118).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      autocall: Battlefield: Deep-Cavern Bat [294], Swamp [287], Swamp [293], Swamp [309], Unholy Annex // Ritual Chamber [310]
+      gian31: Battlefield: Authority of the Consuls [290], Plains [289], Plains [319], Scoured Barrens [306], Starscape Cleric [320]; Exile: Shoot the Sheriff [299]
+
+Turn 7
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation, seq=142] (active=autocall, phase=Phase_Main1, controller=autocall, owner=autocall, source_object=325)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 325) Hand (autocall) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 325) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=144] (active=autocall, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=146] (active=autocall, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=320, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: autocall loses 1 life.
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect, seq=164] (active=autocall, phase=Phase_Ending, step=Step_End, controller=autocall, owner=autocall, source_object=310, source_last_explicit_zone=Battlefield)
+      effects: draw, life -4, life +2
+      narrative: Ability of Unholy Annex // Ritual Chamber: draw; gian31 loses 4 life; autocall gains 2 life.
+      explicit effect object references: object 178 [178], object 333 [333] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Demon Wall (object 333) Library (autocall) -> Hand (autocall) (Draw; shared object ID)
+  Combat snapshots observed (active=autocall; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [294] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-reconciled defending-player life-loss component: 1; observed attacker power total: 1; unresolved additional life loss: 1 (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: autocall +2; gian31 -5 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    life: autocall 19 -> 18
+    life (gain observed during combat phase; exact source unavailable): autocall 18 -> 19
+    life (combat component reconciled: 1; unresolved residual life loss 1; exact assignment unavailable): gian31 22 -> 20
+    life: autocall 19 -> 21
+    life: gian31 20 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Feed the Swarm [323] Library (autocall) -> Hand (autocall) (Draw; GRE sequence 136).
+      Swamp [324] Hand (autocall) -> Battlefield (PlayLand; GRE sequence 139).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      autocall: Battlefield: Bloodletter of Aclazotz [325], Deep-Cavern Bat [294], Swamp [287], Swamp [293], Swamp [309], Swamp [324], Unholy Annex // Ritual Chamber [310]
+      gian31: Battlefield: Authority of the Consuls [290], Plains [289], Plains [319], Scoured Barrens [306], Starscape Cleric [320]; Exile: Shoot the Sheriff [299]
+
+Turn 8
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=173] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=335)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 335) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 335) Stack -> Battlefield (Resolve; shared object ID)
+  - Shoot the Sheriff [observed_semantic_effect, seq=178] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=337)
+      effects: destroy
+      narrative: Shoot the Sheriff destroys Bloodletter of Aclazotz.
+      explicit effect object references: Bloodletter of Aclazotz [325], Bloodletter of Aclazotz [340] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 337) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 340) Battlefield -> Graveyard (autocall) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 341) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 337 -> transfer object 341 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [320] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: autocall -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): autocall 21 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [334] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 168).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      autocall: Battlefield: Deep-Cavern Bat [294], Swamp [287], Swamp [293], Swamp [309], Swamp [324], Unholy Annex // Ritual Chamber [310]; Graveyard: Bloodletter of Aclazotz [340]
+      gian31: Battlefield: Authority of the Consuls [290], Case of the Uneaten Feast [335], Plains [289], Plains [319], Scoured Barrens [306], Starscape Cleric [320]; Exile: Shoot the Sheriff [299]; Graveyard: Shoot the Sheriff [341]
+
+Turn 9
+  - Feed the Swarm [observed_semantic_effect, seq=205] (active=autocall, phase=Phase_Main1, controller=autocall, owner=autocall, source_object=343)
+      effects: destroy, life -2
+      narrative: Feed the Swarm destroys Starscape Cleric.
+      explicit effect object references: Starscape Cleric [320], Starscape Cleric [346] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Feed the Swarm (object 343) Hand (autocall) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 346) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Feed the Swarm (object 347) Stack -> Graveyard (autocall) (Resolve; shared object ID)
+      identity continuity: source object 343 -> transfer object 347 (explicit GRE ObjectIdChanged chain).
+  - Demon Wall [valid_resolution_no_immediate_mutation, seq=208] (active=autocall, phase=Phase_Main1, controller=autocall, owner=autocall, source_object=348)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Demon Wall resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Demon Wall (object 348) Hand (autocall) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Demon Wall (object 348) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=210] (active=autocall, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect, seq=228] (active=autocall, phase=Phase_Ending, step=Step_End, controller=autocall, owner=autocall, source_object=310, source_last_explicit_zone=Battlefield)
+      effects: draw, life -2, life +2
+      narrative: Ability of Unholy Annex // Ritual Chamber: draw; gian31 loses 2 life; autocall gains 2 life.
+      explicit effect object references: object 180 [180], object 353 [353] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Cecil, Dark Knight (object 353) Library (autocall) -> Hand (autocall) (Draw; shared object ID)
+  Combat snapshots observed (active=autocall; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [294] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: autocall +1; gian31 -2 (individual changes below; gains and losses may offset)
+    life: autocall 19 -> 17
+    life: gian31 16 -> 17
+    life (gain observed during combat phase; exact source unavailable): autocall 17 -> 18
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 17 -> 16
+    life: autocall 18 -> 20
+    life: gian31 16 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Timeline Culler [342] Library (autocall) -> Hand (autocall) (Draw; GRE sequence 198).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      autocall: Battlefield: Deep-Cavern Bat [294], Demon Wall [348], Swamp [287], Swamp [293], Swamp [309], Swamp [324], Unholy Annex // Ritual Chamber [310]; Graveyard: Bloodletter of Aclazotz [340], Feed the Swarm [347]
+      gian31: Battlefield: Authority of the Consuls [290], Case of the Uneaten Feast [335], Plains [289], Plains [319], Scoured Barrens [306]; Exile: Shoot the Sheriff [299]; Graveyard: Shoot the Sheriff [341], Starscape Cleric [346]
+
+Turn 10
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=237] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=355)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 355) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 355) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=241] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Demon Wall; gian31 gains 2 life.
+      explicit effect object references: Demon Wall [348], Demon Wall [360] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Demon Wall (object 360) Battlefield -> Exile (Exile; shared object ID)
+    net observed life change this turn: gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 14 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [354] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 232).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      autocall: Battlefield: Deep-Cavern Bat [294], Swamp [287], Swamp [293], Swamp [309], Swamp [324], Unholy Annex // Ritual Chamber [310]; Graveyard: Bloodletter of Aclazotz [340], Feed the Swarm [347]; Exile: Demon Wall [360]
+      gian31: Battlefield: Authority of the Consuls [290], Case of the Uneaten Feast [335], Makeshift Binding [355], Plains [289], Plains [319], Scoured Barrens [306]; Exile: Shoot the Sheriff [299]; Graveyard: Shoot the Sheriff [341], Starscape Cleric [346]
+
+Turn 11
+  - Cecil, Dark Knight [valid_resolution_no_immediate_mutation, seq=261] (active=autocall, phase=Phase_Main1, controller=autocall, owner=autocall, source_object=363)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Cecil, Dark Knight resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Cecil, Dark Knight (object 363) Hand (autocall) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Cecil, Dark Knight (object 363) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=263] (active=autocall, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Unstoppable Slasher [valid_resolution_no_immediate_mutation, seq=266] (active=autocall, phase=Phase_Main1, controller=autocall, owner=autocall, source_object=366)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Unstoppable Slasher resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Unstoppable Slasher (object 366) Hand (autocall) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Unstoppable Slasher (object 366) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=268] (active=autocall, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Timeline Culler [valid_resolution_no_immediate_mutation, seq=271] (active=autocall, phase=Phase_Main1, controller=autocall, owner=autocall, source_object=371)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Timeline Culler resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Timeline Culler (object 371) Hand (autocall) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Timeline Culler (object 371) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=273] (active=autocall, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect, seq=292] (active=autocall, phase=Phase_Ending, step=Step_End, controller=autocall, owner=autocall, source_object=310, source_last_explicit_zone=Battlefield)
+      effects: draw, life -2
+      narrative: Ability of Unholy Annex // Ritual Chamber: draw; autocall loses 2 life.
+      explicit effect object references: object 182 [182], object 377 [377] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 377) Library (autocall) -> Hand (autocall) (Draw; shared object ID)
+  - Ability of Timeline Culler [observed_semantic_effect, seq=294] (active=autocall, phase=Phase_Ending, step=Step_End, controller=autocall, owner=autocall, source_object=371, source_last_explicit_zone=Battlefield, source_successor=378 observed Battlefield -> Exile (Warp))
+      effects: none immediately observed
+      narrative: Observed zone movements: Timeline Culler.
+      explicit effect object references: Timeline Culler [378] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Timeline Culler (object 378) Battlefield -> Exile (Warp; shared object ID)
+  Combat snapshots observed (active=autocall; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [294] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      other-player life loss not explained by observed attacker damage: autocall 20 -> 18 (-2; phase=Phase_Main1; source unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: autocall -3; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 16 -> 17
+    life: gian31 17 -> 18
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): autocall 20 -> 18
+    life: gian31 18 -> 19
+    life (gain observed during combat phase; exact source unavailable): autocall 18 -> 19
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 19 -> 18
+    life: autocall 19 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [361] Library (autocall) -> Hand (autocall) (Draw; GRE sequence 255).
+      Swamp [362] Hand (autocall) -> Battlefield (PlayLand; GRE sequence 258).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      autocall: Battlefield: Cecil, Dark Knight [363], Deep-Cavern Bat [294], Swamp [287], Swamp [293], Swamp [309], Swamp [324], Swamp [362], Unholy Annex // Ritual Chamber [310], Unstoppable Slasher [366]; Graveyard: Bloodletter of Aclazotz [340], Feed the Swarm [347]; Exile: Demon Wall [360], Timeline Culler [378]
+      gian31: Battlefield: Authority of the Consuls [290], Case of the Uneaten Feast [335], Makeshift Binding [355], Plains [289], Plains [319], Scoured Barrens [306]; Exile: Shoot the Sheriff [299]; Graveyard: Shoot the Sheriff [341], Starscape Cleric [346]
+
+Turn 12
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=304] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=381)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 381) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 381) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=308] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=381, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Unstoppable Slasher; gian31 gains 2 life.
+      explicit effect object references: Unstoppable Slasher [366], Unstoppable Slasher [386] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Unstoppable Slasher (object 386) Battlefield -> Exile (Exile; shared object ID)
+    net observed life change this turn: gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [379] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 298).
+      Swamp [380] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 301).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      autocall: Battlefield: Cecil, Dark Knight [363], Deep-Cavern Bat [294], Swamp [287], Swamp [293], Swamp [309], Swamp [324], Swamp [362], Unholy Annex // Ritual Chamber [310]; Graveyard: Bloodletter of Aclazotz [340], Feed the Swarm [347]; Exile: Demon Wall [360], Timeline Culler [378], Unstoppable Slasher [386]
+      gian31: Battlefield: Authority of the Consuls [290], Case of the Uneaten Feast [335], Makeshift Binding [355], Makeshift Binding [381], Plains [289], Plains [319], Scoured Barrens [306], Swamp [380]; Exile: Shoot the Sheriff [299]; Graveyard: Shoot the Sheriff [341], Starscape Cleric [346]
+
+Turn 13
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect, seq=328] (active=autocall, phase=Phase_Main1, controller=autocall, owner=autocall, source_object=310, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Unholy Annex // Ritual Chamber: a token is created.
+      explicit effect object references: Demon [395] (role/targeting only where the protocol identifies it)
+      token created: Demon (object 395, controller=autocall) 6/6; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 394).
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=330] (active=autocall, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Cecil, Dark Knight [observed_semantic_effect, seq=342] (active=autocall, phase=Phase_Combat, step=Step_CombatDamage, controller=autocall, owner=autocall, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Cecil, Dark Knight: autocall loses 2 life.
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect, seq=350] (active=autocall, phase=Phase_Ending, step=Step_End, controller=autocall, owner=autocall, source_object=310, source_last_explicit_zone=Battlefield)
+      effects: draw, life -2, life +2
+      narrative: Ability of Unholy Annex // Ritual Chamber: draw; gian31 loses 2 life; autocall gains 2 life.
+      explicit effect object references: object 184 [184], object 400 [400] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 400 (object 400) Library (autocall) -> Hand (autocall) (Draw; shared object ID)
+  Combat snapshots observed (active=autocall; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [294] (unblocked, observed P/T 1/1), Cecil, Dark Knight [363] (unblocked, observed P/T 2/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: autocall +1; gian31 -4 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life (gain observed during combat phase; exact source unavailable): autocall 17 -> 18
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 21 -> 18
+    life: autocall 18 -> 16
+    life: autocall 16 -> 18
+    life: gian31 18 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [387] Library (autocall) -> Hand (autocall) (Draw; GRE sequence 322).
+      Swamp [388] Hand (autocall) -> Battlefield (PlayLand; GRE sequence 325).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      autocall: Battlefield: Cecil, Dark Knight [363], Deep-Cavern Bat [294], Swamp [287], Swamp [293], Swamp [309], Swamp [324], Swamp [362], Swamp [388], Unholy Annex // Ritual Chamber [310]; Graveyard: Bloodletter of Aclazotz [340], Feed the Swarm [347]; Exile: Demon Wall [360], Timeline Culler [378], Unstoppable Slasher [386]
+      gian31: Battlefield: Authority of the Consuls [290], Case of the Uneaten Feast [335], Makeshift Binding [355], Makeshift Binding [381], Plains [289], Plains [319], Scoured Barrens [306], Swamp [380]; Exile: Shoot the Sheriff [299]; Graveyard: Shoot the Sheriff [341], Starscape Cleric [346]
+
+Turn 14
+  - Shoot the Sheriff [observed_semantic_effect, seq=362] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=403)
+      effects: destroy, return to battlefield
+      narrative: Shoot the Sheriff destroys Deep-Cavern Bat.
+      explicit effect object references: Deep-Cavern Bat [294], Shoot the Sheriff [299], Deep-Cavern Bat [406], Shoot the Sheriff [407] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 403) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 406) Battlefield -> Graveyard (autocall) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 407) Exile -> Hand (gian31) (Return; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 409) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 403 -> transfer object 409 (explicit GRE ObjectIdChanged chain).
+  - Shoot the Sheriff [observed_semantic_effect, seq=367] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=410)
+      effects: destroy
+      narrative: Shoot the Sheriff destroys Demon.
+      explicit effect object references: Demon [395], object 413 [413] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 410) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Demon (object 413) Battlefield -> Graveyard (autocall) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 414) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 410 -> transfer object 414 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [401] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 354).
+      Plains [402] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 357).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      autocall: Battlefield: Cecil, Dark Knight [363], Swamp [287], Swamp [293], Swamp [309], Swamp [324], Swamp [362], Swamp [388], Unholy Annex // Ritual Chamber [310]; Graveyard: Bloodletter of Aclazotz [340], Deep-Cavern Bat [406], Demon [413], Feed the Swarm [347]; Exile: Demon Wall [360], Timeline Culler [378], Unstoppable Slasher [386]
+      gian31: Battlefield: Authority of the Consuls [290], Case of the Uneaten Feast [335], Makeshift Binding [355], Makeshift Binding [381], Plains [289], Plains [319], Plains [402], Scoured Barrens [306], Swamp [380]; Graveyard: Shoot the Sheriff [341], Shoot the Sheriff [409], Shoot the Sheriff [414], Starscape Cleric [346]
+
+Turn 15
+  - Timeline Culler [valid_resolution_no_immediate_mutation, seq=387] (active=autocall, phase=Phase_Main1, controller=autocall, owner=autocall, source_object=417)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Timeline Culler resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Timeline Culler (object 417) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Timeline Culler (object 417) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=389] (active=autocall, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Unstoppable Slasher [valid_resolution_no_immediate_mutation, seq=392] (active=autocall, phase=Phase_Main1, controller=autocall, owner=autocall, source_object=421)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Unstoppable Slasher resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Unstoppable Slasher (object 421) Hand (autocall) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Unstoppable Slasher (object 421) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=394] (active=autocall, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Cecil, Dark Knight [observed_semantic_effect, seq=406] (active=autocall, phase=Phase_Combat, step=Step_CombatDamage, controller=autocall, owner=autocall, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Cecil, Dark Knight: autocall loses 2 life.
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect, seq=414] (active=autocall, phase=Phase_Ending, step=Step_End, controller=autocall, owner=autocall, source_object=310, source_last_explicit_zone=Battlefield)
+      effects: draw, life -2
+      narrative: Ability of Unholy Annex // Ritual Chamber: draw; autocall loses 2 life.
+      explicit effect object references: object 186 [186], object 429 [429] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 429 (object 429) Library (autocall) -> Hand (autocall) (Draw; shared object ID)
+  Combat snapshots observed (active=autocall; frames: DeclareAttack -> DeclareBlock):
+      attackers: Cecil, Dark Knight [363] (unblocked, observed P/T 2/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: autocall -4; gian31 +0 (individual changes below; gains and losses may offset)
+    life: gian31 16 -> 17
+    life: gian31 17 -> 18
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 18 -> 16
+    life: autocall 18 -> 16
+    life: autocall 16 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [415] Library (autocall) -> Hand (autocall) (Draw; GRE sequence 381).
+      Swamp [416] Hand (autocall) -> Battlefield (PlayLand; GRE sequence 384).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      autocall: Battlefield: Cecil, Dark Knight [363], Swamp [287], Swamp [293], Swamp [309], Swamp [324], Swamp [362], Swamp [388], Swamp [416], Timeline Culler [417], Unholy Annex // Ritual Chamber [310], Unstoppable Slasher [421]; Graveyard: Bloodletter of Aclazotz [340], Deep-Cavern Bat [406], Demon [413], Feed the Swarm [347]; Exile: Demon Wall [360], Unstoppable Slasher [386]
+      gian31: Battlefield: Authority of the Consuls [290], Case of the Uneaten Feast [335], Makeshift Binding [355], Makeshift Binding [381], Plains [289], Plains [319], Plains [402], Scoured Barrens [306], Swamp [380]; Graveyard: Shoot the Sheriff [341], Shoot the Sheriff [409], Shoot the Sheriff [414], Starscape Cleric [346]
+
+Turn 16
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation, seq=424] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=432)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 432) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 432) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=426] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 16 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [430] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 418).
+      Swamp [431] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 421).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      autocall: Battlefield: Cecil, Dark Knight [363], Swamp [287], Swamp [293], Swamp [309], Swamp [324], Swamp [362], Swamp [388], Swamp [416], Timeline Culler [417], Unholy Annex // Ritual Chamber [310], Unstoppable Slasher [421]; Graveyard: Bloodletter of Aclazotz [340], Deep-Cavern Bat [406], Demon [413], Feed the Swarm [347]; Exile: Demon Wall [360], Unstoppable Slasher [386]
+      gian31: Battlefield: Authority of the Consuls [290], Bloodletter of Aclazotz [432], Case of the Uneaten Feast [335], Makeshift Binding [355], Makeshift Binding [381], Plains [289], Plains [319], Plains [402], Scoured Barrens [306], Swamp [380], Swamp [431]; Graveyard: Shoot the Sheriff [341], Shoot the Sheriff [409], Shoot the Sheriff [414], Starscape Cleric [346]
+
+Turn 17
+  - Gatekeeper of Malakir [valid_resolution_no_immediate_mutation, seq=446] (active=autocall, phase=Phase_Main1, controller=autocall, owner=autocall, source_object=439)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Gatekeeper of Malakir resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Gatekeeper of Malakir (object 439) Hand (autocall) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gatekeeper of Malakir (object 439) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=450] (active=autocall, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Cecil, Dark Knight [observed_semantic_effect, seq=466] (active=autocall, phase=Phase_Combat, step=Step_CombatDamage, controller=autocall, owner=autocall, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Cecil, Dark Knight: autocall loses 2 life.
+  - Ability of Unstoppable Slasher [observed_semantic_effect, seq=468] (active=autocall, phase=Phase_Combat, step=Step_CombatDamage, controller=autocall, owner=autocall, source_object=421, source_last_explicit_zone=Battlefield)
+      effects: life -6
+      narrative: Ability of Unstoppable Slasher: gian31 loses 6 life.
+  - Ability of Unholy Annex // Ritual Chamber [observed_semantic_effect, seq=476] (active=autocall, phase=Phase_Ending, step=Step_End, controller=autocall, owner=autocall, source_object=310, source_last_explicit_zone=Battlefield)
+      effects: draw, life -2
+      narrative: Ability of Unholy Annex // Ritual Chamber: draw; autocall loses 2 life.
+      explicit effect object references: object 188 [188], object 450 [450] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Unstoppable Slasher (object 450) Library (autocall) -> Hand (autocall) (Draw; shared object ID)
+  Combat snapshots observed (active=autocall; frames: DeclareAttack -> DeclareBlock):
+      attackers: Cecil, Dark Knight [363] (unblocked, observed P/T 2/3), Timeline Culler [417] (unblocked, observed P/T 2/2), Unstoppable Slasher [421] (unblocked, observed P/T 2/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 6; observed attacker power total: 6; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: autocall -4; gian31 -11 (individual changes below; gains and losses may offset)
+    life: gian31 17 -> 18
+    life (combat fully reconciled: snapshot power 6 + observed modifiers 0 = 6; individual assignment unavailable): gian31 18 -> 12
+    life: autocall 14 -> 12
+    life: gian31 12 -> 6
+    life: autocall 12 -> 10
+    additional protocol-observed zone movements not assigned to an action chain:
+      Gatekeeper of Malakir [438] Library (autocall) -> Hand (autocall) (Draw; GRE sequence 440).
+      Bloodletter of Aclazotz [445] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 453).
+        sacrifice observed after Ability of Authority of the Consuls (seq 450); direct causal linkage is unavailable.
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      autocall: Battlefield: Cecil, Dark Knight [363], Gatekeeper of Malakir [439], Swamp [287], Swamp [293], Swamp [309], Swamp [324], Swamp [362], Swamp [388], Swamp [416], Timeline Culler [417], Unholy Annex // Ritual Chamber [310], Unstoppable Slasher [421]; Graveyard: Bloodletter of Aclazotz [340], Deep-Cavern Bat [406], Demon [413], Feed the Swarm [347]; Exile: Demon Wall [360], Unstoppable Slasher [386]
+      gian31: Battlefield: Authority of the Consuls [290], Case of the Uneaten Feast [335], Makeshift Binding [355], Makeshift Binding [381], Plains [289], Plains [319], Plains [402], Scoured Barrens [306], Swamp [380], Swamp [431]; Graveyard: Bloodletter of Aclazotz [445], Shoot the Sheriff [341], Shoot the Sheriff [409], Shoot the Sheriff [414], Starscape Cleric [346]
+
+Turn 18
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation, seq=485] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=452)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 452) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 452) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=493] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Shoot the Sheriff [observed_semantic_effect, seq=491] (active=unknown, controller=autocall, owner=autocall, source_object=459)
+      chronology reconciliation: parser turn group None conflicts with Turn 18; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: destroy
+      narrative: Shoot the Sheriff destroys Bloodthirsty Conqueror.
+      explicit effect object references: Bloodthirsty Conqueror [452], Bloodthirsty Conqueror [462] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 459) Hand (autocall) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 462) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 463) Stack -> Graveyard (autocall) (Resolve; shared object ID)
+      identity continuity: source object 459 -> transfer object 463 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 6 -> 7
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodthirsty Conqueror [451] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 480).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      autocall: Battlefield: Cecil, Dark Knight [363], Gatekeeper of Malakir [439], Swamp [287], Swamp [293], Swamp [309], Swamp [324], Swamp [362], Swamp [388], Swamp [416], Timeline Culler [417], Unholy Annex // Ritual Chamber [310], Unstoppable Slasher [421]; Graveyard: Bloodletter of Aclazotz [340], Deep-Cavern Bat [406], Demon [413], Feed the Swarm [347], Shoot the Sheriff [463]; Exile: Demon Wall [360], Unstoppable Slasher [386]
+      gian31: Battlefield: Authority of the Consuls [290], Case of the Uneaten Feast [335], Makeshift Binding [355], Makeshift Binding [381], Plains [289], Plains [319], Plains [402], Scoured Barrens [306], Swamp [380], Swamp [431]; Graveyard: Bloodletter of Aclazotz [445], Bloodthirsty Conqueror [462], Shoot the Sheriff [341], Shoot the Sheriff [409], Shoot the Sheriff [414], Starscape Cleric [346]
+
+Turn 19
+  - Unstoppable Slasher [valid_resolution_no_immediate_mutation, seq=512] (active=autocall, phase=Phase_Main1, controller=autocall, owner=autocall, source_object=465)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Unstoppable Slasher resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Unstoppable Slasher (object 465) Hand (autocall) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Unstoppable Slasher (object 465) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=514] (active=autocall, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  Combat snapshots observed (active=autocall; frames: DeclareAttack -> DeclareBlock):
+      attackers: Cecil, Dark Knight [363] (unblocked, observed P/T 2/3), Timeline Culler [417] (unblocked, observed P/T 2/2), Unstoppable Slasher [421] (unblocked, observed P/T 2/3), Gatekeeper of Malakir [439] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 7 -> 8
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 464 [464] Library (autocall) -> Hand (autocall) (Draw; GRE sequence 507).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      autocall: Battlefield: Cecil, Dark Knight [363], Gatekeeper of Malakir [439], Swamp [287], Swamp [293], Swamp [309], Swamp [324], Swamp [362], Swamp [388], Swamp [416], Timeline Culler [417], Unholy Annex // Ritual Chamber [310], Unstoppable Slasher [421], Unstoppable Slasher [465]; Graveyard: Bloodletter of Aclazotz [340], Deep-Cavern Bat [406], Demon [413], Feed the Swarm [347], Shoot the Sheriff [463]; Exile: Demon Wall [360], Unstoppable Slasher [386]
+      gian31: Battlefield: Authority of the Consuls [290], Case of the Uneaten Feast [335], Makeshift Binding [355], Makeshift Binding [381], Plains [289], Plains [319], Plains [402], Scoured Barrens [306], Swamp [380], Swamp [431]; Graveyard: Bloodletter of Aclazotz [445], Bloodthirsty Conqueror [462], Shoot the Sheriff [341], Shoot the Sheriff [409], Shoot the Sheriff [414], Starscape Cleric [346]
+
+UNNUMBERED / UNRESOLVED TURN GROUP
+  - The captured records do not provide a verified numbered turn for the following events.
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 5, seq 103, Phase_Main1: autocall 20 -> 21. Combat declaration observed; exact assignment unavailable. Previous captured action: Unholy Annex // Ritual Chamber.
+- Turn 7, seq 156, Phase_Main1: autocall 18 -> 19; gian31 22 -> 20. combat-reconciled component 1; unresolved residual 1. Previous captured action: Starscape Cleric.
+- Turn 9, seq 220, Phase_Main1: autocall 17 -> 18. Combat declaration observed; exact assignment unavailable. Previous captured action: Authority of the Consuls.
+- Turn 11, seq 269, Phase_Main1: autocall 20 -> 18; autocall 18 -> 19. Combat declaration observed; exact assignment unavailable. Previous captured action: Authority of the Consuls.
+- Turn 13, seq 340, Phase_Main1: autocall 17 -> 18. Combat declaration observed; exact assignment unavailable. Previous captured action: Authority of the Consuls.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 1 token creations observed; 0 active as last observed; 1 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Demon [395] controller=autocall; created Turn 13 (6/6); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 14 via Battlefield -> Graveyard (autocall) (Destroy); ceases to exist after that observed move (token rules consequence).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Swamp [owner=autocall, controller=autocall] moves Hand (autocall) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Shoot the Sheriff [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 24: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 27: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 41: Unstoppable Slasher [owner/controller metadata unavailable] moves Library (autocall) -> Hand (autocall) (Draw).
+- Turn 3, seq 44: Swamp [owner=autocall, controller=autocall] moves Hand (autocall) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Deep-Cavern Bat [owner=autocall, controller=autocall] moves Hand (autocall) -> Stack (CastSpell).
+- Turn 3, seq 47: Deep-Cavern Bat [owner=autocall, controller=autocall] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 54: Shoot the Sheriff [owner=gian31, controller=gian31] moves Hand (gian31) -> Exile (Exile).
+- Turn 4, seq 68: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 71: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 87: Swamp [owner/controller metadata unavailable] moves Library (autocall) -> Hand (autocall) (Draw).
+- Turn 5, seq 90: Swamp [owner=autocall, controller=autocall] moves Hand (autocall) -> Battlefield (PlayLand).
+- Turn 5, seq 91: Unholy Annex // Ritual Chamber [owner=autocall, controller=autocall] moves Hand (autocall) -> Stack (CastSpell).
+- Turn 5, seq 93: Unholy Annex // Ritual Chamber [owner=autocall, controller=autocall] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 111: object 317 [owner/controller metadata unavailable] moves Library (autocall) -> Hand (autocall) (Draw).
+- Turn 6, seq 115: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 118: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 119: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 122: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 136: Feed the Swarm [owner/controller metadata unavailable] moves Library (autocall) -> Hand (autocall) (Draw).
+- Turn 7, seq 139: Swamp [owner=autocall, controller=autocall] moves Hand (autocall) -> Battlefield (PlayLand).
+- Turn 7, seq 140: Bloodletter of Aclazotz [owner=autocall, controller=autocall] moves Hand (autocall) -> Stack (CastSpell).
+- Turn 7, seq 142: Bloodletter of Aclazotz [owner=autocall, controller=autocall] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 164: Demon Wall [owner/controller metadata unavailable] moves Library (autocall) -> Hand (autocall) (Draw).
+- Turn 8, seq 168: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 171: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 173: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 174: Shoot the Sheriff [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 178: Bloodletter of Aclazotz [owner=autocall, controller=autocall] moves Battlefield -> Graveyard (autocall) (Destroy).
+- Turn 8, seq 178: Shoot the Sheriff [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 9, seq 198: Timeline Culler [owner/controller metadata unavailable] moves Library (autocall) -> Hand (autocall) (Draw).
+- Turn 9, seq 201: Feed the Swarm [owner=autocall, controller=autocall] moves Hand (autocall) -> Stack (CastSpell).
+- Turn 9, seq 205: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 9, seq 205: Feed the Swarm [owner=autocall, controller=autocall] moves Stack -> Graveyard (autocall) (Resolve).
+- Turn 9, seq 206: Demon Wall [owner=autocall, controller=autocall] moves Hand (autocall) -> Stack (CastSpell).
+- Turn 9, seq 208: Demon Wall [owner=autocall, controller=autocall] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 228: Cecil, Dark Knight [owner/controller metadata unavailable] moves Library (autocall) -> Hand (autocall) (Draw).
+- Turn 10, seq 232: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 235: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 237: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 241: Demon Wall [owner=autocall, controller=autocall] moves Battlefield -> Exile (Exile).
+- Turn 11, seq 255: Swamp [owner/controller metadata unavailable] moves Library (autocall) -> Hand (autocall) (Draw).
+- Turn 11, seq 258: Swamp [owner=autocall, controller=autocall] moves Hand (autocall) -> Battlefield (PlayLand).
+- Turn 11, seq 259: Cecil, Dark Knight [owner=autocall, controller=autocall] moves Hand (autocall) -> Stack (CastSpell).
+- Turn 11, seq 261: Cecil, Dark Knight [owner=autocall, controller=autocall] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 264: Unstoppable Slasher [owner=autocall, controller=autocall] moves Hand (autocall) -> Stack (CastSpell).
+- Turn 11, seq 266: Unstoppable Slasher [owner=autocall, controller=autocall] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 269: Timeline Culler [owner=autocall, controller=autocall] moves Hand (autocall) -> Stack (CastSpell).
+- Turn 11, seq 271: Timeline Culler [owner=autocall, controller=autocall] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 292: Shoot the Sheriff [owner/controller metadata unavailable] moves Library (autocall) -> Hand (autocall) (Draw).
+- Turn 11, seq 294: Timeline Culler [owner=autocall, controller=autocall] moves Battlefield -> Exile (Warp).
+- Turn 12, seq 298: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 301: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 302: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 304: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 308: Unstoppable Slasher [owner=autocall, controller=autocall] moves Battlefield -> Exile (Exile).
+- Turn 13, seq 322: Swamp [owner/controller metadata unavailable] moves Library (autocall) -> Hand (autocall) (Draw).
+- Turn 13, seq 325: Swamp [owner=autocall, controller=autocall] moves Hand (autocall) -> Battlefield (PlayLand).
+- Turn 13, seq 350: object 400 [owner/controller metadata unavailable] moves Library (autocall) -> Hand (autocall) (Draw).
+- Turn 14, seq 354: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 357: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 14, seq 358: Shoot the Sheriff [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 362: Deep-Cavern Bat [owner=autocall, controller=autocall] moves Battlefield -> Graveyard (autocall) (Destroy).
+- Turn 14, seq 362: Shoot the Sheriff [owner=gian31, controller=gian31] moves Exile -> Hand (gian31) (Return).
+- Turn 14, seq 362: Shoot the Sheriff [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 14, seq 363: Shoot the Sheriff [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 367: Demon [owner/controller metadata unavailable] moves Battlefield -> Graveyard (autocall) (Destroy).
+- Turn 14, seq 367: Shoot the Sheriff [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 15, seq 381: Swamp [owner/controller metadata unavailable] moves Library (autocall) -> Hand (autocall) (Draw).
+- Turn 15, seq 384: Swamp [owner=autocall, controller=autocall] moves Hand (autocall) -> Battlefield (PlayLand).
+- Turn 15, seq 385: Timeline Culler [owner=autocall, controller=autocall] moves Exile -> Stack (CastSpell).
+- Turn 15, seq 387: Timeline Culler [owner=autocall, controller=autocall] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 390: Unstoppable Slasher [owner=autocall, controller=autocall] moves Hand (autocall) -> Stack (CastSpell).
+- Turn 15, seq 392: Unstoppable Slasher [owner=autocall, controller=autocall] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 414: object 429 [owner/controller metadata unavailable] moves Library (autocall) -> Hand (autocall) (Draw).
+- Turn 16, seq 418: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 421: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 16, seq 422: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 424: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 17, seq 440: Gatekeeper of Malakir [owner/controller metadata unavailable] moves Library (autocall) -> Hand (autocall) (Draw).
+- Turn 17, seq 443: Gatekeeper of Malakir [owner=autocall, controller=autocall] moves Hand (autocall) -> Stack (CastSpell).
+- Turn 17, seq 446: Gatekeeper of Malakir [owner=autocall, controller=autocall] moves Stack -> Battlefield (Resolve).
+- Turn 17, seq 453: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 17, seq 476: Unstoppable Slasher [owner/controller metadata unavailable] moves Library (autocall) -> Hand (autocall) (Draw).
+- Turn 18, seq 480: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 18, seq 483: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 18, seq 485: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 18, seq 487: Shoot the Sheriff [owner=autocall, controller=autocall] moves Hand (autocall) -> Stack (CastSpell).
+- Turn 18, seq 491: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 18, seq 491: Shoot the Sheriff [owner=autocall, controller=autocall] moves Stack -> Graveyard (autocall) (Resolve).
+- Turn 19, seq 507: object 464 [owner/controller metadata unavailable] moves Library (autocall) -> Hand (autocall) (Draw).
+- Turn 19, seq 510: Unstoppable Slasher [owner=autocall, controller=autocall] moves Hand (autocall) -> Stack (CastSpell).
+- Turn 19, seq 512: Unstoppable Slasher [owner=autocall, controller=autocall] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 172 becomes object 287 [Swamp].
+- Turn 2, seq 21: object 234 becomes object 288 [Shoot the Sheriff].
+- Turn 2, seq 24: object 228 becomes object 289 [Plains].
+- Turn 2, seq 25: object 232 becomes object 290 [Authority of the Consuls].
+- Turn 3, seq 41: object 174 becomes object 292 [Unstoppable Slasher].
+- Turn 3, seq 44: object 168 becomes object 293 [Swamp].
+- Turn 3, seq 45: object 171 becomes object 294 [Deep-Cavern Bat].
+- Turn 3, seq 54: object 230 becomes object 299 [Shoot the Sheriff].
+- Turn 4, seq 68: object 235 becomes object 305 [Plains].
+- Turn 4, seq 71: object 233 becomes object 306 [Scoured Barrens].
+- Turn 5, seq 87: object 175 becomes object 308 [Swamp].
+- Turn 5, seq 90: object 308 becomes object 309 [Swamp].
+- Turn 5, seq 91: object 170 becomes object 310 [Unholy Annex // Ritual Chamber].
+- Turn 5, seq 111: object 176 becomes object 317 [object 176].
+- Turn 6, seq 115: object 236 becomes object 318 [Starscape Cleric].
+- Turn 6, seq 118: object 305 becomes object 319 [Plains].
+- Turn 6, seq 119: object 318 becomes object 320 [Starscape Cleric].
+- Turn 7, seq 136: object 177 becomes object 323 [Feed the Swarm].
+- Turn 7, seq 139: object 167 becomes object 324 [Swamp].
+- Turn 7, seq 140: object 173 becomes object 325 [Bloodletter of Aclazotz].
+- Turn 7, seq 164: object 178 becomes object 333 [Demon Wall].
+- Turn 8, seq 168: object 237 becomes object 334 [Case of the Uneaten Feast].
+- Turn 8, seq 171: object 334 becomes object 335 [Case of the Uneaten Feast].
+- Turn 8, seq 174: object 288 becomes object 337 [Shoot the Sheriff].
+- Turn 8, seq 178: object 325 becomes object 340 [Bloodletter of Aclazotz].
+- Turn 8, seq 178: object 337 becomes object 341 [Shoot the Sheriff].
+- Turn 9, seq 198: object 179 becomes object 342 [Timeline Culler].
+- Turn 9, seq 201: object 323 becomes object 343 [Feed the Swarm].
+- Turn 9, seq 205: object 320 becomes object 346 [Starscape Cleric].
+- Turn 9, seq 205: object 343 becomes object 347 [Feed the Swarm].
+- Turn 9, seq 206: object 333 becomes object 348 [Demon Wall].
+- Turn 9, seq 228: object 180 becomes object 353 [Cecil, Dark Knight].
+- Turn 10, seq 232: object 238 becomes object 354 [Makeshift Binding].
+- Turn 10, seq 235: object 229 becomes object 355 [Makeshift Binding].
+- Turn 10, seq 241: object 348 becomes object 360 [Demon Wall].
+- Turn 11, seq 255: object 181 becomes object 361 [Swamp].
+- Turn 11, seq 258: object 361 becomes object 362 [Swamp].
+- Turn 11, seq 259: object 353 becomes object 363 [Cecil, Dark Knight].
+- Turn 11, seq 264: object 292 becomes object 366 [Unstoppable Slasher].
+- Turn 11, seq 269: object 342 becomes object 371 [Timeline Culler].
+- Turn 11, seq 292: object 182 becomes object 377 [Shoot the Sheriff].
+- Turn 11, seq 294: object 371 becomes object 378 [Timeline Culler].
+- Turn 12, seq 298: object 239 becomes object 379 [Swamp].
+- Turn 12, seq 301: object 379 becomes object 380 [Swamp].
+- Turn 12, seq 302: object 354 becomes object 381 [Makeshift Binding].
+- Turn 12, seq 308: object 366 becomes object 386 [Unstoppable Slasher].
+- Turn 13, seq 322: object 183 becomes object 387 [Swamp].
+- Turn 13, seq 325: object 387 becomes object 388 [Swamp].
+- Turn 13, seq 350: object 184 becomes object 400 [object 184].
+- Turn 14, seq 354: object 240 becomes object 401 [Plains].
+- Turn 14, seq 357: object 401 becomes object 402 [Plains].
+- Turn 14, seq 358: object 227 becomes object 403 [Shoot the Sheriff].
+- Turn 14, seq 362: object 294 becomes object 406 [Deep-Cavern Bat].
+- Turn 14, seq 362: object 299 becomes object 407 [Shoot the Sheriff].
+- Turn 14, seq 362: object 403 becomes object 409 [Shoot the Sheriff].
+- Turn 14, seq 363: object 407 becomes object 410 [Shoot the Sheriff].
+- Turn 14, seq 367: object 395 becomes object 413 [Demon].
+- Turn 14, seq 367: object 410 becomes object 414 [Shoot the Sheriff].
+- Turn 15, seq 381: object 185 becomes object 415 [Swamp].
+- Turn 15, seq 384: object 415 becomes object 416 [Swamp].
+- Turn 15, seq 385: object 378 becomes object 417 [Timeline Culler].
+- Turn 15, seq 390: object 169 becomes object 421 [Unstoppable Slasher].
+- Turn 15, seq 414: object 186 becomes object 429 [object 186].
+- Turn 16, seq 418: object 241 becomes object 430 [Swamp].
+- Turn 16, seq 421: object 430 becomes object 431 [Swamp].
+- Turn 16, seq 422: object 231 becomes object 432 [Bloodletter of Aclazotz].
+- Turn 17, seq 440: object 187 becomes object 438 [Gatekeeper of Malakir].
+- Turn 17, seq 443: object 438 becomes object 439 [Gatekeeper of Malakir].
+- Turn 17, seq 453: object 432 becomes object 445 [Bloodletter of Aclazotz].
+- Turn 17, seq 476: object 188 becomes object 450 [Unstoppable Slasher].
+- Turn 18, seq 480: object 242 becomes object 451 [Bloodthirsty Conqueror].
+- Turn 18, seq 483: object 451 becomes object 452 [Bloodthirsty Conqueror].
+- Turn 18, seq 487: object 377 becomes object 459 [Shoot the Sheriff].
+- Turn 18, seq 491: object 452 becomes object 462 [Bloodthirsty Conqueror].
+- Turn 18, seq 491: object 459 becomes object 463 [Shoot the Sheriff].
+- Turn 19, seq 507: object 189 becomes object 464 [object 189].
+- Turn 19, seq 510: object 450 becomes object 465 [Unstoppable Slasher].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: autocall plays Swamp (object 287) from Hand (autocall) to Battlefield.
+- Turn 2: gian31 plays Plains (object 289) from Hand (gian31) to Battlefield.
+- Turn 3: autocall plays Swamp (object 293) from Hand (autocall) to Battlefield.
+- Turn 4: gian31 plays Scoured Barrens (object 306) from Hand (gian31) to Battlefield.
+- Turn 5: autocall plays Swamp (object 309) from Hand (autocall) to Battlefield.
+- Turn 6: gian31 plays Plains (object 319) from Hand (gian31) to Battlefield.
+- Turn 7: autocall plays Swamp (object 324) from Hand (autocall) to Battlefield.
+- Turn 11: autocall plays Swamp (object 362) from Hand (autocall) to Battlefield.
+- Turn 12: gian31 plays Swamp (object 380) from Hand (gian31) to Battlefield.
+- Turn 13: autocall plays Swamp (object 388) from Hand (autocall) to Battlefield.
+- Turn 14: gian31 plays Plains (object 402) from Hand (gian31) to Battlefield.
+- Turn 15: autocall plays Swamp (object 416) from Hand (autocall) to Battlefield.
+- Turn 16: gian31 plays Swamp (object 431) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Authority of the Consuls: casts=1; abilities=11 (triggered=11, activated=0) across turns [2, 3, 7, 9, 11, 11, 11, 13, 15, 15, 17, 19]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=11, other=0
+  observed effects: life +1
+- Unholy Annex // Ritual Chamber: casts=1; abilities=8 (triggered=8, activated=0) across turns [5, 5, 7, 9, 11, 13, 13, 15, 17]
+  observed effect totals: draws=7, tokens=1, counters=0, returns=0, damage=0, life_changes=10, other=1
+  observed effects: draw, life +2, life -2, life -4, synthetic event, token creation
+- Cecil, Dark Knight: casts=1; abilities=3 (triggered=3, activated=0) across turns [11, 13, 15, 17]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=3
+  observed effects: life -2, synthetic event
+- Makeshift Binding: casts=2; abilities=2 (triggered=2, activated=0) across turns [10, 10, 12, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=2
+  observed effects: exile, life +2
+- Shoot the Sheriff: casts=4 across turns [8, 14, 14, 18]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=1, damage=0, life_changes=0, other=4
+  observed effects: destroy, return to battlefield
+- Unstoppable Slasher: casts=3; abilities=1 (triggered=1, activated=0) across turns [11, 15, 17, 19]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life -6
+- Case of the Uneaten Feast: casts=1; abilities=2 (triggered=2, activated=0) across turns [8, 16, 18]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Timeline Culler: casts=2; abilities=1 (triggered=1, activated=0) across turns [11, 11, 15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: zone_transfer
+- Bloodletter of Aclazotz: casts=2 across turns [7, 16]
+- Starscape Cleric: casts=1; abilities=1 (triggered=1, activated=0) across turns [6, 7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: life -1, synthetic event
+- Bloodthirsty Conqueror: casts=1 across turns [18]
+- Deep-Cavern Bat: casts=1 across turns [3]
+- Demon Wall: casts=1 across turns [9]
+- Feed the Swarm: casts=1 across turns [9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=2
+  observed effects: destroy, life -2, synthetic event
+- Gatekeeper of Malakir: casts=1 across turns [17]
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [4]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 - DeclareAttack, DeclareBlock (active=autocall)
+  attacker: Deep-Cavern Bat (autocall) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=autocall)
+  attacker: Deep-Cavern Bat (autocall) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> autocall; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=autocall)
+  attacker: Deep-Cavern Bat (autocall) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=autocall)
+  attacker: Deep-Cavern Bat (autocall) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 - DeclareAttack, DeclareBlock (active=autocall)
+  attacker: Deep-Cavern Bat (autocall) -> gian31; unblocked in this observed snapshot
+  attacker: Cecil, Dark Knight (autocall) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 15 - DeclareAttack, DeclareBlock (active=autocall)
+  attacker: Cecil, Dark Knight (autocall) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 17 - DeclareAttack, DeclareBlock (active=autocall)
+  attacker: Cecil, Dark Knight (autocall) -> gian31; unblocked in this observed snapshot
+  attacker: Timeline Culler (autocall) -> gian31; unblocked in this observed snapshot
+  attacker: Unstoppable Slasher (autocall) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 19 - DeclareAttack, DeclareBlock (active=autocall)
+  attacker: Cecil, Dark Knight (autocall) -> gian31; unblocked in this observed snapshot
+  attacker: Timeline Culler (autocall) -> gian31; unblocked in this observed snapshot
+  attacker: Unstoppable Slasher (autocall) -> gian31; unblocked in this observed snapshot
+  attacker: Gatekeeper of Malakir (autocall) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 13: Ability of Cecil, Dark Knight (active=autocall) - Ability of Cecil, Dark Knight: autocall loses 2 life.
+- Turn 15: Ability of Cecil, Dark Knight (active=autocall) - Ability of Cecil, Dark Knight: autocall loses 2 life.
+- Turn 17: Ability of Cecil, Dark Knight (active=autocall) - Ability of Cecil, Dark Knight: autocall loses 2 life.
+- Turn 17: Ability of Unstoppable Slasher (active=autocall) - Ability of Unstoppable Slasher: gian31 loses 6 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 227: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 228: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 229: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 230: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 231: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 232: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 233: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 287: Swamp | controller=autocall | owner=autocall | zone=Battlefield (latest_object_observation)
+- 288: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 289: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 290: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 293: Swamp | controller=autocall | owner=autocall | zone=Battlefield (latest_object_observation)
+- 294: Deep-Cavern Bat | controller=autocall | owner=autocall | zone=Battlefield (latest_object_observation)
+- 297: object 297 | controller=autocall | owner=autocall | zone=unknown (inferred unknown) (latest_object_observation)
+- 298: object 298 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 299: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 305: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 306: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 307: object 307 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 309: Swamp | controller=autocall | owner=autocall | zone=Battlefield (latest_object_observation)
+- 310: Unholy Annex // Ritual Chamber | controller=autocall | owner=autocall | zone=Stack (latest_object_observation)
+- 311: Unholy Annex | controller=autocall | owner=autocall | zone=Battlefield (latest_object_observation)
+- 312: Ritual Chamber | controller=autocall | owner=autocall | zone=Battlefield (latest_object_observation)
+- 316: object 316 | controller=autocall | owner=autocall | zone=unknown (inferred unknown) (latest_object_observation)
+- 318: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 319: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 320: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 324: Swamp | controller=autocall | owner=autocall | zone=Battlefield (latest_object_observation)
+- 325: Bloodletter of Aclazotz | controller=autocall | owner=autocall | zone=Battlefield (latest_object_observation)
+- 330: object 330 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 331: object 331 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 332: object 332 | controller=autocall | owner=autocall | zone=unknown (inferred unknown) (latest_object_observation)
+- 334: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 335: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 337: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 340: Bloodletter of Aclazotz | controller=autocall | owner=autocall | zone=Graveyard (latest_object_observation)
+- 341: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 343: Feed the Swarm | controller=autocall | owner=autocall | zone=Stack (latest_object_observation)
+- 346: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 347: Feed the Swarm | controller=autocall | owner=autocall | zone=Graveyard (latest_object_observation)
+- 348: Demon Wall | controller=autocall | owner=autocall | zone=Battlefield (latest_object_observation)
+- 351: object 351 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 352: object 352 | controller=autocall | owner=autocall | zone=unknown (inferred unknown) (latest_object_observation)
+- 354: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 355: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 359: object 359 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 360: Demon Wall | controller=autocall | owner=autocall | zone=Exile (latest_object_observation)
+- 362: Swamp | controller=autocall | owner=autocall | zone=Battlefield (latest_object_observation)
+- 363: Cecil, Dark Knight | controller=autocall | owner=autocall | zone=Battlefield (latest_object_observation)
+- 365: object 365 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 366: Unstoppable Slasher | controller=autocall | owner=autocall | zone=Battlefield (latest_object_observation)
+- 370: object 370 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 371: Timeline Culler | controller=autocall | owner=autocall | zone=Battlefield (latest_object_observation)
+- 373: object 373 | controller=autocall | owner=autocall | zone=Hand (latest_object_observation)
+- 374: object 374 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 375: object 375 | controller=autocall | owner=autocall | zone=unknown (inferred unknown) (latest_object_observation)
+- 376: object 376 | controller=autocall | owner=autocall | zone=unknown (inferred unknown) (latest_object_observation)
+- 378: Timeline Culler | controller=autocall | owner=autocall | zone=Hand (latest_object_observation)
+- 379: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 380: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 381: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 385: object 385 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 386: Unstoppable Slasher | controller=autocall | owner=autocall | zone=Exile (latest_object_observation)
+- 388: Swamp | controller=autocall | owner=autocall | zone=Battlefield (latest_object_observation)
+- 394: object 394 | controller=autocall | owner=autocall | zone=unknown (inferred unknown) (latest_object_observation)
+- 395: Demon | controller=autocall | owner=autocall | zone=Hand (latest_object_observation)
+- 396: object 396 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 398: object 398 | controller=autocall | owner=autocall | zone=unknown (inferred unknown) (latest_object_observation)
+- 399: object 399 | controller=autocall | owner=autocall | zone=unknown (inferred unknown) (latest_object_observation)
+- 401: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 402: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 403: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 406: Deep-Cavern Bat | controller=autocall | owner=autocall | zone=Graveyard (latest_object_observation)
+- 407: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 408: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 409: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 410: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 414: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 416: Swamp | controller=autocall | owner=autocall | zone=Battlefield (latest_object_observation)
+- 417: Timeline Culler | controller=autocall | owner=autocall | zone=Battlefield (latest_object_observation)
+- 420: object 420 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 421: Unstoppable Slasher | controller=autocall | owner=autocall | zone=Battlefield (latest_object_observation)
+- 425: object 425 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 427: object 427 | controller=autocall | owner=autocall | zone=unknown (inferred unknown) (latest_object_observation)
+- 428: object 428 | controller=autocall | owner=autocall | zone=unknown (inferred unknown) (latest_object_observation)
+- 430: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 431: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 432: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 437: object 437 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 439: Gatekeeper of Malakir | controller=autocall | owner=autocall | zone=Battlefield (latest_object_observation)
+- 443: Plow Through | controller=autocall | owner=autocall | zone=unknown (inferred unknown) (latest_object_observation)
+- 444: object 444 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 445: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 446: object 446 | controller=autocall | owner=autocall | zone=unknown (inferred unknown) (latest_object_observation)
+- 448: object 448 | controller=autocall | owner=autocall | zone=unknown (inferred unknown) (latest_object_observation)
+- 449: object 449 | controller=autocall | owner=autocall | zone=unknown (inferred unknown) (latest_object_observation)
+- 451: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 452: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 458: object 458 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 459: Shoot the Sheriff | controller=autocall | owner=autocall | zone=Stack (latest_object_observation)
+- 462: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 463: Shoot the Sheriff | controller=autocall | owner=autocall | zone=Graveyard (latest_object_observation)
+- 465: Unstoppable Slasher | controller=autocall | owner=autocall | zone=Battlefield (latest_object_observation)
+- 469: object 469 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 470: object 470 | controller=autocall | owner=autocall | zone=unknown (inferred unknown) (latest_object_observation)
+- 472: object 472 | controller=autocall | owner=autocall | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+autocall: 48 total items
+  zones: Battlefield=19, Exile=2, Graveyard=4, Hand=3, Stack=3, unknown=17
+  objects: Swamp x7, Unstoppable Slasher x4, Timeline Culler x3, Bloodletter of Aclazotz x2, Deep-Cavern Bat x2, Demon Wall x2, Feed the Swarm x2, Shoot the Sheriff x2, Cecil, Dark Knight, Demon, Gatekeeper of Malakir, Plow Through
+gian31: 58 total items
+  zones: Battlefield=10, Exile=1, Graveyard=6, Hand=17, Stack=6, unknown=18
+  objects: Shoot the Sheriff x12, Plains x6, Makeshift Binding x4, Swamp x4, Bloodletter of Aclazotz x3, Bloodthirsty Conqueror x3, Starscape Cleric x3, Authority of the Consuls x2, Case of the Uneaten Feast x2, Scoured Barrens x2, object 298, object 307
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+autocall:
+  Battlefield (19): Bloodletter of Aclazotz, Cecil, Dark Knight, Deep-Cavern Bat, Demon Wall, Gatekeeper of Malakir, Ritual Chamber, Swamp, Swamp, Swamp, Swamp, Swamp, Swamp, Swamp, Timeline Culler, Timeline Culler, Unholy Annex, Unstoppable Slasher, Unstoppable Slasher, Unstoppable Slasher
+  Graveyard: 4 card(s)
+gian31:
+  Battlefield (10): Bloodletter of Aclazotz, Bloodthirsty Conqueror, Plains, Plains, Plains, Scoured Barrens, Shoot the Sheriff, Starscape Cleric, Swamp, Swamp
+  Graveyard: 6 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+35 objects have no resolved final zone and are omitted from the known board state.
+autocall: 17 unknown object(s)
+gian31: 18 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=20, Stack=9
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+autocall:
+  Battlefield (15): Swamp, Swamp, Swamp, Unholy Annex // Ritual Chamber, Unholy Annex, Ritual Chamber, Swamp, Swamp, Cecil, Dark Knight, Swamp, Swamp, Timeline Culler, Unstoppable Slasher, Gatekeeper of Malakir, Unstoppable Slasher
+  Graveyard (4): Bloodletter of Aclazotz, Feed the Swarm, Deep-Cavern Bat, Shoot the Sheriff
+  Exile (2): Demon Wall, Unstoppable Slasher
+gian31:
+  Battlefield (10): Plains, Authority of the Consuls, Scoured Barrens, Plains, Case of the Uneaten Feast, Makeshift Binding, Swamp, Makeshift Binding, Plains, Swamp
+  Graveyard (6): Shoot the Sheriff, Starscape Cleric, Shoot the Sheriff, Shoot the Sheriff, Bloodletter of Aclazotz, Bloodthirsty Conqueror
+Known non-persistent entries (counts only):
+  autocall: Hand=4, Limbo=1, Pending=2
+  gian31: Limbo=3
+  unknown: Library=81, Limbo=7
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: autocall Battlefield=1
+- Turn 2: autocall Battlefield=1; gian31 Battlefield=2
+- Turn 3: autocall Battlefield=3; gian31 Battlefield=2; gian31 Exile=1
+- Turn 4: autocall Battlefield=3; gian31 Battlefield=3; gian31 Exile=1
+- Turn 5: autocall Battlefield=5; gian31 Battlefield=3; gian31 Exile=1
+- Turn 6: autocall Battlefield=5; gian31 Battlefield=5; gian31 Exile=1
+- Turn 7: autocall Battlefield=7; gian31 Battlefield=5; gian31 Exile=1
+- Turn 8: autocall Battlefield=6; autocall Graveyard=1; gian31 Battlefield=6; gian31 Graveyard=1; gian31 Exile=1
+- Turn 9: autocall Battlefield=7; autocall Graveyard=2; gian31 Battlefield=5; gian31 Graveyard=2; gian31 Exile=1
+- Turn 10: autocall Battlefield=6; autocall Graveyard=2; autocall Exile=1; gian31 Battlefield=6; gian31 Graveyard=2; gian31 Exile=1
+- Turn 11: autocall Battlefield=9; autocall Graveyard=2; autocall Exile=2; gian31 Battlefield=6; gian31 Graveyard=2; gian31 Exile=1
+- Turn 12: autocall Battlefield=8; autocall Graveyard=2; autocall Exile=3; gian31 Battlefield=8; gian31 Graveyard=2; gian31 Exile=1
+- Turn 13: autocall Battlefield=9; autocall Graveyard=2; autocall Exile=3; gian31 Battlefield=8; gian31 Graveyard=2; gian31 Exile=1
+- Turn 14: autocall Battlefield=8; autocall Graveyard=4; autocall Exile=3; gian31 Battlefield=9; gian31 Graveyard=4
+- Turn 15: autocall Battlefield=11; autocall Graveyard=4; autocall Exile=2; gian31 Battlefield=9; gian31 Graveyard=4
+- Turn 16: autocall Battlefield=11; autocall Graveyard=4; autocall Exile=2; gian31 Battlefield=11; gian31 Graveyard=4
+- Turn 17: autocall Battlefield=12; autocall Graveyard=4; autocall Exile=2; gian31 Battlefield=10; gian31 Graveyard=5
+- Turn 18: autocall Battlefield=12; autocall Graveyard=5; autocall Exile=2; gian31 Battlefield=10; gian31 Graveyard=6
+- Turn 19: autocall Battlefield=13; autocall Graveyard=5; autocall Exile=2; gian31 Battlefield=10; gian31 Graveyard=6
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Deep-Cavern Bat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Unholy Annex // Ritual Chamber resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Demon Wall resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Cecil, Dark Knight resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Unstoppable Slasher resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Timeline Culler resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: Timeline Culler resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: Unstoppable Slasher resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 17: Gatekeeper of Malakir resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 18: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 19: Unstoppable Slasher resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
