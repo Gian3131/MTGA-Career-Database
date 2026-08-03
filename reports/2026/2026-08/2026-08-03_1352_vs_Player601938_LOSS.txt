@@ -1,0 +1,873 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: Player601938, gian31
+Seat map: Seat 1=Player601938, Seat 2=gian31
+Turn range (known): 1 - 17
+Records: 27
+Action chains: 24
+Winner: Player601938
+Final life: {'Player601938': 5, 'gian31': 22}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 17 (Phase_Main1; Deep-Cavern Bat, seq 456).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 37 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 14 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 13, 14, 15, 16] (raw records=14; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 23 explicit Library -> Hand movement(s); named in the draw record=13, resolved through an explicit identity transition=10, unresolved=0.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: Player601938; observed final life totals: {'Player601938': 5, 'gian31': 22}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 17 (Phase_Main1; Deep-Cavern Bat, seq 456).
+Last captured life snapshot: gian31 21 -> 22 (seq 437).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=9] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=310, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [310] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Scoured Barrens [310]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [312] Library (Player601938) -> Hand (Player601938) (Draw; GRE sequence 23).
+      Forest [313] Hand (Player601938) -> Battlefield (PlayLand; GRE sequence 26).
+      Roost Seek [314] Hand (Player601938) -> Stack (CastSpell; GRE sequence 27).
+      Swamp [318] Library (Player601938) -> Hand (Player601938) (Put; GRE sequence 30).
+      Sagu Wildling [382] Stack -> Library (Player601938) (Resolve; GRE sequence 31).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Scoured Barrens [310]
+      Player601938: Battlefield: Forest [313]
+
+Turn 3
+  - Deep-Cavern Bat [valid_resolution_no_immediate_mutation, seq=60] (active=gian31, phase=Phase_Main2, controller=gian31, owner=gian31, source_object=450)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deep-Cavern Bat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deep-Cavern Bat (object 450) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 450) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [448] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 46).
+      Swamp [449] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 57).
+      Maelstrom Pulse [454] Hand (Player601938) -> Exile (Exile; GRE sequence 65).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Deep-Cavern Bat [450], Scoured Barrens [310], Swamp [449]
+      Player601938: Battlefield: Forest [313]; Exile: Maelstrom Pulse [454]
+
+Turn 4
+  - Frog Butler [valid_resolution_no_immediate_mutation, seq=77] (active=Player601938, phase=Phase_Main1, controller=Player601938, owner=Player601938, source_object=462)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Frog Butler resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Frog Butler (object 462) Hand (Player601938) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Frog Butler (object 462) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Wastewood Verge [460] Library (Player601938) -> Hand (Player601938) (Draw; GRE sequence 71).
+      Swamp [461] Hand (Player601938) -> Battlefield (PlayLand; GRE sequence 74).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Deep-Cavern Bat [450], Scoured Barrens [310], Swamp [449]
+      Player601938: Battlefield: Forest [313], Frog Butler [462], Swamp [461]; Exile: Maelstrom Pulse [454]
+
+Turn 5
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=96] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=466, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=99] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=468)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 468) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 468) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [450] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Player601938 -1; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Player601938 20 -> 19
+    life (semantically attributed to Scoured Barrens; direct protocol link unavailable): gian31 22 -> 23
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [465] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 91).
+      Scoured Barrens [466] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 94).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [468], Deep-Cavern Bat [450], Scoured Barrens [310], Scoured Barrens [466], Swamp [449]
+      Player601938: Battlefield: Forest [313], Frog Butler [462], Swamp [461]; Exile: Maelstrom Pulse [454]
+
+Turn 6
+  - Frog Butler [valid_resolution_no_immediate_mutation, seq=125] (active=Player601938, phase=Phase_Main1, controller=Player601938, owner=Player601938, source_object=472)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Frog Butler resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Frog Butler (object 472) Hand (Player601938) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Frog Butler (object 472) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=Player601938; frames: DeclareAttack -> DeclareBlock):
+      attackers: Frog Butler [462] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 23 -> 22
+    additional protocol-observed zone movements not assigned to an action chain:
+      Valgavoth, Terror Eater [470] Library (Player601938) -> Hand (Player601938) (Draw; GRE sequence 119).
+      Swamp [471] Hand (Player601938) -> Battlefield (PlayLand; GRE sequence 122).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [468], Deep-Cavern Bat [450], Scoured Barrens [310], Scoured Barrens [466], Swamp [449]
+      Player601938: Battlefield: Forest [313], Frog Butler [462], Frog Butler [472], Swamp [461], Swamp [471]; Exile: Maelstrom Pulse [454]
+
+Turn 7
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=150] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=476)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 476) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 476) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [450] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Player601938 -1; gian31 +1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Player601938 19 -> 18
+    life (gain observed during combat phase; exact source unavailable): gian31 22 -> 23
+    additional protocol-observed zone movements not assigned to an action chain:
+      Enduring Tenacity [475] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 145).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [468], Case of the Uneaten Feast [476], Deep-Cavern Bat [450], Scoured Barrens [310], Scoured Barrens [466], Swamp [449]
+      Player601938: Battlefield: Forest [313], Frog Butler [462], Frog Butler [472], Swamp [461], Swamp [471]; Exile: Maelstrom Pulse [454]
+
+Turn 8
+  Combat snapshots observed (active=Player601938; frames: DeclareAttack -> DeclareBlock):
+      attackers: Frog Butler [462] (unblocked, observed P/T 1/1), Frog Butler [472] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 23 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Restless Cottage [478] Library (Player601938) -> Hand (Player601938) (Draw; GRE sequence 170).
+      Restless Cottage [479] Hand (Player601938) -> Battlefield (PlayLand; GRE sequence 173).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [468], Case of the Uneaten Feast [476], Deep-Cavern Bat [450], Scoured Barrens [310], Scoured Barrens [466], Swamp [449]
+      Player601938: Battlefield: Forest [313], Frog Butler [462], Frog Butler [472], Restless Cottage [479], Swamp [461], Swamp [471]; Exile: Maelstrom Pulse [454]
+
+Turn 9
+  - Enduring Tenacity [valid_resolution_no_immediate_mutation, seq=200] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=482)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Enduring Tenacity resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Enduring Tenacity (object 482) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Enduring Tenacity (object 482) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=203] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=476, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=207] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=482, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Player601938 loses 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=209] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=468, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=213] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=482, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Player601938 loses 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=227] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=482, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 213 and 227; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Player601938 loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [450] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      other-player life loss not explained by observed attacker damage: gian31 21 -> 19 (-2; phase=unknown; source unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Player601938 -4; gian31 +1 (individual changes below; gains and losses may offset)
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): gian31 21 -> 19
+    life: gian31 19 -> 20
+    life: Player601938 18 -> 17
+    life: gian31 20 -> 21
+    life: Player601938 17 -> 16
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Player601938 16 -> 15
+    life (semantically attributed to Case of the Uneaten Feast; direct protocol link unavailable): gian31 21 -> 22
+    life: Player601938 15 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Godless Shrine [480] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 193).
+      Godless Shrine [481] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 197).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [468], Case of the Uneaten Feast [476], Deep-Cavern Bat [450], Enduring Tenacity [482], Godless Shrine [481], Scoured Barrens [310], Scoured Barrens [466], Swamp [449]
+      Player601938: Battlefield: Forest [313], Frog Butler [462], Frog Butler [472], Restless Cottage [479], Swamp [461], Swamp [471]; Exile: Maelstrom Pulse [454]
+
+Turn 10
+  - Decorum Dissertation [observed_semantic_effect, seq=245] (active=Player601938, phase=Phase_Main1, controller=Player601938, owner=Player601938, source_object=494)
+      effects: draw, draw, life -2
+      narrative: Decorum Dissertation: draw; draw; Player601938 loses 2 life.
+      explicit effect object references: object 389 [389], object 390 [390], object 500 [500], object 501 [501] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Decorum Dissertation (object 494) Hand (Player601938) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Swamp (object 500) Library (Player601938) -> Hand (Player601938) (Draw; shared object ID)
+      protocol-linked zone transfer: Swamp (object 501) Library (Player601938) -> Hand (Player601938) (Draw; shared object ID)
+  Combat snapshots observed (active=Player601938; frames: DeclareAttack):
+      attackers: Frog Butler [462] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Player601938 -2; gian31 -1 (individual changes below; gains and losses may offset)
+    life: Player601938 14 -> 12
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 22 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Decorum Dissertation [492] Library (Player601938) -> Hand (Player601938) (Draw; GRE sequence 237).
+      Swamp [493] Hand (Player601938) -> Battlefield (PlayLand; GRE sequence 240).
+      Decorum Dissertation [504] Stack -> Exile (Exile; GRE sequence 245).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [468], Case of the Uneaten Feast [476], Deep-Cavern Bat [450], Enduring Tenacity [482], Godless Shrine [481], Scoured Barrens [310], Scoured Barrens [466], Swamp [449]
+      Player601938: Battlefield: Forest [313], Frog Butler [462], Frog Butler [472], Restless Cottage [479], Swamp [461], Swamp [471], Swamp [493]; Exile: Decorum Dissertation [504], Maelstrom Pulse [454]
+
+Turn 11
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=271] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=506)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 506) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 506) Stack -> Battlefield (Resolve; shared object ID)
+  - Shoot the Sheriff [observed_semantic_effect, seq=283] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=508)
+      effects: destroy
+      narrative: Shoot the Sheriff destroys Frog Butler.
+      explicit effect object references: Frog Butler [472], Frog Butler [511] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 508) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Frog Butler (object 511) Battlefield -> Graveyard (Player601938) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 512) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 508 -> transfer object 512 (explicit GRE ObjectIdChanged chain).
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=291] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=482, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Player601938 loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [450] (unblocked, observed P/T 1/1), Enduring Tenacity [482] (unblocked, observed P/T 4/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Player601938 -6; gian31 +1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): Player601938 12 -> 7
+    life (gain observed during combat phase; exact source unavailable): gian31 21 -> 22
+    life: Player601938 7 -> 6
+    additional protocol-observed zone movements not assigned to an action chain:
+      Authority of the Consuls [505] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 266).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [506], Case of the Uneaten Feast [468], Case of the Uneaten Feast [476], Deep-Cavern Bat [450], Enduring Tenacity [482], Godless Shrine [481], Scoured Barrens [310], Scoured Barrens [466], Swamp [449]; Graveyard: Shoot the Sheriff [512]
+      Player601938: Battlefield: Forest [313], Frog Butler [462], Restless Cottage [479], Swamp [461], Swamp [471], Swamp [493]; Exile: Decorum Dissertation [504], Maelstrom Pulse [454]; Graveyard: Frog Butler [511]
+
+Turn 12
+  - Decorum Dissertation [observed_semantic_effect, seq=310] (active=Player601938, phase=Phase_Main1, controller=Player601938, owner=Player601938, source_object=517)
+      effects: draw, draw, life -2
+      narrative: Decorum Dissertation: draw; draw; Player601938 loses 2 life.
+      explicit effect object references: object 392 [392], object 393 [393], object 518 [518], object 519 [519] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Decorum Dissertation (object 517) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Archenemy's Charm (object 518) Library (Player601938) -> Hand (Player601938) (Draw; shared object ID)
+      protocol-linked zone transfer: Dread Whispers (object 519) Library (Player601938) -> Hand (Player601938) (Draw; shared object ID)
+  - Archenemy's Charm [observed_semantic_effect, seq=317] (active=Player601938, phase=Phase_Main1, controller=Player601938, owner=Player601938, source_object=524)
+      effects: exile
+      narrative: Archenemy's Charm: exiles Enduring Tenacity.
+      explicit effect object references: Enduring Tenacity [482], Enduring Tenacity [528] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Archenemy's Charm (object 524) Hand (Player601938) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Enduring Tenacity (object 528) Battlefield -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Archenemy's Charm (object 529) Stack -> Graveyard (Player601938) (Resolve; shared object ID)
+      identity continuity: source object 524 -> transfer object 529 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: Player601938 -2 (individual changes below; gains and losses may offset)
+    life: Player601938 6 -> 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Strategic Betrayal [514] Library (Player601938) -> Hand (Player601938) (Draw; GRE sequence 301).
+      Decorum Dissertation [522] Stack -> Exile (Exile; GRE sequence 310).
+      Swamp [523] Hand (Player601938) -> Battlefield (PlayLand; GRE sequence 311).
+      Strategic Betrayal [530] Hand (Player601938) -> Stack (CastSpell; GRE sequence 318).
+      Deep-Cavern Bat [533] Battlefield -> Exile (Exile; GRE sequence 323).
+      Shoot the Sheriff [534] Graveyard (gian31) -> Exile (Exile; GRE sequence 323).
+      Maelstrom Pulse [535] Exile -> Hand (Player601938) (Return; GRE sequence 323).
+      Strategic Betrayal [537] Stack -> Graveyard (Player601938) (Resolve; GRE sequence 323).
+      Wear Down [538] Hand (Player601938) -> Stack (CastSpell; GRE sequence 324).
+      Swamp [541] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 330).
+      Case of the Uneaten Feast [542] Battlefield -> Graveyard (gian31) (Destroy; GRE sequence 331).
+      Case of the Uneaten Feast [543] Battlefield -> Graveyard (gian31) (Destroy; GRE sequence 331).
+      Wear Down [544] Stack -> Graveyard (Player601938) (Resolve; GRE sequence 331).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [506], Godless Shrine [481], Scoured Barrens [310], Scoured Barrens [466], Swamp [449]; Exile: Deep-Cavern Bat [533], Enduring Tenacity [528], Shoot the Sheriff [534]; Graveyard: Case of the Uneaten Feast [542], Case of the Uneaten Feast [543]
+      Player601938: Battlefield: Forest [313], Frog Butler [462], Restless Cottage [479], Swamp [461], Swamp [471], Swamp [493], Swamp [523]; Exile: Decorum Dissertation [504], Decorum Dissertation [522]; Graveyard: Archenemy's Charm [529], Frog Butler [511], Strategic Betrayal [537], Wear Down [544]
+
+Turn 13
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=351] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=547)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 547) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 547) Stack -> Battlefield (Resolve; shared object ID)
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=355] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=550)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 550) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 550) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [545] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 345).
+      Swamp [546] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 348).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [506], Godless Shrine [481], Lunar Convocation [547], Scoured Barrens [310], Scoured Barrens [466], Starscape Cleric [550], Swamp [449], Swamp [546]; Exile: Deep-Cavern Bat [533], Enduring Tenacity [528], Shoot the Sheriff [534]; Graveyard: Case of the Uneaten Feast [542], Case of the Uneaten Feast [543]
+      Player601938: Battlefield: Forest [313], Frog Butler [462], Restless Cottage [479], Swamp [461], Swamp [471], Swamp [493], Swamp [523]; Exile: Decorum Dissertation [504], Decorum Dissertation [522]; Graveyard: Archenemy's Charm [529], Frog Butler [511], Strategic Betrayal [537], Wear Down [544]
+
+Turn 14
+  - Locthwain Scorn [observed_semantic_effect, seq=380] (active=Player601938, phase=Phase_Main1, controller=Player601938, owner=Player601938, source_object=558)
+      effects: P/T -3/-3, life +2
+      narrative: Locthwain Scorn: Starscape Cleric gets -3/-3; Player601938 gains 2 life.
+      explicit effect object references: Starscape Cleric [550] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Locthwain Scorn (object 558) Hand (Player601938) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Virtue of Persistence (object 562) Stack -> Exile (Resolve; shared object ID)
+      identity continuity: source object 558 -> transfer object 562 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Starscape Cleric (object 564) Battlefield -> Graveyard (gian31) (SBA_ZeroToughness; shared object ID)
+  - Maelstrom Pulse [observed_semantic_effect, seq=385] (active=Player601938, phase=Phase_Main1, controller=Player601938, owner=Player601938, source_object=565)
+      effects: destroy
+      narrative: Maelstrom Pulse destroys Lunar Convocation.
+      explicit effect object references: Lunar Convocation [547], Lunar Convocation [569] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Maelstrom Pulse (object 565) Hand (Player601938) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 569) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Maelstrom Pulse (object 570) Stack -> Graveyard (Player601938) (Resolve; shared object ID)
+      identity continuity: source object 565 -> transfer object 570 (explicit GRE ObjectIdChanged chain).
+  - Dread Whispers [observed_semantic_effect, seq=388] (active=Player601938, phase=Phase_Main1, controller=Player601938, owner=Player601938, source_object=571)
+      effects: draw, life -1
+      narrative: Dread Whispers: draw; Player601938 loses 1 life.
+      explicit effect object references: object 395 [395], Swamp [575] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Dread Whispers (object 571) Hand (Player601938) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Swamp (object 575) Library (Player601938) -> Hand (Player601938) (Draw; shared object ID)
+      protocol-linked zone transfer: Mosswood Dreadknight (object 576) Stack -> Exile (Resolve; shared object ID)
+      identity continuity: source object 571 -> transfer object 576 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=Player601938; frames: DeclareAttack -> DeclareBlock):
+      attackers: Frog Butler [462] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Player601938 +1; gian31 -1 (individual changes below; gains and losses may offset)
+    life: Player601938 4 -> 6
+    life: Player601938 6 -> 5
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 22 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Locthwain Scorn [553] Library (Player601938) -> Hand (Player601938) (Draw; GRE sequence 369).
+      Swamp [557] Hand (Player601938) -> Battlefield (PlayLand; GRE sequence 375).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [506], Godless Shrine [481], Scoured Barrens [310], Scoured Barrens [466], Swamp [449], Swamp [546]; Exile: Deep-Cavern Bat [533], Enduring Tenacity [528], Shoot the Sheriff [534]; Graveyard: Case of the Uneaten Feast [542], Case of the Uneaten Feast [543], Lunar Convocation [569], Starscape Cleric [564]
+      Player601938: Battlefield: Forest [313], Frog Butler [462], Restless Cottage [479], Swamp [461], Swamp [471], Swamp [493], Swamp [523], Swamp [557]; Exile: Decorum Dissertation [504], Decorum Dissertation [522], Mosswood Dreadknight [576], Virtue of Persistence [562]; Graveyard: Archenemy's Charm [529], Frog Butler [511], Maelstrom Pulse [570], Strategic Betrayal [537], Wear Down [544]
+
+Turn 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Godless Shrine [578] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 408).
+      Godless Shrine [579] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 412).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [506], Godless Shrine [481], Godless Shrine [579], Scoured Barrens [310], Scoured Barrens [466], Swamp [449], Swamp [546]; Exile: Deep-Cavern Bat [533], Enduring Tenacity [528], Shoot the Sheriff [534]; Graveyard: Case of the Uneaten Feast [542], Case of the Uneaten Feast [543], Lunar Convocation [569], Starscape Cleric [564]
+      Player601938: Battlefield: Forest [313], Frog Butler [462], Restless Cottage [479], Swamp [461], Swamp [471], Swamp [493], Swamp [523], Swamp [557]; Exile: Decorum Dissertation [504], Decorum Dissertation [522], Mosswood Dreadknight [576], Virtue of Persistence [562]; Graveyard: Archenemy's Charm [529], Frog Butler [511], Maelstrom Pulse [570], Strategic Betrayal [537], Wear Down [544]
+
+Turn 16
+  - Valgavoth, Terror Eater [valid_resolution_no_immediate_mutation, seq=435] (active=Player601938, phase=Phase_Main1, controller=Player601938, owner=Player601938, source_object=584)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Valgavoth, Terror Eater resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Valgavoth, Terror Eater (object 584) Hand (Player601938) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Valgavoth, Terror Eater (object 584) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=437] (active=Player601938, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=506, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [580] Library (Player601938) -> Hand (Player601938) (Draw; GRE sequence 426).
+      Forest [583] Hand (Player601938) -> Battlefield (PlayLand; GRE sequence 432).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [506], Godless Shrine [481], Godless Shrine [579], Scoured Barrens [310], Scoured Barrens [466], Swamp [449], Swamp [546]; Exile: Deep-Cavern Bat [533], Enduring Tenacity [528], Shoot the Sheriff [534]; Graveyard: Case of the Uneaten Feast [542], Case of the Uneaten Feast [543], Lunar Convocation [569], Starscape Cleric [564]
+      Player601938: Battlefield: Forest [313], Forest [583], Frog Butler [462], Restless Cottage [479], Swamp [461], Swamp [471], Swamp [493], Swamp [523], Swamp [557], Valgavoth, Terror Eater [584]; Exile: Decorum Dissertation [504], Decorum Dissertation [522], Mosswood Dreadknight [576], Virtue of Persistence [562]; Graveyard: Archenemy's Charm [529], Frog Butler [511], Maelstrom Pulse [570], Strategic Betrayal [537], Wear Down [544]
+
+Turn 17
+  - Deep-Cavern Bat [valid_resolution_no_immediate_mutation, seq=456] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=596)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deep-Cavern Bat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deep-Cavern Bat (object 596) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 596) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Deep-Cavern Bat [595] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 451).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [506], Deep-Cavern Bat [596], Godless Shrine [481], Godless Shrine [579], Scoured Barrens [310], Scoured Barrens [466], Swamp [449], Swamp [546]; Exile: Deep-Cavern Bat [533], Enduring Tenacity [528], Shoot the Sheriff [534]; Graveyard: Case of the Uneaten Feast [542], Case of the Uneaten Feast [543], Lunar Convocation [569], Starscape Cleric [564]
+      Player601938: Battlefield: Forest [313], Forest [583], Frog Butler [462], Restless Cottage [479], Swamp [461], Swamp [471], Swamp [493], Swamp [523], Swamp [557], Valgavoth, Terror Eater [584]; Exile: Decorum Dissertation [504], Decorum Dissertation [522], Mosswood Dreadknight [576], Virtue of Persistence [562]; Graveyard: Archenemy's Charm [529], Frog Butler [511], Maelstrom Pulse [570], Strategic Betrayal [537], Wear Down [544]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 5, seq 109, Phase_Main1: gian31 22 -> 23. Semantic attribution: Scoured Barrens; direct protocol link unavailable. Previous captured action: Case of the Uneaten Feast.
+- Turn 7, seq 160, Phase_Main1: gian31 22 -> 23. Combat declaration observed; exact assignment unavailable. Previous captured action: Case of the Uneaten Feast.
+- Turn 9, seq 197: gian31 21 -> 19; gian31 21 -> 22. Semantic attribution: Case of the Uneaten Feast; direct protocol link unavailable.
+- Turn 11, seq 287, Phase_Combat: gian31 21 -> 22. Combat declaration observed; exact assignment unavailable. Previous captured action: Shoot the Sheriff.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 23: Swamp [owner=Player601938, controller=Player601938] moves Library (Player601938) -> Hand (Player601938) (Draw).
+- Turn 2, seq 26: Forest [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Battlefield (PlayLand).
+- Turn 2, seq 27: Roost Seek [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Stack (CastSpell).
+- Turn 2, seq 30: Swamp [owner=Player601938, controller=Player601938] moves Library (Player601938) -> Hand (Player601938) (Put).
+- Turn 2, seq 31: Sagu Wildling [owner=Player601938, controller=Player601938] moves Stack -> Library (Player601938) (Resolve).
+- Turn 3, seq 46: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 57: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 58: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 60: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 65: Maelstrom Pulse [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Exile (Exile).
+- Turn 4, seq 71: Wastewood Verge [owner=Player601938, controller=Player601938] moves Library (Player601938) -> Hand (Player601938) (Draw).
+- Turn 4, seq 74: Swamp [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Battlefield (PlayLand).
+- Turn 4, seq 75: Frog Butler [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Stack (CastSpell).
+- Turn 4, seq 77: Frog Butler [owner=Player601938, controller=Player601938] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 91: Scoured Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 94: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 97: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 99: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 119: Valgavoth, Terror Eater [owner/controller metadata unavailable] moves Library (Player601938) -> Hand (Player601938) (Draw).
+- Turn 6, seq 122: Swamp [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Battlefield (PlayLand).
+- Turn 6, seq 123: Frog Butler [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Stack (CastSpell).
+- Turn 6, seq 125: Frog Butler [owner=Player601938, controller=Player601938] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 145: Enduring Tenacity [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 148: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 150: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 170: Restless Cottage [owner/controller metadata unavailable] moves Library (Player601938) -> Hand (Player601938) (Draw).
+- Turn 8, seq 173: Restless Cottage [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Battlefield (PlayLand).
+- Turn 9, seq 193: Godless Shrine [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 197: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 198: Enduring Tenacity [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 200: Enduring Tenacity [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 237: Decorum Dissertation [owner/controller metadata unavailable] moves Library (Player601938) -> Hand (Player601938) (Draw).
+- Turn 10, seq 240: Swamp [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Battlefield (PlayLand).
+- Turn 10, seq 241: Decorum Dissertation [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Stack (CastSpell).
+- Turn 10, seq 245: Swamp [owner/controller metadata unavailable] moves Library (Player601938) -> Hand (Player601938) (Draw).
+- Turn 10, seq 245: Swamp [owner/controller metadata unavailable] moves Library (Player601938) -> Hand (Player601938) (Draw).
+- Turn 10, seq 245: Decorum Dissertation [owner=Player601938, controller=Player601938] moves Stack -> Exile (Exile).
+- Turn 11, seq 266: Authority of the Consuls [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 269: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 271: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 279: Shoot the Sheriff [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 283: Frog Butler [owner=Player601938, controller=Player601938] moves Battlefield -> Graveyard (Player601938) (Destroy).
+- Turn 11, seq 283: Shoot the Sheriff [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 12, seq 301: Strategic Betrayal [owner/controller metadata unavailable] moves Library (Player601938) -> Hand (Player601938) (Draw).
+- Turn 12, seq 306: Decorum Dissertation [owner=Player601938, controller=Player601938] moves Exile -> Stack (CastSpell).
+- Turn 12, seq 310: Archenemy's Charm [owner/controller metadata unavailable] moves Library (Player601938) -> Hand (Player601938) (Draw).
+- Turn 12, seq 310: Dread Whispers [owner/controller metadata unavailable] moves Library (Player601938) -> Hand (Player601938) (Draw).
+- Turn 12, seq 310: Decorum Dissertation [owner/controller metadata unavailable] moves Stack -> Exile (Exile).
+- Turn 12, seq 311: Swamp [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Battlefield (PlayLand).
+- Turn 12, seq 312: Archenemy's Charm [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Stack (CastSpell).
+- Turn 12, seq 317: Enduring Tenacity [owner=gian31, controller=gian31] moves Battlefield -> Exile (Exile).
+- Turn 12, seq 317: Archenemy's Charm [owner=Player601938, controller=Player601938] moves Stack -> Graveyard (Player601938) (Resolve).
+- Turn 12, seq 318: Strategic Betrayal [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Stack (CastSpell).
+- Turn 12, seq 323: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Battlefield -> Exile (Exile).
+- Turn 12, seq 323: Shoot the Sheriff [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Exile (Exile).
+- Turn 12, seq 323: Maelstrom Pulse [owner/controller metadata unavailable] moves Exile -> Hand (Player601938) (Return).
+- Turn 12, seq 323: Strategic Betrayal [owner=Player601938, controller=Player601938] moves Stack -> Graveyard (Player601938) (Resolve).
+- Turn 12, seq 324: Wear Down [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Stack (CastSpell).
+- Turn 12, seq 330: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 331: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 12, seq 331: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 12, seq 331: Wear Down [owner=Player601938, controller=Player601938] moves Stack -> Graveyard (Player601938) (Resolve).
+- Turn 13, seq 345: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 348: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 13, seq 349: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 13, seq 351: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 352: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 13, seq 355: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 369: Locthwain Scorn [owner/controller metadata unavailable] moves Library (Player601938) -> Hand (Player601938) (Draw).
+- Turn 14, seq 375: Swamp [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Battlefield (PlayLand).
+- Turn 14, seq 376: Locthwain Scorn [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Stack (CastSpell).
+- Turn 14, seq 380: Virtue of Persistence [owner=Player601938, controller=Player601938] moves Stack -> Exile (Resolve).
+- Turn 14, seq 380: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_ZeroToughness).
+- Turn 14, seq 381: Maelstrom Pulse [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Stack (CastSpell).
+- Turn 14, seq 385: Lunar Convocation [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 14, seq 385: Maelstrom Pulse [owner=Player601938, controller=Player601938] moves Stack -> Graveyard (Player601938) (Resolve).
+- Turn 14, seq 386: Dread Whispers [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Stack (CastSpell).
+- Turn 14, seq 388: Swamp [owner=Player601938, controller=Player601938] moves Library (Player601938) -> Hand (Player601938) (Draw).
+- Turn 14, seq 388: Mosswood Dreadknight [owner=Player601938, controller=Player601938] moves Stack -> Exile (Resolve).
+- Turn 15, seq 408: Godless Shrine [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 15, seq 412: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 16, seq 426: Forest [owner/controller metadata unavailable] moves Library (Player601938) -> Hand (Player601938) (Draw).
+- Turn 16, seq 432: Forest [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Battlefield (PlayLand).
+- Turn 16, seq 433: Valgavoth, Terror Eater [owner=Player601938, controller=Player601938] moves Hand (Player601938) -> Stack (CastSpell).
+- Turn 16, seq 435: Valgavoth, Terror Eater [owner=Player601938, controller=Player601938] moves Stack -> Battlefield (Resolve).
+- Turn 17, seq 451: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 17, seq 454: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 17, seq 456: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 252 becomes object 310 [Scoured Barrens].
+- Turn 2, seq 23: object 186 becomes object 312 [Swamp].
+- Turn 2, seq 26: object 179 becomes object 313 [Forest].
+- Turn 2, seq 27: object 182 becomes object 314 [Roost Seek].
+- Turn 2, seq 30: object 195 becomes object 318 [Swamp].
+- Turn 2, seq 31: object 314 becomes object 382 (Roost Seek -> Sagu Wildling).
+- Turn 3, seq 46: object 257 becomes object 448 [Case of the Uneaten Feast].
+- Turn 3, seq 57: object 253 becomes object 449 [Swamp].
+- Turn 3, seq 58: object 254 becomes object 450 [Deep-Cavern Bat].
+- Turn 3, seq 65: object 181 becomes object 454 [Maelstrom Pulse].
+- Turn 4, seq 71: object 385 becomes object 460 [Wastewood Verge].
+- Turn 4, seq 74: object 318 becomes object 461 [Swamp].
+- Turn 4, seq 75: object 185 becomes object 462 [Frog Butler].
+- Turn 5, seq 91: object 258 becomes object 465 [Scoured Barrens].
+- Turn 5, seq 94: object 465 becomes object 466 [Scoured Barrens].
+- Turn 5, seq 97: object 448 becomes object 468 [Case of the Uneaten Feast].
+- Turn 6, seq 119: object 386 becomes object 470 [Valgavoth, Terror Eater].
+- Turn 6, seq 122: object 312 becomes object 471 [Swamp].
+- Turn 6, seq 123: object 183 becomes object 472 [Frog Butler].
+- Turn 7, seq 145: object 259 becomes object 475 [Enduring Tenacity].
+- Turn 7, seq 148: object 251 becomes object 476 [Case of the Uneaten Feast].
+- Turn 8, seq 170: object 387 becomes object 478 [Restless Cottage].
+- Turn 8, seq 173: object 478 becomes object 479 [Restless Cottage].
+- Turn 9, seq 193: object 260 becomes object 480 [Godless Shrine].
+- Turn 9, seq 197: object 480 becomes object 481 [Godless Shrine].
+- Turn 9, seq 198: object 475 becomes object 482 [Enduring Tenacity].
+- Turn 10, seq 237: object 388 becomes object 492 [Decorum Dissertation].
+- Turn 10, seq 240: object 184 becomes object 493 [Swamp].
+- Turn 10, seq 241: object 492 becomes object 494 [Decorum Dissertation].
+- Turn 10, seq 245: object 389 becomes object 500 [Swamp].
+- Turn 10, seq 245: object 390 becomes object 501 [Swamp].
+- Turn 10, seq 245: object 494 becomes object 504 [Decorum Dissertation].
+- Turn 11, seq 266: object 261 becomes object 505 [Authority of the Consuls].
+- Turn 11, seq 269: object 505 becomes object 506 [Authority of the Consuls].
+- Turn 11, seq 279: object 250 becomes object 508 [Shoot the Sheriff].
+- Turn 11, seq 283: object 472 becomes object 511 [Frog Butler].
+- Turn 11, seq 283: object 508 becomes object 512 [Shoot the Sheriff].
+- Turn 12, seq 301: object 391 becomes object 514 [Strategic Betrayal].
+- Turn 12, seq 306: object 516 becomes object 517 [Decorum Dissertation].
+- Turn 12, seq 310: object 392 becomes object 518 [Archenemy's Charm].
+- Turn 12, seq 310: object 393 becomes object 519 [Dread Whispers].
+- Turn 12, seq 310: object 517 becomes object 522 [Decorum Dissertation].
+- Turn 12, seq 311: object 501 becomes object 523 [Swamp].
+- Turn 12, seq 312: object 518 becomes object 524 [Archenemy's Charm].
+- Turn 12, seq 317: object 482 becomes object 528 [Enduring Tenacity].
+- Turn 12, seq 317: object 524 becomes object 529 [Archenemy's Charm].
+- Turn 12, seq 318: object 514 becomes object 530 [Strategic Betrayal].
+- Turn 12, seq 323: object 450 becomes object 533 [Deep-Cavern Bat].
+- Turn 12, seq 323: object 512 becomes object 534 [Shoot the Sheriff].
+- Turn 12, seq 323: object 454 becomes object 535 [Maelstrom Pulse].
+- Turn 12, seq 323: object 530 becomes object 537 [Strategic Betrayal].
+- Turn 12, seq 324: object 180 becomes object 538 [Wear Down].
+- Turn 12, seq 330: object 262 becomes object 541 [Swamp].
+- Turn 12, seq 331: object 468 becomes object 542 [Case of the Uneaten Feast].
+- Turn 12, seq 331: object 476 becomes object 543 [Case of the Uneaten Feast].
+- Turn 12, seq 331: object 538 becomes object 544 [Wear Down].
+- Turn 13, seq 345: object 263 becomes object 545 [Starscape Cleric].
+- Turn 13, seq 348: object 541 becomes object 546 [Swamp].
+- Turn 13, seq 349: object 255 becomes object 547 [Lunar Convocation].
+- Turn 13, seq 352: object 545 becomes object 550 [Starscape Cleric].
+- Turn 14, seq 369: object 394 becomes object 553 [Locthwain Scorn].
+- Turn 14, seq 375: object 500 becomes object 557 [Swamp].
+- Turn 14, seq 376: object 553 becomes object 558 [Locthwain Scorn].
+- Turn 14, seq 380: object 558 becomes object 562 (Locthwain Scorn -> Virtue of Persistence).
+- Turn 14, seq 380: object 550 becomes object 564 [Starscape Cleric].
+- Turn 14, seq 381: object 535 becomes object 565 [Maelstrom Pulse].
+- Turn 14, seq 385: object 547 becomes object 569 [Lunar Convocation].
+- Turn 14, seq 385: object 565 becomes object 570 [Maelstrom Pulse].
+- Turn 14, seq 386: object 519 becomes object 571 [Dread Whispers].
+- Turn 14, seq 388: object 395 becomes object 575 [Swamp].
+- Turn 14, seq 388: object 571 becomes object 576 (Dread Whispers -> Mosswood Dreadknight).
+- Turn 15, seq 408: object 264 becomes object 578 [Godless Shrine].
+- Turn 15, seq 412: object 578 becomes object 579 [Godless Shrine].
+- Turn 16, seq 426: object 396 becomes object 580 [Forest].
+- Turn 16, seq 432: object 580 becomes object 583 [Forest].
+- Turn 16, seq 433: object 470 becomes object 584 [Valgavoth, Terror Eater].
+- Turn 17, seq 451: object 265 becomes object 595 [Deep-Cavern Bat].
+- Turn 17, seq 454: object 595 becomes object 596 [Deep-Cavern Bat].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Scoured Barrens (object 310) from Hand (gian31) to Battlefield.
+- Turn 2: Player601938 plays Forest (object 313) from Hand (Player601938) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 449) from Hand (gian31) to Battlefield.
+- Turn 4: Player601938 plays Swamp (object 461) from Hand (Player601938) to Battlefield.
+- Turn 5: gian31 plays Scoured Barrens (object 466) from Hand (gian31) to Battlefield.
+- Turn 6: Player601938 plays Swamp (object 471) from Hand (Player601938) to Battlefield.
+- Turn 8: Player601938 plays Restless Cottage (object 479) from Hand (Player601938) to Battlefield.
+- Turn 9: gian31 plays Godless Shrine (object 481) from Hand (gian31) to Battlefield.
+- Turn 10: Player601938 plays Swamp (object 493) from Hand (Player601938) to Battlefield.
+- Turn 12: Player601938 plays Swamp (object 523) from Hand (Player601938) to Battlefield.
+- Turn 13: gian31 plays Swamp (object 546) from Hand (gian31) to Battlefield.
+- Turn 14: Player601938 plays Swamp (object 557) from Hand (Player601938) to Battlefield.
+- Turn 15: gian31 plays Godless Shrine (object 579) from Hand (gian31) to Battlefield.
+- Turn 16: Player601938 plays Forest (object 583) from Hand (Player601938) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 9: ordered adjacent records Case of the Uneaten Feast -> Enduring Tenacity; observed repetitions=2; net life: Player601938 -2, gian31 +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=2, Enduring Tenacity=3.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 9: ordered adjacent records Case of the Uneaten Feast -> Enduring Tenacity; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Enduring Tenacity: casts=1; abilities=4 (triggered=4, activated=0) across turns [9, 9, 9, 9, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=4, other=1
+  observed effects: life -1, synthetic event
+- Case of the Uneaten Feast: casts=2; abilities=2 (triggered=2, activated=0) across turns [5, 7, 9, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Authority of the Consuls: casts=1; abilities=1 (triggered=1, activated=0) across turns [11, 16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Decorum Dissertation: casts=2 across turns [10, 12]
+  observed effect totals: draws=4, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=2
+  observed effects: draw, life -2, synthetic event
+- Deep-Cavern Bat: casts=2 across turns [3, 17]
+- Frog Butler: casts=2 across turns [4, 6]
+- Scoured Barrens: abilities=2 (triggered=2, activated=0) across turns [1, 5]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Archenemy's Charm: casts=1 across turns [12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: exile
+- Dread Whispers: casts=1 across turns [14]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: draw, life -1, synthetic event
+- Locthwain Scorn: casts=1 across turns [14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: P/T -3/-3, life +2
+- Lunar Convocation: casts=1 across turns [13]
+- Maelstrom Pulse: casts=1 across turns [14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Shoot the Sheriff: casts=1 across turns [11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Starscape Cleric: casts=1 across turns [13]
+- Valgavoth, Terror Eater: casts=1 across turns [16]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Deep-Cavern Bat (gian31) -> Player601938; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 6 - DeclareAttack, DeclareBlock (active=Player601938)
+  attacker: Frog Butler (Player601938) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Deep-Cavern Bat (gian31) -> Player601938; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=Player601938)
+  attacker: Frog Butler (Player601938) -> gian31; unblocked in this observed snapshot
+  attacker: Frog Butler (Player601938) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Deep-Cavern Bat (gian31) -> Player601938; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack (active=Player601938)
+  attacker: Frog Butler (Player601938) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Deep-Cavern Bat (gian31) -> Player601938; unblocked in this observed snapshot
+  attacker: Enduring Tenacity (gian31) -> Player601938; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 14 - DeclareAttack, DeclareBlock (active=Player601938)
+  attacker: Frog Butler (Player601938) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 9: Ability of Enduring Tenacity (active=gian31) - Ability of Enduring Tenacity: Player601938 loses 1 life.
+- Turn 11: Shoot the Sheriff (active=gian31) - Shoot the Sheriff: a permanent is destroyed.
+- Turn 11: Ability of Enduring Tenacity (active=gian31) - Ability of Enduring Tenacity: Player601938 loses 1 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 180: Wear Down | controller=Player601938 | owner=Player601938 | zone=Hand (latest_object_observation)
+- 181: Maelstrom Pulse | controller=Player601938 | owner=Player601938 | zone=Stack (latest_object_observation)
+- 183: Frog Butler | controller=Player601938 | owner=Player601938 | zone=Hand (latest_object_observation)
+- 184: Swamp | controller=Player601938 | owner=Player601938 | zone=Hand (latest_object_observation)
+- 185: Frog Butler | controller=Player601938 | owner=Player601938 | zone=Hand (latest_object_observation)
+- 195: Swamp | controller=Player601938 | owner=Player601938 | zone=Stack (latest_object_observation)
+- 250: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 251: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 252: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 253: Swamp | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 254: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 255: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 256: Makeshift Binding | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 310: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 311: object 311 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 312: Swamp | controller=Player601938 | owner=Player601938 | zone=Hand (latest_object_observation)
+- 313: Forest | controller=Player601938 | owner=Player601938 | zone=Battlefield (latest_object_observation)
+- 314: Roost Seek | controller=Player601938 | owner=Player601938 | zone=Stack (latest_object_observation)
+- 315: Roost Seek | controller=Player601938 | owner=Player601938 | zone=unknown (inferred unknown) (latest_object_observation)
+- 317: Swamp | controller=Player601938 | owner=Player601938 | zone=Battlefield (latest_object_observation)
+- 318: Swamp | controller=Player601938 | owner=Player601938 | zone=Battlefield (latest_object_observation)
+- 319: Swamp | controller=Player601938 | owner=Player601938 | zone=Hand (latest_object_observation)
+- 382: Sagu Wildling | controller=Player601938 | owner=Player601938 | zone=Battlefield (latest_object_observation)
+- 383: Roost Seek | controller=Player601938 | owner=Player601938 | zone=Battlefield (latest_object_observation)
+- 384: Sagu Wildling | controller=Player601938 | owner=Player601938 | zone=unknown (inferred unknown) (latest_object_observation)
+- 448: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 449: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 450: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 453: object 453 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 454: Maelstrom Pulse | controller=Player601938 | owner=Player601938 | zone=Exile (latest_object_observation)
+- 455: Swamp | controller=Player601938 | owner=Player601938 | zone=Hand (latest_object_observation)
+- 456: Wear Down | controller=Player601938 | owner=Player601938 | zone=Hand (latest_object_observation)
+- 457: Frog Butler | controller=Player601938 | owner=Player601938 | zone=Hand (latest_object_observation)
+- 458: Frog Butler | controller=Player601938 | owner=Player601938 | zone=Hand (latest_object_observation)
+- 459: Swamp | controller=Player601938 | owner=Player601938 | zone=Hand (latest_object_observation)
+- 460: Wastewood Verge | controller=Player601938 | owner=Player601938 | zone=Hand (latest_object_observation)
+- 461: Swamp | controller=Player601938 | owner=Player601938 | zone=Battlefield (latest_object_observation)
+- 462: Frog Butler | controller=Player601938 | owner=Player601938 | zone=Battlefield (latest_object_observation)
+- 465: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 466: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 467: object 467 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 468: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 471: Swamp | controller=Player601938 | owner=Player601938 | zone=Battlefield (latest_object_observation)
+- 472: Frog Butler | controller=Player601938 | owner=Player601938 | zone=Battlefield (latest_object_observation)
+- 475: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 476: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 479: Restless Cottage | controller=Player601938 | owner=Player601938 | zone=Battlefield (latest_object_observation)
+- 480: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 481: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 482: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 487: object 487 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 488: object 488 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 489: object 489 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 490: object 490 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 491: object 491 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 493: Swamp | controller=Player601938 | owner=Player601938 | zone=Battlefield (latest_object_observation)
+- 494: Decorum Dissertation | controller=Player601938 | owner=Player601938 | zone=Stack (latest_object_observation)
+- 502: object 502 | controller=Player601938 | owner=Player601938 | zone=Stack (latest_object_observation)
+- 504: Decorum Dissertation | controller=Player601938 | owner=Player601938 | zone=Exile (latest_object_observation)
+- 505: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 506: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 508: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 511: Frog Butler | controller=Player601938 | owner=Player601938 | zone=Graveyard (latest_object_observation)
+- 512: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 513: object 513 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 515: object 515 | controller=Player601938 | owner=Player601938 | zone=unknown (inferred unknown) (latest_object_observation)
+- 516: Decorum Dissertation | controller=Player601938 | owner=Player601938 | zone=Stack (latest_object_observation)
+- 517: Decorum Dissertation | controller=Player601938 | owner=Player601938 | zone=Stack (latest_object_observation)
+- 523: Swamp | controller=Player601938 | owner=Player601938 | zone=Battlefield (latest_object_observation)
+- 524: Archenemy's Charm | controller=Player601938 | owner=Player601938 | zone=Stack (latest_object_observation)
+- 528: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 529: Archenemy's Charm | controller=Player601938 | owner=Player601938 | zone=Graveyard (latest_object_observation)
+- 530: Strategic Betrayal | controller=Player601938 | owner=Player601938 | zone=Stack (latest_object_observation)
+- 533: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 534: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 536: Maelstrom Pulse | controller=Player601938 | owner=Player601938 | zone=Hand (latest_object_observation)
+- 537: Strategic Betrayal | controller=Player601938 | owner=Player601938 | zone=Graveyard (latest_object_observation)
+- 538: Wear Down | controller=Player601938 | owner=Player601938 | zone=Stack (latest_object_observation)
+- 541: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 542: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 543: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 544: Wear Down | controller=Player601938 | owner=Player601938 | zone=Graveyard (latest_object_observation)
+- 545: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 546: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 547: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 550: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 555: object 555 | controller=Player601938 | owner=Player601938 | zone=unknown (inferred unknown) (latest_object_observation)
+- 556: Decorum Dissertation | controller=Player601938 | owner=Player601938 | zone=Exile (latest_object_observation)
+- 557: Swamp | controller=Player601938 | owner=Player601938 | zone=Battlefield (latest_object_observation)
+- 558: Locthwain Scorn | controller=Player601938 | owner=Player601938 | zone=Stack (latest_object_observation)
+- 559: Locthwain Scorn | controller=Player601938 | owner=Player601938 | zone=unknown (inferred unknown) (latest_object_observation)
+- 562: Virtue of Persistence | controller=Player601938 | owner=Player601938 | zone=Exile (latest_object_observation)
+- 563: Locthwain Scorn | controller=Player601938 | owner=Player601938 | zone=Exile (latest_object_observation)
+- 564: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 565: Maelstrom Pulse | controller=Player601938 | owner=Player601938 | zone=Stack (latest_object_observation)
+- 569: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 570: Maelstrom Pulse | controller=Player601938 | owner=Player601938 | zone=Graveyard (latest_object_observation)
+- 571: Dread Whispers | controller=Player601938 | owner=Player601938 | zone=Stack (latest_object_observation)
+- 572: Dread Whispers | controller=Player601938 | owner=Player601938 | zone=unknown (inferred unknown) (latest_object_observation)
+- 575: Swamp | controller=Player601938 | owner=Player601938 | zone=Hand (latest_object_observation)
+- 576: Mosswood Dreadknight | controller=Player601938 | owner=Player601938 | zone=Battlefield (latest_object_observation)
+- 577: Dread Whispers | controller=Player601938 | owner=Player601938 | zone=Exile (latest_object_observation)
+- 578: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 579: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 581: object 581 | controller=Player601938 | owner=Player601938 | zone=unknown (inferred unknown) (latest_object_observation)
+- 582: Decorum Dissertation | controller=Player601938 | owner=Player601938 | zone=Exile (latest_object_observation)
+- 583: Forest | controller=Player601938 | owner=Player601938 | zone=Battlefield (latest_object_observation)
+- 584: Valgavoth, Terror Eater | controller=Player601938 | owner=Player601938 | zone=Battlefield (latest_object_observation)
+- 594: object 594 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 595: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 596: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 599: object 599 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 600: Wastewood Verge | controller=Player601938 | owner=Player601938 | zone=Hand (latest_object_observation)
+- 601: Swamp | controller=Player601938 | owner=Player601938 | zone=Hand (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Player601938: 64 total items
+  zones: Battlefield=16, Exile=7, Graveyard=5, Hand=16, Stack=13, unknown=7
+  objects: Swamp x15, Frog Butler x7, Decorum Dissertation x6, Maelstrom Pulse x5, Wear Down x4, Dread Whispers x3, Locthwain Scorn x3, Roost Seek x3, Archenemy's Charm x2, Forest x2, Sagu Wildling x2, Strategic Betrayal x2
+gian31: 50 total items
+  zones: Battlefield=10, Exile=3, Graveyard=4, Hand=9, Stack=12, unknown=12
+  objects: Case of the Uneaten Feast x6, Deep-Cavern Bat x5, Godless Shrine x4, Scoured Barrens x4, Shoot the Sheriff x4, Swamp x4, Enduring Tenacity x3, Lunar Convocation x3, Starscape Cleric x3, Authority of the Consuls x2, Makeshift Binding, object 311
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+Player601938:
+  Battlefield (16): Forest, Forest, Frog Butler, Frog Butler, Mosswood Dreadknight, Restless Cottage, Roost Seek, Sagu Wildling, Swamp, Swamp, Swamp, Swamp, Swamp, Swamp, Swamp, Valgavoth, Terror Eater
+  Graveyard: 5 card(s)
+gian31:
+  Battlefield (10): Deep-Cavern Bat, Deep-Cavern Bat, Enduring Tenacity, Godless Shrine, Godless Shrine, Scoured Barrens, Scoured Barrens, Starscape Cleric, Swamp, Swamp
+  Graveyard: 4 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+19 objects have no resolved final zone and are omitted from the known board state.
+Player601938: 7 unknown object(s)
+gian31: 12 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=25, Stack=25
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Player601938:
+  Battlefield (10): Forest, Swamp, Frog Butler, Swamp, Restless Cottage, Swamp, Swamp, Swamp, Forest, Valgavoth, Terror Eater
+  Graveyard (5): Frog Butler, Archenemy's Charm, Strategic Betrayal, Wear Down, Maelstrom Pulse
+  Exile (5): Decorum Dissertation, Virtue of Persistence, Locthwain Scorn, Mosswood Dreadknight, Dread Whispers
+gian31:
+  Battlefield (8): Scoured Barrens, Swamp, Scoured Barrens, Godless Shrine, Authority of the Consuls, Swamp, Godless Shrine, Deep-Cavern Bat
+  Graveyard (4): Case of the Uneaten Feast, Case of the Uneaten Feast, Starscape Cleric, Lunar Convocation
+  Exile (3): Enduring Tenacity, Deep-Cavern Bat, Shoot the Sheriff
+Known non-persistent entries (counts only):
+  Player601938: Limbo=2, Revealed=2
+  gian31: Hand=1, Limbo=2
+  unknown: Library=95, Limbo=5
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1
+- Turn 2: Player601938 Battlefield=1; gian31 Battlefield=1
+- Turn 3: Player601938 Battlefield=1; Player601938 Exile=1; gian31 Battlefield=3
+- Turn 4: Player601938 Battlefield=3; Player601938 Exile=1; gian31 Battlefield=3
+- Turn 5: Player601938 Battlefield=3; Player601938 Exile=1; gian31 Battlefield=5
+- Turn 6: Player601938 Battlefield=5; Player601938 Exile=1; gian31 Battlefield=5
+- Turn 7: Player601938 Battlefield=5; Player601938 Exile=1; gian31 Battlefield=6
+- Turn 8: Player601938 Battlefield=6; Player601938 Exile=1; gian31 Battlefield=6
+- Turn 9: Player601938 Battlefield=6; Player601938 Exile=1; gian31 Battlefield=8
+- Turn 10: Player601938 Battlefield=7; Player601938 Exile=2; gian31 Battlefield=8
+- Turn 11: Player601938 Battlefield=6; Player601938 Graveyard=1; Player601938 Exile=2; gian31 Battlefield=9; gian31 Graveyard=1
+- Turn 12: Player601938 Battlefield=7; Player601938 Graveyard=4; Player601938 Exile=2; gian31 Battlefield=5; gian31 Graveyard=2; gian31 Exile=3
+- Turn 13: Player601938 Battlefield=7; Player601938 Graveyard=4; Player601938 Exile=2; gian31 Battlefield=8; gian31 Graveyard=2; gian31 Exile=3
+- Turn 14: Player601938 Battlefield=8; Player601938 Graveyard=5; Player601938 Exile=4; gian31 Battlefield=6; gian31 Graveyard=4; gian31 Exile=3
+- Turn 15: Player601938 Battlefield=8; Player601938 Graveyard=5; Player601938 Exile=4; gian31 Battlefield=7; gian31 Graveyard=4; gian31 Exile=3
+- Turn 16: Player601938 Battlefield=10; Player601938 Graveyard=5; Player601938 Exile=4; gian31 Battlefield=7; gian31 Graveyard=4; gian31 Exile=3
+- Turn 17: Player601938 Battlefield=10; Player601938 Graveyard=5; Player601938 Exile=4; gian31 Battlefield=8; gian31 Graveyard=4; gian31 Exile=3
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 3: Deep-Cavern Bat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Frog Butler resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Frog Butler resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Enduring Tenacity resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Valgavoth, Terror Eater resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 17: Deep-Cavern Bat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
