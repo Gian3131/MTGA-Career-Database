@@ -1,0 +1,1087 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, CountAlucard
+Seat map: Seat 1=gian31, Seat 2=CountAlucard
+Turn range (known): 1 - 17
+Records: 71
+Action chains: 48
+Winner: CountAlucard
+Final life: {'gian31': 3, 'CountAlucard': 8}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 17 (Phase_Combat, Step_DeclareAttack; Ability of Sanguine Syphoner, seq 505).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 36 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 12 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13] (raw records=12; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 18 explicit Library -> Hand movement(s); named in the draw record=10, resolved through an explicit identity transition=7, unresolved=1.
+Unresolved draw identities (explicit movements retained): Turn 5, seq 80, object 292.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Swamp [159], Starscape Cleric [160], Swamp [161], Starscape Cleric [162], Lunar Convocation [163], Scoured Barrens [164], Scoured Barrens [165].
+  - unknown: 7 observed card(s): object 219 [219], object 220 [220], object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: CountAlucard; observed final life totals: {'gian31': 3, 'CountAlucard': 8}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 17 (Phase_Combat, Step_DeclareAttack; Ability of Sanguine Syphoner, seq 505).
+Last captured life snapshot: gian31 4 -> 3; CountAlucard 7 -> 8 (seq 505).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 2: actions: cards=0, abilities=1; life mutations=1; explicit battlefield entries=Scoured Barrens.
+- Turn 3: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Demon Wall.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Case of the Uneaten Feast.
+- Turn 5: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Sanguine Syphoner.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Lunar Convocation.
+- Turn 7: actions: cards=0, abilities=1; combat snapshots=1; life mutations=3; explicit battlefield entries=Swamp.
+- Turn 8: actions: cards=1, abilities=8; life mutations=6; explicit battlefield entries=Shattered Sanctum, Starscape Cleric.
+- Turn 9: actions: cards=1, abilities=1; combat snapshots=1; life mutations=3; explicit battlefield entries=Swamp, Maha, Its Feathers Night.
+- Turn 10: actions: cards=1, abilities=7; combat snapshots=1; life mutations=8; explicit battlefield entries=Godless Shrine, Makeshift Binding; explicit battlefield exits=Maha, Its Feathers Night.
+- Turn 11: actions: cards=1, abilities=5; combat snapshots=1; life mutations=6; explicit battlefield entries=Swamp, Massacre Wurm; explicit battlefield exits=Starscape Cleric, Bat, Bat.
+- Turn 12: actions: cards=2, abilities=3; life mutations=3; explicit battlefield entries=Starscape Cleric; explicit battlefield exits=Massacre Wurm.
+- Turn 13: actions: cards=1, abilities=3; combat snapshots=1; life mutations=4; explicit battlefield entries=Swamp, Massacre Wurm; explicit battlefield exits=Starscape Cleric.
+- Turn 14: actions: cards=3, abilities=11; life mutations=9; explicit battlefield entries=Case of the Uneaten Feast, Hinterland Sanctifier, Starscape Cleric.
+- Turn 15: actions: cards=1, abilities=4; combat snapshots=1; life mutations=5; explicit battlefield entries=Tragic Banshee; explicit battlefield exits=Starscape Cleric, Hinterland Sanctifier.
+- Turn 16: actions: cards=4, abilities=6; life mutations=5; explicit battlefield entries=Starscape Cleric, Hinterland Sanctifier; explicit battlefield exits=Massacre Wurm, Massacre Wurm, Case of the Uneaten Feast.
+- Turn 17: actions: cards=1, abilities=1; combat snapshots=1; life mutations=2; explicit battlefield exits=Human, Starscape Cleric, Hinterland Sanctifier.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [279] Hand (CountAlucard) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      CountAlucard: Battlefield: Swamp [279]
+
+Turn 2
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=26] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=281, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [280] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 21).
+      Scoured Barrens [281] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      CountAlucard: Battlefield: Swamp [279]
+      gian31: Battlefield: Scoured Barrens [281]
+
+Turn 3
+  - Demon Wall [valid_resolution_no_immediate_mutation, seq=46] (active=CountAlucard, phase=Phase_Main1, controller=CountAlucard, owner=CountAlucard, source_object=285)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Demon Wall resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Demon Wall (object 285) Hand (CountAlucard) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Demon Wall (object 285) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [283] Library (CountAlucard) -> Hand (CountAlucard) (Draw; GRE sequence 40).
+      Swamp [284] Hand (CountAlucard) -> Battlefield (PlayLand; GRE sequence 43).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      CountAlucard: Battlefield: Demon Wall [285], Swamp [279], Swamp [284]
+      gian31: Battlefield: Scoured Barrens [281]
+
+Turn 4
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=66] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 290) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 290) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Godless Shrine [288] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 60).
+      Swamp [289] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 63).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      CountAlucard: Battlefield: Demon Wall [285], Swamp [279], Swamp [284]
+      gian31: Battlefield: Case of the Uneaten Feast [290], Scoured Barrens [281], Swamp [289]
+
+Turn 5
+  - Sanguine Syphoner [valid_resolution_no_immediate_mutation, seq=86] (active=CountAlucard, phase=Phase_Main1, controller=CountAlucard, owner=CountAlucard, source_object=294)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sanguine Syphoner resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sanguine Syphoner (object 294) Hand (CountAlucard) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sanguine Syphoner (object 294) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 292 [292] Library (CountAlucard) -> Hand (CountAlucard) (Draw; GRE sequence 80).
+      Swamp [293] Hand (CountAlucard) -> Battlefield (PlayLand; GRE sequence 83).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      CountAlucard: Battlefield: Demon Wall [285], Sanguine Syphoner [294], Swamp [279], Swamp [284], Swamp [293]
+      gian31: Battlefield: Case of the Uneaten Feast [290], Scoured Barrens [281], Swamp [289]
+
+Turn 6
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=106] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=299)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 299) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 299) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [297] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 100).
+      Swamp [298] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 103).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      CountAlucard: Battlefield: Demon Wall [285], Sanguine Syphoner [294], Swamp [279], Swamp [284], Swamp [293]
+      gian31: Battlefield: Case of the Uneaten Feast [290], Lunar Convocation [299], Scoured Barrens [281], Swamp [289], Swamp [298]
+
+Turn 7
+  - Ability of Sanguine Syphoner [observed_semantic_effect, seq=131] (active=CountAlucard, phase=Phase_Combat, step=Step_DeclareAttack, controller=CountAlucard, owner=CountAlucard, source_object=294, source_last_explicit_zone=Battlefield)
+      effects: life -1, life +1
+      narrative: Ability of Sanguine Syphoner: gian31 loses 1 life; CountAlucard gains 1 life.
+  Combat snapshots observed (active=CountAlucard; frames: DeclareAttack -> DeclareBlock):
+      attackers: Sanguine Syphoner [294] (unblocked, observed P/T 1/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: CountAlucard +1; gian31 -2 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 20
+    life: CountAlucard 20 -> 21
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [302] Library (CountAlucard) -> Hand (CountAlucard) (Draw; GRE sequence 120).
+      Swamp [303] Hand (CountAlucard) -> Battlefield (PlayLand; GRE sequence 123).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      CountAlucard: Battlefield: Demon Wall [285], Sanguine Syphoner [294], Swamp [279], Swamp [284], Swamp [293], Swamp [303]
+      gian31: Battlefield: Case of the Uneaten Feast [290], Lunar Convocation [299], Scoured Barrens [281], Swamp [289], Swamp [298]
+
+Turn 8
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=152] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 307) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 307) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=154] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=156] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: CountAlucard loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=158] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 156 and 158; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life -1
+      narrative: Ability of Starscape Cleric: CountAlucard loses 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=161] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=299, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 170 [170], Hinterland Sanctifier [315] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 315) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=174] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=299, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 161 and 174; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: token creation
+      narrative: Ability of Lunar Convocation: a token is created.
+      explicit effect object references: Bat [318] (role/targeting only where the protocol identifies it)
+      token created: Bat (object 318, controller=gian31) -1/-1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 317).
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=176] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=178] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: CountAlucard loses 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=180] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=299, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: CountAlucard loses 1 life.
+    net observed life change this turn: CountAlucard -3; gian31 +0 (individual changes below; gains and losses may offset)
+    life: gian31 19 -> 20
+    life: CountAlucard 21 -> 20
+    life: gian31 20 -> 18
+    life: gian31 18 -> 19
+    life: CountAlucard 20 -> 19
+    life: CountAlucard 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shattered Sanctum [305] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 145).
+      Shattered Sanctum [306] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 148).
+      Starscape Cleric [312] Hand (gian31) -> Stack (CastSpell; GRE sequence 157).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      CountAlucard: Battlefield: Demon Wall [285], Sanguine Syphoner [294], Swamp [279], Swamp [284], Swamp [293], Swamp [303]
+      gian31: Battlefield: Case of the Uneaten Feast [290], Lunar Convocation [299], Scoured Barrens [281], Shattered Sanctum [306], Starscape Cleric [307], Swamp [289], Swamp [298]
+
+Turn 9
+  - Maha, Its Feathers Night [valid_resolution_no_immediate_mutation, seq=190] (active=CountAlucard, phase=Phase_Main1, controller=CountAlucard, owner=CountAlucard, source_object=323)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Maha, Its Feathers Night resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Maha, Its Feathers Night (object 323) Hand (CountAlucard) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Maha, Its Feathers Night (object 323) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Sanguine Syphoner [observed_semantic_effect, seq=198] (active=CountAlucard, phase=Phase_Combat, step=Step_DeclareAttack, controller=CountAlucard, owner=CountAlucard, source_object=294, source_last_explicit_zone=Battlefield)
+      effects: life -1, life +1
+      narrative: Ability of Sanguine Syphoner: gian31 loses 1 life; CountAlucard gains 1 life.
+  Combat snapshots observed (active=CountAlucard; frames: DeclareAttack):
+      attackers: Sanguine Syphoner [294] (unblocked, observed P/T 1/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: CountAlucard +1; gian31 -2 (individual changes below; gains and losses may offset)
+    life: gian31 19 -> 18
+    life: CountAlucard 18 -> 19
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 18 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [321] Library (CountAlucard) -> Hand (CountAlucard) (Draw; GRE sequence 184).
+      Swamp [322] Hand (CountAlucard) -> Battlefield (PlayLand; GRE sequence 187).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      CountAlucard: Battlefield: Demon Wall [285], Maha, Its Feathers Night [323], Sanguine Syphoner [294], Swamp [279], Swamp [284], Swamp [293], Swamp [303], Swamp [322]
+      gian31: Battlefield: Case of the Uneaten Feast [290], Lunar Convocation [299], Scoured Barrens [281], Shattered Sanctum [306], Starscape Cleric [307], Swamp [289], Swamp [298]
+
+Turn 10
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=220] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=332)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 332) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 332) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=227] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=332, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Maha, Its Feathers Night; gian31 gains 2 life.
+      explicit effect object references: Maha, Its Feathers Night [323], Maha, Its Feathers Night [339] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Maha, Its Feathers Night (object 339) Battlefield -> Exile (Exile; shared object ID)
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=229] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: CountAlucard loses 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=232] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=299, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 172 [172], Stroke of Midnight [344] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Stroke of Midnight (object 344) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=251] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=299, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 232 and 251; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: token creation
+      narrative: Ability of Lunar Convocation: a token is created.
+      explicit effect object references: Bat [347] (role/targeting only where the protocol identifies it)
+      token created: Bat (object 347, controller=gian31) -1/-1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 346).
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=253] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=255] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: CountAlucard loses 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=257] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=299, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: CountAlucard loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [307] (unblocked, observed P/T 2/1), Bat [318] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      other-player life loss not explained by observed attacker damage: gian31 17 -> 15 (-2; phase=unknown; source unavailable).
+      other-player life loss not explained by observed attacker damage: gian31 17 -> 15 (-2; phase=Phase_Main1; source unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: CountAlucard -6; gian31 -1 (individual changes below; gains and losses may offset)
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): gian31 17 -> 15
+    life: gian31 15 -> 17
+    life: CountAlucard 19 -> 18
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): gian31 17 -> 15
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): CountAlucard 18 -> 15
+    life: gian31 15 -> 16
+    life: CountAlucard 15 -> 14
+    life: CountAlucard 14 -> 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [330] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 213).
+      Godless Shrine [331] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 217).
+      Scoured Barrens [338] Hand (gian31) -> Graveyard (gian31) (Discard; GRE sequence 225).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      CountAlucard: Battlefield: Demon Wall [285], Sanguine Syphoner [294], Swamp [279], Swamp [284], Swamp [293], Swamp [303], Swamp [322]; Exile: Maha, Its Feathers Night [339]
+      gian31: Battlefield: Case of the Uneaten Feast [290], Godless Shrine [331], Lunar Convocation [299], Makeshift Binding [332], Scoured Barrens [281], Shattered Sanctum [306], Starscape Cleric [307], Swamp [289], Swamp [298]; Graveyard: Scoured Barrens [338]
+
+Turn 11
+  - Massacre Wurm [valid_resolution_no_immediate_mutation, seq=267] (active=CountAlucard, phase=Phase_Main1, controller=CountAlucard, owner=CountAlucard, source_object=352)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Massacre Wurm resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Massacre Wurm (object 352) Hand (CountAlucard) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Massacre Wurm (object 352) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Massacre Wurm [observed_semantic_effect, seq=269] (active=CountAlucard, phase=Phase_Main1, controller=CountAlucard, owner=CountAlucard, source_object=352, source_last_explicit_zone=Battlefield)
+      effects: P/T -2/-2, P/T -2/-2, P/T -2/-2
+      narrative: Ability of Massacre Wurm: Starscape Cleric gets -2/-2; Bat gets -2/-2; Bat gets -2/-2.
+      explicit effect object references: Starscape Cleric [307], Bat [318], Bat [347] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Starscape Cleric (object 360) Battlefield -> Graveyard (gian31) (SBA_ZeroToughness; shared object ID)
+      protocol-linked zone transfer: Bat (object 361) Battlefield -> Graveyard (gian31) (SBA_ZeroToughness; shared object ID)
+      protocol-linked zone transfer: Bat (object 362) Battlefield -> Graveyard (gian31) (SBA_ZeroToughness; shared object ID)
+  - Ability of Massacre Wurm [observed_semantic_effect, seq=272] (active=CountAlucard, phase=Phase_Main1, controller=CountAlucard, owner=CountAlucard, source_object=352, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 269 and 272; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life -2
+      narrative: Ability of Massacre Wurm: gian31 loses 2 life.
+  - Ability of Massacre Wurm [observed_semantic_effect, seq=274] (active=CountAlucard, phase=Phase_Main1, controller=CountAlucard, owner=CountAlucard, source_object=352, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 272 and 274; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life -2
+      narrative: Ability of Massacre Wurm: gian31 loses 2 life.
+  - Ability of Massacre Wurm [observed_semantic_effect, seq=276] (active=CountAlucard, phase=Phase_Main1, controller=CountAlucard, owner=CountAlucard, source_object=352, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 274 and 276; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life -2
+      narrative: Ability of Massacre Wurm: gian31 loses 2 life.
+  - Ability of Sanguine Syphoner [observed_semantic_effect, seq=284] (active=CountAlucard, phase=Phase_Combat, step=Step_DeclareAttack, controller=CountAlucard, owner=CountAlucard, source_object=294, source_last_explicit_zone=Battlefield)
+      effects: life -1, life +1
+      narrative: Ability of Sanguine Syphoner: gian31 loses 1 life; CountAlucard gains 1 life.
+  Combat snapshots observed (active=CountAlucard; frames: DeclareAttack -> DeclareBlock):
+      attackers: Sanguine Syphoner [294] (unblocked, observed P/T 1/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: CountAlucard +1; gian31 -8 (individual changes below; gains and losses may offset)
+    life: gian31 16 -> 14
+    life: gian31 14 -> 12
+    life: gian31 12 -> 10
+    life: gian31 10 -> 9
+    life: CountAlucard 13 -> 14
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 9 -> 8
+    additional protocol-observed zone movements not assigned to an action chain:
+      Massacre Wurm [350] Library (CountAlucard) -> Hand (CountAlucard) (Draw; GRE sequence 261).
+      Swamp [351] Hand (CountAlucard) -> Battlefield (PlayLand; GRE sequence 264).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      CountAlucard: Battlefield: Demon Wall [285], Massacre Wurm [352], Sanguine Syphoner [294], Swamp [279], Swamp [284], Swamp [293], Swamp [303], Swamp [322], Swamp [351]; Exile: Maha, Its Feathers Night [339]
+      gian31: Battlefield: Case of the Uneaten Feast [290], Godless Shrine [331], Lunar Convocation [299], Makeshift Binding [332], Scoured Barrens [281], Shattered Sanctum [306], Swamp [289], Swamp [298]; Graveyard: Bat [361], Bat [362], Scoured Barrens [338], Starscape Cleric [360]
+
+Turn 12
+  - Stroke of Midnight [observed_semantic_effect, seq=305] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=368)
+      effects: destroy, token creation
+      narrative: Stroke of Midnight destroys Massacre Wurm.
+      explicit effect object references: Massacre Wurm [352], Massacre Wurm [372], Human [373] (role/targeting only where the protocol identifies it)
+      token created: Human (object 373, controller=CountAlucard) -1/-1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 368).
+      protocol-linked zone transfer: Stroke of Midnight (object 368) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Massacre Wurm (object 372) Battlefield -> Graveyard (CountAlucard) (Destroy; shared object ID)
+      protocol-linked zone transfer: Stroke of Midnight (object 374) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 368 -> transfer object 374 (explicit GRE ObjectIdChanged chain).
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=309] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 375) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 375) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=311] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=313] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: CountAlucard loses 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=325] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=299, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: CountAlucard loses 1 life.
+    net observed life change this turn: CountAlucard -2; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 8 -> 9
+    life: CountAlucard 14 -> 13
+    life: CountAlucard 13 -> 12
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [367] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 298).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      CountAlucard: Battlefield: Demon Wall [285], Sanguine Syphoner [294], Swamp [279], Swamp [284], Swamp [293], Swamp [303], Swamp [322], Swamp [351]; Exile: Maha, Its Feathers Night [339]; Graveyard: Massacre Wurm [372]
+      gian31: Battlefield: Case of the Uneaten Feast [290], Godless Shrine [331], Lunar Convocation [299], Makeshift Binding [332], Scoured Barrens [281], Shattered Sanctum [306], Starscape Cleric [375], Swamp [289], Swamp [298]; Graveyard: Bat [361], Bat [362], Scoured Barrens [338], Starscape Cleric [360], Stroke of Midnight [374]
+
+Turn 13
+  - Massacre Wurm [valid_resolution_no_immediate_mutation, seq=335] (active=CountAlucard, phase=Phase_Main1, controller=CountAlucard, owner=CountAlucard, source_object=383)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Massacre Wurm resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Massacre Wurm (object 383) Hand (CountAlucard) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Massacre Wurm (object 383) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Massacre Wurm [observed_semantic_effect, seq=337] (active=CountAlucard, phase=Phase_Main1, controller=CountAlucard, owner=CountAlucard, source_object=383, source_last_explicit_zone=Battlefield)
+      effects: P/T -2/-2
+      narrative: Ability of Massacre Wurm: Starscape Cleric gets -2/-2.
+      explicit effect object references: Starscape Cleric [375] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Starscape Cleric (object 391) Battlefield -> Graveyard (gian31) (SBA_ZeroToughness; shared object ID)
+  - Ability of Massacre Wurm [observed_semantic_effect, seq=339] (active=CountAlucard, phase=Phase_Main1, controller=CountAlucard, owner=CountAlucard, source_object=383, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 337 and 339; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life -2
+      narrative: Ability of Massacre Wurm: gian31 loses 2 life.
+  - Ability of Sanguine Syphoner [observed_semantic_effect, seq=347] (active=CountAlucard, phase=Phase_Combat, step=Step_DeclareAttack, controller=CountAlucard, owner=CountAlucard, source_object=294, source_last_explicit_zone=Battlefield)
+      effects: life -1, life +1
+      narrative: Ability of Sanguine Syphoner: gian31 loses 1 life; CountAlucard gains 1 life.
+  Combat snapshots observed (active=CountAlucard; frames: DeclareAttack -> DeclareBlock):
+      attackers: Sanguine Syphoner [294] (unblocked, observed P/T 1/3), Human [373] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: CountAlucard +1; gian31 -5 (individual changes below; gains and losses may offset)
+    life: gian31 9 -> 7
+    life: gian31 7 -> 6
+    life: CountAlucard 12 -> 13
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 6 -> 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [381] Library (CountAlucard) -> Hand (CountAlucard) (Draw; GRE sequence 329).
+      Swamp [382] Hand (CountAlucard) -> Battlefield (PlayLand; GRE sequence 332).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      CountAlucard: Battlefield: Demon Wall [285], Massacre Wurm [383], Sanguine Syphoner [294], Swamp [279], Swamp [284], Swamp [293], Swamp [303], Swamp [322], Swamp [351], Swamp [382]; Exile: Maha, Its Feathers Night [339]; Graveyard: Massacre Wurm [372]
+      gian31: Battlefield: Case of the Uneaten Feast [290], Godless Shrine [331], Lunar Convocation [299], Makeshift Binding [332], Scoured Barrens [281], Shattered Sanctum [306], Swamp [289], Swamp [298]; Graveyard: Bat [361], Bat [362], Scoured Barrens [338], Starscape Cleric [360], Starscape Cleric [391], Stroke of Midnight [374]
+
+Turn 14
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=366] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=395)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 395) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 395) Stack -> Battlefield (Resolve; shared object ID)
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=369] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=397)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 397) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 397) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=372] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=395, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=374] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=378] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=401)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 401) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 401) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=381] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=397, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=383] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=401, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: CountAlucard loses 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=385] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=395, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=387] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=401, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: CountAlucard loses 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=389] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=391] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=401, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: CountAlucard loses 1 life.
+  - Ability of Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=404] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=395, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Case of the Uneaten Feast resolves with no immediate observed mutation.
+  - Ability of Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=406] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Case of the Uneaten Feast resolves with no immediate observed mutation.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=408] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=299, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: CountAlucard loses 1 life.
+    net observed life change this turn: CountAlucard -4; gian31 +5 (individual changes below; gains and losses may offset)
+    life: gian31 4 -> 5
+    life: gian31 5 -> 6
+    life: gian31 6 -> 7
+    life: CountAlucard 13 -> 12
+    life: gian31 7 -> 8
+    life: CountAlucard 12 -> 11
+    life: gian31 8 -> 9
+    life: CountAlucard 11 -> 10
+    life: CountAlucard 10 -> 9
+    additional protocol-observed zone movements not assigned to an action chain:
+      Enduring Tenacity [394] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 361).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      CountAlucard: Battlefield: Demon Wall [285], Massacre Wurm [383], Sanguine Syphoner [294], Swamp [279], Swamp [284], Swamp [293], Swamp [303], Swamp [322], Swamp [351], Swamp [382]; Exile: Maha, Its Feathers Night [339]; Graveyard: Massacre Wurm [372]
+      gian31: Battlefield: Case of the Uneaten Feast [290], Case of the Uneaten Feast [395], Godless Shrine [331], Hinterland Sanctifier [397], Lunar Convocation [299], Makeshift Binding [332], Scoured Barrens [281], Shattered Sanctum [306], Starscape Cleric [401], Swamp [289], Swamp [298]; Graveyard: Bat [361], Bat [362], Scoured Barrens [338], Starscape Cleric [360], Starscape Cleric [391], Stroke of Midnight [374]
+
+Turn 15
+  - Tragic Banshee [valid_resolution_no_immediate_mutation, seq=417] (active=CountAlucard, phase=Phase_Main1, controller=CountAlucard, owner=CountAlucard, source_object=414)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tragic Banshee resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tragic Banshee (object 414) Hand (CountAlucard) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tragic Banshee (object 414) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Tragic Banshee [observed_semantic_effect, seq=421] (active=CountAlucard, phase=Phase_Main1, controller=CountAlucard, owner=CountAlucard, source_object=414, source_last_explicit_zone=Battlefield)
+      effects: P/T -1/-1
+      narrative: Ability of Tragic Banshee: Starscape Cleric gets -1/-1.
+      explicit effect object references: Starscape Cleric [401] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Starscape Cleric (object 421) Battlefield -> Graveyard (gian31) (SBA_ZeroToughness; shared object ID)
+  - Ability of Massacre Wurm [observed_semantic_effect, seq=423] (active=CountAlucard, phase=Phase_Main1, controller=CountAlucard, owner=CountAlucard, source_object=383, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Massacre Wurm: gian31 loses 2 life.
+  - Ability of Sanguine Syphoner [observed_semantic_effect, seq=431] (active=CountAlucard, phase=Phase_Combat, step=Step_DeclareAttack, controller=CountAlucard, owner=CountAlucard, source_object=294, source_last_explicit_zone=Battlefield)
+      effects: life -1, life +1
+      narrative: Ability of Sanguine Syphoner: gian31 loses 1 life; CountAlucard gains 1 life.
+  - Ability of Massacre Wurm [observed_semantic_effect, seq=439] (active=CountAlucard, phase=Phase_Combat, step=Step_CombatDamage, controller=CountAlucard, owner=CountAlucard, source_object=383, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Massacre Wurm: gian31 loses 2 life.
+  Combat snapshots observed (active=CountAlucard; frames: DeclareAttack -> CombatDamage):
+      attackers: Sanguine Syphoner [294] (unblocked, observed P/T 1/3), Human [373] (unblocked, observed P/T 1/1), Massacre Wurm [383] (blocked, observed P/T 6/5)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 8; snapshot comparison does not reconcile (exact assignment unavailable).
+      combat-result zone change: Hinterland Sanctifier [424] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: CountAlucard +1; gian31 -7 (individual changes below; gains and losses may offset)
+    life: gian31 9 -> 7
+    life: gian31 7 -> 6
+    life: CountAlucard 9 -> 10
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 6 -> 4
+    life: gian31 4 -> 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tragic Banshee [413] Library (CountAlucard) -> Hand (CountAlucard) (Draw; GRE sequence 412).
+      Hinterland Sanctifier [424] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 437).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      CountAlucard: Battlefield: Demon Wall [285], Massacre Wurm [383], Sanguine Syphoner [294], Swamp [279], Swamp [284], Swamp [293], Swamp [303], Swamp [322], Swamp [351], Swamp [382], Tragic Banshee [414]; Exile: Maha, Its Feathers Night [339]; Graveyard: Massacre Wurm [372]
+      gian31: Battlefield: Case of the Uneaten Feast [290], Case of the Uneaten Feast [395], Godless Shrine [331], Lunar Convocation [299], Makeshift Binding [332], Scoured Barrens [281], Shattered Sanctum [306], Swamp [289], Swamp [298]; Graveyard: Bat [361], Bat [362], Hinterland Sanctifier [424], Scoured Barrens [338], Starscape Cleric [360], Starscape Cleric [391], Starscape Cleric [421], Stroke of Midnight [374]
+
+Turn 16
+  - Shoot the Sheriff [observed_semantic_effect, seq=456] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=427)
+      effects: destroy
+      narrative: Shoot the Sheriff destroys Massacre Wurm.
+      explicit effect object references: Massacre Wurm [383], Massacre Wurm [430] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 427) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Massacre Wurm (object 430) Battlefield -> Graveyard (CountAlucard) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 431) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 427 -> transfer object 431 (explicit GRE ObjectIdChanged chain).
+  - Shoot the Sheriff [observed_semantic_effect, seq=458] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=427)
+      effects: destroy
+      narrative: Shoot the Sheriff destroys Massacre Wurm.
+      explicit effect object references: Massacre Wurm [383], Massacre Wurm [430] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 427) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 431) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 427 -> transfer object 431 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Massacre Wurm (object 430) Battlefield -> Graveyard (CountAlucard) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 431) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 427 -> transfer object 431 (explicit GRE ObjectIdChanged chain).
+  - Ability of Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=461] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield, source_successor=433 observed Battlefield -> Graveyard (gian31) (Sacrifice))
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Case of the Uneaten Feast resolves with no immediate observed mutation.
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=465] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=434)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 434) Graveyard (gian31) -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Graveyard (gian31); enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Starscape Cleric (object 434) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=467] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=395, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=469] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=434, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: CountAlucard loses 1 life.
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=472] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=439)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 439) Graveyard (gian31) -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Graveyard (gian31); enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 439) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=474] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=395, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=476] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=434, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: CountAlucard loses 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=488] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=299, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: CountAlucard loses 1 life.
+    net observed life change this turn: CountAlucard -3; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 2 -> 3
+    life: CountAlucard 10 -> 9
+    life: gian31 3 -> 4
+    life: CountAlucard 9 -> 8
+    life: CountAlucard 8 -> 7
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shoot the Sheriff [426] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 449).
+      Enduring Tenacity [432] Hand (gian31) -> Stack (CastSpell; GRE sequence 457).
+      Case of the Uneaten Feast [433] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 459).
+        sacrifice observed after Shoot the Sheriff (seq 458); direct causal linkage is unavailable.
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      CountAlucard: Battlefield: Demon Wall [285], Sanguine Syphoner [294], Swamp [279], Swamp [284], Swamp [293], Swamp [303], Swamp [322], Swamp [351], Swamp [382], Tragic Banshee [414]; Exile: Maha, Its Feathers Night [339]; Graveyard: Massacre Wurm [372], Massacre Wurm [430]
+      gian31: Battlefield: Case of the Uneaten Feast [395], Godless Shrine [331], Hinterland Sanctifier [439], Lunar Convocation [299], Makeshift Binding [332], Scoured Barrens [281], Shattered Sanctum [306], Starscape Cleric [434], Swamp [289], Swamp [298]; Graveyard: Bat [361], Bat [362], Case of the Uneaten Feast [433], Scoured Barrens [338], Shoot the Sheriff [431], Starscape Cleric [391], Starscape Cleric [421], Stroke of Midnight [374]
+
+Turn 17
+  - Withering Curse [observed_semantic_effect, seq=497] (active=CountAlucard, phase=Phase_Main1, controller=CountAlucard, owner=CountAlucard, source_object=445)
+      effects: P/T -2/-2, P/T -2/-2, P/T -2/-2, P/T -2/-2, P/T -2/-2, P/T -2/-2
+      narrative: Withering Curse: Sanguine Syphoner gets -2/-2; Demon Wall gets -2/-2; Tragic Banshee gets -2/-2; Human gets -2/-2; Starscape Cleric gets -2/-2; Hinterland Sanctifier gets -2/-2.
+      explicit effect object references: Demon Wall [285], Sanguine Syphoner [294], Human [373], Tragic Banshee [414], Starscape Cleric [434], Hinterland Sanctifier [439] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Withering Curse (object 445) Hand (CountAlucard) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Withering Curse (object 449) Stack -> Graveyard (CountAlucard) (Resolve; shared object ID)
+      identity continuity: source object 445 -> transfer object 449 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Human (object 450) Battlefield -> Graveyard (CountAlucard) (SBA_ZeroToughness; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 451) Battlefield -> Graveyard (gian31) (SBA_ZeroToughness; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 452) Battlefield -> Graveyard (gian31) (SBA_ZeroToughness; shared object ID)
+  - Ability of Sanguine Syphoner [observed_semantic_effect, seq=505] (active=CountAlucard, phase=Phase_Combat, step=Step_DeclareAttack, controller=CountAlucard, owner=CountAlucard, source_object=294, source_last_explicit_zone=Battlefield)
+      effects: life -1, life +1
+      narrative: Ability of Sanguine Syphoner: gian31 loses 1 life; CountAlucard gains 1 life.
+  Combat snapshots observed (active=CountAlucard; frames: DeclareAttack -> DeclareBlock):
+      attackers: Sanguine Syphoner [294] (unblocked, observed P/T -1/1), Tragic Banshee [414] (unblocked, observed P/T 3/1)
+      blockers: none identified
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: CountAlucard +1; gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 4 -> 3
+    life: CountAlucard 7 -> 8
+    additional protocol-observed zone movements not assigned to an action chain:
+      Withering Curse [444] Library (CountAlucard) -> Hand (CountAlucard) (Draw; GRE sequence 492).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      CountAlucard: Battlefield: Demon Wall [285], Sanguine Syphoner [294], Swamp [279], Swamp [284], Swamp [293], Swamp [303], Swamp [322], Swamp [351], Swamp [382], Tragic Banshee [414]; Exile: Maha, Its Feathers Night [339]; Graveyard: Human [450], Massacre Wurm [372], Massacre Wurm [430], Withering Curse [449]
+      gian31: Battlefield: Case of the Uneaten Feast [395], Godless Shrine [331], Lunar Convocation [299], Makeshift Binding [332], Scoured Barrens [281], Shattered Sanctum [306], Swamp [289], Swamp [298]; Graveyard: Bat [361], Bat [362], Case of the Uneaten Feast [433], Hinterland Sanctifier [452], Scoured Barrens [338], Shoot the Sheriff [431], Starscape Cleric [391], Starscape Cleric [421], Starscape Cleric [451], Stroke of Midnight [374]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 8, seq 159, Phase_Main1: gian31 20 -> 18. No source event correlated in captured records. Previous captured action: Starscape Cleric.
+- Turn 10, seq 217: gian31 17 -> 15; gian31 17 -> 15. Combat declaration observed; exact assignment unavailable.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 3 token creations observed; 0 active as last observed; 3 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Bat [318] controller=gian31; created Turn 8 (-1/-1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 11 via Battlefield -> Graveyard (gian31) (SBA_ZeroToughness); ceases to exist after that observed move (token rules consequence).
+  P/T caution: nonpositive P/T is an observed object snapshot; persistence is not assumed.
+- Bat [347] controller=gian31; created Turn 10 (-1/-1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 11 via Battlefield -> Graveyard (gian31) (SBA_ZeroToughness); ceases to exist after that observed move (token rules consequence).
+  P/T caution: nonpositive P/T is an observed object snapshot; persistence is not assumed.
+- Human [373] controller=CountAlucard; created Turn 12 (-1/-1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 17 via Battlefield -> Graveyard (CountAlucard) (SBA_ZeroToughness); ceases to exist after that observed move (token rules consequence).
+  P/T caution: nonpositive P/T is an observed object snapshot; persistence is not assumed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Swamp [owner=CountAlucard, controller=CountAlucard] moves Hand (CountAlucard) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 24: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 40: Swamp [owner/controller metadata unavailable] moves Library (CountAlucard) -> Hand (CountAlucard) (Draw).
+- Turn 3, seq 43: Swamp [owner=CountAlucard, controller=CountAlucard] moves Hand (CountAlucard) -> Battlefield (PlayLand).
+- Turn 3, seq 44: Demon Wall [owner=CountAlucard, controller=CountAlucard] moves Hand (CountAlucard) -> Stack (CastSpell).
+- Turn 3, seq 46: Demon Wall [owner=CountAlucard, controller=CountAlucard] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 60: Godless Shrine [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 63: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 64: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 66: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 80: object 292 [owner/controller metadata unavailable] moves Library (CountAlucard) -> Hand (CountAlucard) (Draw).
+- Turn 5, seq 83: Swamp [owner=CountAlucard, controller=CountAlucard] moves Hand (CountAlucard) -> Battlefield (PlayLand).
+- Turn 5, seq 84: Sanguine Syphoner [owner=CountAlucard, controller=CountAlucard] moves Hand (CountAlucard) -> Stack (CastSpell).
+- Turn 5, seq 86: Sanguine Syphoner [owner=CountAlucard, controller=CountAlucard] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 100: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 103: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 104: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 106: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 120: Swamp [owner/controller metadata unavailable] moves Library (CountAlucard) -> Hand (CountAlucard) (Draw).
+- Turn 7, seq 123: Swamp [owner=CountAlucard, controller=CountAlucard] moves Hand (CountAlucard) -> Battlefield (PlayLand).
+- Turn 8, seq 145: Shattered Sanctum [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 148: Shattered Sanctum [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 149: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 152: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 157: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 161: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 184: Swamp [owner/controller metadata unavailable] moves Library (CountAlucard) -> Hand (CountAlucard) (Draw).
+- Turn 9, seq 187: Swamp [owner=CountAlucard, controller=CountAlucard] moves Hand (CountAlucard) -> Battlefield (PlayLand).
+- Turn 9, seq 188: Maha, Its Feathers Night [owner=CountAlucard, controller=CountAlucard] moves Hand (CountAlucard) -> Stack (CastSpell).
+- Turn 9, seq 190: Maha, Its Feathers Night [owner=CountAlucard, controller=CountAlucard] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 213: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 217: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 218: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 220: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 225: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Graveyard (gian31) (Discard).
+- Turn 10, seq 227: Maha, Its Feathers Night [owner=CountAlucard, controller=CountAlucard] moves Battlefield -> Exile (Exile).
+- Turn 10, seq 232: Stroke of Midnight [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 261: Massacre Wurm [owner/controller metadata unavailable] moves Library (CountAlucard) -> Hand (CountAlucard) (Draw).
+- Turn 11, seq 264: Swamp [owner=CountAlucard, controller=CountAlucard] moves Hand (CountAlucard) -> Battlefield (PlayLand).
+- Turn 11, seq 265: Massacre Wurm [owner=CountAlucard, controller=CountAlucard] moves Hand (CountAlucard) -> Stack (CastSpell).
+- Turn 11, seq 267: Massacre Wurm [owner=CountAlucard, controller=CountAlucard] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 269: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_ZeroToughness).
+- Turn 11, seq 269: Bat [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (SBA_ZeroToughness).
+- Turn 11, seq 269: Bat [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (SBA_ZeroToughness).
+- Turn 12, seq 298: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 301: Stroke of Midnight [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 305: Massacre Wurm [owner=CountAlucard, controller=CountAlucard] moves Battlefield -> Graveyard (CountAlucard) (Destroy).
+- Turn 12, seq 305: Stroke of Midnight [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 12, seq 306: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 309: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 329: Swamp [owner/controller metadata unavailable] moves Library (CountAlucard) -> Hand (CountAlucard) (Draw).
+- Turn 13, seq 332: Swamp [owner=CountAlucard, controller=CountAlucard] moves Hand (CountAlucard) -> Battlefield (PlayLand).
+- Turn 13, seq 333: Massacre Wurm [owner=CountAlucard, controller=CountAlucard] moves Hand (CountAlucard) -> Stack (CastSpell).
+- Turn 13, seq 335: Massacre Wurm [owner=CountAlucard, controller=CountAlucard] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 337: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_ZeroToughness).
+- Turn 14, seq 361: Enduring Tenacity [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 364: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 366: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 367: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 369: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 375: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 378: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 412: Tragic Banshee [owner/controller metadata unavailable] moves Library (CountAlucard) -> Hand (CountAlucard) (Draw).
+- Turn 15, seq 415: Tragic Banshee [owner=CountAlucard, controller=CountAlucard] moves Hand (CountAlucard) -> Stack (CastSpell).
+- Turn 15, seq 417: Tragic Banshee [owner=CountAlucard, controller=CountAlucard] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 421: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_ZeroToughness).
+- Turn 15, seq 437: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 16, seq 449: Shoot the Sheriff [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 452: Shoot the Sheriff [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 456: Massacre Wurm [owner=CountAlucard, controller=CountAlucard] moves Battlefield -> Graveyard (CountAlucard) (Destroy).
+- Turn 16, seq 456: Shoot the Sheriff [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 16, seq 457: Enduring Tenacity [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 458: Massacre Wurm [owner=CountAlucard, controller=CountAlucard] moves Battlefield -> Graveyard (CountAlucard) (Destroy).
+- Turn 16, seq 458: Shoot the Sheriff [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 16, seq 459: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 16, seq 462: Starscape Cleric [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Stack (CastSpell).
+- Turn 16, seq 465: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 16, seq 470: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Stack (CastSpell).
+- Turn 16, seq 472: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 17, seq 492: Withering Curse [owner/controller metadata unavailable] moves Library (CountAlucard) -> Hand (CountAlucard) (Draw).
+- Turn 17, seq 495: Withering Curse [owner=CountAlucard, controller=CountAlucard] moves Hand (CountAlucard) -> Stack (CastSpell).
+- Turn 17, seq 497: Withering Curse [owner=CountAlucard, controller=CountAlucard] moves Stack -> Graveyard (CountAlucard) (Resolve).
+- Turn 17, seq 497: Human [owner/controller metadata unavailable] moves Battlefield -> Graveyard (CountAlucard) (SBA_ZeroToughness).
+- Turn 17, seq 497: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_ZeroToughness).
+- Turn 17, seq 497: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_ZeroToughness).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 221 becomes object 279 [Swamp].
+- Turn 2, seq 21: object 166 becomes object 280 [Case of the Uneaten Feast].
+- Turn 2, seq 24: object 164 becomes object 281 [Scoured Barrens].
+- Turn 3, seq 40: object 226 becomes object 283 [Swamp].
+- Turn 3, seq 43: object 222 becomes object 284 [Swamp].
+- Turn 3, seq 44: object 223 becomes object 285 [Demon Wall].
+- Turn 4, seq 60: object 167 becomes object 288 [Godless Shrine].
+- Turn 4, seq 63: object 159 becomes object 289 [Swamp].
+- Turn 4, seq 64: object 280 becomes object 290 [Case of the Uneaten Feast].
+- Turn 5, seq 80: object 227 becomes object 292 [object 227].
+- Turn 5, seq 83: object 283 becomes object 293 [Swamp].
+- Turn 5, seq 84: object 219 becomes object 294 [Sanguine Syphoner].
+- Turn 6, seq 100: object 168 becomes object 297 [Makeshift Binding].
+- Turn 6, seq 103: object 161 becomes object 298 [Swamp].
+- Turn 6, seq 104: object 163 becomes object 299 [Lunar Convocation].
+- Turn 7, seq 120: object 228 becomes object 302 [Swamp].
+- Turn 7, seq 123: object 302 becomes object 303 [Swamp].
+- Turn 8, seq 145: object 169 becomes object 305 [Shattered Sanctum].
+- Turn 8, seq 148: object 305 becomes object 306 [Shattered Sanctum].
+- Turn 8, seq 149: object 162 becomes object 307 [Starscape Cleric].
+- Turn 8, seq 157: object 160 becomes object 312 [Starscape Cleric].
+- Turn 8, seq 161: object 170 becomes object 315 [Hinterland Sanctifier].
+- Turn 9, seq 184: object 229 becomes object 321 [Swamp].
+- Turn 9, seq 187: object 321 becomes object 322 [Swamp].
+- Turn 9, seq 188: object 224 becomes object 323 [Maha, Its Feathers Night].
+- Turn 10, seq 213: object 171 becomes object 330 [Case of the Uneaten Feast].
+- Turn 10, seq 217: object 288 becomes object 331 [Godless Shrine].
+- Turn 10, seq 218: object 297 becomes object 332 [Makeshift Binding].
+- Turn 10, seq 225: object 165 becomes object 338 [Scoured Barrens].
+- Turn 10, seq 227: object 323 becomes object 339 [Maha, Its Feathers Night].
+- Turn 10, seq 232: object 172 becomes object 344 [Stroke of Midnight].
+- Turn 11, seq 261: object 230 becomes object 350 [Massacre Wurm].
+- Turn 11, seq 264: object 225 becomes object 351 [Swamp].
+- Turn 11, seq 265: object 350 becomes object 352 [Massacre Wurm].
+- Turn 11, seq 269: object 307 becomes object 360 [Starscape Cleric].
+- Turn 11, seq 269: object 318 becomes object 361 [Bat].
+- Turn 11, seq 269: object 347 becomes object 362 [Bat].
+- Turn 12, seq 298: object 173 becomes object 367 [Starscape Cleric].
+- Turn 12, seq 301: object 344 becomes object 368 [Stroke of Midnight].
+- Turn 12, seq 305: object 352 becomes object 372 [Massacre Wurm].
+- Turn 12, seq 305: object 368 becomes object 374 [Stroke of Midnight].
+- Turn 12, seq 306: object 160 becomes object 375 [Starscape Cleric].
+- Turn 13, seq 329: object 231 becomes object 381 [Swamp].
+- Turn 13, seq 332: object 381 becomes object 382 [Swamp].
+- Turn 13, seq 333: object 220 becomes object 383 [Massacre Wurm].
+- Turn 13, seq 337: object 375 becomes object 391 [Starscape Cleric].
+- Turn 14, seq 361: object 174 becomes object 394 [Enduring Tenacity].
+- Turn 14, seq 364: object 330 becomes object 395 [Case of the Uneaten Feast].
+- Turn 14, seq 367: object 315 becomes object 397 [Hinterland Sanctifier].
+- Turn 14, seq 375: object 367 becomes object 401 [Starscape Cleric].
+- Turn 15, seq 412: object 232 becomes object 413 [Tragic Banshee].
+- Turn 15, seq 415: object 413 becomes object 414 [Tragic Banshee].
+- Turn 15, seq 421: object 401 becomes object 421 [Starscape Cleric].
+- Turn 15, seq 437: object 397 becomes object 424 [Hinterland Sanctifier].
+- Turn 16, seq 449: object 175 becomes object 426 [Shoot the Sheriff].
+- Turn 16, seq 452: object 426 becomes object 427 [Shoot the Sheriff].
+- Turn 16, seq 456: object 383 becomes object 430 [Massacre Wurm].
+- Turn 16, seq 456: object 427 becomes object 431 [Shoot the Sheriff].
+- Turn 16, seq 457: object 394 becomes object 432 [Enduring Tenacity].
+- Turn 16, seq 458: object 383 becomes object 430 [Massacre Wurm].
+- Turn 16, seq 458: object 427 becomes object 431 [Shoot the Sheriff].
+- Turn 16, seq 459: object 290 becomes object 433 [Case of the Uneaten Feast].
+- Turn 16, seq 462: object 360 becomes object 434 [Starscape Cleric].
+- Turn 16, seq 470: object 424 becomes object 439 [Hinterland Sanctifier].
+- Turn 17, seq 492: object 233 becomes object 444 [Withering Curse].
+- Turn 17, seq 495: object 444 becomes object 445 [Withering Curse].
+- Turn 17, seq 497: object 445 becomes object 449 [Withering Curse].
+- Turn 17, seq 497: object 373 becomes object 450 [Human].
+- Turn 17, seq 497: object 434 becomes object 451 [Starscape Cleric].
+- Turn 17, seq 497: object 439 becomes object 452 [Hinterland Sanctifier].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: CountAlucard plays Swamp (object 279) from Hand (CountAlucard) to Battlefield.
+- Turn 2: gian31 plays Scoured Barrens (object 281) from Hand (gian31) to Battlefield.
+- Turn 3: CountAlucard plays Swamp (object 284) from Hand (CountAlucard) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 289) from Hand (gian31) to Battlefield.
+- Turn 5: CountAlucard plays Swamp (object 293) from Hand (CountAlucard) to Battlefield.
+- Turn 6: gian31 plays Swamp (object 298) from Hand (gian31) to Battlefield.
+- Turn 7: CountAlucard plays Swamp (object 303) from Hand (CountAlucard) to Battlefield.
+- Turn 8: gian31 plays Shattered Sanctum (object 306) from Hand (gian31) to Battlefield.
+- Turn 9: CountAlucard plays Swamp (object 322) from Hand (CountAlucard) to Battlefield.
+- Turn 10: gian31 plays Godless Shrine (object 331) from Hand (gian31) to Battlefield.
+- Turn 11: CountAlucard plays Swamp (object 351) from Hand (CountAlucard) to Battlefield.
+- Turn 13: CountAlucard plays Swamp (object 382) from Hand (CountAlucard) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- Turn 8: 2 Starscape Cleric action records with effects ['life -1'] share only 6 observed life snapshot(s). Possible duplicate protocol observations; records retained.
+- Turn 16: 2 Shoot the Sheriff action records with effects ['destroy'] share only 5 observed life snapshot(s). Possible duplicate protocol observations; records retained.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 8: ordered adjacent records Case of the Uneaten Feast -> Starscape Cleric; observed repetitions=2; net life: CountAlucard -2, gian31 +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=2, Starscape Cleric=3.
+  Individual ability records remain in the timeline.
+- Turn 8: ordered adjacent records Starscape Cleric -> Lunar Convocation; observed repetitions=2; net life: CountAlucard -3. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Lunar Convocation=3, Starscape Cleric=3.
+  Individual ability records remain in the timeline.
+- Turn 10: ordered adjacent records Starscape Cleric -> Lunar Convocation; observed repetitions=2; net life: CountAlucard -3. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Lunar Convocation=3, Starscape Cleric=2.
+  Individual ability records remain in the timeline.
+- Turn 14: ordered adjacent records Starscape Cleric -> Case of the Uneaten Feast; observed repetitions=3; net life: CountAlucard -3, gian31 +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=6, Starscape Cleric=3.
+  Individual ability records remain in the timeline.
+- Turn 16: ordered adjacent records Case of the Uneaten Feast -> Starscape Cleric; observed repetitions=2; net life: CountAlucard -2, gian31 +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=3, Starscape Cleric=2.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 11: ordered adjacent records Massacre Wurm -> Massacre Wurm; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+- Turn 14: ordered adjacent records Starscape Cleric -> Case of the Uneaten Feast; observed repetitions=3 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Case of the Uneaten Feast: casts=2; abilities=13 (triggered=13, activated=0) across turns [4, 8, 8, 10, 12, 14, 14, 14, 14, 14, 14, 14, 16, 16, 16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=10, other=0
+  observed effects: life +1
+- Starscape Cleric: casts=4; abilities=11 (triggered=11, activated=0) across turns [8, 8, 8, 8, 10, 10, 12, 12, 14, 14, 14, 14, 16, 16, 16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=11, other=6
+  observed effects: life -1, synthetic event
+- Lunar Convocation: casts=1; abilities=9 (triggered=9, activated=0) across turns [6, 8, 8, 8, 10, 10, 10, 12, 14, 16]
+  observed effect totals: draws=2, tokens=2, counters=0, returns=0, damage=0, life_changes=5, other=0
+  observed effects: draw, life -1, token creation
+- Massacre Wurm: casts=2; abilities=8 (triggered=8, activated=0) across turns [11, 11, 11, 11, 11, 13, 13, 13, 15, 15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=6, other=7
+  observed effects: P/T -2/-2, life -2, synthetic event
+- Sanguine Syphoner: casts=1; abilities=6 (triggered=6, activated=0) across turns [5, 7, 9, 11, 13, 15, 17]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=12, other=3
+  observed effects: life +1, life -1, synthetic event
+- Hinterland Sanctifier: casts=2; abilities=1 (triggered=1, activated=0) across turns [14, 14, 16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Shoot the Sheriff: casts=2 across turns [16, 16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: destroy
+- Tragic Banshee: casts=1; abilities=1 (triggered=1, activated=0) across turns [15, 15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: P/T -1/-1
+- Demon Wall: casts=1 across turns [3]
+- Maha, Its Feathers Night: casts=1 across turns [9]
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [2]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Stroke of Midnight: casts=1 across turns [12]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy, token creation
+- Withering Curse: casts=1 across turns [17]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=6
+  observed effects: P/T -2/-2
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 7 - DeclareAttack, DeclareBlock (active=CountAlucard)
+  attacker: Sanguine Syphoner (CountAlucard) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack (active=CountAlucard)
+  attacker: Sanguine Syphoner (CountAlucard) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> CountAlucard; unblocked in this observed snapshot
+  attacker: Bat (gian31) -> CountAlucard; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=CountAlucard)
+  attacker: Sanguine Syphoner (CountAlucard) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 - DeclareAttack, DeclareBlock (active=CountAlucard)
+  attacker: Sanguine Syphoner (CountAlucard) -> gian31; unblocked in this observed snapshot
+  attacker: Human (CountAlucard) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 15 - DeclareAttack, CombatDamage (active=CountAlucard)
+  attacker: Sanguine Syphoner (CountAlucard) -> gian31; unblocked in this observed snapshot
+  attacker: Human (CountAlucard) -> gian31; unblocked in this observed snapshot
+  attacker: Massacre Wurm (CountAlucard) -> gian31; blocked by unknown blocker
+  combat damage assignment: unknown unless explicitly observed
+Turn 17 - DeclareAttack, DeclareBlock (active=CountAlucard)
+  attacker: Sanguine Syphoner (CountAlucard) -> gian31; unblocked in this observed snapshot
+  attacker: Tragic Banshee (CountAlucard) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 7: Ability of Sanguine Syphoner (active=CountAlucard) - Ability of Sanguine Syphoner: gian31 loses 1 life; CountAlucard gains 1 life.
+- Turn 9: Ability of Sanguine Syphoner (active=CountAlucard) - Ability of Sanguine Syphoner: gian31 loses 1 life; CountAlucard gains 1 life.
+- Turn 11: Ability of Sanguine Syphoner (active=CountAlucard) - Ability of Sanguine Syphoner: gian31 loses 1 life; CountAlucard gains 1 life.
+- Turn 13: Ability of Sanguine Syphoner (active=CountAlucard) - Ability of Sanguine Syphoner: gian31 loses 1 life; CountAlucard gains 1 life.
+- Turn 15: Ability of Sanguine Syphoner (active=CountAlucard) - Ability of Sanguine Syphoner: gian31 loses 1 life; CountAlucard gains 1 life.
+- Turn 15: Ability of Massacre Wurm (active=CountAlucard) - Ability of Massacre Wurm: gian31 loses 2 life.
+- Turn 17: Ability of Sanguine Syphoner (active=CountAlucard) - Ability of Sanguine Syphoner: gian31 loses 1 life; CountAlucard gains 1 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 160: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 161: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 162: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 163: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 164: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 165: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 279: Swamp | controller=CountAlucard | owner=CountAlucard | zone=Battlefield (latest_object_observation)
+- 280: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 281: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 282: object 282 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 284: Swamp | controller=CountAlucard | owner=CountAlucard | zone=Battlefield (latest_object_observation)
+- 285: Demon Wall | controller=CountAlucard | owner=CountAlucard | zone=Battlefield (latest_object_observation)
+- 288: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 289: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 290: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 293: Swamp | controller=CountAlucard | owner=CountAlucard | zone=Battlefield (latest_object_observation)
+- 294: Sanguine Syphoner | controller=CountAlucard | owner=CountAlucard | zone=Battlefield (latest_object_observation)
+- 297: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 298: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 299: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 303: Swamp | controller=CountAlucard | owner=CountAlucard | zone=Battlefield (latest_object_observation)
+- 304: object 304 | controller=CountAlucard | owner=CountAlucard | zone=Stack (latest_object_observation)
+- 305: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 306: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 307: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 310: object 310 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 311: object 311 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 312: object 312 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 315: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 316: object 316 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 317: object 317 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 318: Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 319: object 319 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 320: object 320 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 322: Swamp | controller=CountAlucard | owner=CountAlucard | zone=Battlefield (latest_object_observation)
+- 323: Maha, Its Feathers Night | controller=CountAlucard | owner=CountAlucard | zone=Battlefield (latest_object_observation)
+- 329: object 329 | controller=CountAlucard | owner=CountAlucard | zone=Stack (latest_object_observation)
+- 330: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 331: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 332: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 336: object 336 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 337: object 337 | controller=CountAlucard | owner=CountAlucard | zone=Stack (latest_object_observation)
+- 338: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 339: Maha, Its Feathers Night | controller=CountAlucard | owner=CountAlucard | zone=Exile (latest_object_observation)
+- 340: object 340 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 341: object 341 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 344: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 345: object 345 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 346: object 346 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 347: Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 348: object 348 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 349: object 349 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 351: Swamp | controller=CountAlucard | owner=CountAlucard | zone=Battlefield (latest_object_observation)
+- 352: Massacre Wurm | controller=CountAlucard | owner=CountAlucard | zone=Battlefield (latest_object_observation)
+- 359: object 359 | controller=CountAlucard | owner=CountAlucard | zone=Stack (latest_object_observation)
+- 360: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 363: object 363 | controller=CountAlucard | owner=CountAlucard | zone=Stack (latest_object_observation)
+- 364: object 364 | controller=CountAlucard | owner=CountAlucard | zone=Stack (latest_object_observation)
+- 365: object 365 | controller=CountAlucard | owner=CountAlucard | zone=Stack (latest_object_observation)
+- 366: object 366 | controller=CountAlucard | owner=CountAlucard | zone=Stack (latest_object_observation)
+- 367: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 368: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 372: Massacre Wurm | controller=CountAlucard | owner=CountAlucard | zone=Graveyard (latest_object_observation)
+- 373: Human | controller=CountAlucard | owner=CountAlucard | zone=Battlefield (latest_object_observation)
+- 374: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 375: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 378: object 378 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 379: object 379 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 380: object 380 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 382: Swamp | controller=CountAlucard | owner=CountAlucard | zone=Battlefield (latest_object_observation)
+- 383: Massacre Wurm | controller=CountAlucard | owner=CountAlucard | zone=Battlefield (latest_object_observation)
+- 390: object 390 | controller=CountAlucard | owner=CountAlucard | zone=Stack (latest_object_observation)
+- 391: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 392: object 392 | controller=CountAlucard | owner=CountAlucard | zone=Stack (latest_object_observation)
+- 393: object 393 | controller=CountAlucard | owner=CountAlucard | zone=Stack (latest_object_observation)
+- 394: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 395: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 397: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 399: object 399 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 400: object 400 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 401: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 404: object 404 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 405: object 405 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 406: object 406 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 407: object 407 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 408: object 408 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 409: object 409 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 410: object 410 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 411: object 411 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 412: object 412 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 414: Tragic Banshee | controller=CountAlucard | owner=CountAlucard | zone=Battlefield (latest_object_observation)
+- 420: object 420 | controller=CountAlucard | owner=CountAlucard | zone=Stack (latest_object_observation)
+- 421: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 422: object 422 | controller=CountAlucard | owner=CountAlucard | zone=Stack (latest_object_observation)
+- 423: object 423 | controller=CountAlucard | owner=CountAlucard | zone=Stack (latest_object_observation)
+- 424: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 425: object 425 | controller=CountAlucard | owner=CountAlucard | zone=Stack (latest_object_observation)
+- 426: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 427: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 430: Massacre Wurm | controller=CountAlucard | owner=CountAlucard | zone=Graveyard (latest_object_observation)
+- 431: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 432: object 432 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 433: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 434: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 437: object 437 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 438: object 438 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 439: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 441: object 441 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 442: object 442 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 443: object 443 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 445: Withering Curse | controller=CountAlucard | owner=CountAlucard | zone=Stack (latest_object_observation)
+- 449: Withering Curse | controller=CountAlucard | owner=CountAlucard | zone=Graveyard (latest_object_observation)
+- 451: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 452: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 453: object 453 | controller=CountAlucard | owner=CountAlucard | zone=Stack (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+CountAlucard: 35 total items
+  zones: Battlefield=14, Exile=1, Graveyard=3, Stack=17
+  objects: Swamp x7, Massacre Wurm x4, Maha, Its Feathers Night x2, Withering Curse x2, Demon Wall, Human, Sanguine Syphoner, Tragic Banshee, object 304, object 329, object 337, object 359
+gian31: 81 total items
+  zones: Battlefield=21, Graveyard=9, Hand=10, Stack=41
+  objects: Starscape Cleric x11, Case of the Uneaten Feast x5, Hinterland Sanctifier x5, Scoured Barrens x4, Swamp x4, Shoot the Sheriff x3, Stroke of Midnight x3, Bat x2, Godless Shrine x2, Lunar Convocation x2, Makeshift Binding x2, Shattered Sanctum x2
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (21): Bat, Bat, Godless Shrine, Hinterland Sanctifier, Hinterland Sanctifier, Hinterland Sanctifier, Lunar Convocation, Scoured Barrens, Scoured Barrens, Scoured Barrens, Shattered Sanctum, Starscape Cleric, Starscape Cleric, Starscape Cleric, Starscape Cleric, Starscape Cleric, Starscape Cleric, Swamp, Swamp, Swamp, Swamp
+  Graveyard: 9 card(s)
+CountAlucard:
+  Battlefield (14): Demon Wall, Human, Maha, Its Feathers Night, Massacre Wurm, Massacre Wurm, Sanguine Syphoner, Swamp, Swamp, Swamp, Swamp, Swamp, Swamp, Swamp, Tragic Banshee
+  Graveyard: 3 card(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=10, Stack=58
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+CountAlucard:
+  Battlefield (10): Swamp, Swamp, Demon Wall, Swamp, Sanguine Syphoner, Swamp, Swamp, Swamp, Swamp, Tragic Banshee
+  Graveyard (3): Massacre Wurm, Massacre Wurm, Withering Curse
+  Exile (1): Maha, Its Feathers Night
+gian31:
+  Battlefield (8): Scoured Barrens, Swamp, Swamp, Lunar Convocation, Shattered Sanctum, Godless Shrine, Makeshift Binding, Case of the Uneaten Feast
+  Graveyard (8): Scoured Barrens, Stroke of Midnight, Starscape Cleric, Starscape Cleric, Shoot the Sheriff, Case of the Uneaten Feast, Starscape Cleric, Hinterland Sanctifier
+Known non-persistent entries (counts only):
+  CountAlucard: Hand=1, Limbo=3
+  gian31: Hand=1, Limbo=9
+  unknown: Library=88, Limbo=5
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: CountAlucard Battlefield=1
+- Turn 2: CountAlucard Battlefield=1; gian31 Battlefield=1
+- Turn 3: CountAlucard Battlefield=3; gian31 Battlefield=1
+- Turn 4: CountAlucard Battlefield=3; gian31 Battlefield=3
+- Turn 5: CountAlucard Battlefield=5; gian31 Battlefield=3
+- Turn 6: CountAlucard Battlefield=5; gian31 Battlefield=5
+- Turn 7: CountAlucard Battlefield=6; gian31 Battlefield=5
+- Turn 8: CountAlucard Battlefield=6; gian31 Battlefield=7
+- Turn 9: CountAlucard Battlefield=8; gian31 Battlefield=7
+- Turn 10: CountAlucard Battlefield=7; CountAlucard Exile=1; gian31 Battlefield=9; gian31 Graveyard=1
+- Turn 11: CountAlucard Battlefield=9; CountAlucard Exile=1; gian31 Battlefield=8; gian31 Graveyard=4
+- Turn 12: CountAlucard Battlefield=8; CountAlucard Graveyard=1; CountAlucard Exile=1; gian31 Battlefield=9; gian31 Graveyard=5
+- Turn 13: CountAlucard Battlefield=10; CountAlucard Graveyard=1; CountAlucard Exile=1; gian31 Battlefield=8; gian31 Graveyard=6
+- Turn 14: CountAlucard Battlefield=10; CountAlucard Graveyard=1; CountAlucard Exile=1; gian31 Battlefield=11; gian31 Graveyard=6
+- Turn 15: CountAlucard Battlefield=11; CountAlucard Graveyard=1; CountAlucard Exile=1; gian31 Battlefield=9; gian31 Graveyard=8
+- Turn 16: CountAlucard Battlefield=10; CountAlucard Graveyard=2; CountAlucard Exile=1; gian31 Battlefield=10; gian31 Graveyard=8
+- Turn 17: CountAlucard Battlefield=10; CountAlucard Graveyard=4; CountAlucard Exile=1; gian31 Battlefield=8; gian31 Graveyard=10
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 3: Demon Wall resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Sanguine Syphoner resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Maha, Its Feathers Night resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Massacre Wurm resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Massacre Wurm resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: Tragic Banshee resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
