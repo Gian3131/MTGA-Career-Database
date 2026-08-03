@@ -1,0 +1,788 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Jesse72521
+Seat map: Seat 1=gian31, Seat 2=Jesse72521
+Turn range (known): 1 - 13
+Records: 34
+Action chains: 26
+Winner: gian31
+Final life: {'gian31': 18, 'Jesse72521': 11}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 13 (Phase_Beginning, Step_Upkeep; Ability of Phyrexian Arena, seq 377).
+Later numbered GRE record(s): 2 after action sequence 377 across turn(s) [13]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+POST-ACTION GRE RECORDS - RESULT ORDER UNRESOLVED
+  - Turn 13, seq 379: identity_changed.
+  - Turn 13, seq 379: zone_transfer (Draw).
+  These records are retained for traceability; their order relative to the match-result payload is not asserted.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 34 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 10 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 10, 11] (raw records=10; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 15 explicit Library -> Hand movement(s); named in the draw record=10, resolved through an explicit identity transition=5, unresolved=0.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 6).
+  - gian31: 6 observed card(s): Deep-Cavern Bat [281], Makeshift Binding [283], Plains [284], Swamp [285], Enduring Tenacity [286], Swamp [287].
+  - unknown: 7 observed card(s): object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225], object 226 [226], object 227 [227].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 18, 'Jesse72521': 11}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 13 (Phase_Beginning, Step_Upkeep; Ability of Phyrexian Arena, seq 377).
+Last captured life snapshot: gian31 19 -> 18 (seq 377).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Plains.
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Forest, Virulent Emissary.
+- Turn 3: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Deep-Cavern Bat.
+- Turn 4: actions: cards=1, abilities=1; combat snapshots=1; life mutations=2; explicit battlefield entries=Forest, Druid of the Cowl.
+- Turn 5: actions: cards=1, abilities=1; combat snapshots=1; life mutations=3; explicit battlefield entries=Plains, Lunar Convocation.
+- Turn 6: actions: cards=0, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Forest, Forest.
+- Turn 7: actions: cards=1, abilities=1; combat snapshots=1; life mutations=3; explicit battlefield entries=Swamp, Phyrexian Arena.
+- Turn 8: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Forest, March of the World Ooze.
+- Turn 9: actions: cards=2, abilities=5; combat snapshots=1; life mutations=6; explicit battlefield entries=Makeshift Binding, Hinterland Sanctifier; explicit battlefield exits=Druid of the Cowl.
+- Turn 10: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Forest, Llanowar Elves, Forest, Forest; explicit battlefield exits=Bat.
+- Turn 11: actions: cards=2, abilities=8; combat snapshots=1; life mutations=9; explicit battlefield entries=Shattered Sanctum, Enduring Tenacity, Authority of the Consuls.
+- Turn 12: actions: cards=1, abilities=4; combat snapshots=1; life mutations=3; explicit battlefield entries=Bloom Tender, Enduring Tenacity; explicit battlefield exits=Enduring Tenacity, Bat.
+- Turn 13: actions: cards=0, abilities=1; life mutations=1.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Enduring Tenacity [341] Hand (gian31) -> Library (gian31) (Put; GRE sequence 6).
+      Plains [342] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 9).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [342]
+
+Turn 2
+  - Virulent Emissary [valid_resolution_no_immediate_mutation, seq=29] (active=Jesse72521, phase=Phase_Main1, controller=Jesse72521, owner=Jesse72521, source_object=345)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Virulent Emissary resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Virulent Emissary (object 345) Hand (Jesse72521) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Virulent Emissary (object 345) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [343] Library (Jesse72521) -> Hand (Jesse72521) (Draw; GRE sequence 23).
+      Forest [344] Hand (Jesse72521) -> Battlefield (PlayLand; GRE sequence 26).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [342]
+      Jesse72521: Battlefield: Forest [344], Virulent Emissary [345]
+
+Turn 3
+  - Deep-Cavern Bat [valid_resolution_no_immediate_mutation, seq=49] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=349)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deep-Cavern Bat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deep-Cavern Bat (object 349) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 349) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [347] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 43).
+      Swamp [348] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 46).
+      Druid of the Cowl [353] Hand (Jesse72521) -> Exile (Exile; GRE sequence 54).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Deep-Cavern Bat [349], Plains [342], Swamp [348]
+      Jesse72521: Battlefield: Forest [344], Virulent Emissary [345]; Exile: Druid of the Cowl [353]
+
+Turn 4
+  - Druid of the Cowl [valid_resolution_no_immediate_mutation, seq=74] (active=Jesse72521, phase=Phase_Main1, controller=Jesse72521, owner=Jesse72521, source_object=361)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Druid of the Cowl resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Druid of the Cowl (object 361) Hand (Jesse72521) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Druid of the Cowl (object 361) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Virulent Emissary [observed_semantic_effect, seq=76] (active=Jesse72521, phase=Phase_Main1, controller=Jesse72521, owner=Jesse72521, source_object=345, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Virulent Emissary: Jesse72521 gains 1 life.
+  Combat snapshots observed (active=Jesse72521; frames: DeclareAttack):
+      attackers: Virulent Emissary [345] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Jesse72521 +1; gian31 -1 (individual changes below; gains and losses may offset)
+    life: Jesse72521 20 -> 21
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [359] Library (Jesse72521) -> Hand (Jesse72521) (Draw; GRE sequence 68).
+      Forest [360] Hand (Jesse72521) -> Battlefield (PlayLand; GRE sequence 71).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Deep-Cavern Bat [349], Plains [342], Swamp [348]
+      Jesse72521: Battlefield: Druid of the Cowl [361], Forest [344], Forest [360], Virulent Emissary [345]; Exile: Druid of the Cowl [353]
+
+Turn 5
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=103] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=367)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 367) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 367) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=121] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=367, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: Jesse72521 loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [349] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Jesse72521 -2; gian31 +1 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): gian31 19 -> 20
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Jesse72521 21 -> 20
+    life: Jesse72521 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Lunar Convocation [365] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 97).
+      Plains [366] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 100).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Deep-Cavern Bat [349], Lunar Convocation [367], Plains [342], Plains [366], Swamp [348]
+      Jesse72521: Battlefield: Druid of the Cowl [361], Forest [344], Forest [360], Virulent Emissary [345]; Exile: Druid of the Cowl [353]
+
+Turn 6
+  Combat snapshots observed (active=Jesse72521; frames: DeclareAttack -> DeclareBlock):
+      attackers: Virulent Emissary [345] (unblocked, observed P/T 1/1), Druid of the Cowl [361] (unblocked, observed P/T 1/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [371] Library (Jesse72521) -> Hand (Jesse72521) (Draw; GRE sequence 125).
+      Forest [372] Hand (Jesse72521) -> Battlefield (PlayLand; GRE sequence 128).
+      Grow from the Ashes [373] Hand (Jesse72521) -> Stack (CastSpell; GRE sequence 129).
+      Forest [377] Library (Jesse72521) -> Battlefield (Put; GRE sequence 133).
+      Grow from the Ashes [427] Stack -> Graveyard (Jesse72521) (Resolve; GRE sequence 134).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Deep-Cavern Bat [349], Lunar Convocation [367], Plains [342], Plains [366], Swamp [348]
+      Jesse72521: Battlefield: Druid of the Cowl [361], Forest [344], Forest [360], Forest [372], Forest [377], Virulent Emissary [345]; Exile: Druid of the Cowl [353]; Graveyard: Grow from the Ashes [427]
+
+Turn 7
+  - Phyrexian Arena [valid_resolution_no_immediate_mutation, seq=160] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=430)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Phyrexian Arena resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Phyrexian Arena (object 430) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Phyrexian Arena (object 430) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=178] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=367, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: Jesse72521 loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [349] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Jesse72521 -2; gian31 +1 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): gian31 18 -> 19
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Jesse72521 19 -> 18
+    life: Jesse72521 18 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Phyrexian Arena [428] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 154).
+      Swamp [429] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 157).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Deep-Cavern Bat [349], Lunar Convocation [367], Phyrexian Arena [430], Plains [342], Plains [366], Swamp [348], Swamp [429]
+      Jesse72521: Battlefield: Druid of the Cowl [361], Forest [344], Forest [360], Forest [372], Forest [377], Virulent Emissary [345]; Exile: Druid of the Cowl [353]; Graveyard: Grow from the Ashes [427]
+
+Turn 8
+  - March of the World Ooze [valid_resolution_no_immediate_mutation, seq=188] (active=Jesse72521, phase=Phase_Main1, controller=Jesse72521, owner=Jesse72521, source_object=437)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: March of the World Ooze resolves with no immediate observed mutation.
+      protocol-linked zone transfer: March of the World Ooze (object 437) Hand (Jesse72521) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: March of the World Ooze (object 437) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=Jesse72521; frames: DeclareAttack -> DeclareBlock):
+      attackers: Virulent Emissary [345] (unblocked, observed P/T 6/6)
+      blockers: none identified
+      combat-correlated defending-player life loss: 6; observed attacker power total: 6; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -6 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 6 + observed modifiers 0 = 6; individual assignment unavailable): gian31 19 -> 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      March of the World Ooze [435] Library (Jesse72521) -> Hand (Jesse72521) (Draw; GRE sequence 182).
+      Forest [436] Hand (Jesse72521) -> Battlefield (PlayLand; GRE sequence 185).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Deep-Cavern Bat [349], Lunar Convocation [367], Phyrexian Arena [430], Plains [342], Plains [366], Swamp [348], Swamp [429]
+      Jesse72521: Battlefield: Druid of the Cowl [361], Forest [344], Forest [360], Forest [372], Forest [377], Forest [436], March of the World Ooze [437], Virulent Emissary [345]; Exile: Druid of the Cowl [353]; Graveyard: Grow from the Ashes [427]
+
+Turn 9
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=208] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=430, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 291 [291], Hinterland Sanctifier [445] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 445) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=215] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=447)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 447) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 447) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=219] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=447, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Druid of the Cowl; gian31 gains 2 life.
+      explicit effect object references: Druid of the Cowl [361], Druid of the Cowl [452] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Druid of the Cowl (object 452) Battlefield -> Exile (Exile; shared object ID)
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=222] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=453)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 453) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 453) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=241] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=367, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Lunar Convocation: a token is created.
+      explicit effect object references: Bat [457] (role/targeting only where the protocol identifies it)
+      token created: Bat (object 457, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 456).
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=243] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=453, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=245] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=367, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: Jesse72521 loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [349] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Jesse72521 -2; gian31 +3 (individual changes below; gains and losses may offset)
+    life: gian31 13 -> 12
+    life: gian31 12 -> 14
+    life (gain observed during combat phase; exact source unavailable): gian31 14 -> 15
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Jesse72521 17 -> 16
+    life: gian31 15 -> 16
+    life: Jesse72521 16 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodletter of Aclazotz [446] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 210).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Deep-Cavern Bat [349], Hinterland Sanctifier [453], Lunar Convocation [367], Makeshift Binding [447], Phyrexian Arena [430], Plains [342], Plains [366], Swamp [348], Swamp [429]
+      Jesse72521: Battlefield: Forest [344], Forest [360], Forest [372], Forest [377], Forest [436], March of the World Ooze [437], Virulent Emissary [345]; Exile: Druid of the Cowl [353], Druid of the Cowl [452]; Graveyard: Grow from the Ashes [427]
+
+Turn 10
+  - Llanowar Elves [valid_resolution_no_immediate_mutation, seq=255] (active=Jesse72521, phase=Phase_Main1, controller=Jesse72521, owner=Jesse72521, source_object=461)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Llanowar Elves resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Llanowar Elves (object 461) Hand (Jesse72521) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Llanowar Elves (object 461) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Virulent Emissary [observed_semantic_effect, seq=257] (active=Jesse72521, phase=Phase_Main1, controller=Jesse72521, owner=Jesse72521, source_object=345, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Virulent Emissary: Jesse72521 gains 1 life.
+  Combat snapshots observed (active=Jesse72521; frames: DeclareAttack -> CombatDamage):
+      attackers: Virulent Emissary [345] (blocked, observed P/T 6/6)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat-result zone change: Bat [518] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Jesse72521 +1 (individual changes below; gains and losses may offset)
+    life: Jesse72521 15 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Llanowar Elves [459] Library (Jesse72521) -> Hand (Jesse72521) (Draw; GRE sequence 249).
+      Forest [460] Hand (Jesse72521) -> Battlefield (PlayLand; GRE sequence 252).
+      Grow from the Ashes [464] Hand (Jesse72521) -> Stack (CastSpell; GRE sequence 258).
+      Forest [470] Library (Jesse72521) -> Battlefield (Put; GRE sequence 262).
+      Forest [471] Library (Jesse72521) -> Battlefield (Put; GRE sequence 262).
+      Grow from the Ashes [517] Stack -> Graveyard (Jesse72521) (Resolve; GRE sequence 264).
+      Bat [518] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 276).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Deep-Cavern Bat [349], Hinterland Sanctifier [453], Lunar Convocation [367], Makeshift Binding [447], Phyrexian Arena [430], Plains [342], Plains [366], Swamp [348], Swamp [429]; Graveyard: Bat [518]
+      Jesse72521: Battlefield: Forest [344], Forest [360], Forest [372], Forest [377], Forest [436], Forest [460], Forest [470], Forest [471], Llanowar Elves [461], March of the World Ooze [437], Virulent Emissary [345]; Exile: Druid of the Cowl [353], Druid of the Cowl [452]; Graveyard: Grow from the Ashes [427], Grow from the Ashes [517]
+
+Turn 11
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=286] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=430, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 293 [293], Shattered Sanctum [520] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shattered Sanctum (object 520) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Enduring Tenacity [valid_resolution_no_immediate_mutation, seq=294] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=523)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Enduring Tenacity resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Enduring Tenacity (object 523) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Enduring Tenacity (object 523) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=296] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=453, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=300] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=523, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Jesse72521 loses 1 life.
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=303] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=530)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 530) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 530) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=317] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=523, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Jesse72521 loses 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=326] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=367, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Lunar Convocation: a token is created.
+      explicit effect object references: Bat [535] (role/targeting only where the protocol identifies it)
+      token created: Bat (object 535, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 534).
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=328] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=453, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=332] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=523, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Jesse72521 loses 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=334] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=367, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: Jesse72521 loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [349] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Jesse72521 -5; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 16 -> 15
+    life: gian31 15 -> 16
+    life: Jesse72521 16 -> 15
+    life (semantically attributed to Hinterland Sanctifier; direct protocol link unavailable): gian31 16 -> 17
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Jesse72521 15 -> 14
+    life: Jesse72521 14 -> 13
+    life: gian31 17 -> 18
+    life: Jesse72521 13 -> 12
+    life: Jesse72521 12 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Authority of the Consuls [521] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 288).
+      Shattered Sanctum [522] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 291).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [530], Deep-Cavern Bat [349], Enduring Tenacity [523], Hinterland Sanctifier [453], Lunar Convocation [367], Makeshift Binding [447], Phyrexian Arena [430], Plains [342], Plains [366], Shattered Sanctum [522], Swamp [348], Swamp [429]; Graveyard: Bat [518]
+      Jesse72521: Battlefield: Forest [344], Forest [360], Forest [372], Forest [377], Forest [436], Forest [460], Forest [470], Forest [471], Llanowar Elves [461], March of the World Ooze [437], Virulent Emissary [345]; Exile: Druid of the Cowl [353], Druid of the Cowl [452]; Graveyard: Grow from the Ashes [427], Grow from the Ashes [517]
+
+Turn 12
+  - Bloom Tender [valid_resolution_no_immediate_mutation, seq=343] (active=Jesse72521, phase=Phase_Main1, controller=Jesse72521, owner=Jesse72521, source_object=539)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloom Tender resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloom Tender (object 539) Hand (Jesse72521) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloom Tender (object 539) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=345] (active=Jesse72521, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=530, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=349] (active=Jesse72521, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=523, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Jesse72521 loses 1 life.
+  - Ability of Virulent Emissary [observed_semantic_effect, seq=351] (active=Jesse72521, phase=Phase_Main1, controller=Jesse72521, owner=Jesse72521, source_object=345, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Virulent Emissary: Jesse72521 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=367] (active=Jesse72521, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=523, source_last_explicit_zone=Battlefield, source_successor=548 observed Graveyard (gian31) -> Battlefield (Return))
+      effects: return to battlefield
+      narrative: Ability of Enduring Tenacity: a card/permanent returns.
+      explicit effect object references: Enduring Tenacity [545], Enduring Tenacity [548] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Enduring Tenacity (object 548) Graveyard (gian31) -> Battlefield (Return; shared object ID)
+  Combat snapshots observed (active=Jesse72521; frames: DeclareAttack -> CombatDamage):
+      attackers: Virulent Emissary [345] (blocked, observed P/T 6/6), Llanowar Elves [461] (blocked, observed P/T 6/6)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat-result zone change: Enduring Tenacity [545] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat-result zone change: Bat [546] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Jesse72521 +0; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 19
+    life: Jesse72521 11 -> 10
+    life: Jesse72521 10 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloom Tender [538] Library (Jesse72521) -> Hand (Jesse72521) (Draw; GRE sequence 338).
+      Enduring Tenacity [545] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 365).
+      Bat [546] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 365).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [530], Deep-Cavern Bat [349], Enduring Tenacity [548], Hinterland Sanctifier [453], Lunar Convocation [367], Makeshift Binding [447], Phyrexian Arena [430], Plains [342], Plains [366], Shattered Sanctum [522], Swamp [348], Swamp [429]; Graveyard: Bat [518], Bat [546]
+      Jesse72521: Battlefield: Bloom Tender [539], Forest [344], Forest [360], Forest [372], Forest [377], Forest [436], Forest [460], Forest [470], Forest [471], Llanowar Elves [461], March of the World Ooze [437], Virulent Emissary [345]; Exile: Druid of the Cowl [353], Druid of the Cowl [452]; Graveyard: Grow from the Ashes [427], Grow from the Ashes [517]
+
+Turn 13
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=377] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=430, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 295 [295], Shoot the Sheriff [550] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 550) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [551] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 379).
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 5, seq 113, Phase_Main1: gian31 19 -> 20. Combat declaration observed; exact assignment unavailable. Previous captured action: Lunar Convocation.
+- Turn 7, seq 170, Phase_Main1: gian31 18 -> 19. Combat declaration observed; exact assignment unavailable. Previous captured action: Phyrexian Arena.
+- Turn 9, seq 232, Phase_Main1: gian31 14 -> 15. Combat declaration observed; exact assignment unavailable. Previous captured action: Hinterland Sanctifier.
+- Turn 11, seq 313, Phase_Main1: gian31 16 -> 17. Semantic attribution: Hinterland Sanctifier; direct protocol link unavailable. Previous captured action: Authority of the Consuls.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 2 token creations observed; 0 active as last observed; 2 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Bat [457] controller=gian31; created Turn 9 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 10 via Battlefield -> Graveyard (gian31) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Bat [535] controller=gian31; created Turn 11 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 12 via Battlefield -> Graveyard (gian31) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 6: Enduring Tenacity [owner=gian31, controller=gian31] moves Hand (gian31) -> Library (gian31) (Put).
+- Turn 1, seq 9: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 23: Forest [owner=Jesse72521, controller=Jesse72521] moves Library (Jesse72521) -> Hand (Jesse72521) (Draw).
+- Turn 2, seq 26: Forest [owner=Jesse72521, controller=Jesse72521] moves Hand (Jesse72521) -> Battlefield (PlayLand).
+- Turn 2, seq 27: Virulent Emissary [owner=Jesse72521, controller=Jesse72521] moves Hand (Jesse72521) -> Stack (CastSpell).
+- Turn 2, seq 29: Virulent Emissary [owner=Jesse72521, controller=Jesse72521] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 43: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 46: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 47: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 49: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 54: Druid of the Cowl [owner=Jesse72521, controller=Jesse72521] moves Hand (Jesse72521) -> Exile (Exile).
+- Turn 4, seq 68: Forest [owner/controller metadata unavailable] moves Library (Jesse72521) -> Hand (Jesse72521) (Draw).
+- Turn 4, seq 71: Forest [owner=Jesse72521, controller=Jesse72521] moves Hand (Jesse72521) -> Battlefield (PlayLand).
+- Turn 4, seq 72: Druid of the Cowl [owner=Jesse72521, controller=Jesse72521] moves Hand (Jesse72521) -> Stack (CastSpell).
+- Turn 4, seq 74: Druid of the Cowl [owner=Jesse72521, controller=Jesse72521] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 97: Lunar Convocation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 100: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 101: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 103: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 125: Forest [owner/controller metadata unavailable] moves Library (Jesse72521) -> Hand (Jesse72521) (Draw).
+- Turn 6, seq 128: Forest [owner=Jesse72521, controller=Jesse72521] moves Hand (Jesse72521) -> Battlefield (PlayLand).
+- Turn 6, seq 129: Grow from the Ashes [owner=Jesse72521, controller=Jesse72521] moves Hand (Jesse72521) -> Stack (CastSpell).
+- Turn 6, seq 133: Forest [owner=Jesse72521, controller=Jesse72521] moves Library (Jesse72521) -> Battlefield (Put).
+- Turn 6, seq 134: Grow from the Ashes [owner=Jesse72521, controller=Jesse72521] moves Stack -> Graveyard (Jesse72521) (Resolve).
+- Turn 7, seq 154: Phyrexian Arena [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 157: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 158: Phyrexian Arena [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 160: Phyrexian Arena [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 182: March of the World Ooze [owner/controller metadata unavailable] moves Library (Jesse72521) -> Hand (Jesse72521) (Draw).
+- Turn 8, seq 185: Forest [owner=Jesse72521, controller=Jesse72521] moves Hand (Jesse72521) -> Battlefield (PlayLand).
+- Turn 8, seq 186: March of the World Ooze [owner=Jesse72521, controller=Jesse72521] moves Hand (Jesse72521) -> Stack (CastSpell).
+- Turn 8, seq 188: March of the World Ooze [owner=Jesse72521, controller=Jesse72521] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 208: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 210: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 213: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 215: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 219: Druid of the Cowl [owner=Jesse72521, controller=Jesse72521] moves Battlefield -> Exile (Exile).
+- Turn 9, seq 220: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 222: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 249: Llanowar Elves [owner/controller metadata unavailable] moves Library (Jesse72521) -> Hand (Jesse72521) (Draw).
+- Turn 10, seq 252: Forest [owner=Jesse72521, controller=Jesse72521] moves Hand (Jesse72521) -> Battlefield (PlayLand).
+- Turn 10, seq 253: Llanowar Elves [owner=Jesse72521, controller=Jesse72521] moves Hand (Jesse72521) -> Stack (CastSpell).
+- Turn 10, seq 255: Llanowar Elves [owner=Jesse72521, controller=Jesse72521] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 258: Grow from the Ashes [owner=Jesse72521, controller=Jesse72521] moves Hand (Jesse72521) -> Stack (CastSpell).
+- Turn 10, seq 262: Forest [owner=Jesse72521, controller=Jesse72521] moves Library (Jesse72521) -> Battlefield (Put).
+- Turn 10, seq 262: Forest [owner=Jesse72521, controller=Jesse72521] moves Library (Jesse72521) -> Battlefield (Put).
+- Turn 10, seq 264: Grow from the Ashes [owner=Jesse72521, controller=Jesse72521] moves Stack -> Graveyard (Jesse72521) (Resolve).
+- Turn 10, seq 276: Bat [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 11, seq 286: Shattered Sanctum [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 288: Authority of the Consuls [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 291: Shattered Sanctum [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 11, seq 292: Enduring Tenacity [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 294: Enduring Tenacity [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 301: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 303: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 338: Bloom Tender [owner/controller metadata unavailable] moves Library (Jesse72521) -> Hand (Jesse72521) (Draw).
+- Turn 12, seq 341: Bloom Tender [owner=Jesse72521, controller=Jesse72521] moves Hand (Jesse72521) -> Stack (CastSpell).
+- Turn 12, seq 343: Bloom Tender [owner=Jesse72521, controller=Jesse72521] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 365: Enduring Tenacity [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 12, seq 365: Bat [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 12, seq 367: Enduring Tenacity [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Battlefield (Return).
+- Turn 13, seq 377: Shoot the Sheriff [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 379: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 6: object 282 becomes object 341 [Enduring Tenacity].
+- Turn 1, seq 9: object 284 becomes object 342 [Plains].
+- Turn 2, seq 23: object 228 becomes object 343 [Forest].
+- Turn 2, seq 26: object 222 becomes object 344 [Forest].
+- Turn 2, seq 27: object 227 becomes object 345 [Virulent Emissary].
+- Turn 3, seq 43: object 288 becomes object 347 [Plains].
+- Turn 3, seq 46: object 285 becomes object 348 [Swamp].
+- Turn 3, seq 47: object 281 becomes object 349 [Deep-Cavern Bat].
+- Turn 3, seq 54: object 223 becomes object 353 [Druid of the Cowl].
+- Turn 4, seq 68: object 229 becomes object 359 [Forest].
+- Turn 4, seq 71: object 224 becomes object 360 [Forest].
+- Turn 4, seq 72: object 225 becomes object 361 [Druid of the Cowl].
+- Turn 5, seq 97: object 289 becomes object 365 [Lunar Convocation].
+- Turn 5, seq 100: object 347 becomes object 366 [Plains].
+- Turn 5, seq 101: object 365 becomes object 367 [Lunar Convocation].
+- Turn 6, seq 125: object 230 becomes object 371 [Forest].
+- Turn 6, seq 128: object 343 becomes object 372 [Forest].
+- Turn 6, seq 129: object 221 becomes object 373 [Grow from the Ashes].
+- Turn 6, seq 133: object 277 becomes object 377 [Forest].
+- Turn 6, seq 134: object 373 becomes object 427 [Grow from the Ashes].
+- Turn 7, seq 154: object 290 becomes object 428 [Phyrexian Arena].
+- Turn 7, seq 157: object 287 becomes object 429 [Swamp].
+- Turn 7, seq 158: object 428 becomes object 430 [Phyrexian Arena].
+- Turn 8, seq 182: object 378 becomes object 435 [March of the World Ooze].
+- Turn 8, seq 185: object 359 becomes object 436 [Forest].
+- Turn 8, seq 186: object 435 becomes object 437 [March of the World Ooze].
+- Turn 9, seq 208: object 291 becomes object 445 [Hinterland Sanctifier].
+- Turn 9, seq 210: object 292 becomes object 446 [Bloodletter of Aclazotz].
+- Turn 9, seq 213: object 283 becomes object 447 [Makeshift Binding].
+- Turn 9, seq 219: object 361 becomes object 452 [Druid of the Cowl].
+- Turn 9, seq 220: object 445 becomes object 453 [Hinterland Sanctifier].
+- Turn 10, seq 249: object 379 becomes object 459 [Llanowar Elves].
+- Turn 10, seq 252: object 371 becomes object 460 [Forest].
+- Turn 10, seq 253: object 459 becomes object 461 [Llanowar Elves].
+- Turn 10, seq 258: object 226 becomes object 464 [Grow from the Ashes].
+- Turn 10, seq 262: object 380 becomes object 470 [Forest].
+- Turn 10, seq 262: object 384 becomes object 471 [Forest].
+- Turn 10, seq 264: object 464 becomes object 517 [Grow from the Ashes].
+- Turn 10, seq 276: object 457 becomes object 518 [Bat].
+- Turn 11, seq 286: object 293 becomes object 520 [Shattered Sanctum].
+- Turn 11, seq 288: object 294 becomes object 521 [Authority of the Consuls].
+- Turn 11, seq 291: object 520 becomes object 522 [Shattered Sanctum].
+- Turn 11, seq 292: object 286 becomes object 523 [Enduring Tenacity].
+- Turn 11, seq 301: object 521 becomes object 530 [Authority of the Consuls].
+- Turn 12, seq 338: object 472 becomes object 538 [Bloom Tender].
+- Turn 12, seq 341: object 538 becomes object 539 [Bloom Tender].
+- Turn 12, seq 365: object 523 becomes object 545 [Enduring Tenacity].
+- Turn 12, seq 365: object 535 becomes object 546 [Bat].
+- Turn 12, seq 367: object 545 becomes object 548 [Enduring Tenacity].
+- Turn 13, seq 377: object 295 becomes object 550 [Shoot the Sheriff].
+- Turn 13, seq 379: object 296 becomes object 551 [Starscape Cleric].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Plains (object 342) from Hand (gian31) to Battlefield.
+- Turn 2: Jesse72521 plays Forest (object 344) from Hand (Jesse72521) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 348) from Hand (gian31) to Battlefield.
+- Turn 4: Jesse72521 plays Forest (object 360) from Hand (Jesse72521) to Battlefield.
+- Turn 5: gian31 plays Plains (object 366) from Hand (gian31) to Battlefield.
+- Turn 6: Jesse72521 plays Forest (object 372) from Hand (Jesse72521) to Battlefield.
+- Turn 7: gian31 plays Swamp (object 429) from Hand (gian31) to Battlefield.
+- Turn 8: Jesse72521 plays Forest (object 436) from Hand (Jesse72521) to Battlefield.
+- Turn 10: Jesse72521 plays Forest (object 460) from Hand (Jesse72521) to Battlefield.
+- Turn 11: gian31 plays Shattered Sanctum (object 522) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 11: ordered adjacent records Hinterland Sanctifier -> Enduring Tenacity; observed repetitions=2; net life: Jesse72521 -2, gian31 +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Enduring Tenacity=3, Hinterland Sanctifier=2.
+  Individual ability records remain in the timeline.
+- Turn 11: ordered adjacent records Enduring Tenacity -> Lunar Convocation; observed repetitions=2; net life: Jesse72521 -3. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Enduring Tenacity=3, Lunar Convocation=2.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Lunar Convocation: casts=1; abilities=6 (triggered=6, activated=0) across turns [5, 5, 7, 9, 9, 11, 11]
+  observed effect totals: draws=0, tokens=2, counters=0, returns=0, damage=0, life_changes=4, other=0
+  observed effects: life -1, token creation
+- Enduring Tenacity: casts=1; abilities=5 (triggered=5, activated=0) across turns [11, 11, 11, 11, 12, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=1, damage=0, life_changes=4, other=2
+  observed effects: life -1, return to battlefield, synthetic event
+- Hinterland Sanctifier: casts=1; abilities=3 (triggered=3, activated=0) across turns [9, 9, 11, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=0
+  observed effects: life +1
+- Phyrexian Arena: casts=1; abilities=3 (triggered=3, activated=0) across turns [7, 9, 11, 13]
+  observed effect totals: draws=3, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=3
+  observed effects: draw, life -1, synthetic event
+- Virulent Emissary: casts=1; abilities=3 (triggered=3, activated=0) across turns [2, 4, 10, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=0
+  observed effects: life +1
+- Authority of the Consuls: casts=1; abilities=1 (triggered=1, activated=0) across turns [11, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [9, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Bloom Tender: casts=1 across turns [12]
+- Deep-Cavern Bat: casts=1 across turns [3]
+- Druid of the Cowl: casts=1 across turns [4]
+- Llanowar Elves: casts=1 across turns [10]
+- March of the World Ooze: casts=1 across turns [8]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 4 - DeclareAttack (active=Jesse72521)
+  attacker: Virulent Emissary (Jesse72521) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 5 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Deep-Cavern Bat (gian31) -> Jesse72521; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 6 - DeclareAttack, DeclareBlock (active=Jesse72521)
+  attacker: Virulent Emissary (Jesse72521) -> gian31; unblocked in this observed snapshot
+  attacker: Druid of the Cowl (Jesse72521) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Deep-Cavern Bat (gian31) -> Jesse72521; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=Jesse72521)
+  attacker: Virulent Emissary (Jesse72521) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Deep-Cavern Bat (gian31) -> Jesse72521; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, CombatDamage (active=Jesse72521)
+  attacker: Virulent Emissary (Jesse72521) -> gian31; blocked by unknown blocker
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Deep-Cavern Bat (gian31) -> Jesse72521; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack, CombatDamage (active=Jesse72521)
+  attacker: Virulent Emissary (Jesse72521) -> gian31; blocked by unknown blocker
+  attacker: Llanowar Elves (Jesse72521) -> gian31; blocked by unknown blocker
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 11: Ability of Enduring Tenacity (active=gian31) - Ability of Enduring Tenacity: Jesse72521 loses 1 life.
+- Turn 12: Ability of Enduring Tenacity (active=Jesse72521 controller=gian31) - Ability of Enduring Tenacity: a card/permanent returns.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 161: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 166: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 167: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 221: Grow from the Ashes | controller=Jesse72521 | owner=Jesse72521 | zone=Hand (latest_object_observation)
+- 223: Druid of the Cowl | controller=Jesse72521 | owner=Jesse72521 | zone=Hand (latest_object_observation)
+- 224: Forest | controller=Jesse72521 | owner=Jesse72521 | zone=Hand (latest_object_observation)
+- 225: Druid of the Cowl | controller=Jesse72521 | owner=Jesse72521 | zone=Hand (latest_object_observation)
+- 226: Grow from the Ashes | controller=Jesse72521 | owner=Jesse72521 | zone=Hand (latest_object_observation)
+- 281: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 282: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 283: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 284: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 285: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 286: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 287: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 341: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 342: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 343: Forest | controller=Jesse72521 | owner=Jesse72521 | zone=Hand (latest_object_observation)
+- 344: Forest | controller=Jesse72521 | owner=Jesse72521 | zone=Battlefield (latest_object_observation)
+- 345: Virulent Emissary | controller=Jesse72521 | owner=Jesse72521 | zone=Battlefield (latest_object_observation)
+- 347: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 348: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 349: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 352: object 352 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 353: Druid of the Cowl | controller=Jesse72521 | owner=Jesse72521 | zone=Exile (latest_object_observation)
+- 354: Forest | controller=Jesse72521 | owner=Jesse72521 | zone=Hand (latest_object_observation)
+- 355: Grow from the Ashes | controller=Jesse72521 | owner=Jesse72521 | zone=Hand (latest_object_observation)
+- 356: Grow from the Ashes | controller=Jesse72521 | owner=Jesse72521 | zone=Hand (latest_object_observation)
+- 357: Druid of the Cowl | controller=Jesse72521 | owner=Jesse72521 | zone=Hand (latest_object_observation)
+- 358: Forest | controller=Jesse72521 | owner=Jesse72521 | zone=Hand (latest_object_observation)
+- 360: Forest | controller=Jesse72521 | owner=Jesse72521 | zone=Battlefield (latest_object_observation)
+- 361: Druid of the Cowl | controller=Jesse72521 | owner=Jesse72521 | zone=Battlefield (latest_object_observation)
+- 364: object 364 | controller=Jesse72521 | owner=Jesse72521 | zone=unknown (inferred unknown) (latest_object_observation)
+- 365: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 366: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 367: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 370: object 370 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 372: Forest | controller=Jesse72521 | owner=Jesse72521 | zone=Battlefield (latest_object_observation)
+- 373: Grow from the Ashes | controller=Jesse72521 | owner=Jesse72521 | zone=Stack (latest_object_observation)
+- 377: Forest | controller=Jesse72521 | owner=Jesse72521 | zone=Battlefield (latest_object_observation)
+- 427: Grow from the Ashes | controller=Jesse72521 | owner=Jesse72521 | zone=unknown (inferred unknown) (latest_object_observation)
+- 428: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 429: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 430: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 434: object 434 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 436: Forest | controller=Jesse72521 | owner=Jesse72521 | zone=Battlefield (latest_object_observation)
+- 437: March of the World Ooze | controller=Jesse72521 | owner=Jesse72521 | zone=Stack (latest_object_observation)
+- 444: object 444 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 445: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 446: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 447: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 451: object 451 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 452: Druid of the Cowl | controller=Jesse72521 | owner=Jesse72521 | zone=Exile (latest_object_observation)
+- 453: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 455: object 455 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 456: object 456 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 457: Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 458: object 458 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 460: Forest | controller=Jesse72521 | owner=Jesse72521 | zone=Battlefield (latest_object_observation)
+- 461: Llanowar Elves | controller=Jesse72521 | owner=Jesse72521 | zone=Battlefield (latest_object_observation)
+- 463: object 463 | controller=Jesse72521 | owner=Jesse72521 | zone=unknown (inferred unknown) (latest_object_observation)
+- 464: Grow from the Ashes | controller=Jesse72521 | owner=Jesse72521 | zone=Stack (latest_object_observation)
+- 470: Forest | controller=Jesse72521 | owner=Jesse72521 | zone=Battlefield (latest_object_observation)
+- 471: Forest | controller=Jesse72521 | owner=Jesse72521 | zone=Battlefield (latest_object_observation)
+- 517: Grow from the Ashes | controller=Jesse72521 | owner=Jesse72521 | zone=unknown (inferred unknown) (latest_object_observation)
+- 519: object 519 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 520: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 521: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 522: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 523: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 528: object 528 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 529: object 529 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 530: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 532: object 532 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 533: object 533 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 534: object 534 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 535: Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 536: object 536 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 537: object 537 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 539: Bloom Tender | controller=Jesse72521 | owner=Jesse72521 | zone=Battlefield (latest_object_observation)
+- 542: object 542 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 543: object 543 | controller=Jesse72521 | owner=Jesse72521 | zone=unknown (inferred unknown) (latest_object_observation)
+- 544: object 544 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 545: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 547: object 547 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 548: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 549: object 549 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 550: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 551: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Jesse72521: 33 total items
+  zones: Battlefield=12, Exile=2, Hand=11, Stack=3, unknown=5
+  objects: Forest x12, Grow from the Ashes x8, Druid of the Cowl x6, Bloom Tender, Llanowar Elves, March of the World Ooze, Virulent Emissary, object 364, object 463, object 543
+gian31: 60 total items
+  zones: Battlefield=11, Hand=25, Stack=4, unknown=20
+  objects: Enduring Tenacity x6, Swamp x6, Plains x4, Phyrexian Arena x3, Authority of the Consuls x2, Bat x2, Deep-Cavern Bat x2, Hinterland Sanctifier x2, Lunar Convocation x2, Makeshift Binding x2, Shattered Sanctum x2, Shoot the Sheriff x2
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (11): Deep-Cavern Bat, Enduring Tenacity, Enduring Tenacity, Enduring Tenacity, Enduring Tenacity, Hinterland Sanctifier, Plains, Plains, Shattered Sanctum, Swamp, Swamp
+  Graveyard: 0 card(s)
+Jesse72521:
+  Battlefield (12): Bloom Tender, Druid of the Cowl, Forest, Forest, Forest, Forest, Forest, Forest, Forest, Forest, Llanowar Elves, Virulent Emissary
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+25 objects have no resolved final zone and are omitted from the known board state.
+Jesse72521: 5 unknown object(s)
+gian31: 20 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=36, Stack=7
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Jesse72521:
+  Battlefield (12): Forest, Virulent Emissary, Forest, Forest, Forest, Forest, March of the World Ooze, Forest, Llanowar Elves, Forest, Forest, Bloom Tender
+  Graveyard (2): Grow from the Ashes, Grow from the Ashes
+  Exile (2): Druid of the Cowl, Druid of the Cowl
+gian31:
+  Battlefield (12): Plains, Swamp, Deep-Cavern Bat, Plains, Lunar Convocation, Swamp, Phyrexian Arena, Makeshift Binding, Hinterland Sanctifier, Shattered Sanctum, Authority of the Consuls, Enduring Tenacity
+  Graveyard (1): Enduring Tenacity
+Known non-persistent entries (counts only):
+  gian31: Hand=3, Library=1, Limbo=5
+  unknown: Library=88, Limbo=6
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1
+- Turn 2: Jesse72521 Battlefield=2; gian31 Battlefield=1
+- Turn 3: Jesse72521 Battlefield=2; Jesse72521 Exile=1; gian31 Battlefield=3
+- Turn 4: Jesse72521 Battlefield=4; Jesse72521 Exile=1; gian31 Battlefield=3
+- Turn 5: Jesse72521 Battlefield=4; Jesse72521 Exile=1; gian31 Battlefield=5
+- Turn 6: Jesse72521 Battlefield=6; Jesse72521 Graveyard=1; Jesse72521 Exile=1; gian31 Battlefield=5
+- Turn 7: Jesse72521 Battlefield=6; Jesse72521 Graveyard=1; Jesse72521 Exile=1; gian31 Battlefield=7
+- Turn 8: Jesse72521 Battlefield=8; Jesse72521 Graveyard=1; Jesse72521 Exile=1; gian31 Battlefield=7
+- Turn 9: Jesse72521 Battlefield=7; Jesse72521 Graveyard=1; Jesse72521 Exile=2; gian31 Battlefield=9
+- Turn 10: Jesse72521 Battlefield=11; Jesse72521 Graveyard=2; Jesse72521 Exile=2; gian31 Battlefield=9; gian31 Graveyard=1
+- Turn 11: Jesse72521 Battlefield=11; Jesse72521 Graveyard=2; Jesse72521 Exile=2; gian31 Battlefield=12; gian31 Graveyard=1
+- Turn 12: Jesse72521 Battlefield=12; Jesse72521 Graveyard=2; Jesse72521 Exile=2; gian31 Battlefield=12; gian31 Graveyard=2
+- Turn 13: Jesse72521 Battlefield=12; Jesse72521 Graveyard=2; Jesse72521 Exile=2; gian31 Battlefield=12; gian31 Graveyard=2
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Virulent Emissary resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Deep-Cavern Bat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Druid of the Cowl resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Phyrexian Arena resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: March of the World Ooze resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Llanowar Elves resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Enduring Tenacity resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Bloom Tender resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
