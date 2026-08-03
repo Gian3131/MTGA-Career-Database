@@ -1,0 +1,959 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: scoobycide, gian31
+Seat map: Seat 1=scoobycide, Seat 2=gian31
+Turn range (known): 1 - 18
+Records: 34
+Action chains: 32
+Winner: scoobycide
+Final life: {'scoobycide': 15, 'gian31': -16}
+Lethal combat transition: gian31 12 -> -16. 6 unblocked attackers and observed P/T modifiers reconcile to 28 power; individual combat assignment unavailable.
+Lethal coverage (normalized): complete; explained=28/28; unexplained=0.
+Match conclusion: Life total reached 0 observed for gian31.
+Last captured action before match-result payload: Turn 18 (Phase_Main1; Slick Sequence, seq 497).
+Later numbered GRE record(s): 6 after action sequence 497 across turn(s) [18]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+POST-ACTION GRE RECORDS - RESULT ORDER UNRESOLVED
+  - Turn 18, seq 503: tapped_changed.
+  - Turn 18, seq 503: tapped_changed.
+  - Turn 18, seq 503: tapped_changed.
+  - Turn 18, seq 503: tapped_changed.
+  - Turn 18, seq 503: tapped_changed.
+  - Turn 18, seq 503: tapped_changed.
+  These records are retained for traceability; their order relative to the match-result payload is not asserted.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 42 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 9 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 8, 10, 12] (raw records=9; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 27 explicit Library -> Hand movement(s); named in the draw record=9, resolved through an explicit identity transition=12, unresolved=6.
+Unresolved draw identities (explicit movements retained): Turn 18, seq 455, object 412; Turn 18, seq 476, object 428; Turn 18, seq 476, object 429; Turn 18, seq 476, object 430; Turn 18, seq 476, object 431; Turn 18, seq 497, object 443.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Shoot the Sheriff [219], Plains [220], Swamp [221], Starscape Cleric [222], Deep-Cavern Bat [223], Bloodthirsty Conqueror [224], Bloodletter of Aclazotz [225].
+  - unknown: 7 observed card(s): object 159 [159], object 160 [160], object 161 [161], object 162 [162], object 163 [163], object 164 [164], object 165 [165].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: scoobycide; observed final life totals: {'scoobycide': 15, 'gian31': -16}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 18 (Phase_Main1; Slick Sequence, seq 497).
+Last captured life snapshot: gian31 12 -> -16 (seq 507).
+Tokens on battlefield at their last observation (not confirmed at match end): Otter [365] controller=scoobycide, created Turn 10, last observed Turn 18 seq 503, P/T 5/3; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Otter [377] controller=scoobycide, created Turn 12, last observed Turn 18 seq 503, P/T 5/3; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Otter [393] controller=scoobycide, created Turn 14, last observed Turn 18 seq 503, P/T 5/3; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Otter [400] controller=scoobycide, created Turn 16, last observed Turn 18 seq 503, P/T 5/3; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: gian31 reached -16 life; exact lethal-source coverage is reported separately.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Plains.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Thundering Falls.
+- Turn 3: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Deep-Cavern Bat.
+- Turn 4: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Spirebluff Canal, Stormcatch Mentor.
+- Turn 5: actions: cards=1, abilities=0; combat snapshots=1; life mutations=2; explicit battlefield entries=Plains; explicit battlefield exits=Stormcatch Mentor.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Boosted Sloop.
+- Turn 7: actions: cards=1, abilities=0; combat snapshots=1; life mutations=2; explicit battlefield exits=Boosted Sloop.
+- Turn 8: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Mountain, Ral, Crackling Wit.
+- Turn 9: actions: cards=2, abilities=3; combat snapshots=1; life mutations=4; explicit battlefield entries=Hinterland Sanctifier, Starscape Cleric.
+- Turn 10: actions: cards=0, abilities=3; explicit battlefield entries=Steam Vents; explicit battlefield exits=Deep-Cavern Bat, Human, Otter, Hinterland Sanctifier, Starscape Cleric.
+- Turn 11: actions: cards=0, abilities=0.
+- Turn 12: actions: cards=2, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Mountain, Stormcatch Mentor, Mm'menon, Uthros Exile.
+- Turn 13: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Makeshift Binding; explicit battlefield exits=Mm'menon, Uthros Exile.
+- Turn 14: actions: cards=2, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=The Emperor of Palamecia, Balmor, Battlemage Captain.
+- Turn 15: actions: cards=1, abilities=0; explicit battlefield entries=Starscape Cleric.
+- Turn 16: actions: cards=0, abilities=1; combat snapshots=1; life mutations=1.
+- Turn 17: actions: cards=1, abilities=2; combat snapshots=1; life mutations=2; explicit battlefield entries=Makeshift Binding; explicit battlefield exits=The Emperor of Palamecia.
+- Turn 18: actions: cards=2, abilities=4; combat snapshots=1; life mutations=2.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [279] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [279]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [280] Library (scoobycide) -> Hand (scoobycide) (Draw; GRE sequence 21).
+      Thundering Falls [281] Hand (scoobycide) -> Battlefield (PlayLand; GRE sequence 24).
+      Spirebluff Canal [283] Library (scoobycide) -> Graveyard (scoobycide) (Surveil; GRE sequence 27).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [279]
+      scoobycide: Battlefield: Thundering Falls [281]; Graveyard: Spirebluff Canal [283]
+
+Turn 3
+  - Deep-Cavern Bat [valid_resolution_no_immediate_mutation, seq=47] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=286)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deep-Cavern Bat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deep-Cavern Bat (object 286) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 286) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [284] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 41).
+      Swamp [285] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 44).
+      Stormcatch Mentor [290] Hand (scoobycide) -> Exile (Exile; GRE sequence 52).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Deep-Cavern Bat [286], Plains [279], Swamp [285]
+      scoobycide: Battlefield: Thundering Falls [281]; Graveyard: Spirebluff Canal [283]; Exile: Stormcatch Mentor [290]
+
+Turn 4
+  - Stormcatch Mentor [valid_resolution_no_immediate_mutation, seq=73] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=299)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Stormcatch Mentor resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Stormcatch Mentor (object 299) Hand (scoobycide) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Stormcatch Mentor (object 299) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=scoobycide; frames: DeclareAttack):
+      attackers: Stormcatch Mentor [299] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Ill-Timed Explosion [297] Library (scoobycide) -> Hand (scoobycide) (Draw; GRE sequence 66).
+      Spirebluff Canal [298] Hand (scoobycide) -> Battlefield (PlayLand; GRE sequence 69).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Deep-Cavern Bat [286], Plains [279], Swamp [285]
+      scoobycide: Battlefield: Spirebluff Canal [298], Stormcatch Mentor [299], Thundering Falls [281]; Graveyard: Spirebluff Canal [283]; Exile: Stormcatch Mentor [290]
+
+Turn 5
+  - Shoot the Sheriff [observed_semantic_effect, seq=102] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=304)
+      effects: destroy
+      narrative: Shoot the Sheriff destroys Stormcatch Mentor.
+      explicit effect object references: Stormcatch Mentor [299], Stormcatch Mentor [307] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 304) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Stormcatch Mentor (object 307) Battlefield -> Graveyard (scoobycide) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 308) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 304 -> transfer object 308 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [286] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 +1; scoobycide -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): scoobycide 20 -> 19
+    life (gain observed during combat phase; exact source unavailable): gian31 19 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Rush of Dread [302] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 94).
+      Plains [303] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 97).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Deep-Cavern Bat [286], Plains [279], Plains [303], Swamp [285]; Graveyard: Shoot the Sheriff [308]
+      scoobycide: Battlefield: Spirebluff Canal [298], Thundering Falls [281]; Graveyard: Spirebluff Canal [283], Stormcatch Mentor [307]; Exile: Stormcatch Mentor [290]
+
+Turn 6
+  - Boosted Sloop [valid_resolution_no_immediate_mutation, seq=129] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=311)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Boosted Sloop resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Boosted Sloop (object 311) Hand (scoobycide) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Boosted Sloop (object 311) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Balmor, Battlemage Captain [309] Library (scoobycide) -> Hand (scoobycide) (Draw; GRE sequence 122).
+      Mountain [310] Hand (scoobycide) -> Battlefield (PlayLand; GRE sequence 125).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Deep-Cavern Bat [286], Plains [279], Plains [303], Swamp [285]; Graveyard: Shoot the Sheriff [308]
+      scoobycide: Battlefield: Boosted Sloop [311], Mountain [310], Spirebluff Canal [298], Thundering Falls [281]; Graveyard: Spirebluff Canal [283], Stormcatch Mentor [307]; Exile: Stormcatch Mentor [290]
+
+Turn 7
+  - Stroke of Midnight [observed_semantic_effect, seq=150] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=316)
+      effects: destroy, token creation
+      narrative: Stroke of Midnight destroys Boosted Sloop.
+      explicit effect object references: Boosted Sloop [311], Boosted Sloop [320], Human [321] (role/targeting only where the protocol identifies it)
+      token created: Human (object 321, controller=scoobycide) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 316).
+      protocol-linked zone transfer: Stroke of Midnight (object 316) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Boosted Sloop (object 320) Battlefield -> Graveyard (scoobycide) (Destroy; shared object ID)
+      protocol-linked zone transfer: Stroke of Midnight (object 322) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 316 -> transfer object 322 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [286] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 +1; scoobycide -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): scoobycide 19 -> 18
+    life (gain observed during combat phase; exact source unavailable): gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Stroke of Midnight [315] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 143).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Deep-Cavern Bat [286], Plains [279], Plains [303], Swamp [285]; Graveyard: Shoot the Sheriff [308], Stroke of Midnight [322]
+      scoobycide: Battlefield: Mountain [310], Spirebluff Canal [298], Thundering Falls [281]; Graveyard: Boosted Sloop [320], Spirebluff Canal [283], Stormcatch Mentor [307]; Exile: Stormcatch Mentor [290]
+
+Turn 8
+  - Ral, Crackling Wit [valid_resolution_no_immediate_mutation, seq=177] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=325)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ral, Crackling Wit resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ral, Crackling Wit (object 325) Hand (scoobycide) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ral, Crackling Wit (object 325) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Ral, Crackling Wit [observed_semantic_effect, seq=180] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=325, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Ral, Crackling Wit: a token is created.
+      explicit effect object references: Otter [331] (role/targeting only where the protocol identifies it)
+      token created: Otter (object 331, controller=scoobycide) 2/2; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 330).
+  Combat snapshots observed (active=scoobycide; frames: DeclareAttack -> DeclareBlock):
+      attackers: Human [321] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 21 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Ral, Crackling Wit [323] Library (scoobycide) -> Hand (scoobycide) (Draw; GRE sequence 170).
+      Mountain [324] Hand (scoobycide) -> Battlefield (PlayLand; GRE sequence 173).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Deep-Cavern Bat [286], Plains [279], Plains [303], Swamp [285]; Graveyard: Shoot the Sheriff [308], Stroke of Midnight [322]
+      scoobycide: Battlefield: Mountain [310], Mountain [324], Ral, Crackling Wit [325], Spirebluff Canal [298], Thundering Falls [281]; Graveyard: Boosted Sloop [320], Spirebluff Canal [283], Stormcatch Mentor [307]; Exile: Stormcatch Mentor [290]
+
+Turn 9
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=205] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=333)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 333) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 333) Stack -> Battlefield (Resolve; shared object ID)
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=209] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=335)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 335) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 335) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=211] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=333, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=213] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: scoobycide loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=225] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=335, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 213 and 225; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life -1
+      narrative: Ability of Starscape Cleric: scoobycide loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [286] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 +2; scoobycide -2 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life: scoobycide 18 -> 17
+    life (semantically attributed to Hinterland Sanctifier; direct protocol link unavailable): gian31 21 -> 22
+    life: scoobycide 17 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hinterland Sanctifier [332] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 200).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Deep-Cavern Bat [286], Hinterland Sanctifier [333], Plains [279], Plains [303], Starscape Cleric [335], Swamp [285]; Graveyard: Shoot the Sheriff [308], Stroke of Midnight [322]
+      scoobycide: Battlefield: Mountain [310], Mountain [324], Ral, Crackling Wit [325], Spirebluff Canal [298], Thundering Falls [281]; Graveyard: Boosted Sloop [320], Spirebluff Canal [283], Stormcatch Mentor [307]; Exile: Stormcatch Mentor [290]
+
+Turn 10
+  - Ability of Ral, Crackling Wit [observed_semantic_effect, seq=244] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=325, source_last_explicit_zone=Battlefield)
+      effects: +1 counter(s)
+      narrative: Ability of Ral, Crackling Wit: 1 counter(s) are added to Ral, Crackling Wit [325].
+  - Ability of Ill-Timed Explosion [observed_semantic_effect, seq=251] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=343, source_last_explicit_zone=Stack, source_successor=356 observed Stack -> Graveyard (scoobycide) (Resolve))
+      effects: 2 damage, 2 damage, 2 damage, 2 damage, 2 damage
+      narrative: Ability of Ill-Timed Explosion: Deep-Cavern Bat takes 2 damage; Human takes 2 damage; Otter takes 2 damage; Hinterland Sanctifier takes 2 damage; Starscape Cleric takes 2 damage.
+      explicit effect object references: Deep-Cavern Bat [286], Human [321], Otter [331], Hinterland Sanctifier [333], Starscape Cleric [335] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 357) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+      protocol-linked zone transfer: Human (object 358) Battlefield -> Graveyard (scoobycide) (SBA_Damage; shared object ID)
+      protocol-linked zone transfer: Otter (object 359) Battlefield -> Graveyard (scoobycide) (SBA_Damage; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 360) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 361) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+  - Ability of Ral, Crackling Wit [observed_semantic_effect, seq=254] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=325, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Ral, Crackling Wit: a token is created.
+      explicit effect object references: Otter [365] (role/targeting only where the protocol identifies it)
+      token created: Otter (object 365, controller=scoobycide) 5/3; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 364).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mm'menon, Uthros Exile [341] Library (scoobycide) -> Hand (scoobycide) (Draw; GRE sequence 235).
+      Steam Vents [342] Hand (scoobycide) -> Battlefield (PlayLand; GRE sequence 239).
+      Ill-Timed Explosion [343] Hand (scoobycide) -> Stack (CastSpell; GRE sequence 240).
+      Island [350] Library (scoobycide) -> Hand (scoobycide) (Draw; GRE sequence 248).
+      Professor Zei, Anthropologist [351] Library (scoobycide) -> Hand (scoobycide) (Draw; GRE sequence 248).
+      Island [352] Hand (scoobycide) -> Graveyard (scoobycide) (Discard; GRE sequence 249).
+      Professor Zei, Anthropologist [353] Hand (scoobycide) -> Graveyard (scoobycide) (Discard; GRE sequence 249).
+      Ill-Timed Explosion [356] Stack -> Graveyard (scoobycide) (Resolve; GRE sequence 249).
+      Stormcatch Mentor [362] Exile -> Hand (scoobycide) (Return; GRE sequence 251).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [279], Plains [303], Swamp [285]; Graveyard: Deep-Cavern Bat [357], Hinterland Sanctifier [360], Shoot the Sheriff [308], Starscape Cleric [361], Stroke of Midnight [322]
+      scoobycide: Battlefield: Mountain [310], Mountain [324], Ral, Crackling Wit [325], Spirebluff Canal [298], Steam Vents [342], Thundering Falls [281]; Graveyard: Boosted Sloop [320], Human [358], Ill-Timed Explosion [356], Island [352], Otter [359], Professor Zei, Anthropologist [353], Spirebluff Canal [283], Stormcatch Mentor [307]
+
+Turn 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [366] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 268).
+
+Turn 12
+  - Stormcatch Mentor [valid_resolution_no_immediate_mutation, seq=291] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=369)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Stormcatch Mentor resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Stormcatch Mentor (object 369) Hand (scoobycide) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Stormcatch Mentor (object 369) Stack -> Battlefield (Resolve; shared object ID)
+  - Mm'menon, Uthros Exile [valid_resolution_no_immediate_mutation, seq=295] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=372)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Mm'menon, Uthros Exile resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Mm'menon, Uthros Exile (object 372) Hand (scoobycide) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Mm'menon, Uthros Exile (object 372) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Ral, Crackling Wit [observed_semantic_effect, seq=298] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=325, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Ral, Crackling Wit: a token is created.
+      explicit effect object references: Otter [377] (role/targeting only where the protocol identifies it)
+      token created: Otter (object 377, controller=scoobycide) 5/3; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 376).
+  Combat snapshots observed (active=scoobycide; frames: DeclareAttack -> DeclareBlock):
+      attackers: Otter [365] (unblocked, observed P/T 1/1), Stormcatch Mentor [369] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 22 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [367] Library (scoobycide) -> Hand (scoobycide) (Draw; GRE sequence 284).
+      Mountain [368] Hand (scoobycide) -> Battlefield (PlayLand; GRE sequence 287).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [279], Plains [303], Swamp [285]; Graveyard: Deep-Cavern Bat [357], Hinterland Sanctifier [360], Shoot the Sheriff [308], Starscape Cleric [361], Stroke of Midnight [322]
+      scoobycide: Battlefield: Mm'menon, Uthros Exile [372], Mountain [310], Mountain [324], Mountain [368], Ral, Crackling Wit [325], Spirebluff Canal [298], Steam Vents [342], Stormcatch Mentor [369], Thundering Falls [281]; Graveyard: Boosted Sloop [320], Human [358], Ill-Timed Explosion [356], Island [352], Otter [359], Professor Zei, Anthropologist [353], Spirebluff Canal [283], Stormcatch Mentor [307]
+
+Turn 13
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=323] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=379)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 379) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 379) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=327] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=379, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Mm'menon, Uthros Exile; gian31 gains 2 life.
+      explicit effect object references: Mm'menon, Uthros Exile [372], Mm'menon, Uthros Exile [384] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Mm'menon, Uthros Exile (object 384) Battlefield -> Exile (Exile; shared object ID)
+    net observed life change this turn: gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 22
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [378] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 318).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Makeshift Binding [379], Plains [279], Plains [303], Swamp [285]; Graveyard: Deep-Cavern Bat [357], Hinterland Sanctifier [360], Shoot the Sheriff [308], Starscape Cleric [361], Stroke of Midnight [322]
+      scoobycide: Battlefield: Mountain [310], Mountain [324], Mountain [368], Ral, Crackling Wit [325], Spirebluff Canal [298], Steam Vents [342], Stormcatch Mentor [369], Thundering Falls [281]; Graveyard: Boosted Sloop [320], Human [358], Ill-Timed Explosion [356], Island [352], Otter [359], Professor Zei, Anthropologist [353], Spirebluff Canal [283], Stormcatch Mentor [307]; Exile: Mm'menon, Uthros Exile [384]
+
+Turn 14
+  - The Emperor of Palamecia [valid_resolution_no_immediate_mutation, seq=347] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=386)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: The Emperor of Palamecia resolves with no immediate observed mutation.
+      protocol-linked zone transfer: The Emperor of Palamecia (object 386) Hand (scoobycide) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: The Emperor of Palamecia (object 386) Stack -> Battlefield (Resolve; shared object ID)
+  - Balmor, Battlemage Captain [valid_resolution_no_immediate_mutation, seq=351] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=389)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Balmor, Battlemage Captain resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Balmor, Battlemage Captain (object 389) Hand (scoobycide) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Balmor, Battlemage Captain (object 389) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Ral, Crackling Wit [observed_semantic_effect, seq=354] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=325, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Ral, Crackling Wit: a token is created.
+      explicit effect object references: Otter [393] (role/targeting only where the protocol identifies it)
+      token created: Otter (object 393, controller=scoobycide) 5/3; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 392).
+  Combat snapshots observed (active=scoobycide; frames: DeclareAttack -> DeclareBlock):
+      attackers: Otter [365] (unblocked, observed P/T 1/1), Stormcatch Mentor [369] (unblocked, observed P/T 1/1), Otter [377] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -3 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 22 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      The Emperor of Palamecia [385] Library (scoobycide) -> Hand (scoobycide) (Draw; GRE sequence 341).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Makeshift Binding [379], Plains [279], Plains [303], Swamp [285]; Graveyard: Deep-Cavern Bat [357], Hinterland Sanctifier [360], Shoot the Sheriff [308], Starscape Cleric [361], Stroke of Midnight [322]
+      scoobycide: Battlefield: Balmor, Battlemage Captain [389], Mountain [310], Mountain [324], Mountain [368], Ral, Crackling Wit [325], Spirebluff Canal [298], Steam Vents [342], Stormcatch Mentor [369], The Emperor of Palamecia [386], Thundering Falls [281]; Graveyard: Boosted Sloop [320], Human [358], Ill-Timed Explosion [356], Island [352], Otter [359], Professor Zei, Anthropologist [353], Spirebluff Canal [283], Stormcatch Mentor [307]; Exile: Mm'menon, Uthros Exile [384]
+
+Turn 15
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=380] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=395)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 395) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 395) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Lunar Convocation [394] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 374).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Makeshift Binding [379], Plains [279], Plains [303], Starscape Cleric [395], Swamp [285]; Graveyard: Deep-Cavern Bat [357], Hinterland Sanctifier [360], Shoot the Sheriff [308], Starscape Cleric [361], Stroke of Midnight [322]
+      scoobycide: Battlefield: Balmor, Battlemage Captain [389], Mountain [310], Mountain [324], Mountain [368], Ral, Crackling Wit [325], Spirebluff Canal [298], Steam Vents [342], Stormcatch Mentor [369], The Emperor of Palamecia [386], Thundering Falls [281]; Graveyard: Boosted Sloop [320], Human [358], Ill-Timed Explosion [356], Island [352], Otter [359], Professor Zei, Anthropologist [353], Spirebluff Canal [283], Stormcatch Mentor [307]; Exile: Mm'menon, Uthros Exile [384]
+
+Turn 16
+  - Ability of Ral, Crackling Wit [observed_semantic_effect, seq=399] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=325, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Ral, Crackling Wit: a token is created.
+      explicit effect object references: Otter [400] (role/targeting only where the protocol identifies it)
+      token created: Otter (object 400, controller=scoobycide) 5/3; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 399).
+  Combat snapshots observed (active=scoobycide; frames: DeclareAttack -> DeclareBlock):
+      attackers: Otter [365] (unblocked, observed P/T 1/1), Stormcatch Mentor [369] (unblocked, observed P/T 1/1), Otter [377] (unblocked, observed P/T 1/1), The Emperor of Palamecia [386] (unblocked, observed P/T 2/2), Balmor, Battlemage Captain [389] (unblocked, observed P/T 1/3), Otter [393] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 7; observed attacker power total: 7; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -7 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 7 + observed modifiers 0 = 7; individual assignment unavailable): gian31 19 -> 12
+    additional protocol-observed zone movements not assigned to an action chain:
+      Island [398] Library (scoobycide) -> Hand (scoobycide) (Draw; GRE sequence 394).
+
+Turn 17
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=424] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=402)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 402) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 402) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=428] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=402, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles The Emperor of Palamecia; gian31 gains 2 life.
+      explicit effect object references: The Emperor of Palamecia [386], The Emperor of Palamecia [407] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: The Emperor of Palamecia (object 407) Battlefield -> Exile (Exile; shared object ID)
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=430] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=395, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: scoobycide loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [395] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 +2; scoobycide -1 (individual changes below; gains and losses may offset)
+    life: gian31 12 -> 14
+    life: scoobycide 16 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [401] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 419).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Makeshift Binding [379], Makeshift Binding [402], Plains [279], Plains [303], Starscape Cleric [395], Swamp [285]; Graveyard: Deep-Cavern Bat [357], Hinterland Sanctifier [360], Shoot the Sheriff [308], Starscape Cleric [361], Stroke of Midnight [322]
+      scoobycide: Battlefield: Balmor, Battlemage Captain [389], Mountain [310], Mountain [324], Mountain [368], Ral, Crackling Wit [325], Spirebluff Canal [298], Steam Vents [342], Stormcatch Mentor [369], Thundering Falls [281]; Graveyard: Boosted Sloop [320], Human [358], Ill-Timed Explosion [356], Island [352], Otter [359], Professor Zei, Anthropologist [353], Spirebluff Canal [283], Stormcatch Mentor [307]; Exile: Mm'menon, Uthros Exile [384], The Emperor of Palamecia [407]
+
+Turn 18
+  - Ability of Ral, Crackling Wit [observed_semantic_effect, seq=462] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=325, source_last_explicit_zone=Battlefield)
+      effects: +1 counter(s)
+      narrative: Ability of Ral, Crackling Wit: 1 counter(s) are added to Ral, Crackling Wit [325].
+  - Ability of Balmor, Battlemage Captain [observed_semantic_effect, seq=474] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+0, P/T +1/+0, P/T +1/+0, P/T +1/+0, P/T +1/+0, P/T +1/+0
+      narrative: Ability of Balmor, Battlemage Captain: Otter gets +1/+0; Stormcatch Mentor gets +1/+0; Otter gets +1/+0; Balmor, Battlemage Captain gets +1/+0; Otter gets +1/+0; Otter gets +1/+0.
+      explicit effect object references: Otter [365], Stormcatch Mentor [369], Otter [377], Otter [393], Otter [400] (role/targeting only where the protocol identifies it)
+  - Splatter Technique [observed_semantic_effect, seq=476] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=416)
+      effects: draw, draw, draw, draw
+      narrative: Splatter Technique: draw; draw; draw; draw.
+      explicit effect object references: object 181 [181], object 182 [182], object 183 [183], object 184 [184], object 428 [428], object 429 [429], object 430 [430], object 431 [431] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Splatter Technique (object 416) Hand (scoobycide) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: object 428 (object 428) Library (scoobycide) -> Hand (scoobycide) (Draw; shared object ID)
+      protocol-linked zone transfer: object 429 (object 429) Library (scoobycide) -> Hand (scoobycide) (Draw; shared object ID)
+      protocol-linked zone transfer: object 430 (object 430) Library (scoobycide) -> Hand (scoobycide) (Draw; shared object ID)
+      protocol-linked zone transfer: object 431 (object 431) Library (scoobycide) -> Hand (scoobycide) (Draw; shared object ID)
+      protocol-linked zone transfer: Splatter Technique (object 432) Stack -> Graveyard (scoobycide) (Resolve; shared object ID)
+      identity continuity: source object 416 -> transfer object 432 (explicit GRE ObjectIdChanged chain).
+  - Ability of Ral, Crackling Wit [observed_semantic_effect, seq=483] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=325, source_last_explicit_zone=Battlefield)
+      effects: +1 counter(s)
+      narrative: Ability of Ral, Crackling Wit: 1 counter(s) are added to Ral, Crackling Wit [325].
+  - Ability of Balmor, Battlemage Captain [observed_semantic_effect, seq=495] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=389, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+0, P/T +1/+0, P/T +1/+0, P/T +1/+0, P/T +1/+0, P/T +1/+0
+      narrative: Ability of Balmor, Battlemage Captain: Otter gets +1/+0; Stormcatch Mentor gets +1/+0; Otter gets +1/+0; Balmor, Battlemage Captain gets +1/+0; Otter gets +1/+0; Otter gets +1/+0.
+      explicit effect object references: Otter [365], Stormcatch Mentor [369], Otter [377], Otter [393], Otter [400] (role/targeting only where the protocol identifies it)
+  - Slick Sequence [observed_semantic_effect, seq=497] (active=scoobycide, phase=Phase_Main1, controller=scoobycide, owner=scoobycide, source_object=433)
+      effects: draw; 2 damage; life -2 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Slick Sequence: draw; gian31 takes 2 damage (resulting in 2 life lost).
+      explicit effect object references: object 185 [185], gian31 [player seat 2], object 443 [443] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Slick Sequence (object 433) Hand (scoobycide) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: object 443 (object 443) Library (scoobycide) -> Hand (scoobycide) (Draw; shared object ID)
+      protocol-linked zone transfer: Slick Sequence (object 444) Stack -> Graveyard (scoobycide) (Resolve; shared object ID)
+      identity continuity: source object 433 -> transfer object 444 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=scoobycide; frames: DeclareAttack -> DeclareBlock):
+      attackers: Otter [365] (unblocked, observed P/T 5/3), Stormcatch Mentor [369] (unblocked, observed P/T 5/3), Otter [377] (unblocked, observed P/T 5/3), Balmor, Battlemage Captain [389] (unblocked, observed P/T 3/3), Otter [393] (unblocked, observed P/T 5/3), Otter [400] (unblocked, observed P/T 5/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 28; observed attacker power total: 28; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -30 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Slick Sequence; direct protocol link unavailable): gian31 14 -> 12
+    life (combat fully reconciled: snapshot power 28 + observed modifiers 0 = 28; individual assignment unavailable): gian31 12 -> -16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Slick Sequence [409] Library (scoobycide) -> Hand (scoobycide) (Draw; GRE sequence 450).
+      Captain Storm, Cosmium Raider [411] Library (scoobycide) -> Hand (scoobycide) (Draw; GRE sequence 455).
+      object 412 [412] Library (scoobycide) -> Hand (scoobycide) (Draw; GRE sequence 455).
+      Splatter Technique [413] Library (scoobycide) -> Hand (scoobycide) (Draw; GRE sequence 455).
+      Island [414] Hand (scoobycide) -> Graveyard (scoobycide) (Discard; GRE sequence 456).
+      Captain Storm, Cosmium Raider [415] Hand (scoobycide) -> Graveyard (scoobycide) (Discard; GRE sequence 456).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Makeshift Binding [379], Makeshift Binding [402], Plains [279], Plains [303], Starscape Cleric [395], Swamp [285]; Graveyard: Deep-Cavern Bat [357], Hinterland Sanctifier [360], Shoot the Sheriff [308], Starscape Cleric [361], Stroke of Midnight [322]
+      scoobycide: Battlefield: Balmor, Battlemage Captain [389], Mountain [310], Mountain [324], Mountain [368], Ral, Crackling Wit [325], Spirebluff Canal [298], Steam Vents [342], Stormcatch Mentor [369], Thundering Falls [281]; Graveyard: Boosted Sloop [320], Captain Storm, Cosmium Raider [415], Human [358], Ill-Timed Explosion [356], Island [352], Island [414], Otter [359], Professor Zei, Anthropologist [353], Slick Sequence [444], Spirebluff Canal [283], Splatter Technique [432], Stormcatch Mentor [307]; Exile: Mm'menon, Uthros Exile [384], The Emperor of Palamecia [407]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 5, seq 112, Phase_Main1: gian31 19 -> 20. Combat declaration observed; exact assignment unavailable. Previous captured action: Shoot the Sheriff.
+- Turn 7, seq 160, Phase_Main1: gian31 20 -> 21. Combat declaration observed; exact assignment unavailable. Previous captured action: Stroke of Midnight.
+- Turn 9, seq 223, Phase_Main1: gian31 21 -> 22. Semantic attribution: Hinterland Sanctifier; direct protocol link unavailable. Previous captured action: Starscape Cleric.
+- Turn 18, seq 497, Phase_Main1: gian31 14 -> 12. Semantic attribution: Slick Sequence; direct protocol link unavailable. Previous captured action: Slick Sequence.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 18: gian31 12 -> -16 (required change 28). Explained by exact same-record evidence: 0/28; semantically attributed: 0/28; unexplained residual: 0/28.
+  Fully reconciled from observed combat state and modifiers: 28/28 (pre-modifier power=28; explicit modifier power=+0; reconstructed post-modifier power=28; individual assignment unavailable).
+  Combat snapshot observed at or before lethal: Turn 18; attackers=Otter [365], Stormcatch Mentor [369], Otter [377], Balmor, Battlemage Captain [389], Otter [393], Otter [400]; observed snapshot power total=28; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 18, Slick Sequence (seq 497).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 6 token creations observed; 4 active as last observed; 2 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Human [321] controller=scoobycide; created Turn 7 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 10 via Battlefield -> Graveyard (scoobycide) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Otter [331] controller=scoobycide; created Turn 8 (2/2); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 10 via Battlefield -> Graveyard (scoobycide) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Otter [365] controller=scoobycide; created Turn 10 (5/3); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 18, object 365 (latest observed P/T 5/3; current zone unconfirmed).
+- Otter [377] controller=scoobycide; created Turn 12 (5/3); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 18, object 377 (latest observed P/T 5/3; current zone unconfirmed).
+- Otter [393] controller=scoobycide; created Turn 14 (5/3); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 18, object 393 (latest observed P/T 5/3; current zone unconfirmed).
+- Otter [400] controller=scoobycide; created Turn 16 (5/3); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 18, object 400 (latest observed P/T 5/3; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Mountain [owner=scoobycide, controller=scoobycide] moves Library (scoobycide) -> Hand (scoobycide) (Draw).
+- Turn 2, seq 24: Thundering Falls [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Battlefield (PlayLand).
+- Turn 2, seq 27: Spirebluff Canal [owner=scoobycide, controller=scoobycide] moves Library (scoobycide) -> Graveyard (scoobycide) (Surveil).
+- Turn 3, seq 41: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 44: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 47: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 52: Stormcatch Mentor [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Exile (Exile).
+- Turn 4, seq 66: Ill-Timed Explosion [owner/controller metadata unavailable] moves Library (scoobycide) -> Hand (scoobycide) (Draw).
+- Turn 4, seq 69: Spirebluff Canal [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Battlefield (PlayLand).
+- Turn 4, seq 70: Stormcatch Mentor [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Stack (CastSpell).
+- Turn 4, seq 73: Stormcatch Mentor [owner=scoobycide, controller=scoobycide] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 94: Rush of Dread [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 97: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 98: Shoot the Sheriff [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 102: Stormcatch Mentor [owner=scoobycide, controller=scoobycide] moves Battlefield -> Graveyard (scoobycide) (Destroy).
+- Turn 5, seq 102: Shoot the Sheriff [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 6, seq 122: Balmor, Battlemage Captain [owner/controller metadata unavailable] moves Library (scoobycide) -> Hand (scoobycide) (Draw).
+- Turn 6, seq 125: Mountain [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Battlefield (PlayLand).
+- Turn 6, seq 126: Boosted Sloop [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Stack (CastSpell).
+- Turn 6, seq 129: Boosted Sloop [owner=scoobycide, controller=scoobycide] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 143: Stroke of Midnight [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 146: Stroke of Midnight [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 150: Boosted Sloop [owner=scoobycide, controller=scoobycide] moves Battlefield -> Graveyard (scoobycide) (Destroy).
+- Turn 7, seq 150: Stroke of Midnight [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 8, seq 170: Ral, Crackling Wit [owner/controller metadata unavailable] moves Library (scoobycide) -> Hand (scoobycide) (Draw).
+- Turn 8, seq 173: Mountain [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Battlefield (PlayLand).
+- Turn 8, seq 174: Ral, Crackling Wit [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Stack (CastSpell).
+- Turn 8, seq 177: Ral, Crackling Wit [owner=scoobycide, controller=scoobycide] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 200: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 203: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 205: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 206: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 209: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 235: Mm'menon, Uthros Exile [owner/controller metadata unavailable] moves Library (scoobycide) -> Hand (scoobycide) (Draw).
+- Turn 10, seq 239: Steam Vents [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Battlefield (PlayLand).
+- Turn 10, seq 240: Ill-Timed Explosion [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Stack (CastSpell).
+- Turn 10, seq 248: Island [owner/controller metadata unavailable] moves Library (scoobycide) -> Hand (scoobycide) (Draw).
+- Turn 10, seq 248: Professor Zei, Anthropologist [owner/controller metadata unavailable] moves Library (scoobycide) -> Hand (scoobycide) (Draw).
+- Turn 10, seq 249: Island [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Graveyard (scoobycide) (Discard).
+- Turn 10, seq 249: Professor Zei, Anthropologist [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Graveyard (scoobycide) (Discard).
+- Turn 10, seq 249: Ill-Timed Explosion [owner=scoobycide, controller=scoobycide] moves Stack -> Graveyard (scoobycide) (Resolve).
+- Turn 10, seq 251: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 10, seq 251: Human [owner/controller metadata unavailable] moves Battlefield -> Graveyard (scoobycide) (SBA_Damage).
+- Turn 10, seq 251: Otter [owner/controller metadata unavailable] moves Battlefield -> Graveyard (scoobycide) (SBA_Damage).
+- Turn 10, seq 251: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 10, seq 251: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 10, seq 251: Stormcatch Mentor [owner/controller metadata unavailable] moves Exile -> Hand (scoobycide) (Return).
+- Turn 11, seq 268: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 284: Mountain [owner/controller metadata unavailable] moves Library (scoobycide) -> Hand (scoobycide) (Draw).
+- Turn 12, seq 287: Mountain [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Battlefield (PlayLand).
+- Turn 12, seq 288: Stormcatch Mentor [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Stack (CastSpell).
+- Turn 12, seq 291: Stormcatch Mentor [owner=scoobycide, controller=scoobycide] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 292: Mm'menon, Uthros Exile [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Stack (CastSpell).
+- Turn 12, seq 295: Mm'menon, Uthros Exile [owner=scoobycide, controller=scoobycide] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 318: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 321: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 13, seq 323: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 327: Mm'menon, Uthros Exile [owner=scoobycide, controller=scoobycide] moves Battlefield -> Exile (Exile).
+- Turn 14, seq 341: The Emperor of Palamecia [owner/controller metadata unavailable] moves Library (scoobycide) -> Hand (scoobycide) (Draw).
+- Turn 14, seq 344: The Emperor of Palamecia [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Stack (CastSpell).
+- Turn 14, seq 347: The Emperor of Palamecia [owner=scoobycide, controller=scoobycide] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 348: Balmor, Battlemage Captain [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Stack (CastSpell).
+- Turn 14, seq 351: Balmor, Battlemage Captain [owner=scoobycide, controller=scoobycide] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 374: Lunar Convocation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 15, seq 377: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 15, seq 380: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 16, seq 394: Island [owner/controller metadata unavailable] moves Library (scoobycide) -> Hand (scoobycide) (Draw).
+- Turn 17, seq 419: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 17, seq 422: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 17, seq 424: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 17, seq 428: The Emperor of Palamecia [owner=scoobycide, controller=scoobycide] moves Battlefield -> Exile (Exile).
+- Turn 18, seq 450: Slick Sequence [owner/controller metadata unavailable] moves Library (scoobycide) -> Hand (scoobycide) (Draw).
+- Turn 18, seq 455: Captain Storm, Cosmium Raider [owner/controller metadata unavailable] moves Library (scoobycide) -> Hand (scoobycide) (Draw).
+- Turn 18, seq 455: object 412 [owner/controller metadata unavailable] moves Library (scoobycide) -> Hand (scoobycide) (Draw).
+- Turn 18, seq 455: Splatter Technique [owner/controller metadata unavailable] moves Library (scoobycide) -> Hand (scoobycide) (Draw).
+- Turn 18, seq 456: Island [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Graveyard (scoobycide) (Discard).
+- Turn 18, seq 456: Captain Storm, Cosmium Raider [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Graveyard (scoobycide) (Discard).
+- Turn 18, seq 457: Splatter Technique [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Stack (CastSpell).
+- Turn 18, seq 476: object 428 [owner/controller metadata unavailable] moves Library (scoobycide) -> Hand (scoobycide) (Draw).
+- Turn 18, seq 476: object 429 [owner/controller metadata unavailable] moves Library (scoobycide) -> Hand (scoobycide) (Draw).
+- Turn 18, seq 476: object 430 [owner/controller metadata unavailable] moves Library (scoobycide) -> Hand (scoobycide) (Draw).
+- Turn 18, seq 476: object 431 [owner/controller metadata unavailable] moves Library (scoobycide) -> Hand (scoobycide) (Draw).
+- Turn 18, seq 476: Splatter Technique [owner=scoobycide, controller=scoobycide] moves Stack -> Graveyard (scoobycide) (Resolve).
+- Turn 18, seq 477: Slick Sequence [owner=scoobycide, controller=scoobycide] moves Hand (scoobycide) -> Stack (CastSpell).
+- Turn 18, seq 497: object 443 [owner/controller metadata unavailable] moves Library (scoobycide) -> Hand (scoobycide) (Draw).
+- Turn 18, seq 497: Slick Sequence [owner=scoobycide, controller=scoobycide] moves Stack -> Graveyard (scoobycide) (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 220 becomes object 279 [Plains].
+- Turn 2, seq 21: object 166 becomes object 280 [Mountain].
+- Turn 2, seq 24: object 164 becomes object 281 [Thundering Falls].
+- Turn 2, seq 27: object 167 becomes object 283 [Spirebluff Canal].
+- Turn 3, seq 41: object 226 becomes object 284 [Plains].
+- Turn 3, seq 44: object 221 becomes object 285 [Swamp].
+- Turn 3, seq 45: object 223 becomes object 286 [Deep-Cavern Bat].
+- Turn 3, seq 52: object 165 becomes object 290 [Stormcatch Mentor].
+- Turn 4, seq 66: object 168 becomes object 297 [Ill-Timed Explosion].
+- Turn 4, seq 69: object 161 becomes object 298 [Spirebluff Canal].
+- Turn 4, seq 70: object 160 becomes object 299 [Stormcatch Mentor].
+- Turn 5, seq 94: object 227 becomes object 302 [Rush of Dread].
+- Turn 5, seq 97: object 284 becomes object 303 [Plains].
+- Turn 5, seq 98: object 219 becomes object 304 [Shoot the Sheriff].
+- Turn 5, seq 102: object 299 becomes object 307 [Stormcatch Mentor].
+- Turn 5, seq 102: object 304 becomes object 308 [Shoot the Sheriff].
+- Turn 6, seq 122: object 169 becomes object 309 [Balmor, Battlemage Captain].
+- Turn 6, seq 125: object 163 becomes object 310 [Mountain].
+- Turn 6, seq 126: object 162 becomes object 311 [Boosted Sloop].
+- Turn 7, seq 143: object 228 becomes object 315 [Stroke of Midnight].
+- Turn 7, seq 146: object 315 becomes object 316 [Stroke of Midnight].
+- Turn 7, seq 150: object 311 becomes object 320 [Boosted Sloop].
+- Turn 7, seq 150: object 316 becomes object 322 [Stroke of Midnight].
+- Turn 8, seq 170: object 170 becomes object 323 [Ral, Crackling Wit].
+- Turn 8, seq 173: object 280 becomes object 324 [Mountain].
+- Turn 8, seq 174: object 323 becomes object 325 [Ral, Crackling Wit].
+- Turn 9, seq 200: object 229 becomes object 332 [Hinterland Sanctifier].
+- Turn 9, seq 203: object 332 becomes object 333 [Hinterland Sanctifier].
+- Turn 9, seq 206: object 222 becomes object 335 [Starscape Cleric].
+- Turn 10, seq 235: object 171 becomes object 341 [Mm'menon, Uthros Exile].
+- Turn 10, seq 239: object 159 becomes object 342 [Steam Vents].
+- Turn 10, seq 240: object 297 becomes object 343 [Ill-Timed Explosion].
+- Turn 10, seq 248: object 172 becomes object 350 [Island].
+- Turn 10, seq 248: object 173 becomes object 351 [Professor Zei, Anthropologist].
+- Turn 10, seq 249: object 350 becomes object 352 [Island].
+- Turn 10, seq 249: object 351 becomes object 353 [Professor Zei, Anthropologist].
+- Turn 10, seq 249: object 343 becomes object 356 [Ill-Timed Explosion].
+- Turn 10, seq 251: object 286 becomes object 357 [Deep-Cavern Bat].
+- Turn 10, seq 251: object 321 becomes object 358 [Human].
+- Turn 10, seq 251: object 331 becomes object 359 [Otter].
+- Turn 10, seq 251: object 333 becomes object 360 [Hinterland Sanctifier].
+- Turn 10, seq 251: object 335 becomes object 361 [Starscape Cleric].
+- Turn 10, seq 251: object 290 becomes object 362 [Stormcatch Mentor].
+- Turn 11, seq 268: object 230 becomes object 366 [Makeshift Binding].
+- Turn 12, seq 284: object 174 becomes object 367 [Mountain].
+- Turn 12, seq 287: object 367 becomes object 368 [Mountain].
+- Turn 12, seq 288: object 362 becomes object 369 [Stormcatch Mentor].
+- Turn 12, seq 292: object 341 becomes object 372 [Mm'menon, Uthros Exile].
+- Turn 13, seq 318: object 231 becomes object 378 [Starscape Cleric].
+- Turn 13, seq 321: object 366 becomes object 379 [Makeshift Binding].
+- Turn 13, seq 327: object 372 becomes object 384 [Mm'menon, Uthros Exile].
+- Turn 14, seq 341: object 175 becomes object 385 [The Emperor of Palamecia].
+- Turn 14, seq 344: object 385 becomes object 386 [The Emperor of Palamecia].
+- Turn 14, seq 348: object 309 becomes object 389 [Balmor, Battlemage Captain].
+- Turn 15, seq 374: object 232 becomes object 394 [Lunar Convocation].
+- Turn 15, seq 377: object 378 becomes object 395 [Starscape Cleric].
+- Turn 16, seq 394: object 176 becomes object 398 [Island].
+- Turn 17, seq 419: object 233 becomes object 401 [Makeshift Binding].
+- Turn 17, seq 422: object 401 becomes object 402 [Makeshift Binding].
+- Turn 17, seq 428: object 386 becomes object 407 [The Emperor of Palamecia].
+- Turn 18, seq 450: object 177 becomes object 409 [Slick Sequence].
+- Turn 18, seq 455: object 178 becomes object 411 [Captain Storm, Cosmium Raider].
+- Turn 18, seq 455: object 179 becomes object 412 [object 179].
+- Turn 18, seq 455: object 180 becomes object 413 [Splatter Technique].
+- Turn 18, seq 456: object 398 becomes object 414 [Island].
+- Turn 18, seq 456: object 411 becomes object 415 [Captain Storm, Cosmium Raider].
+- Turn 18, seq 457: object 413 becomes object 416 [Splatter Technique].
+- Turn 18, seq 476: object 181 becomes object 428 [object 181].
+- Turn 18, seq 476: object 182 becomes object 429 [object 182].
+- Turn 18, seq 476: object 183 becomes object 430 [object 183].
+- Turn 18, seq 476: object 184 becomes object 431 [object 184].
+- Turn 18, seq 476: object 416 becomes object 432 [Splatter Technique].
+- Turn 18, seq 477: object 409 becomes object 433 [Slick Sequence].
+- Turn 18, seq 497: object 185 becomes object 443 [object 185].
+- Turn 18, seq 497: object 433 becomes object 444 [Slick Sequence].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Plains (object 279) from Hand (gian31) to Battlefield.
+- Turn 2: scoobycide plays Thundering Falls (object 281) from Hand (scoobycide) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 285) from Hand (gian31) to Battlefield.
+- Turn 4: scoobycide plays Spirebluff Canal (object 298) from Hand (scoobycide) to Battlefield.
+- Turn 5: gian31 plays Plains (object 303) from Hand (gian31) to Battlefield.
+- Turn 6: scoobycide plays Mountain (object 310) from Hand (scoobycide) to Battlefield.
+- Turn 8: scoobycide plays Mountain (object 324) from Hand (scoobycide) to Battlefield.
+- Turn 10: scoobycide plays Steam Vents (object 342) from Hand (scoobycide) to Battlefield.
+- Turn 12: scoobycide plays Mountain (object 368) from Hand (scoobycide) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 18: ordered adjacent records Ral, Crackling Wit -> Balmor, Battlemage Captain; observed repetitions=2; net life: net life unavailable. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Balmor, Battlemage Captain=2, Ral, Crackling Wit=2.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Ral, Crackling Wit: casts=1; abilities=8 (triggered=8, activated=0) across turns [8, 8, 10, 10, 12, 14, 16, 18, 18]
+  observed effect totals: draws=0, tokens=5, counters=3, returns=0, damage=0, life_changes=0, other=0
+  observed effects: +1 counter(s), token creation
+- Starscape Cleric: casts=2; abilities=3 (triggered=3, activated=0) across turns [9, 9, 9, 15, 17]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=2
+  observed effects: life -1, synthetic event
+- Makeshift Binding: casts=2; abilities=2 (triggered=2, activated=0) across turns [13, 13, 17, 17]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=2
+  observed effects: exile, life +2
+- Balmor, Battlemage Captain: casts=1; abilities=2 (triggered=2, activated=0) across turns [14, 18, 18]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=12
+  observed effects: P/T +1/+0
+- Hinterland Sanctifier: casts=1; abilities=1 (triggered=1, activated=0) across turns [9, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Stormcatch Mentor: casts=2 across turns [4, 12]
+- Boosted Sloop: casts=1 across turns [6]
+- Deep-Cavern Bat: casts=1 across turns [3]
+- Ill-Timed Explosion: abilities=1 (triggered=1, activated=0) across turns [10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=5, life_changes=0, other=0
+  observed effects: 2 damage
+- Mm'menon, Uthros Exile: casts=1 across turns [12]
+- Shoot the Sheriff: casts=1 across turns [5]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Slick Sequence: casts=1 across turns [18]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=1, life_changes=1, other=1
+  observed effects: 2 damage, draw, life -2, synthetic event
+- Splatter Technique: casts=1 across turns [18]
+  observed effect totals: draws=4, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Stroke of Midnight: casts=1 across turns [7]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy, token creation
+- The Emperor of Palamecia: casts=1 across turns [14]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 4 - DeclareAttack (active=scoobycide)
+  attacker: Stormcatch Mentor (scoobycide) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 5 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Deep-Cavern Bat (gian31) -> scoobycide; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Deep-Cavern Bat (gian31) -> scoobycide; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=scoobycide)
+  attacker: Human (scoobycide) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Deep-Cavern Bat (gian31) -> seat 325; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack, DeclareBlock (active=scoobycide)
+  attacker: Otter (scoobycide) -> gian31; unblocked in this observed snapshot
+  attacker: Stormcatch Mentor (scoobycide) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 14 - DeclareAttack, DeclareBlock (active=scoobycide)
+  attacker: Otter (scoobycide) -> gian31; unblocked in this observed snapshot
+  attacker: Stormcatch Mentor (scoobycide) -> gian31; unblocked in this observed snapshot
+  attacker: Otter (scoobycide) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 16 - DeclareAttack, DeclareBlock (active=scoobycide)
+  attacker: Otter (scoobycide) -> gian31; unblocked in this observed snapshot
+  attacker: Stormcatch Mentor (scoobycide) -> gian31; unblocked in this observed snapshot
+  attacker: Otter (scoobycide) -> gian31; unblocked in this observed snapshot
+  attacker: The Emperor of Palamecia (scoobycide) -> gian31; unblocked in this observed snapshot
+  attacker: Balmor, Battlemage Captain (scoobycide) -> gian31; unblocked in this observed snapshot
+  attacker: Otter (scoobycide) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 17 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> seat 325; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 18 - DeclareAttack, DeclareBlock (active=scoobycide)
+  attacker: Otter (scoobycide) -> gian31; unblocked in this observed snapshot
+  attacker: Stormcatch Mentor (scoobycide) -> gian31; unblocked in this observed snapshot
+  attacker: Otter (scoobycide) -> gian31; unblocked in this observed snapshot
+  attacker: Balmor, Battlemage Captain (scoobycide) -> gian31; unblocked in this observed snapshot
+  attacker: Otter (scoobycide) -> gian31; unblocked in this observed snapshot
+  attacker: Otter (scoobycide) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 9: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: scoobycide loses 1 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Steam Vents | controller=scoobycide | owner=scoobycide | zone=Hand (latest_object_observation)
+- 160: Stormcatch Mentor | controller=scoobycide | owner=scoobycide | zone=Hand (latest_object_observation)
+- 161: Spirebluff Canal | controller=scoobycide | owner=scoobycide | zone=Hand (latest_object_observation)
+- 162: Boosted Sloop | controller=scoobycide | owner=scoobycide | zone=Hand (latest_object_observation)
+- 163: Mountain | controller=scoobycide | owner=scoobycide | zone=Hand (latest_object_observation)
+- 165: Stormcatch Mentor | controller=scoobycide | owner=scoobycide | zone=Hand (latest_object_observation)
+- 219: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 220: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 221: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 222: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 223: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 224: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 225: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 279: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 280: Mountain | controller=scoobycide | owner=scoobycide | zone=Hand (latest_object_observation)
+- 281: Thundering Falls | controller=scoobycide | owner=scoobycide | zone=Battlefield (latest_object_observation)
+- 282: object 282 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 283: Spirebluff Canal | controller=scoobycide | owner=scoobycide | zone=Graveyard (latest_object_observation)
+- 284: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 285: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 286: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 289: object 289 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 290: Stormcatch Mentor | controller=scoobycide | owner=scoobycide | zone=Exile (latest_object_observation)
+- 291: Mountain | controller=scoobycide | owner=scoobycide | zone=Hand (latest_object_observation)
+- 292: Spirebluff Canal | controller=scoobycide | owner=scoobycide | zone=Hand (latest_object_observation)
+- 293: Steam Vents | controller=scoobycide | owner=scoobycide | zone=Hand (latest_object_observation)
+- 294: Stormcatch Mentor | controller=scoobycide | owner=scoobycide | zone=Hand (latest_object_observation)
+- 295: Boosted Sloop | controller=scoobycide | owner=scoobycide | zone=Hand (latest_object_observation)
+- 296: Mountain | controller=scoobycide | owner=scoobycide | zone=Hand (latest_object_observation)
+- 298: Spirebluff Canal | controller=scoobycide | owner=scoobycide | zone=Battlefield (latest_object_observation)
+- 299: Stormcatch Mentor | controller=scoobycide | owner=scoobycide | zone=Battlefield (latest_object_observation)
+- 302: Rush of Dread | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 303: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 304: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 307: Stormcatch Mentor | controller=scoobycide | owner=scoobycide | zone=Graveyard (latest_object_observation)
+- 308: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 310: Mountain | controller=scoobycide | owner=scoobycide | zone=Battlefield (latest_object_observation)
+- 311: Boosted Sloop | controller=scoobycide | owner=scoobycide | zone=Stack (latest_object_observation)
+- 315: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 316: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 320: Boosted Sloop | controller=scoobycide | owner=scoobycide | zone=Graveyard (latest_object_observation)
+- 321: Human | controller=scoobycide | owner=scoobycide | zone=Hand (latest_object_observation)
+- 322: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 324: Mountain | controller=scoobycide | owner=scoobycide | zone=Battlefield (latest_object_observation)
+- 325: Ral, Crackling Wit | controller=scoobycide | owner=scoobycide | zone=Stack (latest_object_observation)
+- 330: object 330 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 331: Otter | controller=scoobycide | owner=scoobycide | zone=Hand (latest_object_observation)
+- 332: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 333: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 335: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 338: object 338 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 339: object 339 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 340: object 340 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 342: Steam Vents | controller=scoobycide | owner=scoobycide | zone=Battlefield (latest_object_observation)
+- 343: Ill-Timed Explosion | controller=scoobycide | owner=scoobycide | zone=Stack (latest_object_observation)
+- 348: object 348 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 349: object 349 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 352: Island | controller=scoobycide | owner=scoobycide | zone=Graveyard (latest_object_observation)
+- 353: Professor Zei, Anthropologist | controller=scoobycide | owner=scoobycide | zone=Graveyard (latest_object_observation)
+- 355: object 355 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 356: Ill-Timed Explosion | controller=scoobycide | owner=scoobycide | zone=Graveyard (latest_object_observation)
+- 357: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 360: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 361: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 363: Stormcatch Mentor | controller=scoobycide | owner=scoobycide | zone=Hand (latest_object_observation)
+- 364: object 364 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 365: Otter | controller=scoobycide | owner=scoobycide | zone=Battlefield (latest_object_observation)
+- 366: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 368: Mountain | controller=scoobycide | owner=scoobycide | zone=Battlefield (latest_object_observation)
+- 369: Stormcatch Mentor | controller=scoobycide | owner=scoobycide | zone=Battlefield (latest_object_observation)
+- 372: Mm'menon, Uthros Exile | controller=scoobycide | owner=scoobycide | zone=Battlefield (latest_object_observation)
+- 376: object 376 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 377: Otter | controller=scoobycide | owner=scoobycide | zone=Battlefield (latest_object_observation)
+- 378: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 379: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 383: object 383 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 384: Mm'menon, Uthros Exile | controller=scoobycide | owner=scoobycide | zone=Exile (latest_object_observation)
+- 386: The Emperor of Palamecia | controller=scoobycide | owner=scoobycide | zone=Battlefield (latest_object_observation)
+- 389: Balmor, Battlemage Captain | controller=scoobycide | owner=scoobycide | zone=Battlefield (latest_object_observation)
+- 392: object 392 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 393: Otter | controller=scoobycide | owner=scoobycide | zone=Battlefield (latest_object_observation)
+- 394: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 395: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 399: object 399 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 400: Otter | controller=scoobycide | owner=scoobycide | zone=Battlefield (latest_object_observation)
+- 401: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 402: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 406: object 406 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 407: The Emperor of Palamecia | controller=scoobycide | owner=scoobycide | zone=Exile (latest_object_observation)
+- 408: object 408 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 410: object 410 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 414: Island | controller=scoobycide | owner=scoobycide | zone=Graveyard (latest_object_observation)
+- 415: Captain Storm, Cosmium Raider | controller=scoobycide | owner=scoobycide | zone=Graveyard (latest_object_observation)
+- 416: Splatter Technique | controller=scoobycide | owner=scoobycide | zone=Stack (latest_object_observation)
+- 421: object 421 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 422: object 422 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 423: object 423 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 424: object 424 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 425: object 425 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 426: object 426 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 427: object 427 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 432: Splatter Technique | controller=scoobycide | owner=scoobycide | zone=Graveyard (latest_object_observation)
+- 433: Slick Sequence | controller=scoobycide | owner=scoobycide | zone=Stack (latest_object_observation)
+- 436: object 436 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 437: object 437 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 438: object 438 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 439: object 439 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 440: object 440 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 441: object 441 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 442: object 442 | controller=scoobycide | owner=scoobycide | zone=unknown (inferred unknown) (latest_object_observation)
+- 444: Slick Sequence | controller=scoobycide | owner=scoobycide | zone=Graveyard (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 38 total items
+  zones: Battlefield=12, Hand=15, Stack=4, unknown=7
+  objects: Starscape Cleric x5, Makeshift Binding x4, Plains x4, Deep-Cavern Bat x3, Hinterland Sanctifier x3, Shoot the Sheriff x3, Stroke of Midnight x3, Swamp x2, Bloodletter of Aclazotz, Bloodthirsty Conqueror, Lunar Convocation, Rush of Dread
+scoobycide: 73 total items
+  zones: Battlefield=15, Exile=3, Graveyard=10, Hand=16, Stack=5, unknown=24
+  objects: Stormcatch Mentor x8, Mountain x7, Otter x5, Boosted Sloop x4, Spirebluff Canal x4, Steam Vents x3, Ill-Timed Explosion x2, Island x2, Mm'menon, Uthros Exile x2, Slick Sequence x2, Splatter Technique x2, The Emperor of Palamecia x2
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+scoobycide:
+  Battlefield (15): Balmor, Battlemage Captain, Mm'menon, Uthros Exile, Mountain, Mountain, Mountain, Otter, Otter, Otter, Otter, Spirebluff Canal, Steam Vents, Stormcatch Mentor, Stormcatch Mentor, The Emperor of Palamecia, Thundering Falls
+  Graveyard: 10 card(s)
+gian31:
+  Battlefield (12): Deep-Cavern Bat, Deep-Cavern Bat, Hinterland Sanctifier, Hinterland Sanctifier, Plains, Plains, Shoot the Sheriff, Starscape Cleric, Starscape Cleric, Starscape Cleric, Stroke of Midnight, Swamp
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+31 objects have no resolved final zone and are omitted from the known board state.
+gian31: 7 unknown object(s)
+scoobycide: 24 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=31, Stack=9
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+gian31:
+  Battlefield (6): Plains, Swamp, Plains, Makeshift Binding, Starscape Cleric, Makeshift Binding
+  Graveyard (5): Shoot the Sheriff, Stroke of Midnight, Deep-Cavern Bat, Hinterland Sanctifier, Starscape Cleric
+scoobycide:
+  Battlefield (13): Thundering Falls, Spirebluff Canal, Mountain, Mountain, Ral, Crackling Wit, Steam Vents, Otter, Mountain, Stormcatch Mentor, Otter, Balmor, Battlemage Captain, Otter, Otter
+  Graveyard (10): Spirebluff Canal, Stormcatch Mentor, Boosted Sloop, Island, Professor Zei, Anthropologist, Ill-Timed Explosion, Island, Captain Storm, Cosmium Raider, Splatter Technique, Slick Sequence
+  Exile (2): Mm'menon, Uthros Exile, The Emperor of Palamecia
+Known non-persistent entries (counts only):
+  gian31: Hand=4, Limbo=1
+  scoobycide: Hand=6, Limbo=2, Stack=1
+  unknown: Library=78, Limbo=15
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1
+- Turn 2: gian31 Battlefield=1; scoobycide Battlefield=1; scoobycide Graveyard=1
+- Turn 3: gian31 Battlefield=3; scoobycide Battlefield=1; scoobycide Graveyard=1; scoobycide Exile=1
+- Turn 4: gian31 Battlefield=3; scoobycide Battlefield=3; scoobycide Graveyard=1; scoobycide Exile=1
+- Turn 5: gian31 Battlefield=4; gian31 Graveyard=1; scoobycide Battlefield=2; scoobycide Graveyard=2; scoobycide Exile=1
+- Turn 6: gian31 Battlefield=4; gian31 Graveyard=1; scoobycide Battlefield=4; scoobycide Graveyard=2; scoobycide Exile=1
+- Turn 7: gian31 Battlefield=4; gian31 Graveyard=2; scoobycide Battlefield=3; scoobycide Graveyard=3; scoobycide Exile=1
+- Turn 8: gian31 Battlefield=4; gian31 Graveyard=2; scoobycide Battlefield=5; scoobycide Graveyard=3; scoobycide Exile=1
+- Turn 9: gian31 Battlefield=6; gian31 Graveyard=2; scoobycide Battlefield=5; scoobycide Graveyard=3; scoobycide Exile=1
+- Turn 10: gian31 Battlefield=3; gian31 Graveyard=5; scoobycide Battlefield=6; scoobycide Graveyard=8
+- Turn 11: gian31 Battlefield=3; gian31 Graveyard=5; scoobycide Battlefield=6; scoobycide Graveyard=8
+- Turn 12: gian31 Battlefield=3; gian31 Graveyard=5; scoobycide Battlefield=9; scoobycide Graveyard=8
+- Turn 13: gian31 Battlefield=4; gian31 Graveyard=5; scoobycide Battlefield=8; scoobycide Graveyard=8; scoobycide Exile=1
+- Turn 14: gian31 Battlefield=4; gian31 Graveyard=5; scoobycide Battlefield=10; scoobycide Graveyard=8; scoobycide Exile=1
+- Turn 15: gian31 Battlefield=5; gian31 Graveyard=5; scoobycide Battlefield=10; scoobycide Graveyard=8; scoobycide Exile=1
+- Turn 16: gian31 Battlefield=5; gian31 Graveyard=5; scoobycide Battlefield=10; scoobycide Graveyard=8; scoobycide Exile=1
+- Turn 17: gian31 Battlefield=6; gian31 Graveyard=5; scoobycide Battlefield=9; scoobycide Graveyard=8; scoobycide Exile=2
+- Turn 18: gian31 Battlefield=6; gian31 Graveyard=5; scoobycide Battlefield=9; scoobycide Graveyard=12; scoobycide Exile=2
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 3: Deep-Cavern Bat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Stormcatch Mentor resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Boosted Sloop resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Ral, Crackling Wit resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Stormcatch Mentor resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Mm'menon, Uthros Exile resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: The Emperor of Palamecia resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Balmor, Battlemage Captain resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 17: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
