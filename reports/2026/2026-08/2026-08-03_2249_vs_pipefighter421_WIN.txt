@@ -1,0 +1,654 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, pipefighter421
+Seat map: Seat 1=gian31, Seat 2=pipefighter421
+Turn range (known): 1 - 15
+Unnumbered turn groups retained: 1
+Records: 20
+Action chains: 17
+Winner: gian31
+Final life: {'gian31': 7, 'pipefighter421': 3}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 14 (Phase_Main1; Ability of HYDRA Assault Robot, seq 339).
+Later numbered GRE record(s): 8 after action sequence 339 across turn(s) [14, 15]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+POST-ACTION GRE RECORDS - RESULT ORDER UNRESOLVED
+  - Turn 14, seq 345: tapped_changed.
+  - Turn 15, seq 357: tapped_changed.
+  - Turn 15, seq 357: tapped_changed.
+  - Turn 15, seq 357: tapped_changed.
+  - Turn 15, seq 357: tapped_changed.
+  - Turn 15, seq 357: tapped_changed.
+  - Turn 15, seq 359: identity_changed.
+  - Turn 15, seq 359: zone_transfer (Draw).
+  These records are retained for traceability; their order relative to the match-result payload is not asserted.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 25 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 10 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 8, 10, 11, 12] (raw records=10; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 14 explicit Library -> Hand movement(s); named in the draw record=7, resolved through an explicit identity transition=6, unresolved=1.
+Unresolved draw identities (explicit movements retained): Turn 14, seq 323, object 355.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Enduring Tenacity [161], Starscape Cleric [162], Swamp [163], Shoot the Sheriff [164], Bloodthirsty Conqueror [165], Rush of Dread [166], Swamp [167].
+  - unknown: 7 observed card(s): object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225], object 226 [226], object 227 [227].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 7, 'pipefighter421': 3}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 14 (Phase_Main1; Ability of HYDRA Assault Robot, seq 339).
+Last captured life snapshot: gian31 11 -> 7 (seq 349).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Blooming Marsh.
+- Turn 3: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Starscape Cleric.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Concealed Weapon.
+- Turn 5: actions: cards=0, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp.
+- Turn 6: actions: cards=2, abilities=0; explicit battlefield entries=Mountain, Electro, Assaulting Battery; explicit battlefield exits=Electro, Assaulting Battery.
+- Turn 7: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Starscape Cleric.
+- Turn 8: actions: cards=1, abilities=0; explicit battlefield entries=Stomping Ground, HYDRA Assault Robot.
+- Turn 9: actions: cards=0, abilities=0; combat snapshots=1; life mutations=1.
+- Turn 10: actions: cards=1, abilities=2; combat snapshots=1; life mutations=3; explicit battlefield entries=Rugged Highlands, Grim Reaper, Lethal Legionnaire.
+- Turn 11: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Plains, Enduring Tenacity.
+- Turn 12: actions: cards=1, abilities=2; combat snapshots=1; life mutations=1; explicit battlefield entries=Forest; explicit battlefield exits=Enduring Tenacity.
+- Turn 13: actions: cards=2, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Authority of the Consuls; explicit battlefield exits=Grim Reaper, Lethal Legionnaire.
+- Turn 14: actions: cards=1, abilities=4; combat snapshots=1; life mutations=5; explicit battlefield entries=Venom, Evil Unleashed.
+- Turn 15: actions: cards=0, abilities=0.
+- Turn None: actions: cards=0, abilities=0.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [281] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [281]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Electro, Assaulting Battery [282] Library (pipefighter421) -> Hand (pipefighter421) (Draw; GRE sequence 21).
+      Blooming Marsh [283] Hand (pipefighter421) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [281]
+      pipefighter421: Battlefield: Blooming Marsh [283]
+
+Turn 3
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=45] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=286)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 286) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 286) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [284] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 38).
+      Swamp [285] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 41).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Starscape Cleric [286], Swamp [281], Swamp [285]
+      pipefighter421: Battlefield: Blooming Marsh [283]
+
+Turn 4
+  - Concealed Weapon [valid_resolution_no_immediate_mutation, seq=65] (active=pipefighter421, phase=Phase_Main1, controller=pipefighter421, owner=pipefighter421, source_object=291)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Concealed Weapon resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Concealed Weapon (object 291) Hand (pipefighter421) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Concealed Weapon (object 291) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Venom, Evil Unleashed [289] Library (pipefighter421) -> Hand (pipefighter421) (Draw; GRE sequence 59).
+      Mountain [290] Hand (pipefighter421) -> Battlefield (PlayLand; GRE sequence 62).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Starscape Cleric [286], Swamp [281], Swamp [285]
+      pipefighter421: Battlefield: Blooming Marsh [283], Concealed Weapon [291], Mountain [290]
+
+Turn 5
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [286] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: pipefighter421 -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): pipefighter421 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hinterland Sanctifier [295] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 79).
+      Swamp [296] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 82).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Starscape Cleric [286], Swamp [281], Swamp [285], Swamp [296]
+      pipefighter421: Battlefield: Blooming Marsh [283], Concealed Weapon [291], Mountain [290]
+
+Turn 6
+  - Electro, Assaulting Battery [valid_resolution_no_immediate_mutation, seq=108] (active=pipefighter421, phase=Phase_Main1, controller=pipefighter421, owner=pipefighter421, source_object=299)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Electro, Assaulting Battery resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Electro, Assaulting Battery (object 299) Hand (pipefighter421) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Electro, Assaulting Battery (object 299) Stack -> Battlefield (Resolve; shared object ID)
+  - Shoot the Sheriff [observed_semantic_effect, seq=116] (active=unknown, controller=gian31, owner=gian31, source_object=303)
+      chronology reconciliation: parser turn group None conflicts with Turn 6; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: destroy
+      narrative: Shoot the Sheriff destroys Electro, Assaulting Battery.
+      explicit effect object references: Electro, Assaulting Battery [299], Electro, Assaulting Battery [306] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 303) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Electro, Assaulting Battery (object 306) Battlefield -> Graveyard (pipefighter421) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 308) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 303 -> transfer object 308 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Stomping Ground [297] Library (pipefighter421) -> Hand (pipefighter421) (Draw; GRE sequence 102).
+      Mountain [298] Hand (pipefighter421) -> Battlefield (PlayLand; GRE sequence 105).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Starscape Cleric [286], Swamp [281], Swamp [285], Swamp [296]; Graveyard: Shoot the Sheriff [308]
+      pipefighter421: Battlefield: Blooming Marsh [283], Concealed Weapon [291], Mountain [290], Mountain [298]; Graveyard: Electro, Assaulting Battery [306]
+
+Turn 7
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=137] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=310)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 310) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 310) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [286] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: pipefighter421 -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): pipefighter421 18 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [309] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 131).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Starscape Cleric [286], Starscape Cleric [310], Swamp [281], Swamp [285], Swamp [296]; Graveyard: Shoot the Sheriff [308]
+      pipefighter421: Battlefield: Blooming Marsh [283], Concealed Weapon [291], Mountain [290], Mountain [298]; Graveyard: Electro, Assaulting Battery [306]
+
+Turn 8
+  - HYDRA Assault Robot [valid_resolution_no_immediate_mutation, seq=164] (active=pipefighter421, phase=Phase_Main1, controller=pipefighter421, owner=pipefighter421, source_object=315)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: HYDRA Assault Robot resolves with no immediate observed mutation.
+      protocol-linked zone transfer: HYDRA Assault Robot (object 315) Hand (pipefighter421) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: HYDRA Assault Robot (object 315) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      HYDRA Assault Robot [313] Library (pipefighter421) -> Hand (pipefighter421) (Draw; GRE sequence 157).
+      Stomping Ground [314] Hand (pipefighter421) -> Battlefield (PlayLand; GRE sequence 161).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Starscape Cleric [286], Starscape Cleric [310], Swamp [281], Swamp [285], Swamp [296]; Graveyard: Shoot the Sheriff [308]
+      pipefighter421: Battlefield: Blooming Marsh [283], Concealed Weapon [291], HYDRA Assault Robot [315], Mountain [290], Mountain [298], Stomping Ground [314]; Graveyard: Electro, Assaulting Battery [306]
+
+Turn 9
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [286] (unblocked, observed P/T 2/1), Starscape Cleric [310] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: pipefighter421 -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): pipefighter421 16 -> 12
+    additional protocol-observed zone movements not assigned to an action chain:
+      Authority of the Consuls [318] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 178).
+
+Turn 10
+  - Ability of Rugged Highlands [observed_semantic_effect, seq=205] (active=pipefighter421, phase=Phase_Main1, controller=pipefighter421, owner=pipefighter421, source_object=320, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Rugged Highlands: pipefighter421 gains 1 life.
+  - Grim Reaper, Lethal Legionnaire [valid_resolution_no_immediate_mutation, seq=208] (active=pipefighter421, phase=Phase_Main1, controller=pipefighter421, owner=pipefighter421, source_object=322)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Grim Reaper, Lethal Legionnaire resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Grim Reaper, Lethal Legionnaire (object 322) Hand (pipefighter421) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Grim Reaper, Lethal Legionnaire (object 322) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of HYDRA Assault Robot [observed_semantic_effect, seq=212] (active=pipefighter421, phase=Phase_Main1, controller=pipefighter421, owner=pipefighter421, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of HYDRA Assault Robot: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 1] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=pipefighter421; frames: DeclareAttack -> DeclareBlock):
+      attackers: HYDRA Assault Robot [315] (unblocked, observed P/T 1/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 1; snapshot comparison does not reconcile (exact assignment unavailable).
+      numerical observation: defending-player life loss is 2x the observed snapshot power; an exact modifying source was not protocol-linked.
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2; pipefighter421 +1 (individual changes below; gains and losses may offset)
+    life: pipefighter421 12 -> 13
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 20 -> 19
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Fiery Annihilation [319] Library (pipefighter421) -> Hand (pipefighter421) (Draw; GRE sequence 200).
+      Rugged Highlands [320] Hand (pipefighter421) -> Battlefield (PlayLand; GRE sequence 203).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Starscape Cleric [286], Starscape Cleric [310], Swamp [281], Swamp [285], Swamp [296]; Graveyard: Shoot the Sheriff [308]
+      pipefighter421: Battlefield: Blooming Marsh [283], Concealed Weapon [291], Grim Reaper, Lethal Legionnaire [322], HYDRA Assault Robot [315], Mountain [290], Mountain [298], Rugged Highlands [320], Stomping Ground [314]; Graveyard: Electro, Assaulting Battery [306]
+
+Turn 11
+  - Enduring Tenacity [valid_resolution_no_immediate_mutation, seq=238] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=330)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Enduring Tenacity resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Enduring Tenacity (object 330) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Enduring Tenacity (object 330) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [286] (unblocked, observed P/T 2/1), Starscape Cleric [310] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: pipefighter421 -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): pipefighter421 13 -> 9
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [328] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 232).
+      Plains [329] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 235).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Enduring Tenacity [330], Plains [329], Starscape Cleric [286], Starscape Cleric [310], Swamp [281], Swamp [285], Swamp [296]; Graveyard: Shoot the Sheriff [308]
+      pipefighter421: Battlefield: Blooming Marsh [283], Concealed Weapon [291], Grim Reaper, Lethal Legionnaire [322], HYDRA Assault Robot [315], Mountain [290], Mountain [298], Rugged Highlands [320], Stomping Ground [314]; Graveyard: Electro, Assaulting Battery [306]
+
+Turn 12
+  - Fiery Annihilation [observed_semantic_effect, seq=266] (active=pipefighter421, phase=Phase_Main1, controller=pipefighter421, owner=pipefighter421, source_object=337)
+      effects: 5 damage
+      narrative: Fiery Annihilation: Enduring Tenacity takes 5 damage.
+      explicit effect object references: Enduring Tenacity [330] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Fiery Annihilation (object 337) Hand (pipefighter421) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fiery Annihilation (object 341) Stack -> Graveyard (pipefighter421) (Resolve; shared object ID)
+      identity continuity: source object 337 -> transfer object 341 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Enduring Tenacity (object 342) Battlefield -> Exile (SBA_Damage; shared object ID)
+      zone note: lethal damage was observed, but the protocol moved this object to Exile; a replacement effect or more specific protocol cause was not identified in captured records.
+  - Ability of Concealed Weapon [valid_resolution_no_immediate_mutation, seq=271] (active=pipefighter421, phase=Phase_Main1, controller=pipefighter421, owner=pipefighter421, source_object=291, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Concealed Weapon resolves with no immediate observed mutation.
+  - Ability of Grim Reaper, Lethal Legionnaire [valid_resolution_no_immediate_mutation, seq=279] (active=pipefighter421, phase=Phase_Combat, step=Step_DeclareAttack, controller=pipefighter421, owner=pipefighter421, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Grim Reaper, Lethal Legionnaire resolves with no immediate observed mutation.
+  Combat snapshots observed (active=pipefighter421; frames: DeclareAttack -> DeclareBlock):
+      attackers: HYDRA Assault Robot [315] (unblocked, observed P/T 4/3), Grim Reaper, Lethal Legionnaire [322] (unblocked, observed P/T 3/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 7; observed attacker power total: 7; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -7 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 7 + observed modifiers 0 = 7; individual assignment unavailable): gian31 18 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [335] Library (pipefighter421) -> Hand (pipefighter421) (Draw; GRE sequence 258).
+      Forest [336] Hand (pipefighter421) -> Battlefield (PlayLand; GRE sequence 261).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [329], Starscape Cleric [286], Starscape Cleric [310], Swamp [281], Swamp [285], Swamp [296]; Graveyard: Shoot the Sheriff [308]; Exile: Enduring Tenacity [342]
+      pipefighter421: Battlefield: Blooming Marsh [283], Concealed Weapon [291], Forest [336], Grim Reaper, Lethal Legionnaire [322], HYDRA Assault Robot [315], Mountain [290], Mountain [298], Rugged Highlands [320], Stomping Ground [314]; Graveyard: Electro, Assaulting Battery [306], Fiery Annihilation [341]
+
+Turn 13
+  - Shoot the Sheriff [observed_semantic_effect, seq=300] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=348)
+      effects: destroy
+      narrative: Shoot the Sheriff destroys Grim Reaper, Lethal Legionnaire.
+      explicit effect object references: Grim Reaper, Lethal Legionnaire [322], Grim Reaper, Lethal Legionnaire [351] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 348) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Grim Reaper, Lethal Legionnaire (object 351) Battlefield -> Graveyard (pipefighter421) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 352) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 348 -> transfer object 352 (explicit GRE ObjectIdChanged chain).
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=303] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=353)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 353) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 353) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [286] (unblocked, observed P/T 2/1), Starscape Cleric [310] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: pipefighter421 -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): pipefighter421 9 -> 5
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shoot the Sheriff [347] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 293).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [353], Plains [329], Starscape Cleric [286], Starscape Cleric [310], Swamp [281], Swamp [285], Swamp [296]; Graveyard: Shoot the Sheriff [308], Shoot the Sheriff [352]; Exile: Enduring Tenacity [342]
+      pipefighter421: Battlefield: Blooming Marsh [283], Concealed Weapon [291], Forest [336], HYDRA Assault Robot [315], Mountain [290], Mountain [298], Rugged Highlands [320], Stomping Ground [314]; Graveyard: Electro, Assaulting Battery [306], Fiery Annihilation [341], Grim Reaper, Lethal Legionnaire [351]
+
+Turn 14
+  - Venom, Evil Unleashed [valid_resolution_no_immediate_mutation, seq=328] (active=pipefighter421, phase=Phase_Main1, controller=pipefighter421, owner=pipefighter421, source_object=356)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Venom, Evil Unleashed resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Venom, Evil Unleashed (object 356) Hand (pipefighter421) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Venom, Evil Unleashed (object 356) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=332] (active=pipefighter421, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=335] (active=pipefighter421, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=310, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: pipefighter421 loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=337] (active=pipefighter421, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=286, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: pipefighter421 loses 1 life.
+  - Ability of HYDRA Assault Robot [observed_semantic_effect, seq=339] (active=pipefighter421, phase=Phase_Main1, controller=pipefighter421, owner=pipefighter421, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of HYDRA Assault Robot: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 1] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=pipefighter421; frames: DeclareAttack -> DeclareBlock):
+      attackers: HYDRA Assault Robot [315] (unblocked, observed P/T 4/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -4; pipefighter421 -2 (individual changes below; gains and losses may offset)
+    life: gian31 11 -> 12
+    life: pipefighter421 5 -> 4
+    life: pipefighter421 4 -> 3
+    life (semantically attributed to HYDRA Assault Robot; direct protocol link unavailable): gian31 12 -> 11
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): gian31 11 -> 7
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 355 [355] Library (pipefighter421) -> Hand (pipefighter421) (Draw; GRE sequence 323).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [353], Plains [329], Starscape Cleric [286], Starscape Cleric [310], Swamp [281], Swamp [285], Swamp [296]; Graveyard: Shoot the Sheriff [308], Shoot the Sheriff [352]; Exile: Enduring Tenacity [342]
+      pipefighter421: Battlefield: Blooming Marsh [283], Concealed Weapon [291], Forest [336], HYDRA Assault Robot [315], Mountain [290], Mountain [298], Rugged Highlands [320], Stomping Ground [314], Venom, Evil Unleashed [356]; Graveyard: Electro, Assaulting Battery [306], Fiery Annihilation [341], Grim Reaper, Lethal Legionnaire [351]
+
+Turn 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodletter of Aclazotz [366] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 359).
+
+UNNUMBERED / UNRESOLVED TURN GROUP
+  - The captured records do not provide a verified numbered turn for the following events.
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 14, seq 339, Phase_Main1: gian31 12 -> 11. Semantic attribution: HYDRA Assault Robot; direct protocol link unavailable. Previous captured action: HYDRA Assault Robot.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Electro, Assaulting Battery [owner/controller metadata unavailable] moves Library (pipefighter421) -> Hand (pipefighter421) (Draw).
+- Turn 2, seq 24: Blooming Marsh [owner=pipefighter421, controller=pipefighter421] moves Hand (pipefighter421) -> Battlefield (PlayLand).
+- Turn 3, seq 38: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 41: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 42: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 45: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 59: Venom, Evil Unleashed [owner/controller metadata unavailable] moves Library (pipefighter421) -> Hand (pipefighter421) (Draw).
+- Turn 4, seq 62: Mountain [owner=pipefighter421, controller=pipefighter421] moves Hand (pipefighter421) -> Battlefield (PlayLand).
+- Turn 4, seq 63: Concealed Weapon [owner=pipefighter421, controller=pipefighter421] moves Hand (pipefighter421) -> Stack (CastSpell).
+- Turn 4, seq 65: Concealed Weapon [owner=pipefighter421, controller=pipefighter421] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 79: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 82: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 102: Stomping Ground [owner/controller metadata unavailable] moves Library (pipefighter421) -> Hand (pipefighter421) (Draw).
+- Turn 6, seq 105: Mountain [owner=pipefighter421, controller=pipefighter421] moves Hand (pipefighter421) -> Battlefield (PlayLand).
+- Turn 6, seq 106: Electro, Assaulting Battery [owner=pipefighter421, controller=pipefighter421] moves Hand (pipefighter421) -> Stack (CastSpell).
+- Turn 6, seq 108: Electro, Assaulting Battery [owner=pipefighter421, controller=pipefighter421] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 112: Shoot the Sheriff [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 116: Electro, Assaulting Battery [owner=pipefighter421, controller=pipefighter421] moves Battlefield -> Graveyard (pipefighter421) (Destroy).
+- Turn 6, seq 116: Shoot the Sheriff [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 7, seq 131: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 134: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 137: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 157: HYDRA Assault Robot [owner/controller metadata unavailable] moves Library (pipefighter421) -> Hand (pipefighter421) (Draw).
+- Turn 8, seq 161: Stomping Ground [owner=pipefighter421, controller=pipefighter421] moves Hand (pipefighter421) -> Battlefield (PlayLand).
+- Turn 8, seq 162: HYDRA Assault Robot [owner=pipefighter421, controller=pipefighter421] moves Hand (pipefighter421) -> Stack (CastSpell).
+- Turn 8, seq 164: HYDRA Assault Robot [owner=pipefighter421, controller=pipefighter421] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 178: Authority of the Consuls [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 200: Fiery Annihilation [owner/controller metadata unavailable] moves Library (pipefighter421) -> Hand (pipefighter421) (Draw).
+- Turn 10, seq 203: Rugged Highlands [owner=pipefighter421, controller=pipefighter421] moves Hand (pipefighter421) -> Battlefield (PlayLand).
+- Turn 10, seq 206: Grim Reaper, Lethal Legionnaire [owner=pipefighter421, controller=pipefighter421] moves Hand (pipefighter421) -> Stack (CastSpell).
+- Turn 10, seq 208: Grim Reaper, Lethal Legionnaire [owner=pipefighter421, controller=pipefighter421] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 232: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 235: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 11, seq 236: Enduring Tenacity [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 238: Enduring Tenacity [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 258: Forest [owner/controller metadata unavailable] moves Library (pipefighter421) -> Hand (pipefighter421) (Draw).
+- Turn 12, seq 261: Forest [owner=pipefighter421, controller=pipefighter421] moves Hand (pipefighter421) -> Battlefield (PlayLand).
+- Turn 12, seq 262: Fiery Annihilation [owner=pipefighter421, controller=pipefighter421] moves Hand (pipefighter421) -> Stack (CastSpell).
+- Turn 12, seq 266: Fiery Annihilation [owner=pipefighter421, controller=pipefighter421] moves Stack -> Graveyard (pipefighter421) (Resolve).
+- Turn 12, seq 266: Enduring Tenacity [owner=gian31, controller=gian31] moves Battlefield -> Exile (SBA_Damage).
+- Turn 13, seq 293: Shoot the Sheriff [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 296: Shoot the Sheriff [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 13, seq 300: Grim Reaper, Lethal Legionnaire [owner=pipefighter421, controller=pipefighter421] moves Battlefield -> Graveyard (pipefighter421) (Destroy).
+- Turn 13, seq 300: Shoot the Sheriff [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 13, seq 301: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 13, seq 303: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 323: object 355 [owner/controller metadata unavailable] moves Library (pipefighter421) -> Hand (pipefighter421) (Draw).
+- Turn 14, seq 326: Venom, Evil Unleashed [owner=pipefighter421, controller=pipefighter421] moves Hand (pipefighter421) -> Stack (CastSpell).
+- Turn 14, seq 328: Venom, Evil Unleashed [owner=pipefighter421, controller=pipefighter421] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 359: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 167 becomes object 281 [Swamp].
+- Turn 2, seq 21: object 228 becomes object 282 [Electro, Assaulting Battery].
+- Turn 2, seq 24: object 225 becomes object 283 [Blooming Marsh].
+- Turn 3, seq 38: object 168 becomes object 284 [Swamp].
+- Turn 3, seq 41: object 284 becomes object 285 [Swamp].
+- Turn 3, seq 42: object 162 becomes object 286 [Starscape Cleric].
+- Turn 4, seq 59: object 229 becomes object 289 [Venom, Evil Unleashed].
+- Turn 4, seq 62: object 221 becomes object 290 [Mountain].
+- Turn 4, seq 63: object 227 becomes object 291 [Concealed Weapon].
+- Turn 5, seq 79: object 169 becomes object 295 [Hinterland Sanctifier].
+- Turn 5, seq 82: object 163 becomes object 296 [Swamp].
+- Turn 6, seq 102: object 230 becomes object 297 [Stomping Ground].
+- Turn 6, seq 105: object 223 becomes object 298 [Mountain].
+- Turn 6, seq 106: object 282 becomes object 299 [Electro, Assaulting Battery].
+- Turn 6, seq 112: object 164 becomes object 303 [Shoot the Sheriff].
+- Turn 6, seq 116: object 299 becomes object 306 [Electro, Assaulting Battery].
+- Turn 6, seq 116: object 303 becomes object 308 [Shoot the Sheriff].
+- Turn 7, seq 131: object 170 becomes object 309 [Starscape Cleric].
+- Turn 7, seq 134: object 309 becomes object 310 [Starscape Cleric].
+- Turn 8, seq 157: object 231 becomes object 313 [HYDRA Assault Robot].
+- Turn 8, seq 161: object 297 becomes object 314 [Stomping Ground].
+- Turn 8, seq 162: object 313 becomes object 315 [HYDRA Assault Robot].
+- Turn 9, seq 178: object 171 becomes object 318 [Authority of the Consuls].
+- Turn 10, seq 200: object 232 becomes object 319 [Fiery Annihilation].
+- Turn 10, seq 203: object 222 becomes object 320 [Rugged Highlands].
+- Turn 10, seq 206: object 226 becomes object 322 [Grim Reaper, Lethal Legionnaire].
+- Turn 11, seq 232: object 172 becomes object 328 [Plains].
+- Turn 11, seq 235: object 328 becomes object 329 [Plains].
+- Turn 11, seq 236: object 161 becomes object 330 [Enduring Tenacity].
+- Turn 12, seq 258: object 233 becomes object 335 [Forest].
+- Turn 12, seq 261: object 335 becomes object 336 [Forest].
+- Turn 12, seq 262: object 319 becomes object 337 [Fiery Annihilation].
+- Turn 12, seq 266: object 337 becomes object 341 [Fiery Annihilation].
+- Turn 12, seq 266: object 330 becomes object 342 [Enduring Tenacity].
+- Turn 13, seq 293: object 173 becomes object 347 [Shoot the Sheriff].
+- Turn 13, seq 296: object 347 becomes object 348 [Shoot the Sheriff].
+- Turn 13, seq 300: object 322 becomes object 351 [Grim Reaper, Lethal Legionnaire].
+- Turn 13, seq 300: object 348 becomes object 352 [Shoot the Sheriff].
+- Turn 13, seq 301: object 318 becomes object 353 [Authority of the Consuls].
+- Turn 14, seq 323: object 234 becomes object 355 [object 234].
+- Turn 14, seq 326: object 289 becomes object 356 [Venom, Evil Unleashed].
+- Turn 15, seq 359: object 174 becomes object 366 [Bloodletter of Aclazotz].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Swamp (object 281) from Hand (gian31) to Battlefield.
+- Turn 2: pipefighter421 plays Blooming Marsh (object 283) from Hand (pipefighter421) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 285) from Hand (gian31) to Battlefield.
+- Turn 4: pipefighter421 plays Mountain (object 290) from Hand (pipefighter421) to Battlefield.
+- Turn 5: gian31 plays Swamp (object 296) from Hand (gian31) to Battlefield.
+- Turn 6: pipefighter421 plays Mountain (object 298) from Hand (pipefighter421) to Battlefield.
+- Turn 8: pipefighter421 plays Stomping Ground (object 314) from Hand (pipefighter421) to Battlefield.
+- Turn 10: pipefighter421 plays Rugged Highlands (object 320) from Hand (pipefighter421) to Battlefield.
+- Turn 11: gian31 plays Plains (object 329) from Hand (gian31) to Battlefield.
+- Turn 12: pipefighter421 plays Forest (object 336) from Hand (pipefighter421) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Starscape Cleric: casts=2; abilities=2 (triggered=2, activated=0) across turns [3, 7, 14, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=1
+  observed effects: life -1, synthetic event
+- HYDRA Assault Robot: casts=1; abilities=2 (triggered=2, activated=0) across turns [8, 10, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=2, life_changes=2, other=2
+  observed effects: 1 damage, life -1, synthetic event
+- Authority of the Consuls: casts=1; abilities=1 (triggered=1, activated=0) across turns [13, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Concealed Weapon: casts=1; abilities=1 (triggered=1, activated=0) across turns [4, 12]
+- Grim Reaper, Lethal Legionnaire: casts=1; abilities=1 (triggered=1, activated=0) across turns [10, 12]
+- Shoot the Sheriff: casts=2 across turns [13, 6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: destroy
+- Electro, Assaulting Battery: casts=1 across turns [6]
+- Enduring Tenacity: casts=1 across turns [11]
+- Fiery Annihilation: casts=1 across turns [12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 5 damage
+- Rugged Highlands: abilities=1 (triggered=1, activated=0) across turns [10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Venom, Evil Unleashed: casts=1 across turns [14]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> pipefighter421; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> pipefighter421; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> pipefighter421; unblocked in this observed snapshot
+  attacker: Starscape Cleric (gian31) -> pipefighter421; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, DeclareBlock (active=pipefighter421)
+  attacker: HYDRA Assault Robot (pipefighter421) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> pipefighter421; unblocked in this observed snapshot
+  attacker: Starscape Cleric (gian31) -> pipefighter421; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack, DeclareBlock (active=pipefighter421)
+  attacker: HYDRA Assault Robot (pipefighter421) -> gian31; unblocked in this observed snapshot
+  attacker: Grim Reaper, Lethal Legionnaire (pipefighter421) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> pipefighter421; unblocked in this observed snapshot
+  attacker: Starscape Cleric (gian31) -> pipefighter421; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 14 - DeclareAttack, DeclareBlock (active=pipefighter421)
+  attacker: HYDRA Assault Robot (pipefighter421) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 12: Ability of Grim Reaper, Lethal Legionnaire (active=pipefighter421) - Ability of Grim Reaper, Lethal Legionnaire resolves with no immediate observed mutation.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 161: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 166: Rush of Dread | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 167: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 281: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 283: Blooming Marsh | controller=pipefighter421 | owner=pipefighter421 | zone=Battlefield (latest_object_observation)
+- 284: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 285: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 286: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 290: Mountain | controller=pipefighter421 | owner=pipefighter421 | zone=Battlefield (latest_object_observation)
+- 291: Concealed Weapon | controller=pipefighter421 | owner=pipefighter421 | zone=Stack (latest_object_observation)
+- 295: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 296: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 298: Mountain | controller=pipefighter421 | owner=pipefighter421 | zone=Battlefield (latest_object_observation)
+- 299: Electro, Assaulting Battery | controller=pipefighter421 | owner=pipefighter421 | zone=Battlefield (latest_object_observation)
+- 303: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 306: Electro, Assaulting Battery | controller=pipefighter421 | owner=pipefighter421 | zone=Graveyard (latest_object_observation)
+- 307: object 307 | controller=pipefighter421 | owner=pipefighter421 | zone=unknown (inferred unknown) (latest_object_observation)
+- 308: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 309: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 310: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 314: Stomping Ground | controller=pipefighter421 | owner=pipefighter421 | zone=Battlefield (latest_object_observation)
+- 315: HYDRA Assault Robot | controller=pipefighter421 | owner=pipefighter421 | zone=Battlefield (latest_object_observation)
+- 318: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 320: Rugged Highlands | controller=pipefighter421 | owner=pipefighter421 | zone=Battlefield (latest_object_observation)
+- 321: object 321 | controller=pipefighter421 | owner=pipefighter421 | zone=unknown (inferred unknown) (latest_object_observation)
+- 322: Grim Reaper, Lethal Legionnaire | controller=pipefighter421 | owner=pipefighter421 | zone=Battlefield (latest_object_observation)
+- 327: object 327 | controller=pipefighter421 | owner=pipefighter421 | zone=unknown (inferred unknown) (latest_object_observation)
+- 328: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 329: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 330: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 336: Forest | controller=pipefighter421 | owner=pipefighter421 | zone=Battlefield (latest_object_observation)
+- 337: Fiery Annihilation | controller=pipefighter421 | owner=pipefighter421 | zone=Stack (latest_object_observation)
+- 341: Fiery Annihilation | controller=pipefighter421 | owner=pipefighter421 | zone=Graveyard (latest_object_observation)
+- 342: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 343: object 343 | controller=pipefighter421 | owner=pipefighter421 | zone=unknown (inferred unknown) (latest_object_observation)
+- 346: object 346 | controller=pipefighter421 | owner=pipefighter421 | zone=unknown (inferred unknown) (latest_object_observation)
+- 347: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 348: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 351: Grim Reaper, Lethal Legionnaire | controller=pipefighter421 | owner=pipefighter421 | zone=Graveyard (latest_object_observation)
+- 352: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 353: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 356: Venom, Evil Unleashed | controller=pipefighter421 | owner=pipefighter421 | zone=Battlefield (latest_object_observation)
+- 362: object 362 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 363: object 363 | controller=pipefighter421 | owner=pipefighter421 | zone=unknown (inferred unknown) (latest_object_observation)
+- 364: object 364 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 365: object 365 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 366: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 30 total items
+  zones: Battlefield=8, Hand=14, Stack=3, unknown=5
+  objects: Shoot the Sheriff x6, Swamp x6, Starscape Cleric x4, Enduring Tenacity x3, Authority of the Consuls x2, Plains x2, Bloodletter of Aclazotz, Bloodthirsty Conqueror, Hinterland Sanctifier, Rush of Dread, object 362, object 364
+pipefighter421: 21 total items
+  zones: Battlefield=10, Graveyard=3, Stack=2, unknown=6
+  objects: Electro, Assaulting Battery x2, Fiery Annihilation x2, Grim Reaper, Lethal Legionnaire x2, Mountain x2, Blooming Marsh, Concealed Weapon, Forest, HYDRA Assault Robot, Rugged Highlands, Stomping Ground, Venom, Evil Unleashed, object 307
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (8): Enduring Tenacity, Enduring Tenacity, Plains, Starscape Cleric, Starscape Cleric, Swamp, Swamp, Swamp
+  Graveyard: 0 card(s)
+pipefighter421:
+  Battlefield (10): Blooming Marsh, Electro, Assaulting Battery, Forest, Grim Reaper, Lethal Legionnaire, HYDRA Assault Robot, Mountain, Mountain, Rugged Highlands, Stomping Ground, Venom, Evil Unleashed
+  Graveyard: 3 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+11 objects have no resolved final zone and are omitted from the known board state.
+gian31: 5 unknown object(s)
+pipefighter421: 6 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=14, Stack=5
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+gian31:
+  Battlefield (7): Swamp, Swamp, Starscape Cleric, Swamp, Starscape Cleric, Plains, Authority of the Consuls
+  Graveyard (2): Shoot the Sheriff, Shoot the Sheriff
+  Exile (1): Enduring Tenacity
+pipefighter421:
+  Battlefield (9): Blooming Marsh, Mountain, Concealed Weapon, Mountain, Stomping Ground, HYDRA Assault Robot, Rugged Highlands, Forest, Venom, Evil Unleashed
+  Graveyard (3): Electro, Assaulting Battery, Fiery Annihilation, Grim Reaper, Lethal Legionnaire
+Known non-persistent entries (counts only):
+  gian31: Hand=4, Limbo=3
+  pipefighter421: Hand=1, Limbo=1
+  unknown: Hand=1, Library=92, Limbo=4
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1
+- Turn 2: gian31 Battlefield=1; pipefighter421 Battlefield=1
+- Turn 3: gian31 Battlefield=3; pipefighter421 Battlefield=1
+- Turn 4: gian31 Battlefield=3; pipefighter421 Battlefield=3
+- Turn 5: gian31 Battlefield=4; pipefighter421 Battlefield=3
+- Turn 6: gian31 Battlefield=4; gian31 Graveyard=1; pipefighter421 Battlefield=4; pipefighter421 Graveyard=1
+- Turn 7: gian31 Battlefield=5; gian31 Graveyard=1; pipefighter421 Battlefield=4; pipefighter421 Graveyard=1
+- Turn 8: gian31 Battlefield=5; gian31 Graveyard=1; pipefighter421 Battlefield=6; pipefighter421 Graveyard=1
+- Turn 9: gian31 Battlefield=5; gian31 Graveyard=1; pipefighter421 Battlefield=6; pipefighter421 Graveyard=1
+- Turn 10: gian31 Battlefield=5; gian31 Graveyard=1; pipefighter421 Battlefield=8; pipefighter421 Graveyard=1
+- Turn 11: gian31 Battlefield=7; gian31 Graveyard=1; pipefighter421 Battlefield=8; pipefighter421 Graveyard=1
+- Turn 12: gian31 Battlefield=6; gian31 Graveyard=1; gian31 Exile=1; pipefighter421 Battlefield=9; pipefighter421 Graveyard=2
+- Turn 13: gian31 Battlefield=7; gian31 Graveyard=2; gian31 Exile=1; pipefighter421 Battlefield=8; pipefighter421 Graveyard=3
+- Turn 14: gian31 Battlefield=7; gian31 Graveyard=2; gian31 Exile=1; pipefighter421 Battlefield=9; pipefighter421 Graveyard=3
+- Turn 15: gian31 Battlefield=7; gian31 Graveyard=2; gian31 Exile=1; pipefighter421 Battlefield=9; pipefighter421 Graveyard=3
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 3: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Concealed Weapon resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Electro, Assaulting Battery resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: HYDRA Assault Robot resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Grim Reaper, Lethal Legionnaire resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Enduring Tenacity resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Venom, Evil Unleashed resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
