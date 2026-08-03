@@ -1,0 +1,884 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, ChelseasGrind
+Seat map: Seat 1=gian31, Seat 2=ChelseasGrind
+Turn range (known): 1 - 24
+Unnumbered turn groups retained: 1
+Records: 25
+Action chains: 23
+Winner: ChelseasGrind
+Final life: {'gian31': -3, 'ChelseasGrind': 19}
+Lethal combat transition: gian31 2 -> -3. 1 unblocked attackers and observed P/T modifiers reconcile to 5 power; individual combat assignment unavailable.
+Lethal coverage (normalized): complete; explained=5/5; unexplained=0.
+Match conclusion: Life total reached 0 observed for gian31.
+Last captured action before match-result payload: Turn 24 (Phase_Combat, Step_DeclareAttack; Ability of Shroudstomper, seq 509).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 41 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 14 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 17, 20, 23, 24] (raw records=14; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 28 explicit Library -> Hand movement(s); named in the draw record=11, resolved through an explicit identity transition=14, unresolved=3.
+Unresolved draw identities (explicit movements retained): Turn 22, seq 449, object 462; Turn 24, seq 501, object 488; Turn 24, seq 509, object 490.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 6).
+  - gian31: 6 observed card(s): Makeshift Binding [284], Starscape Cleric [285], Brightblade Stoat [286], Swamp [287], Scoured Barrens [288], Godless Shrine [289].
+  - unknown: 7 observed card(s): object 223 [223], object 224 [224], object 225 [225], object 226 [226], object 227 [227], object 228 [228], object 229 [229].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: ChelseasGrind; observed final life totals: {'gian31': -3, 'ChelseasGrind': 19}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 24 (Phase_Combat, Step_DeclareAttack; Ability of Shroudstomper, seq 509).
+Last captured life snapshot: gian31 2 -> -3 (seq 513).
+Terminal condition observed: gian31 reached -3 life; exact lethal-source coverage is reported separately.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=1; life mutations=1; explicit battlefield entries=Scoured Barrens.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Restless Fortress.
+- Turn 3: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Starscape Cleric.
+- Turn 4: actions: cards=1, abilities=0; life mutations=1; explicit battlefield entries=Concealed Courtyard; explicit battlefield exits=Starscape Cleric.
+- Turn 5: actions: cards=1, abilities=0; explicit battlefield entries=Godless Shrine, Brightblade Stoat.
+- Turn 6: actions: cards=1, abilities=1; explicit battlefield entries=Concealed Courtyard, Trapped in the Screen; explicit battlefield exits=Brightblade Stoat.
+- Turn 7: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 8: actions: cards=0, abilities=0; explicit battlefield entries=Plains.
+- Turn 9: actions: cards=1, abilities=0; explicit battlefield entries=Hinterland Sanctifier.
+- Turn 10: actions: cards=0, abilities=0; life mutations=2; explicit battlefield entries=Plains; explicit battlefield exits=Hinterland Sanctifier.
+- Turn 11: actions: cards=0, abilities=0.
+- Turn 12: actions: cards=0, abilities=2; combat snapshots=1; life mutations=3; explicit battlefield entries=Swamp.
+- Turn 13: actions: cards=0, abilities=0.
+- Turn 14: actions: cards=1, abilities=1; explicit battlefield exits=Restless Fortress.
+- Turn 15: actions: cards=0, abilities=0.
+- Turn 16: actions: cards=0, abilities=0; life mutations=2.
+- Turn 17: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Bloodthirsty Conqueror.
+- Turn 18: actions: cards=1, abilities=1; life mutations=2; explicit battlefield entries=Shroudstomper.
+- Turn 19: actions: cards=1, abilities=1; combat snapshots=1; life mutations=2; explicit battlefield entries=Authority of the Consuls.
+- Turn 20: actions: cards=1, abilities=1; combat snapshots=1; life mutations=3; explicit battlefield entries=Temple of Silence; explicit battlefield exits=Bloodthirsty Conqueror, Shroudstomper.
+- Turn 21: actions: cards=0, abilities=0.
+- Turn 22: actions: cards=1, abilities=2; life mutations=4; explicit battlefield entries=Shroudstomper.
+- Turn 23: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 24: actions: cards=1, abilities=3; combat snapshots=1; life mutations=6; explicit battlefield entries=Bleachbone Verge, Shroudstomper.
+- Turn None: actions: cards=0, abilities=0.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=11] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=344, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [343] Hand (gian31) -> Library (gian31) (Put; GRE sequence 6).
+      Scoured Barrens [344] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 9).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Scoured Barrens [344]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Concealed Courtyard [346] Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw; GRE sequence 25).
+      Restless Fortress [347] Hand (ChelseasGrind) -> Battlefield (PlayLand; GRE sequence 28).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Scoured Barrens [344]
+      ChelseasGrind: Battlefield: Restless Fortress [347]
+
+Turn 3
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=49] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=350)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 350) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 350) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Rush of Dread [348] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 42).
+      Swamp [349] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 45).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Scoured Barrens [344], Starscape Cleric [350], Swamp [349]
+      ChelseasGrind: Battlefield: Restless Fortress [347]
+
+Turn 4
+  - Bitter Triumph [observed_semantic_effect, seq=72] (active=ChelseasGrind, phase=Phase_Main1, controller=ChelseasGrind, owner=ChelseasGrind, source_object=355)
+      effects: destroy
+      narrative: Bitter Triumph destroys Starscape Cleric.
+      explicit effect object references: Starscape Cleric [350], Starscape Cleric [358] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bitter Triumph (object 355) Hand (ChelseasGrind) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 358) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Bitter Triumph (object 359) Stack -> Graveyard (ChelseasGrind) (Resolve; shared object ID)
+      identity continuity: source object 355 -> transfer object 359 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: ChelseasGrind -3 (individual changes below; gains and losses may offset)
+    life: ChelseasGrind 20 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Trapped in the Screen [353] Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw; GRE sequence 63).
+      Concealed Courtyard [354] Hand (ChelseasGrind) -> Battlefield (PlayLand; GRE sequence 66).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Scoured Barrens [344], Swamp [349]; Graveyard: Starscape Cleric [358]
+      ChelseasGrind: Battlefield: Concealed Courtyard [354], Restless Fortress [347]; Graveyard: Bitter Triumph [359]
+
+Turn 5
+  - Brightblade Stoat [valid_resolution_no_immediate_mutation, seq=93] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=362)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Brightblade Stoat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Brightblade Stoat (object 362) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Brightblade Stoat (object 362) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shattered Sanctum [360] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 86).
+      Godless Shrine [361] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 90).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Brightblade Stoat [362], Godless Shrine [361], Scoured Barrens [344], Swamp [349]; Graveyard: Starscape Cleric [358]
+      ChelseasGrind: Battlefield: Concealed Courtyard [354], Restless Fortress [347]; Graveyard: Bitter Triumph [359]
+
+Turn 6
+  - Trapped in the Screen [valid_resolution_no_immediate_mutation, seq=113] (active=ChelseasGrind, phase=Phase_Main1, controller=ChelseasGrind, owner=ChelseasGrind, source_object=367)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Trapped in the Screen resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Trapped in the Screen (object 367) Hand (ChelseasGrind) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Trapped in the Screen (object 367) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Trapped in the Screen [observed_semantic_effect, seq=117] (active=ChelseasGrind, phase=Phase_Main1, controller=ChelseasGrind, owner=ChelseasGrind, source_object=367, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Trapped in the Screen: exiles Brightblade Stoat.
+      explicit effect object references: Brightblade Stoat [362], Brightblade Stoat [372] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Brightblade Stoat (object 372) Battlefield -> Exile (Exile; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [365] Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw; GRE sequence 107).
+      Concealed Courtyard [366] Hand (ChelseasGrind) -> Battlefield (PlayLand; GRE sequence 110).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [361], Scoured Barrens [344], Swamp [349]; Graveyard: Starscape Cleric [358]; Exile: Brightblade Stoat [372]
+      ChelseasGrind: Battlefield: Concealed Courtyard [354], Concealed Courtyard [366], Restless Fortress [347], Trapped in the Screen [367]; Graveyard: Bitter Triumph [359]
+
+Turn 7
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [373] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 131).
+      Swamp [374] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 134).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [361], Scoured Barrens [344], Swamp [349], Swamp [374]; Graveyard: Starscape Cleric [358]; Exile: Brightblade Stoat [372]
+      ChelseasGrind: Battlefield: Concealed Courtyard [354], Concealed Courtyard [366], Restless Fortress [347], Trapped in the Screen [367]; Graveyard: Bitter Triumph [359]
+
+Turn 8
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [375] Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw; GRE sequence 148).
+      Plains [376] Hand (ChelseasGrind) -> Battlefield (PlayLand; GRE sequence 151).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [361], Scoured Barrens [344], Swamp [349], Swamp [374]; Graveyard: Starscape Cleric [358]; Exile: Brightblade Stoat [372]
+      ChelseasGrind: Battlefield: Concealed Courtyard [354], Concealed Courtyard [366], Plains [376], Restless Fortress [347], Trapped in the Screen [367]; Graveyard: Bitter Triumph [359]
+
+Turn 9
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=170] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=378)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 378) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 378) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hinterland Sanctifier [377] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 165).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [361], Hinterland Sanctifier [378], Scoured Barrens [344], Swamp [349], Swamp [374]; Graveyard: Starscape Cleric [358]; Exile: Brightblade Stoat [372]
+      ChelseasGrind: Battlefield: Concealed Courtyard [354], Concealed Courtyard [366], Plains [376], Restless Fortress [347], Trapped in the Screen [367]; Graveyard: Bitter Triumph [359]
+
+Turn 10
+    net observed life change this turn: ChelseasGrind -4; gian31 -4 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 17
+    life: ChelseasGrind 17 -> 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [380] Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw; GRE sequence 184).
+      Plains [381] Hand (ChelseasGrind) -> Battlefield (PlayLand; GRE sequence 187).
+      Rankle's Prank [382] Hand (ChelseasGrind) -> Stack (CastSpell; GRE sequence 188).
+      Live or Die [387] Hand (ChelseasGrind) -> Graveyard (ChelseasGrind) (Discard; GRE sequence 193).
+      Swamp [388] Hand (ChelseasGrind) -> Graveyard (ChelseasGrind) (Discard; GRE sequence 193).
+      Makeshift Binding [389] Hand (gian31) -> Graveyard (gian31) (Discard; GRE sequence 193).
+      Shattered Sanctum [390] Hand (gian31) -> Graveyard (gian31) (Discard; GRE sequence 193).
+      Hinterland Sanctifier [391] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 194).
+      Rankle's Prank [392] Stack -> Graveyard (ChelseasGrind) (Resolve; GRE sequence 194).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [361], Scoured Barrens [344], Swamp [349], Swamp [374]; Graveyard: Hinterland Sanctifier [391], Makeshift Binding [389], Shattered Sanctum [390], Starscape Cleric [358]; Exile: Brightblade Stoat [372]
+      ChelseasGrind: Battlefield: Concealed Courtyard [354], Concealed Courtyard [366], Plains [376], Plains [381], Restless Fortress [347], Trapped in the Screen [367]; Graveyard: Bitter Triumph [359], Live or Die [387], Rankle's Prank [392], Swamp [388]
+
+Turn 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodthirsty Conqueror [393] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 208).
+
+Turn 12
+  - Ability of Restless Fortress [valid_resolution_no_immediate_mutation, seq=230] (active=ChelseasGrind, phase=Phase_Main1, controller=ChelseasGrind, owner=ChelseasGrind, source_object=347, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Restless Fortress resolves with no immediate observed mutation.
+  - Ability of Restless Fortress [observed_semantic_effect, seq=238] (active=ChelseasGrind, phase=Phase_Combat, step=Step_DeclareAttack, controller=ChelseasGrind, owner=ChelseasGrind, source_object=347, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 230 and 238; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life -2, life +2
+      narrative: Ability of Restless Fortress: gian31 loses 2 life; ChelseasGrind gains 2 life.
+  Combat snapshots observed (active=ChelseasGrind; frames: DeclareAttack -> DeclareBlock):
+      attackers: Restless Fortress [347] (unblocked, observed P/T 1/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: ChelseasGrind +2; gian31 -3 (individual changes below; gains and losses may offset)
+    life: gian31 17 -> 15
+    life: ChelseasGrind 13 -> 15
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 15 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shroudstomper [394] Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw; GRE sequence 224).
+      Swamp [395] Hand (ChelseasGrind) -> Battlefield (PlayLand; GRE sequence 227).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [361], Scoured Barrens [344], Swamp [349], Swamp [374]; Graveyard: Hinterland Sanctifier [391], Makeshift Binding [389], Shattered Sanctum [390], Starscape Cleric [358]; Exile: Brightblade Stoat [372]
+      ChelseasGrind: Battlefield: Concealed Courtyard [354], Concealed Courtyard [366], Plains [376], Plains [381], Restless Fortress [347], Swamp [395], Trapped in the Screen [367]; Graveyard: Bitter Triumph [359], Live or Die [387], Rankle's Prank [392], Swamp [388]
+
+Turn 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hero's Downfall [402] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 252).
+
+Turn 14
+  - Ability of Restless Fortress [valid_resolution_no_immediate_mutation, seq=273] (active=ChelseasGrind, phase=Phase_Main1, controller=ChelseasGrind, owner=ChelseasGrind, source_object=347, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Restless Fortress resolves with no immediate observed mutation.
+  - Hero's Downfall [observed_semantic_effect, seq=281] (active=unknown, controller=gian31, owner=gian31, source_object=409)
+      chronology reconciliation: parser turn group None conflicts with Turn 14; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: destroy
+      narrative: Hero's Downfall destroys Restless Fortress.
+      explicit effect object references: Restless Fortress [347], Restless Fortress [413] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hero's Downfall (object 409) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Restless Fortress (object 413) Battlefield -> Graveyard (ChelseasGrind) (Destroy; shared object ID)
+      protocol-linked zone transfer: Hero's Downfall (object 414) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 409 -> transfer object 414 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Rankle's Prank [403] Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw; GRE sequence 268).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [361], Scoured Barrens [344], Swamp [349], Swamp [374]; Graveyard: Hero's Downfall [414], Hinterland Sanctifier [391], Makeshift Binding [389], Shattered Sanctum [390], Starscape Cleric [358]; Exile: Brightblade Stoat [372]
+      ChelseasGrind: Battlefield: Concealed Courtyard [354], Concealed Courtyard [366], Plains [376], Plains [381], Swamp [395], Trapped in the Screen [367]; Graveyard: Bitter Triumph [359], Live or Die [387], Rankle's Prank [392], Restless Fortress [413], Swamp [388]
+
+Turn 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [415] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 293).
+
+Turn 16
+    net observed life change this turn: ChelseasGrind -4; gian31 -4 (individual changes below; gains and losses may offset)
+    life: gian31 14 -> 10
+    life: ChelseasGrind 15 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Zombify [416] Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw; GRE sequence 309).
+      Rankle's Prank [417] Hand (ChelseasGrind) -> Stack (CastSpell; GRE sequence 312).
+      Shroudstomper [422] Hand (ChelseasGrind) -> Graveyard (ChelseasGrind) (Discard; GRE sequence 317).
+      Zombify [423] Hand (ChelseasGrind) -> Graveyard (ChelseasGrind) (Discard; GRE sequence 317).
+      Rush of Dread [424] Hand (gian31) -> Graveyard (gian31) (Discard; GRE sequence 317).
+      Makeshift Binding [425] Hand (gian31) -> Graveyard (gian31) (Discard; GRE sequence 317).
+      Rankle's Prank [426] Stack -> Graveyard (ChelseasGrind) (Resolve; GRE sequence 317).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Godless Shrine [361], Scoured Barrens [344], Swamp [349], Swamp [374]; Graveyard: Hero's Downfall [414], Hinterland Sanctifier [391], Makeshift Binding [389], Makeshift Binding [425], Rush of Dread [424], Shattered Sanctum [390], Starscape Cleric [358]; Exile: Brightblade Stoat [372]
+      ChelseasGrind: Battlefield: Concealed Courtyard [354], Concealed Courtyard [366], Plains [376], Plains [381], Swamp [395], Trapped in the Screen [367]; Graveyard: Bitter Triumph [359], Live or Die [387], Rankle's Prank [392], Rankle's Prank [426], Restless Fortress [413], Shroudstomper [422], Swamp [388], Zombify [423]
+
+Turn 17
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation, seq=337] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=429)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 429) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 429) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [427] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 331).
+      Swamp [428] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 334).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodthirsty Conqueror [429], Godless Shrine [361], Scoured Barrens [344], Swamp [349], Swamp [374], Swamp [428]; Graveyard: Hero's Downfall [414], Hinterland Sanctifier [391], Makeshift Binding [389], Makeshift Binding [425], Rush of Dread [424], Shattered Sanctum [390], Starscape Cleric [358]; Exile: Brightblade Stoat [372]
+      ChelseasGrind: Battlefield: Concealed Courtyard [354], Concealed Courtyard [366], Plains [376], Plains [381], Swamp [395], Trapped in the Screen [367]; Graveyard: Bitter Triumph [359], Live or Die [387], Rankle's Prank [392], Rankle's Prank [426], Restless Fortress [413], Shroudstomper [422], Swamp [388], Zombify [423]
+
+Turn 18
+  - Zombify [observed_semantic_effect, seq=358] (active=ChelseasGrind, phase=Phase_Main1, controller=ChelseasGrind, owner=ChelseasGrind, source_object=436)
+      effects: return to battlefield
+      narrative: Zombify: a card/permanent returns.
+      explicit effect object references: Shroudstomper [422], Shroudstomper [441] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Zombify (object 436) Hand (ChelseasGrind) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Shroudstomper (object 441) Graveyard (ChelseasGrind) -> Battlefield (Return; shared object ID)
+      protocol-linked zone transfer: Zombify (object 443) Stack -> Graveyard (ChelseasGrind) (Resolve; shared object ID)
+      identity continuity: source object 436 -> transfer object 443 (explicit GRE ObjectIdChanged chain).
+  - Ability of Shroudstomper [observed_semantic_effect, seq=360] (active=ChelseasGrind, phase=Phase_Main1, controller=ChelseasGrind, owner=ChelseasGrind, source_object=441, source_last_explicit_zone=Battlefield)
+      effects: draw, life -2, life +2
+      narrative: Ability of Shroudstomper: draw; gian31 loses 2 life; ChelseasGrind gains 2 life.
+      explicit effect object references: object 239 [239], object 444 [444] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Emerge from the Cocoon (object 444) Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw; shared object ID)
+    net observed life change this turn: ChelseasGrind +2; gian31 -2 (individual changes below; gains and losses may offset)
+    life: gian31 10 -> 8
+    life: ChelseasGrind 11 -> 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Zombify [435] Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw; GRE sequence 351).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodthirsty Conqueror [429], Godless Shrine [361], Scoured Barrens [344], Swamp [349], Swamp [374], Swamp [428]; Graveyard: Hero's Downfall [414], Hinterland Sanctifier [391], Makeshift Binding [389], Makeshift Binding [425], Rush of Dread [424], Shattered Sanctum [390], Starscape Cleric [358]; Exile: Brightblade Stoat [372]
+      ChelseasGrind: Battlefield: Concealed Courtyard [354], Concealed Courtyard [366], Plains [376], Plains [381], Shroudstomper [441], Swamp [395], Trapped in the Screen [367]; Graveyard: Bitter Triumph [359], Live or Die [387], Rankle's Prank [392], Rankle's Prank [426], Restless Fortress [413], Swamp [388], Zombify [423], Zombify [443]
+
+Turn 19
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=379] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=446)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 446) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 446) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=391] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=429, source_last_explicit_zone=Battlefield)
+      effects: life +5
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 5 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Bloodthirsty Conqueror [429] (unblocked, observed P/T 5/5)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: ChelseasGrind -5; gian31 +5 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): ChelseasGrind 13 -> 8
+    life: gian31 8 -> 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Authority of the Consuls [445] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 374).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [446], Bloodthirsty Conqueror [429], Godless Shrine [361], Scoured Barrens [344], Swamp [349], Swamp [374], Swamp [428]; Graveyard: Hero's Downfall [414], Hinterland Sanctifier [391], Makeshift Binding [389], Makeshift Binding [425], Rush of Dread [424], Shattered Sanctum [390], Starscape Cleric [358]; Exile: Brightblade Stoat [372]
+      ChelseasGrind: Battlefield: Concealed Courtyard [354], Concealed Courtyard [366], Plains [376], Plains [381], Shroudstomper [441], Swamp [395], Trapped in the Screen [367]; Graveyard: Bitter Triumph [359], Live or Die [387], Rankle's Prank [392], Rankle's Prank [426], Restless Fortress [413], Swamp [388], Zombify [423], Zombify [443]
+
+Turn 20
+  - Ability of Shroudstomper [observed_semantic_effect, seq=415] (active=ChelseasGrind, phase=Phase_Combat, step=Step_DeclareAttack, controller=ChelseasGrind, owner=ChelseasGrind, source_object=441, source_last_explicit_zone=Battlefield)
+      effects: draw, life -2, life +2
+      narrative: Ability of Shroudstomper: draw; gian31 loses 2 life; ChelseasGrind gains 2 life.
+      explicit effect object references: object 241 [241], object 453 [453] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Split Up (object 453) Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw; shared object ID)
+  - Split Up [observed_semantic_effect, seq=427] (active=ChelseasGrind, phase=Phase_Main2, controller=ChelseasGrind, owner=ChelseasGrind, source_object=454)
+      effects: destroy, destroy
+      narrative: Split Up destroys Bloodthirsty Conqueror, Shroudstomper.
+      explicit effect object references: Bloodthirsty Conqueror [429], Shroudstomper [441], Bloodthirsty Conqueror [458], Shroudstomper [459] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Split Up (object 454) Hand (ChelseasGrind) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 458) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shroudstomper (object 459) Battlefield -> Graveyard (ChelseasGrind) (Destroy; shared object ID)
+      protocol-linked zone transfer: Split Up (object 460) Stack -> Graveyard (ChelseasGrind) (Resolve; shared object ID)
+      identity continuity: source object 454 -> transfer object 460 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=ChelseasGrind; frames: DeclareAttack -> DeclareBlock):
+      attackers: Shroudstomper [441] (unblocked, observed P/T 5/5)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: ChelseasGrind +2; gian31 -7 (individual changes below; gains and losses may offset)
+    life: gian31 13 -> 11
+    life: ChelseasGrind 8 -> 10
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 11 -> 6
+    additional protocol-observed zone movements not assigned to an action chain:
+      Temple of Silence [449] Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw; GRE sequence 401).
+      Temple of Silence [450] Hand (ChelseasGrind) -> Battlefield (PlayLand; GRE sequence 404).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [446], Godless Shrine [361], Scoured Barrens [344], Swamp [349], Swamp [374], Swamp [428]; Graveyard: Bloodthirsty Conqueror [458], Hero's Downfall [414], Hinterland Sanctifier [391], Makeshift Binding [389], Makeshift Binding [425], Rush of Dread [424], Shattered Sanctum [390], Starscape Cleric [358]; Exile: Brightblade Stoat [372]
+      ChelseasGrind: Battlefield: Concealed Courtyard [354], Concealed Courtyard [366], Plains [376], Plains [381], Swamp [395], Temple of Silence [450], Trapped in the Screen [367]; Graveyard: Bitter Triumph [359], Live or Die [387], Rankle's Prank [392], Rankle's Prank [426], Restless Fortress [413], Shroudstomper [459], Split Up [460], Swamp [388], Zombify [423], Zombify [443]
+
+Turn 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [461] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 433).
+
+Turn 22
+  - Emerge from the Cocoon [observed_semantic_effect, seq=456] (active=ChelseasGrind, phase=Phase_Main1, controller=ChelseasGrind, owner=ChelseasGrind, source_object=463)
+      effects: return to battlefield, life +3
+      narrative: Emerge from the Cocoon: a card/permanent returns; ChelseasGrind gains 3 life.
+      explicit effect object references: Shroudstomper [459], Shroudstomper [469] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Emerge from the Cocoon (object 463) Hand (ChelseasGrind) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Shroudstomper (object 469) Graveyard (ChelseasGrind) -> Battlefield (Return; shared object ID)
+      protocol-linked zone transfer: Emerge from the Cocoon (object 472) Stack -> Graveyard (ChelseasGrind) (Resolve; shared object ID)
+      identity continuity: source object 463 -> transfer object 472 (explicit GRE ObjectIdChanged chain).
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=458] (active=ChelseasGrind, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=446, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Shroudstomper [observed_semantic_effect, seq=460] (active=ChelseasGrind, phase=Phase_Main1, controller=ChelseasGrind, owner=ChelseasGrind, source_object=469, source_last_explicit_zone=Battlefield)
+      effects: draw, life -2, life +2
+      narrative: Ability of Shroudstomper: draw; gian31 loses 2 life; ChelseasGrind gains 2 life.
+      explicit effect object references: object 243 [243], object 473 [473] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shroudstomper (object 473) Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw; shared object ID)
+    net observed life change this turn: ChelseasGrind +5; gian31 -1 (individual changes below; gains and losses may offset)
+    life: ChelseasGrind 10 -> 13
+    life: gian31 6 -> 7
+    life: gian31 7 -> 5
+    life: ChelseasGrind 13 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 462 [462] Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw; GRE sequence 449).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [446], Godless Shrine [361], Scoured Barrens [344], Swamp [349], Swamp [374], Swamp [428]; Graveyard: Bloodthirsty Conqueror [458], Hero's Downfall [414], Hinterland Sanctifier [391], Makeshift Binding [389], Makeshift Binding [425], Rush of Dread [424], Shattered Sanctum [390], Starscape Cleric [358]; Exile: Brightblade Stoat [372]
+      ChelseasGrind: Battlefield: Concealed Courtyard [354], Concealed Courtyard [366], Plains [376], Plains [381], Shroudstomper [469], Swamp [395], Temple of Silence [450], Trapped in the Screen [367]; Graveyard: Bitter Triumph [359], Emerge from the Cocoon [472], Live or Die [387], Rankle's Prank [392], Rankle's Prank [426], Restless Fortress [413], Split Up [460], Swamp [388], Zombify [423], Zombify [443]
+
+Turn 23
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [474] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 474).
+      Swamp [475] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 477).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [446], Godless Shrine [361], Scoured Barrens [344], Swamp [349], Swamp [374], Swamp [428], Swamp [475]; Graveyard: Bloodthirsty Conqueror [458], Hero's Downfall [414], Hinterland Sanctifier [391], Makeshift Binding [389], Makeshift Binding [425], Rush of Dread [424], Shattered Sanctum [390], Starscape Cleric [358]; Exile: Brightblade Stoat [372]
+      ChelseasGrind: Battlefield: Concealed Courtyard [354], Concealed Courtyard [366], Plains [376], Plains [381], Shroudstomper [469], Swamp [395], Temple of Silence [450], Trapped in the Screen [367]; Graveyard: Bitter Triumph [359], Emerge from the Cocoon [472], Live or Die [387], Rankle's Prank [392], Rankle's Prank [426], Restless Fortress [413], Split Up [460], Swamp [388], Zombify [423], Zombify [443]
+
+Turn 24
+  - Shroudstomper [valid_resolution_no_immediate_mutation, seq=497] (active=ChelseasGrind, phase=Phase_Main1, controller=ChelseasGrind, owner=ChelseasGrind, source_object=478)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Shroudstomper resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Shroudstomper (object 478) Hand (ChelseasGrind) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Shroudstomper (object 478) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=499] (active=ChelseasGrind, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=446, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Shroudstomper [observed_semantic_effect, seq=501] (active=ChelseasGrind, phase=Phase_Main1, controller=ChelseasGrind, owner=ChelseasGrind, source_object=478, source_last_explicit_zone=Battlefield)
+      effects: draw, life -2, life +2
+      narrative: Ability of Shroudstomper: draw; gian31 loses 2 life; ChelseasGrind gains 2 life.
+      explicit effect object references: object 245 [245], object 488 [488] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 488 (object 488) Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw; shared object ID)
+  - Ability of Shroudstomper [observed_semantic_effect, seq=509] (active=ChelseasGrind, phase=Phase_Combat, step=Step_DeclareAttack, controller=ChelseasGrind, owner=ChelseasGrind, source_object=469, source_last_explicit_zone=Battlefield)
+      effects: draw, life -2, life +2
+      narrative: Ability of Shroudstomper: draw; gian31 loses 2 life; ChelseasGrind gains 2 life.
+      explicit effect object references: object 246 [246], object 490 [490] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 490 (object 490) Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw; shared object ID)
+  Combat snapshots observed (active=ChelseasGrind; frames: DeclareAttack -> DeclareBlock):
+      attackers: Shroudstomper [469] (unblocked, observed P/T 5/5)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: ChelseasGrind +4; gian31 -8 (individual changes below; gains and losses may offset)
+    life: gian31 5 -> 6
+    life: gian31 6 -> 4
+    life: ChelseasGrind 15 -> 17
+    life: gian31 4 -> 2
+    life: ChelseasGrind 17 -> 19
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 2 -> -3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bleachbone Verge [476] Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw; GRE sequence 491).
+      Bleachbone Verge [477] Hand (ChelseasGrind) -> Battlefield (PlayLand; GRE sequence 494).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [446], Godless Shrine [361], Scoured Barrens [344], Swamp [349], Swamp [374], Swamp [428], Swamp [475]; Graveyard: Bloodthirsty Conqueror [458], Hero's Downfall [414], Hinterland Sanctifier [391], Makeshift Binding [389], Makeshift Binding [425], Rush of Dread [424], Shattered Sanctum [390], Starscape Cleric [358]; Exile: Brightblade Stoat [372]
+      ChelseasGrind: Battlefield: Bleachbone Verge [477], Concealed Courtyard [354], Concealed Courtyard [366], Plains [376], Plains [381], Shroudstomper [469], Shroudstomper [478], Swamp [395], Temple of Silence [450], Trapped in the Screen [367]; Graveyard: Bitter Triumph [359], Emerge from the Cocoon [472], Live or Die [387], Rankle's Prank [392], Rankle's Prank [426], Restless Fortress [413], Split Up [460], Swamp [388], Zombify [423], Zombify [443]
+
+UNNUMBERED / UNRESOLVED TURN GROUP
+  - The captured records do not provide a verified numbered turn for the following events.
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 4, seq 70: ChelseasGrind 20 -> 17. No source event correlated in captured records.
+- Turn 10, seq 193: gian31 21 -> 17; ChelseasGrind 17 -> 13. No source event correlated in captured records.
+- Turn 16, seq 317: gian31 14 -> 10; ChelseasGrind 15 -> 11. No source event correlated in captured records.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 24: gian31 2 -> -3 (required change 5). Explained by exact same-record evidence: 0/5; semantically attributed: 0/5; unexplained residual: 0/5.
+  Fully reconciled from observed combat state and modifiers: 5/5 (pre-modifier power=5; explicit modifier power=+0; reconstructed post-modifier power=5; individual assignment unavailable).
+  Combat snapshot observed at or before lethal: Turn 24; attackers=Shroudstomper [469]; observed snapshot power total=5; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 24, Ability of Shroudstomper (seq 509).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 6: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Library (gian31) (Put).
+- Turn 1, seq 9: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Concealed Courtyard [owner/controller metadata unavailable] moves Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw).
+- Turn 2, seq 28: Restless Fortress [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Battlefield (PlayLand).
+- Turn 3, seq 42: Rush of Dread [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 45: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 46: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 49: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 63: Trapped in the Screen [owner/controller metadata unavailable] moves Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw).
+- Turn 4, seq 66: Concealed Courtyard [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Battlefield (PlayLand).
+- Turn 4, seq 67: Bitter Triumph [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Stack (CastSpell).
+- Turn 4, seq 72: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 4, seq 72: Bitter Triumph [owner=ChelseasGrind, controller=ChelseasGrind] moves Stack -> Graveyard (ChelseasGrind) (Resolve).
+- Turn 5, seq 86: Shattered Sanctum [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 90: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 91: Brightblade Stoat [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 93: Brightblade Stoat [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 107: Plains [owner/controller metadata unavailable] moves Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw).
+- Turn 6, seq 110: Concealed Courtyard [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Battlefield (PlayLand).
+- Turn 6, seq 111: Trapped in the Screen [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Stack (CastSpell).
+- Turn 6, seq 113: Trapped in the Screen [owner=ChelseasGrind, controller=ChelseasGrind] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 117: Brightblade Stoat [owner=gian31, controller=gian31] moves Battlefield -> Exile (Exile).
+- Turn 7, seq 131: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 134: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 148: Swamp [owner/controller metadata unavailable] moves Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw).
+- Turn 8, seq 151: Plains [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Battlefield (PlayLand).
+- Turn 9, seq 165: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 168: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 170: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 184: Plains [owner/controller metadata unavailable] moves Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw).
+- Turn 10, seq 187: Plains [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Battlefield (PlayLand).
+- Turn 10, seq 188: Rankle's Prank [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Stack (CastSpell).
+- Turn 10, seq 193: Live or Die [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Graveyard (ChelseasGrind) (Discard).
+- Turn 10, seq 193: Swamp [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Graveyard (ChelseasGrind) (Discard).
+- Turn 10, seq 193: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Graveyard (gian31) (Discard).
+- Turn 10, seq 193: Shattered Sanctum [owner=gian31, controller=gian31] moves Hand (gian31) -> Graveyard (gian31) (Discard).
+- Turn 10, seq 194: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 10, seq 194: Rankle's Prank [owner=ChelseasGrind, controller=ChelseasGrind] moves Stack -> Graveyard (ChelseasGrind) (Resolve).
+- Turn 11, seq 208: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 224: Shroudstomper [owner/controller metadata unavailable] moves Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw).
+- Turn 12, seq 227: Swamp [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Battlefield (PlayLand).
+- Turn 13, seq 252: Hero's Downfall [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 268: Rankle's Prank [owner/controller metadata unavailable] moves Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw).
+- Turn 14, seq 277: Hero's Downfall [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 281: Restless Fortress [owner=ChelseasGrind, controller=ChelseasGrind] moves Battlefield -> Graveyard (ChelseasGrind) (Destroy).
+- Turn 14, seq 281: Hero's Downfall [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 15, seq 293: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 309: Zombify [owner/controller metadata unavailable] moves Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw).
+- Turn 16, seq 312: Rankle's Prank [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Stack (CastSpell).
+- Turn 16, seq 317: Shroudstomper [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Graveyard (ChelseasGrind) (Discard).
+- Turn 16, seq 317: Zombify [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Graveyard (ChelseasGrind) (Discard).
+- Turn 16, seq 317: Rush of Dread [owner=gian31, controller=gian31] moves Hand (gian31) -> Graveyard (gian31) (Discard).
+- Turn 16, seq 317: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Graveyard (gian31) (Discard).
+- Turn 16, seq 317: Rankle's Prank [owner=ChelseasGrind, controller=ChelseasGrind] moves Stack -> Graveyard (ChelseasGrind) (Resolve).
+- Turn 17, seq 331: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 17, seq 334: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 17, seq 335: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 17, seq 337: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 18, seq 351: Zombify [owner/controller metadata unavailable] moves Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw).
+- Turn 18, seq 354: Zombify [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Stack (CastSpell).
+- Turn 18, seq 358: Shroudstomper [owner=ChelseasGrind, controller=ChelseasGrind] moves Graveyard (ChelseasGrind) -> Battlefield (Return).
+- Turn 18, seq 358: Zombify [owner=ChelseasGrind, controller=ChelseasGrind] moves Stack -> Graveyard (ChelseasGrind) (Resolve).
+- Turn 18, seq 360: Emerge from the Cocoon [owner/controller metadata unavailable] moves Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw).
+- Turn 19, seq 374: Authority of the Consuls [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 19, seq 377: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 19, seq 379: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 20, seq 401: Temple of Silence [owner/controller metadata unavailable] moves Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw).
+- Turn 20, seq 404: Temple of Silence [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Battlefield (PlayLand).
+- Turn 20, seq 415: Split Up [owner/controller metadata unavailable] moves Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw).
+- Turn 20, seq 424: Split Up [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Stack (CastSpell).
+- Turn 20, seq 427: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 20, seq 427: Shroudstomper [owner=ChelseasGrind, controller=ChelseasGrind] moves Battlefield -> Graveyard (ChelseasGrind) (Destroy).
+- Turn 20, seq 427: Split Up [owner=ChelseasGrind, controller=ChelseasGrind] moves Stack -> Graveyard (ChelseasGrind) (Resolve).
+- Turn 21, seq 433: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 22, seq 449: object 462 [owner/controller metadata unavailable] moves Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw).
+- Turn 22, seq 452: Emerge from the Cocoon [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Stack (CastSpell).
+- Turn 22, seq 456: Shroudstomper [owner=ChelseasGrind, controller=ChelseasGrind] moves Graveyard (ChelseasGrind) -> Battlefield (Return).
+- Turn 22, seq 456: Emerge from the Cocoon [owner=ChelseasGrind, controller=ChelseasGrind] moves Stack -> Graveyard (ChelseasGrind) (Resolve).
+- Turn 22, seq 460: Shroudstomper [owner/controller metadata unavailable] moves Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw).
+- Turn 23, seq 474: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 23, seq 477: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 24, seq 491: Bleachbone Verge [owner/controller metadata unavailable] moves Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw).
+- Turn 24, seq 494: Bleachbone Verge [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Battlefield (PlayLand).
+- Turn 24, seq 495: Shroudstomper [owner=ChelseasGrind, controller=ChelseasGrind] moves Hand (ChelseasGrind) -> Stack (CastSpell).
+- Turn 24, seq 497: Shroudstomper [owner=ChelseasGrind, controller=ChelseasGrind] moves Stack -> Battlefield (Resolve).
+- Turn 24, seq 501: object 488 [owner/controller metadata unavailable] moves Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw).
+- Turn 24, seq 509: object 490 [owner/controller metadata unavailable] moves Library (ChelseasGrind) -> Hand (ChelseasGrind) (Draw).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 6: object 283 becomes object 343 [Starscape Cleric].
+- Turn 1, seq 9: object 288 becomes object 344 [Scoured Barrens].
+- Turn 2, seq 25: object 230 becomes object 346 [Concealed Courtyard].
+- Turn 2, seq 28: object 223 becomes object 347 [Restless Fortress].
+- Turn 3, seq 42: object 290 becomes object 348 [Rush of Dread].
+- Turn 3, seq 45: object 287 becomes object 349 [Swamp].
+- Turn 3, seq 46: object 285 becomes object 350 [Starscape Cleric].
+- Turn 4, seq 63: object 231 becomes object 353 [Trapped in the Screen].
+- Turn 4, seq 66: object 346 becomes object 354 [Concealed Courtyard].
+- Turn 4, seq 67: object 225 becomes object 355 [Bitter Triumph].
+- Turn 4, seq 72: object 350 becomes object 358 [Starscape Cleric].
+- Turn 4, seq 72: object 355 becomes object 359 [Bitter Triumph].
+- Turn 5, seq 86: object 291 becomes object 360 [Shattered Sanctum].
+- Turn 5, seq 90: object 289 becomes object 361 [Godless Shrine].
+- Turn 5, seq 91: object 286 becomes object 362 [Brightblade Stoat].
+- Turn 6, seq 107: object 232 becomes object 365 [Plains].
+- Turn 6, seq 110: object 226 becomes object 366 [Concealed Courtyard].
+- Turn 6, seq 111: object 353 becomes object 367 [Trapped in the Screen].
+- Turn 6, seq 117: object 362 becomes object 372 [Brightblade Stoat].
+- Turn 7, seq 131: object 292 becomes object 373 [Swamp].
+- Turn 7, seq 134: object 373 becomes object 374 [Swamp].
+- Turn 8, seq 148: object 233 becomes object 375 [Swamp].
+- Turn 8, seq 151: object 365 becomes object 376 [Plains].
+- Turn 9, seq 165: object 293 becomes object 377 [Hinterland Sanctifier].
+- Turn 9, seq 168: object 377 becomes object 378 [Hinterland Sanctifier].
+- Turn 10, seq 184: object 234 becomes object 380 [Plains].
+- Turn 10, seq 187: object 380 becomes object 381 [Plains].
+- Turn 10, seq 188: object 228 becomes object 382 [Rankle's Prank].
+- Turn 10, seq 193: object 224 becomes object 387 [Live or Die].
+- Turn 10, seq 193: object 375 becomes object 388 [Swamp].
+- Turn 10, seq 193: object 284 becomes object 389 [Makeshift Binding].
+- Turn 10, seq 193: object 360 becomes object 390 [Shattered Sanctum].
+- Turn 10, seq 194: object 378 becomes object 391 [Hinterland Sanctifier].
+- Turn 10, seq 194: object 382 becomes object 392 [Rankle's Prank].
+- Turn 11, seq 208: object 294 becomes object 393 [Bloodthirsty Conqueror].
+- Turn 12, seq 224: object 235 becomes object 394 [Shroudstomper].
+- Turn 12, seq 227: object 229 becomes object 395 [Swamp].
+- Turn 13, seq 252: object 295 becomes object 402 [Hero's Downfall].
+- Turn 14, seq 268: object 236 becomes object 403 [Rankle's Prank].
+- Turn 14, seq 277: object 402 becomes object 409 [Hero's Downfall].
+- Turn 14, seq 281: object 347 becomes object 413 [Restless Fortress].
+- Turn 14, seq 281: object 409 becomes object 414 [Hero's Downfall].
+- Turn 15, seq 293: object 296 becomes object 415 [Makeshift Binding].
+- Turn 16, seq 309: object 237 becomes object 416 [Zombify].
+- Turn 16, seq 312: object 403 becomes object 417 [Rankle's Prank].
+- Turn 16, seq 317: object 394 becomes object 422 [Shroudstomper].
+- Turn 16, seq 317: object 416 becomes object 423 [Zombify].
+- Turn 16, seq 317: object 348 becomes object 424 [Rush of Dread].
+- Turn 16, seq 317: object 415 becomes object 425 [Makeshift Binding].
+- Turn 16, seq 317: object 417 becomes object 426 [Rankle's Prank].
+- Turn 17, seq 331: object 297 becomes object 427 [Swamp].
+- Turn 17, seq 334: object 427 becomes object 428 [Swamp].
+- Turn 17, seq 335: object 393 becomes object 429 [Bloodthirsty Conqueror].
+- Turn 18, seq 351: object 238 becomes object 435 [Zombify].
+- Turn 18, seq 354: object 435 becomes object 436 [Zombify].
+- Turn 18, seq 358: object 422 becomes object 441 [Shroudstomper].
+- Turn 18, seq 358: object 436 becomes object 443 [Zombify].
+- Turn 18, seq 360: object 239 becomes object 444 [Emerge from the Cocoon].
+- Turn 19, seq 374: object 298 becomes object 445 [Authority of the Consuls].
+- Turn 19, seq 377: object 445 becomes object 446 [Authority of the Consuls].
+- Turn 20, seq 401: object 240 becomes object 449 [Temple of Silence].
+- Turn 20, seq 404: object 449 becomes object 450 [Temple of Silence].
+- Turn 20, seq 415: object 241 becomes object 453 [Split Up].
+- Turn 20, seq 424: object 453 becomes object 454 [Split Up].
+- Turn 20, seq 427: object 429 becomes object 458 [Bloodthirsty Conqueror].
+- Turn 20, seq 427: object 441 becomes object 459 [Shroudstomper].
+- Turn 20, seq 427: object 454 becomes object 460 [Split Up].
+- Turn 21, seq 433: object 299 becomes object 461 [Case of the Uneaten Feast].
+- Turn 22, seq 449: object 242 becomes object 462 [object 242].
+- Turn 22, seq 452: object 444 becomes object 463 [Emerge from the Cocoon].
+- Turn 22, seq 456: object 459 becomes object 469 [Shroudstomper].
+- Turn 22, seq 456: object 463 becomes object 472 [Emerge from the Cocoon].
+- Turn 22, seq 460: object 243 becomes object 473 [Shroudstomper].
+- Turn 23, seq 474: object 300 becomes object 474 [Swamp].
+- Turn 23, seq 477: object 474 becomes object 475 [Swamp].
+- Turn 24, seq 491: object 244 becomes object 476 [Bleachbone Verge].
+- Turn 24, seq 494: object 476 becomes object 477 [Bleachbone Verge].
+- Turn 24, seq 495: object 473 becomes object 478 [Shroudstomper].
+- Turn 24, seq 501: object 245 becomes object 488 [object 245].
+- Turn 24, seq 509: object 246 becomes object 490 [object 246].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Scoured Barrens (object 344) from Hand (gian31) to Battlefield.
+- Turn 2: ChelseasGrind plays Restless Fortress (object 347) from Hand (ChelseasGrind) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 349) from Hand (gian31) to Battlefield.
+- Turn 4: ChelseasGrind plays Concealed Courtyard (object 354) from Hand (ChelseasGrind) to Battlefield.
+- Turn 5: gian31 plays Godless Shrine (object 361) from Hand (gian31) to Battlefield.
+- Turn 6: ChelseasGrind plays Concealed Courtyard (object 366) from Hand (ChelseasGrind) to Battlefield.
+- Turn 7: gian31 plays Swamp (object 374) from Hand (gian31) to Battlefield.
+- Turn 8: ChelseasGrind plays Plains (object 376) from Hand (ChelseasGrind) to Battlefield.
+- Turn 10: ChelseasGrind plays Plains (object 381) from Hand (ChelseasGrind) to Battlefield.
+- Turn 12: ChelseasGrind plays Swamp (object 395) from Hand (ChelseasGrind) to Battlefield.
+- Turn 17: gian31 plays Swamp (object 428) from Hand (gian31) to Battlefield.
+- Turn 20: ChelseasGrind plays Temple of Silence (object 450) from Hand (ChelseasGrind) to Battlefield.
+- Turn 23: gian31 plays Swamp (object 475) from Hand (gian31) to Battlefield.
+- Turn 24: ChelseasGrind plays Bleachbone Verge (object 477) from Hand (ChelseasGrind) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Shroudstomper: casts=1; abilities=5 (triggered=5, activated=0) across turns [18, 20, 22, 24, 24, 24]
+  observed effect totals: draws=5, tokens=0, counters=0, returns=0, damage=0, life_changes=10, other=4
+  observed effects: draw, life +2, life -2, synthetic event
+- Authority of the Consuls: casts=1; abilities=2 (triggered=2, activated=0) across turns [19, 22, 24]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Restless Fortress: abilities=3 (triggered=3, activated=0) across turns [12, 12, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=1
+  observed effects: life +2, life -2, synthetic event
+- Bloodthirsty Conqueror: casts=1; abilities=1 (triggered=1, activated=0) across turns [17, 19]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +5
+- Trapped in the Screen: casts=1; abilities=1 (triggered=1, activated=0) across turns [6, 6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: exile
+- Bitter Triumph: casts=1 across turns [4]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Brightblade Stoat: casts=1 across turns [5]
+- Emerge from the Cocoon: casts=1 across turns [22]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=1, damage=0, life_changes=1, other=0
+  observed effects: life +3, return to battlefield
+- Hero's Downfall: casts=1 across turns [14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Hinterland Sanctifier: casts=1 across turns [9]
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [1]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Split Up: casts=1 across turns [20]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: destroy
+- Starscape Cleric: casts=1 across turns [3]
+- Zombify: casts=1 across turns [18]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=1, damage=0, life_changes=0, other=0
+  observed effects: return to battlefield
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 12 - DeclareAttack, DeclareBlock (active=ChelseasGrind)
+  attacker: Restless Fortress (ChelseasGrind) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 19 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Bloodthirsty Conqueror (gian31) -> ChelseasGrind; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 20 - DeclareAttack, DeclareBlock (active=ChelseasGrind)
+  attacker: Shroudstomper (ChelseasGrind) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 24 - DeclareAttack, DeclareBlock (active=ChelseasGrind)
+  attacker: Shroudstomper (ChelseasGrind) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 12: Ability of Restless Fortress (active=ChelseasGrind) - Ability of Restless Fortress: gian31 loses 2 life; ChelseasGrind gains 2 life.
+- Turn 19: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 5 life.
+- Turn 20: Ability of Shroudstomper (active=ChelseasGrind) - Ability of Shroudstomper: draw; gian31 loses 2 life; ChelseasGrind gains 2 life.
+- Turn 24: Ability of Shroudstomper (active=ChelseasGrind) - Ability of Shroudstomper: draw; gian31 loses 2 life; ChelseasGrind gains 2 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 163: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Rush of Dread | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 166: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 167: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 168: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 169: Brightblade Stoat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 283: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 284: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 285: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 286: Brightblade Stoat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 287: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 288: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 289: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 343: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 344: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 345: object 345 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 347: Restless Fortress | controller=ChelseasGrind | owner=ChelseasGrind | zone=Battlefield (latest_object_observation)
+- 348: Rush of Dread | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 349: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 350: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 354: Concealed Courtyard | controller=ChelseasGrind | owner=ChelseasGrind | zone=Battlefield (latest_object_observation)
+- 355: Bitter Triumph | controller=ChelseasGrind | owner=ChelseasGrind | zone=Stack (latest_object_observation)
+- 358: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 359: Bitter Triumph | controller=ChelseasGrind | owner=ChelseasGrind | zone=Graveyard (latest_object_observation)
+- 360: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 361: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 362: Brightblade Stoat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 366: Concealed Courtyard | controller=ChelseasGrind | owner=ChelseasGrind | zone=Battlefield (latest_object_observation)
+- 367: Trapped in the Screen | controller=ChelseasGrind | owner=ChelseasGrind | zone=Stack (latest_object_observation)
+- 371: object 371 | controller=ChelseasGrind | owner=ChelseasGrind | zone=unknown (inferred unknown) (latest_object_observation)
+- 372: Brightblade Stoat | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 373: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 374: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 376: Plains | controller=ChelseasGrind | owner=ChelseasGrind | zone=Battlefield (latest_object_observation)
+- 377: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 378: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 381: Plains | controller=ChelseasGrind | owner=ChelseasGrind | zone=Battlefield (latest_object_observation)
+- 382: Rankle's Prank | controller=ChelseasGrind | owner=ChelseasGrind | zone=Stack (latest_object_observation)
+- 387: Live or Die | controller=ChelseasGrind | owner=ChelseasGrind | zone=Graveyard (latest_object_observation)
+- 388: Swamp | controller=ChelseasGrind | owner=ChelseasGrind | zone=Graveyard (latest_object_observation)
+- 389: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 390: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 391: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 392: Rankle's Prank | controller=ChelseasGrind | owner=ChelseasGrind | zone=Graveyard (latest_object_observation)
+- 393: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 395: Swamp | controller=ChelseasGrind | owner=ChelseasGrind | zone=Battlefield (latest_object_observation)
+- 396: object 396 | controller=ChelseasGrind | owner=ChelseasGrind | zone=unknown (inferred unknown) (latest_object_observation)
+- 401: object 401 | controller=ChelseasGrind | owner=ChelseasGrind | zone=unknown (inferred unknown) (latest_object_observation)
+- 402: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 404: object 404 | controller=ChelseasGrind | owner=ChelseasGrind | zone=unknown (inferred unknown) (latest_object_observation)
+- 409: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 413: Restless Fortress | controller=ChelseasGrind | owner=ChelseasGrind | zone=Graveyard (latest_object_observation)
+- 414: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 415: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 417: Rankle's Prank | controller=ChelseasGrind | owner=ChelseasGrind | zone=Stack (latest_object_observation)
+- 422: Shroudstomper | controller=ChelseasGrind | owner=ChelseasGrind | zone=Graveyard (latest_object_observation)
+- 423: Zombify | controller=ChelseasGrind | owner=ChelseasGrind | zone=Graveyard (latest_object_observation)
+- 424: Rush of Dread | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 425: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 426: Rankle's Prank | controller=ChelseasGrind | owner=ChelseasGrind | zone=Graveyard (latest_object_observation)
+- 427: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 428: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 429: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 436: Zombify | controller=ChelseasGrind | owner=ChelseasGrind | zone=Stack (latest_object_observation)
+- 441: Shroudstomper | controller=ChelseasGrind | owner=ChelseasGrind | zone=Battlefield (latest_object_observation)
+- 442: object 442 | controller=ChelseasGrind | owner=ChelseasGrind | zone=unknown (inferred unknown) (latest_object_observation)
+- 443: Zombify | controller=ChelseasGrind | owner=ChelseasGrind | zone=Graveyard (latest_object_observation)
+- 445: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 446: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 448: object 448 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 450: Temple of Silence | controller=ChelseasGrind | owner=ChelseasGrind | zone=Battlefield (latest_object_observation)
+- 451: object 451 | controller=ChelseasGrind | owner=ChelseasGrind | zone=unknown (inferred unknown) (latest_object_observation)
+- 452: object 452 | controller=ChelseasGrind | owner=ChelseasGrind | zone=unknown (inferred unknown) (latest_object_observation)
+- 454: Split Up | controller=ChelseasGrind | owner=ChelseasGrind | zone=Stack (latest_object_observation)
+- 458: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 459: Shroudstomper | controller=ChelseasGrind | owner=ChelseasGrind | zone=Graveyard (latest_object_observation)
+- 460: Split Up | controller=ChelseasGrind | owner=ChelseasGrind | zone=Graveyard (latest_object_observation)
+- 461: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 463: Emerge from the Cocoon | controller=ChelseasGrind | owner=ChelseasGrind | zone=Stack (latest_object_observation)
+- 469: Shroudstomper | controller=ChelseasGrind | owner=ChelseasGrind | zone=Battlefield (latest_object_observation)
+- 470: object 470 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 471: object 471 | controller=ChelseasGrind | owner=ChelseasGrind | zone=unknown (inferred unknown) (latest_object_observation)
+- 472: Emerge from the Cocoon | controller=ChelseasGrind | owner=ChelseasGrind | zone=Graveyard (latest_object_observation)
+- 474: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 475: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 477: Bleachbone Verge | controller=ChelseasGrind | owner=ChelseasGrind | zone=Battlefield (latest_object_observation)
+- 478: Shroudstomper | controller=ChelseasGrind | owner=ChelseasGrind | zone=Battlefield (latest_object_observation)
+- 486: object 486 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 487: object 487 | controller=ChelseasGrind | owner=ChelseasGrind | zone=unknown (inferred unknown) (latest_object_observation)
+- 489: object 489 | controller=ChelseasGrind | owner=ChelseasGrind | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+ChelseasGrind: 40 total items
+  zones: Battlefield=11, Graveyard=12, Stack=7, unknown=10
+  objects: Shroudstomper x5, Rankle's Prank x4, Zombify x3, Bitter Triumph x2, Concealed Courtyard x2, Emerge from the Cocoon x2, Plains x2, Restless Fortress x2, Split Up x2, Swamp x2, Bleachbone Verge, Live or Die
+gian31: 51 total items
+  zones: Battlefield=11, Exile=1, Graveyard=8, Hand=25, Stack=2, unknown=4
+  objects: Swamp x10, Starscape Cleric x6, Brightblade Stoat x4, Hero's Downfall x4, Makeshift Binding x4, Bloodthirsty Conqueror x3, Hinterland Sanctifier x3, Rush of Dread x3, Authority of the Consuls x2, Case of the Uneaten Feast x2, Godless Shrine x2, Scoured Barrens x2
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (11): Bloodthirsty Conqueror, Brightblade Stoat, Godless Shrine, Hinterland Sanctifier, Scoured Barrens, Starscape Cleric, Starscape Cleric, Swamp, Swamp, Swamp, Swamp
+  Graveyard: 8 card(s)
+ChelseasGrind:
+  Battlefield (11): Bleachbone Verge, Concealed Courtyard, Concealed Courtyard, Plains, Plains, Restless Fortress, Shroudstomper, Shroudstomper, Shroudstomper, Swamp, Temple of Silence
+  Graveyard: 12 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+14 objects have no resolved final zone and are omitted from the known board state.
+ChelseasGrind: 10 unknown object(s)
+gian31: 4 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=25, Stack=9
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+ChelseasGrind:
+  Battlefield (10): Concealed Courtyard, Concealed Courtyard, Trapped in the Screen, Plains, Plains, Swamp, Temple of Silence, Shroudstomper, Bleachbone Verge, Shroudstomper
+  Graveyard (10): Bitter Triumph, Live or Die, Swamp, Rankle's Prank, Restless Fortress, Zombify, Rankle's Prank, Zombify, Split Up, Emerge from the Cocoon
+gian31:
+  Battlefield (7): Scoured Barrens, Swamp, Godless Shrine, Swamp, Swamp, Authority of the Consuls, Swamp
+  Graveyard (8): Starscape Cleric, Makeshift Binding, Shattered Sanctum, Hinterland Sanctifier, Hero's Downfall, Rush of Dread, Makeshift Binding, Bloodthirsty Conqueror
+  Exile (1): Brightblade Stoat
+Known non-persistent entries (counts only):
+  ChelseasGrind: Hand=3, Limbo=2
+  gian31: Hand=1, Library=1, Limbo=1
+  unknown: Hand=1, Library=78, Limbo=9
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1
+- Turn 2: ChelseasGrind Battlefield=1; gian31 Battlefield=1
+- Turn 3: ChelseasGrind Battlefield=1; gian31 Battlefield=3
+- Turn 4: ChelseasGrind Battlefield=2; ChelseasGrind Graveyard=1; gian31 Battlefield=2; gian31 Graveyard=1
+- Turn 5: ChelseasGrind Battlefield=2; ChelseasGrind Graveyard=1; gian31 Battlefield=4; gian31 Graveyard=1
+- Turn 6: ChelseasGrind Battlefield=4; ChelseasGrind Graveyard=1; gian31 Battlefield=3; gian31 Graveyard=1; gian31 Exile=1
+- Turn 7: ChelseasGrind Battlefield=4; ChelseasGrind Graveyard=1; gian31 Battlefield=4; gian31 Graveyard=1; gian31 Exile=1
+- Turn 8: ChelseasGrind Battlefield=5; ChelseasGrind Graveyard=1; gian31 Battlefield=4; gian31 Graveyard=1; gian31 Exile=1
+- Turn 9: ChelseasGrind Battlefield=5; ChelseasGrind Graveyard=1; gian31 Battlefield=5; gian31 Graveyard=1; gian31 Exile=1
+- Turn 10: ChelseasGrind Battlefield=6; ChelseasGrind Graveyard=4; gian31 Battlefield=4; gian31 Graveyard=4; gian31 Exile=1
+- Turn 11: ChelseasGrind Battlefield=6; ChelseasGrind Graveyard=4; gian31 Battlefield=4; gian31 Graveyard=4; gian31 Exile=1
+- Turn 12: ChelseasGrind Battlefield=7; ChelseasGrind Graveyard=4; gian31 Battlefield=4; gian31 Graveyard=4; gian31 Exile=1
+- Turn 13: ChelseasGrind Battlefield=7; ChelseasGrind Graveyard=4; gian31 Battlefield=4; gian31 Graveyard=4; gian31 Exile=1
+- Turn 14: ChelseasGrind Battlefield=6; ChelseasGrind Graveyard=5; gian31 Battlefield=4; gian31 Graveyard=5; gian31 Exile=1
+- Turn 15: ChelseasGrind Battlefield=6; ChelseasGrind Graveyard=5; gian31 Battlefield=4; gian31 Graveyard=5; gian31 Exile=1
+- Turn 16: ChelseasGrind Battlefield=6; ChelseasGrind Graveyard=8; gian31 Battlefield=4; gian31 Graveyard=7; gian31 Exile=1
+- Turn 17: ChelseasGrind Battlefield=6; ChelseasGrind Graveyard=8; gian31 Battlefield=6; gian31 Graveyard=7; gian31 Exile=1
+- Turn 18: ChelseasGrind Battlefield=7; ChelseasGrind Graveyard=8; gian31 Battlefield=6; gian31 Graveyard=7; gian31 Exile=1
+- Turn 19: ChelseasGrind Battlefield=7; ChelseasGrind Graveyard=8; gian31 Battlefield=7; gian31 Graveyard=7; gian31 Exile=1
+- Turn 20: ChelseasGrind Battlefield=7; ChelseasGrind Graveyard=10; gian31 Battlefield=6; gian31 Graveyard=8; gian31 Exile=1
+- Turn 21: ChelseasGrind Battlefield=7; ChelseasGrind Graveyard=10; gian31 Battlefield=6; gian31 Graveyard=8; gian31 Exile=1
+- Turn 22: ChelseasGrind Battlefield=8; ChelseasGrind Graveyard=10; gian31 Battlefield=6; gian31 Graveyard=8; gian31 Exile=1
+- Turn 23: ChelseasGrind Battlefield=8; ChelseasGrind Graveyard=10; gian31 Battlefield=7; gian31 Graveyard=8; gian31 Exile=1
+- Turn 24: ChelseasGrind Battlefield=10; ChelseasGrind Graveyard=10; gian31 Battlefield=7; gian31 Graveyard=8; gian31 Exile=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 3: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Brightblade Stoat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Trapped in the Screen resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 17: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 19: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 24: Shroudstomper resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
