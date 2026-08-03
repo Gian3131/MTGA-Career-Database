@@ -1,0 +1,447 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: yeahwaffles, gian31
+Seat map: Seat 1=yeahwaffles, Seat 2=gian31
+Turn range (known): 1 - 10
+Records: 13
+Action chains: 12
+Winner: gian31
+Final life: {'yeahwaffles': 20, 'gian31': 15}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 10 (Phase_Main1; Rush of Dread, seq 215).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 21 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 9 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 10] (raw records=9; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 11 explicit Library -> Hand movement(s); named in the draw record=7, resolved through an explicit identity transition=3, unresolved=1.
+Unresolved draw identities (explicit movements retained): Turn 7, seq 128, object 306.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'yeahwaffles': 20, 'gian31': 15}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 10 (Phase_Main1; Rush of Dread, seq 215).
+Last captured life snapshot: gian31 16 -> 15 (seq 203).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Mountain.
+- Turn 2: actions: cards=0, abilities=1; life mutations=1; explicit battlefield entries=Scoured Barrens.
+- Turn 3: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Mountain, Emberheart Challenger.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Swamp; explicit battlefield exits=Emberheart Challenger.
+- Turn 5: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Captain America's Shield.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Phyrexian Arena.
+- Turn 7: actions: cards=0, abilities=0; explicit battlefield entries=Mountain.
+- Turn 8: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Swamp, Bloodletter of Aclazotz.
+- Turn 9: actions: cards=1, abilities=3; combat snapshots=1; life mutations=1; explicit battlefield entries=Emberheart Challenger.
+- Turn 10: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Plains.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [279] Hand (yeahwaffles) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      yeahwaffles: Battlefield: Mountain [279]
+
+Turn 2
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=26] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=281, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [280] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 21).
+      Scoured Barrens [281] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      yeahwaffles: Battlefield: Mountain [279]
+      gian31: Battlefield: Scoured Barrens [281]
+
+Turn 3
+  - Emberheart Challenger [valid_resolution_no_immediate_mutation, seq=46] (active=yeahwaffles, phase=Phase_Main1, controller=yeahwaffles, owner=yeahwaffles, source_object=285)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Emberheart Challenger resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Emberheart Challenger (object 285) Hand (yeahwaffles) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Emberheart Challenger (object 285) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=yeahwaffles; frames: DeclareAttack -> DeclareBlock):
+      attackers: Emberheart Challenger [285] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 21 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Captain America's Shield [283] Library (yeahwaffles) -> Hand (yeahwaffles) (Draw; GRE sequence 40).
+      Mountain [284] Hand (yeahwaffles) -> Battlefield (PlayLand; GRE sequence 43).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      yeahwaffles: Battlefield: Emberheart Challenger [285], Mountain [279], Mountain [284]
+      gian31: Battlefield: Scoured Barrens [281]
+
+Turn 4
+  - Shoot the Sheriff [observed_semantic_effect, seq=74] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290)
+      effects: destroy
+      narrative: Shoot the Sheriff destroys Emberheart Challenger.
+      explicit effect object references: Emberheart Challenger [285], Emberheart Challenger [293] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 290) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Emberheart Challenger (object 293) Battlefield -> Graveyard (yeahwaffles) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 294) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 290 -> transfer object 294 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [288] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 66).
+      Swamp [289] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 69).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      yeahwaffles: Battlefield: Mountain [279], Mountain [284]; Graveyard: Emberheart Challenger [293]
+      gian31: Battlefield: Scoured Barrens [281], Swamp [289]; Graveyard: Shoot the Sheriff [294]
+
+Turn 5
+  - Captain America's Shield [valid_resolution_no_immediate_mutation, seq=94] (active=yeahwaffles, phase=Phase_Main1, controller=yeahwaffles, owner=yeahwaffles, source_object=297)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Captain America's Shield resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Captain America's Shield (object 297) Hand (yeahwaffles) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Captain America's Shield (object 297) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [295] Library (yeahwaffles) -> Hand (yeahwaffles) (Draw; GRE sequence 88).
+      Mountain [296] Hand (yeahwaffles) -> Battlefield (PlayLand; GRE sequence 91).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      yeahwaffles: Battlefield: Captain America's Shield [297], Mountain [279], Mountain [284], Mountain [296]; Graveyard: Emberheart Challenger [293]
+      gian31: Battlefield: Scoured Barrens [281], Swamp [289]; Graveyard: Shoot the Sheriff [294]
+
+Turn 6
+  - Phyrexian Arena [valid_resolution_no_immediate_mutation, seq=114] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=302)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Phyrexian Arena resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Phyrexian Arena (object 302) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Phyrexian Arena (object 302) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [300] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 108).
+      Swamp [301] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 111).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      yeahwaffles: Battlefield: Captain America's Shield [297], Mountain [279], Mountain [284], Mountain [296]; Graveyard: Emberheart Challenger [293]
+      gian31: Battlefield: Phyrexian Arena [302], Scoured Barrens [281], Swamp [289], Swamp [301]; Graveyard: Shoot the Sheriff [294]
+
+Turn 7
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 306 [306] Library (yeahwaffles) -> Hand (yeahwaffles) (Draw; GRE sequence 128).
+      Mountain [307] Hand (yeahwaffles) -> Battlefield (PlayLand; GRE sequence 131).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      yeahwaffles: Battlefield: Captain America's Shield [297], Mountain [279], Mountain [284], Mountain [296], Mountain [307]; Graveyard: Emberheart Challenger [293]
+      gian31: Battlefield: Phyrexian Arena [302], Scoured Barrens [281], Swamp [289], Swamp [301]; Graveyard: Shoot the Sheriff [294]
+
+Turn 8
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=145] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 229 [229], Rush of Dread [309] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Rush of Dread (object 309) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation, seq=153] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=312)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 312) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 312) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodletter of Aclazotz [310] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 147).
+      Swamp [311] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 150).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      yeahwaffles: Battlefield: Captain America's Shield [297], Mountain [279], Mountain [284], Mountain [296], Mountain [307]; Graveyard: Emberheart Challenger [293]
+      gian31: Battlefield: Bloodletter of Aclazotz [312], Phyrexian Arena [302], Scoured Barrens [281], Swamp [289], Swamp [301], Swamp [311]; Graveyard: Shoot the Sheriff [294]
+
+Turn 9
+  - Emberheart Challenger [valid_resolution_no_immediate_mutation, seq=172] (active=yeahwaffles, phase=Phase_Main1, controller=yeahwaffles, owner=yeahwaffles, source_object=318)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Emberheart Challenger resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Emberheart Challenger (object 318) Hand (yeahwaffles) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Emberheart Challenger (object 318) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Emberheart Challenger [observed_semantic_effect, seq=177] (active=yeahwaffles, phase=Phase_Main1, controller=yeahwaffles, owner=yeahwaffles, source_object=318, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Emberheart Challenger: exiles Full Bore.
+      explicit effect object references: object 170 [170], Full Bore [325] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Full Bore (object 325) Library (yeahwaffles) -> Exile (Exile; shared object ID)
+  - Ability of Captain America's Shield [valid_resolution_no_immediate_mutation, seq=179] (active=yeahwaffles, phase=Phase_Main1, controller=yeahwaffles, owner=yeahwaffles, source_object=297, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Captain America's Shield resolves with no immediate observed mutation.
+  - Ability of Captain America's Shield [valid_resolution_no_immediate_mutation, seq=189] (active=yeahwaffles, phase=Phase_Combat, step=Step_DeclareAttack, controller=yeahwaffles, owner=yeahwaffles, source_object=297, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 179 and 189; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Captain America's Shield resolves with no immediate observed mutation.
+  Combat snapshots observed (active=yeahwaffles; frames: DeclareAttack -> DeclareBlock):
+      attackers: Emberheart Challenger [318] (unblocked, observed P/T 2/10)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 18 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Emberheart Challenger [317] Library (yeahwaffles) -> Hand (yeahwaffles) (Draw; GRE sequence 167).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      yeahwaffles: Battlefield: Captain America's Shield [297], Emberheart Challenger [318], Mountain [279], Mountain [284], Mountain [296], Mountain [307]; Graveyard: Emberheart Challenger [293]; Exile: Full Bore [325]
+      gian31: Battlefield: Bloodletter of Aclazotz [312], Phyrexian Arena [302], Scoured Barrens [281], Swamp [289], Swamp [301], Swamp [311]; Graveyard: Shoot the Sheriff [294]
+
+Turn 10
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=203] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 231 [231], Makeshift Binding [328] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Makeshift Binding (object 328) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Rush of Dread [observed_semantic_effect, seq=215] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=331)
+      effects: life -20
+      narrative: Rush of Dread: yeahwaffles loses 20 life.
+      protocol-linked zone transfer: Rush of Dread (object 331) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Rush of Dread (object 337) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 331 -> transfer object 337 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 16 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [329] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 205).
+      Plains [330] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 208).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      yeahwaffles: Battlefield: Captain America's Shield [297], Emberheart Challenger [318], Mountain [279], Mountain [284], Mountain [296], Mountain [307]; Graveyard: Emberheart Challenger [293]; Exile: Full Bore [325]
+      gian31: Battlefield: Bloodletter of Aclazotz [312], Phyrexian Arena [302], Plains [330], Scoured Barrens [281], Swamp [289], Swamp [301], Swamp [311]; Graveyard: Rush of Dread [337], Shoot the Sheriff [294]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- No life mutation without an exact same-record source was observed.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Mountain [owner=yeahwaffles, controller=yeahwaffles] moves Hand (yeahwaffles) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Scoured Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 24: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 40: Captain America's Shield [owner/controller metadata unavailable] moves Library (yeahwaffles) -> Hand (yeahwaffles) (Draw).
+- Turn 3, seq 43: Mountain [owner=yeahwaffles, controller=yeahwaffles] moves Hand (yeahwaffles) -> Battlefield (PlayLand).
+- Turn 3, seq 44: Emberheart Challenger [owner=yeahwaffles, controller=yeahwaffles] moves Hand (yeahwaffles) -> Stack (CastSpell).
+- Turn 3, seq 46: Emberheart Challenger [owner=yeahwaffles, controller=yeahwaffles] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 66: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 69: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 70: Shoot the Sheriff [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 74: Emberheart Challenger [owner=yeahwaffles, controller=yeahwaffles] moves Battlefield -> Graveyard (yeahwaffles) (Destroy).
+- Turn 4, seq 74: Shoot the Sheriff [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 5, seq 88: Mountain [owner/controller metadata unavailable] moves Library (yeahwaffles) -> Hand (yeahwaffles) (Draw).
+- Turn 5, seq 91: Mountain [owner=yeahwaffles, controller=yeahwaffles] moves Hand (yeahwaffles) -> Battlefield (PlayLand).
+- Turn 5, seq 92: Captain America's Shield [owner=yeahwaffles, controller=yeahwaffles] moves Hand (yeahwaffles) -> Stack (CastSpell).
+- Turn 5, seq 94: Captain America's Shield [owner=yeahwaffles, controller=yeahwaffles] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 108: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 111: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 112: Phyrexian Arena [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 114: Phyrexian Arena [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 128: object 306 [owner/controller metadata unavailable] moves Library (yeahwaffles) -> Hand (yeahwaffles) (Draw).
+- Turn 7, seq 131: Mountain [owner=yeahwaffles, controller=yeahwaffles] moves Hand (yeahwaffles) -> Battlefield (PlayLand).
+- Turn 8, seq 145: Rush of Dread [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 147: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 150: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 151: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 153: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 167: Emberheart Challenger [owner/controller metadata unavailable] moves Library (yeahwaffles) -> Hand (yeahwaffles) (Draw).
+- Turn 9, seq 170: Emberheart Challenger [owner=yeahwaffles, controller=yeahwaffles] moves Hand (yeahwaffles) -> Stack (CastSpell).
+- Turn 9, seq 172: Emberheart Challenger [owner=yeahwaffles, controller=yeahwaffles] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 177: Full Bore [owner=yeahwaffles, controller=yeahwaffles] moves Library (yeahwaffles) -> Exile (Exile).
+- Turn 10, seq 203: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 205: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 208: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 209: Rush of Dread [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 215: Rush of Dread [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 159 becomes object 279 [Mountain].
+- Turn 2, seq 21: object 226 becomes object 280 [Scoured Barrens].
+- Turn 2, seq 24: object 280 becomes object 281 [Scoured Barrens].
+- Turn 3, seq 40: object 166 becomes object 283 [Captain America's Shield].
+- Turn 3, seq 43: object 161 becomes object 284 [Mountain].
+- Turn 3, seq 44: object 163 becomes object 285 [Emberheart Challenger].
+- Turn 4, seq 66: object 227 becomes object 288 [Swamp].
+- Turn 4, seq 69: object 222 becomes object 289 [Swamp].
+- Turn 4, seq 70: object 223 becomes object 290 [Shoot the Sheriff].
+- Turn 4, seq 74: object 285 becomes object 293 [Emberheart Challenger].
+- Turn 4, seq 74: object 290 becomes object 294 [Shoot the Sheriff].
+- Turn 5, seq 88: object 167 becomes object 295 [Mountain].
+- Turn 5, seq 91: object 295 becomes object 296 [Mountain].
+- Turn 5, seq 92: object 283 becomes object 297 [Captain America's Shield].
+- Turn 6, seq 108: object 228 becomes object 300 [Case of the Uneaten Feast].
+- Turn 6, seq 111: object 225 becomes object 301 [Swamp].
+- Turn 6, seq 112: object 219 becomes object 302 [Phyrexian Arena].
+- Turn 7, seq 128: object 168 becomes object 306 [object 168].
+- Turn 7, seq 131: object 164 becomes object 307 [Mountain].
+- Turn 8, seq 145: object 229 becomes object 309 [Rush of Dread].
+- Turn 8, seq 147: object 230 becomes object 310 [Bloodletter of Aclazotz].
+- Turn 8, seq 150: object 288 becomes object 311 [Swamp].
+- Turn 8, seq 151: object 310 becomes object 312 [Bloodletter of Aclazotz].
+- Turn 9, seq 167: object 169 becomes object 317 [Emberheart Challenger].
+- Turn 9, seq 170: object 317 becomes object 318 [Emberheart Challenger].
+- Turn 9, seq 177: object 170 becomes object 325 [Full Bore].
+- Turn 10, seq 203: object 231 becomes object 328 [Makeshift Binding].
+- Turn 10, seq 205: object 232 becomes object 329 [Makeshift Binding].
+- Turn 10, seq 208: object 220 becomes object 330 [Plains].
+- Turn 10, seq 209: object 309 becomes object 331 [Rush of Dread].
+- Turn 10, seq 215: object 331 becomes object 337 [Rush of Dread].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: yeahwaffles plays Mountain (object 279) from Hand (yeahwaffles) to Battlefield.
+- Turn 2: gian31 plays Scoured Barrens (object 281) from Hand (gian31) to Battlefield.
+- Turn 3: yeahwaffles plays Mountain (object 284) from Hand (yeahwaffles) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 289) from Hand (gian31) to Battlefield.
+- Turn 5: yeahwaffles plays Mountain (object 296) from Hand (yeahwaffles) to Battlefield.
+- Turn 6: gian31 plays Swamp (object 301) from Hand (gian31) to Battlefield.
+- Turn 7: yeahwaffles plays Mountain (object 307) from Hand (yeahwaffles) to Battlefield.
+- Turn 8: gian31 plays Swamp (object 311) from Hand (gian31) to Battlefield.
+- Turn 10: gian31 plays Plains (object 330) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Captain America's Shield: casts=1; abilities=2 (triggered=2, activated=0) across turns [5, 9, 9]
+- Emberheart Challenger: casts=2; abilities=1 (triggered=1, activated=0) across turns [3, 9, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: exile
+- Phyrexian Arena: casts=1; abilities=2 (triggered=2, activated=0) across turns [6, 8, 10]
+  observed effect totals: draws=2, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=2
+  observed effects: draw, life -1, synthetic event
+- Bloodletter of Aclazotz: casts=1 across turns [8]
+- Rush of Dread: casts=1 across turns [10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: life -20, synthetic event
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [2]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Shoot the Sheriff: casts=1 across turns [4]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 3 - DeclareAttack, DeclareBlock (active=yeahwaffles)
+  attacker: Emberheart Challenger (yeahwaffles) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=yeahwaffles)
+  attacker: Emberheart Challenger (yeahwaffles) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 9: Ability of Captain America's Shield (active=yeahwaffles) - Ability of Captain America's Shield resolves with no immediate observed mutation.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 219: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 220: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 221: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 222: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 223: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 224: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 225: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 279: Mountain | controller=yeahwaffles | owner=yeahwaffles | zone=Battlefield (latest_object_observation)
+- 280: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 281: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 282: object 282 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 284: Mountain | controller=yeahwaffles | owner=yeahwaffles | zone=Battlefield (latest_object_observation)
+- 285: Emberheart Challenger | controller=yeahwaffles | owner=yeahwaffles | zone=Battlefield (latest_object_observation)
+- 288: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 289: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 290: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 293: Emberheart Challenger | controller=yeahwaffles | owner=yeahwaffles | zone=Graveyard (latest_object_observation)
+- 294: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 296: Mountain | controller=yeahwaffles | owner=yeahwaffles | zone=Battlefield (latest_object_observation)
+- 297: Captain America's Shield | controller=yeahwaffles | owner=yeahwaffles | zone=Stack (latest_object_observation)
+- 300: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 301: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 302: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 307: Mountain | controller=yeahwaffles | owner=yeahwaffles | zone=Battlefield (latest_object_observation)
+- 308: object 308 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 309: Rush of Dread | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 310: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 311: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 312: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 318: Emberheart Challenger | controller=yeahwaffles | owner=yeahwaffles | zone=Battlefield (latest_object_observation)
+- 321: object 321 | controller=yeahwaffles | owner=yeahwaffles | zone=unknown (inferred unknown) (latest_object_observation)
+- 322: object 322 | controller=yeahwaffles | owner=yeahwaffles | zone=unknown (inferred unknown) (latest_object_observation)
+- 325: Full Bore | controller=yeahwaffles | owner=yeahwaffles | zone=Exile (latest_object_observation)
+- 326: object 326 | controller=yeahwaffles | owner=yeahwaffles | zone=unknown (inferred unknown) (latest_object_observation)
+- 327: object 327 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 328: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 329: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 330: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 331: Rush of Dread | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 337: Rush of Dread | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 28 total items
+  zones: Battlefield=6, Hand=14, Stack=3, unknown=5
+  objects: Swamp x6, Rush of Dread x3, Shoot the Sheriff x3, Bloodletter of Aclazotz x2, Makeshift Binding x2, Phyrexian Arena x2, Plains x2, Scoured Barrens x2, Case of the Uneaten Feast, Marauding Blight-Priest, Starscape Cleric, object 282
+yeahwaffles: 12 total items
+  zones: Battlefield=6, Exile=1, Graveyard=1, Stack=1, unknown=3
+  objects: Mountain x4, Emberheart Challenger x3, Captain America's Shield, Full Bore, object 321, object 322, object 326
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+yeahwaffles:
+  Battlefield (6): Emberheart Challenger, Emberheart Challenger, Mountain, Mountain, Mountain, Mountain
+  Graveyard: 1 card(s)
+gian31:
+  Battlefield (6): Bloodletter of Aclazotz, Plains, Scoured Barrens, Swamp, Swamp, Swamp
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+8 objects have no resolved final zone and are omitted from the known board state.
+gian31: 5 unknown object(s)
+yeahwaffles: 3 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=14, Stack=4
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+gian31:
+  Battlefield (7): Scoured Barrens, Swamp, Swamp, Phyrexian Arena, Swamp, Bloodletter of Aclazotz, Plains
+  Graveyard (2): Shoot the Sheriff, Rush of Dread
+yeahwaffles:
+  Battlefield (6): Mountain, Mountain, Mountain, Captain America's Shield, Mountain, Emberheart Challenger
+  Graveyard (1): Emberheart Challenger
+  Exile (1): Full Bore
+Known non-persistent entries (counts only):
+  gian31: Hand=5, Limbo=4, Stack=1
+  unknown: Hand=3, Library=94, Limbo=7
+  yeahwaffles: Hand=1
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: yeahwaffles Battlefield=1
+- Turn 2: gian31 Battlefield=1; yeahwaffles Battlefield=1
+- Turn 3: gian31 Battlefield=1; yeahwaffles Battlefield=3
+- Turn 4: gian31 Battlefield=2; gian31 Graveyard=1; yeahwaffles Battlefield=2; yeahwaffles Graveyard=1
+- Turn 5: gian31 Battlefield=2; gian31 Graveyard=1; yeahwaffles Battlefield=4; yeahwaffles Graveyard=1
+- Turn 6: gian31 Battlefield=4; gian31 Graveyard=1; yeahwaffles Battlefield=4; yeahwaffles Graveyard=1
+- Turn 7: gian31 Battlefield=4; gian31 Graveyard=1; yeahwaffles Battlefield=5; yeahwaffles Graveyard=1
+- Turn 8: gian31 Battlefield=6; gian31 Graveyard=1; yeahwaffles Battlefield=5; yeahwaffles Graveyard=1
+- Turn 9: gian31 Battlefield=6; gian31 Graveyard=1; yeahwaffles Battlefield=6; yeahwaffles Graveyard=1; yeahwaffles Exile=1
+- Turn 10: gian31 Battlefield=7; gian31 Graveyard=2; yeahwaffles Battlefield=6; yeahwaffles Graveyard=1; yeahwaffles Exile=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 3: Emberheart Challenger resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Captain America's Shield resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Phyrexian Arena resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Emberheart Challenger resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
