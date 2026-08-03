@@ -1,0 +1,1124 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Wilan
+Seat map: Seat 1=gian31, Seat 2=Wilan
+Turn range (known): 1 - 21
+Records: 54
+Action chains: 40
+Winner: gian31
+Final life: {'gian31': 5, 'Wilan': 1}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 21 (Phase_Combat, Step_FirstStrikeDamage; Ability of Enduring Tenacity, seq 633).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 46 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 14 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 15, 17, 18, 21] (raw records=14; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 28 explicit Library -> Hand movement(s); named in the draw record=10, resolved through an explicit identity transition=16, unresolved=2.
+Unresolved draw identities (explicit movements retained): Turn 13, seq 269, object 356; Turn 21, seq 596, object 490.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Plains [161], Shoot the Sheriff [162], Authority of the Consuls [163], Swamp [164], Starscape Cleric [165], Plains [166], Stroke of Midnight [167].
+  - unknown: 7 observed card(s): object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225], object 226 [226], object 227 [227].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 5, 'Wilan': 1}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 21 (Phase_Combat, Step_FirstStrikeDamage; Ability of Enduring Tenacity, seq 633).
+Last captured life snapshot: gian31 16 -> 5 (seq 635).
+Tokens on battlefield at their last observation (not confirmed at match end): Otter [365] controller=Wilan, created Turn 13, last observed Turn 21 seq 623, P/T 3/3; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Otter [390] controller=Wilan, created Turn 15, last observed Turn 21 seq 623, P/T 3/3; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Otter [498] controller=Wilan, created Turn 21, last observed Turn 21 seq 608, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Riverpyre Verge.
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Authority of the Consuls.
+- Turn 3: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Spirebluff Canal, Slickshot Show-Off.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Swamp; explicit battlefield exits=Slickshot Show-Off.
+- Turn 5: actions: cards=0, abilities=0; explicit battlefield entries=Steam Vents.
+- Turn 6: actions: cards=0, abilities=0; explicit battlefield entries=Plains.
+- Turn 7: actions: cards=0, abilities=0; explicit battlefield entries=Steam Vents.
+- Turn 8: actions: cards=0, abilities=0; explicit battlefield entries=Plains.
+- Turn 9: actions: cards=0, abilities=0.
+- Turn 10: actions: cards=2, abilities=1; life mutations=1; explicit battlefield entries=Godless Shrine, Enduring Tenacity, Enduring Tenacity; explicit battlefield exits=Enduring Tenacity.
+- Turn 11: actions: cards=1, abilities=3; life mutations=2; explicit battlefield entries=Eddymurk Crab.
+- Turn 12: actions: cards=1, abilities=2; life mutations=2; explicit battlefield entries=Godless Shrine, Makeshift Binding; explicit battlefield exits=Eddymurk Crab.
+- Turn 13: actions: cards=2, abilities=3; life mutations=2; explicit battlefield entries=Stormchaser's Talent; explicit battlefield exits=Stormchaser's Talent.
+- Turn 14: actions: cards=1, abilities=1; explicit battlefield entries=Starscape Cleric.
+- Turn 15: actions: cards=3, abilities=6; combat snapshots=1; life mutations=5; explicit battlefield entries=Steam Vents, Stormchaser's Talent, Roaring Furnace // Steaming Sauna; explicit battlefield exits=Starscape Cleric, Starscape Cleric.
+- Turn 16: actions: cards=1, abilities=1; explicit battlefield entries=Starscape Cleric.
+- Turn 17: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Island; explicit battlefield exits=Starscape Cleric.
+- Turn 18: actions: cards=2, abilities=3; combat snapshots=1; life mutations=4; explicit battlefield entries=Swamp, Bloodletter of Aclazotz; explicit battlefield exits=Roaring Furnace // Steaming Sauna.
+- Turn 19: actions: cards=2, abilities=2; combat snapshots=1; life mutations=3; explicit battlefield entries=Slickshot Show-Off; explicit battlefield exits=Starscape Cleric.
+- Turn 20: actions: cards=2, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Brightblade Stoat.
+- Turn 21: actions: cards=2, abilities=6; combat snapshots=1; life mutations=5; explicit battlefield entries=Riverpyre Verge, Stormchaser's Talent; explicit battlefield exits=Stormchaser's Talent, Human.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Riverpyre Verge [281] Hand (Wilan) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Riverpyre Verge [281]
+
+Turn 2
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=27] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=284)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 284) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 284) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Enduring Tenacity [282] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 21).
+      Plains [283] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Riverpyre Verge [281]
+      gian31: Battlefield: Authority of the Consuls [284], Plains [283]
+
+Turn 3
+  - Slickshot Show-Off [valid_resolution_no_immediate_mutation, seq=47] (active=Wilan, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=288)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Slickshot Show-Off resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Slickshot Show-Off (object 288) Hand (Wilan) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Slickshot Show-Off (object 288) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=49] (active=Wilan, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=284, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Spirebluff Canal [286] Library (Wilan) -> Hand (Wilan) (Draw; GRE sequence 41).
+      Spirebluff Canal [287] Hand (Wilan) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Riverpyre Verge [281], Slickshot Show-Off [288], Spirebluff Canal [287]
+      gian31: Battlefield: Authority of the Consuls [284], Plains [283]
+
+Turn 4
+  - Shoot the Sheriff [observed_semantic_effect, seq=71] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=294)
+      effects: destroy
+      narrative: Shoot the Sheriff destroys Slickshot Show-Off.
+      explicit effect object references: Slickshot Show-Off [288], Slickshot Show-Off [297] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 294) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Slickshot Show-Off (object 297) Battlefield -> Graveyard (Wilan) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 298) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 294 -> transfer object 298 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodletter of Aclazotz [292] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 63).
+      Swamp [293] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 66).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Riverpyre Verge [281], Spirebluff Canal [287]; Graveyard: Slickshot Show-Off [297]
+      gian31: Battlefield: Authority of the Consuls [284], Plains [283], Swamp [293]; Graveyard: Shoot the Sheriff [298]
+
+Turn 5
+    additional protocol-observed zone movements not assigned to an action chain:
+      Eddymurk Crab [299] Library (Wilan) -> Hand (Wilan) (Draw; GRE sequence 85).
+      Steam Vents [300] Hand (Wilan) -> Battlefield (PlayLand; GRE sequence 89).
+      Sleight of Hand [301] Hand (Wilan) -> Stack (CastSpell; GRE sequence 90).
+      Steam Vents [303] Library (Wilan) -> Hand (Wilan) (Put; GRE sequence 93).
+      object 304 [304] Library (Wilan) -> Library (Wilan) (Put; GRE sequence 93).
+      Sleight of Hand [305] Stack -> Graveyard (Wilan) (Resolve; GRE sequence 93).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Riverpyre Verge [281], Spirebluff Canal [287], Steam Vents [300]; Graveyard: Sleight of Hand [305], Slickshot Show-Off [297]
+      gian31: Battlefield: Authority of the Consuls [284], Plains [283], Swamp [293]; Graveyard: Shoot the Sheriff [298]
+
+Turn 6
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [306] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 107).
+      Plains [307] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 110).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Riverpyre Verge [281], Spirebluff Canal [287], Steam Vents [300]; Graveyard: Sleight of Hand [305], Slickshot Show-Off [297]
+      gian31: Battlefield: Authority of the Consuls [284], Plains [283], Plains [307], Swamp [293]; Graveyard: Shoot the Sheriff [298]
+
+Turn 7
+    additional protocol-observed zone movements not assigned to an action chain:
+      Opt [308] Library (Wilan) -> Hand (Wilan) (Draw; GRE sequence 124).
+      Steam Vents [309] Hand (Wilan) -> Battlefield (PlayLand; GRE sequence 128).
+      Opt [310] Hand (Wilan) -> Stack (CastSpell; GRE sequence 129).
+      Flow State [312] Library (Wilan) -> Hand (Wilan) (Draw; GRE sequence 132).
+      Opt [313] Stack -> Graveyard (Wilan) (Resolve; GRE sequence 132).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Riverpyre Verge [281], Spirebluff Canal [287], Steam Vents [300], Steam Vents [309]; Graveyard: Opt [313], Sleight of Hand [305], Slickshot Show-Off [297]
+      gian31: Battlefield: Authority of the Consuls [284], Plains [283], Plains [307], Swamp [293]; Graveyard: Shoot the Sheriff [298]
+
+Turn 8
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [314] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 146).
+      Plains [315] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 149).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Riverpyre Verge [281], Spirebluff Canal [287], Steam Vents [300], Steam Vents [309]; Graveyard: Opt [313], Sleight of Hand [305], Slickshot Show-Off [297]
+      gian31: Battlefield: Authority of the Consuls [284], Plains [283], Plains [307], Plains [315], Swamp [293]; Graveyard: Shoot the Sheriff [298]
+
+Turn 9
+    additional protocol-observed zone movements not assigned to an action chain:
+      Burst Lightning [316] Library (Wilan) -> Hand (Wilan) (Draw; GRE sequence 163).
+      Flow State [317] Hand (Wilan) -> Stack (CastSpell; GRE sequence 166).
+      Prismari Charm [321] Library (Wilan) -> Hand (Wilan) (Put; GRE sequence 169).
+      Vibrant Outburst [320] Library (Wilan) -> Hand (Wilan) (Put; GRE sequence 169).
+      Flow State [322] Stack -> Graveyard (Wilan) (Resolve; GRE sequence 169).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Riverpyre Verge [281], Spirebluff Canal [287], Steam Vents [300], Steam Vents [309]; Graveyard: Flow State [322], Opt [313], Sleight of Hand [305], Slickshot Show-Off [297]
+      gian31: Battlefield: Authority of the Consuls [284], Plains [283], Plains [307], Plains [315], Swamp [293]; Graveyard: Shoot the Sheriff [298]
+
+Turn 10
+  - Enduring Tenacity [valid_resolution_no_immediate_mutation, seq=190] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=325)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Enduring Tenacity resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Enduring Tenacity (object 325) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Enduring Tenacity (object 325) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=200] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=gian31, source_object=325, source_last_explicit_zone=Battlefield, source_successor=336 observed Graveyard (gian31) -> Battlefield (Return))
+      effects: return to battlefield
+      narrative: Ability of Enduring Tenacity: a card/permanent returns.
+      explicit effect object references: Enduring Tenacity [334], Enduring Tenacity [336] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Enduring Tenacity (object 336) Graveyard (gian31) -> Battlefield (Return; shared object ID)
+  - Vibrant Outburst [observed_semantic_effect, seq=198] (active=unknown, controller=Wilan, owner=Wilan, source_object=330)
+      chronology reconciliation: parser turn group 20 conflicts with Turn 10; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: 3 damage
+      narrative: Vibrant Outburst: Enduring Tenacity takes 3 damage.
+      explicit effect object references: Enduring Tenacity [325] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Vibrant Outburst (object 330) Hand (Wilan) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Vibrant Outburst (object 333) Stack -> Graveyard (Wilan) (Resolve; shared object ID)
+      identity continuity: source object 330 -> transfer object 333 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Enduring Tenacity (object 334) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Godless Shrine [323] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 183).
+      Godless Shrine [324] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 187).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Riverpyre Verge [281], Spirebluff Canal [287], Steam Vents [300], Steam Vents [309]; Graveyard: Flow State [322], Opt [313], Sleight of Hand [305], Slickshot Show-Off [297], Vibrant Outburst [333]
+      gian31: Battlefield: Authority of the Consuls [284], Enduring Tenacity [336], Godless Shrine [324], Plains [283], Plains [307], Plains [315], Swamp [293]; Graveyard: Shoot the Sheriff [298]
+
+Turn 11
+  - Eddymurk Crab [valid_resolution_no_immediate_mutation, seq=217] (active=Wilan, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=340)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Eddymurk Crab resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Eddymurk Crab (object 340) Hand (Wilan) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Eddymurk Crab (object 340) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=220] (active=Wilan, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=284, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=224] (active=Wilan, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Wilan loses 1 life.
+  - Ability of Eddymurk Crab [valid_resolution_no_immediate_mutation, seq=226] (active=Wilan, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=340, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Eddymurk Crab resolves with no immediate observed mutation.
+    net observed life change this turn: Wilan -1; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 19 -> 20
+    life: Wilan 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Roaring Furnace // Steaming Sauna [337] Library (Wilan) -> Hand (Wilan) (Draw; GRE sequence 212).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Eddymurk Crab [340], Riverpyre Verge [281], Spirebluff Canal [287], Steam Vents [300], Steam Vents [309]; Graveyard: Flow State [322], Opt [313], Sleight of Hand [305], Slickshot Show-Off [297], Vibrant Outburst [333]
+      gian31: Battlefield: Authority of the Consuls [284], Enduring Tenacity [336], Godless Shrine [324], Plains [283], Plains [307], Plains [315], Swamp [293]; Graveyard: Shoot the Sheriff [298]
+
+Turn 12
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=247] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=349)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 349) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 349) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=251] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=349, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Eddymurk Crab; gian31 gains 2 life.
+      explicit effect object references: Eddymurk Crab [340], Eddymurk Crab [354] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Eddymurk Crab (object 354) Battlefield -> Exile (Exile; shared object ID)
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=255] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Enduring Tenacity: Wilan loses 2 life.
+    net observed life change this turn: Wilan -2; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 22
+    life: Wilan 19 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Godless Shrine [347] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 240).
+      Godless Shrine [348] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 244).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Riverpyre Verge [281], Spirebluff Canal [287], Steam Vents [300], Steam Vents [309]; Graveyard: Flow State [322], Opt [313], Sleight of Hand [305], Slickshot Show-Off [297], Vibrant Outburst [333]; Exile: Eddymurk Crab [354]
+      gian31: Battlefield: Authority of the Consuls [284], Enduring Tenacity [336], Godless Shrine [324], Godless Shrine [348], Makeshift Binding [349], Plains [283], Plains [307], Plains [315], Swamp [293]; Graveyard: Shoot the Sheriff [298]
+
+Turn 13
+  - Stormchaser's Talent [valid_resolution_no_immediate_mutation, seq=279] (active=Wilan, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=362)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Stormchaser's Talent resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Stormchaser's Talent (object 362) Hand (Wilan) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Stormchaser's Talent (object 362) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Stormchaser's Talent [observed_semantic_effect, seq=281] (active=Wilan, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=362, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Stormchaser's Talent: a token is created.
+      explicit effect object references: Otter [365] (role/targeting only where the protocol identifies it)
+      token created: Otter (object 365, controller=Wilan) 3/3; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 364).
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=283] (active=Wilan, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=284, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=287] (active=Wilan, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Wilan loses 1 life.
+  - Boomerang Basics [observed_semantic_effect, seq=294] (active=Wilan, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=368)
+      effects: return to battlefield, draw
+      narrative: Boomerang Basics: a card/permanent returns; draw.
+      explicit effect object references: object 241 [241], Stormchaser's Talent [362], object 371 [371], object 373 [373] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Boomerang Basics (object 368) Hand (Wilan) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Stormchaser's Talent (object 371) Battlefield -> Hand (Wilan) (Return; shared object ID)
+      protocol-linked zone transfer: Get Out (object 373) Library (Wilan) -> Hand (Wilan) (Draw; shared object ID)
+      protocol-linked zone transfer: Boomerang Basics (object 374) Stack -> Graveyard (Wilan) (Resolve; shared object ID)
+      identity continuity: source object 368 -> transfer object 374 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: Wilan -1; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 22 -> 23
+    life: Wilan 17 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 356 [356] Library (Wilan) -> Hand (Wilan) (Draw; GRE sequence 269).
+      Prismari Charm [357] Hand (Wilan) -> Stack (CastSpell; GRE sequence 272).
+      Stormchaser's Talent [360] Library (Wilan) -> Hand (Wilan) (Draw; GRE sequence 276).
+      Prismari Charm [361] Stack -> Graveyard (Wilan) (Resolve; GRE sequence 276).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Riverpyre Verge [281], Spirebluff Canal [287], Steam Vents [300], Steam Vents [309]; Graveyard: Boomerang Basics [374], Flow State [322], Opt [313], Prismari Charm [361], Sleight of Hand [305], Slickshot Show-Off [297], Vibrant Outburst [333]; Exile: Eddymurk Crab [354]
+      gian31: Battlefield: Authority of the Consuls [284], Enduring Tenacity [336], Godless Shrine [324], Godless Shrine [348], Makeshift Binding [349], Plains [283], Plains [307], Plains [315], Swamp [293]; Graveyard: Shoot the Sheriff [298]
+
+Turn 14
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=315] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=376)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 376) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 376) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=317] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=376, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Starscape Cleric: a token is created.
+      explicit effect object references: Starscape Cleric [383] (role/targeting only where the protocol identifies it)
+      token created: Starscape Cleric (object 383, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 382).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [375] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 308).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Riverpyre Verge [281], Spirebluff Canal [287], Steam Vents [300], Steam Vents [309]; Graveyard: Boomerang Basics [374], Flow State [322], Opt [313], Prismari Charm [361], Sleight of Hand [305], Slickshot Show-Off [297], Vibrant Outburst [333]; Exile: Eddymurk Crab [354]
+      gian31: Battlefield: Authority of the Consuls [284], Enduring Tenacity [336], Godless Shrine [324], Godless Shrine [348], Makeshift Binding [349], Plains [283], Plains [307], Plains [315], Starscape Cleric [376], Swamp [293]; Graveyard: Shoot the Sheriff [298]
+
+Turn 15
+  - Stormchaser's Talent [valid_resolution_no_immediate_mutation, seq=340] (active=Wilan, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=386)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Stormchaser's Talent resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Stormchaser's Talent (object 386) Hand (Wilan) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Stormchaser's Talent (object 386) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Stormchaser's Talent [observed_semantic_effect, seq=342] (active=Wilan, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=386, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Stormchaser's Talent: a token is created.
+      explicit effect object references: Otter [390] (role/targeting only where the protocol identifies it)
+      token created: Otter (object 390, controller=Wilan) 3/3; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 389).
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=344] (active=Wilan, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=284, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=349] (active=Wilan, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=383)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Wilan loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=351] (active=Wilan, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=376, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Wilan loses 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=353] (active=Wilan, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Wilan loses 1 life.
+  - Roaring Furnace // Steaming Sauna [valid_resolution_no_immediate_mutation, seq=361] (active=Wilan, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=395)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Roaring Furnace // Steaming Sauna resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Roaring Furnace // Steaming Sauna (object 395) Hand (Wilan) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Roaring Furnace // Steaming Sauna (object 395) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Roaring Furnace // Steaming Sauna [observed_semantic_effect, seq=365] (active=Wilan, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=395, source_last_explicit_zone=Battlefield)
+      effects: 5 damage
+      narrative: Ability of Roaring Furnace // Steaming Sauna: Starscape Cleric takes 5 damage.
+      explicit effect object references: Starscape Cleric [376] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Starscape Cleric (object 403) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+  - Burst Lightning [observed_semantic_effect, seq=376] (active=Wilan, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=404)
+      effects: 2 damage
+      narrative: Burst Lightning: Starscape Cleric takes 2 damage.
+      explicit effect object references: Starscape Cleric [383] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Burst Lightning (object 404) Hand (Wilan) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Burst Lightning (object 408) Stack -> Graveyard (Wilan) (Resolve; shared object ID)
+      identity continuity: source object 404 -> transfer object 408 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Starscape Cleric (object 409) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+  Combat snapshots observed (active=Wilan; frames: DeclareAttack -> DeclareBlock):
+      attackers: Otter [365] (unblocked, observed P/T 4/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Wilan -3; gian31 -3 (individual changes below; gains and losses may offset)
+    life: gian31 23 -> 24
+    life: Wilan 16 -> 15
+    life: Wilan 15 -> 14
+    life: Wilan 14 -> 13
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): gian31 24 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Steam Vents [384] Library (Wilan) -> Hand (Wilan) (Draw; GRE sequence 331).
+      Steam Vents [385] Hand (Wilan) -> Battlefield (PlayLand; GRE sequence 335).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Riverpyre Verge [281], Roaring Furnace // Steaming Sauna [395], Spirebluff Canal [287], Steam Vents [300], Steam Vents [309], Steam Vents [385], Stormchaser's Talent [386]; Graveyard: Boomerang Basics [374], Burst Lightning [408], Flow State [322], Opt [313], Prismari Charm [361], Sleight of Hand [305], Slickshot Show-Off [297], Vibrant Outburst [333]; Exile: Eddymurk Crab [354]
+      gian31: Battlefield: Authority of the Consuls [284], Enduring Tenacity [336], Godless Shrine [324], Godless Shrine [348], Makeshift Binding [349], Plains [283], Plains [307], Plains [315], Swamp [293]; Graveyard: Shoot the Sheriff [298], Starscape Cleric [403], Starscape Cleric [409]
+
+Turn 16
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=403] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=411)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 411) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 411) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=405] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=411, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Starscape Cleric: a token is created.
+      explicit effect object references: Starscape Cleric [418] (role/targeting only where the protocol identifies it)
+      token created: Starscape Cleric (object 418, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 417).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [410] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 396).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Riverpyre Verge [281], Roaring Furnace // Steaming Sauna [395], Spirebluff Canal [287], Steam Vents [300], Steam Vents [309], Steam Vents [385], Stormchaser's Talent [386]; Graveyard: Boomerang Basics [374], Burst Lightning [408], Flow State [322], Opt [313], Prismari Charm [361], Sleight of Hand [305], Slickshot Show-Off [297], Vibrant Outburst [333]; Exile: Eddymurk Crab [354]
+      gian31: Battlefield: Authority of the Consuls [284], Enduring Tenacity [336], Godless Shrine [324], Godless Shrine [348], Makeshift Binding [349], Plains [283], Plains [307], Plains [315], Starscape Cleric [411], Swamp [293]; Graveyard: Shoot the Sheriff [298], Starscape Cleric [403], Starscape Cleric [409]
+
+Turn 17
+  - Burst Lightning [observed_semantic_effect, seq=434] (active=Wilan, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=426)
+      effects: 2 damage
+      narrative: Burst Lightning: Starscape Cleric takes 2 damage.
+      explicit effect object references: Starscape Cleric [411] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Burst Lightning (object 426) Hand (Wilan) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Burst Lightning (object 430) Stack -> Graveyard (Wilan) (Resolve; shared object ID)
+      identity continuity: source object 426 -> transfer object 430 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Starscape Cleric (object 431) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+  - Ability of Roaring Furnace // Steaming Sauna [observed_semantic_effect, seq=452] (active=Wilan, phase=Phase_Ending, step=Step_End, controller=Wilan, owner=Wilan, source_object=395, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Roaring Furnace // Steaming Sauna: draw.
+      explicit effect object references: object 244 [244], object 433 [433] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Boomerang Basics (object 433) Library (Wilan) -> Hand (Wilan) (Draw; shared object ID)
+  Combat snapshots observed (active=Wilan; frames: DeclareAttack -> DeclareBlock):
+      attackers: Otter [365] (unblocked, observed P/T 2/2), Otter [390] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): gian31 20 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Island [419] Library (Wilan) -> Hand (Wilan) (Draw; GRE sequence 419).
+      Island [420] Hand (Wilan) -> Battlefield (PlayLand; GRE sequence 422).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Island [420], Riverpyre Verge [281], Roaring Furnace // Steaming Sauna [395], Spirebluff Canal [287], Steam Vents [300], Steam Vents [309], Steam Vents [385], Stormchaser's Talent [386]; Graveyard: Boomerang Basics [374], Burst Lightning [408], Burst Lightning [430], Flow State [322], Opt [313], Prismari Charm [361], Sleight of Hand [305], Slickshot Show-Off [297], Vibrant Outburst [333]; Exile: Eddymurk Crab [354]
+      gian31: Battlefield: Authority of the Consuls [284], Enduring Tenacity [336], Godless Shrine [324], Godless Shrine [348], Makeshift Binding [349], Plains [283], Plains [307], Plains [315], Swamp [293]; Graveyard: Shoot the Sheriff [298], Starscape Cleric [403], Starscape Cleric [409], Starscape Cleric [431]
+
+Turn 18
+  - Stroke of Midnight [observed_semantic_effect, seq=464] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=436)
+      effects: destroy, token creation
+      narrative: Stroke of Midnight destroys Roaring Furnace // Steaming Sauna.
+      explicit effect object references: Roaring Furnace // Steaming Sauna [395], Roaring Furnace // Steaming Sauna [440], Human [443] (role/targeting only where the protocol identifies it)
+      token created: Human (object 443, controller=Wilan) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 436).
+      protocol-linked zone transfer: Stroke of Midnight (object 436) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Roaring Furnace // Steaming Sauna (object 440) Battlefield -> Graveyard (Wilan) (Destroy; shared object ID)
+      protocol-linked zone transfer: Stroke of Midnight (object 445) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 436 -> transfer object 445 (explicit GRE ObjectIdChanged chain).
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=466] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=284, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=471] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=418)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Wilan loses 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=473] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Wilan loses 1 life.
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation, seq=476] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=448)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 448) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 448) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [418] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-reconciled defending-player life-loss component: 1; observed attacker power total: 1; unresolved additional life loss: 1 (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Wilan -4; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 16 -> 17
+    life: Wilan 13 -> 12
+    life: Wilan 12 -> 11
+    life (combat component reconciled: 1; unresolved residual life loss 1; exact assignment unavailable): Wilan 11 -> 9
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [434] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 456).
+      Swamp [435] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 459).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Island [420], Riverpyre Verge [281], Spirebluff Canal [287], Steam Vents [300], Steam Vents [309], Steam Vents [385], Stormchaser's Talent [386]; Graveyard: Boomerang Basics [374], Burst Lightning [408], Burst Lightning [430], Flow State [322], Opt [313], Prismari Charm [361], Roaring Furnace // Steaming Sauna [440], Sleight of Hand [305], Slickshot Show-Off [297], Vibrant Outburst [333]; Exile: Eddymurk Crab [354]
+      gian31: Battlefield: Authority of the Consuls [284], Bloodletter of Aclazotz [448], Enduring Tenacity [336], Godless Shrine [324], Godless Shrine [348], Makeshift Binding [349], Plains [283], Plains [307], Plains [315], Swamp [293], Swamp [435]; Graveyard: Shoot the Sheriff [298], Starscape Cleric [403], Starscape Cleric [409], Starscape Cleric [431], Stroke of Midnight [445]
+
+Turn 19
+  - Burst Lightning [observed_semantic_effect, seq=509] (active=Wilan, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=454)
+      effects: 2 damage
+      narrative: Burst Lightning: Starscape Cleric takes 2 damage.
+      explicit effect object references: Starscape Cleric [418] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Burst Lightning (object 454) Hand (Wilan) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Burst Lightning (object 458) Stack -> Graveyard (Wilan) (Resolve; shared object ID)
+      identity continuity: source object 454 -> transfer object 458 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Starscape Cleric (object 459) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+  - Slickshot Show-Off [valid_resolution_no_immediate_mutation, seq=512] (active=Wilan, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=460)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Slickshot Show-Off resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Slickshot Show-Off (object 460) Hand (Wilan) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Slickshot Show-Off (object 460) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=514] (active=Wilan, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=284, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=518] (active=Wilan, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Wilan loses 1 life.
+  Combat snapshots observed (active=Wilan; frames: DeclareAttack -> DeclareBlock):
+      attackers: Otter [365] (unblocked, observed P/T 2/2), Otter [390] (unblocked, observed P/T 2/2), Human [443] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Wilan -1; gian31 -4 (individual changes below; gains and losses may offset)
+    life: gian31 17 -> 18
+    life: Wilan 9 -> 8
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 18 -> 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Slickshot Show-Off [453] Library (Wilan) -> Hand (Wilan) (Draw; GRE sequence 496).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Island [420], Riverpyre Verge [281], Slickshot Show-Off [460], Spirebluff Canal [287], Steam Vents [300], Steam Vents [309], Steam Vents [385], Stormchaser's Talent [386]; Graveyard: Boomerang Basics [374], Burst Lightning [408], Burst Lightning [430], Burst Lightning [458], Flow State [322], Opt [313], Prismari Charm [361], Roaring Furnace // Steaming Sauna [440], Sleight of Hand [305], Slickshot Show-Off [297], Vibrant Outburst [333]; Exile: Eddymurk Crab [354]
+      gian31: Battlefield: Authority of the Consuls [284], Bloodletter of Aclazotz [448], Enduring Tenacity [336], Godless Shrine [324], Godless Shrine [348], Makeshift Binding [349], Plains [283], Plains [307], Plains [315], Swamp [293], Swamp [435]; Graveyard: Shoot the Sheriff [298], Starscape Cleric [403], Starscape Cleric [409], Starscape Cleric [431], Starscape Cleric [459], Stroke of Midnight [445]
+
+Turn 20
+  - Ability of Slickshot Show-Off [observed_semantic_effect, seq=556] (active=gian31, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=460, source_last_explicit_zone=Battlefield)
+      effects: P/T +2/+0
+      narrative: Ability of Slickshot Show-Off: Slickshot Show-Off gets +2/+0.
+  - Get Out [observed_semantic_effect, seq=558] (active=gian31, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=470)
+      effects: none immediately observed
+      narrative: Observed zone movements: Get Out, Makeshift Binding, Get Out.
+      explicit effect object references: Makeshift Binding [466], Makeshift Binding [476] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Get Out (object 470) Hand (Wilan) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 476) Stack -> Graveyard (gian31) (Countered; shared object ID)
+      protocol-linked zone transfer: Get Out (object 477) Stack -> Graveyard (Wilan) (Resolve; shared object ID)
+      identity continuity: source object 470 -> transfer object 477 (explicit GRE ObjectIdChanged chain).
+  - Brightblade Stoat [valid_resolution_no_immediate_mutation, seq=561] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=478)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Brightblade Stoat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Brightblade Stoat (object 478) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Brightblade Stoat (object 478) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Bloodletter of Aclazotz [448] (unblocked, observed P/T 2/4)
+      blockers: none identified
+      combat-reconciled defending-player life-loss component: 2; observed attacker power total: 2; unresolved additional life loss: 2 (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Wilan -4 (individual changes below; gains and losses may offset)
+    life (combat component reconciled: 2; unresolved residual life loss 2; exact assignment unavailable): Wilan 8 -> 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Brightblade Stoat [465] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 541).
+      Makeshift Binding [466] Hand (gian31) -> Stack (CastSpell; GRE sequence 544).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Island [420], Riverpyre Verge [281], Slickshot Show-Off [460], Spirebluff Canal [287], Steam Vents [300], Steam Vents [309], Steam Vents [385], Stormchaser's Talent [386]; Graveyard: Boomerang Basics [374], Burst Lightning [408], Burst Lightning [430], Burst Lightning [458], Flow State [322], Get Out [477], Opt [313], Prismari Charm [361], Roaring Furnace // Steaming Sauna [440], Sleight of Hand [305], Slickshot Show-Off [297], Vibrant Outburst [333]; Exile: Eddymurk Crab [354]
+      gian31: Battlefield: Authority of the Consuls [284], Bloodletter of Aclazotz [448], Brightblade Stoat [478], Enduring Tenacity [336], Godless Shrine [324], Godless Shrine [348], Makeshift Binding [349], Plains [283], Plains [307], Plains [315], Swamp [293], Swamp [435]; Graveyard: Makeshift Binding [476], Shoot the Sheriff [298], Starscape Cleric [403], Starscape Cleric [409], Starscape Cleric [431], Starscape Cleric [459], Stroke of Midnight [445]
+
+Turn 21
+  - Ability of Slickshot Show-Off [observed_semantic_effect, seq=594] (active=Wilan, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=460, source_last_explicit_zone=Battlefield)
+      effects: P/T +2/+0
+      narrative: Ability of Slickshot Show-Off: Slickshot Show-Off gets +2/+0.
+  - Boomerang Basics [observed_semantic_effect, seq=596] (active=Wilan, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=483)
+      effects: return to battlefield, draw
+      narrative: Boomerang Basics: a card/permanent returns; draw.
+      explicit effect object references: object 247 [247], Stormchaser's Talent [386], object 488 [488], object 490 [490] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Boomerang Basics (object 483) Hand (Wilan) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Stormchaser's Talent (object 488) Battlefield -> Hand (Wilan) (Return; shared object ID)
+      protocol-linked zone transfer: object 490 (object 490) Library (Wilan) -> Hand (Wilan) (Draw; shared object ID)
+      protocol-linked zone transfer: Boomerang Basics (object 491) Stack -> Graveyard (Wilan) (Resolve; shared object ID)
+      identity continuity: source object 483 -> transfer object 491 (explicit GRE ObjectIdChanged chain).
+  - Ability of Slickshot Show-Off [observed_semantic_effect, seq=604] (active=Wilan, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=460, source_last_explicit_zone=Battlefield)
+      effects: P/T +2/+0
+      narrative: Ability of Slickshot Show-Off: Slickshot Show-Off gets +2/+0.
+  - Stormchaser's Talent [valid_resolution_no_immediate_mutation, seq=606] (active=Wilan, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=492)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Stormchaser's Talent resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Stormchaser's Talent (object 492) Hand (Wilan) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Stormchaser's Talent (object 492) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Stormchaser's Talent [observed_semantic_effect, seq=608] (active=Wilan, phase=Phase_Main1, controller=Wilan, owner=Wilan, source_object=492, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Stormchaser's Talent: a token is created.
+      explicit effect object references: Otter [498] (role/targeting only where the protocol identifies it)
+      token created: Otter (object 498, controller=Wilan) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 497).
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=610] (active=Wilan, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=284, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=614] (active=Wilan, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Wilan loses 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=633] (active=Wilan, phase=Phase_Combat, step=Step_FirstStrikeDamage, controller=gian31, owner=gian31, source_object=336, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 614 and 633; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life -2
+      narrative: Ability of Enduring Tenacity: Wilan loses 2 life.
+  Combat snapshots observed (active=Wilan; frames: DeclareAttack -> DeclareBlock):
+      attackers: Otter [365] (unblocked, observed P/T 3/3), Otter [390] (unblocked, observed P/T 3/3), Human [443] (blocked, observed P/T 1/1), Slickshot Show-Off [460] (unblocked, observed P/T 5/2)
+      blockers: Brightblade Stoat [478]
+      combat-correlated defending-player life loss: 11; observed attacker power total: 12; snapshot comparison does not reconcile (exact assignment unavailable).
+      combat-result zone change: Human [502] Battlefield -> Graveyard (Wilan) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Wilan -3; gian31 -8 (individual changes below; gains and losses may offset)
+    life: gian31 13 -> 14
+    life: Wilan 4 -> 3
+    life (gain observed during combat phase; exact source unavailable): gian31 14 -> 16
+    life: Wilan 3 -> 1
+    life (combat fully reconciled: snapshot power 11 + observed modifiers 0 = 11; individual assignment unavailable): gian31 16 -> 5
+    additional protocol-observed zone movements not assigned to an action chain:
+      Riverpyre Verge [481] Library (Wilan) -> Hand (Wilan) (Draw; GRE sequence 581).
+      Riverpyre Verge [482] Hand (Wilan) -> Battlefield (PlayLand; GRE sequence 584).
+      Human [502] Battlefield -> Graveyard (Wilan) (SBA_Damage; GRE sequence 629).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Wilan: Battlefield: Island [420], Riverpyre Verge [281], Riverpyre Verge [482], Slickshot Show-Off [460], Spirebluff Canal [287], Steam Vents [300], Steam Vents [309], Steam Vents [385], Stormchaser's Talent [492]; Graveyard: Boomerang Basics [374], Boomerang Basics [491], Burst Lightning [408], Burst Lightning [430], Burst Lightning [458], Flow State [322], Get Out [477], Human [502], Opt [313], Prismari Charm [361], Roaring Furnace // Steaming Sauna [440], Sleight of Hand [305], Slickshot Show-Off [297], Vibrant Outburst [333]; Exile: Eddymurk Crab [354]
+      gian31: Battlefield: Authority of the Consuls [284], Bloodletter of Aclazotz [448], Brightblade Stoat [478], Enduring Tenacity [336], Godless Shrine [324], Godless Shrine [348], Makeshift Binding [349], Plains [283], Plains [307], Plains [315], Swamp [293], Swamp [435]; Graveyard: Makeshift Binding [476], Shoot the Sheriff [298], Starscape Cleric [403], Starscape Cleric [409], Starscape Cleric [431], Starscape Cleric [459], Stroke of Midnight [445]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 10, seq 187: gian31 21 -> 19. No source event correlated in captured records.
+- Turn 18, seq 486, Phase_Main1: Wilan 11 -> 9. combat-reconciled component 1; unresolved residual 1. Previous captured action: Bloodletter of Aclazotz.
+- Turn 20, seq 571, Phase_Main1: Wilan 8 -> 4. combat-reconciled component 2; unresolved residual 2. Previous captured action: Brightblade Stoat.
+- Turn 21, seq 629, Phase_Main1: gian31 14 -> 16. Combat declaration observed; exact assignment unavailable. Previous captured action: Enduring Tenacity.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 6 token creations observed; 3 active as last observed; 3 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Otter [365] controller=Wilan; created Turn 13 (3/3); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 21, object 365 (latest observed P/T 3/3; current zone unconfirmed).
+- Starscape Cleric [383] controller=gian31; created Turn 14 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 15 via Battlefield -> Graveyard (gian31) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Otter [390] controller=Wilan; created Turn 15 (3/3); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 21, object 390 (latest observed P/T 3/3; current zone unconfirmed).
+- Starscape Cleric [418] controller=gian31; created Turn 16 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 19 via Battlefield -> Graveyard (gian31) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Human [443] controller=Wilan; created Turn 18 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 21 via Battlefield -> Graveyard (Wilan) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Otter [498] controller=Wilan; created Turn 21 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 21, object 498 (latest observed P/T 1/1; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Riverpyre Verge [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Enduring Tenacity [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 24: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 27: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 41: Spirebluff Canal [owner/controller metadata unavailable] moves Library (Wilan) -> Hand (Wilan) (Draw).
+- Turn 3, seq 44: Spirebluff Canal [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Slickshot Show-Off [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Stack (CastSpell).
+- Turn 3, seq 47: Slickshot Show-Off [owner=Wilan, controller=Wilan] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 63: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 66: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 67: Shoot the Sheriff [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 71: Slickshot Show-Off [owner=Wilan, controller=Wilan] moves Battlefield -> Graveyard (Wilan) (Destroy).
+- Turn 4, seq 71: Shoot the Sheriff [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 5, seq 85: Eddymurk Crab [owner/controller metadata unavailable] moves Library (Wilan) -> Hand (Wilan) (Draw).
+- Turn 5, seq 89: Steam Vents [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Battlefield (PlayLand).
+- Turn 5, seq 90: Sleight of Hand [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Stack (CastSpell).
+- Turn 5, seq 93: Steam Vents [owner/controller metadata unavailable] moves Library (Wilan) -> Hand (Wilan) (Put).
+- Turn 5, seq 93: object 304 [owner/controller metadata unavailable] moves Library (Wilan) -> Library (Wilan) (Put).
+- Turn 5, seq 93: Sleight of Hand [owner=Wilan, controller=Wilan] moves Stack -> Graveyard (Wilan) (Resolve).
+- Turn 6, seq 107: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 110: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 124: Opt [owner/controller metadata unavailable] moves Library (Wilan) -> Hand (Wilan) (Draw).
+- Turn 7, seq 128: Steam Vents [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Battlefield (PlayLand).
+- Turn 7, seq 129: Opt [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Stack (CastSpell).
+- Turn 7, seq 132: Flow State [owner/controller metadata unavailable] moves Library (Wilan) -> Hand (Wilan) (Draw).
+- Turn 7, seq 132: Opt [owner=Wilan, controller=Wilan] moves Stack -> Graveyard (Wilan) (Resolve).
+- Turn 8, seq 146: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 149: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 163: Burst Lightning [owner/controller metadata unavailable] moves Library (Wilan) -> Hand (Wilan) (Draw).
+- Turn 9, seq 166: Flow State [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Stack (CastSpell).
+- Turn 9, seq 169: Prismari Charm [owner/controller metadata unavailable] moves Library (Wilan) -> Hand (Wilan) (Put).
+- Turn 9, seq 169: Vibrant Outburst [owner/controller metadata unavailable] moves Library (Wilan) -> Hand (Wilan) (Put).
+- Turn 9, seq 169: Flow State [owner=Wilan, controller=Wilan] moves Stack -> Graveyard (Wilan) (Resolve).
+- Turn 10, seq 183: Godless Shrine [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 187: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 188: Enduring Tenacity [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 190: Enduring Tenacity [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 194: Vibrant Outburst [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Stack (CastSpell).
+- Turn 10, seq 198: Vibrant Outburst [owner=Wilan, controller=Wilan] moves Stack -> Graveyard (Wilan) (Resolve).
+- Turn 10, seq 198: Enduring Tenacity [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 10, seq 200: Enduring Tenacity [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Battlefield (Return).
+- Turn 11, seq 212: Roaring Furnace // Steaming Sauna [owner/controller metadata unavailable] moves Library (Wilan) -> Hand (Wilan) (Draw).
+- Turn 11, seq 215: Eddymurk Crab [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Stack (CastSpell).
+- Turn 11, seq 217: Eddymurk Crab [owner=Wilan, controller=Wilan] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 240: Godless Shrine [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 244: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 245: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 247: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 251: Eddymurk Crab [owner=Wilan, controller=Wilan] moves Battlefield -> Exile (Exile).
+- Turn 13, seq 269: object 356 [owner/controller metadata unavailable] moves Library (Wilan) -> Hand (Wilan) (Draw).
+- Turn 13, seq 272: Prismari Charm [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Stack (CastSpell).
+- Turn 13, seq 276: Stormchaser's Talent [owner/controller metadata unavailable] moves Library (Wilan) -> Hand (Wilan) (Draw).
+- Turn 13, seq 276: Prismari Charm [owner=Wilan, controller=Wilan] moves Stack -> Graveyard (Wilan) (Resolve).
+- Turn 13, seq 277: Stormchaser's Talent [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Stack (CastSpell).
+- Turn 13, seq 279: Stormchaser's Talent [owner=Wilan, controller=Wilan] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 288: Boomerang Basics [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Stack (CastSpell).
+- Turn 13, seq 294: Stormchaser's Talent [owner/controller metadata unavailable] moves Battlefield -> Hand (Wilan) (Return).
+- Turn 13, seq 294: Get Out [owner/controller metadata unavailable] moves Library (Wilan) -> Hand (Wilan) (Draw).
+- Turn 13, seq 294: Boomerang Basics [owner=Wilan, controller=Wilan] moves Stack -> Graveyard (Wilan) (Resolve).
+- Turn 14, seq 308: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 311: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 315: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 331: Steam Vents [owner/controller metadata unavailable] moves Library (Wilan) -> Hand (Wilan) (Draw).
+- Turn 15, seq 335: Steam Vents [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Battlefield (PlayLand).
+- Turn 15, seq 336: Stormchaser's Talent [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Stack (CastSpell).
+- Turn 15, seq 340: Stormchaser's Talent [owner=Wilan, controller=Wilan] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 354: Roaring Furnace // Steaming Sauna [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Stack (CastSpell).
+- Turn 15, seq 361: Roaring Furnace // Steaming Sauna [owner=Wilan, controller=Wilan] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 365: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 15, seq 366: Burst Lightning [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Stack (CastSpell).
+- Turn 15, seq 376: Burst Lightning [owner=Wilan, controller=Wilan] moves Stack -> Graveyard (Wilan) (Resolve).
+- Turn 15, seq 376: Starscape Cleric [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 16, seq 396: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 399: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 403: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 17, seq 419: Island [owner/controller metadata unavailable] moves Library (Wilan) -> Hand (Wilan) (Draw).
+- Turn 17, seq 422: Island [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Battlefield (PlayLand).
+- Turn 17, seq 424: Burst Lightning [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Stack (CastSpell).
+- Turn 17, seq 434: Burst Lightning [owner=Wilan, controller=Wilan] moves Stack -> Graveyard (Wilan) (Resolve).
+- Turn 17, seq 434: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 17, seq 452: Boomerang Basics [owner/controller metadata unavailable] moves Library (Wilan) -> Hand (Wilan) (Draw).
+- Turn 18, seq 456: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 18, seq 459: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 18, seq 460: Stroke of Midnight [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 18, seq 464: Roaring Furnace // Steaming Sauna [owner=Wilan, controller=Wilan] moves Battlefield -> Graveyard (Wilan) (Destroy).
+- Turn 18, seq 464: Stroke of Midnight [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 18, seq 474: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 18, seq 476: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 19, seq 496: Slickshot Show-Off [owner/controller metadata unavailable] moves Library (Wilan) -> Hand (Wilan) (Draw).
+- Turn 19, seq 499: Burst Lightning [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Stack (CastSpell).
+- Turn 19, seq 509: Burst Lightning [owner=Wilan, controller=Wilan] moves Stack -> Graveyard (Wilan) (Resolve).
+- Turn 19, seq 509: Starscape Cleric [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 19, seq 510: Slickshot Show-Off [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Stack (CastSpell).
+- Turn 19, seq 512: Slickshot Show-Off [owner=Wilan, controller=Wilan] moves Stack -> Battlefield (Resolve).
+- Turn 20, seq 541: Brightblade Stoat [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 20, seq 544: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 20, seq 546: Get Out [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Stack (CastSpell).
+- Turn 20, seq 558: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Countered).
+- Turn 20, seq 558: Get Out [owner=Wilan, controller=Wilan] moves Stack -> Graveyard (Wilan) (Resolve).
+- Turn 20, seq 559: Brightblade Stoat [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 20, seq 561: Brightblade Stoat [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 21, seq 581: Riverpyre Verge [owner/controller metadata unavailable] moves Library (Wilan) -> Hand (Wilan) (Draw).
+- Turn 21, seq 584: Riverpyre Verge [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Battlefield (PlayLand).
+- Turn 21, seq 585: Boomerang Basics [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Stack (CastSpell).
+- Turn 21, seq 596: Stormchaser's Talent [owner/controller metadata unavailable] moves Battlefield -> Hand (Wilan) (Return).
+- Turn 21, seq 596: object 490 [owner/controller metadata unavailable] moves Library (Wilan) -> Hand (Wilan) (Draw).
+- Turn 21, seq 596: Boomerang Basics [owner=Wilan, controller=Wilan] moves Stack -> Graveyard (Wilan) (Resolve).
+- Turn 21, seq 597: Stormchaser's Talent [owner=Wilan, controller=Wilan] moves Hand (Wilan) -> Stack (CastSpell).
+- Turn 21, seq 606: Stormchaser's Talent [owner=Wilan, controller=Wilan] moves Stack -> Battlefield (Resolve).
+- Turn 21, seq 629: Human [owner/controller metadata unavailable] moves Battlefield -> Graveyard (Wilan) (SBA_Damage).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 224 becomes object 281 [Riverpyre Verge].
+- Turn 2, seq 21: object 168 becomes object 282 [Enduring Tenacity].
+- Turn 2, seq 24: object 166 becomes object 283 [Plains].
+- Turn 2, seq 25: object 163 becomes object 284 [Authority of the Consuls].
+- Turn 3, seq 41: object 228 becomes object 286 [Spirebluff Canal].
+- Turn 3, seq 44: object 286 becomes object 287 [Spirebluff Canal].
+- Turn 3, seq 45: object 221 becomes object 288 [Slickshot Show-Off].
+- Turn 4, seq 63: object 169 becomes object 292 [Bloodletter of Aclazotz].
+- Turn 4, seq 66: object 164 becomes object 293 [Swamp].
+- Turn 4, seq 67: object 162 becomes object 294 [Shoot the Sheriff].
+- Turn 4, seq 71: object 288 becomes object 297 [Slickshot Show-Off].
+- Turn 4, seq 71: object 294 becomes object 298 [Shoot the Sheriff].
+- Turn 5, seq 85: object 229 becomes object 299 [Eddymurk Crab].
+- Turn 5, seq 89: object 225 becomes object 300 [Steam Vents].
+- Turn 5, seq 90: object 226 becomes object 301 [Sleight of Hand].
+- Turn 5, seq 93: object 230 becomes object 303 [Steam Vents].
+- Turn 5, seq 93: object 231 becomes object 304 [object 231].
+- Turn 5, seq 93: object 301 becomes object 305 [Sleight of Hand].
+- Turn 6, seq 107: object 170 becomes object 306 [Plains].
+- Turn 6, seq 110: object 161 becomes object 307 [Plains].
+- Turn 7, seq 124: object 232 becomes object 308 [Opt].
+- Turn 7, seq 128: object 303 becomes object 309 [Steam Vents].
+- Turn 7, seq 129: object 308 becomes object 310 [Opt].
+- Turn 7, seq 132: object 233 becomes object 312 [Flow State].
+- Turn 7, seq 132: object 310 becomes object 313 [Opt].
+- Turn 8, seq 146: object 171 becomes object 314 [Makeshift Binding].
+- Turn 8, seq 149: object 306 becomes object 315 [Plains].
+- Turn 9, seq 163: object 234 becomes object 316 [Burst Lightning].
+- Turn 9, seq 166: object 312 becomes object 317 [Flow State].
+- Turn 9, seq 169: object 236 becomes object 321 [Prismari Charm].
+- Turn 9, seq 169: object 235 becomes object 320 [Vibrant Outburst].
+- Turn 9, seq 169: object 317 becomes object 322 [Flow State].
+- Turn 10, seq 183: object 172 becomes object 323 [Godless Shrine].
+- Turn 10, seq 187: object 323 becomes object 324 [Godless Shrine].
+- Turn 10, seq 188: object 282 becomes object 325 [Enduring Tenacity].
+- Turn 10, seq 194: object 320 becomes object 330 [Vibrant Outburst].
+- Turn 10, seq 198: object 330 becomes object 333 [Vibrant Outburst].
+- Turn 10, seq 198: object 325 becomes object 334 [Enduring Tenacity].
+- Turn 10, seq 200: object 334 becomes object 336 [Enduring Tenacity].
+- Turn 11, seq 212: object 238 becomes object 337 [Roaring Furnace // Steaming Sauna].
+- Turn 11, seq 215: object 299 becomes object 340 [Eddymurk Crab].
+- Turn 12, seq 240: object 173 becomes object 347 [Godless Shrine].
+- Turn 12, seq 244: object 347 becomes object 348 [Godless Shrine].
+- Turn 12, seq 245: object 314 becomes object 349 [Makeshift Binding].
+- Turn 12, seq 251: object 340 becomes object 354 [Eddymurk Crab].
+- Turn 13, seq 269: object 239 becomes object 356 [object 239].
+- Turn 13, seq 272: object 321 becomes object 357 [Prismari Charm].
+- Turn 13, seq 276: object 240 becomes object 360 [Stormchaser's Talent].
+- Turn 13, seq 276: object 357 becomes object 361 [Prismari Charm].
+- Turn 13, seq 277: object 360 becomes object 362 [Stormchaser's Talent].
+- Turn 13, seq 288: object 227 becomes object 368 [Boomerang Basics].
+- Turn 13, seq 294: object 362 becomes object 371 [Stormchaser's Talent].
+- Turn 13, seq 294: object 241 becomes object 373 [Get Out].
+- Turn 13, seq 294: object 368 becomes object 374 [Boomerang Basics].
+- Turn 14, seq 308: object 174 becomes object 375 [Starscape Cleric].
+- Turn 14, seq 311: object 375 becomes object 376 [Starscape Cleric].
+- Turn 15, seq 331: object 242 becomes object 384 [Steam Vents].
+- Turn 15, seq 335: object 384 becomes object 385 [Steam Vents].
+- Turn 15, seq 336: object 371 becomes object 386 [Stormchaser's Talent].
+- Turn 15, seq 354: object 337 becomes object 395 [Roaring Furnace // Steaming Sauna].
+- Turn 15, seq 365: object 376 becomes object 403 [Starscape Cleric].
+- Turn 15, seq 366: object 316 becomes object 404 [Burst Lightning].
+- Turn 15, seq 376: object 404 becomes object 408 [Burst Lightning].
+- Turn 15, seq 376: object 383 becomes object 409 [Starscape Cleric].
+- Turn 16, seq 396: object 175 becomes object 410 [Makeshift Binding].
+- Turn 16, seq 399: object 165 becomes object 411 [Starscape Cleric].
+- Turn 17, seq 419: object 243 becomes object 419 [Island].
+- Turn 17, seq 422: object 419 becomes object 420 [Island].
+- Turn 17, seq 424: object 222 becomes object 426 [Burst Lightning].
+- Turn 17, seq 434: object 426 becomes object 430 [Burst Lightning].
+- Turn 17, seq 434: object 411 becomes object 431 [Starscape Cleric].
+- Turn 17, seq 452: object 244 becomes object 433 [Boomerang Basics].
+- Turn 18, seq 456: object 176 becomes object 434 [Swamp].
+- Turn 18, seq 459: object 434 becomes object 435 [Swamp].
+- Turn 18, seq 460: object 167 becomes object 436 [Stroke of Midnight].
+- Turn 18, seq 464: object 395 becomes object 440 [Roaring Furnace // Steaming Sauna].
+- Turn 18, seq 464: object 436 becomes object 445 [Stroke of Midnight].
+- Turn 18, seq 474: object 292 becomes object 448 [Bloodletter of Aclazotz].
+- Turn 19, seq 496: object 245 becomes object 453 [Slickshot Show-Off].
+- Turn 19, seq 499: object 223 becomes object 454 [Burst Lightning].
+- Turn 19, seq 509: object 454 becomes object 458 [Burst Lightning].
+- Turn 19, seq 509: object 418 becomes object 459 [Starscape Cleric].
+- Turn 19, seq 510: object 453 becomes object 460 [Slickshot Show-Off].
+- Turn 20, seq 541: object 177 becomes object 465 [Brightblade Stoat].
+- Turn 20, seq 544: object 410 becomes object 466 [Makeshift Binding].
+- Turn 20, seq 546: object 373 becomes object 470 [Get Out].
+- Turn 20, seq 558: object 466 becomes object 476 [Makeshift Binding].
+- Turn 20, seq 558: object 470 becomes object 477 [Get Out].
+- Turn 20, seq 559: object 465 becomes object 478 [Brightblade Stoat].
+- Turn 21, seq 581: object 246 becomes object 481 [Riverpyre Verge].
+- Turn 21, seq 584: object 481 becomes object 482 [Riverpyre Verge].
+- Turn 21, seq 585: object 433 becomes object 483 [Boomerang Basics].
+- Turn 21, seq 596: object 386 becomes object 488 [Stormchaser's Talent].
+- Turn 21, seq 596: object 247 becomes object 490 [object 247].
+- Turn 21, seq 596: object 483 becomes object 491 [Boomerang Basics].
+- Turn 21, seq 597: object 488 becomes object 492 [Stormchaser's Talent].
+- Turn 21, seq 629: object 443 becomes object 502 [Human].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: Wilan plays Riverpyre Verge (object 281) from Hand (Wilan) to Battlefield.
+- Turn 2: gian31 plays Plains (object 283) from Hand (gian31) to Battlefield.
+- Turn 3: Wilan plays Spirebluff Canal (object 287) from Hand (Wilan) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 293) from Hand (gian31) to Battlefield.
+- Turn 5: Wilan plays Steam Vents (object 300) from Hand (Wilan) to Battlefield.
+- Turn 6: gian31 plays Plains (object 307) from Hand (gian31) to Battlefield.
+- Turn 7: Wilan plays Steam Vents (object 309) from Hand (Wilan) to Battlefield.
+- Turn 8: gian31 plays Plains (object 315) from Hand (gian31) to Battlefield.
+- Turn 10: gian31 plays Godless Shrine (object 324) from Hand (gian31) to Battlefield.
+- Turn 12: gian31 plays Godless Shrine (object 348) from Hand (gian31) to Battlefield.
+- Turn 15: Wilan plays Steam Vents (object 385) from Hand (Wilan) to Battlefield.
+- Turn 17: Wilan plays Island (object 420) from Hand (Wilan) to Battlefield.
+- Turn 18: gian31 plays Swamp (object 435) from Hand (gian31) to Battlefield.
+- Turn 21: Wilan plays Riverpyre Verge (object 482) from Hand (Wilan) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Enduring Tenacity: casts=1; abilities=9 (triggered=9, activated=0) across turns [10, 10, 11, 12, 13, 15, 18, 19, 21, 21]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=1, damage=0, life_changes=8, other=5
+  observed effects: life -1, life -2, return to battlefield, synthetic event
+- Authority of the Consuls: casts=1; abilities=7 (triggered=7, activated=0) across turns [2, 3, 11, 13, 15, 18, 19, 21]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=7, other=0
+  observed effects: life +1
+- Starscape Cleric: casts=2; abilities=5 (triggered=5, activated=0) across turns [14, 14, 15, 15, 16, 16, 18]
+  observed effect totals: draws=0, tokens=2, counters=0, returns=0, damage=0, life_changes=3, other=2
+  observed effects: life -1, synthetic event, token creation
+- Stormchaser's Talent: casts=3; abilities=3 (triggered=3, activated=0) across turns [13, 13, 15, 15, 21, 21]
+  observed effect totals: draws=0, tokens=3, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Slickshot Show-Off: casts=2; abilities=3 (triggered=3, activated=0) across turns [3, 19, 20, 21, 21]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=3
+  observed effects: P/T +2/+0
+- Burst Lightning: casts=3 across turns [15, 17, 19]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=3, life_changes=0, other=0
+  observed effects: 2 damage
+- Roaring Furnace // Steaming Sauna: casts=1; abilities=2 (triggered=2, activated=0) across turns [15, 15, 17]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 5 damage, draw
+- Boomerang Basics: casts=2 across turns [13, 21]
+  observed effect totals: draws=2, tokens=0, counters=0, returns=2, damage=0, life_changes=0, other=0
+  observed effects: draw, return to battlefield
+- Eddymurk Crab: casts=1; abilities=1 (triggered=1, activated=0) across turns [11, 11]
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [12, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Bloodletter of Aclazotz: casts=1 across turns [18]
+- Brightblade Stoat: casts=1 across turns [20]
+- Get Out: casts=1 across turns [20]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: zone_transfer
+- Shoot the Sheriff: casts=1 across turns [4]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Stroke of Midnight: casts=1 across turns [18]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy, token creation
+- Vibrant Outburst: casts=1 across turns [10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 3 damage
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 15 - DeclareAttack, DeclareBlock (active=Wilan)
+  attacker: Otter (Wilan) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 17 - DeclareAttack, DeclareBlock (active=Wilan)
+  attacker: Otter (Wilan) -> gian31; unblocked in this observed snapshot
+  attacker: Otter (Wilan) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 18 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Wilan; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 19 - DeclareAttack, DeclareBlock (active=Wilan)
+  attacker: Otter (Wilan) -> gian31; unblocked in this observed snapshot
+  attacker: Otter (Wilan) -> gian31; unblocked in this observed snapshot
+  attacker: Human (Wilan) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 20 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Bloodletter of Aclazotz (gian31) -> Wilan; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 21 - DeclareAttack, DeclareBlock (active=Wilan)
+  attacker: Otter (Wilan) -> gian31; unblocked in this observed snapshot
+  attacker: Otter (Wilan) -> gian31; unblocked in this observed snapshot
+  attacker: Human (Wilan) -> gian31; blocked by Brightblade Stoat
+  attacker: Slickshot Show-Off (Wilan) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 10: Ability of Enduring Tenacity (active=gian31) - Ability of Enduring Tenacity: a card/permanent returns.
+- Turn 21: Ability of Enduring Tenacity (active=Wilan controller=gian31) - Ability of Enduring Tenacity: Wilan loses 2 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 161: Plains | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 162: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 163: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 164: Swamp | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 165: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 166: Plains | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 167: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 281: Riverpyre Verge | controller=Wilan | owner=Wilan | zone=Battlefield (latest_object_observation)
+- 282: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 283: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 284: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 287: Spirebluff Canal | controller=Wilan | owner=Wilan | zone=Battlefield (latest_object_observation)
+- 288: Slickshot Show-Off | controller=Wilan | owner=Wilan | zone=Battlefield (latest_object_observation)
+- 291: object 291 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 292: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 293: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 294: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 297: Slickshot Show-Off | controller=Wilan | owner=Wilan | zone=Graveyard (latest_object_observation)
+- 298: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 300: Steam Vents | controller=Wilan | owner=Wilan | zone=Battlefield (latest_object_observation)
+- 301: Sleight of Hand | controller=Wilan | owner=Wilan | zone=Stack (latest_object_observation)
+- 305: Sleight of Hand | controller=Wilan | owner=Wilan | zone=Graveyard (latest_object_observation)
+- 306: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 307: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 309: Steam Vents | controller=Wilan | owner=Wilan | zone=Battlefield (latest_object_observation)
+- 310: Opt | controller=Wilan | owner=Wilan | zone=Stack (latest_object_observation)
+- 313: Opt | controller=Wilan | owner=Wilan | zone=Graveyard (latest_object_observation)
+- 314: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 315: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 317: Flow State | controller=Wilan | owner=Wilan | zone=Stack (latest_object_observation)
+- 322: Flow State | controller=Wilan | owner=Wilan | zone=Graveyard (latest_object_observation)
+- 323: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 324: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 325: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 330: Vibrant Outburst | controller=Wilan | owner=Wilan | zone=Stack (latest_object_observation)
+- 333: Vibrant Outburst | controller=Wilan | owner=Wilan | zone=Graveyard (latest_object_observation)
+- 334: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 335: object 335 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 336: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 340: Eddymurk Crab | controller=Wilan | owner=Wilan | zone=Battlefield (latest_object_observation)
+- 344: object 344 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 345: object 345 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 346: object 346 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 347: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 348: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 349: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 353: object 353 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 354: Eddymurk Crab | controller=Wilan | owner=Wilan | zone=Exile (latest_object_observation)
+- 355: object 355 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 357: Prismari Charm | controller=Wilan | owner=Wilan | zone=Stack (latest_object_observation)
+- 361: Prismari Charm | controller=Wilan | owner=Wilan | zone=Graveyard (latest_object_observation)
+- 362: Stormchaser's Talent | controller=Wilan | owner=Wilan | zone=Stack (latest_object_observation)
+- 364: object 364 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 365: Otter | controller=Wilan | owner=Wilan | zone=Battlefield (latest_object_observation)
+- 366: object 366 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 367: object 367 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 368: Boomerang Basics | controller=Wilan | owner=Wilan | zone=Stack (latest_object_observation)
+- 370: object 370 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 372: Stormchaser's Talent | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 374: Boomerang Basics | controller=Wilan | owner=Wilan | zone=Graveyard (latest_object_observation)
+- 375: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 376: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 382: object 382 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 383: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 385: Steam Vents | controller=Wilan | owner=Wilan | zone=Battlefield (latest_object_observation)
+- 386: Stormchaser's Talent | controller=Wilan | owner=Wilan | zone=Stack (latest_object_observation)
+- 388: object 388 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 389: object 389 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 390: Otter | controller=Wilan | owner=Wilan | zone=Battlefield (latest_object_observation)
+- 391: object 391 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 392: object 392 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 393: object 393 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 394: object 394 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 395: Roaring Furnace // Steaming Sauna | controller=Wilan | owner=Wilan | zone=Stack (latest_object_observation)
+- 396: Roaring Furnace | controller=Wilan | owner=Wilan | zone=Battlefield (latest_object_observation)
+- 397: Steaming Sauna | controller=Wilan | owner=Wilan | zone=Battlefield (latest_object_observation)
+- 400: object 400 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 401: object 401 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 402: object 402 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 403: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 404: Burst Lightning | controller=Wilan | owner=Wilan | zone=Stack (latest_object_observation)
+- 406: object 406 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 407: object 407 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 408: Burst Lightning | controller=Wilan | owner=Wilan | zone=Graveyard (latest_object_observation)
+- 410: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 411: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 417: object 417 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 418: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 420: Island | controller=Wilan | owner=Wilan | zone=Battlefield (latest_object_observation)
+- 426: Burst Lightning | controller=Wilan | owner=Wilan | zone=Stack (latest_object_observation)
+- 428: object 428 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 429: object 429 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 430: Burst Lightning | controller=Wilan | owner=Wilan | zone=Graveyard (latest_object_observation)
+- 431: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 432: object 432 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 434: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 435: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 436: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 440: Roaring Furnace // Steaming Sauna | controller=Wilan | owner=Wilan | zone=Graveyard (latest_object_observation)
+- 441: Roaring Furnace | controller=Wilan | owner=Wilan | zone=Graveyard (latest_object_observation)
+- 442: Steaming Sauna | controller=Wilan | owner=Wilan | zone=Graveyard (latest_object_observation)
+- 443: Human | controller=Wilan | owner=Wilan | zone=Stack (latest_object_observation)
+- 444: object 444 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 445: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 446: object 446 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 447: object 447 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 448: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 454: Burst Lightning | controller=Wilan | owner=Wilan | zone=Stack (latest_object_observation)
+- 456: object 456 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 457: object 457 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 458: Burst Lightning | controller=Wilan | owner=Wilan | zone=Graveyard (latest_object_observation)
+- 460: Slickshot Show-Off | controller=Wilan | owner=Wilan | zone=Battlefield (latest_object_observation)
+- 463: object 463 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 464: object 464 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 465: Brightblade Stoat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 466: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 470: Get Out | controller=Wilan | owner=Wilan | zone=Stack (latest_object_observation)
+- 473: object 473 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 474: object 474 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 475: object 475 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 476: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 477: Get Out | controller=Wilan | owner=Wilan | zone=Graveyard (latest_object_observation)
+- 478: Brightblade Stoat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 482: Riverpyre Verge | controller=Wilan | owner=Wilan | zone=Battlefield (latest_object_observation)
+- 483: Boomerang Basics | controller=Wilan | owner=Wilan | zone=Stack (latest_object_observation)
+- 485: object 485 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 486: object 486 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 487: object 487 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 489: Stormchaser's Talent | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 491: Boomerang Basics | controller=Wilan | owner=Wilan | zone=Graveyard (latest_object_observation)
+- 492: Stormchaser's Talent | controller=Wilan | owner=Wilan | zone=Stack (latest_object_observation)
+- 494: object 494 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 495: object 495 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 496: object 496 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 497: object 497 | controller=Wilan | owner=Wilan | zone=unknown (inferred unknown) (latest_object_observation)
+- 498: Otter | controller=Wilan | owner=Wilan | zone=Battlefield (latest_object_observation)
+- 499: object 499 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 500: object 500 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 501: object 501 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Wilan: 74 total items
+  zones: Battlefield=15, Exile=1, Graveyard=15, Stack=16, unknown=27
+  objects: Burst Lightning x6, Stormchaser's Talent x5, Boomerang Basics x4, Otter x3, Slickshot Show-Off x3, Steam Vents x3, Eddymurk Crab x2, Flow State x2, Get Out x2, Opt x2, Prismari Charm x2, Riverpyre Verge x2
+gian31: 65 total items
+  zones: Battlefield=19, Hand=10, Stack=14, unknown=22
+  objects: Starscape Cleric x8, Plains x6, Makeshift Binding x5, Enduring Tenacity x4, Godless Shrine x4, Swamp x4, Shoot the Sheriff x3, Stroke of Midnight x3, Authority of the Consuls x2, Bloodletter of Aclazotz x2, Brightblade Stoat x2, object 291
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (19): Bloodletter of Aclazotz, Brightblade Stoat, Enduring Tenacity, Enduring Tenacity, Enduring Tenacity, Godless Shrine, Godless Shrine, Makeshift Binding, Plains, Plains, Plains, Shoot the Sheriff, Starscape Cleric, Starscape Cleric, Starscape Cleric, Starscape Cleric, Stroke of Midnight, Swamp, Swamp
+  Graveyard: 0 card(s)
+Wilan:
+  Battlefield (15): Eddymurk Crab, Island, Otter, Otter, Otter, Riverpyre Verge, Riverpyre Verge, Roaring Furnace, Slickshot Show-Off, Slickshot Show-Off, Spirebluff Canal, Steam Vents, Steam Vents, Steam Vents, Steaming Sauna
+  Graveyard: 15 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+49 objects have no resolved final zone and are omitted from the known board state.
+Wilan: 27 unknown object(s)
+gian31: 22 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=10, Stack=30
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Wilan:
+  Battlefield (12): Riverpyre Verge, Spirebluff Canal, Steam Vents, Steam Vents, Otter, Steam Vents, Otter, Island, Slickshot Show-Off, Riverpyre Verge, Stormchaser's Talent, Otter
+  Graveyard (15): Slickshot Show-Off, Sleight of Hand, Opt, Flow State, Vibrant Outburst, Prismari Charm, Boomerang Basics, Burst Lightning, Burst Lightning, Roaring Furnace // Steaming Sauna, Roaring Furnace, Steaming Sauna, Burst Lightning, Get Out, Boomerang Basics
+  Exile (1): Eddymurk Crab
+gian31:
+  Battlefield (12): Plains, Authority of the Consuls, Swamp, Plains, Plains, Godless Shrine, Enduring Tenacity, Godless Shrine, Makeshift Binding, Swamp, Bloodletter of Aclazotz, Brightblade Stoat
+  Graveyard (5): Shoot the Sheriff, Starscape Cleric, Starscape Cleric, Stroke of Midnight, Makeshift Binding
+Known non-persistent entries (counts only):
+  Wilan: Hand=2, Library=1, Limbo=5
+  gian31: Limbo=5
+  unknown: Library=77, Limbo=10
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: Wilan Battlefield=1
+- Turn 2: Wilan Battlefield=1; gian31 Battlefield=2
+- Turn 3: Wilan Battlefield=3; gian31 Battlefield=2
+- Turn 4: Wilan Battlefield=2; Wilan Graveyard=1; gian31 Battlefield=3; gian31 Graveyard=1
+- Turn 5: Wilan Battlefield=3; Wilan Graveyard=2; gian31 Battlefield=3; gian31 Graveyard=1
+- Turn 6: Wilan Battlefield=3; Wilan Graveyard=2; gian31 Battlefield=4; gian31 Graveyard=1
+- Turn 7: Wilan Battlefield=4; Wilan Graveyard=3; gian31 Battlefield=4; gian31 Graveyard=1
+- Turn 8: Wilan Battlefield=4; Wilan Graveyard=3; gian31 Battlefield=5; gian31 Graveyard=1
+- Turn 9: Wilan Battlefield=4; Wilan Graveyard=4; gian31 Battlefield=5; gian31 Graveyard=1
+- Turn 10: Wilan Battlefield=4; Wilan Graveyard=5; gian31 Battlefield=7; gian31 Graveyard=1
+- Turn 11: Wilan Battlefield=5; Wilan Graveyard=5; gian31 Battlefield=7; gian31 Graveyard=1
+- Turn 12: Wilan Battlefield=4; Wilan Graveyard=5; Wilan Exile=1; gian31 Battlefield=9; gian31 Graveyard=1
+- Turn 13: Wilan Battlefield=4; Wilan Graveyard=7; Wilan Exile=1; gian31 Battlefield=9; gian31 Graveyard=1
+- Turn 14: Wilan Battlefield=4; Wilan Graveyard=7; Wilan Exile=1; gian31 Battlefield=10; gian31 Graveyard=1
+- Turn 15: Wilan Battlefield=7; Wilan Graveyard=8; Wilan Exile=1; gian31 Battlefield=9; gian31 Graveyard=3
+- Turn 16: Wilan Battlefield=7; Wilan Graveyard=8; Wilan Exile=1; gian31 Battlefield=10; gian31 Graveyard=3
+- Turn 17: Wilan Battlefield=8; Wilan Graveyard=9; Wilan Exile=1; gian31 Battlefield=9; gian31 Graveyard=4
+- Turn 18: Wilan Battlefield=7; Wilan Graveyard=10; Wilan Exile=1; gian31 Battlefield=11; gian31 Graveyard=5
+- Turn 19: Wilan Battlefield=8; Wilan Graveyard=11; Wilan Exile=1; gian31 Battlefield=11; gian31 Graveyard=6
+- Turn 20: Wilan Battlefield=8; Wilan Graveyard=12; Wilan Exile=1; gian31 Battlefield=12; gian31 Graveyard=7
+- Turn 21: Wilan Battlefield=9; Wilan Graveyard=14; Wilan Exile=1; gian31 Battlefield=12; gian31 Graveyard=7
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Slickshot Show-Off resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Enduring Tenacity resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Eddymurk Crab resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Stormchaser's Talent resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: Stormchaser's Talent resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: Roaring Furnace // Steaming Sauna resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 18: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 19: Slickshot Show-Off resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 20: Brightblade Stoat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 21: Stormchaser's Talent resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
