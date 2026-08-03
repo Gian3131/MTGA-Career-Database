@@ -1,0 +1,1148 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: SIBA23, gian31
+Seat map: Seat 1=SIBA23, Seat 2=gian31
+Turn range (known): 1 - 20
+Unnumbered turn groups retained: 1
+Records: 50
+Action chains: 46
+Winner: SIBA23
+Final life: {'SIBA23': 17, 'gian31': 4}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 20 (Phase_Main1; Ability of Scoured Barrens, seq 610).
+Later numbered GRE record(s): 12 after action sequence 610 across turn(s) [20]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 56 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 16 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 14, 15, 18, 19, 20] (raw records=16; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 37 explicit Library -> Hand movement(s); named in the draw record=21, resolved through an explicit identity transition=14, unresolved=2.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: SIBA23; observed final life totals: {'SIBA23': 17, 'gian31': 4}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 20 (Phase_Main1; Ability of Scoured Barrens, seq 610).
+Last captured life snapshot: gian31 3 -> 4 (seq 610).
+Observed active tokens: Eddymurk Crab [548] controller=SIBA23, created Turn 19, last observed Turn 19 seq 573, P/T 5/5; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 339 [339] Hand (SIBA23) -> Library (SIBA23) (Put; GRE sequence 6).
+      Island [340] Hand (SIBA23) -> Battlefield (PlayLand; GRE sequence 9).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Island [340]
+
+Turn 2
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=29] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=343)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 343) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 343) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [341] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 23).
+      Plains [342] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 26).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Island [340]
+      gian31: Battlefield: Case of the Uneaten Feast [343], Plains [342]
+
+Turn 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Stock Up [345] Library (SIBA23) -> Hand (SIBA23) (Draw; GRE sequence 43).
+      Island [346] Hand (SIBA23) -> Battlefield (PlayLand; GRE sequence 46).
+      Flow State [347] Hand (SIBA23) -> Stack (CastSpell; GRE sequence 47).
+      Island [350] Library (SIBA23) -> Hand (SIBA23) (Put; GRE sequence 50).
+      Flow State [351] Stack -> Graveyard (SIBA23) (Resolve; GRE sequence 51).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Island [340], Island [346]; Graveyard: Flow State [351]
+      gian31: Battlefield: Case of the Uneaten Feast [343], Plains [342]
+
+Turn 4
+  - Deep-Cavern Bat [valid_resolution_no_immediate_mutation, seq=71] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=354)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deep-Cavern Bat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deep-Cavern Bat (object 354) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 354) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=79] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=343, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Phyrexian Arena [352] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 65).
+      Swamp [353] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 68).
+      Eluge, the Shoreless Sea [359] Hand (SIBA23) -> Exile (Exile; GRE sequence 77).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Island [340], Island [346]; Graveyard: Flow State [351]; Exile: Eluge, the Shoreless Sea [359]
+      gian31: Battlefield: Case of the Uneaten Feast [343], Deep-Cavern Bat [354], Plains [342], Swamp [353]
+
+Turn 5
+    additional protocol-observed zone movements not assigned to an action chain:
+      Island [364] Library (SIBA23) -> Hand (SIBA23) (Draw; GRE sequence 93).
+      Island [365] Hand (SIBA23) -> Battlefield (PlayLand; GRE sequence 96).
+      Stock Up [366] Hand (SIBA23) -> Stack (CastSpell; GRE sequence 97).
+      Island [371] Library (SIBA23) -> Hand (SIBA23) (Put; GRE sequence 100).
+      Bounce Off [370] Library (SIBA23) -> Hand (SIBA23) (Put; GRE sequence 100).
+      Stock Up [372] Stack -> Graveyard (SIBA23) (Resolve; GRE sequence 101).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Island [340], Island [346], Island [365]; Graveyard: Flow State [351], Stock Up [372]; Exile: Eluge, the Shoreless Sea [359]
+      gian31: Battlefield: Case of the Uneaten Feast [343], Deep-Cavern Bat [354], Plains [342], Swamp [353]
+
+Turn 6
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=120] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=374, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [354] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: SIBA23 -1; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): SIBA23 20 -> 19
+    life (semantically attributed to Scoured Barrens; direct protocol link unavailable): gian31 22 -> 23
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [373] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 115).
+      Scoured Barrens [374] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 118).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Island [340], Island [346], Island [365]; Graveyard: Flow State [351], Stock Up [372]; Exile: Eluge, the Shoreless Sea [359]
+      gian31: Battlefield: Case of the Uneaten Feast [343], Deep-Cavern Bat [354], Plains [342], Scoured Barrens [374], Swamp [353]
+
+Turn 7
+    additional protocol-observed zone movements not assigned to an action chain:
+      Stock Up [376] Library (SIBA23) -> Hand (SIBA23) (Draw; GRE sequence 140).
+      Island [377] Hand (SIBA23) -> Battlefield (PlayLand; GRE sequence 143).
+      Stock Up [378] Hand (SIBA23) -> Stack (CastSpell; GRE sequence 144).
+      Island [383] Library (SIBA23) -> Hand (SIBA23) (Put; GRE sequence 147).
+      Opt [382] Library (SIBA23) -> Hand (SIBA23) (Put; GRE sequence 147).
+      Stock Up [384] Stack -> Graveyard (SIBA23) (Resolve; GRE sequence 148).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Island [340], Island [346], Island [365], Island [377]; Graveyard: Flow State [351], Stock Up [372], Stock Up [384]; Exile: Eluge, the Shoreless Sea [359]
+      gian31: Battlefield: Case of the Uneaten Feast [343], Deep-Cavern Bat [354], Plains [342], Scoured Barrens [374], Swamp [353]
+
+Turn 8
+  - Phyrexian Arena [valid_resolution_no_immediate_mutation, seq=175] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=387)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Phyrexian Arena resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Phyrexian Arena (object 387) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Phyrexian Arena (object 387) Stack -> Battlefield (Resolve; shared object ID)
+  - Into the Flood Maw [observed_semantic_effect, seq=173] (active=unknown, controller=SIBA23, owner=SIBA23, source_object=391)
+      chronology reconciliation: parser turn group 16 conflicts with Turn 8; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: return to battlefield, return to battlefield
+      narrative: Into the Flood Maw: a card/permanent returns; a card/permanent returns.
+      explicit effect object references: Deep-Cavern Bat [354], Eluge, the Shoreless Sea [359], Deep-Cavern Bat [393], object 395 [395] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Into the Flood Maw (object 391) Hand (SIBA23) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 393) Battlefield -> Hand (gian31) (Return; shared object ID)
+      protocol-linked zone transfer: Eluge, the Shoreless Sea (object 395) Exile -> Hand (SIBA23) (Return; shared object ID)
+      protocol-linked zone transfer: Into the Flood Maw (object 397) Stack -> Graveyard (SIBA23) (Resolve; shared object ID)
+      identity continuity: source object 391 -> transfer object 397 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Deep-Cavern Bat [385] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 162).
+      Plains [386] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 165).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Island [340], Island [346], Island [365], Island [377]; Graveyard: Flow State [351], Into the Flood Maw [397], Stock Up [372], Stock Up [384]
+      gian31: Battlefield: Case of the Uneaten Feast [343], Phyrexian Arena [387], Plains [342], Plains [386], Scoured Barrens [374], Swamp [353]
+
+Turn 9
+  - Eluge, the Shoreless Sea [valid_resolution_no_immediate_mutation, seq=194] (active=SIBA23, phase=Phase_Main1, controller=SIBA23, owner=SIBA23, source_object=399)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Eluge, the Shoreless Sea resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Eluge, the Shoreless Sea (object 399) Hand (SIBA23) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Eluge, the Shoreless Sea (object 399) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Eluge, the Shoreless Sea [observed_semantic_effect, seq=198] (active=SIBA23, phase=Phase_Main1, controller=SIBA23, owner=SIBA23, source_object=399, source_last_explicit_zone=Battlefield)
+      effects: +1 counter(s)
+      narrative: Ability of Eluge, the Shoreless Sea: 1 counter(s) are added to Island [340].
+      explicit effect object references: Island [340] (role/targeting only where the protocol identifies it)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Pym Particles [398] Library (SIBA23) -> Hand (SIBA23) (Draw; GRE sequence 189).
+      Island [405] Hand (SIBA23) -> Battlefield (PlayLand; GRE sequence 199).
+      Opt [406] Hand (SIBA23) -> Stack (CastSpell; GRE sequence 200).
+      Echocasting Symposium [407] Library (SIBA23) -> Hand (SIBA23) (Draw; GRE sequence 203).
+      Opt [408] Stack -> Graveyard (SIBA23) (Resolve; GRE sequence 203).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Eluge, the Shoreless Sea [399], Island [340], Island [346], Island [365], Island [377], Island [405]; Graveyard: Flow State [351], Into the Flood Maw [397], Opt [408], Stock Up [372], Stock Up [384]
+      gian31: Battlefield: Case of the Uneaten Feast [343], Phyrexian Arena [387], Plains [342], Plains [386], Scoured Barrens [374], Swamp [353]
+
+Turn 10
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=217] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=387, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 230 [230], Bloodthirsty Conqueror [410] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 410) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=231] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=412)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 412) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 412) Stack -> Battlefield (Resolve; shared object ID)
+  - Bounce Off [observed_semantic_effect, seq=229] (active=unknown, controller=SIBA23, owner=SIBA23, source_object=416)
+      chronology reconciliation: parser turn group 19 conflicts with Turn 10; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: return to battlefield
+      narrative: Bounce Off: a card/permanent returns.
+      explicit effect object references: Eluge, the Shoreless Sea [399], object 417 [417] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bounce Off (object 416) Hand (SIBA23) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Eluge, the Shoreless Sea (object 417) Battlefield -> Hand (SIBA23) (Return; shared object ID)
+      protocol-linked zone transfer: Bounce Off (object 419) Stack -> Graveyard (SIBA23) (Resolve; shared object ID)
+      identity continuity: source object 416 -> transfer object 419 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 23 -> 22
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodletter of Aclazotz [411] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 219).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Island [340], Island [346], Island [365], Island [377], Island [405]; Graveyard: Bounce Off [419], Flow State [351], Into the Flood Maw [397], Opt [408], Stock Up [372], Stock Up [384]
+      gian31: Battlefield: Case of the Uneaten Feast [343], Makeshift Binding [412], Phyrexian Arena [387], Plains [342], Plains [386], Scoured Barrens [374], Swamp [353]
+
+Turn 11
+  - Eluge, the Shoreless Sea [valid_resolution_no_immediate_mutation, seq=250] (active=SIBA23, phase=Phase_Main1, controller=SIBA23, owner=SIBA23, source_object=422)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Eluge, the Shoreless Sea resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Eluge, the Shoreless Sea (object 422) Hand (SIBA23) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Eluge, the Shoreless Sea (object 422) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Eluge, the Shoreless Sea [observed_semantic_effect, seq=254] (active=SIBA23, phase=Phase_Main1, controller=SIBA23, owner=SIBA23, source_object=422, source_last_explicit_zone=Battlefield)
+      effects: +1 counter(s)
+      narrative: Ability of Eluge, the Shoreless Sea: 1 counter(s) are added to Island [405].
+      explicit effect object references: Island [405] (role/targeting only where the protocol identifies it)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Sleight of Hand [421] Library (SIBA23) -> Hand (SIBA23) (Draw; GRE sequence 245).
+      Island [428] Hand (SIBA23) -> Battlefield (PlayLand; GRE sequence 255).
+      Sleight of Hand [429] Hand (SIBA23) -> Stack (CastSpell; GRE sequence 256).
+      Eddymurk Crab [430] Library (SIBA23) -> Hand (SIBA23) (Put; GRE sequence 259).
+      object 431 [431] Library (SIBA23) -> Library (SIBA23) (Put; GRE sequence 259).
+      Sleight of Hand [432] Stack -> Graveyard (SIBA23) (Resolve; GRE sequence 259).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Eluge, the Shoreless Sea [422], Island [340], Island [346], Island [365], Island [377], Island [405], Island [428]; Graveyard: Bounce Off [419], Flow State [351], Into the Flood Maw [397], Opt [408], Sleight of Hand [432], Stock Up [372], Stock Up [384]
+      gian31: Battlefield: Case of the Uneaten Feast [343], Makeshift Binding [412], Phyrexian Arena [387], Plains [342], Plains [386], Scoured Barrens [374], Swamp [353]
+
+Turn 12
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=273] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=387, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 232 [232], Rush of Dread [434] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Rush of Dread (object 434) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Amazing Acrobatics [observed_semantic_effect, seq=286] (active=unknown, controller=SIBA23, owner=SIBA23, source_object=442)
+      chronology reconciliation: parser turn group None conflicts with Turn 12; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: none immediately observed
+      narrative: Observed zone movements: Amazing Acrobatics, Bloodletter of Aclazotz, Amazing Acrobatics.
+      explicit effect object references: Bloodletter of Aclazotz [437], Bloodletter of Aclazotz [444] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Amazing Acrobatics (object 442) Hand (SIBA23) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 444) Stack -> Graveyard (gian31) (Countered; shared object ID)
+      protocol-linked zone transfer: Amazing Acrobatics (object 445) Stack -> Graveyard (SIBA23) (Resolve; shared object ID)
+      identity continuity: source object 442 -> transfer object 445 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 22 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [435] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 275).
+      Swamp [436] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 278).
+      Bloodletter of Aclazotz [437] Hand (gian31) -> Stack (CastSpell; GRE sequence 279).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Eluge, the Shoreless Sea [422], Island [340], Island [346], Island [365], Island [377], Island [405], Island [428]; Graveyard: Amazing Acrobatics [445], Bounce Off [419], Flow State [351], Into the Flood Maw [397], Opt [408], Sleight of Hand [432], Stock Up [372], Stock Up [384]
+      gian31: Battlefield: Case of the Uneaten Feast [343], Makeshift Binding [412], Phyrexian Arena [387], Plains [342], Plains [386], Scoured Barrens [374], Swamp [353], Swamp [436]; Graveyard: Bloodletter of Aclazotz [444]
+
+Turn 13
+  - Ability of Eluge, the Shoreless Sea [observed_semantic_effect, seq=312] (active=SIBA23, phase=Phase_Combat, step=Step_DeclareAttack, controller=SIBA23, owner=SIBA23, source_object=422, source_last_explicit_zone=Battlefield)
+      effects: +1 counter(s)
+      narrative: Ability of Eluge, the Shoreless Sea: 1 counter(s) are added to Island [346].
+      explicit effect object references: Island [346] (role/targeting only where the protocol identifies it)
+  - Echocasting Symposium [observed_semantic_effect, seq=326] (active=SIBA23, phase=Phase_Main2, controller=SIBA23, owner=SIBA23, source_object=448)
+      effects: token creation
+      narrative: Echocasting Symposium: a token is created.
+      explicit effect object references: Eluge, the Shoreless Sea [452] (role/targeting only where the protocol identifies it)
+      token created: Eluge, the Shoreless Sea (object 452, controller=SIBA23) 6/6; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 448).
+      protocol-linked zone transfer: Echocasting Symposium (object 448) Hand (SIBA23) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Echocasting Symposium (object 456) Stack -> Exile (Exile; shared object ID)
+  - Ability of Eluge, the Shoreless Sea [observed_semantic_effect, seq=331] (active=SIBA23, phase=Phase_Main2, controller=SIBA23, owner=SIBA23, source_object=452)
+      effects: +1 counter(s)
+      narrative: Ability of Eluge, the Shoreless Sea: 1 counter(s) are added to Island [377].
+      explicit effect object references: Island [377] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=SIBA23; frames: DeclareAttack -> DeclareBlock):
+      attackers: Eluge, the Shoreless Sea [422] (unblocked, observed P/T 6/6)
+      blockers: none identified
+      combat-correlated defending-player life loss: 6; observed attacker power total: 6; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -6 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 6 + observed modifiers 0 = 6; individual assignment unavailable): gian31 21 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Pym Particles [446] Library (SIBA23) -> Hand (SIBA23) (Draw; GRE sequence 300).
+      Eluge, the Shoreless Sea [457] Battlefield -> Graveyard (SIBA23) (SBA_LegendRule; GRE sequence 327).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Island [340], Island [346], Island [365], Island [377], Island [405], Island [428]; Graveyard: Amazing Acrobatics [445], Bounce Off [419], Eluge, the Shoreless Sea [457], Flow State [351], Into the Flood Maw [397], Opt [408], Sleight of Hand [432], Stock Up [372], Stock Up [384]; Exile: Echocasting Symposium [456]
+      gian31: Battlefield: Case of the Uneaten Feast [343], Makeshift Binding [412], Phyrexian Arena [387], Plains [342], Plains [386], Scoured Barrens [374], Swamp [353], Swamp [436]; Graveyard: Bloodletter of Aclazotz [444]
+
+Turn 14
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=337] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=387, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 234 [234], Makeshift Binding [459] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Makeshift Binding (object 459) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=345] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=462)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 462) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 462) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=349] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=462, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Eluge, the Shoreless Sea; gian31 gains 2 life.
+      explicit effect object references: Eluge, the Shoreless Sea [452], object 467 [467] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Eluge, the Shoreless Sea (object 467) Battlefield -> Exile (Exile; shared object ID)
+  - Deep-Cavern Bat [valid_resolution_no_immediate_mutation, seq=352] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=468)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deep-Cavern Bat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deep-Cavern Bat (object 468) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 468) Stack -> Battlefield (Resolve; shared object ID)
+  - Eddymurk Crab [valid_resolution_no_immediate_mutation, seq=359] (active=gian31, phase=Phase_Main1, controller=SIBA23, owner=SIBA23, source_object=473)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Eddymurk Crab resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Eddymurk Crab (object 473) Hand (SIBA23) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Eddymurk Crab (object 473) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Eddymurk Crab [valid_resolution_no_immediate_mutation, seq=363] (active=gian31, phase=Phase_Main1, controller=SIBA23, owner=SIBA23, source_object=473, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Eddymurk Crab resolves with no immediate observed mutation.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=368] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=343, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+    net observed life change this turn: gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 15 -> 14
+    life: gian31 14 -> 16
+    life: gian31 16 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [460] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 339).
+      Swamp [461] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 342).
+      Pym Particles [477] Hand (SIBA23) -> Exile (Exile; GRE sequence 366).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Eddymurk Crab [473], Island [340], Island [346], Island [365], Island [377], Island [405], Island [428]; Graveyard: Amazing Acrobatics [445], Bounce Off [419], Eluge, the Shoreless Sea [457], Flow State [351], Into the Flood Maw [397], Opt [408], Sleight of Hand [432], Stock Up [372], Stock Up [384]; Exile: Echocasting Symposium [456], Eluge, the Shoreless Sea [467], Pym Particles [477]
+      gian31: Battlefield: Case of the Uneaten Feast [343], Deep-Cavern Bat [468], Makeshift Binding [412], Makeshift Binding [462], Phyrexian Arena [387], Plains [342], Plains [386], Scoured Barrens [374], Swamp [353], Swamp [436], Swamp [461]; Graveyard: Bloodletter of Aclazotz [444]
+
+Turn 15
+  - Echocasting Symposium [observed_semantic_effect, seq=392] (active=SIBA23, phase=Phase_Main1, controller=SIBA23, owner=SIBA23, source_object=482)
+      effects: token creation
+      narrative: Echocasting Symposium: a token is created.
+      explicit effect object references: Eddymurk Crab [483] (role/targeting only where the protocol identifies it)
+      token created: Eddymurk Crab (object 483, controller=SIBA23) 5/5; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 482).
+      protocol-linked zone transfer: Echocasting Symposium (object 482) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Echocasting Symposium (object 486) Stack -> Exile (Exile; shared object ID)
+  - Ability of Eddymurk Crab [valid_resolution_no_immediate_mutation, seq=396] (active=SIBA23, phase=Phase_Main1, controller=SIBA23, owner=SIBA23, source_object=483)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Eddymurk Crab resolves with no immediate observed mutation.
+  - Pym Particles [observed_semantic_effect, seq=402] (active=SIBA23, phase=Phase_Main1, controller=SIBA23, owner=SIBA23, source_object=488)
+      effects: draw
+      narrative: Pym Particles: draw.
+      explicit effect object references: object 309 [309], object 490 [490] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Pym Particles (object 488) Hand (SIBA23) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bounce Off (object 490) Library (SIBA23) -> Hand (SIBA23) (Draw; shared object ID)
+      protocol-linked zone transfer: Pym Particles (object 491) Stack -> Graveyard (SIBA23) (Resolve; shared object ID)
+      identity continuity: source object 488 -> transfer object 491 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=SIBA23; frames: DeclareAttack -> DeclareBlock):
+      attackers: Eddymurk Crab [473] (unblocked, observed P/T 5/5)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -5 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 17 -> 12
+    additional protocol-observed zone movements not assigned to an action chain:
+      Island [479] Library (SIBA23) -> Hand (SIBA23) (Draw; GRE sequence 382).
+      Island [487] Hand (SIBA23) -> Battlefield (PlayLand; GRE sequence 397).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Eddymurk Crab [473], Island [340], Island [346], Island [365], Island [377], Island [405], Island [428], Island [487]; Graveyard: Amazing Acrobatics [445], Bounce Off [419], Eluge, the Shoreless Sea [457], Flow State [351], Into the Flood Maw [397], Opt [408], Pym Particles [491], Sleight of Hand [432], Stock Up [372], Stock Up [384]; Exile: Echocasting Symposium [456], Echocasting Symposium [486], Eluge, the Shoreless Sea [467], Pym Particles [477]
+      gian31: Battlefield: Case of the Uneaten Feast [343], Deep-Cavern Bat [468], Makeshift Binding [412], Makeshift Binding [462], Phyrexian Arena [387], Plains [342], Plains [386], Scoured Barrens [374], Swamp [353], Swamp [436], Swamp [461]; Graveyard: Bloodletter of Aclazotz [444]
+
+Turn 16
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=422] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=387, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 236 [236], Hinterland Sanctifier [493] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 493) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=429] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=495)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 495) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 495) Stack -> Battlefield (Resolve; shared object ID)
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation, seq=432] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=497)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 497) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 497) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=435] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=437] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=343, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=449] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=497, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [468] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: SIBA23 -1; gian31 +3 (individual changes below; gains and losses may offset)
+    life: gian31 12 -> 11
+    life: gian31 11 -> 12
+    life: gian31 12 -> 13
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): SIBA23 19 -> 18
+    life (semantically attributed to Case of the Uneaten Feast; direct protocol link unavailable): gian31 13 -> 14
+    life: gian31 14 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [494] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 424).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Eddymurk Crab [473], Island [340], Island [346], Island [365], Island [377], Island [405], Island [428], Island [487]; Graveyard: Amazing Acrobatics [445], Bounce Off [419], Eluge, the Shoreless Sea [457], Flow State [351], Into the Flood Maw [397], Opt [408], Pym Particles [491], Sleight of Hand [432], Stock Up [372], Stock Up [384]; Exile: Echocasting Symposium [456], Echocasting Symposium [486], Eluge, the Shoreless Sea [467], Pym Particles [477]
+      gian31: Battlefield: Bloodthirsty Conqueror [497], Case of the Uneaten Feast [343], Case of the Uneaten Feast [495], Deep-Cavern Bat [468], Makeshift Binding [412], Makeshift Binding [462], Phyrexian Arena [387], Plains [342], Plains [386], Scoured Barrens [374], Swamp [353], Swamp [436], Swamp [461]; Graveyard: Bloodletter of Aclazotz [444]
+
+Turn 17
+  - Echocasting Symposium [observed_semantic_effect, seq=469] (active=SIBA23, phase=Phase_Main1, controller=SIBA23, owner=SIBA23, source_object=509)
+      effects: token creation
+      narrative: Echocasting Symposium: a token is created.
+      explicit effect object references: Eddymurk Crab [510] (role/targeting only where the protocol identifies it)
+      token created: Eddymurk Crab (object 510, controller=SIBA23) 5/5; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 509).
+      protocol-linked zone transfer: Echocasting Symposium (object 509) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Echocasting Symposium (object 513) Stack -> Exile (Exile; shared object ID)
+  - Ability of Eddymurk Crab [valid_resolution_no_immediate_mutation, seq=474] (active=SIBA23, phase=Phase_Main1, controller=SIBA23, owner=SIBA23, source_object=510)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Eddymurk Crab resolves with no immediate observed mutation.
+  Combat snapshots observed (active=SIBA23; frames: DeclareAttack -> DeclareBlock):
+      attackers: Eddymurk Crab [473] (unblocked, observed P/T 5/5), Eddymurk Crab [483] (unblocked, observed P/T 5/5)
+      blockers: none identified
+      combat-correlated defending-player life loss: 10; observed attacker power total: 10; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -10 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 10 + observed modifiers 0 = 10; individual assignment unavailable): gian31 15 -> 5
+    additional protocol-observed zone movements not assigned to an action chain:
+      Island [506] Library (SIBA23) -> Hand (SIBA23) (Draw; GRE sequence 459).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Eddymurk Crab [473], Island [340], Island [346], Island [365], Island [377], Island [405], Island [428], Island [487]; Graveyard: Amazing Acrobatics [445], Bounce Off [419], Eluge, the Shoreless Sea [457], Flow State [351], Into the Flood Maw [397], Opt [408], Pym Particles [491], Sleight of Hand [432], Stock Up [372], Stock Up [384]; Exile: Echocasting Symposium [456], Echocasting Symposium [486], Echocasting Symposium [513], Eluge, the Shoreless Sea [467], Pym Particles [477]
+      gian31: Battlefield: Bloodthirsty Conqueror [497], Case of the Uneaten Feast [343], Case of the Uneaten Feast [495], Deep-Cavern Bat [468], Makeshift Binding [412], Makeshift Binding [462], Phyrexian Arena [387], Plains [342], Plains [386], Scoured Barrens [374], Swamp [353], Swamp [436], Swamp [461]; Graveyard: Bloodletter of Aclazotz [444]
+
+Turn 18
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=494] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=387, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 238 [238], Starscape Cleric [515] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Starscape Cleric (object 515) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Deep-Cavern Bat [valid_resolution_no_immediate_mutation, seq=502] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=518)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deep-Cavern Bat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deep-Cavern Bat (object 518) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 518) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=516] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=518] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=343, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=528] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=538)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 538) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 538) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=531] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=533] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=343, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=552] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=343, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 533 and 552; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Case of the Uneaten Feast resolves with no immediate observed mutation.
+  - Ability of Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=554] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Case of the Uneaten Feast resolves with no immediate observed mutation.
+  - Bounce Off [observed_semantic_effect, seq=511] (active=unknown, controller=SIBA23, owner=SIBA23, source_object=524)
+      chronology reconciliation: parser turn group None conflicts with Turn 18; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: return to battlefield
+      narrative: Bounce Off: a card/permanent returns.
+      explicit effect object references: Bloodthirsty Conqueror [497], Bloodthirsty Conqueror [526] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bounce Off (object 524) Hand (SIBA23) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 526) Battlefield -> Hand (gian31) (Return; shared object ID)
+      protocol-linked zone transfer: Bounce Off (object 528) Stack -> Graveyard (SIBA23) (Resolve; shared object ID)
+      identity continuity: source object 524 -> transfer object 528 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [468] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: SIBA23 -1; gian31 +4 (individual changes below; gains and losses may offset)
+    life: gian31 5 -> 4
+    life: gian31 4 -> 5
+    life: gian31 5 -> 6
+    life: gian31 6 -> 7
+    life: gian31 7 -> 8
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): SIBA23 18 -> 17
+    life (semantically attributed to Case of the Uneaten Feast; direct protocol link unavailable): gian31 8 -> 9
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [516] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 496).
+      Swamp [517] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 499).
+      Rush of Dread [530] Hand (gian31) -> Stack (CastSpell; GRE sequence 519).
+      Eddymurk Crab [535] Battlefield -> Graveyard (SIBA23) (Sacrifice; GRE sequence 525).
+        sacrifice observed after Ability of Case of the Uneaten Feast (seq 518); direct causal linkage is unavailable.
+      Eddymurk Crab [536] Battlefield -> Graveyard (SIBA23) (Sacrifice; GRE sequence 525).
+        sacrifice observed after Ability of Case of the Uneaten Feast (seq 518); direct causal linkage is unavailable.
+      Rush of Dread [537] Stack -> Graveyard (gian31) (Resolve; GRE sequence 525).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Eddymurk Crab [473], Island [340], Island [346], Island [365], Island [377], Island [405], Island [428], Island [487]; Graveyard: Amazing Acrobatics [445], Bounce Off [419], Bounce Off [528], Eddymurk Crab [535], Eddymurk Crab [536], Eluge, the Shoreless Sea [457], Flow State [351], Into the Flood Maw [397], Opt [408], Pym Particles [491], Sleight of Hand [432], Stock Up [372], Stock Up [384]; Exile: Echocasting Symposium [456], Echocasting Symposium [486], Echocasting Symposium [513], Eluge, the Shoreless Sea [467], Pym Particles [477]
+      gian31: Battlefield: Case of the Uneaten Feast [343], Case of the Uneaten Feast [495], Deep-Cavern Bat [468], Deep-Cavern Bat [518], Hinterland Sanctifier [538], Makeshift Binding [412], Makeshift Binding [462], Phyrexian Arena [387], Plains [342], Plains [386], Scoured Barrens [374], Swamp [353], Swamp [436], Swamp [461], Swamp [517]; Graveyard: Bloodletter of Aclazotz [444], Rush of Dread [537]
+
+Turn 19
+  - Echocasting Symposium [observed_semantic_effect, seq=568] (active=SIBA23, phase=Phase_Main1, controller=SIBA23, owner=SIBA23, source_object=547)
+      effects: token creation
+      narrative: Echocasting Symposium: a token is created.
+      explicit effect object references: Eddymurk Crab [548] (role/targeting only where the protocol identifies it)
+      token created: Eddymurk Crab (object 548, controller=SIBA23) 5/5; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 547).
+      protocol-linked zone transfer: Echocasting Symposium (object 547) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Echocasting Symposium (object 551) Stack -> Exile (Exile; shared object ID)
+  - Ability of Eddymurk Crab [valid_resolution_no_immediate_mutation, seq=573] (active=SIBA23, phase=Phase_Main1, controller=SIBA23, owner=SIBA23, source_object=548)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Eddymurk Crab resolves with no immediate observed mutation.
+  Combat snapshots observed (active=SIBA23; frames: DeclareAttack -> DeclareBlock):
+      attackers: Eddymurk Crab [473] (unblocked, observed P/T 5/5)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -5 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 9 -> 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Flow State [544] Library (SIBA23) -> Hand (SIBA23) (Draw; GRE sequence 558).
+      Flow State [552] Hand (SIBA23) -> Stack (CastSpell; GRE sequence 574).
+      Stock Up [555] Library (SIBA23) -> Hand (SIBA23) (Put; GRE sequence 577).
+      Three Steps Ahead [556] Library (SIBA23) -> Hand (SIBA23) (Put; GRE sequence 577).
+      Flow State [557] Stack -> Graveyard (SIBA23) (Resolve; GRE sequence 577).
+      Island [558] Hand (SIBA23) -> Battlefield (PlayLand; GRE sequence 578).
+      Stock Up [559] Hand (SIBA23) -> Stack (CastSpell; GRE sequence 579).
+      object 563 [563] Library (SIBA23) -> Hand (SIBA23) (Put; GRE sequence 582).
+      object 564 [564] Library (SIBA23) -> Hand (SIBA23) (Put; GRE sequence 582).
+      Stock Up [565] Stack -> Graveyard (SIBA23) (Resolve; GRE sequence 583).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Eddymurk Crab [473], Island [340], Island [346], Island [365], Island [377], Island [405], Island [428], Island [487], Island [558]; Graveyard: Amazing Acrobatics [445], Bounce Off [419], Bounce Off [528], Eddymurk Crab [535], Eddymurk Crab [536], Eluge, the Shoreless Sea [457], Flow State [351], Flow State [557], Into the Flood Maw [397], Opt [408], Pym Particles [491], Sleight of Hand [432], Stock Up [372], Stock Up [384], Stock Up [565]; Exile: Echocasting Symposium [456], Echocasting Symposium [486], Echocasting Symposium [513], Echocasting Symposium [551], Eluge, the Shoreless Sea [467], Pym Particles [477]
+      gian31: Battlefield: Case of the Uneaten Feast [343], Case of the Uneaten Feast [495], Deep-Cavern Bat [468], Deep-Cavern Bat [518], Hinterland Sanctifier [538], Makeshift Binding [412], Makeshift Binding [462], Phyrexian Arena [387], Plains [342], Plains [386], Scoured Barrens [374], Swamp [353], Swamp [436], Swamp [461], Swamp [517]; Graveyard: Bloodletter of Aclazotz [444], Rush of Dread [537]
+
+Turn 20
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=603] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=387, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 240 [240], Marauding Blight-Priest [567] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 567) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=610] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=569, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+    net observed life change this turn: gian31 +0 (individual changes below; gains and losses may offset)
+    life: gian31 4 -> 3
+    life: gian31 3 -> 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [568] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 605).
+      Scoured Barrens [569] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 608).
+      Bloodthirsty Conqueror [571] Hand (gian31) -> Stack (CastSpell; GRE sequence 611).
+      Three Steps Ahead [577] Hand (SIBA23) -> Stack (CastSpell; GRE sequence 613).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      SIBA23: Battlefield: Eddymurk Crab [473], Island [340], Island [346], Island [365], Island [377], Island [405], Island [428], Island [487], Island [558]; Graveyard: Amazing Acrobatics [445], Bounce Off [419], Bounce Off [528], Eddymurk Crab [535], Eddymurk Crab [536], Eluge, the Shoreless Sea [457], Flow State [351], Flow State [557], Into the Flood Maw [397], Opt [408], Pym Particles [491], Sleight of Hand [432], Stock Up [372], Stock Up [384], Stock Up [565]; Exile: Echocasting Symposium [456], Echocasting Symposium [486], Echocasting Symposium [513], Echocasting Symposium [551], Eluge, the Shoreless Sea [467], Pym Particles [477]
+      gian31: Battlefield: Case of the Uneaten Feast [343], Case of the Uneaten Feast [495], Deep-Cavern Bat [468], Deep-Cavern Bat [518], Hinterland Sanctifier [538], Makeshift Binding [412], Makeshift Binding [462], Phyrexian Arena [387], Plains [342], Plains [386], Scoured Barrens [374], Scoured Barrens [569], Swamp [353], Swamp [436], Swamp [461], Swamp [517]; Graveyard: Bloodletter of Aclazotz [444], Rush of Dread [537]
+
+UNNUMBERED / UNRESOLVED TURN GROUP
+  - The captured records do not provide a verified numbered turn for the following events.
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 6, seq 130, Phase_Main1: gian31 22 -> 23. Semantic attribution: Scoured Barrens; direct protocol link unavailable. Previous captured action: Scoured Barrens.
+- Turn 16, seq 447, Phase_Main1: gian31 13 -> 14. Semantic attribution: Case of the Uneaten Feast; direct protocol link unavailable. Previous captured action: Case of the Uneaten Feast.
+- Turn 18, seq 543, Phase_Main1: gian31 8 -> 9. Semantic attribution: Case of the Uneaten Feast; direct protocol link unavailable. Previous captured action: Case of the Uneaten Feast.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 4 token creations observed; 1 active as last observed; 3 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Eluge, the Shoreless Sea [452] controller=SIBA23; created Turn 13 (6/6); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 14 via Battlefield -> Exile (Exile); ceases to exist after that observed move (token rules consequence).
+- Eddymurk Crab [483] controller=SIBA23; created Turn 15 (5/5); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 18 via Battlefield -> Graveyard (SIBA23) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+- Eddymurk Crab [510] controller=SIBA23; created Turn 17 (5/5); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 18 via Battlefield -> Graveyard (SIBA23) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+- Eddymurk Crab [548] controller=SIBA23; created Turn 19 (5/5); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 19, object 548 (latest observed P/T 5/5; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 6: object 339 [owner/controller metadata unavailable] moves Hand (SIBA23) -> Library (SIBA23) (Put).
+- Turn 1, seq 9: Island [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Battlefield (PlayLand).
+- Turn 2, seq 23: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 26: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 27: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 29: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 43: Stock Up [owner=SIBA23, controller=SIBA23] moves Library (SIBA23) -> Hand (SIBA23) (Draw).
+- Turn 3, seq 46: Island [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Battlefield (PlayLand).
+- Turn 3, seq 47: Flow State [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Stack (CastSpell).
+- Turn 3, seq 50: Island [owner=SIBA23, controller=SIBA23] moves Library (SIBA23) -> Hand (SIBA23) (Put).
+- Turn 3, seq 51: Flow State [owner=SIBA23, controller=SIBA23] moves Stack -> Graveyard (SIBA23) (Resolve).
+- Turn 4, seq 65: Phyrexian Arena [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 68: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 69: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 71: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 77: Eluge, the Shoreless Sea [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Exile (Exile).
+- Turn 5, seq 93: Island [owner/controller metadata unavailable] moves Library (SIBA23) -> Hand (SIBA23) (Draw).
+- Turn 5, seq 96: Island [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Battlefield (PlayLand).
+- Turn 5, seq 97: Stock Up [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Stack (CastSpell).
+- Turn 5, seq 100: Island [owner/controller metadata unavailable] moves Library (SIBA23) -> Hand (SIBA23) (Put).
+- Turn 5, seq 100: Bounce Off [owner/controller metadata unavailable] moves Library (SIBA23) -> Hand (SIBA23) (Put).
+- Turn 5, seq 101: Stock Up [owner=SIBA23, controller=SIBA23] moves Stack -> Graveyard (SIBA23) (Resolve).
+- Turn 6, seq 115: Scoured Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 118: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 140: Stock Up [owner/controller metadata unavailable] moves Library (SIBA23) -> Hand (SIBA23) (Draw).
+- Turn 7, seq 143: Island [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Battlefield (PlayLand).
+- Turn 7, seq 144: Stock Up [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Stack (CastSpell).
+- Turn 7, seq 147: Island [owner/controller metadata unavailable] moves Library (SIBA23) -> Hand (SIBA23) (Put).
+- Turn 7, seq 147: Opt [owner/controller metadata unavailable] moves Library (SIBA23) -> Hand (SIBA23) (Put).
+- Turn 7, seq 148: Stock Up [owner=SIBA23, controller=SIBA23] moves Stack -> Graveyard (SIBA23) (Resolve).
+- Turn 8, seq 162: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 165: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 166: Phyrexian Arena [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 168: Into the Flood Maw [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Stack (CastSpell).
+- Turn 8, seq 173: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Battlefield -> Hand (gian31) (Return).
+- Turn 8, seq 173: Eluge, the Shoreless Sea [owner/controller metadata unavailable] moves Exile -> Hand (SIBA23) (Return).
+- Turn 8, seq 173: Into the Flood Maw [owner=SIBA23, controller=SIBA23] moves Stack -> Graveyard (SIBA23) (Resolve).
+- Turn 8, seq 175: Phyrexian Arena [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 189: Pym Particles [owner=SIBA23, controller=SIBA23] moves Library (SIBA23) -> Hand (SIBA23) (Draw).
+- Turn 9, seq 192: Eluge, the Shoreless Sea [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Stack (CastSpell).
+- Turn 9, seq 194: Eluge, the Shoreless Sea [owner=SIBA23, controller=SIBA23] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 199: Island [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Battlefield (PlayLand).
+- Turn 9, seq 200: Opt [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Stack (CastSpell).
+- Turn 9, seq 203: Echocasting Symposium [owner/controller metadata unavailable] moves Library (SIBA23) -> Hand (SIBA23) (Draw).
+- Turn 9, seq 203: Opt [owner=SIBA23, controller=SIBA23] moves Stack -> Graveyard (SIBA23) (Resolve).
+- Turn 10, seq 217: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 219: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 222: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 225: Bounce Off [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Stack (CastSpell).
+- Turn 10, seq 229: Eluge, the Shoreless Sea [owner/controller metadata unavailable] moves Battlefield -> Hand (SIBA23) (Return).
+- Turn 10, seq 229: Bounce Off [owner=SIBA23, controller=SIBA23] moves Stack -> Graveyard (SIBA23) (Resolve).
+- Turn 10, seq 231: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 245: Sleight of Hand [owner/controller metadata unavailable] moves Library (SIBA23) -> Hand (SIBA23) (Draw).
+- Turn 11, seq 248: Eluge, the Shoreless Sea [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Stack (CastSpell).
+- Turn 11, seq 250: Eluge, the Shoreless Sea [owner=SIBA23, controller=SIBA23] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 255: Island [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Battlefield (PlayLand).
+- Turn 11, seq 256: Sleight of Hand [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Stack (CastSpell).
+- Turn 11, seq 259: Eddymurk Crab [owner/controller metadata unavailable] moves Library (SIBA23) -> Hand (SIBA23) (Put).
+- Turn 11, seq 259: object 431 [owner/controller metadata unavailable] moves Library (SIBA23) -> Library (SIBA23) (Put).
+- Turn 11, seq 259: Sleight of Hand [owner=SIBA23, controller=SIBA23] moves Stack -> Graveyard (SIBA23) (Resolve).
+- Turn 12, seq 273: Rush of Dread [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 275: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 278: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 279: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 281: Amazing Acrobatics [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Stack (CastSpell).
+- Turn 12, seq 286: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Countered).
+- Turn 12, seq 286: Amazing Acrobatics [owner=SIBA23, controller=SIBA23] moves Stack -> Graveyard (SIBA23) (Resolve).
+- Turn 13, seq 300: Pym Particles [owner=SIBA23, controller=SIBA23] moves Library (SIBA23) -> Hand (SIBA23) (Draw).
+- Turn 13, seq 321: Echocasting Symposium [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Stack (CastSpell).
+- Turn 13, seq 326: Echocasting Symposium [owner=SIBA23, controller=SIBA23] moves Stack -> Exile (Exile).
+- Turn 13, seq 327: Eluge, the Shoreless Sea [owner=SIBA23, controller=SIBA23] moves Battlefield -> Graveyard (SIBA23) (SBA_LegendRule).
+- Turn 14, seq 337: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 339: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 342: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 14, seq 343: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 345: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 349: Eluge, the Shoreless Sea [owner/controller metadata unavailable] moves Battlefield -> Exile (Exile).
+- Turn 14, seq 350: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 352: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 357: Eddymurk Crab [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Stack (CastSpell).
+- Turn 14, seq 359: Eddymurk Crab [owner=SIBA23, controller=SIBA23] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 366: Pym Particles [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Exile (Exile).
+- Turn 15, seq 382: Island [owner/controller metadata unavailable] moves Library (SIBA23) -> Hand (SIBA23) (Draw).
+- Turn 15, seq 387: Echocasting Symposium [owner=SIBA23, controller=SIBA23] moves Exile -> Stack (CastSpell).
+- Turn 15, seq 392: Echocasting Symposium [owner/controller metadata unavailable] moves Stack -> Exile (Exile).
+- Turn 15, seq 397: Island [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Battlefield (PlayLand).
+- Turn 15, seq 398: Pym Particles [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Stack (CastSpell).
+- Turn 15, seq 402: Bounce Off [owner/controller metadata unavailable] moves Library (SIBA23) -> Hand (SIBA23) (Draw).
+- Turn 15, seq 402: Pym Particles [owner=SIBA23, controller=SIBA23] moves Stack -> Graveyard (SIBA23) (Resolve).
+- Turn 16, seq 422: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 424: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 427: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 429: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 16, seq 430: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 432: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 17, seq 459: Island [owner=SIBA23, controller=SIBA23] moves Library (SIBA23) -> Hand (SIBA23) (Draw).
+- Turn 17, seq 464: Echocasting Symposium [owner=SIBA23, controller=SIBA23] moves Exile -> Stack (CastSpell).
+- Turn 17, seq 469: Echocasting Symposium [owner/controller metadata unavailable] moves Stack -> Exile (Exile).
+- Turn 18, seq 494: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 18, seq 496: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 18, seq 499: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 18, seq 500: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 18, seq 502: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 18, seq 507: Bounce Off [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Stack (CastSpell).
+- Turn 18, seq 511: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Battlefield -> Hand (gian31) (Return).
+- Turn 18, seq 511: Bounce Off [owner=SIBA23, controller=SIBA23] moves Stack -> Graveyard (SIBA23) (Resolve).
+- Turn 18, seq 519: Rush of Dread [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 18, seq 525: Eddymurk Crab [owner/controller metadata unavailable] moves Battlefield -> Graveyard (SIBA23) (Sacrifice).
+- Turn 18, seq 525: Eddymurk Crab [owner/controller metadata unavailable] moves Battlefield -> Graveyard (SIBA23) (Sacrifice).
+- Turn 18, seq 525: Rush of Dread [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 18, seq 526: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 18, seq 528: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 19, seq 558: Flow State [owner/controller metadata unavailable] moves Library (SIBA23) -> Hand (SIBA23) (Draw).
+- Turn 19, seq 563: Echocasting Symposium [owner=SIBA23, controller=SIBA23] moves Exile -> Stack (CastSpell).
+- Turn 19, seq 568: Echocasting Symposium [owner/controller metadata unavailable] moves Stack -> Exile (Exile).
+- Turn 19, seq 574: Flow State [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Stack (CastSpell).
+- Turn 19, seq 577: Stock Up [owner/controller metadata unavailable] moves Library (SIBA23) -> Hand (SIBA23) (Put).
+- Turn 19, seq 577: Three Steps Ahead [owner/controller metadata unavailable] moves Library (SIBA23) -> Hand (SIBA23) (Put).
+- Turn 19, seq 577: Flow State [owner=SIBA23, controller=SIBA23] moves Stack -> Graveyard (SIBA23) (Resolve).
+- Turn 19, seq 578: Island [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Battlefield (PlayLand).
+- Turn 19, seq 579: Stock Up [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Stack (CastSpell).
+- Turn 19, seq 582: object 563 [owner/controller metadata unavailable] moves Library (SIBA23) -> Hand (SIBA23) (Put).
+- Turn 19, seq 582: object 564 [owner/controller metadata unavailable] moves Library (SIBA23) -> Hand (SIBA23) (Put).
+- Turn 19, seq 583: Stock Up [owner=SIBA23, controller=SIBA23] moves Stack -> Graveyard (SIBA23) (Resolve).
+- Turn 20, seq 603: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 20, seq 605: Scoured Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 20, seq 608: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 20, seq 611: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 20, seq 613: Three Steps Ahead [owner=SIBA23, controller=SIBA23] moves Hand (SIBA23) -> Stack (CastSpell).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 6: object 283 becomes object 339 [object 283].
+- Turn 1, seq 9: object 279 becomes object 340 [Island].
+- Turn 2, seq 23: object 226 becomes object 341 [Swamp].
+- Turn 2, seq 26: object 220 becomes object 342 [Plains].
+- Turn 2, seq 27: object 223 becomes object 343 [Case of the Uneaten Feast].
+- Turn 3, seq 43: object 286 becomes object 345 [Stock Up].
+- Turn 3, seq 46: object 282 becomes object 346 [Island].
+- Turn 3, seq 47: object 285 becomes object 347 [Flow State].
+- Turn 3, seq 50: object 287 becomes object 350 [Island].
+- Turn 3, seq 51: object 347 becomes object 351 [Flow State].
+- Turn 4, seq 65: object 227 becomes object 352 [Phyrexian Arena].
+- Turn 4, seq 68: object 341 becomes object 353 [Swamp].
+- Turn 4, seq 69: object 219 becomes object 354 [Deep-Cavern Bat].
+- Turn 4, seq 77: object 284 becomes object 359 [Eluge, the Shoreless Sea].
+- Turn 5, seq 93: object 290 becomes object 364 [Island].
+- Turn 5, seq 96: object 350 becomes object 365 [Island].
+- Turn 5, seq 97: object 345 becomes object 366 [Stock Up].
+- Turn 5, seq 100: object 293 becomes object 371 [Island].
+- Turn 5, seq 100: object 292 becomes object 370 [Bounce Off].
+- Turn 5, seq 101: object 366 becomes object 372 [Stock Up].
+- Turn 6, seq 115: object 228 becomes object 373 [Scoured Barrens].
+- Turn 6, seq 118: object 373 becomes object 374 [Scoured Barrens].
+- Turn 7, seq 140: object 296 becomes object 376 [Stock Up].
+- Turn 7, seq 143: object 364 becomes object 377 [Island].
+- Turn 7, seq 144: object 376 becomes object 378 [Stock Up].
+- Turn 7, seq 147: object 298 becomes object 383 [Island].
+- Turn 7, seq 147: object 297 becomes object 382 [Opt].
+- Turn 7, seq 148: object 378 becomes object 384 [Stock Up].
+- Turn 8, seq 162: object 229 becomes object 385 [Deep-Cavern Bat].
+- Turn 8, seq 165: object 224 becomes object 386 [Plains].
+- Turn 8, seq 166: object 352 becomes object 387 [Phyrexian Arena].
+- Turn 8, seq 168: object 280 becomes object 391 [Into the Flood Maw].
+- Turn 8, seq 173: object 354 becomes object 393 [Deep-Cavern Bat].
+- Turn 8, seq 173: object 359 becomes object 395 [Eluge, the Shoreless Sea].
+- Turn 8, seq 173: object 391 becomes object 397 [Into the Flood Maw].
+- Turn 9, seq 189: object 302 becomes object 398 [Pym Particles].
+- Turn 9, seq 192: object 395 becomes object 399 [Eluge, the Shoreless Sea].
+- Turn 9, seq 199: object 383 becomes object 405 [Island].
+- Turn 9, seq 200: object 382 becomes object 406 [Opt].
+- Turn 9, seq 203: object 303 becomes object 407 [Echocasting Symposium].
+- Turn 9, seq 203: object 406 becomes object 408 [Opt].
+- Turn 10, seq 217: object 230 becomes object 410 [Bloodthirsty Conqueror].
+- Turn 10, seq 219: object 231 becomes object 411 [Bloodletter of Aclazotz].
+- Turn 10, seq 222: object 222 becomes object 412 [Makeshift Binding].
+- Turn 10, seq 225: object 370 becomes object 416 [Bounce Off].
+- Turn 10, seq 229: object 399 becomes object 417 [Eluge, the Shoreless Sea].
+- Turn 10, seq 229: object 416 becomes object 419 [Bounce Off].
+- Turn 11, seq 245: object 304 becomes object 421 [Sleight of Hand].
+- Turn 11, seq 248: object 417 becomes object 422 [Eluge, the Shoreless Sea].
+- Turn 11, seq 255: object 371 becomes object 428 [Island].
+- Turn 11, seq 256: object 421 becomes object 429 [Sleight of Hand].
+- Turn 11, seq 259: object 306 becomes object 430 [Eddymurk Crab].
+- Turn 11, seq 259: object 305 becomes object 431 [object 305].
+- Turn 11, seq 259: object 429 becomes object 432 [Sleight of Hand].
+- Turn 12, seq 273: object 232 becomes object 434 [Rush of Dread].
+- Turn 12, seq 275: object 233 becomes object 435 [Swamp].
+- Turn 12, seq 278: object 435 becomes object 436 [Swamp].
+- Turn 12, seq 279: object 411 becomes object 437 [Bloodletter of Aclazotz].
+- Turn 12, seq 281: object 281 becomes object 442 [Amazing Acrobatics].
+- Turn 12, seq 286: object 437 becomes object 444 [Bloodletter of Aclazotz].
+- Turn 12, seq 286: object 442 becomes object 445 [Amazing Acrobatics].
+- Turn 13, seq 300: object 307 becomes object 446 [Pym Particles].
+- Turn 13, seq 321: object 407 becomes object 448 [Echocasting Symposium].
+- Turn 13, seq 326: object 448 becomes object 456 [Echocasting Symposium].
+- Turn 13, seq 327: object 422 becomes object 457 [Eluge, the Shoreless Sea].
+- Turn 14, seq 337: object 234 becomes object 459 [Makeshift Binding].
+- Turn 14, seq 339: object 235 becomes object 460 [Swamp].
+- Turn 14, seq 342: object 460 becomes object 461 [Swamp].
+- Turn 14, seq 343: object 459 becomes object 462 [Makeshift Binding].
+- Turn 14, seq 349: object 452 becomes object 467 [Eluge, the Shoreless Sea].
+- Turn 14, seq 350: object 393 becomes object 468 [Deep-Cavern Bat].
+- Turn 14, seq 357: object 430 becomes object 473 [Eddymurk Crab].
+- Turn 14, seq 366: object 446 becomes object 477 [Pym Particles].
+- Turn 15, seq 382: object 308 becomes object 479 [Island].
+- Turn 15, seq 387: object 481 becomes object 482 [Echocasting Symposium].
+- Turn 15, seq 392: object 482 becomes object 486 [Echocasting Symposium].
+- Turn 15, seq 397: object 479 becomes object 487 [Island].
+- Turn 15, seq 398: object 398 becomes object 488 [Pym Particles].
+- Turn 15, seq 402: object 309 becomes object 490 [Bounce Off].
+- Turn 15, seq 402: object 488 becomes object 491 [Pym Particles].
+- Turn 16, seq 422: object 236 becomes object 493 [Hinterland Sanctifier].
+- Turn 16, seq 424: object 237 becomes object 494 [Case of the Uneaten Feast].
+- Turn 16, seq 427: object 494 becomes object 495 [Case of the Uneaten Feast].
+- Turn 16, seq 430: object 410 becomes object 497 [Bloodthirsty Conqueror].
+- Turn 17, seq 459: object 310 becomes object 506 [Island].
+- Turn 17, seq 464: object 508 becomes object 509 [Echocasting Symposium].
+- Turn 17, seq 469: object 509 becomes object 513 [Echocasting Symposium].
+- Turn 18, seq 494: object 238 becomes object 515 [Starscape Cleric].
+- Turn 18, seq 496: object 239 becomes object 516 [Swamp].
+- Turn 18, seq 499: object 516 becomes object 517 [Swamp].
+- Turn 18, seq 500: object 385 becomes object 518 [Deep-Cavern Bat].
+- Turn 18, seq 507: object 490 becomes object 524 [Bounce Off].
+- Turn 18, seq 511: object 497 becomes object 526 [Bloodthirsty Conqueror].
+- Turn 18, seq 511: object 524 becomes object 528 [Bounce Off].
+- Turn 18, seq 519: object 434 becomes object 530 [Rush of Dread].
+- Turn 18, seq 525: object 483 becomes object 535 [Eddymurk Crab].
+- Turn 18, seq 525: object 510 becomes object 536 [Eddymurk Crab].
+- Turn 18, seq 525: object 530 becomes object 537 [Rush of Dread].
+- Turn 18, seq 526: object 493 becomes object 538 [Hinterland Sanctifier].
+- Turn 19, seq 558: object 311 becomes object 544 [Flow State].
+- Turn 19, seq 563: object 546 becomes object 547 [Echocasting Symposium].
+- Turn 19, seq 568: object 547 becomes object 551 [Echocasting Symposium].
+- Turn 19, seq 574: object 544 becomes object 552 [Flow State].
+- Turn 19, seq 577: object 313 becomes object 555 [Stock Up].
+- Turn 19, seq 577: object 314 becomes object 556 [Three Steps Ahead].
+- Turn 19, seq 577: object 552 becomes object 557 [Flow State].
+- Turn 19, seq 578: object 506 becomes object 558 [Island].
+- Turn 19, seq 579: object 555 becomes object 559 [Stock Up].
+- Turn 19, seq 582: object 316 becomes object 563 [object 316].
+- Turn 19, seq 582: object 318 becomes object 564 [object 318].
+- Turn 19, seq 583: object 559 becomes object 565 [Stock Up].
+- Turn 20, seq 603: object 240 becomes object 567 [Marauding Blight-Priest].
+- Turn 20, seq 605: object 241 becomes object 568 [Scoured Barrens].
+- Turn 20, seq 608: object 568 becomes object 569 [Scoured Barrens].
+- Turn 20, seq 611: object 526 becomes object 571 [Bloodthirsty Conqueror].
+- Turn 20, seq 613: object 556 becomes object 577 [Three Steps Ahead].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: SIBA23 plays Island (object 340) from Hand (SIBA23) to Battlefield.
+- Turn 2: gian31 plays Plains (object 342) from Hand (gian31) to Battlefield.
+- Turn 3: SIBA23 plays Island (object 346) from Hand (SIBA23) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 353) from Hand (gian31) to Battlefield.
+- Turn 5: SIBA23 plays Island (object 365) from Hand (SIBA23) to Battlefield.
+- Turn 6: gian31 plays Scoured Barrens (object 374) from Hand (gian31) to Battlefield.
+- Turn 7: SIBA23 plays Island (object 377) from Hand (SIBA23) to Battlefield.
+- Turn 8: gian31 plays Plains (object 386) from Hand (gian31) to Battlefield.
+- Turn 9: SIBA23 plays Island (object 405) from Hand (SIBA23) to Battlefield.
+- Turn 11: SIBA23 plays Island (object 428) from Hand (SIBA23) to Battlefield.
+- Turn 12: gian31 plays Swamp (object 436) from Hand (gian31) to Battlefield.
+- Turn 14: gian31 plays Swamp (object 461) from Hand (gian31) to Battlefield.
+- Turn 15: SIBA23 plays Island (object 487) from Hand (SIBA23) to Battlefield.
+- Turn 18: gian31 plays Swamp (object 517) from Hand (gian31) to Battlefield.
+- Turn 19: SIBA23 plays Island (object 558) from Hand (SIBA23) to Battlefield.
+- Turn 20: gian31 plays Scoured Barrens (object 569) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 18: ordered adjacent records Case of the Uneaten Feast -> Case of the Uneaten Feast; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Case of the Uneaten Feast: casts=2; abilities=10 (triggered=10, activated=0) across turns [2, 4, 14, 16, 16, 16, 18, 18, 18, 18, 18, 18]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=8, other=0
+  observed effects: life +1
+- Phyrexian Arena: casts=1; abilities=6 (triggered=6, activated=0) across turns [8, 10, 12, 14, 16, 18, 20]
+  observed effect totals: draws=6, tokens=0, counters=0, returns=0, damage=0, life_changes=6, other=6
+  observed effects: draw, life -1, synthetic event
+- Eluge, the Shoreless Sea: casts=2; abilities=4 (triggered=4, activated=0) across turns [9, 9, 11, 11, 13, 13]
+  observed effect totals: draws=0, tokens=0, counters=4, returns=0, damage=0, life_changes=0, other=0
+  observed effects: +1 counter(s)
+- Eddymurk Crab: casts=1; abilities=4 (triggered=4, activated=0) across turns [14, 14, 15, 17, 19]
+- Echocasting Symposium: casts=4 across turns [13, 15, 17, 19]
+  observed effect totals: draws=0, tokens=4, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Deep-Cavern Bat: casts=3 across turns [4, 14, 18]
+- Makeshift Binding: casts=2; abilities=1 (triggered=1, activated=0) across turns [10, 14, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Bloodthirsty Conqueror: casts=1; abilities=1 (triggered=1, activated=0) across turns [16, 16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Bounce Off: casts=2 across turns [10, 18]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=2, damage=0, life_changes=0, other=0
+  observed effects: return to battlefield
+- Scoured Barrens: abilities=2 (triggered=2, activated=0) across turns [6, 20]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Amazing Acrobatics: casts=1 across turns [12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: zone_transfer
+- Hinterland Sanctifier: casts=1 across turns [18]
+- Into the Flood Maw: casts=1 across turns [8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=2, damage=0, life_changes=0, other=0
+  observed effects: return to battlefield
+- Pym Particles: casts=1 across turns [15]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 6 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Deep-Cavern Bat (gian31) -> SIBA23; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 - DeclareAttack, DeclareBlock (active=SIBA23)
+  attacker: Eluge, the Shoreless Sea (SIBA23) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 15 - DeclareAttack, DeclareBlock (active=SIBA23)
+  attacker: Eddymurk Crab (SIBA23) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 16 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Deep-Cavern Bat (gian31) -> SIBA23; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 17 - DeclareAttack, DeclareBlock (active=SIBA23)
+  attacker: Eddymurk Crab (SIBA23) -> gian31; unblocked in this observed snapshot
+  attacker: Eddymurk Crab (SIBA23) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 18 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Deep-Cavern Bat (gian31) -> SIBA23; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 19 - DeclareAttack, DeclareBlock (active=SIBA23)
+  attacker: Eddymurk Crab (SIBA23) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 13: Ability of Eluge, the Shoreless Sea (active=SIBA23) - Ability of Eluge, the Shoreless Sea: 1 counter(s) are added to target.
+- Turn 16: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 219: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 220: Plains | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 221: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 222: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 223: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 224: Plains | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 225: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 280: Into the Flood Maw | controller=SIBA23 | owner=SIBA23 | zone=Hand (latest_object_observation)
+- 281: Amazing Acrobatics | controller=SIBA23 | owner=SIBA23 | zone=Hand (latest_object_observation)
+- 284: Eluge, the Shoreless Sea | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 340: Island | controller=SIBA23 | owner=SIBA23 | zone=Battlefield (latest_object_observation)
+- 341: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 342: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 343: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 345: Stock Up | controller=SIBA23 | owner=SIBA23 | zone=Hand (latest_object_observation)
+- 346: Island | controller=SIBA23 | owner=SIBA23 | zone=Battlefield (latest_object_observation)
+- 347: Flow State | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 350: Island | controller=SIBA23 | owner=SIBA23 | zone=Battlefield (latest_object_observation)
+- 351: Flow State | controller=SIBA23 | owner=SIBA23 | zone=unknown (inferred unknown) (latest_object_observation)
+- 352: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 353: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 354: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 357: object 357 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 358: object 358 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 359: Eluge, the Shoreless Sea | controller=SIBA23 | owner=SIBA23 | zone=Exile (latest_object_observation)
+- 360: Amazing Acrobatics | controller=SIBA23 | owner=SIBA23 | zone=Hand (latest_object_observation)
+- 361: Into the Flood Maw | controller=SIBA23 | owner=SIBA23 | zone=Hand (latest_object_observation)
+- 362: Stock Up | controller=SIBA23 | owner=SIBA23 | zone=Hand (latest_object_observation)
+- 363: Island | controller=SIBA23 | owner=SIBA23 | zone=Hand (latest_object_observation)
+- 365: Island | controller=SIBA23 | owner=SIBA23 | zone=Battlefield (latest_object_observation)
+- 366: Stock Up | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 372: Stock Up | controller=SIBA23 | owner=SIBA23 | zone=unknown (inferred unknown) (latest_object_observation)
+- 373: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 374: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 375: object 375 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 377: Island | controller=SIBA23 | owner=SIBA23 | zone=Battlefield (latest_object_observation)
+- 378: Stock Up | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 384: Stock Up | controller=SIBA23 | owner=SIBA23 | zone=unknown (inferred unknown) (latest_object_observation)
+- 385: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 386: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 387: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 391: Into the Flood Maw | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 393: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 394: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 396: Eluge, the Shoreless Sea | controller=SIBA23 | owner=SIBA23 | zone=Hand (latest_object_observation)
+- 397: Into the Flood Maw | controller=SIBA23 | owner=SIBA23 | zone=unknown (inferred unknown) (latest_object_observation)
+- 398: Pym Particles | controller=SIBA23 | owner=SIBA23 | zone=Hand (latest_object_observation)
+- 399: Eluge, the Shoreless Sea | controller=SIBA23 | owner=SIBA23 | zone=Battlefield (latest_object_observation)
+- 404: object 404 | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 405: Island | controller=SIBA23 | owner=SIBA23 | zone=Battlefield (latest_object_observation)
+- 406: Opt | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 408: Opt | controller=SIBA23 | owner=SIBA23 | zone=unknown (inferred unknown) (latest_object_observation)
+- 409: object 409 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 410: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 411: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 412: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 416: Bounce Off | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 418: Eluge, the Shoreless Sea | controller=SIBA23 | owner=SIBA23 | zone=Hand (latest_object_observation)
+- 419: Bounce Off | controller=SIBA23 | owner=SIBA23 | zone=unknown (inferred unknown) (latest_object_observation)
+- 422: Eluge, the Shoreless Sea | controller=SIBA23 | owner=SIBA23 | zone=Battlefield (latest_object_observation)
+- 427: object 427 | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 428: Island | controller=SIBA23 | owner=SIBA23 | zone=Battlefield (latest_object_observation)
+- 429: Sleight of Hand | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 432: Sleight of Hand | controller=SIBA23 | owner=SIBA23 | zone=unknown (inferred unknown) (latest_object_observation)
+- 433: object 433 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 434: Rush of Dread | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 435: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 436: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 437: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 442: Amazing Acrobatics | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 444: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 445: Amazing Acrobatics | controller=SIBA23 | owner=SIBA23 | zone=unknown (inferred unknown) (latest_object_observation)
+- 446: Pym Particles | controller=SIBA23 | owner=SIBA23 | zone=Hand (latest_object_observation)
+- 447: object 447 | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 448: Echocasting Symposium | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 452: Eluge, the Shoreless Sea | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 453: object 453 | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 454: object 454 | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 456: Echocasting Symposium | controller=SIBA23 | owner=SIBA23 | zone=Exile (latest_object_observation)
+- 457: Eluge, the Shoreless Sea | controller=SIBA23 | owner=SIBA23 | zone=unknown (inferred unknown) (latest_object_observation)
+- 458: object 458 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 459: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 460: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 461: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 462: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 466: object 466 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 468: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 471: object 471 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 472: object 472 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 473: Eddymurk Crab | controller=SIBA23 | owner=SIBA23 | zone=Battlefield (latest_object_observation)
+- 476: object 476 | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 477: Pym Particles | controller=SIBA23 | owner=SIBA23 | zone=Exile (latest_object_observation)
+- 478: Pym Particles | controller=SIBA23 | owner=SIBA23 | zone=Hand (latest_object_observation)
+- 480: object 480 | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 481: Echocasting Symposium | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 482: Echocasting Symposium | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 483: Eddymurk Crab | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 484: object 484 | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 487: Island | controller=SIBA23 | owner=SIBA23 | zone=Battlefield (latest_object_observation)
+- 488: Pym Particles | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 491: Pym Particles | controller=SIBA23 | owner=SIBA23 | zone=unknown (inferred unknown) (latest_object_observation)
+- 492: object 492 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 493: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 494: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 495: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 497: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 503: object 503 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 504: object 504 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 505: object 505 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 506: Island | controller=SIBA23 | owner=SIBA23 | zone=Hand (latest_object_observation)
+- 507: object 507 | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 508: Echocasting Symposium | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 509: Echocasting Symposium | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 510: Eddymurk Crab | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 511: object 511 | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 514: object 514 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 515: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 516: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 517: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 518: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 521: object 521 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 522: object 522 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 523: object 523 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 524: Bounce Off | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 526: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 527: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 528: Bounce Off | controller=SIBA23 | owner=SIBA23 | zone=unknown (inferred unknown) (latest_object_observation)
+- 529: Island | controller=SIBA23 | owner=SIBA23 | zone=Hand (latest_object_observation)
+- 530: Rush of Dread | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 537: Rush of Dread | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 538: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 540: object 540 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 541: object 541 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 542: object 542 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 543: object 543 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 545: object 545 | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 546: Echocasting Symposium | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 547: Echocasting Symposium | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 548: Eddymurk Crab | controller=SIBA23 | owner=SIBA23 | zone=Battlefield (latest_object_observation)
+- 549: object 549 | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 552: Flow State | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 557: Flow State | controller=SIBA23 | owner=SIBA23 | zone=unknown (inferred unknown) (latest_object_observation)
+- 558: Island | controller=SIBA23 | owner=SIBA23 | zone=Battlefield (latest_object_observation)
+- 559: Stock Up | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+- 565: Stock Up | controller=SIBA23 | owner=SIBA23 | zone=unknown (inferred unknown) (latest_object_observation)
+- 566: object 566 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 567: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 568: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 569: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 570: object 570 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 571: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 577: Three Steps Ahead | controller=SIBA23 | owner=SIBA23 | zone=Stack (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+SIBA23: 79 total items
+  zones: Battlefield=13, Exile=3, Hand=14, Stack=36, unknown=13
+  objects: Island x12, Echocasting Symposium x8, Eluge, the Shoreless Sea x8, Stock Up x8, Pym Particles x6, Amazing Acrobatics x4, Bounce Off x4, Eddymurk Crab x4, Flow State x4, Into the Flood Maw x4, Opt x2, Sleight of Hand x2
+gian31: 73 total items
+  zones: Battlefield=15, Hand=20, Stack=36, unknown=2
+  objects: Swamp x8, Deep-Cavern Bat x7, Bloodthirsty Conqueror x6, Case of the Uneaten Feast x4, Makeshift Binding x4, Plains x4, Scoured Barrens x4, Bloodletter of Aclazotz x3, Phyrexian Arena x3, Rush of Dread x3, Hinterland Sanctifier x2, Marauding Blight-Priest
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+SIBA23:
+  Battlefield (13): Eddymurk Crab, Eddymurk Crab, Eluge, the Shoreless Sea, Eluge, the Shoreless Sea, Island, Island, Island, Island, Island, Island, Island, Island, Island
+  Graveyard: 0 card(s)
+gian31:
+  Battlefield (15): Bloodthirsty Conqueror, Bloodthirsty Conqueror, Deep-Cavern Bat, Deep-Cavern Bat, Deep-Cavern Bat, Deep-Cavern Bat, Hinterland Sanctifier, Plains, Plains, Scoured Barrens, Scoured Barrens, Swamp, Swamp, Swamp, Swamp
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+15 objects have no resolved final zone and are omitted from the known board state.
+SIBA23: 13 unknown object(s)
+gian31: 2 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=34, Stack=72
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+SIBA23:
+  Battlefield (10): Island, Island, Island, Island, Island, Island, Eddymurk Crab, Island, Eddymurk Crab, Island
+  Graveyard (13): Flow State, Stock Up, Stock Up, Into the Flood Maw, Opt, Bounce Off, Sleight of Hand, Amazing Acrobatics, Eluge, the Shoreless Sea, Pym Particles, Bounce Off, Flow State, Stock Up
+  Exile (2): Echocasting Symposium, Pym Particles
+gian31:
+  Battlefield (16): Plains, Case of the Uneaten Feast, Swamp, Scoured Barrens, Plains, Phyrexian Arena, Makeshift Binding, Swamp, Swamp, Makeshift Binding, Deep-Cavern Bat, Case of the Uneaten Feast, Swamp, Deep-Cavern Bat, Hinterland Sanctifier, Scoured Barrens
+  Graveyard (2): Bloodletter of Aclazotz, Rush of Dread
+Known non-persistent entries (counts only):
+  SIBA23: Hand=2, Library=2, Limbo=13, Stack=1
+  gian31: Hand=4, Limbo=8, Stack=1
+  unknown: Library=68, Limbo=15
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: SIBA23 Battlefield=1
+- Turn 2: SIBA23 Battlefield=1; gian31 Battlefield=2
+- Turn 3: SIBA23 Battlefield=2; SIBA23 Graveyard=1; gian31 Battlefield=2
+- Turn 4: SIBA23 Battlefield=2; SIBA23 Graveyard=1; SIBA23 Exile=1; gian31 Battlefield=4
+- Turn 5: SIBA23 Battlefield=3; SIBA23 Graveyard=2; SIBA23 Exile=1; gian31 Battlefield=4
+- Turn 6: SIBA23 Battlefield=3; SIBA23 Graveyard=2; SIBA23 Exile=1; gian31 Battlefield=5
+- Turn 7: SIBA23 Battlefield=4; SIBA23 Graveyard=3; SIBA23 Exile=1; gian31 Battlefield=5
+- Turn 8: SIBA23 Battlefield=4; SIBA23 Graveyard=4; gian31 Battlefield=6
+- Turn 9: SIBA23 Battlefield=6; SIBA23 Graveyard=5; gian31 Battlefield=6
+- Turn 10: SIBA23 Battlefield=5; SIBA23 Graveyard=6; gian31 Battlefield=7
+- Turn 11: SIBA23 Battlefield=7; SIBA23 Graveyard=7; gian31 Battlefield=7
+- Turn 12: SIBA23 Battlefield=7; SIBA23 Graveyard=8; gian31 Battlefield=8; gian31 Graveyard=1
+- Turn 13: SIBA23 Battlefield=6; SIBA23 Graveyard=9; SIBA23 Exile=1; gian31 Battlefield=8; gian31 Graveyard=1
+- Turn 14: SIBA23 Battlefield=7; SIBA23 Graveyard=9; SIBA23 Exile=3; gian31 Battlefield=11; gian31 Graveyard=1
+- Turn 15: SIBA23 Battlefield=8; SIBA23 Graveyard=10; SIBA23 Exile=4; gian31 Battlefield=11; gian31 Graveyard=1
+- Turn 16: SIBA23 Battlefield=8; SIBA23 Graveyard=10; SIBA23 Exile=4; gian31 Battlefield=13; gian31 Graveyard=1
+- Turn 17: SIBA23 Battlefield=8; SIBA23 Graveyard=10; SIBA23 Exile=5; gian31 Battlefield=13; gian31 Graveyard=1
+- Turn 18: SIBA23 Battlefield=8; SIBA23 Graveyard=13; SIBA23 Exile=5; gian31 Battlefield=15; gian31 Graveyard=2
+- Turn 19: SIBA23 Battlefield=9; SIBA23 Graveyard=15; SIBA23 Exile=6; gian31 Battlefield=15; gian31 Graveyard=2
+- Turn 20: SIBA23 Battlefield=9; SIBA23 Graveyard=15; SIBA23 Exile=6; gian31 Battlefield=16; gian31 Graveyard=2
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Deep-Cavern Bat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Phyrexian Arena resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Eluge, the Shoreless Sea resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Eluge, the Shoreless Sea resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Deep-Cavern Bat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Eddymurk Crab resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 18: Deep-Cavern Bat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 18: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
