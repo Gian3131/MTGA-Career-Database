@@ -1,0 +1,916 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, magical014
+Seat map: Seat 1=gian31, Seat 2=magical014
+Turn range (known): 1 - 17
+Records: 33
+Action chains: 29
+Winner: magical014
+Final life: {'gian31': -9, 'magical014': 9}
+Lethal combat transition: gian31 7 -> -9. 5 unblocked attackers and observed P/T modifiers reconcile to 16 power; individual combat assignment unavailable.
+Lethal coverage (normalized): complete; explained=16/16; unexplained=0.
+Match conclusion: Life total reached 0 observed for gian31.
+Last captured action before match-result payload: Turn 17 (Phase_Combat, Step_DeclareAttack; Ability of Restless Vinestalk, seq 449).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 44 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 12 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 15, 16] (raw records=12; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 27 explicit Library -> Hand movement(s); named in the draw record=16, resolved through an explicit identity transition=7, unresolved=4.
+Unresolved draw identities (explicit movements retained): Turn 9, seq 205, object 446; Turn 15, seq 371, object 516; Turn 15, seq 371, object 515; Turn 17, seq 434, object 541.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Case of the Uneaten Feast [159], Swamp [160], Plains [161], Lunar Convocation [162], Bloodletter of Aclazotz [163], Marauding Blight-Priest [164], Phyrexian Arena [165].
+  - unknown: 7 observed card(s): object 219 [219], object 220 [220], object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: magical014; observed final life totals: {'gian31': -9, 'magical014': 9}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 17 (Phase_Combat, Step_DeclareAttack; Ability of Restless Vinestalk, seq 449).
+Last captured life snapshot: gian31 7 -> -9 (seq 453).
+Tokens on battlefield at their last observation (not confirmed at match end): Dragon [477] controller=magical014, created Turn 11, last observed Turn 17 seq 445, P/T 4/4; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Human [486] controller=magical014, created Turn 12, last observed Turn 17 seq 445, P/T 3/3; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Zombie [497] controller=magical014, created Turn 13, last observed Turn 17 seq 445, P/T 2/2; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Zombie [529] controller=magical014, created Turn 15, last observed Turn 17 seq 445, P/T 2/2; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: gian31 reached -9 life; exact lethal-source coverage is reported separately.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Temple Garden.
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Case of the Uneaten Feast.
+- Turn 3: actions: cards=0, abilities=0; explicit battlefield entries=Starting Town, Mountain.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Lunar Convocation.
+- Turn 5: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Temple Garden; explicit battlefield exits=Lunar Convocation.
+- Turn 6: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, Phyrexian Arena.
+- Turn 7: actions: cards=0, abilities=0; life mutations=1; explicit battlefield entries=Fabled Passage, Swamp; explicit battlefield exits=Fabled Passage.
+- Turn 8: actions: cards=1, abilities=2; combat snapshots=1; life mutations=3; explicit battlefield entries=Deep-Cavern Bat.
+- Turn 9: actions: cards=0, abilities=0; life mutations=1; explicit battlefield entries=Island, Plains.
+- Turn 10: actions: cards=1, abilities=4; combat snapshots=1; life mutations=6; explicit battlefield entries=Swamp, Marauding Blight-Priest.
+- Turn 11: actions: cards=1, abilities=2; explicit battlefield entries=Dragonback Assault, Restless Vinestalk; explicit battlefield exits=Human, Deep-Cavern Bat, Marauding Blight-Priest.
+- Turn 12: actions: cards=1, abilities=1; life mutations=1; explicit battlefield exits=Dragonback Assault.
+- Turn 13: actions: cards=1, abilities=1; combat snapshots=1; life mutations=2; explicit battlefield entries=Liliana, Dreadhorde General.
+- Turn 14: actions: cards=2, abilities=5; life mutations=5; explicit battlefield entries=Case of the Uneaten Feast, Starscape Cleric.
+- Turn 15: actions: cards=0, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Starting Town.
+- Turn 16: actions: cards=1, abilities=2; combat snapshots=1; life mutations=2; explicit battlefield entries=Lunar Convocation, Plains.
+- Turn 17: actions: cards=0, abilities=2; combat snapshots=1; life mutations=1.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Temple Garden [279] Hand (magical014) -> Battlefield (PlayLand; GRE sequence 8).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      magical014: Battlefield: Temple Garden [279]
+
+Turn 2
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=28] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 282) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 282) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [280] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 22).
+      Plains [281] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 25).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      magical014: Battlefield: Temple Garden [279]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Plains [281]
+
+Turn 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Arcane Omens [284] Library (magical014) -> Hand (magical014) (Draw; GRE sequence 42).
+      Starting Town [285] Hand (magical014) -> Battlefield (PlayLand; GRE sequence 45).
+      Shared Roots [286] Hand (magical014) -> Stack (CastSpell; GRE sequence 46).
+      Mountain [289] Library (magical014) -> Battlefield (Put; GRE sequence 49).
+      Shared Roots [341] Stack -> Graveyard (magical014) (Resolve; GRE sequence 50).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      magical014: Battlefield: Mountain [289], Starting Town [285], Temple Garden [279]; Graveyard: Shared Roots [341]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Plains [281]
+
+Turn 4
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=70] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=344)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 344) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 344) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shoot the Sheriff [342] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 64).
+      Swamp [343] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 67).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      magical014: Battlefield: Mountain [289], Starting Town [285], Temple Garden [279]; Graveyard: Shared Roots [341]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Lunar Convocation [344], Plains [281], Swamp [343]
+
+Turn 5
+  - Stroke of Midnight [observed_semantic_effect, seq=91] (active=magical014, phase=Phase_Main1, controller=magical014, owner=magical014, source_object=348)
+      effects: destroy, token creation
+      narrative: Stroke of Midnight destroys Lunar Convocation.
+      explicit effect object references: Lunar Convocation [344], Lunar Convocation [352], Human [353] (role/targeting only where the protocol identifies it)
+      token created: Human (object 353, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 348).
+      protocol-linked zone transfer: Stroke of Midnight (object 348) Hand (magical014) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 352) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Stroke of Midnight (object 355) Stack -> Graveyard (magical014) (Resolve; shared object ID)
+      identity continuity: source object 348 -> transfer object 355 (explicit GRE ObjectIdChanged chain).
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=93] (active=magical014, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Lessons from Life [347] Library (magical014) -> Hand (magical014) (Draw; GRE sequence 84).
+      Temple Garden [356] Hand (magical014) -> Battlefield (PlayLand; GRE sequence 95).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      magical014: Battlefield: Mountain [289], Starting Town [285], Temple Garden [279], Temple Garden [356]; Graveyard: Shared Roots [341], Stroke of Midnight [355]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Plains [281], Swamp [343]; Graveyard: Lunar Convocation [352]
+
+Turn 6
+  - Phyrexian Arena [valid_resolution_no_immediate_mutation, seq=115] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=359)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Phyrexian Arena resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Phyrexian Arena (object 359) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Phyrexian Arena (object 359) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Human [353] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: magical014 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): magical014 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [357] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 109).
+      Swamp [358] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 112).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      magical014: Battlefield: Mountain [289], Starting Town [285], Temple Garden [279], Temple Garden [356]; Graveyard: Shared Roots [341], Stroke of Midnight [355]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Phyrexian Arena [359], Plains [281], Swamp [343], Swamp [358]; Graveyard: Lunar Convocation [352]
+
+Turn 7
+    net observed life change this turn: magical014 -1 (individual changes below; gains and losses may offset)
+    life: magical014 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Stock Up [363] Library (magical014) -> Hand (magical014) (Draw; GRE sequence 135).
+      Fabled Passage [364] Hand (magical014) -> Battlefield (PlayLand; GRE sequence 138).
+      Fabled Passage [366] Battlefield -> Graveyard (magical014) (Sacrifice; GRE sequence 139).
+      Swamp [367] Library (magical014) -> Battlefield (Put; GRE sequence 142).
+      Arcane Omens [416] Hand (magical014) -> Stack (CastSpell; GRE sequence 144).
+      Marauding Blight-Priest [423] Hand (gian31) -> Graveyard (gian31) (Discard; GRE sequence 150).
+      Bloodletter of Aclazotz [422] Hand (gian31) -> Graveyard (gian31) (Discard; GRE sequence 150).
+      Shoot the Sheriff [424] Hand (gian31) -> Graveyard (gian31) (Discard; GRE sequence 150).
+      Case of the Uneaten Feast [425] Hand (gian31) -> Graveyard (gian31) (Discard; GRE sequence 150).
+      Arcane Omens [426] Stack -> Graveyard (magical014) (Resolve; GRE sequence 150).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      magical014: Battlefield: Mountain [289], Starting Town [285], Swamp [367], Temple Garden [279], Temple Garden [356]; Graveyard: Arcane Omens [426], Fabled Passage [366], Shared Roots [341], Stroke of Midnight [355]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Phyrexian Arena [359], Plains [281], Swamp [343], Swamp [358]; Graveyard: Bloodletter of Aclazotz [422], Case of the Uneaten Feast [425], Lunar Convocation [352], Marauding Blight-Priest [423], Shoot the Sheriff [424]
+
+Turn 8
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=164] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=359, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 169 [169], Marauding Blight-Priest [428] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 428) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Deep-Cavern Bat [valid_resolution_no_immediate_mutation, seq=171] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=430)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deep-Cavern Bat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deep-Cavern Bat (object 430) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 430) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=179] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Human [353] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 +0; magical014 -1 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 20
+    life: gian31 20 -> 21
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): magical014 18 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Deep-Cavern Bat [429] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 166).
+      Liliana, Dreadhorde General [435] Hand (magical014) -> Exile (Exile; GRE sequence 177).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      magical014: Battlefield: Mountain [289], Starting Town [285], Swamp [367], Temple Garden [279], Temple Garden [356]; Graveyard: Arcane Omens [426], Fabled Passage [366], Shared Roots [341], Stroke of Midnight [355]; Exile: Liliana, Dreadhorde General [435]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Deep-Cavern Bat [430], Phyrexian Arena [359], Plains [281], Swamp [343], Swamp [358]; Graveyard: Bloodletter of Aclazotz [422], Case of the Uneaten Feast [425], Lunar Convocation [352], Marauding Blight-Priest [423], Shoot the Sheriff [424]
+
+Turn 9
+    net observed life change this turn: magical014 -1 (individual changes below; gains and losses may offset)
+    life: magical014 17 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Island [438] Library (magical014) -> Hand (magical014) (Draw; GRE sequence 199).
+      Lessons from Life [439] Hand (magical014) -> Stack (CastSpell; GRE sequence 202).
+      Dragonback Assault [444] Library (magical014) -> Hand (magical014) (Draw; GRE sequence 205).
+      Plains [445] Library (magical014) -> Hand (magical014) (Draw; GRE sequence 205).
+      object 446 [446] Library (magical014) -> Hand (magical014) (Draw; GRE sequence 205).
+      Island [447] Hand (magical014) -> Battlefield (Put; GRE sequence 206).
+      Lessons from Life [448] Stack -> Graveyard (magical014) (Resolve; GRE sequence 206).
+      Plains [449] Hand (magical014) -> Battlefield (PlayLand; GRE sequence 207).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      magical014: Battlefield: Island [447], Mountain [289], Plains [449], Starting Town [285], Swamp [367], Temple Garden [279], Temple Garden [356]; Graveyard: Arcane Omens [426], Fabled Passage [366], Lessons from Life [448], Shared Roots [341], Stroke of Midnight [355]; Exile: Liliana, Dreadhorde General [435]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Deep-Cavern Bat [430], Phyrexian Arena [359], Plains [281], Swamp [343], Swamp [358]; Graveyard: Bloodletter of Aclazotz [422], Case of the Uneaten Feast [425], Lunar Convocation [352], Marauding Blight-Priest [423], Shoot the Sheriff [424]
+
+Turn 10
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=221] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=359, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 171 [171], Swamp [451] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Swamp (object 451) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=229] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=454)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 454) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 454) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=231] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=233] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=454, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: magical014 loses 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=245] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=454, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 233 and 245; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: magical014 loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Human [353] (unblocked, observed P/T 1/1), Deep-Cavern Bat [430] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 +1; magical014 -4 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 20
+    life: gian31 20 -> 21
+    life: magical014 16 -> 15
+    life (semantically attributed to Case of the Uneaten Feast; direct protocol link unavailable): gian31 21 -> 22
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): magical014 15 -> 13
+    life: magical014 13 -> 12
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [452] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 223).
+      Swamp [453] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 226).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      magical014: Battlefield: Island [447], Mountain [289], Plains [449], Starting Town [285], Swamp [367], Temple Garden [279], Temple Garden [356]; Graveyard: Arcane Omens [426], Fabled Passage [366], Lessons from Life [448], Shared Roots [341], Stroke of Midnight [355]; Exile: Liliana, Dreadhorde General [435]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Deep-Cavern Bat [430], Marauding Blight-Priest [454], Phyrexian Arena [359], Plains [281], Swamp [343], Swamp [358], Swamp [453]; Graveyard: Bloodletter of Aclazotz [422], Case of the Uneaten Feast [425], Lunar Convocation [352], Marauding Blight-Priest [423], Shoot the Sheriff [424]
+
+Turn 11
+  - Dragonback Assault [valid_resolution_no_immediate_mutation, seq=260] (active=magical014, phase=Phase_Main1, controller=magical014, owner=magical014, source_object=462)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Dragonback Assault resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Dragonback Assault (object 462) Hand (magical014) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Dragonback Assault (object 462) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Dragonback Assault [observed_semantic_effect, seq=262] (active=magical014, phase=Phase_Main1, controller=magical014, owner=magical014, source_object=462, source_last_explicit_zone=Battlefield)
+      effects: 3 damage, 3 damage, 3 damage
+      narrative: Ability of Dragonback Assault: Human takes 3 damage; Deep-Cavern Bat takes 3 damage; Marauding Blight-Priest takes 3 damage.
+      explicit effect object references: Human [353], Deep-Cavern Bat [430], Marauding Blight-Priest [454] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Human (object 470) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 471) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 472) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+  - Ability of Dragonback Assault [observed_semantic_effect, seq=265] (active=magical014, phase=Phase_Main1, controller=magical014, owner=magical014, source_object=462, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 262 and 265; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: token creation
+      narrative: Ability of Dragonback Assault: a token is created.
+      explicit effect object references: Dragon [477] (role/targeting only where the protocol identifies it)
+      token created: Dragon (object 477, controller=magical014) 4/4; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 476).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Restless Vinestalk [461] Library (magical014) -> Hand (magical014) (Draw; GRE sequence 255).
+      Liliana, Dreadhorde General [473] Exile -> Hand (magical014) (Return; GRE sequence 262).
+      Restless Vinestalk [475] Hand (magical014) -> Battlefield (PlayLand; GRE sequence 263).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      magical014: Battlefield: Dragonback Assault [462], Island [447], Mountain [289], Plains [449], Restless Vinestalk [475], Starting Town [285], Swamp [367], Temple Garden [279], Temple Garden [356]; Graveyard: Arcane Omens [426], Fabled Passage [366], Lessons from Life [448], Shared Roots [341], Stroke of Midnight [355]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Phyrexian Arena [359], Plains [281], Swamp [343], Swamp [358], Swamp [453]; Graveyard: Bloodletter of Aclazotz [422], Case of the Uneaten Feast [425], Deep-Cavern Bat [471], Human [470], Lunar Convocation [352], Marauding Blight-Priest [423], Marauding Blight-Priest [472], Shoot the Sheriff [424]
+
+Turn 12
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=279] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=359, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 173 [173], Bloodletter of Aclazotz [479] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 479) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Stroke of Midnight [observed_semantic_effect, seq=288] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=481)
+      effects: destroy, token creation
+      narrative: Stroke of Midnight destroys Dragonback Assault.
+      explicit effect object references: Dragonback Assault [462], Dragonback Assault [485], Human [486] (role/targeting only where the protocol identifies it)
+      token created: Human (object 486, controller=magical014) 3/3; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 481).
+      protocol-linked zone transfer: Stroke of Midnight (object 481) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Dragonback Assault (object 485) Battlefield -> Graveyard (magical014) (Destroy; shared object ID)
+      protocol-linked zone transfer: Stroke of Midnight (object 487) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 481 -> transfer object 487 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 22 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Stroke of Midnight [480] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 281).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      magical014: Battlefield: Island [447], Mountain [289], Plains [449], Restless Vinestalk [475], Starting Town [285], Swamp [367], Temple Garden [279], Temple Garden [356]; Graveyard: Arcane Omens [426], Dragonback Assault [485], Fabled Passage [366], Lessons from Life [448], Shared Roots [341], Stroke of Midnight [355]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Phyrexian Arena [359], Plains [281], Swamp [343], Swamp [358], Swamp [453]; Graveyard: Bloodletter of Aclazotz [422], Case of the Uneaten Feast [425], Deep-Cavern Bat [471], Human [470], Lunar Convocation [352], Marauding Blight-Priest [423], Marauding Blight-Priest [472], Shoot the Sheriff [424], Stroke of Midnight [487]
+
+Turn 13
+  - Liliana, Dreadhorde General [valid_resolution_no_immediate_mutation, seq=308] (active=magical014, phase=Phase_Main1, controller=magical014, owner=magical014, source_object=489)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Liliana, Dreadhorde General resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Liliana, Dreadhorde General (object 489) Hand (magical014) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Liliana, Dreadhorde General (object 489) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Liliana, Dreadhorde General [observed_semantic_effect, seq=311] (active=magical014, phase=Phase_Main1, controller=magical014, owner=magical014, source_object=489, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Liliana, Dreadhorde General: a token is created.
+      explicit effect object references: Zombie [497] (role/targeting only where the protocol identifies it)
+      token created: Zombie (object 497, controller=magical014) 2/2; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 496).
+  Combat snapshots observed (active=magical014; frames: DeclareAttack -> DeclareBlock):
+      attackers: Dragon [477] (unblocked, observed P/T 4/4), Human [486] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      other-player life loss not explained by observed attacker damage: magical014 12 -> 11 (-1; phase=unknown; source unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -5; magical014 -1 (individual changes below; gains and losses may offset)
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): magical014 12 -> 11
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 21 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Arcane Omens [488] Library (magical014) -> Hand (magical014) (Draw; GRE sequence 302).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      magical014: Battlefield: Island [447], Liliana, Dreadhorde General [489], Mountain [289], Plains [449], Restless Vinestalk [475], Starting Town [285], Swamp [367], Temple Garden [279], Temple Garden [356]; Graveyard: Arcane Omens [426], Dragonback Assault [485], Fabled Passage [366], Lessons from Life [448], Shared Roots [341], Stroke of Midnight [355]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Phyrexian Arena [359], Plains [281], Swamp [343], Swamp [358], Swamp [453]; Graveyard: Bloodletter of Aclazotz [422], Case of the Uneaten Feast [425], Deep-Cavern Bat [471], Human [470], Lunar Convocation [352], Marauding Blight-Priest [423], Marauding Blight-Priest [472], Shoot the Sheriff [424], Stroke of Midnight [487]
+
+Turn 14
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=331] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=359, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 175 [175], Case of the Uneaten Feast [499] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 499) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=338] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=501)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 501) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 501) Stack -> Battlefield (Resolve; shared object ID)
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=342] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=503)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 503) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 503) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=345] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=501, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=347] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=503, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: magical014 loses 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=349] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=351] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=503, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: magical014 loses 1 life.
+    net observed life change this turn: gian31 +1; magical014 -2 (individual changes below; gains and losses may offset)
+    life: gian31 16 -> 15
+    life: gian31 15 -> 16
+    life: magical014 11 -> 10
+    life: gian31 16 -> 17
+    life: magical014 10 -> 9
+    additional protocol-observed zone movements not assigned to an action chain:
+      Phyrexian Arena [500] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 333).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      magical014: Battlefield: Island [447], Liliana, Dreadhorde General [489], Mountain [289], Plains [449], Restless Vinestalk [475], Starting Town [285], Swamp [367], Temple Garden [279], Temple Garden [356]; Graveyard: Arcane Omens [426], Dragonback Assault [485], Fabled Passage [366], Lessons from Life [448], Shared Roots [341], Stroke of Midnight [355]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Case of the Uneaten Feast [501], Phyrexian Arena [359], Plains [281], Starscape Cleric [503], Swamp [343], Swamp [358], Swamp [453]; Graveyard: Bloodletter of Aclazotz [422], Case of the Uneaten Feast [425], Deep-Cavern Bat [471], Human [470], Lunar Convocation [352], Marauding Blight-Priest [423], Marauding Blight-Priest [472], Shoot the Sheriff [424], Stroke of Midnight [487]
+
+Turn 15
+  - Ability of Liliana, Dreadhorde General [observed_semantic_effect, seq=383] (active=magical014, phase=Phase_Main1, controller=magical014, owner=magical014, source_object=489, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Liliana, Dreadhorde General: a token is created.
+      explicit effect object references: Zombie [529] (role/targeting only where the protocol identifies it)
+      token created: Zombie (object 529, controller=magical014) 2/2; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 528).
+  Combat snapshots observed (active=magical014; frames: DeclareAttack -> DeclareBlock):
+      attackers: Dragon [477] (unblocked, observed P/T 4/4), Human [486] (unblocked, observed P/T 1/1), Zombie [497] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 7; observed attacker power total: 7; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -7 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 7 + observed modifiers 0 = 7; individual assignment unavailable): gian31 17 -> 10
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starting Town [510] Library (magical014) -> Hand (magical014) (Draw; GRE sequence 365).
+      Stock Up [511] Hand (magical014) -> Stack (CastSpell; GRE sequence 368).
+      object 516 [516] Library (magical014) -> Hand (magical014) (Put; GRE sequence 371).
+      object 515 [515] Library (magical014) -> Hand (magical014) (Put; GRE sequence 371).
+      Stock Up [517] Stack -> Graveyard (magical014) (Resolve; GRE sequence 372).
+      Arcane Omens [518] Hand (magical014) -> Stack (CastSpell; GRE sequence 373).
+      Bloodletter of Aclazotz [524] Hand (gian31) -> Graveyard (gian31) (Discard; GRE sequence 379).
+      Phyrexian Arena [525] Hand (gian31) -> Graveyard (gian31) (Discard; GRE sequence 379).
+      Arcane Omens [526] Stack -> Graveyard (magical014) (Resolve; GRE sequence 379).
+      Starting Town [527] Hand (magical014) -> Battlefield (PlayLand; GRE sequence 380).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      magical014: Battlefield: Island [447], Liliana, Dreadhorde General [489], Mountain [289], Plains [449], Restless Vinestalk [475], Starting Town [285], Starting Town [527], Swamp [367], Temple Garden [279], Temple Garden [356]; Graveyard: Arcane Omens [426], Arcane Omens [526], Dragonback Assault [485], Fabled Passage [366], Lessons from Life [448], Shared Roots [341], Stock Up [517], Stroke of Midnight [355]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Case of the Uneaten Feast [501], Phyrexian Arena [359], Plains [281], Starscape Cleric [503], Swamp [343], Swamp [358], Swamp [453]; Graveyard: Bloodletter of Aclazotz [422], Bloodletter of Aclazotz [524], Case of the Uneaten Feast [425], Deep-Cavern Bat [471], Human [470], Lunar Convocation [352], Marauding Blight-Priest [423], Marauding Blight-Priest [472], Phyrexian Arena [525], Shoot the Sheriff [424], Stroke of Midnight [487]
+
+Turn 16
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=403] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=359, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 177 [177], Rush of Dread [531] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Rush of Dread (object 531) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=410] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=533)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 533) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 533) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=413] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=533, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 179 [179], Plains [539] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Plains (object 539) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [503] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      other-player life loss not explained by observed attacker damage: gian31 9 -> 7 (-2; phase=Phase_Main1; source unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -3 (individual changes below; gains and losses may offset)
+    life: gian31 10 -> 9
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): gian31 9 -> 7
+    additional protocol-observed zone movements not assigned to an action chain:
+      Lunar Convocation [532] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 405).
+      Plains [540] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 414).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      magical014: Battlefield: Island [447], Liliana, Dreadhorde General [489], Mountain [289], Plains [449], Restless Vinestalk [475], Starting Town [285], Starting Town [527], Swamp [367], Temple Garden [279], Temple Garden [356]; Graveyard: Arcane Omens [426], Arcane Omens [526], Dragonback Assault [485], Fabled Passage [366], Lessons from Life [448], Shared Roots [341], Stock Up [517], Stroke of Midnight [355]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Case of the Uneaten Feast [501], Lunar Convocation [533], Phyrexian Arena [359], Plains [281], Plains [540], Starscape Cleric [503], Swamp [343], Swamp [358], Swamp [453]; Graveyard: Bloodletter of Aclazotz [422], Bloodletter of Aclazotz [524], Case of the Uneaten Feast [425], Deep-Cavern Bat [471], Human [470], Lunar Convocation [352], Marauding Blight-Priest [423], Marauding Blight-Priest [472], Phyrexian Arena [525], Shoot the Sheriff [424], Stroke of Midnight [487]
+
+Turn 17
+  - Ability of Restless Vinestalk [valid_resolution_no_immediate_mutation, seq=439] (active=magical014, phase=Phase_Main1, controller=magical014, owner=magical014, source_object=475, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Restless Vinestalk resolves with no immediate observed mutation.
+  - Ability of Restless Vinestalk [valid_resolution_no_immediate_mutation, seq=449] (active=magical014, phase=Phase_Combat, step=Step_DeclareAttack, controller=magical014, owner=magical014, source_object=475, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 439 and 449; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Restless Vinestalk resolves with no immediate observed mutation.
+  Combat snapshots observed (active=magical014; frames: DeclareAttack -> DeclareBlock):
+      attackers: Restless Vinestalk [475] (unblocked, observed P/T 5/5), Dragon [477] (unblocked, observed P/T 4/4), Human [486] (unblocked, observed P/T 3/3), Zombie [497] (unblocked, observed P/T 2/2), Zombie [529] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 16; observed attacker power total: 16; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -16 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 16 + observed modifiers 0 = 16; individual assignment unavailable): gian31 7 -> -9
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 541 [541] Library (magical014) -> Hand (magical014) (Draw; GRE sequence 434).
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 7, seq 147: magical014 19 -> 18. No source event correlated in captured records.
+- Turn 9, seq 203: magical014 17 -> 16. No source event correlated in captured records.
+- Turn 10, seq 243, Phase_Main1: gian31 21 -> 22. Semantic attribution: Case of the Uneaten Feast; direct protocol link unavailable. Previous captured action: Marauding Blight-Priest.
+- Turn 13, seq 306: magical014 12 -> 11. Combat declaration observed; exact assignment unavailable.
+- Turn 16, seq 411, Phase_Main1: gian31 9 -> 7. Combat declaration observed; exact assignment unavailable. Previous captured action: Lunar Convocation.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 17: gian31 7 -> -9 (required change 16). Explained by exact same-record evidence: 0/16; semantically attributed: 0/16; unexplained residual: 0/16.
+  Fully reconciled from observed combat state and modifiers: 16/16 (pre-modifier power=16; explicit modifier power=+0; reconstructed post-modifier power=16; individual assignment unavailable).
+  Combat snapshot observed at or before lethal: Turn 17; attackers=Restless Vinestalk [475], Dragon [477], Human [486], Zombie [497], Zombie [529]; observed snapshot power total=16; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 17, Ability of Restless Vinestalk (seq 449).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 5 token creations observed; 4 active as last observed; 1 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Human [353] controller=gian31; created Turn 5 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 11 via Battlefield -> Graveyard (gian31) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Dragon [477] controller=magical014; created Turn 11 (4/4); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 17, object 477 (latest observed P/T 4/4; current zone unconfirmed).
+- Human [486] controller=magical014; created Turn 12 (3/3); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 17, object 486 (latest observed P/T 3/3; current zone unconfirmed).
+- Zombie [497] controller=magical014; created Turn 13 (2/2); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 17, object 497 (latest observed P/T 2/2; current zone unconfirmed).
+- Zombie [529] controller=magical014; created Turn 15 (2/2); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 17, object 529 (latest observed P/T 2/2; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 8: Temple Garden [owner=magical014, controller=magical014] moves Hand (magical014) -> Battlefield (PlayLand).
+- Turn 2, seq 22: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 25: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 26: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 28: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 42: Arcane Omens [owner/controller metadata unavailable] moves Library (magical014) -> Hand (magical014) (Draw).
+- Turn 3, seq 45: Starting Town [owner=magical014, controller=magical014] moves Hand (magical014) -> Battlefield (PlayLand).
+- Turn 3, seq 46: Shared Roots [owner=magical014, controller=magical014] moves Hand (magical014) -> Stack (CastSpell).
+- Turn 3, seq 49: Mountain [owner=magical014, controller=magical014] moves Library (magical014) -> Battlefield (Put).
+- Turn 3, seq 50: Shared Roots [owner=magical014, controller=magical014] moves Stack -> Graveyard (magical014) (Resolve).
+- Turn 4, seq 64: Shoot the Sheriff [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 67: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 68: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 70: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 84: Lessons from Life [owner=magical014, controller=magical014] moves Library (magical014) -> Hand (magical014) (Draw).
+- Turn 5, seq 87: Stroke of Midnight [owner=magical014, controller=magical014] moves Hand (magical014) -> Stack (CastSpell).
+- Turn 5, seq 91: Lunar Convocation [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 5, seq 91: Stroke of Midnight [owner=magical014, controller=magical014] moves Stack -> Graveyard (magical014) (Resolve).
+- Turn 5, seq 95: Temple Garden [owner=magical014, controller=magical014] moves Hand (magical014) -> Battlefield (PlayLand).
+- Turn 6, seq 109: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 112: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 113: Phyrexian Arena [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 115: Phyrexian Arena [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 135: Stock Up [owner=magical014, controller=magical014] moves Library (magical014) -> Hand (magical014) (Draw).
+- Turn 7, seq 138: Fabled Passage [owner=magical014, controller=magical014] moves Hand (magical014) -> Battlefield (PlayLand).
+- Turn 7, seq 139: Fabled Passage [owner=magical014, controller=magical014] moves Battlefield -> Graveyard (magical014) (Sacrifice).
+- Turn 7, seq 142: Swamp [owner=magical014, controller=magical014] moves Library (magical014) -> Battlefield (Put).
+- Turn 7, seq 144: Arcane Omens [owner=magical014, controller=magical014] moves Hand (magical014) -> Stack (CastSpell).
+- Turn 7, seq 150: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Graveyard (gian31) (Discard).
+- Turn 7, seq 150: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Graveyard (gian31) (Discard).
+- Turn 7, seq 150: Shoot the Sheriff [owner=gian31, controller=gian31] moves Hand (gian31) -> Graveyard (gian31) (Discard).
+- Turn 7, seq 150: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Graveyard (gian31) (Discard).
+- Turn 7, seq 150: Arcane Omens [owner=magical014, controller=magical014] moves Stack -> Graveyard (magical014) (Resolve).
+- Turn 8, seq 164: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 166: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 169: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 171: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 177: Liliana, Dreadhorde General [owner=magical014, controller=magical014] moves Hand (magical014) -> Exile (Exile).
+- Turn 9, seq 199: Island [owner/controller metadata unavailable] moves Library (magical014) -> Hand (magical014) (Draw).
+- Turn 9, seq 202: Lessons from Life [owner=magical014, controller=magical014] moves Hand (magical014) -> Stack (CastSpell).
+- Turn 9, seq 205: Dragonback Assault [owner/controller metadata unavailable] moves Library (magical014) -> Hand (magical014) (Draw).
+- Turn 9, seq 205: Plains [owner/controller metadata unavailable] moves Library (magical014) -> Hand (magical014) (Draw).
+- Turn 9, seq 205: object 446 [owner/controller metadata unavailable] moves Library (magical014) -> Hand (magical014) (Draw).
+- Turn 9, seq 206: Island [owner=magical014, controller=magical014] moves Hand (magical014) -> Battlefield (Put).
+- Turn 9, seq 206: Lessons from Life [owner=magical014, controller=magical014] moves Stack -> Graveyard (magical014) (Resolve).
+- Turn 9, seq 207: Plains [owner=magical014, controller=magical014] moves Hand (magical014) -> Battlefield (PlayLand).
+- Turn 10, seq 221: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 223: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 226: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 227: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 229: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 255: Restless Vinestalk [owner/controller metadata unavailable] moves Library (magical014) -> Hand (magical014) (Draw).
+- Turn 11, seq 258: Dragonback Assault [owner=magical014, controller=magical014] moves Hand (magical014) -> Stack (CastSpell).
+- Turn 11, seq 260: Dragonback Assault [owner=magical014, controller=magical014] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 262: Human [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 11, seq 262: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 11, seq 262: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 11, seq 262: Liliana, Dreadhorde General [owner/controller metadata unavailable] moves Exile -> Hand (magical014) (Return).
+- Turn 11, seq 263: Restless Vinestalk [owner=magical014, controller=magical014] moves Hand (magical014) -> Battlefield (PlayLand).
+- Turn 12, seq 279: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 281: Stroke of Midnight [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 284: Stroke of Midnight [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 288: Dragonback Assault [owner=magical014, controller=magical014] moves Battlefield -> Graveyard (magical014) (Destroy).
+- Turn 12, seq 288: Stroke of Midnight [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 13, seq 302: Arcane Omens [owner/controller metadata unavailable] moves Library (magical014) -> Hand (magical014) (Draw).
+- Turn 13, seq 305: Liliana, Dreadhorde General [owner=magical014, controller=magical014] moves Hand (magical014) -> Stack (CastSpell).
+- Turn 13, seq 308: Liliana, Dreadhorde General [owner=magical014, controller=magical014] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 331: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 333: Phyrexian Arena [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 336: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 338: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 339: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 342: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 365: Starting Town [owner/controller metadata unavailable] moves Library (magical014) -> Hand (magical014) (Draw).
+- Turn 15, seq 368: Stock Up [owner=magical014, controller=magical014] moves Hand (magical014) -> Stack (CastSpell).
+- Turn 15, seq 371: object 516 [owner/controller metadata unavailable] moves Library (magical014) -> Hand (magical014) (Put).
+- Turn 15, seq 371: object 515 [owner/controller metadata unavailable] moves Library (magical014) -> Hand (magical014) (Put).
+- Turn 15, seq 372: Stock Up [owner=magical014, controller=magical014] moves Stack -> Graveyard (magical014) (Resolve).
+- Turn 15, seq 373: Arcane Omens [owner=magical014, controller=magical014] moves Hand (magical014) -> Stack (CastSpell).
+- Turn 15, seq 379: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Graveyard (gian31) (Discard).
+- Turn 15, seq 379: Phyrexian Arena [owner=gian31, controller=gian31] moves Hand (gian31) -> Graveyard (gian31) (Discard).
+- Turn 15, seq 379: Arcane Omens [owner=magical014, controller=magical014] moves Stack -> Graveyard (magical014) (Resolve).
+- Turn 15, seq 380: Starting Town [owner=magical014, controller=magical014] moves Hand (magical014) -> Battlefield (PlayLand).
+- Turn 16, seq 403: Rush of Dread [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 405: Lunar Convocation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 408: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 410: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 16, seq 413: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 414: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 17, seq 434: object 541 [owner/controller metadata unavailable] moves Library (magical014) -> Hand (magical014) (Draw).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 8: object 221 becomes object 279 [Temple Garden].
+- Turn 2, seq 22: object 166 becomes object 280 [Swamp].
+- Turn 2, seq 25: object 161 becomes object 281 [Plains].
+- Turn 2, seq 26: object 159 becomes object 282 [Case of the Uneaten Feast].
+- Turn 3, seq 42: object 226 becomes object 284 [Arcane Omens].
+- Turn 3, seq 45: object 222 becomes object 285 [Starting Town].
+- Turn 3, seq 46: object 219 becomes object 286 [Shared Roots].
+- Turn 3, seq 49: object 230 becomes object 289 [Mountain].
+- Turn 3, seq 50: object 286 becomes object 341 [Shared Roots].
+- Turn 4, seq 64: object 167 becomes object 342 [Shoot the Sheriff].
+- Turn 4, seq 67: object 160 becomes object 343 [Swamp].
+- Turn 4, seq 68: object 162 becomes object 344 [Lunar Convocation].
+- Turn 5, seq 84: object 290 becomes object 347 [Lessons from Life].
+- Turn 5, seq 87: object 220 becomes object 348 [Stroke of Midnight].
+- Turn 5, seq 91: object 344 becomes object 352 [Lunar Convocation].
+- Turn 5, seq 91: object 348 becomes object 355 [Stroke of Midnight].
+- Turn 5, seq 95: object 225 becomes object 356 [Temple Garden].
+- Turn 6, seq 109: object 168 becomes object 357 [Case of the Uneaten Feast].
+- Turn 6, seq 112: object 280 becomes object 358 [Swamp].
+- Turn 6, seq 113: object 165 becomes object 359 [Phyrexian Arena].
+- Turn 7, seq 135: object 291 becomes object 363 [Stock Up].
+- Turn 7, seq 138: object 223 becomes object 364 [Fabled Passage].
+- Turn 7, seq 139: object 364 becomes object 366 [Fabled Passage].
+- Turn 7, seq 142: object 331 becomes object 367 [Swamp].
+- Turn 7, seq 144: object 284 becomes object 416 [Arcane Omens].
+- Turn 7, seq 150: object 164 becomes object 423 [Marauding Blight-Priest].
+- Turn 7, seq 150: object 163 becomes object 422 [Bloodletter of Aclazotz].
+- Turn 7, seq 150: object 342 becomes object 424 [Shoot the Sheriff].
+- Turn 7, seq 150: object 357 becomes object 425 [Case of the Uneaten Feast].
+- Turn 7, seq 150: object 416 becomes object 426 [Arcane Omens].
+- Turn 8, seq 164: object 169 becomes object 428 [Marauding Blight-Priest].
+- Turn 8, seq 166: object 170 becomes object 429 [Deep-Cavern Bat].
+- Turn 8, seq 169: object 429 becomes object 430 [Deep-Cavern Bat].
+- Turn 8, seq 177: object 224 becomes object 435 [Liliana, Dreadhorde General].
+- Turn 9, seq 199: object 368 becomes object 438 [Island].
+- Turn 9, seq 202: object 347 becomes object 439 [Lessons from Life].
+- Turn 9, seq 205: object 369 becomes object 444 [Dragonback Assault].
+- Turn 9, seq 205: object 370 becomes object 445 [Plains].
+- Turn 9, seq 205: object 371 becomes object 446 [object 371].
+- Turn 9, seq 206: object 438 becomes object 447 [Island].
+- Turn 9, seq 206: object 439 becomes object 448 [Lessons from Life].
+- Turn 9, seq 207: object 445 becomes object 449 [Plains].
+- Turn 10, seq 221: object 171 becomes object 451 [Swamp].
+- Turn 10, seq 223: object 172 becomes object 452 [Starscape Cleric].
+- Turn 10, seq 226: object 451 becomes object 453 [Swamp].
+- Turn 10, seq 227: object 428 becomes object 454 [Marauding Blight-Priest].
+- Turn 11, seq 255: object 372 becomes object 461 [Restless Vinestalk].
+- Turn 11, seq 258: object 444 becomes object 462 [Dragonback Assault].
+- Turn 11, seq 262: object 353 becomes object 470 [Human].
+- Turn 11, seq 262: object 430 becomes object 471 [Deep-Cavern Bat].
+- Turn 11, seq 262: object 454 becomes object 472 [Marauding Blight-Priest].
+- Turn 11, seq 262: object 435 becomes object 473 [Liliana, Dreadhorde General].
+- Turn 11, seq 263: object 461 becomes object 475 [Restless Vinestalk].
+- Turn 12, seq 279: object 173 becomes object 479 [Bloodletter of Aclazotz].
+- Turn 12, seq 281: object 174 becomes object 480 [Stroke of Midnight].
+- Turn 12, seq 284: object 480 becomes object 481 [Stroke of Midnight].
+- Turn 12, seq 288: object 462 becomes object 485 [Dragonback Assault].
+- Turn 12, seq 288: object 481 becomes object 487 [Stroke of Midnight].
+- Turn 13, seq 302: object 373 becomes object 488 [Arcane Omens].
+- Turn 13, seq 305: object 473 becomes object 489 [Liliana, Dreadhorde General].
+- Turn 14, seq 331: object 175 becomes object 499 [Case of the Uneaten Feast].
+- Turn 14, seq 333: object 176 becomes object 500 [Phyrexian Arena].
+- Turn 14, seq 336: object 499 becomes object 501 [Case of the Uneaten Feast].
+- Turn 14, seq 339: object 452 becomes object 503 [Starscape Cleric].
+- Turn 15, seq 365: object 374 becomes object 510 [Starting Town].
+- Turn 15, seq 368: object 363 becomes object 511 [Stock Up].
+- Turn 15, seq 371: object 379 becomes object 516 [object 379].
+- Turn 15, seq 371: object 375 becomes object 515 [object 375].
+- Turn 15, seq 372: object 511 becomes object 517 [Stock Up].
+- Turn 15, seq 373: object 488 becomes object 518 [Arcane Omens].
+- Turn 15, seq 379: object 479 becomes object 524 [Bloodletter of Aclazotz].
+- Turn 15, seq 379: object 500 becomes object 525 [Phyrexian Arena].
+- Turn 15, seq 379: object 518 becomes object 526 [Arcane Omens].
+- Turn 15, seq 380: object 510 becomes object 527 [Starting Town].
+- Turn 16, seq 403: object 177 becomes object 531 [Rush of Dread].
+- Turn 16, seq 405: object 178 becomes object 532 [Lunar Convocation].
+- Turn 16, seq 408: object 532 becomes object 533 [Lunar Convocation].
+- Turn 16, seq 413: object 179 becomes object 539 [Plains].
+- Turn 16, seq 414: object 539 becomes object 540 [Plains].
+- Turn 17, seq 434: object 380 becomes object 541 [object 380].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: magical014 plays Temple Garden (object 279) from Hand (magical014) to Battlefield.
+- Turn 2: gian31 plays Plains (object 281) from Hand (gian31) to Battlefield.
+- Turn 3: magical014 plays Starting Town (object 285) from Hand (magical014) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 343) from Hand (gian31) to Battlefield.
+- Turn 5: magical014 plays Temple Garden (object 356) from Hand (magical014) to Battlefield.
+- Turn 6: gian31 plays Swamp (object 358) from Hand (gian31) to Battlefield.
+- Turn 7: magical014 plays Fabled Passage (object 364) from Hand (magical014) to Battlefield.
+- Turn 9: magical014 plays Plains (object 449) from Hand (magical014) to Battlefield.
+- Turn 10: gian31 plays Swamp (object 453) from Hand (gian31) to Battlefield.
+- Turn 11: magical014 plays Restless Vinestalk (object 475) from Hand (magical014) to Battlefield.
+- Turn 15: magical014 plays Starting Town (object 527) from Hand (magical014) to Battlefield.
+- Turn 16: gian31 plays Plains (object 540) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 14: ordered adjacent records Case of the Uneaten Feast -> Starscape Cleric; observed repetitions=2; net life: gian31 +2, magical014 -2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=2, Starscape Cleric=2.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 14: ordered adjacent records Case of the Uneaten Feast -> Starscape Cleric; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Case of the Uneaten Feast: casts=2; abilities=5 (triggered=5, activated=0) across turns [2, 5, 8, 10, 14, 14, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=0
+  observed effects: life +1
+- Phyrexian Arena: casts=1; abilities=5 (triggered=5, activated=0) across turns [6, 8, 10, 12, 14, 16]
+  observed effect totals: draws=5, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=5
+  observed effects: draw, life -1, synthetic event
+- Dragonback Assault: casts=1; abilities=2 (triggered=2, activated=0) across turns [11, 11, 11]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=3, life_changes=0, other=0
+  observed effects: 3 damage, token creation
+- Liliana, Dreadhorde General: casts=1; abilities=2 (triggered=2, activated=0) across turns [13, 13, 15]
+  observed effect totals: draws=0, tokens=2, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Lunar Convocation: casts=2; abilities=1 (triggered=1, activated=0) across turns [4, 16, 16]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Marauding Blight-Priest: casts=1; abilities=2 (triggered=2, activated=0) across turns [10, 10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=1
+  observed effects: life -1, synthetic event
+- Starscape Cleric: casts=1; abilities=2 (triggered=2, activated=0) across turns [14, 14, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=1
+  observed effects: life -1, synthetic event
+- Restless Vinestalk: abilities=2 (triggered=2, activated=0) across turns [17, 17]
+- Stroke of Midnight: casts=2 across turns [5, 12]
+  observed effect totals: draws=0, tokens=2, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: destroy, token creation
+- Deep-Cavern Bat: casts=1 across turns [8]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 6 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Human (gian31) -> magical014; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Human (gian31) -> magical014; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Human (gian31) -> magical014; unblocked in this observed snapshot
+  attacker: Deep-Cavern Bat (gian31) -> magical014; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 - DeclareAttack, DeclareBlock (active=magical014)
+  attacker: Dragon (magical014) -> gian31; unblocked in this observed snapshot
+  attacker: Human (magical014) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 15 - DeclareAttack, DeclareBlock (active=magical014)
+  attacker: Dragon (magical014) -> gian31; unblocked in this observed snapshot
+  attacker: Human (magical014) -> gian31; unblocked in this observed snapshot
+  attacker: Zombie (magical014) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 16 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> seat 489; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 17 - DeclareAttack, DeclareBlock (active=magical014)
+  attacker: Restless Vinestalk (magical014) -> gian31; unblocked in this observed snapshot
+  attacker: Dragon (magical014) -> gian31; unblocked in this observed snapshot
+  attacker: Human (magical014) -> gian31; unblocked in this observed snapshot
+  attacker: Zombie (magical014) -> gian31; unblocked in this observed snapshot
+  attacker: Zombie (magical014) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 10: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: magical014 loses 1 life.
+- Turn 17: Ability of Restless Vinestalk (active=magical014) - Ability of Restless Vinestalk resolves with no immediate observed mutation.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 160: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 161: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 224: Liliana, Dreadhorde General | controller=magical014 | owner=magical014 | zone=Hand (latest_object_observation)
+- 279: Temple Garden | controller=magical014 | owner=magical014 | zone=Battlefield (latest_object_observation)
+- 280: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 281: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 282: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 285: Starting Town | controller=magical014 | owner=magical014 | zone=Battlefield (latest_object_observation)
+- 286: Shared Roots | controller=magical014 | owner=magical014 | zone=Stack (latest_object_observation)
+- 289: Mountain | controller=magical014 | owner=magical014 | zone=Battlefield (latest_object_observation)
+- 341: Shared Roots | controller=magical014 | owner=magical014 | zone=Graveyard (latest_object_observation)
+- 342: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 343: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 344: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 347: Lessons from Life | controller=magical014 | owner=magical014 | zone=Hand (latest_object_observation)
+- 348: Stroke of Midnight | controller=magical014 | owner=magical014 | zone=Stack (latest_object_observation)
+- 352: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 353: Human | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 354: object 354 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 355: Stroke of Midnight | controller=magical014 | owner=magical014 | zone=Graveyard (latest_object_observation)
+- 356: Temple Garden | controller=magical014 | owner=magical014 | zone=Battlefield (latest_object_observation)
+- 357: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 358: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 359: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 363: Stock Up | controller=magical014 | owner=magical014 | zone=Hand (latest_object_observation)
+- 364: Fabled Passage | controller=magical014 | owner=magical014 | zone=Battlefield (latest_object_observation)
+- 365: object 365 | controller=magical014 | owner=magical014 | zone=unknown (inferred unknown) (latest_object_observation)
+- 366: Fabled Passage | controller=magical014 | owner=magical014 | zone=Graveyard (latest_object_observation)
+- 367: Swamp | controller=magical014 | owner=magical014 | zone=Battlefield (latest_object_observation)
+- 416: Arcane Omens | controller=magical014 | owner=magical014 | zone=Stack (latest_object_observation)
+- 422: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 423: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 424: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 425: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 426: Arcane Omens | controller=magical014 | owner=magical014 | zone=Graveyard (latest_object_observation)
+- 427: object 427 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 428: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 429: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 430: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 433: object 433 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 434: object 434 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 435: Liliana, Dreadhorde General | controller=magical014 | owner=magical014 | zone=Exile (latest_object_observation)
+- 436: Lessons from Life | controller=magical014 | owner=magical014 | zone=Hand (latest_object_observation)
+- 437: Stock Up | controller=magical014 | owner=magical014 | zone=Hand (latest_object_observation)
+- 439: Lessons from Life | controller=magical014 | owner=magical014 | zone=Stack (latest_object_observation)
+- 447: Island | controller=magical014 | owner=magical014 | zone=Battlefield (latest_object_observation)
+- 448: Lessons from Life | controller=magical014 | owner=magical014 | zone=Graveyard (latest_object_observation)
+- 449: Plains | controller=magical014 | owner=magical014 | zone=Battlefield (latest_object_observation)
+- 450: object 450 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 451: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 452: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 453: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 454: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 458: object 458 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 459: object 459 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 460: object 460 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 462: Dragonback Assault | controller=magical014 | owner=magical014 | zone=Stack (latest_object_observation)
+- 469: object 469 | controller=magical014 | owner=magical014 | zone=unknown (inferred unknown) (latest_object_observation)
+- 471: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 472: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 474: Liliana, Dreadhorde General | controller=magical014 | owner=magical014 | zone=Hand (latest_object_observation)
+- 475: Restless Vinestalk | controller=magical014 | owner=magical014 | zone=Battlefield (latest_object_observation)
+- 476: object 476 | controller=magical014 | owner=magical014 | zone=unknown (inferred unknown) (latest_object_observation)
+- 477: Dragon | controller=magical014 | owner=magical014 | zone=Battlefield (latest_object_observation)
+- 478: object 478 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 479: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 480: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 481: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 485: Dragonback Assault | controller=magical014 | owner=magical014 | zone=Graveyard (latest_object_observation)
+- 486: Human | controller=magical014 | owner=magical014 | zone=Battlefield (latest_object_observation)
+- 487: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 489: Liliana, Dreadhorde General | controller=magical014 | owner=magical014 | zone=Stack (latest_object_observation)
+- 496: object 496 | controller=magical014 | owner=magical014 | zone=unknown (inferred unknown) (latest_object_observation)
+- 497: Zombie | controller=magical014 | owner=magical014 | zone=Battlefield (latest_object_observation)
+- 498: object 498 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 499: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 500: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 501: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 503: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 506: object 506 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 507: object 507 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 508: object 508 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 509: object 509 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 511: Stock Up | controller=magical014 | owner=magical014 | zone=Stack (latest_object_observation)
+- 517: Stock Up | controller=magical014 | owner=magical014 | zone=Graveyard (latest_object_observation)
+- 518: Arcane Omens | controller=magical014 | owner=magical014 | zone=Stack (latest_object_observation)
+- 524: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 525: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 526: Arcane Omens | controller=magical014 | owner=magical014 | zone=Graveyard (latest_object_observation)
+- 527: Starting Town | controller=magical014 | owner=magical014 | zone=Battlefield (latest_object_observation)
+- 528: object 528 | controller=magical014 | owner=magical014 | zone=unknown (inferred unknown) (latest_object_observation)
+- 529: Zombie | controller=magical014 | owner=magical014 | zone=Battlefield (latest_object_observation)
+- 530: object 530 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 531: Rush of Dread | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 532: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 533: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 536: object 536 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 539: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 540: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 542: object 542 | controller=magical014 | owner=magical014 | zone=unknown (inferred unknown) (latest_object_observation)
+- 548: object 548 | controller=magical014 | owner=magical014 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 62 total items
+  zones: Battlefield=10, Graveyard=8, Hand=22, Stack=6, unknown=16
+  objects: Case of the Uneaten Feast x6, Swamp x6, Lunar Convocation x5, Marauding Blight-Priest x5, Bloodletter of Aclazotz x4, Phyrexian Arena x4, Plains x4, Deep-Cavern Bat x3, Stroke of Midnight x3, Shoot the Sheriff x2, Starscape Cleric x2, Human
+magical014: 44 total items
+  zones: Battlefield=14, Exile=1, Graveyard=8, Hand=6, Stack=8, unknown=7
+  objects: Arcane Omens x4, Lessons from Life x4, Liliana, Dreadhorde General x4, Stock Up x4, Dragonback Assault x2, Fabled Passage x2, Shared Roots x2, Starting Town x2, Stroke of Midnight x2, Temple Garden x2, Zombie x2, Dragon
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (10): Deep-Cavern Bat, Deep-Cavern Bat, Marauding Blight-Priest, Marauding Blight-Priest, Plains, Plains, Starscape Cleric, Swamp, Swamp, Swamp
+  Graveyard: 8 card(s)
+magical014:
+  Battlefield (14): Dragon, Fabled Passage, Human, Island, Mountain, Plains, Restless Vinestalk, Starting Town, Starting Town, Swamp, Temple Garden, Temple Garden, Zombie, Zombie
+  Graveyard: 8 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+23 objects have no resolved final zone and are omitted from the known board state.
+gian31: 16 unknown object(s)
+magical014: 7 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=28, Stack=14
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+gian31:
+  Battlefield (10): Plains, Case of the Uneaten Feast, Swamp, Swamp, Phyrexian Arena, Swamp, Case of the Uneaten Feast, Starscape Cleric, Lunar Convocation, Plains
+  Graveyard (10): Lunar Convocation, Bloodletter of Aclazotz, Marauding Blight-Priest, Shoot the Sheriff, Case of the Uneaten Feast, Deep-Cavern Bat, Marauding Blight-Priest, Stroke of Midnight, Bloodletter of Aclazotz, Phyrexian Arena
+magical014:
+  Battlefield (14): Temple Garden, Starting Town, Mountain, Temple Garden, Swamp, Island, Plains, Restless Vinestalk, Dragon, Human, Liliana, Dreadhorde General, Zombie, Starting Town, Zombie
+  Graveyard (8): Shared Roots, Stroke of Midnight, Fabled Passage, Arcane Omens, Lessons from Life, Dragonback Assault, Stock Up, Arcane Omens
+Known non-persistent entries (counts only):
+  gian31: Hand=1, Limbo=4
+  magical014: Hand=4, Limbo=2
+  unknown: Library=77, Limbo=10
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: magical014 Battlefield=1
+- Turn 2: gian31 Battlefield=2; magical014 Battlefield=1
+- Turn 3: gian31 Battlefield=2; magical014 Battlefield=3; magical014 Graveyard=1
+- Turn 4: gian31 Battlefield=4; magical014 Battlefield=3; magical014 Graveyard=1
+- Turn 5: gian31 Battlefield=3; gian31 Graveyard=1; magical014 Battlefield=4; magical014 Graveyard=2
+- Turn 6: gian31 Battlefield=5; gian31 Graveyard=1; magical014 Battlefield=4; magical014 Graveyard=2
+- Turn 7: gian31 Battlefield=5; gian31 Graveyard=5; magical014 Battlefield=5; magical014 Graveyard=4
+- Turn 8: gian31 Battlefield=6; gian31 Graveyard=5; magical014 Battlefield=5; magical014 Graveyard=4; magical014 Exile=1
+- Turn 9: gian31 Battlefield=6; gian31 Graveyard=5; magical014 Battlefield=7; magical014 Graveyard=5; magical014 Exile=1
+- Turn 10: gian31 Battlefield=8; gian31 Graveyard=5; magical014 Battlefield=7; magical014 Graveyard=5; magical014 Exile=1
+- Turn 11: gian31 Battlefield=6; gian31 Graveyard=8; magical014 Battlefield=9; magical014 Graveyard=5
+- Turn 12: gian31 Battlefield=6; gian31 Graveyard=9; magical014 Battlefield=8; magical014 Graveyard=6
+- Turn 13: gian31 Battlefield=6; gian31 Graveyard=9; magical014 Battlefield=9; magical014 Graveyard=6
+- Turn 14: gian31 Battlefield=8; gian31 Graveyard=9; magical014 Battlefield=9; magical014 Graveyard=6
+- Turn 15: gian31 Battlefield=8; gian31 Graveyard=11; magical014 Battlefield=10; magical014 Graveyard=8
+- Turn 16: gian31 Battlefield=10; gian31 Graveyard=11; magical014 Battlefield=10; magical014 Graveyard=8
+- Turn 17: gian31 Battlefield=10; gian31 Graveyard=11; magical014 Battlefield=10; magical014 Graveyard=8
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Phyrexian Arena resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Deep-Cavern Bat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Dragonback Assault resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Liliana, Dreadhorde General resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
