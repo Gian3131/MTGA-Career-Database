@@ -1,0 +1,760 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: Nakuroo, gian31
+Seat map: Seat 1=Nakuroo, Seat 2=gian31
+Turn range (known): 1 - 14
+Records: 38
+Action chains: 28
+Winner: gian31
+Final life: {'Nakuroo': -1, 'gian31': 6}
+Lethal combat transition: Nakuroo 3 -> -1. Observed unblocked attackers reconcile 2/4 life loss; 2 additional life loss remains unexplained (individual combat assignment unavailable).
+Match conclusion: Life total reached 0 observed for Nakuroo.
+Last captured action before match-result payload: Turn 14 (Phase_Main1; Ability of Marauding Blight-Priest, seq 401).
+Later numbered GRE record(s): 1 after action sequence 401 across turn(s) [14]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 29 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 10 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 14] (raw records=10; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 13 explicit Library -> Hand movement(s); named in the draw record=7, resolved through an explicit identity transition=5, unresolved=1.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'Nakuroo': -1, 'gian31': 6}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 14 (Phase_Main1; Ability of Marauding Blight-Priest, seq 401).
+Last captured life snapshot: Nakuroo 3 -> -1 (seq 411).
+Terminal condition observed: Nakuroo reached -1 life; exact lethal-source coverage is reported separately.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [289] Hand (Nakuroo) -> Battlefield (PlayLand; GRE sequence 7).
+      Duress [290] Hand (Nakuroo) -> Stack (CastSpell; GRE sequence 8).
+      Duress [299] Stack -> Graveyard (Nakuroo) (Resolve; GRE sequence 13).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Nakuroo: Battlefield: Swamp [289]; Graveyard: Duress [299]
+
+Turn 2
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=33] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=302)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 302) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 302) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [300] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 27).
+      Plains [301] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 30).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Nakuroo: Battlefield: Swamp [289]; Graveyard: Duress [299]
+      gian31: Battlefield: Case of the Uneaten Feast [302], Plains [301]
+
+Turn 3
+  - Virus Beetle [valid_resolution_no_immediate_mutation, seq=53] (active=Nakuroo, phase=Phase_Main1, controller=Nakuroo, owner=Nakuroo, source_object=306)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Virus Beetle resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Virus Beetle (object 306) Hand (Nakuroo) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Virus Beetle (object 306) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [304] Library (Nakuroo) -> Hand (Nakuroo) (Draw; GRE sequence 47).
+      Swamp [305] Hand (Nakuroo) -> Battlefield (PlayLand; GRE sequence 50).
+      Scoured Barrens [310] Hand (gian31) -> Graveyard (gian31) (Discard; GRE sequence 56).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Nakuroo: Battlefield: Swamp [289], Swamp [305], Virus Beetle [306]; Graveyard: Duress [299]
+      gian31: Battlefield: Case of the Uneaten Feast [302], Plains [301]; Graveyard: Scoured Barrens [310]
+
+Turn 4
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=77] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=313)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 313) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 313) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=79] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=81] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=313, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Nakuroo loses 1 life.
+    net observed life change this turn: Nakuroo -1; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life: Nakuroo 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shattered Sanctum [311] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 70).
+      Swamp [312] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 73).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Nakuroo: Battlefield: Swamp [289], Swamp [305], Virus Beetle [306]; Graveyard: Duress [299]
+      gian31: Battlefield: Case of the Uneaten Feast [302], Plains [301], Starscape Cleric [313], Swamp [312]; Graveyard: Scoured Barrens [310]
+
+Turn 5
+  - Ability of Bloodfell Caves [observed_semantic_effect, seq=100] (active=Nakuroo, phase=Phase_Main1, controller=Nakuroo, owner=Nakuroo, source_object=319, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodfell Caves: Nakuroo gains 1 life.
+  - Dead Weight [valid_resolution_no_immediate_mutation, seq=105] (active=Nakuroo, phase=Phase_Main1, controller=Nakuroo, owner=Nakuroo, source_object=321)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Dead Weight resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Dead Weight (object 321) Hand (Nakuroo) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Dead Weight (object 321) Stack -> Battlefield (Resolve; shared object ID)
+      Aura attachment target: unavailable in captured GRE records.
+  Combat snapshots observed (active=Nakuroo; frames: DeclareAttack -> DeclareBlock):
+      attackers: Virus Beetle [306] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Nakuroo +1; gian31 -1 (individual changes below; gains and losses may offset)
+    life: Nakuroo 19 -> 20
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 21 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Alesha, Who Laughs at Fate [318] Library (Nakuroo) -> Hand (Nakuroo) (Draw; GRE sequence 95).
+      Bloodfell Caves [319] Hand (Nakuroo) -> Battlefield (PlayLand; GRE sequence 98).
+      Starscape Cleric [323] Battlefield -> Graveyard (gian31) (SBA_ZeroToughness; GRE sequence 105).
+      Dead Weight [324] Battlefield -> Graveyard (Nakuroo) (SBA_UnattachedAura; GRE sequence 105).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Nakuroo: Battlefield: Bloodfell Caves [319], Dead Weight [321], Swamp [289], Swamp [305], Virus Beetle [306]; Graveyard: Dead Weight [324], Duress [299]
+      gian31: Battlefield: Case of the Uneaten Feast [302], Plains [301], Swamp [312]; Graveyard: Scoured Barrens [310], Starscape Cleric [323]
+
+Turn 6
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=131] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=327)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 327) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 327) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=133] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [325] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 125).
+      Shattered Sanctum [326] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 128).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Nakuroo: Battlefield: Bloodfell Caves [319], Dead Weight [321], Swamp [289], Swamp [305], Virus Beetle [306]; Graveyard: Dead Weight [324], Duress [299]
+      gian31: Battlefield: Case of the Uneaten Feast [302], Hinterland Sanctifier [327], Plains [301], Shattered Sanctum [326], Swamp [312]; Graveyard: Scoured Barrens [310], Starscape Cleric [323]
+
+Turn 7
+  - Alesha, Who Laughs at Fate [valid_resolution_no_immediate_mutation, seq=153] (active=Nakuroo, phase=Phase_Main1, controller=Nakuroo, owner=Nakuroo, source_object=332)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Alesha, Who Laughs at Fate resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Alesha, Who Laughs at Fate (object 332) Hand (Nakuroo) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Alesha, Who Laughs at Fate (object 332) Stack -> Battlefield (Resolve; shared object ID)
+  - Shock [observed_semantic_effect, seq=158] (active=Nakuroo, phase=Phase_Main1, controller=Nakuroo, owner=Nakuroo, source_object=336)
+      effects: 2 damage
+      narrative: Shock: Hinterland Sanctifier takes 2 damage.
+      explicit effect object references: Hinterland Sanctifier [327] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shock (object 336) Hand (Nakuroo) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Shock (object 338) Stack -> Graveyard (Nakuroo) (Resolve; shared object ID)
+      identity continuity: source object 336 -> transfer object 338 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Hinterland Sanctifier (object 339) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+  Combat snapshots observed (active=Nakuroo; frames: DeclareAttack -> DeclareBlock):
+      attackers: Virus Beetle [306] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 21 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [330] Library (Nakuroo) -> Hand (Nakuroo) (Draw; GRE sequence 147).
+      Mountain [331] Hand (Nakuroo) -> Battlefield (PlayLand; GRE sequence 150).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Nakuroo: Battlefield: Alesha, Who Laughs at Fate [332], Bloodfell Caves [319], Dead Weight [321], Mountain [331], Swamp [289], Swamp [305], Virus Beetle [306]; Graveyard: Dead Weight [324], Duress [299], Shock [338]
+      gian31: Battlefield: Case of the Uneaten Feast [302], Plains [301], Shattered Sanctum [326], Swamp [312]; Graveyard: Hinterland Sanctifier [339], Scoured Barrens [310], Starscape Cleric [323]
+
+Turn 8
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=184] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=343)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 343) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 343) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=186] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=188] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=343, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Nakuroo loses 1 life.
+    net observed life change this turn: Nakuroo -1; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life: Nakuroo 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [341] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 178).
+      Swamp [342] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 181).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Nakuroo: Battlefield: Alesha, Who Laughs at Fate [332], Bloodfell Caves [319], Dead Weight [321], Mountain [331], Swamp [289], Swamp [305], Virus Beetle [306]; Graveyard: Dead Weight [324], Duress [299], Shock [338]
+      gian31: Battlefield: Case of the Uneaten Feast [302], Marauding Blight-Priest [343], Plains [301], Shattered Sanctum [326], Swamp [312], Swamp [342]; Graveyard: Hinterland Sanctifier [339], Scoured Barrens [310], Starscape Cleric [323]
+
+Turn 9
+  - Perforating Artist [valid_resolution_no_immediate_mutation, seq=208] (active=Nakuroo, phase=Phase_Main1, controller=Nakuroo, owner=Nakuroo, source_object=351)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Perforating Artist resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Perforating Artist (object 351) Hand (Nakuroo) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Perforating Artist (object 351) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Alesha, Who Laughs at Fate [observed_semantic_effect, seq=216] (active=Nakuroo, phase=Phase_Combat, step=Step_DeclareAttack, controller=Nakuroo, owner=Nakuroo, source_object=332, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Alesha, Who Laughs at Fate: Alesha, Who Laughs at Fate gets +1/+1; 1 counter(s) are added to Alesha, Who Laughs at Fate [332].
+  Combat snapshots observed (active=Nakuroo; frames: DeclareAttack):
+      attackers: Virus Beetle [306] (unblocked, observed P/T 1/1), Alesha, Who Laughs at Fate [332] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -7 (individual changes below; gains and losses may offset)
+    life (unattributed loss during combat phase; not explained by observed attacker damage): gian31 21 -> 18
+    life (unattributed loss during combat phase; not explained by observed attacker damage): gian31 18 -> 17
+    life (unattributed loss during combat phase; not explained by observed attacker damage): gian31 17 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [349] Library (Nakuroo) -> Hand (Nakuroo) (Draw; GRE sequence 202).
+      Swamp [350] Hand (Nakuroo) -> Battlefield (PlayLand; GRE sequence 205).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Nakuroo: Battlefield: Alesha, Who Laughs at Fate [332], Bloodfell Caves [319], Dead Weight [321], Mountain [331], Perforating Artist [351], Swamp [289], Swamp [305], Swamp [350], Virus Beetle [306]; Graveyard: Dead Weight [324], Duress [299], Shock [338]
+      gian31: Battlefield: Case of the Uneaten Feast [302], Marauding Blight-Priest [343], Plains [301], Shattered Sanctum [326], Swamp [312], Swamp [342]; Graveyard: Hinterland Sanctifier [339], Scoured Barrens [310], Starscape Cleric [323]
+
+Turn 10
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation, seq=242] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=359)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 359) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 359) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=244] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=246] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=343, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Marauding Blight-Priest: Nakuroo loses 2 life.
+    net observed life change this turn: Nakuroo -2; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 14 -> 15
+    life: Nakuroo 19 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Deep-Cavern Bat [358] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 237).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Nakuroo: Battlefield: Alesha, Who Laughs at Fate [332], Bloodfell Caves [319], Dead Weight [321], Mountain [331], Perforating Artist [351], Swamp [289], Swamp [305], Swamp [350], Virus Beetle [306]; Graveyard: Dead Weight [324], Duress [299], Shock [338]
+      gian31: Battlefield: Bloodletter of Aclazotz [359], Case of the Uneaten Feast [302], Marauding Blight-Priest [343], Plains [301], Shattered Sanctum [326], Swamp [312], Swamp [342]; Graveyard: Hinterland Sanctifier [339], Scoured Barrens [310], Starscape Cleric [323]
+
+Turn 11
+  - Laughing Jasper Flint [valid_resolution_no_immediate_mutation, seq=266] (active=Nakuroo, phase=Phase_Main1, controller=Nakuroo, owner=Nakuroo, source_object=367)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Laughing Jasper Flint resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Laughing Jasper Flint (object 367) Hand (Nakuroo) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Laughing Jasper Flint (object 367) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Alesha, Who Laughs at Fate [observed_semantic_effect, seq=275] (active=Nakuroo, phase=Phase_Combat, step=Step_DeclareAttack, controller=Nakuroo, owner=Nakuroo, source_object=332, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Alesha, Who Laughs at Fate: Alesha, Who Laughs at Fate gets +1/+1; 1 counter(s) are added to Alesha, Who Laughs at Fate [332].
+  Combat snapshots observed (active=Nakuroo; frames: DeclareAttack):
+      attackers: Virus Beetle [306] (unblocked, observed P/T 1/1), Alesha, Who Laughs at Fate [332] (unblocked, observed P/T 4/4)
+      blockers: none identified
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -8 (individual changes below; gains and losses may offset)
+    life (unattributed loss during combat phase; not explained by observed attacker damage): gian31 15 -> 11
+    life (unattributed loss during combat phase; not explained by observed attacker damage): gian31 11 -> 10
+    life (unattributed loss during combat phase; not explained by observed attacker damage): gian31 10 -> 7
+    additional protocol-observed zone movements not assigned to an action chain:
+      Laughing Jasper Flint [366] Library (Nakuroo) -> Hand (Nakuroo) (Draw; GRE sequence 261).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Nakuroo: Battlefield: Alesha, Who Laughs at Fate [332], Bloodfell Caves [319], Dead Weight [321], Laughing Jasper Flint [367], Mountain [331], Perforating Artist [351], Swamp [289], Swamp [305], Swamp [350], Virus Beetle [306]; Graveyard: Dead Weight [324], Duress [299], Shock [338]
+      gian31: Battlefield: Bloodletter of Aclazotz [359], Case of the Uneaten Feast [302], Marauding Blight-Priest [343], Plains [301], Shattered Sanctum [326], Swamp [312], Swamp [342]; Graveyard: Hinterland Sanctifier [339], Scoured Barrens [310], Starscape Cleric [323]
+
+Turn 12
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=302] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 375) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 375) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=304] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=307] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Starscape Cleric: Nakuroo loses 2 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=309] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=343, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Marauding Blight-Priest: Nakuroo loses 2 life.
+  - Deep-Cavern Bat [valid_resolution_no_immediate_mutation, seq=312] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=381)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deep-Cavern Bat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deep-Cavern Bat (object 381) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 381) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Deep-Cavern Bat [valid_resolution_no_immediate_mutation, seq=317] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=381, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Deep-Cavern Bat resolves with no immediate observed mutation.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=319] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=322] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Starscape Cleric: Nakuroo loses 2 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=324] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=343, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Marauding Blight-Priest: Nakuroo loses 2 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Bloodletter of Aclazotz [359] (unblocked, observed P/T 2/4)
+      blockers: none identified
+      combat-reconciled defending-player life-loss component: 2; observed attacker power total: 2; unresolved additional life loss: 2 (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Nakuroo -12; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 7 -> 8
+    life: Nakuroo 17 -> 15
+    life: Nakuroo 15 -> 13
+    life: gian31 8 -> 9
+    life: Nakuroo 13 -> 11
+    life: Nakuroo 11 -> 9
+    life (combat component reconciled: 2; unresolved residual life loss 2; exact assignment unavailable): Nakuroo 9 -> 5
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodletter of Aclazotz [374] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 296).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Nakuroo: Battlefield: Alesha, Who Laughs at Fate [332], Bloodfell Caves [319], Dead Weight [321], Laughing Jasper Flint [367], Mountain [331], Perforating Artist [351], Swamp [289], Swamp [305], Swamp [350], Virus Beetle [306]; Graveyard: Dead Weight [324], Duress [299], Shock [338]
+      gian31: Battlefield: Bloodletter of Aclazotz [359], Case of the Uneaten Feast [302], Deep-Cavern Bat [381], Marauding Blight-Priest [343], Plains [301], Shattered Sanctum [326], Starscape Cleric [375], Swamp [312], Swamp [342]; Graveyard: Hinterland Sanctifier [339], Scoured Barrens [310], Starscape Cleric [323]
+
+Turn 13
+  - Ability of Laughing Jasper Flint [observed_semantic_effect, seq=346] (active=Nakuroo, phase=Phase_Beginning, step=Step_Upkeep, controller=Nakuroo, owner=Nakuroo, source_object=367, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Laughing Jasper Flint: exiles Makeshift Binding.
+      explicit effect object references: object 242 [242], Makeshift Binding [389] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Makeshift Binding (object 389) Library (gian31) -> Exile (Exile; shared object ID)
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=353] (active=Nakuroo, phase=Phase_Main1, controller=Nakuroo, owner=gian31, source_object=391)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 391) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Makeshift Binding (object 391) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=357] (active=Nakuroo, phase=Phase_Main1, controller=Nakuroo, owner=gian31, source_object=391, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Bloodletter of Aclazotz; Nakuroo gains 2 life.
+      explicit effect object references: Bloodletter of Aclazotz [359], Bloodletter of Aclazotz [396] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 396) Battlefield -> Exile (Exile; shared object ID)
+  - Ability of Alesha, Who Laughs at Fate [observed_semantic_effect, seq=366] (active=Nakuroo, phase=Phase_Combat, step=Step_DeclareAttack, controller=Nakuroo, owner=Nakuroo, source_object=332, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Alesha, Who Laughs at Fate: Alesha, Who Laughs at Fate gets +1/+1; 1 counter(s) are added to Alesha, Who Laughs at Fate [332].
+  Combat snapshots observed (active=Nakuroo; frames: DeclareAttack):
+      attackers: Virus Beetle [306] (unblocked, observed P/T 1/1), Alesha, Who Laughs at Fate [332] (unblocked, observed P/T 5/5)
+      blockers: none identified
+      combat-result zone change: Deep-Cavern Bat [398] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Nakuroo +2; gian31 -4 (individual changes below; gains and losses may offset)
+    life: Nakuroo 5 -> 7
+    life (unattributed loss during combat phase; not explained by observed attacker damage): gian31 9 -> 8
+    life (unattributed loss during combat phase; not explained by observed attacker damage): gian31 8 -> 5
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 390 [390] Library (Nakuroo) -> Hand (Nakuroo) (Draw; GRE sequence 348).
+      Deep-Cavern Bat [398] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 372).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Nakuroo: Battlefield: Alesha, Who Laughs at Fate [332], Bloodfell Caves [319], Dead Weight [321], Laughing Jasper Flint [367], Makeshift Binding [391], Mountain [331], Perforating Artist [351], Swamp [289], Swamp [305], Swamp [350], Virus Beetle [306]; Graveyard: Dead Weight [324], Duress [299], Shock [338]
+      gian31: Battlefield: Case of the Uneaten Feast [302], Marauding Blight-Priest [343], Plains [301], Shattered Sanctum [326], Starscape Cleric [375], Swamp [312], Swamp [342]; Graveyard: Deep-Cavern Bat [398], Hinterland Sanctifier [339], Scoured Barrens [310], Starscape Cleric [323]; Exile: Bloodletter of Aclazotz [396]
+
+Turn 14
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation, seq=394] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=403)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 403) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 403) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=396] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=399] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Starscape Cleric: Nakuroo loses 2 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=401] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=343, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Marauding Blight-Priest: Nakuroo loses 2 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [375] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-reconciled defending-player life-loss component: 2; observed attacker power total: 2; unresolved additional life loss: 2 (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Nakuroo -8; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 5 -> 6
+    life: Nakuroo 7 -> 5
+    life: Nakuroo 5 -> 3
+    life (combat component reconciled: 2; unresolved residual life loss 2; exact assignment unavailable): Nakuroo 3 -> -1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [401] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 388).
+      Swamp [402] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 391).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Nakuroo: Battlefield: Alesha, Who Laughs at Fate [332], Bloodfell Caves [319], Dead Weight [321], Laughing Jasper Flint [367], Makeshift Binding [391], Mountain [331], Perforating Artist [351], Swamp [289], Swamp [305], Swamp [350], Virus Beetle [306]; Graveyard: Dead Weight [324], Duress [299], Shock [338]
+      gian31: Battlefield: Bloodletter of Aclazotz [403], Case of the Uneaten Feast [302], Marauding Blight-Priest [343], Plains [301], Shattered Sanctum [326], Starscape Cleric [375], Swamp [312], Swamp [342], Swamp [402]; Graveyard: Deep-Cavern Bat [398], Hinterland Sanctifier [339], Scoured Barrens [310], Starscape Cleric [323]; Exile: Bloodletter of Aclazotz [396]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 9, seq 221, Phase_Combat: gian31 21 -> 18; gian31 18 -> 17; gian31 17 -> 14. Combat declaration observed; exact assignment unavailable. Previous captured action: Alesha, Who Laughs at Fate.
+- Turn 11, seq 280, Phase_Combat: gian31 15 -> 11; gian31 11 -> 10; gian31 10 -> 7. Combat declaration observed; exact assignment unavailable. Previous captured action: Alesha, Who Laughs at Fate.
+- Turn 12, seq 334, Phase_Main1: Nakuroo 9 -> 5. combat-reconciled component 2; unresolved residual 2. Previous captured action: Marauding Blight-Priest.
+- Turn 13, seq 374, Phase_Combat: gian31 9 -> 8; gian31 8 -> 5. Combat declaration observed; exact assignment unavailable. Previous captured action: Alesha, Who Laughs at Fate.
+- Turn 14, seq 411, Phase_Main1: Nakuroo 3 -> -1. combat-reconciled component 2; unresolved residual 2. Previous captured action: Marauding Blight-Priest.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 14: Nakuroo 3 -> -1 (required change 4). Explained by exact same-record evidence: 0/4; semantically attributed: 0/4; unexplained residual: 2/4.
+  Combat-reconciled component: 2/4 (pre-modifier power=2; explicit modifier power=+0; observed post-modifier power=2 (not used to attribute damage when it exceeds the observed loss); unresolved residual=2; individual assignment unavailable).
+  Combat snapshot observed at or before lethal: Turn 14; attackers=Starscape Cleric [375]; observed snapshot power total=2; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 14, Ability of Marauding Blight-Priest (seq 401).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Swamp [owner=Nakuroo, controller=Nakuroo] moves Hand (Nakuroo) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Duress [owner=Nakuroo, controller=Nakuroo] moves Hand (Nakuroo) -> Stack (CastSpell).
+- Turn 1, seq 13: Duress [owner=Nakuroo, controller=Nakuroo] moves Stack -> Graveyard (Nakuroo) (Resolve).
+- Turn 2, seq 27: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 30: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 31: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 33: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 47: Swamp [owner/controller metadata unavailable] moves Library (Nakuroo) -> Hand (Nakuroo) (Draw).
+- Turn 3, seq 50: Swamp [owner=Nakuroo, controller=Nakuroo] moves Hand (Nakuroo) -> Battlefield (PlayLand).
+- Turn 3, seq 51: Virus Beetle [owner=Nakuroo, controller=Nakuroo] moves Hand (Nakuroo) -> Stack (CastSpell).
+- Turn 3, seq 53: Virus Beetle [owner=Nakuroo, controller=Nakuroo] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 56: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Graveyard (gian31) (Discard).
+- Turn 4, seq 70: Shattered Sanctum [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 73: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 74: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 77: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 95: Alesha, Who Laughs at Fate [owner/controller metadata unavailable] moves Library (Nakuroo) -> Hand (Nakuroo) (Draw).
+- Turn 5, seq 98: Bloodfell Caves [owner=Nakuroo, controller=Nakuroo] moves Hand (Nakuroo) -> Battlefield (PlayLand).
+- Turn 5, seq 101: Dead Weight [owner=Nakuroo, controller=Nakuroo] moves Hand (Nakuroo) -> Stack (CastSpell).
+- Turn 5, seq 105: Dead Weight [owner=Nakuroo, controller=Nakuroo] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 105: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_ZeroToughness).
+- Turn 5, seq 105: Dead Weight [owner=Nakuroo, controller=Nakuroo] moves Battlefield -> Graveyard (Nakuroo) (SBA_UnattachedAura).
+- Turn 6, seq 125: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 128: Shattered Sanctum [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 129: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 131: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 147: Mountain [owner/controller metadata unavailable] moves Library (Nakuroo) -> Hand (Nakuroo) (Draw).
+- Turn 7, seq 150: Mountain [owner=Nakuroo, controller=Nakuroo] moves Hand (Nakuroo) -> Battlefield (PlayLand).
+- Turn 7, seq 151: Alesha, Who Laughs at Fate [owner=Nakuroo, controller=Nakuroo] moves Hand (Nakuroo) -> Stack (CastSpell).
+- Turn 7, seq 153: Alesha, Who Laughs at Fate [owner=Nakuroo, controller=Nakuroo] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 154: Shock [owner=Nakuroo, controller=Nakuroo] moves Hand (Nakuroo) -> Stack (CastSpell).
+- Turn 7, seq 158: Shock [owner=Nakuroo, controller=Nakuroo] moves Stack -> Graveyard (Nakuroo) (Resolve).
+- Turn 7, seq 158: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 8, seq 178: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 181: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 182: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 184: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 202: Swamp [owner/controller metadata unavailable] moves Library (Nakuroo) -> Hand (Nakuroo) (Draw).
+- Turn 9, seq 205: Swamp [owner=Nakuroo, controller=Nakuroo] moves Hand (Nakuroo) -> Battlefield (PlayLand).
+- Turn 9, seq 206: Perforating Artist [owner=Nakuroo, controller=Nakuroo] moves Hand (Nakuroo) -> Stack (CastSpell).
+- Turn 9, seq 208: Perforating Artist [owner=Nakuroo, controller=Nakuroo] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 237: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 240: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 242: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 261: Laughing Jasper Flint [owner/controller metadata unavailable] moves Library (Nakuroo) -> Hand (Nakuroo) (Draw).
+- Turn 11, seq 264: Laughing Jasper Flint [owner=Nakuroo, controller=Nakuroo] moves Hand (Nakuroo) -> Stack (CastSpell).
+- Turn 11, seq 266: Laughing Jasper Flint [owner=Nakuroo, controller=Nakuroo] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 296: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 299: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 302: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 310: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 312: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 346: Makeshift Binding [owner=gian31, controller=Nakuroo] moves Library (gian31) -> Exile (Exile).
+- Turn 13, seq 348: object 390 [owner/controller metadata unavailable] moves Library (Nakuroo) -> Hand (Nakuroo) (Draw).
+- Turn 13, seq 351: Makeshift Binding [owner=gian31, controller=Nakuroo] moves Exile -> Stack (CastSpell).
+- Turn 13, seq 353: Makeshift Binding [owner=gian31, controller=Nakuroo] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 357: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Battlefield -> Exile (Exile).
+- Turn 13, seq 372: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 14, seq 388: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 391: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 14, seq 392: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 394: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 164 becomes object 289 [Swamp].
+- Turn 1, seq 8: object 170 becomes object 290 [Duress].
+- Turn 1, seq 13: object 290 becomes object 299 [Duress].
+- Turn 2, seq 27: object 236 becomes object 300 [Case of the Uneaten Feast].
+- Turn 2, seq 30: object 232 becomes object 301 [Plains].
+- Turn 2, seq 31: object 300 becomes object 302 [Case of the Uneaten Feast].
+- Turn 3, seq 47: object 171 becomes object 304 [Swamp].
+- Turn 3, seq 50: object 304 becomes object 305 [Swamp].
+- Turn 3, seq 51: object 165 becomes object 306 [Virus Beetle].
+- Turn 3, seq 56: object 231 becomes object 310 [Scoured Barrens].
+- Turn 4, seq 70: object 237 becomes object 311 [Shattered Sanctum].
+- Turn 4, seq 73: object 230 becomes object 312 [Swamp].
+- Turn 4, seq 74: object 235 becomes object 313 [Starscape Cleric].
+- Turn 5, seq 95: object 172 becomes object 318 [Alesha, Who Laughs at Fate].
+- Turn 5, seq 98: object 169 becomes object 319 [Bloodfell Caves].
+- Turn 5, seq 101: object 168 becomes object 321 [Dead Weight].
+- Turn 5, seq 105: object 313 becomes object 323 [Starscape Cleric].
+- Turn 5, seq 105: object 321 becomes object 324 [Dead Weight].
+- Turn 6, seq 125: object 238 becomes object 325 [Swamp].
+- Turn 6, seq 128: object 311 becomes object 326 [Shattered Sanctum].
+- Turn 6, seq 129: object 234 becomes object 327 [Hinterland Sanctifier].
+- Turn 7, seq 147: object 173 becomes object 330 [Mountain].
+- Turn 7, seq 150: object 330 becomes object 331 [Mountain].
+- Turn 7, seq 151: object 318 becomes object 332 [Alesha, Who Laughs at Fate].
+- Turn 7, seq 154: object 167 becomes object 336 [Shock].
+- Turn 7, seq 158: object 336 becomes object 338 [Shock].
+- Turn 7, seq 158: object 327 becomes object 339 [Hinterland Sanctifier].
+- Turn 8, seq 178: object 239 becomes object 341 [Starscape Cleric].
+- Turn 8, seq 181: object 325 becomes object 342 [Swamp].
+- Turn 8, seq 182: object 229 becomes object 343 [Marauding Blight-Priest].
+- Turn 9, seq 202: object 174 becomes object 349 [Swamp].
+- Turn 9, seq 205: object 349 becomes object 350 [Swamp].
+- Turn 9, seq 206: object 166 becomes object 351 [Perforating Artist].
+- Turn 10, seq 237: object 240 becomes object 358 [Deep-Cavern Bat].
+- Turn 10, seq 240: object 233 becomes object 359 [Bloodletter of Aclazotz].
+- Turn 11, seq 261: object 175 becomes object 366 [Laughing Jasper Flint].
+- Turn 11, seq 264: object 366 becomes object 367 [Laughing Jasper Flint].
+- Turn 12, seq 296: object 241 becomes object 374 [Bloodletter of Aclazotz].
+- Turn 12, seq 299: object 341 becomes object 375 [Starscape Cleric].
+- Turn 12, seq 310: object 358 becomes object 381 [Deep-Cavern Bat].
+- Turn 13, seq 346: object 242 becomes object 389 [Makeshift Binding].
+- Turn 13, seq 348: object 176 becomes object 390 [object 176].
+- Turn 13, seq 351: object 389 becomes object 391 [Makeshift Binding].
+- Turn 13, seq 357: object 359 becomes object 396 [Bloodletter of Aclazotz].
+- Turn 13, seq 372: object 381 becomes object 398 [Deep-Cavern Bat].
+- Turn 14, seq 388: object 243 becomes object 401 [Swamp].
+- Turn 14, seq 391: object 401 becomes object 402 [Swamp].
+- Turn 14, seq 392: object 374 becomes object 403 [Bloodletter of Aclazotz].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: Nakuroo plays Swamp (object 289) from Hand (Nakuroo) to Battlefield.
+- Turn 2: gian31 plays Plains (object 301) from Hand (gian31) to Battlefield.
+- Turn 3: Nakuroo plays Swamp (object 305) from Hand (Nakuroo) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 312) from Hand (gian31) to Battlefield.
+- Turn 5: Nakuroo plays Bloodfell Caves (object 319) from Hand (Nakuroo) to Battlefield.
+- Turn 6: gian31 plays Shattered Sanctum (object 326) from Hand (gian31) to Battlefield.
+- Turn 7: Nakuroo plays Mountain (object 331) from Hand (Nakuroo) to Battlefield.
+- Turn 8: gian31 plays Swamp (object 342) from Hand (gian31) to Battlefield.
+- Turn 9: Nakuroo plays Swamp (object 350) from Hand (Nakuroo) to Battlefield.
+- Turn 14: gian31 plays Swamp (object 402) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 12: ordered adjacent records Case of the Uneaten Feast -> Starscape Cleric; observed repetitions=2; net life: Nakuroo -4, gian31 +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=2, Starscape Cleric=2.
+  Individual ability records remain in the timeline.
+- Turn 12: ordered adjacent records Starscape Cleric -> Marauding Blight-Priest; observed repetitions=2; net life: Nakuroo -8. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Marauding Blight-Priest=2, Starscape Cleric=2.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Case of the Uneaten Feast: casts=1; abilities=7 (triggered=7, activated=0) across turns [2, 4, 6, 8, 10, 12, 12, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=7, other=0
+  observed effects: life +1
+- Marauding Blight-Priest: casts=1; abilities=5 (triggered=5, activated=0) across turns [8, 8, 10, 12, 12, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=2
+  observed effects: life -1, life -2, synthetic event
+- Starscape Cleric: casts=2; abilities=4 (triggered=4, activated=0) across turns [4, 4, 12, 12, 12, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=4, other=3
+  observed effects: life -1, life -2, synthetic event
+- Alesha, Who Laughs at Fate: casts=1; abilities=3 (triggered=3, activated=0) across turns [7, 9, 11, 13]
+  observed effect totals: draws=0, tokens=0, counters=3, returns=0, damage=0, life_changes=0, other=3
+  observed effects: +1 counter(s), P/T +1/+1
+- Bloodletter of Aclazotz: casts=2 across turns [10, 14]
+- Deep-Cavern Bat: casts=1; abilities=1 (triggered=1, activated=0) across turns [12, 12]
+- Laughing Jasper Flint: casts=1; abilities=1 (triggered=1, activated=0) across turns [11, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: exile
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [13, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Bloodfell Caves: abilities=1 (triggered=1, activated=0) across turns [5]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Dead Weight: casts=1 across turns [5]
+- Hinterland Sanctifier: casts=1 across turns [6]
+- Perforating Artist: casts=1 across turns [9]
+- Shock: casts=1 across turns [7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 2 damage
+- Virus Beetle: casts=1 across turns [3]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 - DeclareAttack, DeclareBlock (active=Nakuroo)
+  attacker: Virus Beetle (Nakuroo) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=Nakuroo)
+  attacker: Virus Beetle (Nakuroo) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack (active=Nakuroo)
+  attacker: Virus Beetle (Nakuroo) -> gian31; unblocked in this observed snapshot
+  attacker: Alesha, Who Laughs at Fate (Nakuroo) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack (active=Nakuroo)
+  attacker: Virus Beetle (Nakuroo) -> gian31; unblocked in this observed snapshot
+  attacker: Alesha, Who Laughs at Fate (Nakuroo) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Bloodletter of Aclazotz (gian31) -> Nakuroo; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 - DeclareAttack (active=Nakuroo)
+  attacker: Virus Beetle (Nakuroo) -> gian31; unblocked in this observed snapshot
+  attacker: Alesha, Who Laughs at Fate (Nakuroo) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 14 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Nakuroo; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 9: Ability of Alesha, Who Laughs at Fate (active=Nakuroo) - Ability of Alesha, Who Laughs at Fate: Alesha, Who Laughs at Fate gets +1/+1; 1 counter(s) are added to target.
+- Turn 11: Ability of Alesha, Who Laughs at Fate (active=Nakuroo) - Ability of Alesha, Who Laughs at Fate: Alesha, Who Laughs at Fate gets +1/+1; 1 counter(s) are added to target.
+- Turn 13: Ability of Alesha, Who Laughs at Fate (active=Nakuroo) - Ability of Alesha, Who Laughs at Fate: Alesha, Who Laughs at Fate gets +1/+1; 1 counter(s) are added to target.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 229: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 230: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 231: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 232: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 233: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 234: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 235: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 289: Swamp | controller=Nakuroo | owner=Nakuroo | zone=Battlefield (latest_object_observation)
+- 290: Duress | controller=Nakuroo | owner=Nakuroo | zone=Stack (latest_object_observation)
+- 292: Scoured Barrens | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 293: Swamp | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 294: Plains | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 295: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 296: Starscape Cleric | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 297: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 298: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 299: Duress | controller=Nakuroo | owner=Nakuroo | zone=Graveyard (latest_object_observation)
+- 300: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 301: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 302: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 305: Swamp | controller=Nakuroo | owner=Nakuroo | zone=Battlefield (latest_object_observation)
+- 306: Virus Beetle | controller=Nakuroo | owner=Nakuroo | zone=Battlefield (latest_object_observation)
+- 309: object 309 | controller=Nakuroo | owner=Nakuroo | zone=unknown (inferred unknown) (latest_object_observation)
+- 310: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 311: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 312: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 313: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 316: object 316 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 317: object 317 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 319: Bloodfell Caves | controller=Nakuroo | owner=Nakuroo | zone=Battlefield (latest_object_observation)
+- 320: object 320 | controller=Nakuroo | owner=Nakuroo | zone=unknown (inferred unknown) (latest_object_observation)
+- 321: Dead Weight | controller=Nakuroo | owner=Nakuroo | zone=Stack (latest_object_observation)
+- 323: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 324: Dead Weight | controller=Nakuroo | owner=Nakuroo | zone=Graveyard (latest_object_observation)
+- 325: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 326: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 327: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 329: object 329 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 331: Mountain | controller=Nakuroo | owner=Nakuroo | zone=Battlefield (latest_object_observation)
+- 332: Alesha, Who Laughs at Fate | controller=Nakuroo | owner=Nakuroo | zone=Battlefield (latest_object_observation)
+- 336: Shock | controller=Nakuroo | owner=Nakuroo | zone=Stack (latest_object_observation)
+- 338: Shock | controller=Nakuroo | owner=Nakuroo | zone=Graveyard (latest_object_observation)
+- 339: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 341: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 342: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 343: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 347: object 347 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 348: object 348 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 350: Swamp | controller=Nakuroo | owner=Nakuroo | zone=Battlefield (latest_object_observation)
+- 351: Perforating Artist | controller=Nakuroo | owner=Nakuroo | zone=Battlefield (latest_object_observation)
+- 355: object 355 | controller=Nakuroo | owner=Nakuroo | zone=unknown (inferred unknown) (latest_object_observation)
+- 356: object 356 | controller=Nakuroo | owner=Nakuroo | zone=unknown (inferred unknown) (latest_object_observation)
+- 357: object 357 | controller=Nakuroo | owner=Nakuroo | zone=unknown (inferred unknown) (latest_object_observation)
+- 358: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 359: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 364: object 364 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 365: object 365 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 367: Laughing Jasper Flint | controller=Nakuroo | owner=Nakuroo | zone=Battlefield (latest_object_observation)
+- 371: object 371 | controller=Nakuroo | owner=Nakuroo | zone=unknown (inferred unknown) (latest_object_observation)
+- 372: object 372 | controller=Nakuroo | owner=Nakuroo | zone=unknown (inferred unknown) (latest_object_observation)
+- 373: object 373 | controller=Nakuroo | owner=Nakuroo | zone=unknown (inferred unknown) (latest_object_observation)
+- 374: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 375: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 378: object 378 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 379: object 379 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 380: object 380 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 381: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 384: object 384 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 385: object 385 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 386: object 386 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 387: object 387 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 388: object 388 | controller=Nakuroo | owner=Nakuroo | zone=unknown (inferred unknown) (latest_object_observation)
+- 389: Makeshift Binding | controller=Nakuroo | owner=gian31 | zone=Exile (latest_object_observation)
+- 391: Makeshift Binding | controller=Nakuroo | owner=gian31 | zone=Stack (latest_object_observation)
+- 395: object 395 | controller=Nakuroo | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 396: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 397: object 397 | controller=Nakuroo | owner=Nakuroo | zone=unknown (inferred unknown) (latest_object_observation)
+- 398: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 399: object 399 | controller=Nakuroo | owner=Nakuroo | zone=unknown (inferred unknown) (latest_object_observation)
+- 400: object 400 | controller=Nakuroo | owner=Nakuroo | zone=unknown (inferred unknown) (latest_object_observation)
+- 401: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 402: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 403: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 408: object 408 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 409: object 409 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 410: object 410 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Nakuroo: 30 total items
+  zones: Battlefield=9, Exile=1, Graveyard=3, Stack=4, unknown=13
+  objects: Swamp x3, Dead Weight x2, Duress x2, Makeshift Binding x2, Shock x2, Alesha, Who Laughs at Fate, Bloodfell Caves, Laughing Jasper Flint, Mountain, Perforating Artist, Virus Beetle, object 309
+gian31: 56 total items
+  zones: Battlefield=14, Exile=1, Graveyard=2, Hand=14, Stack=1, unknown=24
+  objects: Swamp x7, Bloodletter of Aclazotz x6, Starscape Cleric x6, Hinterland Sanctifier x4, Deep-Cavern Bat x3, Marauding Blight-Priest x3, Plains x3, Scoured Barrens x3, Case of the Uneaten Feast x2, Shattered Sanctum x2, object 316, object 317
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+Nakuroo:
+  Battlefield (9): Alesha, Who Laughs at Fate, Bloodfell Caves, Laughing Jasper Flint, Mountain, Perforating Artist, Swamp, Swamp, Swamp, Virus Beetle
+  Graveyard: 3 card(s)
+gian31:
+  Battlefield (14): Bloodletter of Aclazotz, Bloodletter of Aclazotz, Deep-Cavern Bat, Deep-Cavern Bat, Hinterland Sanctifier, Hinterland Sanctifier, Marauding Blight-Priest, Plains, Shattered Sanctum, Starscape Cleric, Starscape Cleric, Swamp, Swamp, Swamp
+  Graveyard: 2 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+37 objects have no resolved final zone and are omitted from the known board state.
+Nakuroo: 13 unknown object(s)
+gian31: 24 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=14, Stack=5
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Nakuroo:
+  Battlefield (10): Swamp, Swamp, Virus Beetle, Bloodfell Caves, Mountain, Alesha, Who Laughs at Fate, Swamp, Perforating Artist, Laughing Jasper Flint, Makeshift Binding
+  Graveyard (3): Duress, Dead Weight, Shock
+gian31:
+  Battlefield (9): Plains, Case of the Uneaten Feast, Swamp, Shattered Sanctum, Swamp, Marauding Blight-Priest, Starscape Cleric, Swamp, Bloodletter of Aclazotz
+  Graveyard (4): Scoured Barrens, Starscape Cleric, Hinterland Sanctifier, Deep-Cavern Bat
+  Exile (1): Bloodletter of Aclazotz
+Known non-persistent entries (counts only):
+  Nakuroo: Hand=1, Limbo=1
+  gian31: Limbo=6
+  unknown: Library=97, Limbo=4
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: Nakuroo Battlefield=1; Nakuroo Graveyard=1
+- Turn 2: Nakuroo Battlefield=1; Nakuroo Graveyard=1; gian31 Battlefield=2
+- Turn 3: Nakuroo Battlefield=3; Nakuroo Graveyard=1; gian31 Battlefield=2; gian31 Graveyard=1
+- Turn 4: Nakuroo Battlefield=3; Nakuroo Graveyard=1; gian31 Battlefield=4; gian31 Graveyard=1
+- Turn 5: Nakuroo Battlefield=5; Nakuroo Graveyard=2; gian31 Battlefield=3; gian31 Graveyard=2
+- Turn 6: Nakuroo Battlefield=5; Nakuroo Graveyard=2; gian31 Battlefield=5; gian31 Graveyard=2
+- Turn 7: Nakuroo Battlefield=7; Nakuroo Graveyard=3; gian31 Battlefield=4; gian31 Graveyard=3
+- Turn 8: Nakuroo Battlefield=7; Nakuroo Graveyard=3; gian31 Battlefield=6; gian31 Graveyard=3
+- Turn 9: Nakuroo Battlefield=9; Nakuroo Graveyard=3; gian31 Battlefield=6; gian31 Graveyard=3
+- Turn 10: Nakuroo Battlefield=9; Nakuroo Graveyard=3; gian31 Battlefield=7; gian31 Graveyard=3
+- Turn 11: Nakuroo Battlefield=10; Nakuroo Graveyard=3; gian31 Battlefield=7; gian31 Graveyard=3
+- Turn 12: Nakuroo Battlefield=10; Nakuroo Graveyard=3; gian31 Battlefield=9; gian31 Graveyard=3
+- Turn 13: Nakuroo Battlefield=11; Nakuroo Graveyard=3; gian31 Battlefield=7; gian31 Graveyard=4; gian31 Exile=1
+- Turn 14: Nakuroo Battlefield=11; Nakuroo Graveyard=3; gian31 Battlefield=9; gian31 Graveyard=4; gian31 Exile=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Virus Beetle resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Dead Weight resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Alesha, Who Laughs at Fate resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Perforating Artist resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Laughing Jasper Flint resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Deep-Cavern Bat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
