@@ -1,0 +1,501 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: Zen, gian31
+Seat map: Seat 1=Zen, Seat 2=gian31
+Turn range (known): 1 - 8
+Records: 20
+Action chains: 15
+Winner: gian31
+Final life: {'Zen': 7, 'gian31': 25}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 8 (Phase_Main1; Frontline Rush, seq 207).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 23 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 7 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 8] (raw records=7; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 8 explicit Library -> Hand movement(s); named in the draw record=3, resolved through an explicit identity transition=2, unresolved=3.
+Unresolved draw identities (explicit movements retained): Turn 4, seq 67, object 291; Turn 6, seq 121, object 305; Turn 6, seq 138, object 317.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Starscape Cleric [219], Scoured Barrens [220], Case of the Uneaten Feast [221], Brightblade Stoat [222], Plains [223], Swamp [224], Bloodletter of Aclazotz [225].
+  - unknown: 7 observed card(s): object 159 [159], object 160 [160], object 161 [161], object 162 [162], object 163 [163], object 164 [164], object 165 [165].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'Zen': 7, 'gian31': 25}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 8 (Phase_Main1; Frontline Rush, seq 207).
+Last captured life snapshot: Zen 9 -> 7 (seq 197).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Case of the Uneaten Feast.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Godless Shrine.
+- Turn 3: actions: cards=1, abilities=2; life mutations=2; explicit battlefield entries=Swamp, Starscape Cleric.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Blazemire Verge, Voice of Victory.
+- Turn 5: actions: cards=1, abilities=4; combat snapshots=1; life mutations=5; explicit battlefield entries=Scoured Barrens, Brightblade Stoat.
+- Turn 6: actions: cards=1, abilities=4; combat snapshots=1; life mutations=4; explicit battlefield entries=Blood Crypt, Caretaker's Talent; explicit battlefield exits=Warrior, Warrior.
+- Turn 7: actions: cards=1, abilities=1; combat snapshots=1; life mutations=3; explicit battlefield exits=Caretaker's Talent, Human.
+- Turn 8: actions: cards=3, abilities=0; life mutations=1; explicit battlefield entries=Sacred Foundry, Exalted Sunborn.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=10] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=280)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 280) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 280) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [279] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [280], Plains [279]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Caretaker's Talent [282] Library (Zen) -> Hand (Zen) (Draw; GRE sequence 24).
+      Godless Shrine [283] Hand (Zen) -> Battlefield (PlayLand; GRE sequence 28).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [280], Plains [279]
+      Zen: Battlefield: Godless Shrine [283]
+
+Turn 3
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=49] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=286)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 286) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 286) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=51] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=53] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=286, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Zen loses 1 life.
+    net observed life change this turn: Zen -1; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life: Zen 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Marauding Blight-Priest [284] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 42).
+      Swamp [285] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 45).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [280], Plains [279], Starscape Cleric [286], Swamp [285]
+      Zen: Battlefield: Godless Shrine [283]
+
+Turn 4
+  - Voice of Victory [valid_resolution_no_immediate_mutation, seq=73] (active=Zen, phase=Phase_Main1, controller=Zen, owner=Zen, source_object=293)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Voice of Victory resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Voice of Victory (object 293) Hand (Zen) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Voice of Victory (object 293) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 291 [291] Library (Zen) -> Hand (Zen) (Draw; GRE sequence 67).
+      Blazemire Verge [292] Hand (Zen) -> Battlefield (PlayLand; GRE sequence 70).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [280], Plains [279], Starscape Cleric [286], Swamp [285]
+      Zen: Battlefield: Blazemire Verge [292], Godless Shrine [283], Voice of Victory [293]
+
+Turn 5
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=92] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=297, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=94] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=286, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Zen loses 1 life.
+  - Brightblade Stoat [valid_resolution_no_immediate_mutation, seq=97] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=300)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Brightblade Stoat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Brightblade Stoat (object 300) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Brightblade Stoat (object 300) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=99] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=101] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=286, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Zen loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [286] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Zen -4; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    life: Zen 19 -> 18
+    life: gian31 22 -> 23
+    life: Zen 18 -> 17
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Zen 17 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [296] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 87).
+      Scoured Barrens [297] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 90).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Brightblade Stoat [300], Case of the Uneaten Feast [280], Plains [279], Scoured Barrens [297], Starscape Cleric [286], Swamp [285]
+      Zen: Battlefield: Blazemire Verge [292], Godless Shrine [283], Voice of Victory [293]
+
+Turn 6
+  - Caretaker's Talent [valid_resolution_no_immediate_mutation, seq=128] (active=Zen, phase=Phase_Main1, controller=Zen, owner=Zen, source_object=307)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Caretaker's Talent resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Caretaker's Talent (object 307) Hand (Zen) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Caretaker's Talent (object 307) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Voice of Victory [observed_semantic_effect, seq=136] (active=Zen, phase=Phase_Combat, step=Step_DeclareAttack, controller=Zen, owner=Zen, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: token creation, token creation
+      narrative: Ability of Voice of Victory: a token is created; a token is created.
+      explicit effect object references: Warrior [312], Warrior [313] (role/targeting only where the protocol identifies it)
+      token created: Warrior (object 312, controller=Zen) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 311).
+      token created: Warrior (object 313, controller=Zen) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 311).
+  - Ability of Caretaker's Talent [observed_semantic_effect, seq=138] (active=Zen, phase=Phase_Combat, step=Step_DeclareAttack, controller=Zen, owner=Zen, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Caretaker's Talent: draw.
+      explicit effect object references: object 169 [169], object 317 [317] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 317 (object 317) Library (Zen) -> Hand (Zen) (Draw; shared object ID)
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=146] (active=Zen, phase=Phase_Combat, step=Step_FirstStrikeDamage, controller=gian31, owner=gian31, source_object=286, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Zen loses 1 life.
+  - Ability of Voice of Victory [observed_semantic_effect, seq=156] (active=Zen, phase=Phase_Ending, step=Step_End, controller=Zen, owner=Zen, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: sacrifice
+      narrative: Ability of Voice of Victory sacrifices Warrior.
+      explicit effect object references: Warrior [313], object 321 [321] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Warrior (object 321) Battlefield -> Graveyard (Zen) (Sacrifice; shared object ID)
+  Combat snapshots observed (active=Zen; frames: DeclareAttack -> DeclareBlock):
+      attackers: Voice of Victory [293] (unblocked, observed P/T 1/3), Warrior [312] (blocked, observed P/T 1/1), Warrior [313] (unblocked, observed P/T 1/1)
+      blockers: Brightblade Stoat [300]
+      combat-correlated defending-player life loss: 2; observed attacker power total: 3; snapshot comparison does not reconcile (exact assignment unavailable).
+      other-player life loss not explained by observed attacker damage: Zen 15 -> 13 (-2; phase=unknown; source unavailable).
+      combat-result zone change: Warrior [319] Battlefield -> Graveyard (Zen) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Zen -3; gian31 +0 (individual changes below; gains and losses may offset)
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): Zen 15 -> 13
+    life (gain observed during combat phase; exact source unavailable): gian31 23 -> 25
+    life: Zen 13 -> 12
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 25 -> 23
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 305 [305] Library (Zen) -> Hand (Zen) (Draw; GRE sequence 121).
+      Blood Crypt [306] Hand (Zen) -> Battlefield (PlayLand; GRE sequence 125).
+      Warrior [319] Battlefield -> Graveyard (Zen) (SBA_Damage; GRE sequence 144).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Brightblade Stoat [300], Case of the Uneaten Feast [280], Plains [279], Scoured Barrens [297], Starscape Cleric [286], Swamp [285]
+      Zen: Battlefield: Blazemire Verge [292], Blood Crypt [306], Caretaker's Talent [307], Godless Shrine [283], Voice of Victory [293]; Graveyard: Warrior [319], Warrior [321]
+
+Turn 7
+  - Stroke of Midnight [observed_semantic_effect, seq=167] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=323)
+      effects: destroy, token creation
+      narrative: Stroke of Midnight destroys Caretaker's Talent.
+      explicit effect object references: Caretaker's Talent [307], Caretaker's Talent [327], Human [328] (role/targeting only where the protocol identifies it)
+      token created: Human (object 328, controller=Zen) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 323).
+      protocol-linked zone transfer: Stroke of Midnight (object 323) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Caretaker's Talent (object 327) Battlefield -> Graveyard (Zen) (Destroy; shared object ID)
+      protocol-linked zone transfer: Stroke of Midnight (object 329) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 323 -> transfer object 329 (explicit GRE ObjectIdChanged chain).
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=181] (active=gian31, phase=Phase_Combat, step=Step_FirstStrikeDamage, controller=gian31, owner=gian31, source_object=286, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Zen loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Starscape Cleric [286] (unblocked, observed P/T 2/1), Brightblade Stoat [300] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-result zone change: Human [331] Battlefield -> Graveyard (Zen) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Zen -3; gian31 +2 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): gian31 23 -> 25
+    life: Zen 12 -> 11
+    life (unattributed loss during combat phase; not explained by observed attacker damage): Zen 11 -> 9
+    additional protocol-observed zone movements not assigned to an action chain:
+      Stroke of Midnight [322] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 160).
+      Human [331] Battlefield -> Graveyard (Zen) (SBA_Damage; GRE sequence 179).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Brightblade Stoat [300], Case of the Uneaten Feast [280], Plains [279], Scoured Barrens [297], Starscape Cleric [286], Swamp [285]; Graveyard: Stroke of Midnight [329]
+      Zen: Battlefield: Blazemire Verge [292], Blood Crypt [306], Godless Shrine [283], Voice of Victory [293]; Graveyard: Caretaker's Talent [327], Human [331], Warrior [319], Warrior [321]
+
+Turn 8
+  - Exalted Sunborn [valid_resolution_no_immediate_mutation, seq=200] (active=Zen, phase=Phase_Main1, controller=Zen, owner=Zen, source_object=334)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Exalted Sunborn resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Exalted Sunborn (object 334) Hand (Zen) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Exalted Sunborn (object 334) Stack -> Battlefield (Resolve; shared object ID)
+  - Exalted Sunborn [valid_resolution_no_immediate_mutation, seq=201] (active=Zen, phase=Phase_Main1, controller=Zen, owner=Zen, source_object=334)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Exalted Sunborn resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Exalted Sunborn (object 334) Hand (Zen) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Exalted Sunborn (object 334) Stack -> Battlefield (Resolve; shared object ID)
+  - Frontline Rush [observed_semantic_effect, seq=207] (active=Zen, phase=Phase_Main1, controller=Zen, owner=Zen, source_object=338)
+      effects: P/T +2/+2
+      narrative: Frontline Rush: Exalted Sunborn gets +2/+2.
+      explicit effect object references: Exalted Sunborn [334] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Frontline Rush (object 338) Hand (Zen) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Frontline Rush (object 341) Stack -> Graveyard (Zen) (Resolve; shared object ID)
+      identity continuity: source object 338 -> transfer object 341 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: Zen -2 (individual changes below; gains and losses may offset)
+    life: Zen 9 -> 7
+    additional protocol-observed zone movements not assigned to an action chain:
+      Sacred Foundry [332] Library (Zen) -> Hand (Zen) (Draw; GRE sequence 193).
+      Sacred Foundry [333] Hand (Zen) -> Battlefield (PlayLand; GRE sequence 197).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Brightblade Stoat [300], Case of the Uneaten Feast [280], Plains [279], Scoured Barrens [297], Starscape Cleric [286], Swamp [285]; Graveyard: Stroke of Midnight [329]
+      Zen: Battlefield: Blazemire Verge [292], Blood Crypt [306], Exalted Sunborn [334], Godless Shrine [283], Sacred Foundry [333], Voice of Victory [293]; Graveyard: Caretaker's Talent [327], Frontline Rush [341], Human [331], Warrior [319], Warrior [321]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 6, seq 125: Zen 15 -> 13; gian31 23 -> 25. Combat declaration observed; exact assignment unavailable.
+- Turn 7, seq 179, Phase_Main1: gian31 23 -> 25; Zen 11 -> 9. Combat declaration observed; exact assignment unavailable. Previous captured action: Stroke of Midnight.
+- Turn 8, seq 197: Zen 9 -> 7. No source event correlated in captured records.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 3 token creations observed; 0 active as last observed; 3 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Warrior [312] controller=Zen; created Turn 6 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 6 via Battlefield -> Graveyard (Zen) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Warrior [313] controller=Zen; created Turn 6 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 6 via Battlefield -> Graveyard (Zen) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+- Human [328] controller=Zen; created Turn 7 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 7 via Battlefield -> Graveyard (Zen) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 1, seq 10: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 24: Caretaker's Talent [owner/controller metadata unavailable] moves Library (Zen) -> Hand (Zen) (Draw).
+- Turn 2, seq 28: Godless Shrine [owner=Zen, controller=Zen] moves Hand (Zen) -> Battlefield (PlayLand).
+- Turn 3, seq 42: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 45: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 46: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 49: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 67: object 291 [owner/controller metadata unavailable] moves Library (Zen) -> Hand (Zen) (Draw).
+- Turn 4, seq 70: Blazemire Verge [owner=Zen, controller=Zen] moves Hand (Zen) -> Battlefield (PlayLand).
+- Turn 4, seq 71: Voice of Victory [owner=Zen, controller=Zen] moves Hand (Zen) -> Stack (CastSpell).
+- Turn 4, seq 73: Voice of Victory [owner=Zen, controller=Zen] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 87: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 90: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 95: Brightblade Stoat [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 97: Brightblade Stoat [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 121: object 305 [owner/controller metadata unavailable] moves Library (Zen) -> Hand (Zen) (Draw).
+- Turn 6, seq 125: Blood Crypt [owner=Zen, controller=Zen] moves Hand (Zen) -> Battlefield (PlayLand).
+- Turn 6, seq 126: Caretaker's Talent [owner=Zen, controller=Zen] moves Hand (Zen) -> Stack (CastSpell).
+- Turn 6, seq 128: Caretaker's Talent [owner=Zen, controller=Zen] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 138: object 317 [owner/controller metadata unavailable] moves Library (Zen) -> Hand (Zen) (Draw).
+- Turn 6, seq 144: Warrior [owner/controller metadata unavailable] moves Battlefield -> Graveyard (Zen) (SBA_Damage).
+- Turn 6, seq 156: Warrior [owner/controller metadata unavailable] moves Battlefield -> Graveyard (Zen) (Sacrifice).
+- Turn 7, seq 160: Stroke of Midnight [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 163: Stroke of Midnight [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 167: Caretaker's Talent [owner=Zen, controller=Zen] moves Battlefield -> Graveyard (Zen) (Destroy).
+- Turn 7, seq 167: Stroke of Midnight [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 7, seq 179: Human [owner/controller metadata unavailable] moves Battlefield -> Graveyard (Zen) (SBA_Damage).
+- Turn 8, seq 193: Sacred Foundry [owner/controller metadata unavailable] moves Library (Zen) -> Hand (Zen) (Draw).
+- Turn 8, seq 197: Sacred Foundry [owner=Zen, controller=Zen] moves Hand (Zen) -> Battlefield (PlayLand).
+- Turn 8, seq 198: Exalted Sunborn [owner=Zen, controller=Zen] moves Hand (Zen) -> Stack (CastSpell).
+- Turn 8, seq 200: Exalted Sunborn [owner=Zen, controller=Zen] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 202: Frontline Rush [owner=Zen, controller=Zen] moves Hand (Zen) -> Stack (CastSpell).
+- Turn 8, seq 207: Frontline Rush [owner=Zen, controller=Zen] moves Stack -> Graveyard (Zen) (Resolve).
+Equivalent transfer duplicates retained as diagnostics (rendered once above):
+- Turn 8: Exalted Sunborn [334] Stack -> Battlefield (Resolve); sequences 200, 201.
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 223 becomes object 279 [Plains].
+- Turn 1, seq 8: object 221 becomes object 280 [Case of the Uneaten Feast].
+- Turn 2, seq 24: object 166 becomes object 282 [Caretaker's Talent].
+- Turn 2, seq 28: object 165 becomes object 283 [Godless Shrine].
+- Turn 3, seq 42: object 226 becomes object 284 [Marauding Blight-Priest].
+- Turn 3, seq 45: object 224 becomes object 285 [Swamp].
+- Turn 3, seq 46: object 219 becomes object 286 [Starscape Cleric].
+- Turn 4, seq 67: object 167 becomes object 291 [object 167].
+- Turn 4, seq 70: object 163 becomes object 292 [Blazemire Verge].
+- Turn 4, seq 71: object 161 becomes object 293 [Voice of Victory].
+- Turn 5, seq 87: object 227 becomes object 296 [Case of the Uneaten Feast].
+- Turn 5, seq 90: object 220 becomes object 297 [Scoured Barrens].
+- Turn 5, seq 95: object 222 becomes object 300 [Brightblade Stoat].
+- Turn 6, seq 121: object 168 becomes object 305 [object 168].
+- Turn 6, seq 125: object 159 becomes object 306 [Blood Crypt].
+- Turn 6, seq 126: object 282 becomes object 307 [Caretaker's Talent].
+- Turn 6, seq 138: object 169 becomes object 317 [object 169].
+- Turn 6, seq 144: object 312 becomes object 319 [Warrior].
+- Turn 6, seq 156: object 313 becomes object 321 [Warrior].
+- Turn 7, seq 160: object 228 becomes object 322 [Stroke of Midnight].
+- Turn 7, seq 163: object 322 becomes object 323 [Stroke of Midnight].
+- Turn 7, seq 167: object 307 becomes object 327 [Caretaker's Talent].
+- Turn 7, seq 167: object 323 becomes object 329 [Stroke of Midnight].
+- Turn 7, seq 179: object 328 becomes object 331 [Human].
+- Turn 8, seq 193: object 170 becomes object 332 [Sacred Foundry].
+- Turn 8, seq 197: object 332 becomes object 333 [Sacred Foundry].
+- Turn 8, seq 198: object 162 becomes object 334 [Exalted Sunborn].
+- Turn 8, seq 202: object 160 becomes object 338 [Frontline Rush].
+- Turn 8, seq 207: object 338 becomes object 341 [Frontline Rush].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Plains (object 279) from Hand (gian31) to Battlefield.
+- Turn 2: Zen plays Godless Shrine (object 283) from Hand (Zen) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 285) from Hand (gian31) to Battlefield.
+- Turn 4: Zen plays Blazemire Verge (object 292) from Hand (Zen) to Battlefield.
+- Turn 5: gian31 plays Scoured Barrens (object 297) from Hand (gian31) to Battlefield.
+- Turn 6: Zen plays Blood Crypt (object 306) from Hand (Zen) to Battlefield.
+- Turn 8: Zen plays Sacred Foundry (object 333) from Hand (Zen) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Starscape Cleric: casts=1; abilities=5 (triggered=5, activated=0) across turns [3, 3, 5, 5, 6, 7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=3
+  observed effects: life -1, synthetic event
+- Case of the Uneaten Feast: casts=1; abilities=2 (triggered=2, activated=0) across turns [1, 3, 5]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Voice of Victory: casts=1; abilities=2 (triggered=2, activated=0) across turns [4, 6, 6]
+  observed effect totals: draws=0, tokens=2, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: sacrifice, token creation
+- Caretaker's Talent: casts=1; abilities=1 (triggered=1, activated=0) across turns [6, 6]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Exalted Sunborn: casts=2 across turns [8, 8]
+- Brightblade Stoat: casts=1 across turns [5]
+- Frontline Rush: casts=1 across turns [8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: P/T +2/+2
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [5]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Stroke of Midnight: casts=1 across turns [7]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy, token creation
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Zen; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 6 - DeclareAttack, DeclareBlock (active=Zen)
+  attacker: Voice of Victory (Zen) -> gian31; unblocked in this observed snapshot
+  attacker: Warrior (Zen) -> gian31; blocked by Brightblade Stoat
+  attacker: Warrior (Zen) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Zen; unblocked in this observed snapshot
+  attacker: Brightblade Stoat (gian31) -> Zen; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 6: Ability of Voice of Victory (active=Zen) - Ability of Voice of Victory: a token is created; a token is created.
+- Turn 6: Ability of Caretaker's Talent (active=Zen) - Ability of Caretaker's Talent: draw.
+- Turn 6: Ability of Starscape Cleric (active=Zen controller=gian31) - Ability of Starscape Cleric: Zen loses 1 life.
+- Turn 7: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Zen loses 1 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 219: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 220: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 221: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 222: Brightblade Stoat | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 223: Plains | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 224: Swamp | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 225: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 279: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 280: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 283: Godless Shrine | controller=Zen | owner=Zen | zone=Battlefield (latest_object_observation)
+- 284: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 285: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 286: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 289: object 289 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 290: object 290 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 292: Blazemire Verge | controller=Zen | owner=Zen | zone=Battlefield (latest_object_observation)
+- 293: Voice of Victory | controller=Zen | owner=Zen | zone=Battlefield (latest_object_observation)
+- 296: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 297: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 298: object 298 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 299: object 299 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 300: Brightblade Stoat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 303: object 303 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 304: object 304 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 306: Blood Crypt | controller=Zen | owner=Zen | zone=Battlefield (latest_object_observation)
+- 307: Caretaker's Talent | controller=Zen | owner=Zen | zone=Stack (latest_object_observation)
+- 311: object 311 | controller=Zen | owner=Zen | zone=unknown (inferred unknown) (latest_object_observation)
+- 312: Warrior | controller=Zen | owner=Zen | zone=Stack (latest_object_observation)
+- 313: Warrior | controller=Zen | owner=Zen | zone=Stack (latest_object_observation)
+- 315: object 315 | controller=Zen | owner=Zen | zone=unknown (inferred unknown) (latest_object_observation)
+- 316: object 316 | controller=Zen | owner=Zen | zone=Stack (latest_object_observation)
+- 318: object 318 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 320: object 320 | controller=Zen | owner=Zen | zone=unknown (inferred unknown) (latest_object_observation)
+- 322: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 323: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 327: Caretaker's Talent | controller=Zen | owner=Zen | zone=Graveyard (latest_object_observation)
+- 328: Human | controller=Zen | owner=Zen | zone=Stack (latest_object_observation)
+- 329: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 330: object 330 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 333: Sacred Foundry | controller=Zen | owner=Zen | zone=Battlefield (latest_object_observation)
+- 334: Exalted Sunborn | controller=Zen | owner=Zen | zone=Battlefield (latest_object_observation)
+- 337: object 337 | controller=Zen | owner=Zen | zone=Stack (latest_object_observation)
+- 338: Frontline Rush | controller=Zen | owner=Zen | zone=Stack (latest_object_observation)
+- 341: Frontline Rush | controller=Zen | owner=Zen | zone=Graveyard (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Zen: 18 total items
+  zones: Battlefield=6, Graveyard=2, Stack=7, unknown=3
+  objects: Caretaker's Talent x2, Frontline Rush x2, Warrior x2, Blazemire Verge, Blood Crypt, Exalted Sunborn, Godless Shrine, Human, Sacred Foundry, Voice of Victory, object 311, object 315
+gian31: 26 total items
+  zones: Battlefield=5, Hand=4, Stack=8, unknown=9
+  objects: Case of the Uneaten Feast x3, Stroke of Midnight x3, Brightblade Stoat x2, Plains x2, Scoured Barrens x2, Starscape Cleric x2, Swamp x2, Bloodletter of Aclazotz, Marauding Blight-Priest, object 289, object 290, object 298
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+Zen:
+  Battlefield (6): Blazemire Verge, Blood Crypt, Exalted Sunborn, Godless Shrine, Sacred Foundry, Voice of Victory
+  Graveyard: 2 card(s)
+gian31:
+  Battlefield (5): Brightblade Stoat, Plains, Scoured Barrens, Starscape Cleric, Swamp
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+12 objects have no resolved final zone and are omitted from the known board state.
+Zen: 3 unknown object(s)
+gian31: 9 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=4, Stack=15
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Zen:
+  Battlefield (6): Godless Shrine, Blazemire Verge, Voice of Victory, Blood Crypt, Sacred Foundry, Exalted Sunborn
+  Graveyard (2): Caretaker's Talent, Frontline Rush
+gian31:
+  Battlefield (6): Plains, Case of the Uneaten Feast, Swamp, Starscape Cleric, Scoured Barrens, Brightblade Stoat
+  Graveyard (1): Stroke of Midnight
+Known non-persistent entries (counts only):
+  Zen: Hand=3, Limbo=5, Stack=1
+  gian31: Hand=3, Limbo=2
+  unknown: Hand=1, Library=98, Limbo=9
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=2
+- Turn 2: Zen Battlefield=1; gian31 Battlefield=2
+- Turn 3: Zen Battlefield=1; gian31 Battlefield=4
+- Turn 4: Zen Battlefield=3; gian31 Battlefield=4
+- Turn 5: Zen Battlefield=3; gian31 Battlefield=6
+- Turn 6: Zen Battlefield=5; Zen Graveyard=2; gian31 Battlefield=6
+- Turn 7: Zen Battlefield=4; Zen Graveyard=4; gian31 Battlefield=6; gian31 Graveyard=1
+- Turn 8: Zen Battlefield=6; Zen Graveyard=5; gian31 Battlefield=6; gian31 Graveyard=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Voice of Victory resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Brightblade Stoat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Caretaker's Talent resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Exalted Sunborn resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Exalted Sunborn resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
