@@ -1,0 +1,945 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, JackaI
+Seat map: Seat 1=gian31, Seat 2=JackaI
+Turn range (known): 1 - 16
+Unnumbered turn groups retained: 1
+Records: 36
+Action chains: 32
+Winner: gian31
+Final life: {'gian31': 11, 'JackaI': 8}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 16 (Phase_Main1; Bitter Triumph, seq 459).
+Later numbered GRE record(s): 4 after action sequence 459 across turn(s) [16]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 40 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 13 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 16] (raw records=13; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 27 explicit Library -> Hand movement(s); named in the draw record=12, resolved through an explicit identity transition=14, unresolved=1.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 11, 'JackaI': 8}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 16 (Phase_Main1; Bitter Triumph, seq 459).
+Last captured life snapshot: gian31 14 -> 11 (seq 457).
+Observed active tokens: Fish [350] controller=gian31, created Turn 9, last observed Turn 16 seq 465, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Starscape Cleric [382] controller=gian31, created Turn 12, last observed Turn 16 seq 465, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Masked Meower [valid_resolution_no_immediate_mutation, seq=10] (active=JackaI, phase=Phase_Main1, controller=JackaI, owner=JackaI, source_object=280)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Masked Meower resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Masked Meower (object 280) Hand (JackaI) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Masked Meower (object 280) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=JackaI; frames: DeclareAttack -> DeclareBlock):
+      attackers: Masked Meower [280] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [279] Hand (JackaI) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      JackaI: Battlefield: Masked Meower [280], Mountain [279]
+
+Turn 2
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=36] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=284)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 284) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 284) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [282] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 30).
+      Plains [283] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 33).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      JackaI: Battlefield: Masked Meower [280], Mountain [279]
+      gian31: Battlefield: Authority of the Consuls [284], Plains [283]
+
+Turn 3
+  - Ancestral Anger [observed_semantic_effect, seq=58] (active=JackaI, phase=Phase_Main1, controller=JackaI, owner=JackaI, source_object=288)
+      effects: draw, P/T +1/+0
+      narrative: Ancestral Anger: draw; Masked Meower gets +1/+0.
+      explicit effect object references: object 227 [227], Masked Meower [280], Hex Magic [290] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Ancestral Anger (object 288) Hand (JackaI) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hex Magic (object 290) Library (JackaI) -> Hand (JackaI) (Draw; shared object ID)
+      protocol-linked zone transfer: Ancestral Anger (object 291) Stack -> Graveyard (JackaI) (Resolve; shared object ID)
+      identity continuity: source object 288 -> transfer object 291 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=JackaI; frames: DeclareAttack -> DeclareBlock):
+      attackers: Masked Meower [280] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 19 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Burst Lightning [286] Library (JackaI) -> Hand (JackaI) (Draw; GRE sequence 50).
+      Mountain [287] Hand (JackaI) -> Battlefield (PlayLand; GRE sequence 53).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      JackaI: Battlefield: Masked Meower [280], Mountain [279], Mountain [287]; Graveyard: Ancestral Anger [291]
+      gian31: Battlefield: Authority of the Consuls [284], Plains [283]
+
+Turn 4
+  - Deep-Cavern Bat [valid_resolution_no_immediate_mutation, seq=84] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=294)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deep-Cavern Bat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deep-Cavern Bat (object 294) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 294) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [292] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 78).
+      Swamp [293] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 81).
+      Burst Lightning [298] Hand (JackaI) -> Exile (Exile; GRE sequence 89).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      JackaI: Battlefield: Masked Meower [280], Mountain [279], Mountain [287]; Graveyard: Ancestral Anger [291]; Exile: Burst Lightning [298]
+      gian31: Battlefield: Authority of the Consuls [284], Deep-Cavern Bat [294], Plains [283], Swamp [293]
+
+Turn 5
+  - Hex Magic [observed_semantic_effect, seq=109] (active=JackaI, phase=Phase_Main1, controller=JackaI, owner=JackaI, source_object=305)
+      effects: exile, exile, exile, draw, draw, draw
+      narrative: Hex Magic: exiles Hawkeye, Young Avenger, Hex Magic, K'un-Lun Warrior; exile; exile; draw; draw; draw.
+      explicit effect object references: Hex Magic [219], K'un-Lun Warrior [222], Hawkeye, Young Avenger [224], object 229 [229], object 230 [230], object 231 [231], Hex Magic [309], K'un-Lun Warrior [310], Hawkeye, Young Avenger [311], object 312 [312], object 313 [313], object 314 [314] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hex Magic (object 305) Hand (JackaI) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hawkeye, Young Avenger (object 311) Hand (JackaI) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Hex Magic (object 309) Hand (JackaI) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: K'un-Lun Warrior (object 310) Hand (JackaI) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Mountain (object 312) Library (JackaI) -> Hand (JackaI) (Draw; shared object ID)
+      protocol-linked zone transfer: Mountain (object 313) Library (JackaI) -> Hand (JackaI) (Draw; shared object ID)
+      protocol-linked zone transfer: Ancestral Anger (object 314) Library (JackaI) -> Hand (JackaI) (Draw; shared object ID)
+      protocol-linked zone transfer: Hex Magic (object 315) Stack -> Graveyard (JackaI) (Resolve; shared object ID)
+      identity continuity: source object 305 -> transfer object 315 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=JackaI; frames: DeclareAttack -> DeclareBlock):
+      attackers: Masked Meower [280] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 17 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [303] Library (JackaI) -> Hand (JackaI) (Draw; GRE sequence 103).
+      Mountain [304] Hand (JackaI) -> Battlefield (PlayLand; GRE sequence 106).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      JackaI: Battlefield: Masked Meower [280], Mountain [279], Mountain [287], Mountain [304]; Graveyard: Ancestral Anger [291], Hex Magic [315]; Exile: Burst Lightning [298], Hawkeye, Young Avenger [311], Hex Magic [309], K'un-Lun Warrior [310]
+      gian31: Battlefield: Authority of the Consuls [284], Deep-Cavern Bat [294], Plains [283], Swamp [293]
+
+Turn 6
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=135] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=317, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=138] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=319)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 319) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 319) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=156] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=319, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: JackaI loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [294] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: JackaI -2; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 16 -> 17
+    life (semantically attributed to Scoured Barrens; direct protocol link unavailable): gian31 17 -> 18
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): JackaI 20 -> 19
+    life: JackaI 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Lunar Convocation [316] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 130).
+      Scoured Barrens [317] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 133).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      JackaI: Battlefield: Masked Meower [280], Mountain [279], Mountain [287], Mountain [304]; Graveyard: Ancestral Anger [291], Hex Magic [315]; Exile: Burst Lightning [298], Hawkeye, Young Avenger [311], Hex Magic [309], K'un-Lun Warrior [310]
+      gian31: Battlefield: Authority of the Consuls [284], Deep-Cavern Bat [294], Lunar Convocation [319], Plains [283], Scoured Barrens [317], Swamp [293]
+
+Turn 7
+  - Hawkeye, Young Avenger [valid_resolution_no_immediate_mutation, seq=166] (active=JackaI, phase=Phase_Main1, controller=JackaI, owner=JackaI, source_object=325)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hawkeye, Young Avenger resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hawkeye, Young Avenger (object 325) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Hawkeye, Young Avenger (object 325) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=168] (active=JackaI, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=284, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  Combat snapshots observed (active=JackaI; frames: DeclareAttack -> DeclareBlock):
+      attackers: Masked Meower [280] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 +0 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 19
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [323] Library (JackaI) -> Hand (JackaI) (Draw; GRE sequence 160).
+      Mountain [324] Hand (JackaI) -> Battlefield (PlayLand; GRE sequence 163).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      JackaI: Battlefield: Hawkeye, Young Avenger [325], Masked Meower [280], Mountain [279], Mountain [287], Mountain [304], Mountain [324]; Graveyard: Ancestral Anger [291], Hex Magic [315]; Exile: Burst Lightning [298], Hex Magic [309], K'un-Lun Warrior [310]
+      gian31: Battlefield: Authority of the Consuls [284], Deep-Cavern Bat [294], Lunar Convocation [319], Plains [283], Scoured Barrens [317], Swamp [293]
+
+Turn 8
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=194] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=333)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 333) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 333) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=198] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=333, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Hawkeye, Young Avenger; gian31 gains 2 life.
+      explicit effect object references: Hawkeye, Young Avenger [325], Hawkeye, Young Avenger [338] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hawkeye, Young Avenger (object 338) Battlefield -> Exile (Exile; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=216] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=319, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: JackaI loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [294] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: JackaI -2; gian31 +3 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 20
+    life (gain observed during combat phase; exact source unavailable): gian31 20 -> 21
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): JackaI 18 -> 17
+    life: JackaI 17 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bitter Triumph [331] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 188).
+      Swamp [332] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 191).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      JackaI: Battlefield: Masked Meower [280], Mountain [279], Mountain [287], Mountain [304], Mountain [324]; Graveyard: Ancestral Anger [291], Hex Magic [315]; Exile: Burst Lightning [298], Hawkeye, Young Avenger [338], Hex Magic [309], K'un-Lun Warrior [310]
+      gian31: Battlefield: Authority of the Consuls [284], Deep-Cavern Bat [294], Lunar Convocation [319], Makeshift Binding [333], Plains [283], Scoured Barrens [317], Swamp [293], Swamp [332]
+
+Turn 9
+  - Ancestral Anger [observed_semantic_effect, seq=228] (active=JackaI, phase=Phase_Main1, controller=JackaI, owner=JackaI, source_object=342)
+      effects: draw, P/T +2/+0
+      narrative: Ancestral Anger: draw; Masked Meower gets +2/+0.
+      explicit effect object references: object 234 [234], Masked Meower [280], object 344 [344] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Ancestral Anger (object 342) Hand (JackaI) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sazacap's Brew (object 344) Library (JackaI) -> Hand (JackaI) (Draw; shared object ID)
+      protocol-linked zone transfer: Ancestral Anger (object 345) Stack -> Graveyard (JackaI) (Resolve; shared object ID)
+      identity continuity: source object 342 -> transfer object 345 (explicit GRE ObjectIdChanged chain).
+  - Sazacap's Brew [observed_semantic_effect, seq=236] (active=JackaI, phase=Phase_Main1, controller=JackaI, owner=JackaI, source_object=346)
+      effects: draw, draw, P/T +2/+0, token creation
+      narrative: Sazacap's Brew: draw; draw; Masked Meower gets +2/+0; a token is created.
+      explicit effect object references: object 235 [235], object 236 [236], Masked Meower [280], Fish [350], object 351 [351], object 352 [352] (role/targeting only where the protocol identifies it)
+      token created: Fish (object 350, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 346).
+      protocol-linked zone transfer: Sazacap's Brew (object 346) Hand (JackaI) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hawkeye, Young Avenger (object 351) Library (JackaI) -> Hand (JackaI) (Draw; shared object ID)
+      protocol-linked zone transfer: Burst Lightning (object 352) Library (JackaI) -> Hand (JackaI) (Draw; shared object ID)
+      protocol-linked zone transfer: Sazacap's Brew (object 353) Stack -> Graveyard (JackaI) (Resolve; shared object ID)
+      identity continuity: source object 346 -> transfer object 353 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=JackaI; frames: DeclareAttack -> DeclareBlock):
+      attackers: Masked Meower [280] (unblocked, observed P/T 5/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -5 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 21 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Sazacap's Brew [340] Library (JackaI) -> Hand (JackaI) (Draw; GRE sequence 220).
+      Mountain [341] Hand (JackaI) -> Battlefield (PlayLand; GRE sequence 223).
+      Mountain [349] Hand (JackaI) -> Graveyard (JackaI) (Discard; GRE sequence 234).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      JackaI: Battlefield: Masked Meower [280], Mountain [279], Mountain [287], Mountain [304], Mountain [324], Mountain [341]; Graveyard: Ancestral Anger [291], Ancestral Anger [345], Hex Magic [315], Mountain [349], Sazacap's Brew [353]; Exile: Burst Lightning [298], Hawkeye, Young Avenger [338], Hex Magic [309], K'un-Lun Warrior [310]
+      gian31: Battlefield: Authority of the Consuls [284], Deep-Cavern Bat [294], Lunar Convocation [319], Makeshift Binding [333], Plains [283], Scoured Barrens [317], Swamp [293], Swamp [332]
+
+Turn 10
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=261] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=355)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 355) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 355) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=264] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=319, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 171 [171], Plains [361] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Plains (object 361) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Burst Lightning [observed_semantic_effect, seq=278] (active=unknown, controller=JackaI, owner=JackaI, source_object=363)
+      chronology reconciliation: parser turn group None conflicts with Turn 10; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: 2 damage
+      narrative: Burst Lightning: Deep-Cavern Bat takes 2 damage.
+      explicit effect object references: Deep-Cavern Bat [294] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Burst Lightning (object 363) Hand (JackaI) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Burst Lightning (object 365) Stack -> Graveyard (JackaI) (Resolve; shared object ID)
+      identity continuity: source object 363 -> transfer object 365 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Deep-Cavern Bat (object 366) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Deep-Cavern Bat [294] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      other-player life loss not explained by observed attacker damage: gian31 16 -> 14 (-2; phase=Phase_Main1; source unavailable).
+      combat-result zone change: Deep-Cavern Bat [366] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): gian31 16 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bitter Triumph [354] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 256).
+      Plains [362] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 265).
+      Burst Lightning [367] Exile -> Hand (JackaI) (Return; GRE sequence 278).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      JackaI: Battlefield: Masked Meower [280], Mountain [279], Mountain [287], Mountain [304], Mountain [324], Mountain [341]; Graveyard: Ancestral Anger [291], Ancestral Anger [345], Burst Lightning [365], Hex Magic [315], Mountain [349], Sazacap's Brew [353]; Exile: Hawkeye, Young Avenger [338], Hex Magic [309], K'un-Lun Warrior [310]
+      gian31: Battlefield: Authority of the Consuls [284], Lunar Convocation [319], Lunar Convocation [355], Makeshift Binding [333], Plains [283], Plains [362], Scoured Barrens [317], Swamp [293], Swamp [332]; Graveyard: Deep-Cavern Bat [366]
+
+Turn 11
+  - Misty Knight, Hero for Hire [valid_resolution_no_immediate_mutation, seq=297] (active=JackaI, phase=Phase_Main1, controller=JackaI, owner=JackaI, source_object=370)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Misty Knight, Hero for Hire resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Misty Knight, Hero for Hire (object 370) Hand (JackaI) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Misty Knight, Hero for Hire (object 370) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=299] (active=JackaI, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=284, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 14 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Misty Knight, Hero for Hire [369] Library (JackaI) -> Hand (JackaI) (Draw; GRE sequence 292).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      JackaI: Battlefield: Masked Meower [280], Misty Knight, Hero for Hire [370], Mountain [279], Mountain [287], Mountain [304], Mountain [324], Mountain [341]; Graveyard: Ancestral Anger [291], Ancestral Anger [345], Burst Lightning [365], Hex Magic [315], Mountain [349], Sazacap's Brew [353]; Exile: Hawkeye, Young Avenger [338], Hex Magic [309], K'un-Lun Warrior [310]
+      gian31: Battlefield: Authority of the Consuls [284], Lunar Convocation [319], Lunar Convocation [355], Makeshift Binding [333], Plains [283], Plains [362], Scoured Barrens [317], Swamp [293], Swamp [332]; Graveyard: Deep-Cavern Bat [366]
+
+Turn 12
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=321] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 375) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 375) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=323] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Starscape Cleric: a token is created.
+      explicit effect object references: Starscape Cleric [382] (role/targeting only where the protocol identifies it)
+      token created: Starscape Cleric (object 382, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 381).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [374] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 314).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      JackaI: Battlefield: Masked Meower [280], Misty Knight, Hero for Hire [370], Mountain [279], Mountain [287], Mountain [304], Mountain [324], Mountain [341]; Graveyard: Ancestral Anger [291], Ancestral Anger [345], Burst Lightning [365], Hex Magic [315], Mountain [349], Sazacap's Brew [353]; Exile: Hawkeye, Young Avenger [338], Hex Magic [309], K'un-Lun Warrior [310]
+      gian31: Battlefield: Authority of the Consuls [284], Lunar Convocation [319], Lunar Convocation [355], Makeshift Binding [333], Plains [283], Plains [362], Scoured Barrens [317], Starscape Cleric [375], Swamp [293], Swamp [332]; Graveyard: Deep-Cavern Bat [366]
+
+Turn 13
+  - Sazacap's Brew [observed_semantic_effect, seq=347] (active=JackaI, phase=Phase_Main1, controller=JackaI, owner=JackaI, source_object=384)
+      effects: draw, draw
+      narrative: Sazacap's Brew: draw; draw.
+      explicit effect object references: object 239 [239], object 240 [240], Mountain [388], object 389 [389] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Sazacap's Brew (object 384) Hand (JackaI) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Mountain (object 388) Library (JackaI) -> Hand (JackaI) (Draw; shared object ID)
+      protocol-linked zone transfer: Mountain (object 389) Library (JackaI) -> Hand (JackaI) (Draw; shared object ID)
+      protocol-linked zone transfer: Sazacap's Brew (object 390) Stack -> Graveyard (JackaI) (Resolve; shared object ID)
+      identity continuity: source object 384 -> transfer object 390 (explicit GRE ObjectIdChanged chain).
+  - Hawkeye, Young Avenger [valid_resolution_no_immediate_mutation, seq=351] (active=JackaI, phase=Phase_Main1, controller=JackaI, owner=JackaI, source_object=392)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hawkeye, Young Avenger resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hawkeye, Young Avenger (object 392) Hand (JackaI) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hawkeye, Young Avenger (object 392) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=353] (active=JackaI, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=284, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=356] (active=JackaI, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=382)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: JackaI loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=358] (active=JackaI, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: JackaI loses 1 life.
+    net observed life change this turn: JackaI -2; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 15 -> 16
+    life: JackaI 16 -> 15
+    life: JackaI 15 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Sazacap's Brew [383] Library (JackaI) -> Hand (JackaI) (Draw; GRE sequence 338).
+      Sazacap's Brew [387] Hand (JackaI) -> Graveyard (JackaI) (Discard; GRE sequence 345).
+      Mountain [391] Hand (JackaI) -> Battlefield (PlayLand; GRE sequence 348).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      JackaI: Battlefield: Hawkeye, Young Avenger [392], Masked Meower [280], Misty Knight, Hero for Hire [370], Mountain [279], Mountain [287], Mountain [304], Mountain [324], Mountain [341], Mountain [391]; Graveyard: Ancestral Anger [291], Ancestral Anger [345], Burst Lightning [365], Hex Magic [315], Mountain [349], Sazacap's Brew [353], Sazacap's Brew [387], Sazacap's Brew [390]; Exile: Hawkeye, Young Avenger [338], Hex Magic [309], K'un-Lun Warrior [310]
+      gian31: Battlefield: Authority of the Consuls [284], Lunar Convocation [319], Lunar Convocation [355], Makeshift Binding [333], Plains [283], Plains [362], Scoured Barrens [317], Starscape Cleric [375], Swamp [293], Swamp [332]; Graveyard: Deep-Cavern Bat [366]
+
+Turn 14
+  - Deep-Cavern Bat [valid_resolution_no_immediate_mutation, seq=378] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=401)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deep-Cavern Bat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deep-Cavern Bat (object 401) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 401) Stack -> Battlefield (Resolve; shared object ID)
+  - Bitter Triumph [observed_semantic_effect, seq=389] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=407)
+      effects: destroy
+      narrative: Bitter Triumph destroys Hawkeye, Young Avenger.
+      explicit effect object references: Hawkeye, Young Avenger [392], Hawkeye, Young Avenger [410] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bitter Triumph (object 407) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hawkeye, Young Avenger (object 410) Battlefield -> Graveyard (JackaI) (Destroy; shared object ID)
+      protocol-linked zone transfer: Bitter Triumph (object 411) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 407 -> transfer object 411 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Fish [350] (unblocked, observed P/T 1/1), Starscape Cleric [375] (unblocked, observed P/T 2/1), Starscape Cleric [382] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      other-player life loss not explained by observed attacker damage: gian31 16 -> 13 (-3; phase=Phase_Main1; source unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: JackaI -4; gian31 -3 (individual changes below; gains and losses may offset)
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): gian31 16 -> 13
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): JackaI 14 -> 10
+    additional protocol-observed zone movements not assigned to an action chain:
+      Deep-Cavern Bat [400] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 373).
+      Burst Lightning [405] Hand (JackaI) -> Exile (Exile; GRE sequence 383).
+      Mountain [413] Hand (JackaI) -> Graveyard (JackaI) (Discard; GRE sequence 394).
+      Masked Meower [414] Battlefield -> Graveyard (JackaI) (Sacrifice; GRE sequence 394).
+        sacrifice observed after Bitter Triumph (seq 389); direct causal linkage is unavailable.
+      Mountain [415] Library (JackaI) -> Hand (JackaI) (Draw; GRE sequence 396).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      JackaI: Battlefield: Misty Knight, Hero for Hire [370], Mountain [279], Mountain [287], Mountain [304], Mountain [324], Mountain [341], Mountain [391]; Graveyard: Ancestral Anger [291], Ancestral Anger [345], Burst Lightning [365], Hawkeye, Young Avenger [410], Hex Magic [315], Masked Meower [414], Mountain [349], Mountain [413], Sazacap's Brew [353], Sazacap's Brew [387], Sazacap's Brew [390]; Exile: Burst Lightning [405], Hawkeye, Young Avenger [338], Hex Magic [309], K'un-Lun Warrior [310]
+      gian31: Battlefield: Authority of the Consuls [284], Deep-Cavern Bat [401], Lunar Convocation [319], Lunar Convocation [355], Makeshift Binding [333], Plains [283], Plains [362], Scoured Barrens [317], Starscape Cleric [375], Swamp [293], Swamp [332]; Graveyard: Bitter Triumph [411], Deep-Cavern Bat [366]
+
+Turn 15
+  - Ability of Misty Knight, Hero for Hire [observed_semantic_effect, seq=421] (active=JackaI, phase=Phase_Main1, controller=JackaI, owner=JackaI, source_object=370, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Misty Knight, Hero for Hire: draw.
+      explicit effect object references: object 243 [243], object 421 [421] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Human Torch, Johnny Storm (object 421) Library (JackaI) -> Hand (JackaI) (Draw; shared object ID)
+  - Human Torch, Johnny Storm [valid_resolution_no_immediate_mutation, seq=424] (active=JackaI, phase=Phase_Main1, controller=JackaI, owner=JackaI, source_object=422)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Human Torch, Johnny Storm resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Human Torch, Johnny Storm (object 422) Hand (JackaI) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Human Torch, Johnny Storm (object 422) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=426] (active=JackaI, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=284, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=429] (active=JackaI, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=382)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: JackaI loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=431] (active=JackaI, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: JackaI loses 1 life.
+    net observed life change this turn: JackaI -2; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 13 -> 14
+    life: JackaI 10 -> 9
+    life: JackaI 9 -> 8
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 416 [416] Library (JackaI) -> Hand (JackaI) (Draw; GRE sequence 415).
+      Mountain [420] Hand (JackaI) -> Graveyard (JackaI) (Discard; GRE sequence 419).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      JackaI: Battlefield: Human Torch, Johnny Storm [422], Misty Knight, Hero for Hire [370], Mountain [279], Mountain [287], Mountain [304], Mountain [324], Mountain [341], Mountain [391]; Graveyard: Ancestral Anger [291], Ancestral Anger [345], Burst Lightning [365], Hawkeye, Young Avenger [410], Hex Magic [315], Masked Meower [414], Mountain [349], Mountain [413], Mountain [420], Sazacap's Brew [353], Sazacap's Brew [387], Sazacap's Brew [390]; Exile: Burst Lightning [405], Hawkeye, Young Avenger [338], Hex Magic [309], K'un-Lun Warrior [310]
+      gian31: Battlefield: Authority of the Consuls [284], Deep-Cavern Bat [401], Lunar Convocation [319], Lunar Convocation [355], Makeshift Binding [333], Plains [283], Plains [362], Scoured Barrens [317], Starscape Cleric [375], Swamp [293], Swamp [332]; Graveyard: Bitter Triumph [411], Deep-Cavern Bat [366]
+
+Turn 16
+  - Bitter Triumph [observed_semantic_effect, seq=459] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=431)
+      effects: destroy
+      narrative: Bitter Triumph destroys Human Torch, Johnny Storm.
+      explicit effect object references: Human Torch, Johnny Storm [422], Human Torch, Johnny Storm [434] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bitter Triumph (object 431) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bitter Triumph (object 431) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Human Torch, Johnny Storm (object 434) Battlefield -> Graveyard (JackaI) (Destroy; shared object ID)
+      protocol-linked zone transfer: Bitter Triumph (object 435) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 431 -> transfer object 435 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Fish [350] (unblocked, observed P/T 1/1), Starscape Cleric [375] (unblocked, observed P/T 2/1), Starscape Cleric [382] (unblocked, observed P/T 1/1), Deep-Cavern Bat [401] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      other-player life loss not explained by observed attacker damage: gian31 14 -> 11 (-3; phase=unknown; source unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -3 (individual changes below; gains and losses may offset)
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): gian31 14 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [429] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 445).
+      Swamp [430] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 448).
+      Swamp [430] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 453).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      JackaI: Battlefield: Misty Knight, Hero for Hire [370], Mountain [279], Mountain [287], Mountain [304], Mountain [324], Mountain [341], Mountain [391]; Graveyard: Ancestral Anger [291], Ancestral Anger [345], Burst Lightning [365], Hawkeye, Young Avenger [410], Hex Magic [315], Human Torch, Johnny Storm [434], Masked Meower [414], Mountain [349], Mountain [413], Mountain [420], Sazacap's Brew [353], Sazacap's Brew [387], Sazacap's Brew [390]; Exile: Burst Lightning [405], Hawkeye, Young Avenger [338], Hex Magic [309], K'un-Lun Warrior [310]
+      gian31: Battlefield: Authority of the Consuls [284], Deep-Cavern Bat [401], Lunar Convocation [319], Lunar Convocation [355], Makeshift Binding [333], Plains [283], Plains [362], Scoured Barrens [317], Starscape Cleric [375], Swamp [293], Swamp [332], Swamp [430]; Graveyard: Bitter Triumph [411], Bitter Triumph [435], Deep-Cavern Bat [366]
+
+UNNUMBERED / UNRESOLVED TURN GROUP
+  - The captured records do not provide a verified numbered turn for the following events.
+  - Ability of Masked Meower [observed_semantic_effect, seq=396] (active=unknown, controller=JackaI, owner=JackaI, source_object=280, source_last_explicit_zone=Battlefield, source_successor=414 observed Battlefield -> Graveyard (JackaI) (Sacrifice))
+      effects: draw
+      narrative: Ability of Masked Meower: draw.
+      explicit effect object references: object 241 [241], object 415 [415] (role/targeting only where the protocol identifies it)
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 6, seq 148, Phase_Main1: gian31 17 -> 18. Semantic attribution: Scoured Barrens; direct protocol link unavailable. Previous captured action: Lunar Convocation.
+- Turn 8, seq 208, Phase_Main1: gian31 20 -> 21. Combat declaration observed; exact assignment unavailable. Previous captured action: Makeshift Binding.
+- Turn 10, seq 262, Phase_Main1: gian31 16 -> 14. Combat declaration observed; exact assignment unavailable. Previous captured action: Lunar Convocation.
+- Turn 14, seq 387, Phase_Main1: gian31 16 -> 13. Combat declaration observed; exact assignment unavailable. Previous captured action: Deep-Cavern Bat.
+- Turn 16, seq 457: gian31 14 -> 11. Combat declaration observed; exact assignment unavailable.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 2 token creations observed; 2 active as last observed; 0 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Fish [350] controller=gian31; created Turn 9 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 16, object 350 (latest observed P/T 1/1; current zone unconfirmed).
+- Starscape Cleric [382] controller=gian31; created Turn 12 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 16, object 382 (latest observed P/T 1/1; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Mountain [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Masked Meower [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Stack (CastSpell).
+- Turn 1, seq 10: Masked Meower [owner=JackaI, controller=JackaI] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 30: Scoured Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 33: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 34: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 36: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 50: Burst Lightning [owner=JackaI, controller=JackaI] moves Library (JackaI) -> Hand (JackaI) (Draw).
+- Turn 3, seq 53: Mountain [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Battlefield (PlayLand).
+- Turn 3, seq 54: Ancestral Anger [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Stack (CastSpell).
+- Turn 3, seq 58: Hex Magic [owner=JackaI, controller=JackaI] moves Library (JackaI) -> Hand (JackaI) (Draw).
+- Turn 3, seq 58: Ancestral Anger [owner=JackaI, controller=JackaI] moves Stack -> Graveyard (JackaI) (Resolve).
+- Turn 4, seq 78: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 81: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 82: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 84: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 89: Burst Lightning [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Exile (Exile).
+- Turn 5, seq 103: Mountain [owner/controller metadata unavailable] moves Library (JackaI) -> Hand (JackaI) (Draw).
+- Turn 5, seq 106: Mountain [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Battlefield (PlayLand).
+- Turn 5, seq 107: Hex Magic [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Stack (CastSpell).
+- Turn 5, seq 109: Hawkeye, Young Avenger [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Exile (Exile).
+- Turn 5, seq 109: Hex Magic [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Exile (Exile).
+- Turn 5, seq 109: K'un-Lun Warrior [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Exile (Exile).
+- Turn 5, seq 109: Mountain [owner/controller metadata unavailable] moves Library (JackaI) -> Hand (JackaI) (Draw).
+- Turn 5, seq 109: Mountain [owner/controller metadata unavailable] moves Library (JackaI) -> Hand (JackaI) (Draw).
+- Turn 5, seq 109: Ancestral Anger [owner/controller metadata unavailable] moves Library (JackaI) -> Hand (JackaI) (Draw).
+- Turn 5, seq 109: Hex Magic [owner=JackaI, controller=JackaI] moves Stack -> Graveyard (JackaI) (Resolve).
+- Turn 6, seq 130: Lunar Convocation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 133: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 136: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 138: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 160: Mountain [owner/controller metadata unavailable] moves Library (JackaI) -> Hand (JackaI) (Draw).
+- Turn 7, seq 163: Mountain [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Battlefield (PlayLand).
+- Turn 7, seq 164: Hawkeye, Young Avenger [owner=JackaI, controller=JackaI] moves Exile -> Stack (CastSpell).
+- Turn 7, seq 166: Hawkeye, Young Avenger [owner=JackaI, controller=JackaI] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 188: Bitter Triumph [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 191: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 192: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 194: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 198: Hawkeye, Young Avenger [owner=JackaI, controller=JackaI] moves Battlefield -> Exile (Exile).
+- Turn 9, seq 220: Sazacap's Brew [owner/controller metadata unavailable] moves Library (JackaI) -> Hand (JackaI) (Draw).
+- Turn 9, seq 223: Mountain [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Battlefield (PlayLand).
+- Turn 9, seq 224: Ancestral Anger [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Stack (CastSpell).
+- Turn 9, seq 228: Sazacap's Brew [owner/controller metadata unavailable] moves Library (JackaI) -> Hand (JackaI) (Draw).
+- Turn 9, seq 228: Ancestral Anger [owner=JackaI, controller=JackaI] moves Stack -> Graveyard (JackaI) (Resolve).
+- Turn 9, seq 229: Sazacap's Brew [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Stack (CastSpell).
+- Turn 9, seq 234: Mountain [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Graveyard (JackaI) (Discard).
+- Turn 9, seq 236: Hawkeye, Young Avenger [owner/controller metadata unavailable] moves Library (JackaI) -> Hand (JackaI) (Draw).
+- Turn 9, seq 236: Burst Lightning [owner/controller metadata unavailable] moves Library (JackaI) -> Hand (JackaI) (Draw).
+- Turn 9, seq 236: Sazacap's Brew [owner=JackaI, controller=JackaI] moves Stack -> Graveyard (JackaI) (Resolve).
+- Turn 10, seq 256: Bitter Triumph [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 259: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 261: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 264: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 265: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 273: Burst Lightning [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Stack (CastSpell).
+- Turn 10, seq 278: Burst Lightning [owner=JackaI, controller=JackaI] moves Stack -> Graveyard (JackaI) (Resolve).
+- Turn 10, seq 278: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 10, seq 278: Burst Lightning [owner=JackaI, controller=JackaI] moves Exile -> Hand (JackaI) (Return).
+- Turn 11, seq 292: Misty Knight, Hero for Hire [owner/controller metadata unavailable] moves Library (JackaI) -> Hand (JackaI) (Draw).
+- Turn 11, seq 295: Misty Knight, Hero for Hire [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Stack (CastSpell).
+- Turn 11, seq 297: Misty Knight, Hero for Hire [owner=JackaI, controller=JackaI] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 314: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 317: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 321: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 338: Sazacap's Brew [owner/controller metadata unavailable] moves Library (JackaI) -> Hand (JackaI) (Draw).
+- Turn 13, seq 341: Sazacap's Brew [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Stack (CastSpell).
+- Turn 13, seq 345: Sazacap's Brew [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Graveyard (JackaI) (Discard).
+- Turn 13, seq 347: Mountain [owner=JackaI, controller=JackaI] moves Library (JackaI) -> Hand (JackaI) (Draw).
+- Turn 13, seq 347: Mountain [owner/controller metadata unavailable] moves Library (JackaI) -> Hand (JackaI) (Draw).
+- Turn 13, seq 347: Sazacap's Brew [owner=JackaI, controller=JackaI] moves Stack -> Graveyard (JackaI) (Resolve).
+- Turn 13, seq 348: Mountain [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Battlefield (PlayLand).
+- Turn 13, seq 349: Hawkeye, Young Avenger [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Stack (CastSpell).
+- Turn 13, seq 351: Hawkeye, Young Avenger [owner=JackaI, controller=JackaI] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 373: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 376: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 378: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 383: Burst Lightning [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Exile (Exile).
+- Turn 14, seq 384: Bitter Triumph [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 389: Hawkeye, Young Avenger [owner=JackaI, controller=JackaI] moves Battlefield -> Graveyard (JackaI) (Destroy).
+- Turn 14, seq 389: Bitter Triumph [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 14, seq 394: Mountain [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Graveyard (JackaI) (Discard).
+- Turn 14, seq 394: Masked Meower [owner=JackaI, controller=JackaI] moves Battlefield -> Graveyard (JackaI) (Sacrifice).
+- Turn 14, seq 396: Mountain [owner/controller metadata unavailable] moves Library (JackaI) -> Hand (JackaI) (Draw).
+- Turn 15, seq 415: object 416 [owner/controller metadata unavailable] moves Library (JackaI) -> Hand (JackaI) (Draw).
+- Turn 15, seq 419: Mountain [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Graveyard (JackaI) (Discard).
+- Turn 15, seq 421: Human Torch, Johnny Storm [owner/controller metadata unavailable] moves Library (JackaI) -> Hand (JackaI) (Draw).
+- Turn 15, seq 422: Human Torch, Johnny Storm [owner=JackaI, controller=JackaI] moves Hand (JackaI) -> Stack (CastSpell).
+- Turn 15, seq 424: Human Torch, Johnny Storm [owner=JackaI, controller=JackaI] moves Stack -> Battlefield (Resolve).
+- Turn 16, seq 445: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 448: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 16, seq 449: Bitter Triumph [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 453: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 16, seq 454: Bitter Triumph [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 459: Human Torch, Johnny Storm [owner=JackaI, controller=JackaI] moves Battlefield -> Graveyard (JackaI) (Destroy).
+- Turn 16, seq 459: Bitter Triumph [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 223 becomes object 279 [Mountain].
+- Turn 1, seq 8: object 220 becomes object 280 [Masked Meower].
+- Turn 2, seq 30: object 166 becomes object 282 [Scoured Barrens].
+- Turn 2, seq 33: object 165 becomes object 283 [Plains].
+- Turn 2, seq 34: object 162 becomes object 284 [Authority of the Consuls].
+- Turn 3, seq 50: object 226 becomes object 286 [Burst Lightning].
+- Turn 3, seq 53: object 225 becomes object 287 [Mountain].
+- Turn 3, seq 54: object 221 becomes object 288 [Ancestral Anger].
+- Turn 3, seq 58: object 227 becomes object 290 [Hex Magic].
+- Turn 3, seq 58: object 288 becomes object 291 [Ancestral Anger].
+- Turn 4, seq 78: object 167 becomes object 292 [Swamp].
+- Turn 4, seq 81: object 163 becomes object 293 [Swamp].
+- Turn 4, seq 82: object 159 becomes object 294 [Deep-Cavern Bat].
+- Turn 4, seq 89: object 286 becomes object 298 [Burst Lightning].
+- Turn 5, seq 103: object 228 becomes object 303 [Mountain].
+- Turn 5, seq 106: object 303 becomes object 304 [Mountain].
+- Turn 5, seq 107: object 290 becomes object 305 [Hex Magic].
+- Turn 5, seq 109: object 224 becomes object 311 [Hawkeye, Young Avenger].
+- Turn 5, seq 109: object 219 becomes object 309 [Hex Magic].
+- Turn 5, seq 109: object 222 becomes object 310 [K'un-Lun Warrior].
+- Turn 5, seq 109: object 229 becomes object 312 [Mountain].
+- Turn 5, seq 109: object 230 becomes object 313 [Mountain].
+- Turn 5, seq 109: object 231 becomes object 314 [Ancestral Anger].
+- Turn 5, seq 109: object 305 becomes object 315 [Hex Magic].
+- Turn 6, seq 130: object 168 becomes object 316 [Lunar Convocation].
+- Turn 6, seq 133: object 282 becomes object 317 [Scoured Barrens].
+- Turn 6, seq 136: object 316 becomes object 319 [Lunar Convocation].
+- Turn 7, seq 160: object 232 becomes object 323 [Mountain].
+- Turn 7, seq 163: object 323 becomes object 324 [Mountain].
+- Turn 7, seq 164: object 311 becomes object 325 [Hawkeye, Young Avenger].
+- Turn 8, seq 188: object 169 becomes object 331 [Bitter Triumph].
+- Turn 8, seq 191: object 292 becomes object 332 [Swamp].
+- Turn 8, seq 192: object 164 becomes object 333 [Makeshift Binding].
+- Turn 8, seq 198: object 325 becomes object 338 [Hawkeye, Young Avenger].
+- Turn 9, seq 220: object 233 becomes object 340 [Sazacap's Brew].
+- Turn 9, seq 223: object 313 becomes object 341 [Mountain].
+- Turn 9, seq 224: object 314 becomes object 342 [Ancestral Anger].
+- Turn 9, seq 228: object 234 becomes object 344 [Sazacap's Brew].
+- Turn 9, seq 228: object 342 becomes object 345 [Ancestral Anger].
+- Turn 9, seq 229: object 344 becomes object 346 [Sazacap's Brew].
+- Turn 9, seq 234: object 312 becomes object 349 [Mountain].
+- Turn 9, seq 236: object 235 becomes object 351 [Hawkeye, Young Avenger].
+- Turn 9, seq 236: object 236 becomes object 352 [Burst Lightning].
+- Turn 9, seq 236: object 346 becomes object 353 [Sazacap's Brew].
+- Turn 10, seq 256: object 170 becomes object 354 [Bitter Triumph].
+- Turn 10, seq 259: object 161 becomes object 355 [Lunar Convocation].
+- Turn 10, seq 264: object 171 becomes object 361 [Plains].
+- Turn 10, seq 265: object 361 becomes object 362 [Plains].
+- Turn 10, seq 273: object 352 becomes object 363 [Burst Lightning].
+- Turn 10, seq 278: object 363 becomes object 365 [Burst Lightning].
+- Turn 10, seq 278: object 294 becomes object 366 [Deep-Cavern Bat].
+- Turn 10, seq 278: object 298 becomes object 367 [Burst Lightning].
+- Turn 11, seq 292: object 237 becomes object 369 [Misty Knight, Hero for Hire].
+- Turn 11, seq 295: object 369 becomes object 370 [Misty Knight, Hero for Hire].
+- Turn 12, seq 314: object 172 becomes object 374 [Starscape Cleric].
+- Turn 12, seq 317: object 374 becomes object 375 [Starscape Cleric].
+- Turn 13, seq 338: object 238 becomes object 383 [Sazacap's Brew].
+- Turn 13, seq 341: object 383 becomes object 384 [Sazacap's Brew].
+- Turn 13, seq 345: object 340 becomes object 387 [Sazacap's Brew].
+- Turn 13, seq 347: object 239 becomes object 388 [Mountain].
+- Turn 13, seq 347: object 240 becomes object 389 [Mountain].
+- Turn 13, seq 347: object 384 becomes object 390 [Sazacap's Brew].
+- Turn 13, seq 348: object 389 becomes object 391 [Mountain].
+- Turn 13, seq 349: object 351 becomes object 392 [Hawkeye, Young Avenger].
+- Turn 14, seq 373: object 173 becomes object 400 [Deep-Cavern Bat].
+- Turn 14, seq 376: object 400 becomes object 401 [Deep-Cavern Bat].
+- Turn 14, seq 383: object 367 becomes object 405 [Burst Lightning].
+- Turn 14, seq 384: object 354 becomes object 407 [Bitter Triumph].
+- Turn 14, seq 389: object 392 becomes object 410 [Hawkeye, Young Avenger].
+- Turn 14, seq 389: object 407 becomes object 411 [Bitter Triumph].
+- Turn 14, seq 394: object 388 becomes object 413 [Mountain].
+- Turn 14, seq 394: object 280 becomes object 414 [Masked Meower].
+- Turn 14, seq 396: object 241 becomes object 415 [Mountain].
+- Turn 15, seq 415: object 242 becomes object 416 [object 242].
+- Turn 15, seq 419: object 415 becomes object 420 [Mountain].
+- Turn 15, seq 421: object 243 becomes object 421 [Human Torch, Johnny Storm].
+- Turn 15, seq 422: object 421 becomes object 422 [Human Torch, Johnny Storm].
+- Turn 16, seq 445: object 174 becomes object 429 [Swamp].
+- Turn 16, seq 448: object 429 becomes object 430 [Swamp].
+- Turn 16, seq 449: object 331 becomes object 431 [Bitter Triumph].
+- Turn 16, seq 453: object 429 becomes object 430 [Swamp].
+- Turn 16, seq 454: object 331 becomes object 431 [Bitter Triumph].
+- Turn 16, seq 459: object 422 becomes object 434 [Human Torch, Johnny Storm].
+- Turn 16, seq 459: object 431 becomes object 435 [Bitter Triumph].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: JackaI plays Mountain (object 279) from Hand (JackaI) to Battlefield.
+- Turn 2: gian31 plays Plains (object 283) from Hand (gian31) to Battlefield.
+- Turn 3: JackaI plays Mountain (object 287) from Hand (JackaI) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 293) from Hand (gian31) to Battlefield.
+- Turn 5: JackaI plays Mountain (object 304) from Hand (JackaI) to Battlefield.
+- Turn 6: gian31 plays Scoured Barrens (object 317) from Hand (gian31) to Battlefield.
+- Turn 7: JackaI plays Mountain (object 324) from Hand (JackaI) to Battlefield.
+- Turn 8: gian31 plays Swamp (object 332) from Hand (gian31) to Battlefield.
+- Turn 9: JackaI plays Mountain (object 341) from Hand (JackaI) to Battlefield.
+- Turn 10: gian31 plays Plains (object 362) from Hand (gian31) to Battlefield.
+- Turn 13: JackaI plays Mountain (object 391) from Hand (JackaI) to Battlefield.
+- Turn 16: gian31 plays Swamp (object 430) from Hand (gian31) to Battlefield.
+- Turn 16: gian31 plays Swamp (object 430) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Starscape Cleric: casts=1; abilities=5 (triggered=5, activated=0) across turns [12, 12, 13, 13, 15, 15]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=4, other=2
+  observed effects: life -1, synthetic event, token creation
+- Authority of the Consuls: casts=1; abilities=4 (triggered=4, activated=0) across turns [2, 7, 11, 13, 15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=4, other=0
+  observed effects: life +1
+- Lunar Convocation: casts=2; abilities=3 (triggered=3, activated=0) across turns [6, 6, 8, 10, 10]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: draw, life -1
+- Ancestral Anger: casts=2 across turns [3, 9]
+  observed effect totals: draws=2, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: P/T +1/+0, P/T +2/+0, draw
+- Bitter Triumph: casts=2 across turns [14, 16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: destroy
+- Deep-Cavern Bat: casts=2 across turns [4, 14]
+- Hawkeye, Young Avenger: casts=2 across turns [7, 13]
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [8, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Masked Meower: casts=1; abilities=1 (triggered=1, activated=0) across turns [1, 'None']
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Misty Knight, Hero for Hire: casts=1; abilities=1 (triggered=1, activated=0) across turns [11, 15]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Sazacap's Brew: casts=2 across turns [9, 13]
+  observed effect totals: draws=4, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: P/T +2/+0, draw, token creation
+- Burst Lightning: casts=1 across turns [10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 2 damage
+- Hex Magic: casts=1 across turns [5]
+  observed effect totals: draws=3, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=3
+  observed effects: draw, exile
+- Human Torch, Johnny Storm: casts=1 across turns [15]
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 1 - DeclareAttack, DeclareBlock (active=JackaI)
+  attacker: Masked Meower (JackaI) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 3 - DeclareAttack, DeclareBlock (active=JackaI)
+  attacker: Masked Meower (JackaI) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 5 - DeclareAttack, DeclareBlock (active=JackaI)
+  attacker: Masked Meower (JackaI) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 6 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Deep-Cavern Bat (gian31) -> JackaI; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=JackaI)
+  attacker: Masked Meower (JackaI) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Deep-Cavern Bat (gian31) -> JackaI; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=JackaI)
+  attacker: Masked Meower (JackaI) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack (active=gian31)
+  attacker: Deep-Cavern Bat (gian31) -> JackaI; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 14 - DeclareAttack (active=gian31)
+  attacker: Fish (gian31) -> JackaI; unblocked in this observed snapshot
+  attacker: Starscape Cleric (gian31) -> JackaI; unblocked in this observed snapshot
+  attacker: Starscape Cleric (gian31) -> JackaI; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 16 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Fish (gian31) -> JackaI; unblocked in this observed snapshot
+  attacker: Starscape Cleric (gian31) -> JackaI; unblocked in this observed snapshot
+  attacker: Starscape Cleric (gian31) -> JackaI; unblocked in this observed snapshot
+  attacker: Deep-Cavern Bat (gian31) -> JackaI; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 160: Bitter Triumph | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 161: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 219: Hex Magic | controller=JackaI | owner=JackaI | zone=Hand (latest_object_observation)
+- 222: K'un-Lun Warrior | controller=JackaI | owner=JackaI | zone=Hand (latest_object_observation)
+- 224: Hawkeye, Young Avenger | controller=JackaI | owner=JackaI | zone=Hand (latest_object_observation)
+- 279: Mountain | controller=JackaI | owner=JackaI | zone=Battlefield (latest_object_observation)
+- 280: Masked Meower | controller=JackaI | owner=JackaI | zone=Battlefield (latest_object_observation)
+- 282: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 283: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 284: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 286: Burst Lightning | controller=JackaI | owner=JackaI | zone=Hand (latest_object_observation)
+- 287: Mountain | controller=JackaI | owner=JackaI | zone=Battlefield (latest_object_observation)
+- 288: Ancestral Anger | controller=JackaI | owner=JackaI | zone=Stack (latest_object_observation)
+- 290: Hex Magic | controller=JackaI | owner=JackaI | zone=Hand (latest_object_observation)
+- 291: Ancestral Anger | controller=JackaI | owner=JackaI | zone=Graveyard (latest_object_observation)
+- 292: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 293: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 294: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 297: object 297 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 298: Burst Lightning | controller=JackaI | owner=JackaI | zone=Exile (latest_object_observation)
+- 299: Hawkeye, Young Avenger | controller=JackaI | owner=JackaI | zone=Hand (latest_object_observation)
+- 300: Hex Magic | controller=JackaI | owner=JackaI | zone=Hand (latest_object_observation)
+- 301: K'un-Lun Warrior | controller=JackaI | owner=JackaI | zone=Hand (latest_object_observation)
+- 302: Hex Magic | controller=JackaI | owner=JackaI | zone=Hand (latest_object_observation)
+- 304: Mountain | controller=JackaI | owner=JackaI | zone=Battlefield (latest_object_observation)
+- 305: Hex Magic | controller=JackaI | owner=JackaI | zone=Stack (latest_object_observation)
+- 309: Hex Magic | controller=JackaI | owner=JackaI | zone=Exile (latest_object_observation)
+- 310: K'un-Lun Warrior | controller=JackaI | owner=JackaI | zone=Exile (latest_object_observation)
+- 311: Hawkeye, Young Avenger | controller=JackaI | owner=JackaI | zone=Exile (latest_object_observation)
+- 315: Hex Magic | controller=JackaI | owner=JackaI | zone=Graveyard (latest_object_observation)
+- 316: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 317: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 318: object 318 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 319: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 322: object 322 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 324: Mountain | controller=JackaI | owner=JackaI | zone=Battlefield (latest_object_observation)
+- 325: Hawkeye, Young Avenger | controller=JackaI | owner=JackaI | zone=Battlefield (latest_object_observation)
+- 330: object 330 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 331: Bitter Triumph | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 332: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 333: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 337: object 337 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 338: Hawkeye, Young Avenger | controller=JackaI | owner=JackaI | zone=Exile (latest_object_observation)
+- 339: object 339 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 341: Mountain | controller=JackaI | owner=JackaI | zone=Battlefield (latest_object_observation)
+- 342: Ancestral Anger | controller=JackaI | owner=JackaI | zone=Stack (latest_object_observation)
+- 345: Ancestral Anger | controller=JackaI | owner=JackaI | zone=Graveyard (latest_object_observation)
+- 346: Sazacap's Brew | controller=JackaI | owner=JackaI | zone=Stack (latest_object_observation)
+- 349: Mountain | controller=JackaI | owner=JackaI | zone=Graveyard (latest_object_observation)
+- 350: Fish | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 353: Sazacap's Brew | controller=JackaI | owner=JackaI | zone=Graveyard (latest_object_observation)
+- 354: Bitter Triumph | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 355: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 358: object 358 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 361: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 362: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 363: Burst Lightning | controller=JackaI | owner=JackaI | zone=Stack (latest_object_observation)
+- 365: Burst Lightning | controller=JackaI | owner=JackaI | zone=Graveyard (latest_object_observation)
+- 366: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 367: Burst Lightning | controller=JackaI | owner=JackaI | zone=Battlefield (latest_object_observation)
+- 368: Burst Lightning | controller=JackaI | owner=JackaI | zone=Hand (latest_object_observation)
+- 370: Misty Knight, Hero for Hire | controller=JackaI | owner=JackaI | zone=Battlefield (latest_object_observation)
+- 373: object 373 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 374: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 375: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 381: object 381 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 382: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 384: Sazacap's Brew | controller=JackaI | owner=JackaI | zone=Stack (latest_object_observation)
+- 387: Sazacap's Brew | controller=JackaI | owner=JackaI | zone=Graveyard (latest_object_observation)
+- 388: Mountain | controller=JackaI | owner=JackaI | zone=Hand (latest_object_observation)
+- 390: Sazacap's Brew | controller=JackaI | owner=JackaI | zone=Graveyard (latest_object_observation)
+- 391: Mountain | controller=JackaI | owner=JackaI | zone=Battlefield (latest_object_observation)
+- 392: Hawkeye, Young Avenger | controller=JackaI | owner=JackaI | zone=Battlefield (latest_object_observation)
+- 397: object 397 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 398: object 398 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 399: object 399 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 400: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 401: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 404: object 404 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 405: Burst Lightning | controller=JackaI | owner=JackaI | zone=Exile (latest_object_observation)
+- 406: Mountain | controller=JackaI | owner=JackaI | zone=Hand (latest_object_observation)
+- 407: Bitter Triumph | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 410: Hawkeye, Young Avenger | controller=JackaI | owner=JackaI | zone=Graveyard (latest_object_observation)
+- 411: Bitter Triumph | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 412: object 412 | controller=JackaI | owner=JackaI | zone=unknown (inferred unknown) (latest_object_observation)
+- 413: Mountain | controller=JackaI | owner=JackaI | zone=Graveyard (latest_object_observation)
+- 414: Masked Meower | controller=JackaI | owner=JackaI | zone=Graveyard (latest_object_observation)
+- 417: object 417 | controller=JackaI | owner=JackaI | zone=unknown (inferred unknown) (latest_object_observation)
+- 420: Mountain | controller=JackaI | owner=JackaI | zone=Graveyard (latest_object_observation)
+- 422: Human Torch, Johnny Storm | controller=JackaI | owner=JackaI | zone=Battlefield (latest_object_observation)
+- 426: object 426 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 427: object 427 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 428: object 428 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 429: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 430: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 431: Bitter Triumph | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 434: Human Torch, Johnny Storm | controller=JackaI | owner=JackaI | zone=Graveyard (latest_object_observation)
+- 435: Bitter Triumph | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+JackaI: 51 total items
+  zones: Battlefield=12, Exile=6, Graveyard=13, Hand=12, Stack=6, unknown=2
+  objects: Mountain x11, Burst Lightning x7, Hawkeye, Young Avenger x7, Hex Magic x7, Sazacap's Brew x5, Ancestral Anger x4, K'un-Lun Warrior x3, Human Torch, Johnny Storm x2, Masked Meower x2, Misty Knight, Hero for Hire, object 412, object 417
+gian31: 52 total items
+  zones: Battlefield=14, Hand=15, Stack=6, unknown=17
+  objects: Bitter Triumph x7, Swamp x6, Deep-Cavern Bat x5, Lunar Convocation x4, Plains x4, Starscape Cleric x3, Authority of the Consuls x2, Makeshift Binding x2, Scoured Barrens x2, Fish, object 297, object 318
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (14): Bitter Triumph, Bitter Triumph, Deep-Cavern Bat, Deep-Cavern Bat, Deep-Cavern Bat, Fish, Plains, Plains, Scoured Barrens, Starscape Cleric, Starscape Cleric, Swamp, Swamp, Swamp
+  Graveyard: 0 card(s)
+JackaI:
+  Battlefield (12): Burst Lightning, Hawkeye, Young Avenger, Hawkeye, Young Avenger, Human Torch, Johnny Storm, Masked Meower, Misty Knight, Hero for Hire, Mountain, Mountain, Mountain, Mountain, Mountain, Mountain
+  Graveyard: 13 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+19 objects have no resolved final zone and are omitted from the known board state.
+JackaI: 2 unknown object(s)
+gian31: 17 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=27, Stack=12
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+JackaI:
+  Battlefield (7): Mountain, Mountain, Mountain, Mountain, Mountain, Misty Knight, Hero for Hire, Mountain
+  Graveyard (13): Ancestral Anger, Hex Magic, Ancestral Anger, Mountain, Sazacap's Brew, Burst Lightning, Sazacap's Brew, Sazacap's Brew, Hawkeye, Young Avenger, Mountain, Masked Meower, Mountain, Human Torch, Johnny Storm
+  Exile (4): Hex Magic, K'un-Lun Warrior, Hawkeye, Young Avenger, Burst Lightning
+gian31:
+  Battlefield (14): Plains, Authority of the Consuls, Swamp, Scoured Barrens, Lunar Convocation, Swamp, Makeshift Binding, Fish, Lunar Convocation, Plains, Starscape Cleric, Starscape Cleric, Deep-Cavern Bat, Swamp
+  Graveyard (3): Deep-Cavern Bat, Bitter Triumph, Bitter Triumph
+Known non-persistent entries (counts only):
+  JackaI: Hand=1, Limbo=4
+  gian31: Hand=1, Limbo=5, Stack=1
+  unknown: Library=79, Limbo=8
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: JackaI Battlefield=2
+- Turn 2: JackaI Battlefield=2; gian31 Battlefield=2
+- Turn 3: JackaI Battlefield=3; JackaI Graveyard=1; gian31 Battlefield=2
+- Turn 4: JackaI Battlefield=3; JackaI Graveyard=1; JackaI Exile=1; gian31 Battlefield=4
+- Turn 5: JackaI Battlefield=4; JackaI Graveyard=2; JackaI Exile=4; gian31 Battlefield=4
+- Turn 6: JackaI Battlefield=4; JackaI Graveyard=2; JackaI Exile=4; gian31 Battlefield=6
+- Turn 7: JackaI Battlefield=6; JackaI Graveyard=2; JackaI Exile=3; gian31 Battlefield=6
+- Turn 8: JackaI Battlefield=5; JackaI Graveyard=2; JackaI Exile=4; gian31 Battlefield=8
+- Turn 9: JackaI Battlefield=6; JackaI Graveyard=5; JackaI Exile=4; gian31 Battlefield=8
+- Turn 10: JackaI Battlefield=6; JackaI Graveyard=6; JackaI Exile=3; gian31 Battlefield=9; gian31 Graveyard=1
+- Turn 11: JackaI Battlefield=7; JackaI Graveyard=6; JackaI Exile=3; gian31 Battlefield=9; gian31 Graveyard=1
+- Turn 12: JackaI Battlefield=7; JackaI Graveyard=6; JackaI Exile=3; gian31 Battlefield=10; gian31 Graveyard=1
+- Turn 13: JackaI Battlefield=9; JackaI Graveyard=8; JackaI Exile=3; gian31 Battlefield=10; gian31 Graveyard=1
+- Turn 14: JackaI Battlefield=7; JackaI Graveyard=11; JackaI Exile=4; gian31 Battlefield=11; gian31 Graveyard=2
+- Turn 15: JackaI Battlefield=8; JackaI Graveyard=12; JackaI Exile=4; gian31 Battlefield=11; gian31 Graveyard=2
+- Turn 16: JackaI Battlefield=7; JackaI Graveyard=13; JackaI Exile=4; gian31 Battlefield=12; gian31 Graveyard=3
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Masked Meower resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 2: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Deep-Cavern Bat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Hawkeye, Young Avenger resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Misty Knight, Hero for Hire resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Hawkeye, Young Avenger resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Deep-Cavern Bat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: Human Torch, Johnny Storm resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
