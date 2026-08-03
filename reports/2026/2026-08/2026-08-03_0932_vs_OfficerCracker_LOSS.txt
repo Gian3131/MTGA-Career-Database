@@ -1,0 +1,456 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, OfficerCracker
+Seat map: Seat 1=gian31, Seat 2=OfficerCracker
+Turn range (known): 1 - 8
+Records: 21
+Action chains: 15
+Winner: OfficerCracker
+Final life: {'gian31': -10, 'OfficerCracker': 35}
+Lethal combat transition: gian31 10 -> -10. 3 unblocked attackers and observed P/T modifiers reconcile to 20 power; individual combat assignment unavailable.
+Match conclusion: Life total reached 0 observed for gian31.
+Last captured action before match-result payload: Turn 8 (Phase_Main1; Leyline of Hope, seq 194).
+Later numbered GRE record(s): 3 after action sequence 194 across turn(s) [8]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 21 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 8 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8] (raw records=8; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 8 explicit Library -> Hand movement(s); named in the draw record=3, resolved through an explicit identity transition=3, unresolved=2.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: OfficerCracker; observed final life totals: {'gian31': -10, 'OfficerCracker': 35}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 8 (Phase_Main1; Leyline of Hope, seq 194).
+Last captured life snapshot: gian31 10 -> -10; OfficerCracker 28 -> 35 (seq 205).
+Terminal condition observed: gian31 reached -10 life; exact lethal-source coverage is reported separately.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=11] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 282) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 282) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Leyline of Hope [280] Hand (OfficerCracker) -> Battlefield (Put; GRE sequence 5).
+      Plains [281] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 8).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      OfficerCracker: Battlefield: Leyline of Hope [280]
+      gian31: Battlefield: Hinterland Sanctifier [282], Plains [281]
+
+Turn 2
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=31] (active=OfficerCracker, phase=Phase_Main1, controller=OfficerCracker, owner=OfficerCracker, source_object=286)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 286) Hand (OfficerCracker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 286) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Haliya, Guided by Light [284] Library (OfficerCracker) -> Hand (OfficerCracker) (Draw; GRE sequence 25).
+      Plains [285] Hand (OfficerCracker) -> Battlefield (PlayLand; GRE sequence 28).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      OfficerCracker: Battlefield: Hinterland Sanctifier [286], Leyline of Hope [280], Plains [285]
+      gian31: Battlefield: Hinterland Sanctifier [282], Plains [281]
+
+Turn 3
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=51] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 290) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 290) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=53] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Godless Shrine [288] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 45).
+      Swamp [289] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 48).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      OfficerCracker: Battlefield: Hinterland Sanctifier [286], Leyline of Hope [280], Plains [285]
+      gian31: Battlefield: Hinterland Sanctifier [282], Hinterland Sanctifier [290], Plains [281], Swamp [289]
+
+Turn 4
+  - Ajani's Pridemate [valid_resolution_no_immediate_mutation, seq=74] (active=OfficerCracker, phase=Phase_Main1, controller=OfficerCracker, owner=OfficerCracker, source_object=295)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ajani's Pridemate resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ajani's Pridemate (object 295) Hand (OfficerCracker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ajani's Pridemate (object 295) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=76] (active=OfficerCracker, phase=Phase_Main1, controller=OfficerCracker, owner=OfficerCracker, source_object=286, source_last_explicit_zone=Battlefield)
+      effects: life +2
+      narrative: Ability of Hinterland Sanctifier: OfficerCracker gains 2 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=78] (active=OfficerCracker, phase=Phase_Main1, controller=OfficerCracker, owner=OfficerCracker, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [295].
+    net observed life change this turn: OfficerCracker +2 (individual changes below; gains and losses may offset)
+    life: OfficerCracker 20 -> 22
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [293] Library (OfficerCracker) -> Hand (OfficerCracker) (Draw; GRE sequence 68).
+      Plains [294] Hand (OfficerCracker) -> Battlefield (PlayLand; GRE sequence 71).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      OfficerCracker: Battlefield: Ajani's Pridemate [295], Hinterland Sanctifier [286], Leyline of Hope [280], Plains [285], Plains [294]
+      gian31: Battlefield: Hinterland Sanctifier [282], Hinterland Sanctifier [290], Plains [281], Swamp [289]
+
+Turn 5
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=100] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=302)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 302) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 302) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Lunar Convocation [300] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 93).
+      Godless Shrine [301] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 97).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      OfficerCracker: Battlefield: Ajani's Pridemate [295], Hinterland Sanctifier [286], Leyline of Hope [280], Plains [285], Plains [294]
+      gian31: Battlefield: Godless Shrine [301], Hinterland Sanctifier [282], Hinterland Sanctifier [290], Lunar Convocation [302], Plains [281], Swamp [289]
+
+Turn 6
+  - Ruin-Lurker Bat [valid_resolution_no_immediate_mutation, seq=121] (active=OfficerCracker, phase=Phase_Main1, controller=OfficerCracker, owner=OfficerCracker, source_object=307)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ruin-Lurker Bat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ruin-Lurker Bat (object 307) Hand (OfficerCracker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ruin-Lurker Bat (object 307) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=123] (active=OfficerCracker, phase=Phase_Main1, controller=OfficerCracker, owner=OfficerCracker, source_object=286, source_last_explicit_zone=Battlefield)
+      effects: life +2
+      narrative: Ability of Hinterland Sanctifier: OfficerCracker gains 2 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=125] (active=OfficerCracker, phase=Phase_Main1, controller=OfficerCracker, owner=OfficerCracker, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [295].
+  - Haliya, Guided by Light [valid_resolution_no_immediate_mutation, seq=128] (active=OfficerCracker, phase=Phase_Main1, controller=OfficerCracker, owner=OfficerCracker, source_object=311)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Haliya, Guided by Light resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Haliya, Guided by Light (object 311) Hand (OfficerCracker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Haliya, Guided by Light (object 311) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Haliya, Guided by Light [observed_semantic_effect, seq=131] (active=OfficerCracker, phase=Phase_Main1, controller=OfficerCracker, owner=OfficerCracker, source_object=311, source_last_explicit_zone=Battlefield)
+      effects: life +2
+      narrative: Ability of Haliya, Guided by Light: OfficerCracker gains 2 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=133] (active=OfficerCracker, phase=Phase_Main1, controller=OfficerCracker, owner=OfficerCracker, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [295].
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=135] (active=OfficerCracker, phase=Phase_Main1, controller=OfficerCracker, owner=OfficerCracker, source_object=286, source_last_explicit_zone=Battlefield)
+      effects: life +2
+      narrative: Ability of Hinterland Sanctifier: OfficerCracker gains 2 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=137] (active=OfficerCracker, phase=Phase_Main1, controller=OfficerCracker, owner=OfficerCracker, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [295].
+  - Ability of Haliya, Guided by Light [observed_semantic_effect, seq=157] (active=OfficerCracker, phase=Phase_Ending, step=Step_End, controller=OfficerCracker, owner=OfficerCracker, source_object=311, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Haliya, Guided by Light: draw.
+      explicit effect object references: object 229 [229], object 320 [320] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 320 (object 320) Library (OfficerCracker) -> Hand (OfficerCracker) (Draw; shared object ID)
+  - Ability of Haliya, Guided by Light [observed_semantic_effect, seq=159] (active=OfficerCracker, phase=Phase_Ending, step=Step_End, controller=OfficerCracker, owner=OfficerCracker, source_object=311, source_last_explicit_zone=Battlefield, source_successor=321 observed Battlefield -> Exile (Warp))
+      diagnostic: distinct consecutive ability records observed at seq 157 and 159; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: none immediately observed
+      narrative: Observed zone movements: Haliya, Guided by Light.
+      explicit effect object references: Haliya, Guided by Light [321] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Haliya, Guided by Light (object 321) Battlefield -> Exile (Warp; shared object ID)
+  Combat snapshots observed (active=OfficerCracker; frames: DeclareAttack):
+      attackers: Hinterland Sanctifier [286] (unblocked, observed P/T 3/4), Ajani's Pridemate [295] (unblocked, observed P/T 8/8)
+      blockers: none identified
+      combat-correlated defending-player life loss: 11; observed attacker power total: 11; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: OfficerCracker +6; gian31 -11 (individual changes below; gains and losses may offset)
+    life: OfficerCracker 22 -> 24
+    life: OfficerCracker 24 -> 26
+    life: OfficerCracker 26 -> 28
+    life (combat fully reconciled: snapshot power 11 + observed modifiers 0 = 11; individual assignment unavailable): gian31 21 -> 10
+    additional protocol-observed zone movements not assigned to an action chain:
+      Leyline of Hope [305] Library (OfficerCracker) -> Hand (OfficerCracker) (Draw; GRE sequence 115).
+      Plains [306] Hand (OfficerCracker) -> Battlefield (PlayLand; GRE sequence 118).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      OfficerCracker: Battlefield: Ajani's Pridemate [295], Hinterland Sanctifier [286], Leyline of Hope [280], Plains [285], Plains [294], Plains [306], Ruin-Lurker Bat [307]; Exile: Haliya, Guided by Light [321]
+      gian31: Battlefield: Godless Shrine [301], Hinterland Sanctifier [282], Hinterland Sanctifier [290], Lunar Convocation [302], Plains [281], Swamp [289]
+
+Turn 7
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=170] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=324)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 324) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 324) Stack -> Battlefield (Resolve; shared object ID)
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=173] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 326) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 326) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [322] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 163).
+      Godless Shrine [323] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 167).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      OfficerCracker: Battlefield: Ajani's Pridemate [295], Hinterland Sanctifier [286], Leyline of Hope [280], Plains [285], Plains [294], Plains [306], Ruin-Lurker Bat [307]; Exile: Haliya, Guided by Light [321]
+      gian31: Battlefield: Case of the Uneaten Feast [324], Godless Shrine [301], Godless Shrine [323], Hinterland Sanctifier [282], Hinterland Sanctifier [290], Lunar Convocation [302], Lunar Convocation [326], Plains [281], Swamp [289]
+
+Turn 8
+  - Leyline of Hope [valid_resolution_no_immediate_mutation, seq=194] (active=OfficerCracker, phase=Phase_Main1, controller=OfficerCracker, owner=OfficerCracker, source_object=331)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Leyline of Hope resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Leyline of Hope (object 331) Hand (OfficerCracker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leyline of Hope (object 331) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=OfficerCracker; frames: DeclareAttack):
+      attackers: Hinterland Sanctifier [286] (unblocked, observed P/T 5/6), Ajani's Pridemate [295] (unblocked, observed P/T 10/10), Ruin-Lurker Bat [307] (unblocked, observed P/T 5/5)
+      blockers: none identified
+      combat-correlated defending-player life loss: 20; observed attacker power total: 20; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: OfficerCracker +7; gian31 -20 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 20 + observed modifiers 0 = 20; individual assignment unavailable): gian31 10 -> -10
+    life (gain observed during combat phase; exact source unavailable): OfficerCracker 28 -> 35
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 329 [329] Library (OfficerCracker) -> Hand (OfficerCracker) (Draw; GRE sequence 188).
+      Plains [330] Hand (OfficerCracker) -> Battlefield (PlayLand; GRE sequence 191).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      OfficerCracker: Battlefield: Ajani's Pridemate [295], Hinterland Sanctifier [286], Leyline of Hope [280], Leyline of Hope [331], Plains [285], Plains [294], Plains [306], Plains [330], Ruin-Lurker Bat [307]; Exile: Haliya, Guided by Light [321]
+      gian31: Battlefield: Case of the Uneaten Feast [324], Godless Shrine [301], Godless Shrine [323], Hinterland Sanctifier [282], Hinterland Sanctifier [290], Lunar Convocation [302], Lunar Convocation [326], Plains [281], Swamp [289]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 8, seq 205, Phase_Main1: OfficerCracker 28 -> 35. Combat declaration observed; exact assignment unavailable. Previous captured action: Leyline of Hope.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 8: gian31 10 -> -10 (required change 20). Explained by exact same-record evidence: 0/20; semantically attributed: 0/20; unexplained residual: 0/20.
+  Fully reconciled from observed combat state and modifiers: 20/20 (pre-modifier power=20; explicit modifier power=+0; reconstructed post-modifier power=20; individual assignment unavailable).
+  Combat snapshot observed at or before lethal: Turn 8; attackers=Hinterland Sanctifier [286], Ajani's Pridemate [295], Ruin-Lurker Bat [307]; observed snapshot power total=20; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 8, Leyline of Hope (seq 194).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 5: Leyline of Hope [owner=OfficerCracker, controller=OfficerCracker] moves Hand (OfficerCracker) -> Battlefield (Put).
+- Turn 1, seq 8: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 1, seq 9: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 1, seq 11: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 25: Haliya, Guided by Light [owner/controller metadata unavailable] moves Library (OfficerCracker) -> Hand (OfficerCracker) (Draw).
+- Turn 2, seq 28: Plains [owner=OfficerCracker, controller=OfficerCracker] moves Hand (OfficerCracker) -> Battlefield (PlayLand).
+- Turn 2, seq 29: Hinterland Sanctifier [owner=OfficerCracker, controller=OfficerCracker] moves Hand (OfficerCracker) -> Stack (CastSpell).
+- Turn 2, seq 31: Hinterland Sanctifier [owner=OfficerCracker, controller=OfficerCracker] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 45: Godless Shrine [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 48: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 49: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 51: Hinterland Sanctifier [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 68: Plains [owner/controller metadata unavailable] moves Library (OfficerCracker) -> Hand (OfficerCracker) (Draw).
+- Turn 4, seq 71: Plains [owner=OfficerCracker, controller=OfficerCracker] moves Hand (OfficerCracker) -> Battlefield (PlayLand).
+- Turn 4, seq 72: Ajani's Pridemate [owner=OfficerCracker, controller=OfficerCracker] moves Hand (OfficerCracker) -> Stack (CastSpell).
+- Turn 4, seq 74: Ajani's Pridemate [owner=OfficerCracker, controller=OfficerCracker] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 93: Lunar Convocation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 97: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 98: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 100: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 115: Leyline of Hope [owner/controller metadata unavailable] moves Library (OfficerCracker) -> Hand (OfficerCracker) (Draw).
+- Turn 6, seq 118: Plains [owner=OfficerCracker, controller=OfficerCracker] moves Hand (OfficerCracker) -> Battlefield (PlayLand).
+- Turn 6, seq 119: Ruin-Lurker Bat [owner=OfficerCracker, controller=OfficerCracker] moves Hand (OfficerCracker) -> Stack (CastSpell).
+- Turn 6, seq 121: Ruin-Lurker Bat [owner=OfficerCracker, controller=OfficerCracker] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 126: Haliya, Guided by Light [owner=OfficerCracker, controller=OfficerCracker] moves Hand (OfficerCracker) -> Stack (CastSpell).
+- Turn 6, seq 128: Haliya, Guided by Light [owner=OfficerCracker, controller=OfficerCracker] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 157: object 320 [owner/controller metadata unavailable] moves Library (OfficerCracker) -> Hand (OfficerCracker) (Draw).
+- Turn 6, seq 159: Haliya, Guided by Light [owner=OfficerCracker, controller=OfficerCracker] moves Battlefield -> Exile (Warp).
+- Turn 7, seq 163: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 167: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 168: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 170: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 171: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 173: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 188: object 329 [owner/controller metadata unavailable] moves Library (OfficerCracker) -> Hand (OfficerCracker) (Draw).
+- Turn 8, seq 191: Plains [owner=OfficerCracker, controller=OfficerCracker] moves Hand (OfficerCracker) -> Battlefield (PlayLand).
+- Turn 8, seq 192: Leyline of Hope [owner=OfficerCracker, controller=OfficerCracker] moves Hand (OfficerCracker) -> Stack (CastSpell).
+- Turn 8, seq 194: Leyline of Hope [owner=OfficerCracker, controller=OfficerCracker] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 5: object 220 becomes object 280 [Leyline of Hope].
+- Turn 1, seq 8: object 164 becomes object 281 [Plains].
+- Turn 1, seq 9: object 162 becomes object 282 [Hinterland Sanctifier].
+- Turn 2, seq 25: object 226 becomes object 284 [Haliya, Guided by Light].
+- Turn 2, seq 28: object 225 becomes object 285 [Plains].
+- Turn 2, seq 29: object 223 becomes object 286 [Hinterland Sanctifier].
+- Turn 3, seq 45: object 166 becomes object 288 [Godless Shrine].
+- Turn 3, seq 48: object 163 becomes object 289 [Swamp].
+- Turn 3, seq 49: object 161 becomes object 290 [Hinterland Sanctifier].
+- Turn 4, seq 68: object 227 becomes object 293 [Plains].
+- Turn 4, seq 71: object 293 becomes object 294 [Plains].
+- Turn 4, seq 72: object 222 becomes object 295 [Ajani's Pridemate].
+- Turn 5, seq 93: object 167 becomes object 300 [Lunar Convocation].
+- Turn 5, seq 97: object 159 becomes object 301 [Godless Shrine].
+- Turn 5, seq 98: object 300 becomes object 302 [Lunar Convocation].
+- Turn 6, seq 115: object 228 becomes object 305 [Leyline of Hope].
+- Turn 6, seq 118: object 219 becomes object 306 [Plains].
+- Turn 6, seq 119: object 221 becomes object 307 [Ruin-Lurker Bat].
+- Turn 6, seq 126: object 284 becomes object 311 [Haliya, Guided by Light].
+- Turn 6, seq 157: object 229 becomes object 320 [object 229].
+- Turn 6, seq 159: object 311 becomes object 321 [Haliya, Guided by Light].
+- Turn 7, seq 163: object 168 becomes object 322 [Case of the Uneaten Feast].
+- Turn 7, seq 167: object 288 becomes object 323 [Godless Shrine].
+- Turn 7, seq 168: object 322 becomes object 324 [Case of the Uneaten Feast].
+- Turn 7, seq 171: object 165 becomes object 326 [Lunar Convocation].
+- Turn 8, seq 188: object 230 becomes object 329 [object 230].
+- Turn 8, seq 191: object 224 becomes object 330 [Plains].
+- Turn 8, seq 192: object 305 becomes object 331 [Leyline of Hope].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Plains (object 281) from Hand (gian31) to Battlefield.
+- Turn 2: OfficerCracker plays Plains (object 285) from Hand (OfficerCracker) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 289) from Hand (gian31) to Battlefield.
+- Turn 4: OfficerCracker plays Plains (object 294) from Hand (OfficerCracker) to Battlefield.
+- Turn 5: gian31 plays Godless Shrine (object 301) from Hand (gian31) to Battlefield.
+- Turn 6: OfficerCracker plays Plains (object 306) from Hand (OfficerCracker) to Battlefield.
+- Turn 7: gian31 plays Godless Shrine (object 323) from Hand (gian31) to Battlefield.
+- Turn 8: OfficerCracker plays Plains (object 330) from Hand (OfficerCracker) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 6: ordered adjacent records Hinterland Sanctifier -> Ajani's Pridemate; observed repetitions=2; net life: OfficerCracker +4. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Ajani's Pridemate=3, Hinterland Sanctifier=2.
+  Individual ability records remain in the timeline.
+- Turn 6: ordered adjacent records Ajani's Pridemate -> Haliya, Guided by Light; observed repetitions=2; net life: OfficerCracker +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Ajani's Pridemate=3, Haliya, Guided by Light=3.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Hinterland Sanctifier: casts=3; abilities=4 (triggered=4, activated=0) across turns [1, 2, 3, 3, 4, 6, 6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=4, other=0
+  observed effects: life +1, life +2
+- Ajani's Pridemate: casts=1; abilities=4 (triggered=4, activated=0) across turns [4, 4, 6, 6, 6]
+  observed effect totals: draws=0, tokens=0, counters=4, returns=0, damage=0, life_changes=0, other=4
+  observed effects: +1 counter(s), P/T +1/+1
+- Haliya, Guided by Light: casts=1; abilities=3 (triggered=3, activated=0) across turns [6, 6, 6, 6]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: draw, life +2, zone_transfer
+- Lunar Convocation: casts=2 across turns [5, 7]
+- Case of the Uneaten Feast: casts=1 across turns [7]
+- Leyline of Hope: casts=1 across turns [8]
+- Ruin-Lurker Bat: casts=1 across turns [6]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 6 - DeclareAttack (active=OfficerCracker)
+  attacker: Hinterland Sanctifier (OfficerCracker) -> gian31; unblocked in this observed snapshot
+  attacker: Ajani's Pridemate (OfficerCracker) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack (active=OfficerCracker)
+  attacker: Hinterland Sanctifier (OfficerCracker) -> gian31; unblocked in this observed snapshot
+  attacker: Ajani's Pridemate (OfficerCracker) -> gian31; unblocked in this observed snapshot
+  attacker: Ruin-Lurker Bat (OfficerCracker) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 160: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 161: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 280: Leyline of Hope | controller=OfficerCracker | owner=OfficerCracker | zone=Battlefield (latest_object_observation)
+- 281: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 282: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 285: Plains | controller=OfficerCracker | owner=OfficerCracker | zone=Battlefield (latest_object_observation)
+- 286: Hinterland Sanctifier | controller=OfficerCracker | owner=OfficerCracker | zone=Battlefield (latest_object_observation)
+- 288: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 289: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 290: Hinterland Sanctifier | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 292: object 292 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 294: Plains | controller=OfficerCracker | owner=OfficerCracker | zone=Battlefield (latest_object_observation)
+- 295: Ajani's Pridemate | controller=OfficerCracker | owner=OfficerCracker | zone=Battlefield (latest_object_observation)
+- 298: object 298 | controller=OfficerCracker | owner=OfficerCracker | zone=unknown (inferred unknown) (latest_object_observation)
+- 299: Deal Gone Bad | controller=OfficerCracker | owner=OfficerCracker | zone=unknown (inferred unknown) (latest_object_observation)
+- 300: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 301: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 302: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 306: Plains | controller=OfficerCracker | owner=OfficerCracker | zone=Battlefield (latest_object_observation)
+- 307: Ruin-Lurker Bat | controller=OfficerCracker | owner=OfficerCracker | zone=Battlefield (latest_object_observation)
+- 309: object 309 | controller=OfficerCracker | owner=OfficerCracker | zone=unknown (inferred unknown) (latest_object_observation)
+- 310: Deal Gone Bad | controller=OfficerCracker | owner=OfficerCracker | zone=unknown (inferred unknown) (latest_object_observation)
+- 311: Haliya, Guided by Light | controller=OfficerCracker | owner=OfficerCracker | zone=Battlefield (latest_object_observation)
+- 313: object 313 | controller=OfficerCracker | owner=OfficerCracker | zone=Hand (latest_object_observation)
+- 314: object 314 | controller=OfficerCracker | owner=OfficerCracker | zone=unknown (inferred unknown) (latest_object_observation)
+- 315: object 315 | controller=OfficerCracker | owner=OfficerCracker | zone=unknown (inferred unknown) (latest_object_observation)
+- 316: Deal Gone Bad | controller=OfficerCracker | owner=OfficerCracker | zone=unknown (inferred unknown) (latest_object_observation)
+- 317: Deal Gone Bad | controller=OfficerCracker | owner=OfficerCracker | zone=unknown (inferred unknown) (latest_object_observation)
+- 318: object 318 | controller=OfficerCracker | owner=OfficerCracker | zone=unknown (inferred unknown) (latest_object_observation)
+- 319: object 319 | controller=OfficerCracker | owner=OfficerCracker | zone=unknown (inferred unknown) (latest_object_observation)
+- 321: Haliya, Guided by Light | controller=OfficerCracker | owner=OfficerCracker | zone=unknown (inferred unknown) (latest_object_observation)
+- 322: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 323: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 324: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 326: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 330: Plains | controller=OfficerCracker | owner=OfficerCracker | zone=Battlefield (latest_object_observation)
+- 331: Leyline of Hope | controller=OfficerCracker | owner=OfficerCracker | zone=Stack (latest_object_observation)
+- 336: Deal Gone Bad | controller=OfficerCracker | owner=OfficerCracker | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+OfficerCracker: 23 total items
+  zones: Battlefield=9, Hand=1, Stack=1, unknown=12
+  objects: Deal Gone Bad x5, Plains x4, Haliya, Guided by Light x2, Leyline of Hope x2, Ajani's Pridemate, Hinterland Sanctifier, Ruin-Lurker Bat, object 298, object 309, object 313, object 314, object 315
+gian31: 20 total items
+  zones: Battlefield=6, Hand=9, Stack=3, unknown=2
+  objects: Godless Shrine x4, Hinterland Sanctifier x4, Lunar Convocation x4, Case of the Uneaten Feast x2, Plains x2, Swamp x2, Bloodthirsty Conqueror, object 292
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (6): Godless Shrine, Godless Shrine, Hinterland Sanctifier, Hinterland Sanctifier, Plains, Swamp
+  Graveyard: 0 card(s)
+OfficerCracker:
+  Battlefield (9): Ajani's Pridemate, Haliya, Guided by Light, Hinterland Sanctifier, Leyline of Hope, Plains, Plains, Plains, Plains, Ruin-Lurker Bat
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+14 objects have no resolved final zone and are omitted from the known board state.
+OfficerCracker: 12 unknown object(s)
+gian31: 2 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=10, Stack=4
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+OfficerCracker:
+  Battlefield (8): Leyline of Hope, Plains, Hinterland Sanctifier, Plains, Ajani's Pridemate, Plains, Ruin-Lurker Bat, Plains
+  Exile (1): Haliya, Guided by Light
+gian31:
+  Battlefield (9): Plains, Hinterland Sanctifier, Swamp, Hinterland Sanctifier, Godless Shrine, Lunar Convocation, Godless Shrine, Case of the Uneaten Feast, Lunar Convocation
+Known non-persistent entries (counts only):
+  OfficerCracker: Hand=2, Limbo=1, Pending=1, Stack=1
+  gian31: Hand=1, Limbo=3
+  unknown: Library=98, Limbo=9
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: OfficerCracker Battlefield=1; gian31 Battlefield=2
+- Turn 2: OfficerCracker Battlefield=3; gian31 Battlefield=2
+- Turn 3: OfficerCracker Battlefield=3; gian31 Battlefield=4
+- Turn 4: OfficerCracker Battlefield=5; gian31 Battlefield=4
+- Turn 5: OfficerCracker Battlefield=5; gian31 Battlefield=6
+- Turn 6: OfficerCracker Battlefield=7; OfficerCracker Exile=1; gian31 Battlefield=6
+- Turn 7: OfficerCracker Battlefield=7; OfficerCracker Exile=1; gian31 Battlefield=9
+- Turn 8: OfficerCracker Battlefield=9; OfficerCracker Exile=1; gian31 Battlefield=9
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 2: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Ajani's Pridemate resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Ruin-Lurker Bat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Haliya, Guided by Light resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Leyline of Hope resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
