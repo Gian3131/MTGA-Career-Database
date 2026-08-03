@@ -1,0 +1,820 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Wingit
+Seat map: Seat 1=gian31, Seat 2=Wingit
+Turn range (known): 1 - 11
+Records: 45
+Action chains: 28
+Winner: gian31
+Final life: {'gian31': 14, 'Wingit': -2}
+Lethal combat transition: Wingit 2 -> -2. Observed unblocked attackers reconcile 2/4 life loss; 2 additional life loss remains unexplained (individual combat assignment unavailable).
+Match conclusion: Life total reached 0 observed for Wingit.
+Last captured action before match-result payload: Turn 11 (Phase_Main1; Ability of Starscape Cleric, seq 368).
+Later numbered GRE record(s): 1 after action sequence 368 across turn(s) [11]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 36 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 12 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 8, 9, 10] (raw records=12; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 11 explicit Library -> Hand movement(s); named in the draw record=5, resolved through an explicit identity transition=6, unresolved=0.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 14, 'Wingit': -2}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 11 (Phase_Main1; Ability of Starscape Cleric, seq 368).
+Last captured life snapshot: Wingit 2 -> -2 (seq 378).
+Terminal condition observed: Wingit reached -2 life; exact lethal-source coverage is reported separately.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=9] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=279, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [279] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Scoured Barrens [279]
+
+Turn 2
+  - Sazh's Chocobo [valid_resolution_no_immediate_mutation, seq=29] (active=Wingit, phase=Phase_Main1, controller=Wingit, owner=Wingit, source_object=283)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sazh's Chocobo resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sazh's Chocobo (object 283) Hand (Wingit) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sazh's Chocobo (object 283) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [281] Library (Wingit) -> Hand (Wingit) (Draw; GRE sequence 23).
+      Forest [282] Hand (Wingit) -> Battlefield (PlayLand; GRE sequence 26).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Scoured Barrens [279]
+      Wingit: Battlefield: Forest [282], Sazh's Chocobo [283]
+
+Turn 3
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=49] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=287)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 287) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 287) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bitter Triumph [285] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 43).
+      Swamp [286] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 46).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [287], Scoured Barrens [279], Swamp [286]
+      Wingit: Battlefield: Forest [282], Sazh's Chocobo [283]
+
+Turn 4
+  - Ability of Sazh's Chocobo [observed_semantic_effect, seq=68] (active=Wingit, phase=Phase_Main1, controller=Wingit, owner=Wingit, source_object=283, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Sazh's Chocobo: Sazh's Chocobo gets +1/+1; 1 counter(s) are added to Sazh's Chocobo [283].
+  - Claim the Kingdom [valid_resolution_no_immediate_mutation, seq=71] (active=Wingit, phase=Phase_Main1, controller=Wingit, owner=Wingit, source_object=292)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Claim the Kingdom resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Claim the Kingdom (object 292) Hand (Wingit) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Claim the Kingdom (object 292) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=Wingit; frames: DeclareAttack -> DeclareBlock):
+      attackers: Sazh's Chocobo [283] (unblocked, observed P/T 1/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 21 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Loot, Exuberant Explorer [289] Library (Wingit) -> Hand (Wingit) (Draw; GRE sequence 63).
+      Forest [290] Hand (Wingit) -> Battlefield (PlayLand; GRE sequence 66).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [287], Scoured Barrens [279], Swamp [286]
+      Wingit: Battlefield: Claim the Kingdom [292], Forest [282], Forest [290], Sazh's Chocobo [283]
+
+Turn 5
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=98] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=297)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 297) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 297) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=100] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=287, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=102] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=297, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Wingit loses 1 life.
+    net observed life change this turn: Wingit -1; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life: Wingit 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [295] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 91).
+      Swamp [296] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 94).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [287], Scoured Barrens [279], Starscape Cleric [297], Swamp [286], Swamp [296]
+      Wingit: Battlefield: Claim the Kingdom [292], Forest [282], Forest [290], Sazh's Chocobo [283]
+
+Turn 6
+  - Ability of Claim the Kingdom [observed_semantic_effect, seq=124] (active=Wingit, phase=Phase_Main1, controller=Wingit, owner=Wingit, source_object=292, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, +1 counter(s), +1 counter(s)
+      narrative: Ability of Claim the Kingdom: Sazh's Chocobo gets +1/+1; 1 counter(s) are added to Sazh's Chocobo [283]; 1 counter(s) are added to Claim the Kingdom [292].
+      explicit effect object references: Sazh's Chocobo [283] (role/targeting only where the protocol identifies it)
+  - Ability of Sazh's Chocobo [observed_semantic_effect, seq=126] (active=Wingit, phase=Phase_Main1, controller=Wingit, owner=Wingit, source_object=283, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Sazh's Chocobo: Sazh's Chocobo gets +1/+1; 1 counter(s) are added to Sazh's Chocobo [283].
+  - Ability of Claim the Kingdom [observed_semantic_effect, seq=136] (active=Wingit, phase=Phase_Main1, controller=Wingit, owner=Wingit, source_object=292, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, +1 counter(s), +1 counter(s)
+      narrative: Ability of Claim the Kingdom: Sazh's Chocobo gets +1/+1; 1 counter(s) are added to Sazh's Chocobo [283]; 1 counter(s) are added to Claim the Kingdom [292].
+      explicit effect object references: Sazh's Chocobo [283] (role/targeting only where the protocol identifies it)
+  - Ability of Sazh's Chocobo [observed_semantic_effect, seq=138] (active=Wingit, phase=Phase_Main1, controller=Wingit, owner=Wingit, source_object=283, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Sazh's Chocobo: Sazh's Chocobo gets +1/+1; 1 counter(s) are added to Sazh's Chocobo [283].
+  Combat snapshots observed (active=Wingit; frames: DeclareAttack -> DeclareBlock):
+      attackers: Sazh's Chocobo [283] (unblocked, observed P/T 5/6)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -5 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 21 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bushwhack [302] Library (Wingit) -> Hand (Wingit) (Draw; GRE sequence 116).
+      Escape Tunnel [303] Hand (Wingit) -> Battlefield (PlayLand; GRE sequence 119).
+      Escape Tunnel [307] Battlefield -> Graveyard (Wingit) (Sacrifice; GRE sequence 127).
+        sacrifice observed after Ability of Sazh's Chocobo (seq 126); direct causal linkage is unavailable.
+      Forest [308] Library (Wingit) -> Battlefield (Put; GRE sequence 130).
+      Bushwhack [360] Hand (Wingit) -> Stack (CastSpell; GRE sequence 139).
+      Forest [363] Library (Wingit) -> Hand (Wingit) (Put; GRE sequence 143).
+      Bushwhack [413] Stack -> Graveyard (Wingit) (Resolve; GRE sequence 144).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [287], Scoured Barrens [279], Starscape Cleric [297], Swamp [286], Swamp [296]
+      Wingit: Battlefield: Claim the Kingdom [292], Forest [282], Forest [290], Forest [308], Sazh's Chocobo [283]; Graveyard: Bushwhack [413], Escape Tunnel [307]
+
+Turn 7
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=169] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=415)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 415) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 415) Stack -> Battlefield (Resolve; shared object ID)
+  - Bitter Triumph [observed_semantic_effect, seq=175] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=417)
+      effects: destroy
+      narrative: Bitter Triumph destroys Sazh's Chocobo.
+      explicit effect object references: Sazh's Chocobo [283], Sazh's Chocobo [420] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bitter Triumph (object 417) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sazh's Chocobo (object 420) Battlefield -> Graveyard (Wingit) (Destroy; shared object ID)
+      protocol-linked zone transfer: Bitter Triumph (object 421) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 417 -> transfer object 421 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [297] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      other-player life loss not explained by observed attacker damage: gian31 16 -> 13 (-3; phase=Phase_Main1; source unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Wingit -2; gian31 -3 (individual changes below; gains and losses may offset)
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): gian31 16 -> 13
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Wingit 19 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [414] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 164).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [287], Case of the Uneaten Feast [415], Scoured Barrens [279], Starscape Cleric [297], Swamp [286], Swamp [296]; Graveyard: Bitter Triumph [421]
+      Wingit: Battlefield: Claim the Kingdom [292], Forest [282], Forest [290], Forest [308]; Graveyard: Bushwhack [413], Escape Tunnel [307], Sazh's Chocobo [420]
+
+Turn 8
+  - Loot, Exuberant Explorer [valid_resolution_no_immediate_mutation, seq=200] (active=Wingit, phase=Phase_Main1, controller=Wingit, owner=Wingit, source_object=423)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Loot, Exuberant Explorer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Loot, Exuberant Explorer (object 423) Hand (Wingit) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Loot, Exuberant Explorer (object 423) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Claim the Kingdom [observed_semantic_effect, seq=205] (active=Wingit, phase=Phase_Main1, controller=Wingit, owner=Wingit, source_object=292, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, +1 counter(s), +1 counter(s)
+      narrative: Ability of Claim the Kingdom: Loot, Exuberant Explorer gets +1/+1; 1 counter(s) are added to Loot, Exuberant Explorer [423]; 1 counter(s) are added to Claim the Kingdom [292].
+      explicit effect object references: Loot, Exuberant Explorer [423] (role/targeting only where the protocol identifies it)
+  - Ability of Claim the Kingdom [observed_semantic_effect, seq=210] (active=Wingit, phase=Phase_Main1, controller=Wingit, owner=Wingit, source_object=292, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 205 and 210; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: P/T +1/+1, +1 counter(s), +1 counter(s)
+      narrative: Ability of Claim the Kingdom: Loot, Exuberant Explorer gets +1/+1; 1 counter(s) are added to Loot, Exuberant Explorer [423]; 1 counter(s) are added to Claim the Kingdom [292].
+      explicit effect object references: Loot, Exuberant Explorer [423] (role/targeting only where the protocol identifies it)
+  - Ability of Claim the Kingdom [observed_semantic_effect, seq=212] (active=Wingit, phase=Phase_Main1, controller=Wingit, owner=Wingit, source_object=292, source_last_explicit_zone=Battlefield, source_successor=432 observed Battlefield -> Graveyard (Wingit) (Sacrifice))
+      diagnostic: distinct consecutive ability records observed at seq 210 and 212; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: sacrifice
+      narrative: Ability of Claim the Kingdom sacrifices Claim the Kingdom.
+      explicit effect object references: Claim the Kingdom [432] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Claim the Kingdom (object 432) Battlefield -> Graveyard (Wingit) (Sacrifice; shared object ID)
+  - Ability of Claim the Kingdom [observed_semantic_effect, seq=216] (active=Wingit, phase=Phase_Main1, controller=Wingit, owner=Wingit, source_object=292, source_last_explicit_zone=Battlefield, source_successor=432 observed Battlefield -> Graveyard (Wingit) (Sacrifice))
+      diagnostic: distinct consecutive ability records observed at seq 212 and 216; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: +1 counter(s)
+      narrative: Ability of Claim the Kingdom: 1 counter(s) are added to Loot, Exuberant Explorer [423].
+      explicit effect object references: Loot, Exuberant Explorer [423] (role/targeting only where the protocol identifies it)
+  - Ordeal of Nylea [valid_resolution_no_immediate_mutation, seq=229] (active=Wingit, phase=Phase_Main2, controller=Wingit, owner=Wingit, source_object=435)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ordeal of Nylea resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ordeal of Nylea (object 435) Hand (Wingit) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ordeal of Nylea (object 435) Stack -> Battlefield (Resolve; shared object ID)
+      Aura attachment target: unavailable in captured GRE records.
+    additional protocol-observed zone movements not assigned to an action chain:
+      Ordeal of Nylea [422] Library (Wingit) -> Hand (Wingit) (Draw; GRE sequence 195).
+      Forest [427] Hand (Wingit) -> Battlefield (PlayLand; GRE sequence 201).
+      Forest [429] Hand (Wingit) -> Battlefield (PlayLand; GRE sequence 206).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [287], Case of the Uneaten Feast [415], Scoured Barrens [279], Starscape Cleric [297], Swamp [286], Swamp [296]; Graveyard: Bitter Triumph [421]
+      Wingit: Battlefield: Forest [282], Forest [290], Forest [308], Forest [427], Forest [429], Loot, Exuberant Explorer [423], Ordeal of Nylea [435]; Graveyard: Bushwhack [413], Claim the Kingdom [432], Escape Tunnel [307], Sazh's Chocobo [420]
+
+Turn 9
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=240] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=439, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=242] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=297, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Wingit loses 1 life.
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=245] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=442)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 442) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 442) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=248] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=415, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=251] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=442, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Wingit loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=253] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=297, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Wingit loses 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=255] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=287, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=258] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=442, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Wingit loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=260] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=297, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Wingit loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [297] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Wingit -7; gian31 +3 (individual changes below; gains and losses may offset)
+    life: gian31 13 -> 14
+    life: Wingit 17 -> 16
+    life: gian31 14 -> 15
+    life: Wingit 16 -> 15
+    life: Wingit 15 -> 14
+    life: gian31 15 -> 16
+    life: Wingit 14 -> 13
+    life: Wingit 13 -> 12
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Wingit 12 -> 10
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [438] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 235).
+      Scoured Barrens [439] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 238).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [287], Case of the Uneaten Feast [415], Marauding Blight-Priest [442], Scoured Barrens [279], Scoured Barrens [439], Starscape Cleric [297], Swamp [286], Swamp [296]; Graveyard: Bitter Triumph [421]
+      Wingit: Battlefield: Forest [282], Forest [290], Forest [308], Forest [427], Forest [429], Loot, Exuberant Explorer [423], Ordeal of Nylea [435]; Graveyard: Bushwhack [413], Claim the Kingdom [432], Escape Tunnel [307], Sazh's Chocobo [420]
+
+Turn 10
+  - Ability of Icetill Explorer [observed_semantic_effect, seq=288] (active=Wingit, phase=Phase_Main1, controller=Wingit, owner=Wingit, source_object=453, source_last_explicit_zone=Battlefield)
+      effects: none immediately observed
+      narrative: Ability of Icetill Explorer mills Claim the Kingdom.
+      explicit effect object references: object 367 [367], Claim the Kingdom [460] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Claim the Kingdom (object 460) Library (Wingit) -> Graveyard (Wingit) (Mill; shared object ID)
+  - Ability of Icetill Explorer [observed_semantic_effect, seq=295] (active=Wingit, phase=Phase_Main1, controller=Wingit, owner=Wingit, source_object=453, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 288 and 295; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: none immediately observed
+      narrative: Ability of Icetill Explorer mills Mossborn Hydra.
+      explicit effect object references: object 465 [465], Mossborn Hydra [509] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Mossborn Hydra (object 509) Library (Wingit) -> Graveyard (Wingit) (Mill; shared object ID)
+  - Ability of Icetill Explorer [observed_semantic_effect, seq=298] (active=Wingit, phase=Phase_Main1, controller=Wingit, owner=Wingit, source_object=453, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 295 and 298; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: none immediately observed
+      narrative: Ability of Icetill Explorer mills Sazh's Chocobo.
+      explicit effect object references: object 466 [466], Sazh's Chocobo [512] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Sazh's Chocobo (object 512) Library (Wingit) -> Graveyard (Wingit) (Mill; shared object ID)
+  - Ability of Icetill Explorer [observed_semantic_effect, seq=305] (active=Wingit, phase=Phase_Main1, controller=Wingit, owner=Wingit, source_object=453, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 298 and 305; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: none immediately observed
+      narrative: Ability of Icetill Explorer mills Mossborn Hydra.
+      explicit effect object references: object 517 [517], Mossborn Hydra [558] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Mossborn Hydra (object 558) Library (Wingit) -> Graveyard (Wingit) (Mill; shared object ID)
+  - Ability of Icetill Explorer [observed_semantic_effect, seq=308] (active=Wingit, phase=Phase_Main1, controller=Wingit, owner=Wingit, source_object=453, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 305 and 308; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: none immediately observed
+      narrative: Ability of Icetill Explorer mills Bushwhack.
+      explicit effect object references: object 518 [518], Bushwhack [561] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bushwhack (object 561) Library (Wingit) -> Graveyard (Wingit) (Mill; shared object ID)
+  - Ability of Icetill Explorer [observed_semantic_effect, seq=315] (active=Wingit, phase=Phase_Main1, controller=Wingit, owner=Wingit, source_object=453, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 308 and 315; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: none immediately observed
+      narrative: Ability of Icetill Explorer mills Forest.
+      explicit effect object references: object 566 [566], Forest [604] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Forest (object 604) Library (Wingit) -> Graveyard (Wingit) (Mill; shared object ID)
+  - Ability of Ordeal of Nylea [observed_semantic_effect, seq=323] (active=Wingit, phase=Phase_Combat, step=Step_DeclareAttack, controller=Wingit, owner=Wingit, source_object=435, source_last_explicit_zone=Battlefield, source_successor=606 observed Battlefield -> Graveyard (Wingit) (Sacrifice))
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ordeal of Nylea: sacrifice; Loot, Exuberant Explorer gets +1/+1; 1 counter(s) are added to Loot, Exuberant Explorer [423].
+      explicit effect object references: Loot, Exuberant Explorer [423], Ordeal of Nylea [606] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Ordeal of Nylea (object 606) Battlefield -> Graveyard (Wingit) (Sacrifice; shared object ID)
+  - Ability of Icetill Explorer [observed_semantic_effect, seq=331] (active=Wingit, phase=Phase_Combat, step=Step_DeclareAttack, controller=Wingit, owner=Wingit, source_object=453, source_last_explicit_zone=Battlefield)
+      effects: none immediately observed
+      narrative: Ability of Icetill Explorer mills Forest.
+      explicit effect object references: object 612 [612], Forest [647] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Forest (object 647) Library (Wingit) -> Graveyard (Wingit) (Mill; shared object ID)
+  - Ability of Icetill Explorer [observed_semantic_effect, seq=333] (active=Wingit, phase=Phase_Combat, step=Step_DeclareAttack, controller=Wingit, owner=Wingit, source_object=453, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 331 and 333; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: none immediately observed
+      narrative: Ability of Icetill Explorer mills Forest.
+      explicit effect object references: object 613 [613], Forest [648] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Forest (object 648) Library (Wingit) -> Graveyard (Wingit) (Mill; shared object ID)
+  Combat snapshots observed (active=Wingit; frames: DeclareAttack):
+      attackers: Loot, Exuberant Explorer [423] (unblocked, observed P/T 3/6)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 3; snapshot comparison does not reconcile (exact assignment unavailable).
+      P/T timing: combat snapshot power=3; explicit modifiers in the same observed combat context add 1 power to 1/1 unblocked attackers; post-modifier observed reconstruction=4 (fully reconciled; individual assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 1 = 4; individual assignment unavailable): gian31 16 -> 12
+    additional protocol-observed zone movements not assigned to an action chain:
+      Icetill Explorer [452] Library (Wingit) -> Hand (Wingit) (Draw; GRE sequence 280).
+      Icetill Explorer [453] Hand (Wingit) -> Stack (CastSpell; GRE sequence 283).
+      Icetill Explorer [453] Stack -> Battlefield (Resolve; GRE sequence 285).
+      Escape Tunnel [458] Graveyard (Wingit) -> Battlefield (PlayLand; GRE sequence 286).
+      Escape Tunnel [462] Battlefield -> Graveyard (Wingit) (Sacrifice; GRE sequence 289).
+        sacrifice observed after Ability of Icetill Explorer (seq 288); direct causal linkage is unavailable.
+      Forest [463] Library (Wingit) -> Battlefield (Put; GRE sequence 292).
+      Escape Tunnel [510] Graveyard (Wingit) -> Battlefield (PlayLand; GRE sequence 296).
+      Escape Tunnel [514] Battlefield -> Graveyard (Wingit) (Sacrifice; GRE sequence 299).
+        sacrifice observed after Ability of Icetill Explorer (seq 298); direct causal linkage is unavailable.
+      Forest [515] Library (Wingit) -> Battlefield (Put; GRE sequence 302).
+      Escape Tunnel [559] Graveyard (Wingit) -> Battlefield (PlayLand; GRE sequence 306).
+      Escape Tunnel [563] Battlefield -> Graveyard (Wingit) (Sacrifice; GRE sequence 309).
+        sacrifice observed after Ability of Icetill Explorer (seq 308); direct causal linkage is unavailable.
+      Forest [564] Library (Wingit) -> Battlefield (Put; GRE sequence 312).
+      Forest [608] Library (Wingit) -> Battlefield (Put; GRE sequence 326).
+      Forest [609] Library (Wingit) -> Battlefield (Put; GRE sequence 326).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Case of the Uneaten Feast [287], Case of the Uneaten Feast [415], Marauding Blight-Priest [442], Scoured Barrens [279], Scoured Barrens [439], Starscape Cleric [297], Swamp [286], Swamp [296]; Graveyard: Bitter Triumph [421]
+      Wingit: Battlefield: Forest [282], Forest [290], Forest [308], Forest [427], Forest [429], Forest [463], Forest [515], Forest [564], Forest [608], Forest [609], Icetill Explorer [453], Loot, Exuberant Explorer [423]; Graveyard: Bushwhack [413], Bushwhack [561], Claim the Kingdom [432], Claim the Kingdom [460], Escape Tunnel [563], Forest [604], Forest [647], Forest [648], Mossborn Hydra [509], Mossborn Hydra [558], Ordeal of Nylea [606], Sazh's Chocobo [420], Sazh's Chocobo [512]
+
+Turn 11
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation, seq=353] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=650)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 650) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 650) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=356] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=415, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=359] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=442, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Marauding Blight-Priest: Wingit loses 2 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=361] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=297, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Starscape Cleric: Wingit loses 2 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=363] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=287, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=366] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=442, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Marauding Blight-Priest: Wingit loses 2 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=368] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=297, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Starscape Cleric: Wingit loses 2 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [297] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-reconciled defending-player life-loss component: 2; observed attacker power total: 2; unresolved additional life loss: 2 (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Wingit -12; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 12 -> 13
+    life: Wingit 10 -> 8
+    life: Wingit 8 -> 6
+    life: gian31 13 -> 14
+    life: Wingit 6 -> 4
+    life: Wingit 4 -> 2
+    life (combat component reconciled: 2; unresolved residual life loss 2; exact assignment unavailable): Wingit 2 -> -2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Rush of Dread [649] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 348).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodletter of Aclazotz [650], Case of the Uneaten Feast [287], Case of the Uneaten Feast [415], Marauding Blight-Priest [442], Scoured Barrens [279], Scoured Barrens [439], Starscape Cleric [297], Swamp [286], Swamp [296]; Graveyard: Bitter Triumph [421]
+      Wingit: Battlefield: Forest [282], Forest [290], Forest [308], Forest [427], Forest [429], Forest [463], Forest [515], Forest [564], Forest [608], Forest [609], Icetill Explorer [453], Loot, Exuberant Explorer [423]; Graveyard: Bushwhack [413], Bushwhack [561], Claim the Kingdom [432], Claim the Kingdom [460], Escape Tunnel [563], Forest [604], Forest [647], Forest [648], Mossborn Hydra [509], Mossborn Hydra [558], Ordeal of Nylea [606], Sazh's Chocobo [420], Sazh's Chocobo [512]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 7, seq 173, Phase_Main1: gian31 16 -> 13. Combat declaration observed; exact assignment unavailable. Previous captured action: Case of the Uneaten Feast.
+- Turn 11, seq 378, Phase_Main1: Wingit 2 -> -2. combat-reconciled component 2; unresolved residual 2. Previous captured action: Starscape Cleric.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 11: Wingit 2 -> -2 (required change 4). Explained by exact same-record evidence: 0/4; semantically attributed: 0/4; unexplained residual: 2/4.
+  Combat-reconciled component: 2/4 (pre-modifier power=2; explicit modifier power=+0; observed post-modifier power=2 (not used to attribute damage when it exceeds the observed loss); unresolved residual=2; individual assignment unavailable).
+  Combat snapshot observed at or before lethal: Turn 11; attackers=Starscape Cleric [297]; observed snapshot power total=2; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 11, Ability of Starscape Cleric (seq 368).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 23: Forest [owner/controller metadata unavailable] moves Library (Wingit) -> Hand (Wingit) (Draw).
+- Turn 2, seq 26: Forest [owner=Wingit, controller=Wingit] moves Hand (Wingit) -> Battlefield (PlayLand).
+- Turn 2, seq 27: Sazh's Chocobo [owner=Wingit, controller=Wingit] moves Hand (Wingit) -> Stack (CastSpell).
+- Turn 2, seq 29: Sazh's Chocobo [owner=Wingit, controller=Wingit] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 43: Bitter Triumph [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 46: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 47: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 49: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 63: Loot, Exuberant Explorer [owner/controller metadata unavailable] moves Library (Wingit) -> Hand (Wingit) (Draw).
+- Turn 4, seq 66: Forest [owner=Wingit, controller=Wingit] moves Hand (Wingit) -> Battlefield (PlayLand).
+- Turn 4, seq 69: Claim the Kingdom [owner=Wingit, controller=Wingit] moves Hand (Wingit) -> Stack (CastSpell).
+- Turn 4, seq 71: Claim the Kingdom [owner=Wingit, controller=Wingit] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 91: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 94: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 95: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 98: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 116: Bushwhack [owner/controller metadata unavailable] moves Library (Wingit) -> Hand (Wingit) (Draw).
+- Turn 6, seq 119: Escape Tunnel [owner=Wingit, controller=Wingit] moves Hand (Wingit) -> Battlefield (PlayLand).
+- Turn 6, seq 127: Escape Tunnel [owner=Wingit, controller=Wingit] moves Battlefield -> Graveyard (Wingit) (Sacrifice).
+- Turn 6, seq 130: Forest [owner=Wingit, controller=Wingit] moves Library (Wingit) -> Battlefield (Put).
+- Turn 6, seq 139: Bushwhack [owner=Wingit, controller=Wingit] moves Hand (Wingit) -> Stack (CastSpell).
+- Turn 6, seq 143: Forest [owner/controller metadata unavailable] moves Library (Wingit) -> Hand (Wingit) (Put).
+- Turn 6, seq 144: Bushwhack [owner=Wingit, controller=Wingit] moves Stack -> Graveyard (Wingit) (Resolve).
+- Turn 7, seq 164: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 167: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 169: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 170: Bitter Triumph [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 175: Sazh's Chocobo [owner=Wingit, controller=Wingit] moves Battlefield -> Graveyard (Wingit) (Destroy).
+- Turn 7, seq 175: Bitter Triumph [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 8, seq 195: Ordeal of Nylea [owner/controller metadata unavailable] moves Library (Wingit) -> Hand (Wingit) (Draw).
+- Turn 8, seq 198: Loot, Exuberant Explorer [owner=Wingit, controller=Wingit] moves Hand (Wingit) -> Stack (CastSpell).
+- Turn 8, seq 200: Loot, Exuberant Explorer [owner=Wingit, controller=Wingit] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 201: Forest [owner=Wingit, controller=Wingit] moves Hand (Wingit) -> Battlefield (PlayLand).
+- Turn 8, seq 206: Forest [owner=Wingit, controller=Wingit] moves Hand (Wingit) -> Battlefield (PlayLand).
+- Turn 8, seq 212: Claim the Kingdom [owner=Wingit, controller=Wingit] moves Battlefield -> Graveyard (Wingit) (Sacrifice).
+- Turn 8, seq 225: Ordeal of Nylea [owner=Wingit, controller=Wingit] moves Hand (Wingit) -> Stack (CastSpell).
+- Turn 8, seq 229: Ordeal of Nylea [owner=Wingit, controller=Wingit] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 235: Scoured Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 238: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 243: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 245: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 280: Icetill Explorer [owner/controller metadata unavailable] moves Library (Wingit) -> Hand (Wingit) (Draw).
+- Turn 10, seq 283: Icetill Explorer [owner=Wingit, controller=Wingit] moves Hand (Wingit) -> Stack (CastSpell).
+- Turn 10, seq 285: Icetill Explorer [owner=Wingit, controller=Wingit] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 286: Escape Tunnel [owner=Wingit, controller=Wingit] moves Graveyard (Wingit) -> Battlefield (PlayLand).
+- Turn 10, seq 288: Claim the Kingdom [owner=Wingit, controller=Wingit] moves Library (Wingit) -> Graveyard (Wingit) (Mill).
+- Turn 10, seq 289: Escape Tunnel [owner=Wingit, controller=Wingit] moves Battlefield -> Graveyard (Wingit) (Sacrifice).
+- Turn 10, seq 292: Forest [owner=Wingit, controller=Wingit] moves Library (Wingit) -> Battlefield (Put).
+- Turn 10, seq 295: Mossborn Hydra [owner=Wingit, controller=Wingit] moves Library (Wingit) -> Graveyard (Wingit) (Mill).
+- Turn 10, seq 296: Escape Tunnel [owner=Wingit, controller=Wingit] moves Graveyard (Wingit) -> Battlefield (PlayLand).
+- Turn 10, seq 298: Sazh's Chocobo [owner=Wingit, controller=Wingit] moves Library (Wingit) -> Graveyard (Wingit) (Mill).
+- Turn 10, seq 299: Escape Tunnel [owner=Wingit, controller=Wingit] moves Battlefield -> Graveyard (Wingit) (Sacrifice).
+- Turn 10, seq 302: Forest [owner=Wingit, controller=Wingit] moves Library (Wingit) -> Battlefield (Put).
+- Turn 10, seq 305: Mossborn Hydra [owner=Wingit, controller=Wingit] moves Library (Wingit) -> Graveyard (Wingit) (Mill).
+- Turn 10, seq 306: Escape Tunnel [owner=Wingit, controller=Wingit] moves Graveyard (Wingit) -> Battlefield (PlayLand).
+- Turn 10, seq 308: Bushwhack [owner=Wingit, controller=Wingit] moves Library (Wingit) -> Graveyard (Wingit) (Mill).
+- Turn 10, seq 309: Escape Tunnel [owner=Wingit, controller=Wingit] moves Battlefield -> Graveyard (Wingit) (Sacrifice).
+- Turn 10, seq 312: Forest [owner=Wingit, controller=Wingit] moves Library (Wingit) -> Battlefield (Put).
+- Turn 10, seq 315: Forest [owner=Wingit, controller=Wingit] moves Library (Wingit) -> Graveyard (Wingit) (Mill).
+- Turn 10, seq 323: Ordeal of Nylea [owner=Wingit, controller=Wingit] moves Battlefield -> Graveyard (Wingit) (Sacrifice).
+- Turn 10, seq 326: Forest [owner=Wingit, controller=Wingit] moves Library (Wingit) -> Battlefield (Put).
+- Turn 10, seq 326: Forest [owner=Wingit, controller=Wingit] moves Library (Wingit) -> Battlefield (Put).
+- Turn 10, seq 331: Forest [owner=Wingit, controller=Wingit] moves Library (Wingit) -> Graveyard (Wingit) (Mill).
+- Turn 10, seq 333: Forest [owner=Wingit, controller=Wingit] moves Library (Wingit) -> Graveyard (Wingit) (Mill).
+- Turn 11, seq 348: Rush of Dread [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 351: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 353: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 165 becomes object 279 [Scoured Barrens].
+- Turn 2, seq 23: object 226 becomes object 281 [Forest].
+- Turn 2, seq 26: object 220 becomes object 282 [Forest].
+- Turn 2, seq 27: object 222 becomes object 283 [Sazh's Chocobo].
+- Turn 3, seq 43: object 166 becomes object 285 [Bitter Triumph].
+- Turn 3, seq 46: object 162 becomes object 286 [Swamp].
+- Turn 3, seq 47: object 159 becomes object 287 [Case of the Uneaten Feast].
+- Turn 4, seq 63: object 227 becomes object 289 [Loot, Exuberant Explorer].
+- Turn 4, seq 66: object 221 becomes object 290 [Forest].
+- Turn 4, seq 69: object 224 becomes object 292 [Claim the Kingdom].
+- Turn 5, seq 91: object 167 becomes object 295 [Starscape Cleric].
+- Turn 5, seq 94: object 164 becomes object 296 [Swamp].
+- Turn 5, seq 95: object 295 becomes object 297 [Starscape Cleric].
+- Turn 6, seq 116: object 228 becomes object 302 [Bushwhack].
+- Turn 6, seq 119: object 223 becomes object 303 [Escape Tunnel].
+- Turn 6, seq 127: object 303 becomes object 307 [Escape Tunnel].
+- Turn 6, seq 130: object 268 becomes object 308 [Forest].
+- Turn 6, seq 139: object 302 becomes object 360 [Bushwhack].
+- Turn 6, seq 143: object 356 becomes object 363 [Forest].
+- Turn 6, seq 144: object 360 becomes object 413 [Bushwhack].
+- Turn 7, seq 164: object 168 becomes object 414 [Case of the Uneaten Feast].
+- Turn 7, seq 167: object 414 becomes object 415 [Case of the Uneaten Feast].
+- Turn 7, seq 170: object 285 becomes object 417 [Bitter Triumph].
+- Turn 7, seq 175: object 283 becomes object 420 [Sazh's Chocobo].
+- Turn 7, seq 175: object 417 becomes object 421 [Bitter Triumph].
+- Turn 8, seq 195: object 365 becomes object 422 [Ordeal of Nylea].
+- Turn 8, seq 198: object 289 becomes object 423 [Loot, Exuberant Explorer].
+- Turn 8, seq 201: object 363 becomes object 427 [Forest].
+- Turn 8, seq 206: object 281 becomes object 429 [Forest].
+- Turn 8, seq 212: object 292 becomes object 432 [Claim the Kingdom].
+- Turn 8, seq 225: object 422 becomes object 435 [Ordeal of Nylea].
+- Turn 9, seq 235: object 169 becomes object 438 [Scoured Barrens].
+- Turn 9, seq 238: object 438 becomes object 439 [Scoured Barrens].
+- Turn 9, seq 243: object 161 becomes object 442 [Marauding Blight-Priest].
+- Turn 10, seq 280: object 366 becomes object 452 [Icetill Explorer].
+- Turn 10, seq 283: object 452 becomes object 453 [Icetill Explorer].
+- Turn 10, seq 286: object 307 becomes object 458 [Escape Tunnel].
+- Turn 10, seq 288: object 367 becomes object 460 [Claim the Kingdom].
+- Turn 10, seq 289: object 458 becomes object 462 [Escape Tunnel].
+- Turn 10, seq 292: object 371 becomes object 463 [Forest].
+- Turn 10, seq 295: object 465 becomes object 509 [Mossborn Hydra].
+- Turn 10, seq 296: object 462 becomes object 510 [Escape Tunnel].
+- Turn 10, seq 298: object 466 becomes object 512 [Sazh's Chocobo].
+- Turn 10, seq 299: object 510 becomes object 514 [Escape Tunnel].
+- Turn 10, seq 302: object 473 becomes object 515 [Forest].
+- Turn 10, seq 305: object 517 becomes object 558 [Mossborn Hydra].
+- Turn 10, seq 306: object 514 becomes object 559 [Escape Tunnel].
+- Turn 10, seq 308: object 518 becomes object 561 [Bushwhack].
+- Turn 10, seq 309: object 559 becomes object 563 [Escape Tunnel].
+- Turn 10, seq 312: object 541 becomes object 564 [Forest].
+- Turn 10, seq 315: object 566 becomes object 604 [Forest].
+- Turn 10, seq 323: object 435 becomes object 606 [Ordeal of Nylea].
+- Turn 10, seq 326: object 585 becomes object 608 [Forest].
+- Turn 10, seq 326: object 596 becomes object 609 [Forest].
+- Turn 10, seq 331: object 612 becomes object 647 [Forest].
+- Turn 10, seq 333: object 613 becomes object 648 [Forest].
+- Turn 11, seq 348: object 170 becomes object 649 [Rush of Dread].
+- Turn 11, seq 351: object 163 becomes object 650 [Bloodletter of Aclazotz].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Scoured Barrens (object 279) from Hand (gian31) to Battlefield.
+- Turn 2: Wingit plays Forest (object 282) from Hand (Wingit) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 286) from Hand (gian31) to Battlefield.
+- Turn 4: Wingit plays Forest (object 290) from Hand (Wingit) to Battlefield.
+- Turn 5: gian31 plays Swamp (object 296) from Hand (gian31) to Battlefield.
+- Turn 6: Wingit plays Escape Tunnel (object 303) from Hand (Wingit) to Battlefield.
+- Turn 8: Wingit plays Forest (object 427) from Hand (Wingit) to Battlefield.
+- Turn 8: Wingit plays Forest (object 429) from Hand (Wingit) to Battlefield.
+- Turn 9: gian31 plays Scoured Barrens (object 439) from Hand (gian31) to Battlefield.
+- Turn 10: Wingit plays Escape Tunnel (object 458) from Graveyard (Wingit) to Battlefield.
+- Turn 10: Wingit plays Escape Tunnel (object 510) from Graveyard (Wingit) to Battlefield.
+- Turn 10: Wingit plays Escape Tunnel (object 559) from Graveyard (Wingit) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 6: ordered adjacent records Claim the Kingdom -> Sazh's Chocobo; observed repetitions=2; net life: net life unavailable. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Claim the Kingdom=2, Sazh's Chocobo=2.
+  Individual ability records remain in the timeline.
+- Turn 9: ordered adjacent records Starscape Cleric -> Case of the Uneaten Feast; observed repetitions=2; net life: Wingit -2, gian31 +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=2, Starscape Cleric=3.
+  Individual ability records remain in the timeline.
+- Turn 9: ordered adjacent records Case of the Uneaten Feast -> Marauding Blight-Priest; observed repetitions=2; net life: Wingit -2, gian31 +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=2, Marauding Blight-Priest=2.
+  Individual ability records remain in the timeline.
+- Turn 9: ordered adjacent records Marauding Blight-Priest -> Starscape Cleric; observed repetitions=2; net life: Wingit -4. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Marauding Blight-Priest=2, Starscape Cleric=3.
+  Individual ability records remain in the timeline.
+- Turn 11: ordered adjacent records Case of the Uneaten Feast -> Marauding Blight-Priest; observed repetitions=2; net life: Wingit -4, gian31 +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=2, Marauding Blight-Priest=2.
+  Individual ability records remain in the timeline.
+- Turn 11: ordered adjacent records Marauding Blight-Priest -> Starscape Cleric; observed repetitions=2; net life: Wingit -8. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Marauding Blight-Priest=2, Starscape Cleric=2.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 6: ordered adjacent records Claim the Kingdom -> Sazh's Chocobo; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+- Turn 8: ordered adjacent records Claim the Kingdom -> Claim the Kingdom; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+- Turn 9: ordered adjacent records Case of the Uneaten Feast -> Marauding Blight-Priest -> Starscape Cleric; observed repetitions=2 (pattern length 3; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+- Turn 10: ordered adjacent records Icetill Explorer -> Icetill Explorer; observed repetitions=3 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+- Turn 11: ordered adjacent records Case of the Uneaten Feast -> Marauding Blight-Priest -> Starscape Cleric; observed repetitions=2 (pattern length 3; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Icetill Explorer: abilities=8 (triggered=8, activated=0) across turns [10, 10, 10, 10, 10, 10, 10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=8
+  observed effects: zone_transfer
+- Case of the Uneaten Feast: casts=2; abilities=5 (triggered=5, activated=0) across turns [3, 5, 7, 9, 9, 11, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=0
+  observed effects: life +1
+- Claim the Kingdom: casts=1; abilities=6 (triggered=6, activated=0) across turns [4, 6, 6, 8, 8, 8, 8]
+  observed effect totals: draws=0, tokens=0, counters=9, returns=0, damage=0, life_changes=0, other=5
+  observed effects: +1 counter(s), P/T +1/+1, sacrifice
+- Starscape Cleric: casts=1; abilities=6 (triggered=6, activated=0) across turns [5, 5, 9, 9, 9, 11, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=6, other=2
+  observed effects: life -1, life -2, synthetic event
+- Marauding Blight-Priest: casts=1; abilities=4 (triggered=4, activated=0) across turns [9, 9, 9, 11, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=4, other=1
+  observed effects: life -1, life -2, synthetic event
+- Sazh's Chocobo: casts=1; abilities=3 (triggered=3, activated=0) across turns [2, 4, 6, 6]
+  observed effect totals: draws=0, tokens=0, counters=3, returns=0, damage=0, life_changes=0, other=3
+  observed effects: +1 counter(s), P/T +1/+1
+- Ordeal of Nylea: casts=1; abilities=1 (triggered=1, activated=0) across turns [8, 10]
+  observed effect totals: draws=0, tokens=0, counters=1, returns=0, damage=0, life_changes=0, other=2
+  observed effects: +1 counter(s), P/T +1/+1, sacrifice
+- Scoured Barrens: abilities=2 (triggered=2, activated=0) across turns [1, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Bitter Triumph: casts=1 across turns [7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Bloodletter of Aclazotz: casts=1 across turns [11]
+- Loot, Exuberant Explorer: casts=1 across turns [8]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 4 - DeclareAttack, DeclareBlock (active=Wingit)
+  attacker: Sazh's Chocobo (Wingit) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 6 - DeclareAttack, DeclareBlock (active=Wingit)
+  attacker: Sazh's Chocobo (Wingit) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Wingit; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Wingit; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack (active=Wingit)
+  attacker: Loot, Exuberant Explorer (Wingit) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Wingit; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 10: Ability of Ordeal of Nylea (active=Wingit) - Ability of Ordeal of Nylea: sacrifice; Loot, Exuberant Explorer gets +1/+1; 1 counter(s) are added to target.
+- Turn 10: Ability of Icetill Explorer (active=Wingit) - Ability of Icetill Explorer: zone_transfer.
+- Turn 10: Ability of Icetill Explorer (active=Wingit) - Ability of Icetill Explorer: zone_transfer.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 160: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 161: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 279: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 280: object 280 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 282: Forest | controller=Wingit | owner=Wingit | zone=Battlefield (latest_object_observation)
+- 283: Sazh's Chocobo | controller=Wingit | owner=Wingit | zone=Battlefield (latest_object_observation)
+- 285: Bitter Triumph | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 286: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 287: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 290: Forest | controller=Wingit | owner=Wingit | zone=Battlefield (latest_object_observation)
+- 291: Ureni of the Unwritten | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 292: Claim the Kingdom | controller=Wingit | owner=Wingit | zone=Stack (latest_object_observation)
+- 295: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 296: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 297: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 300: object 300 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 301: object 301 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 303: Escape Tunnel | controller=Wingit | owner=Wingit | zone=Battlefield (latest_object_observation)
+- 304: Ureni of the Unwritten | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 305: object 305 | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 306: object 306 | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 307: Escape Tunnel | controller=Wingit | owner=Wingit | zone=Graveyard (latest_object_observation)
+- 308: Forest | controller=Wingit | owner=Wingit | zone=Battlefield (latest_object_observation)
+- 309: Ureni of the Unwritten | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 310: object 310 | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 356: Forest | controller=Wingit | owner=Wingit | zone=Hand (latest_object_observation)
+- 360: Bushwhack | controller=Wingit | owner=Wingit | zone=Stack (latest_object_observation)
+- 362: Forest | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 364: Forest | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 413: Bushwhack | controller=Wingit | owner=Wingit | zone=Graveyard (latest_object_observation)
+- 414: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 415: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 417: Bitter Triumph | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 420: Sazh's Chocobo | controller=Wingit | owner=Wingit | zone=Graveyard (latest_object_observation)
+- 421: Bitter Triumph | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 423: Loot, Exuberant Explorer | controller=Wingit | owner=Wingit | zone=Battlefield (latest_object_observation)
+- 427: Forest | controller=Wingit | owner=Wingit | zone=Battlefield (latest_object_observation)
+- 428: object 428 | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 429: Forest | controller=Wingit | owner=Wingit | zone=Battlefield (latest_object_observation)
+- 430: object 430 | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 431: object 431 | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 432: Claim the Kingdom | controller=Wingit | owner=Wingit | zone=Graveyard (latest_object_observation)
+- 434: object 434 | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 435: Ordeal of Nylea | controller=Wingit | owner=Wingit | zone=Stack (latest_object_observation)
+- 438: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 439: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 440: object 440 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 441: object 441 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 442: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 446: object 446 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 447: object 447 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 448: object 448 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 449: object 449 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 450: object 450 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 451: object 451 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 453: Icetill Explorer | controller=Wingit | owner=Wingit | zone=Battlefield (latest_object_observation)
+- 458: Escape Tunnel | controller=Wingit | owner=Wingit | zone=Battlefield (latest_object_observation)
+- 459: object 459 | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 460: Claim the Kingdom | controller=Wingit | owner=Wingit | zone=Graveyard (latest_object_observation)
+- 461: object 461 | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 462: Escape Tunnel | controller=Wingit | owner=Wingit | zone=Graveyard (latest_object_observation)
+- 463: Forest | controller=Wingit | owner=Wingit | zone=Battlefield (latest_object_observation)
+- 464: object 464 | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 509: Mossborn Hydra | controller=Wingit | owner=Wingit | zone=Graveyard (latest_object_observation)
+- 510: Escape Tunnel | controller=Wingit | owner=Wingit | zone=Hand (latest_object_observation)
+- 511: object 511 | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 512: Sazh's Chocobo | controller=Wingit | owner=Wingit | zone=Graveyard (latest_object_observation)
+- 513: object 513 | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 514: Escape Tunnel | controller=Wingit | owner=Wingit | zone=Hand (latest_object_observation)
+- 515: Forest | controller=Wingit | owner=Wingit | zone=Battlefield (latest_object_observation)
+- 516: object 516 | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 558: Mossborn Hydra | controller=Wingit | owner=Wingit | zone=Graveyard (latest_object_observation)
+- 559: Escape Tunnel | controller=Wingit | owner=Wingit | zone=Hand (latest_object_observation)
+- 560: object 560 | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 561: Bushwhack | controller=Wingit | owner=Wingit | zone=Graveyard (latest_object_observation)
+- 562: object 562 | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 563: Escape Tunnel | controller=Wingit | owner=Wingit | zone=Graveyard (latest_object_observation)
+- 564: Forest | controller=Wingit | owner=Wingit | zone=Battlefield (latest_object_observation)
+- 565: object 565 | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 604: Forest | controller=Wingit | owner=Wingit | zone=Graveyard (latest_object_observation)
+- 605: Trouble in Pairs | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 606: Ordeal of Nylea | controller=Wingit | owner=Wingit | zone=Graveyard (latest_object_observation)
+- 607: object 607 | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 608: Forest | controller=Wingit | owner=Wingit | zone=Battlefield (latest_object_observation)
+- 609: Forest | controller=Wingit | owner=Wingit | zone=Battlefield (latest_object_observation)
+- 610: object 610 | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 611: object 611 | controller=Wingit | owner=Wingit | zone=unknown (inferred unknown) (latest_object_observation)
+- 647: Forest | controller=Wingit | owner=Wingit | zone=Graveyard (latest_object_observation)
+- 648: Forest | controller=Wingit | owner=Wingit | zone=Graveyard (latest_object_observation)
+- 649: Rush of Dread | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 650: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 655: object 655 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 656: object 656 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 657: object 657 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 658: object 658 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 659: object 659 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 660: object 660 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Wingit: 62 total items
+  zones: Battlefield=15, Graveyard=15, Hand=4, Stack=3, unknown=25
+  objects: Forest x16, Escape Tunnel x8, Bushwhack x3, Claim the Kingdom x3, Sazh's Chocobo x3, Ureni of the Unwritten x3, Mossborn Hydra x2, Ordeal of Nylea x2, Icetill Explorer, Loot, Exuberant Explorer, Trouble in Pairs, object 305
+gian31: 40 total items
+  zones: Battlefield=7, Hand=12, Stack=3, unknown=18
+  objects: Case of the Uneaten Feast x4, Scoured Barrens x4, Swamp x4, Bitter Triumph x3, Bloodletter of Aclazotz x2, Marauding Blight-Priest x2, Starscape Cleric x2, Bloodthirsty Conqueror, Rush of Dread, object 280, object 300, object 301
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (7): Bloodletter of Aclazotz, Marauding Blight-Priest, Scoured Barrens, Scoured Barrens, Starscape Cleric, Swamp, Swamp
+  Graveyard: 0 card(s)
+Wingit:
+  Battlefield (15): Escape Tunnel, Escape Tunnel, Forest, Forest, Forest, Forest, Forest, Forest, Forest, Forest, Forest, Forest, Icetill Explorer, Loot, Exuberant Explorer, Sazh's Chocobo
+  Graveyard: 15 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+43 objects have no resolved final zone and are omitted from the known board state.
+Wingit: 25 unknown object(s)
+gian31: 18 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=16, Stack=6
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Wingit:
+  Battlefield (12): Forest, Forest, Forest, Loot, Exuberant Explorer, Forest, Forest, Icetill Explorer, Forest, Forest, Forest, Forest, Forest
+  Graveyard (13): Bushwhack, Sazh's Chocobo, Claim the Kingdom, Claim the Kingdom, Mossborn Hydra, Sazh's Chocobo, Mossborn Hydra, Bushwhack, Escape Tunnel, Forest, Ordeal of Nylea, Forest, Forest
+gian31:
+  Battlefield (9): Scoured Barrens, Swamp, Case of the Uneaten Feast, Swamp, Starscape Cleric, Case of the Uneaten Feast, Scoured Barrens, Marauding Blight-Priest, Bloodletter of Aclazotz
+  Graveyard (1): Bitter Triumph
+Known non-persistent entries (counts only):
+  Wingit: Limbo=8
+  gian31: Hand=2, Limbo=3
+  unknown: Hand=2, Library=81, Limbo=17
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1
+- Turn 2: Wingit Battlefield=2; gian31 Battlefield=1
+- Turn 3: Wingit Battlefield=2; gian31 Battlefield=3
+- Turn 4: Wingit Battlefield=4; gian31 Battlefield=3
+- Turn 5: Wingit Battlefield=4; gian31 Battlefield=5
+- Turn 6: Wingit Battlefield=5; Wingit Graveyard=2; gian31 Battlefield=5
+- Turn 7: Wingit Battlefield=4; Wingit Graveyard=3; gian31 Battlefield=6; gian31 Graveyard=1
+- Turn 8: Wingit Battlefield=7; Wingit Graveyard=4; gian31 Battlefield=6; gian31 Graveyard=1
+- Turn 9: Wingit Battlefield=7; Wingit Graveyard=4; gian31 Battlefield=8; gian31 Graveyard=1
+- Turn 10: Wingit Battlefield=12; Wingit Graveyard=13; gian31 Battlefield=8; gian31 Graveyard=1
+- Turn 11: Wingit Battlefield=12; Wingit Graveyard=13; gian31 Battlefield=9; gian31 Graveyard=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Sazh's Chocobo resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Claim the Kingdom resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Loot, Exuberant Explorer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Ordeal of Nylea resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
