@@ -1,0 +1,921 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: Simplytec, gian31
+Seat map: Seat 1=Simplytec, Seat 2=gian31
+Turn range (known): 1 - 16
+Unnumbered turn groups retained: 1
+Records: 57
+Action chains: 31
+Winner: gian31
+Final life: {'Simplytec': 1, 'gian31': 20}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 16 (Phase_Main1; Ability of Marauding Blight-Priest, seq 461).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 31 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 11 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 6, 8, 10, 12, 13, 14, 15] (raw records=11; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 20 explicit Library -> Hand movement(s); named in the draw record=15, resolved through an explicit identity transition=5, unresolved=0.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'Simplytec': 1, 'gian31': 20}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 16 (Phase_Main1; Ability of Marauding Blight-Priest, seq 461).
+Last captured life snapshot: gian31 19 -> 20 (seq 459).
+Tokens on battlefield at their last observation (not confirmed at match end): Treasure [528] controller=Simplytec, created Turn 15, last observed Turn 15 seq 384, P/T unavailable; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Mountain.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Plains.
+- Turn 3: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Draconautics Engineer.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Swamp; explicit battlefield exits=Draconautics Engineer.
+- Turn 5: actions: cards=1, abilities=0; explicit battlefield entries=Firebending Student.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Phyrexian Arena.
+- Turn 7: actions: cards=2, abilities=1; combat snapshots=1; life mutations=2; explicit battlefield entries=Firebending Student.
+- Turn 8: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Swamp, Bloodletter of Aclazotz.
+- Turn 9: actions: cards=2, abilities=2; combat snapshots=1; life mutations=1; explicit battlefield exits=Bloodletter of Aclazotz.
+- Turn 10: actions: cards=2, abilities=3; life mutations=3; explicit battlefield entries=Plains, Case of the Uneaten Feast, Marauding Blight-Priest.
+- Turn 11: actions: cards=1, abilities=0; explicit battlefield entries=Coruscation Mage.
+- Turn 12: actions: cards=2, abilities=5; life mutations=5; explicit battlefield entries=Swamp, Deep-Cavern Bat, Makeshift Binding; explicit battlefield exits=Coruscation Mage.
+- Turn 13: actions: cards=0, abilities=0; explicit battlefield entries=Mountain.
+- Turn 14: actions: cards=1, abilities=4; combat snapshots=1; life mutations=6; explicit battlefield entries=Plains, Makeshift Binding; explicit battlefield exits=Firebending Student.
+- Turn 15: actions: cards=2, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Mountain; explicit battlefield exits=Firebending Student.
+- Turn 16: actions: cards=1, abilities=23; life mutations=22; explicit battlefield entries=Bloodthirsty Conqueror.
+- Turn None: actions: cards=0, abilities=0.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [413] Hand (Simplytec) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Simplytec: Battlefield: Mountain [413]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [414] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 21).
+      Plains [415] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Simplytec: Battlefield: Mountain [413]
+      gian31: Battlefield: Plains [415]
+
+Turn 3
+  - Draconautics Engineer [valid_resolution_no_immediate_mutation, seq=44] (active=Simplytec, phase=Phase_Main1, controller=Simplytec, owner=Simplytec, source_object=418)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Draconautics Engineer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Draconautics Engineer (object 418) Hand (Simplytec) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Draconautics Engineer (object 418) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Chandra, Flameshaper [416] Library (Simplytec) -> Hand (Simplytec) (Draw; GRE sequence 38).
+      Mountain [417] Hand (Simplytec) -> Battlefield (PlayLand; GRE sequence 41).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Simplytec: Battlefield: Draconautics Engineer [418], Mountain [413], Mountain [417]
+      gian31: Battlefield: Plains [415]
+
+Turn 4
+  - Shoot the Sheriff [observed_semantic_effect, seq=66] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=423)
+      effects: destroy
+      narrative: Shoot the Sheriff destroys Draconautics Engineer.
+      explicit effect object references: Draconautics Engineer [418], Draconautics Engineer [426] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 423) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Draconautics Engineer (object 426) Battlefield -> Graveyard (Simplytec) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 427) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 423 -> transfer object 427 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Phyrexian Arena [421] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 58).
+      Swamp [422] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 61).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Simplytec: Battlefield: Mountain [413], Mountain [417]; Graveyard: Draconautics Engineer [426]
+      gian31: Battlefield: Plains [415], Swamp [422]; Graveyard: Shoot the Sheriff [427]
+
+Turn 5
+  - Firebending Student [valid_resolution_no_immediate_mutation, seq=85] (active=Simplytec, phase=Phase_Main1, controller=Simplytec, owner=Simplytec, source_object=429)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Firebending Student resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Firebending Student (object 429) Hand (Simplytec) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Firebending Student (object 429) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Firebending Student [428] Library (Simplytec) -> Hand (Simplytec) (Draw; GRE sequence 80).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Simplytec: Battlefield: Firebending Student [429], Mountain [413], Mountain [417]; Graveyard: Draconautics Engineer [426]
+      gian31: Battlefield: Plains [415], Swamp [422]; Graveyard: Shoot the Sheriff [427]
+
+Turn 6
+  - Phyrexian Arena [valid_resolution_no_immediate_mutation, seq=105] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=434)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Phyrexian Arena resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Phyrexian Arena (object 434) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Phyrexian Arena (object 434) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [432] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 99).
+      Swamp [433] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 102).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Simplytec: Battlefield: Firebending Student [429], Mountain [413], Mountain [417]; Graveyard: Draconautics Engineer [426]
+      gian31: Battlefield: Phyrexian Arena [434], Plains [415], Swamp [422], Swamp [433]; Graveyard: Shoot the Sheriff [427]
+
+Turn 7
+  - Firebending Student [valid_resolution_no_immediate_mutation, seq=124] (active=Simplytec, phase=Phase_Main1, controller=Simplytec, owner=Simplytec, source_object=439)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Firebending Student resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Firebending Student (object 439) Hand (Simplytec) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Firebending Student (object 439) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Firebending Student [valid_resolution_no_immediate_mutation, seq=132] (active=Simplytec, phase=Phase_Combat, step=Step_DeclareAttack, controller=Simplytec, owner=Simplytec, source_object=429, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Firebending Student resolves with no immediate observed mutation.
+  - Shock [observed_semantic_effect, seq=144] (active=Simplytec, phase=Phase_Combat, step=Step_DeclareBlock, controller=Simplytec, owner=Simplytec, source_object=443)
+      effects: 2 damage; life -2 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Shock: gian31 takes 2 damage (resulting in 2 life lost).
+      explicit effect object references: gian31 [player seat 2] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shock (object 443) Hand (Simplytec) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Shock (object 446) Stack -> Graveyard (Simplytec) (Resolve; shared object ID)
+      identity continuity: source object 443 -> transfer object 446 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=Simplytec; frames: DeclareAttack -> DeclareBlock):
+      attackers: Firebending Student [429] (unblocked, observed P/T 1/2)
+      blockers: none identified
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -4 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Shock; direct protocol link unavailable): gian31 20 -> 18
+    life (semantically attributed to Shock; direct protocol link unavailable): gian31 18 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Involuntary Employment [438] Library (Simplytec) -> Hand (Simplytec) (Draw; GRE sequence 119).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Simplytec: Battlefield: Firebending Student [429], Firebending Student [439], Mountain [413], Mountain [417]; Graveyard: Draconautics Engineer [426], Shock [446]
+      gian31: Battlefield: Phyrexian Arena [434], Plains [415], Swamp [422], Swamp [433]; Graveyard: Shoot the Sheriff [427]
+
+Turn 8
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=156] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=434, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 363 [363], Swamp [448] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Swamp (object 448) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation, seq=164] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=451)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 451) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 451) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 16 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [449] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 158).
+      Swamp [450] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 161).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Simplytec: Battlefield: Firebending Student [429], Firebending Student [439], Mountain [413], Mountain [417]; Graveyard: Draconautics Engineer [426], Shock [446]
+      gian31: Battlefield: Bloodletter of Aclazotz [451], Phyrexian Arena [434], Plains [415], Swamp [422], Swamp [433], Swamp [450]; Graveyard: Shoot the Sheriff [427]
+
+Turn 9
+  - Abrade [observed_semantic_effect, seq=191] (active=Simplytec, phase=Phase_Main1, controller=Simplytec, owner=Simplytec, source_object=457)
+      effects: 3 damage
+      narrative: Abrade: Bloodletter of Aclazotz takes 3 damage.
+      explicit effect object references: Bloodletter of Aclazotz [451] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Abrade (object 457) Hand (Simplytec) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Abrade (object 462) Stack -> Graveyard (Simplytec) (Resolve; shared object ID)
+      identity continuity: source object 457 -> transfer object 462 (explicit GRE ObjectIdChanged chain).
+  - Ability of Firebending Student [valid_resolution_no_immediate_mutation, seq=200] (active=Simplytec, phase=Phase_Combat, step=Step_DeclareAttack, controller=Simplytec, owner=Simplytec, source_object=439, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Firebending Student resolves with no immediate observed mutation.
+  - Ability of Firebending Student [valid_resolution_no_immediate_mutation, seq=202] (active=Simplytec, phase=Phase_Combat, step=Step_DeclareAttack, controller=Simplytec, owner=Simplytec, source_object=429, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Firebending Student resolves with no immediate observed mutation.
+  - Burst Lightning [observed_semantic_effect, seq=213] (active=Simplytec, phase=Phase_Combat, step=Step_DeclareAttack, controller=Simplytec, owner=Simplytec, source_object=465)
+      effects: 2 damage
+      narrative: Burst Lightning: Bloodletter of Aclazotz takes 2 damage.
+      explicit effect object references: Bloodletter of Aclazotz [451] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Burst Lightning (object 465) Hand (Simplytec) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Burst Lightning (object 468) Stack -> Graveyard (Simplytec) (Resolve; shared object ID)
+      identity continuity: source object 465 -> transfer object 468 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 469) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+  Combat snapshots observed (active=Simplytec; frames: DeclareAttack -> DeclareBlock):
+      attackers: Firebending Student [429] (unblocked, observed P/T 3/4), Firebending Student [439] (unblocked, observed P/T 3/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 6; observed attacker power total: 6; snapshot comparison matches (exact assignment unavailable).
+      combat-result zone change: Bloodletter of Aclazotz [469] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -6 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 6 + observed modifiers 0 = 6; individual assignment unavailable): gian31 15 -> 9
+    additional protocol-observed zone movements not assigned to an action chain:
+      Abrade [456] Library (Simplytec) -> Hand (Simplytec) (Draw; GRE sequence 178).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Simplytec: Battlefield: Firebending Student [429], Firebending Student [439], Mountain [413], Mountain [417]; Graveyard: Abrade [462], Burst Lightning [468], Draconautics Engineer [426], Shock [446]
+      gian31: Battlefield: Phyrexian Arena [434], Plains [415], Swamp [422], Swamp [433], Swamp [450]; Graveyard: Bloodletter of Aclazotz [469], Shoot the Sheriff [427]
+
+Turn 10
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=227] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=434, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 365 [365], Case of the Uneaten Feast [471] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 471) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=235] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=474)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 474) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 474) Stack -> Battlefield (Resolve; shared object ID)
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=238] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=476)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 476) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 476) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=240] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=474, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=242] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=476, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Simplytec loses 1 life.
+    net observed life change this turn: Simplytec -1; gian31 +0 (individual changes below; gains and losses may offset)
+    life: gian31 9 -> 8
+    life: gian31 8 -> 9
+    life: Simplytec 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [472] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 229).
+      Plains [473] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 232).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Simplytec: Battlefield: Firebending Student [429], Firebending Student [439], Mountain [413], Mountain [417]; Graveyard: Abrade [462], Burst Lightning [468], Draconautics Engineer [426], Shock [446]
+      gian31: Battlefield: Case of the Uneaten Feast [474], Marauding Blight-Priest [476], Phyrexian Arena [434], Plains [415], Plains [473], Swamp [422], Swamp [433], Swamp [450]; Graveyard: Bloodletter of Aclazotz [469], Shoot the Sheriff [427]
+
+Turn 11
+  - Coruscation Mage [valid_resolution_no_immediate_mutation, seq=262] (active=Simplytec, phase=Phase_Main1, controller=Simplytec, owner=Simplytec, source_object=483)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Coruscation Mage resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Coruscation Mage (object 483) Hand (Simplytec) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Coruscation Mage (object 483) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Coruscation Mage [482] Library (Simplytec) -> Hand (Simplytec) (Draw; GRE sequence 256).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Simplytec: Battlefield: Coruscation Mage [483], Firebending Student [429], Firebending Student [439], Mountain [413], Mountain [417]; Graveyard: Abrade [462], Burst Lightning [468], Draconautics Engineer [426], Shock [446]
+      gian31: Battlefield: Case of the Uneaten Feast [474], Marauding Blight-Priest [476], Phyrexian Arena [434], Plains [415], Plains [473], Swamp [422], Swamp [433], Swamp [450]; Graveyard: Bloodletter of Aclazotz [469], Shoot the Sheriff [427]
+
+Turn 12
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=277] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=434, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 367 [367], Deep-Cavern Bat [487] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 487) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Deep-Cavern Bat [valid_resolution_no_immediate_mutation, seq=285] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=490)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deep-Cavern Bat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deep-Cavern Bat (object 490) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 490) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=293] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=474, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=295] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=476, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Simplytec loses 1 life.
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=298] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=499)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 499) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 499) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=302] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=499, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Coruscation Mage; gian31 gains 2 life.
+      explicit effect object references: Coruscation Mage [483], Coruscation Mage [504] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Coruscation Mage (object 504) Battlefield -> Exile (Exile; shared object ID)
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=304] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=476, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Simplytec loses 1 life.
+    net observed life change this turn: Simplytec -2; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 9 -> 8
+    life: gian31 8 -> 9
+    life: Simplytec 19 -> 18
+    life: gian31 9 -> 11
+    life: Simplytec 18 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [488] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 279).
+      Swamp [489] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 282).
+      Chandra, Flameshaper [495] Hand (Simplytec) -> Exile (Exile; GRE sequence 291).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Simplytec: Battlefield: Firebending Student [429], Firebending Student [439], Mountain [413], Mountain [417]; Graveyard: Abrade [462], Burst Lightning [468], Draconautics Engineer [426], Shock [446]; Exile: Chandra, Flameshaper [495], Coruscation Mage [504]
+      gian31: Battlefield: Case of the Uneaten Feast [474], Deep-Cavern Bat [490], Makeshift Binding [499], Marauding Blight-Priest [476], Phyrexian Arena [434], Plains [415], Plains [473], Swamp [422], Swamp [433], Swamp [450], Swamp [489]; Graveyard: Bloodletter of Aclazotz [469], Shoot the Sheriff [427]
+
+Turn 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [506] Library (Simplytec) -> Hand (Simplytec) (Draw; GRE sequence 319).
+      Mountain [507] Hand (Simplytec) -> Battlefield (PlayLand; GRE sequence 322).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Simplytec: Battlefield: Firebending Student [429], Firebending Student [439], Mountain [413], Mountain [417], Mountain [507]; Graveyard: Abrade [462], Burst Lightning [468], Draconautics Engineer [426], Shock [446]; Exile: Chandra, Flameshaper [495], Coruscation Mage [504]
+      gian31: Battlefield: Case of the Uneaten Feast [474], Deep-Cavern Bat [490], Makeshift Binding [499], Marauding Blight-Priest [476], Phyrexian Arena [434], Plains [415], Plains [473], Swamp [422], Swamp [433], Swamp [450], Swamp [489]; Graveyard: Bloodletter of Aclazotz [469], Shoot the Sheriff [427]
+
+Turn 14
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=337] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=434, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 369 [369], Shoot the Sheriff [509] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 509) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=345] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=512)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 512) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 512) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=349] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=512, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Firebending Student; gian31 gains 2 life.
+      explicit effect object references: Firebending Student [429], Firebending Student [517] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Firebending Student (object 517) Battlefield -> Exile (Exile; shared object ID)
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=351] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=476, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Simplytec loses 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=364] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=476, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 351 and 364; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Simplytec loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Marauding Blight-Priest [476] (unblocked, observed P/T 3/2), Deep-Cavern Bat [490] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Simplytec -6; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 11 -> 10
+    life: gian31 10 -> 12
+    life: Simplytec 17 -> 16
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): Simplytec 16 -> 12
+    life (gain observed during combat phase; exact source unavailable): gian31 12 -> 13
+    life: Simplytec 12 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [510] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 339).
+      Plains [511] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 342).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Simplytec: Battlefield: Firebending Student [439], Mountain [413], Mountain [417], Mountain [507]; Graveyard: Abrade [462], Burst Lightning [468], Draconautics Engineer [426], Shock [446]; Exile: Chandra, Flameshaper [495], Coruscation Mage [504], Firebending Student [517]
+      gian31: Battlefield: Case of the Uneaten Feast [474], Deep-Cavern Bat [490], Makeshift Binding [499], Makeshift Binding [512], Marauding Blight-Priest [476], Phyrexian Arena [434], Plains [415], Plains [473], Plains [511], Swamp [422], Swamp [433], Swamp [450], Swamp [489]; Graveyard: Bloodletter of Aclazotz [469], Shoot the Sheriff [427]
+
+Turn 15
+  - Involuntary Employment [observed_semantic_effect, seq=384] (active=Simplytec, phase=Phase_Main1, controller=Simplytec, owner=Simplytec, source_object=522)
+      effects: token creation
+      narrative: Involuntary Employment: a token is created.
+      explicit effect object references: Treasure [528] (role/targeting only where the protocol identifies it)
+      token created: Treasure (object 528, controller=Simplytec); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 522).
+      protocol-linked zone transfer: Involuntary Employment (object 522) Hand (Simplytec) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Involuntary Employment (object 529) Stack -> Graveyard (Simplytec) (Resolve; shared object ID)
+      identity continuity: source object 522 -> transfer object 529 (explicit GRE ObjectIdChanged chain).
+  - Shoot the Sheriff [observed_semantic_effect, seq=392] (active=unknown, controller=gian31, owner=gian31, source_object=530)
+      chronology reconciliation: parser turn group None conflicts with Turn 15; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: destroy
+      narrative: Shoot the Sheriff destroys Firebending Student.
+      explicit effect object references: Firebending Student [439], Firebending Student [533] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 530) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Firebending Student (object 533) Battlefield -> Graveyard (Simplytec) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 534) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 530 -> transfer object 534 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=Simplytec; frames: DeclareAttack -> DeclareBlock):
+      attackers: Marauding Blight-Priest [476] (unblocked, observed P/T 3/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -3 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 13 -> 10
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [520] Library (Simplytec) -> Hand (Simplytec) (Draw; GRE sequence 374).
+      Mountain [521] Hand (Simplytec) -> Battlefield (PlayLand; GRE sequence 377).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Simplytec: Battlefield: Mountain [413], Mountain [417], Mountain [507], Mountain [521]; Graveyard: Abrade [462], Burst Lightning [468], Draconautics Engineer [426], Firebending Student [533], Involuntary Employment [529], Shock [446]; Exile: Chandra, Flameshaper [495], Coruscation Mage [504], Firebending Student [517]
+      gian31: Battlefield: Case of the Uneaten Feast [474], Deep-Cavern Bat [490], Makeshift Binding [499], Makeshift Binding [512], Marauding Blight-Priest [476], Phyrexian Arena [434], Plains [415], Plains [473], Plains [511], Swamp [422], Swamp [433], Swamp [450], Swamp [489]; Graveyard: Bloodletter of Aclazotz [469], Shoot the Sheriff [427], Shoot the Sheriff [534]
+
+Turn 16
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=410] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=434, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 371 [371], Case of the Uneaten Feast [536] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 536) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation, seq=417] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=538)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 538) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 538) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=419] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=474, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=421] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=476, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Simplytec loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=423] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=538, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=425] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=476, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Simplytec loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=427] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=538, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=429] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=476, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Simplytec loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=431] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=538, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=433] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=476, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Simplytec loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=435] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=538, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=437] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=476, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Simplytec loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=439] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=538, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=441] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=476, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Simplytec loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=443] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=538, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=445] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=476, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Simplytec loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=447] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=538, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=449] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=476, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Simplytec loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=451] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=538, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=453] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=476, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Simplytec loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=455] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=538, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=457] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=476, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Simplytec loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=459] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=538, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=461] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=476, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Simplytec loses 1 life.
+    net observed life change this turn: Simplytec -10; gian31 +10 (individual changes below; gains and losses may offset)
+    life: gian31 10 -> 9
+    life: gian31 9 -> 10
+    life: Simplytec 11 -> 10
+    life: gian31 10 -> 11
+    life: Simplytec 10 -> 9
+    life: gian31 11 -> 12
+    life: Simplytec 9 -> 8
+    life: gian31 12 -> 13
+    life: Simplytec 8 -> 7
+    life: gian31 13 -> 14
+    life: Simplytec 7 -> 6
+    life: gian31 14 -> 15
+    life: Simplytec 6 -> 5
+    life: gian31 15 -> 16
+    life: Simplytec 5 -> 4
+    life: gian31 16 -> 17
+    life: Simplytec 4 -> 3
+    life: gian31 17 -> 18
+    life: Simplytec 3 -> 2
+    life: gian31 18 -> 19
+    life: Simplytec 2 -> 1
+    life: gian31 19 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodthirsty Conqueror [537] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 412).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Simplytec: Battlefield: Mountain [413], Mountain [417], Mountain [507], Mountain [521]; Graveyard: Abrade [462], Burst Lightning [468], Draconautics Engineer [426], Firebending Student [533], Involuntary Employment [529], Shock [446]; Exile: Chandra, Flameshaper [495], Coruscation Mage [504], Firebending Student [517]
+      gian31: Battlefield: Bloodthirsty Conqueror [538], Case of the Uneaten Feast [474], Deep-Cavern Bat [490], Makeshift Binding [499], Makeshift Binding [512], Marauding Blight-Priest [476], Phyrexian Arena [434], Plains [415], Plains [473], Plains [511], Swamp [422], Swamp [433], Swamp [450], Swamp [489]; Graveyard: Bloodletter of Aclazotz [469], Shoot the Sheriff [427], Shoot the Sheriff [534]
+
+UNNUMBERED / UNRESOLVED TURN GROUP
+  - The captured records do not provide a verified numbered turn for the following events.
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 7, seq 144, Phase_Combat: gian31 20 -> 18; gian31 18 -> 16. Semantic attribution: Shock; direct protocol link unavailable. Previous captured action: Shock.
+- Turn 14, seq 362, Phase_Main1: gian31 12 -> 13. Combat declaration observed; exact assignment unavailable. Previous captured action: Marauding Blight-Priest.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 1 token creations observed; 1 active as last observed; 0 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Treasure [528] controller=Simplytec; created Turn 15 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 15, object 528 (latest observed P/T unknown; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Mountain [owner=Simplytec, controller=Simplytec] moves Hand (Simplytec) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 24: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 38: Chandra, Flameshaper [owner=Simplytec, controller=Simplytec] moves Library (Simplytec) -> Hand (Simplytec) (Draw).
+- Turn 3, seq 41: Mountain [owner=Simplytec, controller=Simplytec] moves Hand (Simplytec) -> Battlefield (PlayLand).
+- Turn 3, seq 42: Draconautics Engineer [owner=Simplytec, controller=Simplytec] moves Hand (Simplytec) -> Stack (CastSpell).
+- Turn 3, seq 44: Draconautics Engineer [owner=Simplytec, controller=Simplytec] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 58: Phyrexian Arena [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 61: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 62: Shoot the Sheriff [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 66: Draconautics Engineer [owner=Simplytec, controller=Simplytec] moves Battlefield -> Graveyard (Simplytec) (Destroy).
+- Turn 4, seq 66: Shoot the Sheriff [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 5, seq 80: Firebending Student [owner/controller metadata unavailable] moves Library (Simplytec) -> Hand (Simplytec) (Draw).
+- Turn 5, seq 83: Firebending Student [owner=Simplytec, controller=Simplytec] moves Hand (Simplytec) -> Stack (CastSpell).
+- Turn 5, seq 85: Firebending Student [owner=Simplytec, controller=Simplytec] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 99: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 102: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 103: Phyrexian Arena [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 105: Phyrexian Arena [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 119: Involuntary Employment [owner=Simplytec, controller=Simplytec] moves Library (Simplytec) -> Hand (Simplytec) (Draw).
+- Turn 7, seq 122: Firebending Student [owner=Simplytec, controller=Simplytec] moves Hand (Simplytec) -> Stack (CastSpell).
+- Turn 7, seq 124: Firebending Student [owner=Simplytec, controller=Simplytec] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 135: Shock [owner=Simplytec, controller=Simplytec] moves Hand (Simplytec) -> Stack (CastSpell).
+- Turn 7, seq 144: Shock [owner=Simplytec, controller=Simplytec] moves Stack -> Graveyard (Simplytec) (Resolve).
+- Turn 8, seq 156: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 158: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 161: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 162: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 164: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 178: Abrade [owner/controller metadata unavailable] moves Library (Simplytec) -> Hand (Simplytec) (Draw).
+- Turn 9, seq 181: Abrade [owner=Simplytec, controller=Simplytec] moves Hand (Simplytec) -> Stack (CastSpell).
+- Turn 9, seq 191: Abrade [owner=Simplytec, controller=Simplytec] moves Stack -> Graveyard (Simplytec) (Resolve).
+- Turn 9, seq 203: Burst Lightning [owner=Simplytec, controller=Simplytec] moves Hand (Simplytec) -> Stack (CastSpell).
+- Turn 9, seq 213: Burst Lightning [owner=Simplytec, controller=Simplytec] moves Stack -> Graveyard (Simplytec) (Resolve).
+- Turn 9, seq 213: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 10, seq 227: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 229: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 232: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 233: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 235: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 236: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 238: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 256: Coruscation Mage [owner/controller metadata unavailable] moves Library (Simplytec) -> Hand (Simplytec) (Draw).
+- Turn 11, seq 259: Coruscation Mage [owner=Simplytec, controller=Simplytec] moves Hand (Simplytec) -> Stack (CastSpell).
+- Turn 11, seq 262: Coruscation Mage [owner=Simplytec, controller=Simplytec] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 277: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 279: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 282: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 283: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 285: Deep-Cavern Bat [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 291: Chandra, Flameshaper [owner=Simplytec, controller=Simplytec] moves Hand (Simplytec) -> Exile (Exile).
+- Turn 12, seq 296: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 298: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 302: Coruscation Mage [owner=Simplytec, controller=Simplytec] moves Battlefield -> Exile (Exile).
+- Turn 13, seq 319: Mountain [owner/controller metadata unavailable] moves Library (Simplytec) -> Hand (Simplytec) (Draw).
+- Turn 13, seq 322: Mountain [owner=Simplytec, controller=Simplytec] moves Hand (Simplytec) -> Battlefield (PlayLand).
+- Turn 14, seq 337: Shoot the Sheriff [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 339: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 342: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 14, seq 343: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 345: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 349: Firebending Student [owner=Simplytec, controller=Simplytec] moves Battlefield -> Exile (Exile).
+- Turn 15, seq 374: Mountain [owner/controller metadata unavailable] moves Library (Simplytec) -> Hand (Simplytec) (Draw).
+- Turn 15, seq 377: Mountain [owner=Simplytec, controller=Simplytec] moves Hand (Simplytec) -> Battlefield (PlayLand).
+- Turn 15, seq 378: Involuntary Employment [owner=Simplytec, controller=Simplytec] moves Hand (Simplytec) -> Stack (CastSpell).
+- Turn 15, seq 384: Involuntary Employment [owner=Simplytec, controller=Simplytec] moves Stack -> Graveyard (Simplytec) (Resolve).
+- Turn 15, seq 388: Shoot the Sheriff [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 15, seq 392: Firebending Student [owner=Simplytec, controller=Simplytec] moves Battlefield -> Graveyard (Simplytec) (Destroy).
+- Turn 15, seq 392: Shoot the Sheriff [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 16, seq 410: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 412: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 415: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 417: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 230 becomes object 413 [Mountain].
+- Turn 2, seq 21: object 360 becomes object 414 [Plains].
+- Turn 2, seq 24: object 357 becomes object 415 [Plains].
+- Turn 3, seq 38: object 234 becomes object 416 [Chandra, Flameshaper].
+- Turn 3, seq 41: object 231 becomes object 417 [Mountain].
+- Turn 3, seq 42: object 233 becomes object 418 [Draconautics Engineer].
+- Turn 4, seq 58: object 361 becomes object 421 [Phyrexian Arena].
+- Turn 4, seq 61: object 358 becomes object 422 [Swamp].
+- Turn 4, seq 62: object 359 becomes object 423 [Shoot the Sheriff].
+- Turn 4, seq 66: object 418 becomes object 426 [Draconautics Engineer].
+- Turn 4, seq 66: object 423 becomes object 427 [Shoot the Sheriff].
+- Turn 5, seq 80: object 235 becomes object 428 [Firebending Student].
+- Turn 5, seq 83: object 428 becomes object 429 [Firebending Student].
+- Turn 6, seq 99: object 362 becomes object 432 [Swamp].
+- Turn 6, seq 102: object 432 becomes object 433 [Swamp].
+- Turn 6, seq 103: object 421 becomes object 434 [Phyrexian Arena].
+- Turn 7, seq 119: object 236 becomes object 438 [Involuntary Employment].
+- Turn 7, seq 122: object 227 becomes object 439 [Firebending Student].
+- Turn 7, seq 135: object 228 becomes object 443 [Shock].
+- Turn 7, seq 144: object 443 becomes object 446 [Shock].
+- Turn 8, seq 156: object 363 becomes object 448 [Swamp].
+- Turn 8, seq 158: object 364 becomes object 449 [Makeshift Binding].
+- Turn 8, seq 161: object 448 becomes object 450 [Swamp].
+- Turn 8, seq 162: object 354 becomes object 451 [Bloodletter of Aclazotz].
+- Turn 9, seq 178: object 237 becomes object 456 [Abrade].
+- Turn 9, seq 181: object 456 becomes object 457 [Abrade].
+- Turn 9, seq 191: object 457 becomes object 462 [Abrade].
+- Turn 9, seq 203: object 229 becomes object 465 [Burst Lightning].
+- Turn 9, seq 213: object 465 becomes object 468 [Burst Lightning].
+- Turn 9, seq 213: object 451 becomes object 469 [Bloodletter of Aclazotz].
+- Turn 10, seq 227: object 365 becomes object 471 [Case of the Uneaten Feast].
+- Turn 10, seq 229: object 366 becomes object 472 [Swamp].
+- Turn 10, seq 232: object 414 becomes object 473 [Plains].
+- Turn 10, seq 233: object 471 becomes object 474 [Case of the Uneaten Feast].
+- Turn 10, seq 236: object 356 becomes object 476 [Marauding Blight-Priest].
+- Turn 11, seq 256: object 238 becomes object 482 [Coruscation Mage].
+- Turn 11, seq 259: object 482 becomes object 483 [Coruscation Mage].
+- Turn 12, seq 277: object 367 becomes object 487 [Deep-Cavern Bat].
+- Turn 12, seq 279: object 368 becomes object 488 [Makeshift Binding].
+- Turn 12, seq 282: object 472 becomes object 489 [Swamp].
+- Turn 12, seq 283: object 487 becomes object 490 [Deep-Cavern Bat].
+- Turn 12, seq 291: object 416 becomes object 495 [Chandra, Flameshaper].
+- Turn 12, seq 296: object 488 becomes object 499 [Makeshift Binding].
+- Turn 12, seq 302: object 483 becomes object 504 [Coruscation Mage].
+- Turn 13, seq 319: object 239 becomes object 506 [Mountain].
+- Turn 13, seq 322: object 506 becomes object 507 [Mountain].
+- Turn 14, seq 337: object 369 becomes object 509 [Shoot the Sheriff].
+- Turn 14, seq 339: object 370 becomes object 510 [Plains].
+- Turn 14, seq 342: object 510 becomes object 511 [Plains].
+- Turn 14, seq 343: object 449 becomes object 512 [Makeshift Binding].
+- Turn 14, seq 349: object 429 becomes object 517 [Firebending Student].
+- Turn 15, seq 374: object 240 becomes object 520 [Mountain].
+- Turn 15, seq 377: object 520 becomes object 521 [Mountain].
+- Turn 15, seq 378: object 438 becomes object 522 [Involuntary Employment].
+- Turn 15, seq 384: object 522 becomes object 529 [Involuntary Employment].
+- Turn 15, seq 388: object 509 becomes object 530 [Shoot the Sheriff].
+- Turn 15, seq 392: object 439 becomes object 533 [Firebending Student].
+- Turn 15, seq 392: object 530 becomes object 534 [Shoot the Sheriff].
+- Turn 16, seq 410: object 371 becomes object 536 [Case of the Uneaten Feast].
+- Turn 16, seq 412: object 372 becomes object 537 [Bloodthirsty Conqueror].
+- Turn 16, seq 415: object 537 becomes object 538 [Bloodthirsty Conqueror].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: Simplytec plays Mountain (object 413) from Hand (Simplytec) to Battlefield.
+- Turn 2: gian31 plays Plains (object 415) from Hand (gian31) to Battlefield.
+- Turn 3: Simplytec plays Mountain (object 417) from Hand (Simplytec) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 422) from Hand (gian31) to Battlefield.
+- Turn 6: gian31 plays Swamp (object 433) from Hand (gian31) to Battlefield.
+- Turn 8: gian31 plays Swamp (object 450) from Hand (gian31) to Battlefield.
+- Turn 10: gian31 plays Plains (object 473) from Hand (gian31) to Battlefield.
+- Turn 12: gian31 plays Swamp (object 489) from Hand (gian31) to Battlefield.
+- Turn 13: Simplytec plays Mountain (object 507) from Hand (Simplytec) to Battlefield.
+- Turn 14: gian31 plays Plains (object 511) from Hand (gian31) to Battlefield.
+- Turn 15: Simplytec plays Mountain (object 521) from Hand (Simplytec) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 16: ordered adjacent records Marauding Blight-Priest -> Bloodthirsty Conqueror; observed repetitions=10; net life: Simplytec -10, gian31 +10. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Bloodthirsty Conqueror=10, Marauding Blight-Priest=11.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 16: ordered adjacent records Marauding Blight-Priest -> Bloodthirsty Conqueror; observed repetitions=10 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Marauding Blight-Priest: casts=1; abilities=16 (triggered=16, activated=0) across turns [10, 10, 12, 12, 14, 14, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=16, other=4
+  observed effects: life -1, synthetic event
+- Bloodthirsty Conqueror: casts=1; abilities=10 (triggered=10, activated=0) across turns [16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=10, other=0
+  observed effects: life +1
+- Phyrexian Arena: casts=1; abilities=5 (triggered=5, activated=0) across turns [6, 8, 10, 12, 14, 16]
+  observed effect totals: draws=5, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=5
+  observed effects: draw, life -1, synthetic event
+- Firebending Student: casts=2; abilities=3 (triggered=3, activated=0) across turns [5, 7, 7, 9, 9]
+- Case of the Uneaten Feast: casts=1; abilities=3 (triggered=3, activated=0) across turns [10, 10, 12, 16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=0
+  observed effects: life +1
+- Makeshift Binding: casts=2; abilities=2 (triggered=2, activated=0) across turns [12, 12, 14, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=2
+  observed effects: exile, life +2
+- Shoot the Sheriff: casts=2 across turns [4, 15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: destroy
+- Abrade: casts=1 across turns [9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 3 damage
+- Bloodletter of Aclazotz: casts=1 across turns [8]
+- Burst Lightning: casts=1 across turns [9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 2 damage
+- Coruscation Mage: casts=1 across turns [11]
+- Deep-Cavern Bat: casts=1 across turns [12]
+- Draconautics Engineer: casts=1 across turns [3]
+- Involuntary Employment: casts=1 across turns [15]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Shock: casts=1 across turns [7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=1, other=1
+  observed effects: 2 damage, life -2, synthetic event
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 7 - DeclareAttack, DeclareBlock (active=Simplytec)
+  attacker: Firebending Student (Simplytec) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=Simplytec)
+  attacker: Firebending Student (Simplytec) -> gian31; unblocked in this observed snapshot
+  attacker: Firebending Student (Simplytec) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 14 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Marauding Blight-Priest (gian31) -> Simplytec; unblocked in this observed snapshot
+  attacker: Deep-Cavern Bat (gian31) -> Simplytec; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 15 - DeclareAttack, DeclareBlock (active=Simplytec)
+  attacker: Marauding Blight-Priest (Simplytec) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 7: Ability of Firebending Student (active=Simplytec) - Ability of Firebending Student resolves with no immediate observed mutation.
+- Turn 7: Shock (active=Simplytec) - Shock: gian31 takes 2 damage; gian31 loses 2 life.
+- Turn 9: Ability of Firebending Student (active=Simplytec) - Ability of Firebending Student resolves with no immediate observed mutation.
+- Turn 9: Ability of Firebending Student (active=Simplytec) - Ability of Firebending Student resolves with no immediate observed mutation.
+- Turn 9: Burst Lightning (active=Simplytec) - Burst Lightning: Bloodletter of Aclazotz takes 2 damage.
+- Turn 14: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: Simplytec loses 1 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 232: Bonehoard Dracosaur | controller=Simplytec | owner=Simplytec | zone=Hand (latest_object_observation)
+- 353: Rush of Dread | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 354: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 355: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 356: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 357: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 358: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 359: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 413: Mountain | controller=Simplytec | owner=Simplytec | zone=Battlefield (latest_object_observation)
+- 414: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 415: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 416: Chandra, Flameshaper | controller=Simplytec | owner=Simplytec | zone=Hand (latest_object_observation)
+- 417: Mountain | controller=Simplytec | owner=Simplytec | zone=Battlefield (latest_object_observation)
+- 418: Draconautics Engineer | controller=Simplytec | owner=Simplytec | zone=Battlefield (latest_object_observation)
+- 421: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 422: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 423: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 426: Draconautics Engineer | controller=Simplytec | owner=Simplytec | zone=Graveyard (latest_object_observation)
+- 427: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 429: Firebending Student | controller=Simplytec | owner=Simplytec | zone=Battlefield (latest_object_observation)
+- 432: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 433: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 434: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 438: Involuntary Employment | controller=Simplytec | owner=Simplytec | zone=Hand (latest_object_observation)
+- 439: Firebending Student | controller=Simplytec | owner=Simplytec | zone=Battlefield (latest_object_observation)
+- 442: object 442 | controller=Simplytec | owner=Simplytec | zone=unknown (inferred unknown) (latest_object_observation)
+- 443: Shock | controller=Simplytec | owner=Simplytec | zone=Stack (latest_object_observation)
+- 444: object 444 | controller=Simplytec | owner=Simplytec | zone=unknown (inferred unknown) (latest_object_observation)
+- 445: object 445 | controller=Simplytec | owner=Simplytec | zone=unknown (inferred unknown) (latest_object_observation)
+- 446: Shock | controller=Simplytec | owner=Simplytec | zone=Graveyard (latest_object_observation)
+- 447: object 447 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 448: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 449: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 450: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 451: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 457: Abrade | controller=Simplytec | owner=Simplytec | zone=Stack (latest_object_observation)
+- 460: object 460 | controller=Simplytec | owner=Simplytec | zone=unknown (inferred unknown) (latest_object_observation)
+- 461: object 461 | controller=Simplytec | owner=Simplytec | zone=unknown (inferred unknown) (latest_object_observation)
+- 462: Abrade | controller=Simplytec | owner=Simplytec | zone=Graveyard (latest_object_observation)
+- 463: object 463 | controller=Simplytec | owner=Simplytec | zone=unknown (inferred unknown) (latest_object_observation)
+- 464: object 464 | controller=Simplytec | owner=Simplytec | zone=unknown (inferred unknown) (latest_object_observation)
+- 465: Burst Lightning | controller=Simplytec | owner=Simplytec | zone=Stack (latest_object_observation)
+- 466: object 466 | controller=Simplytec | owner=Simplytec | zone=unknown (inferred unknown) (latest_object_observation)
+- 467: object 467 | controller=Simplytec | owner=Simplytec | zone=unknown (inferred unknown) (latest_object_observation)
+- 468: Burst Lightning | controller=Simplytec | owner=Simplytec | zone=Graveyard (latest_object_observation)
+- 469: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 470: object 470 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 471: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 472: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 473: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 474: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 476: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 480: object 480 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 481: object 481 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 483: Coruscation Mage | controller=Simplytec | owner=Simplytec | zone=Battlefield (latest_object_observation)
+- 486: object 486 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 487: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 488: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 489: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 490: Deep-Cavern Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 493: object 493 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 494: object 494 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 495: Chandra, Flameshaper | controller=Simplytec | owner=Simplytec | zone=Exile (latest_object_observation)
+- 496: Bonehoard Dracosaur | controller=Simplytec | owner=Simplytec | zone=Hand (latest_object_observation)
+- 497: Involuntary Employment | controller=Simplytec | owner=Simplytec | zone=Hand (latest_object_observation)
+- 498: object 498 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 499: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 503: object 503 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 504: Coruscation Mage | controller=Simplytec | owner=Simplytec | zone=Exile (latest_object_observation)
+- 505: object 505 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 507: Mountain | controller=Simplytec | owner=Simplytec | zone=Battlefield (latest_object_observation)
+- 508: object 508 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 509: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 510: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 511: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 512: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 516: object 516 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 517: Firebending Student | controller=Simplytec | owner=Simplytec | zone=Exile (latest_object_observation)
+- 518: object 518 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 519: object 519 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 521: Mountain | controller=Simplytec | owner=Simplytec | zone=Battlefield (latest_object_observation)
+- 522: Involuntary Employment | controller=Simplytec | owner=Simplytec | zone=Stack (latest_object_observation)
+- 527: object 527 | controller=Simplytec | owner=Simplytec | zone=unknown (inferred unknown) (latest_object_observation)
+- 528: Treasure | controller=Simplytec | owner=Simplytec | zone=Battlefield (latest_object_observation)
+- 529: Involuntary Employment | controller=Simplytec | owner=Simplytec | zone=Graveyard (latest_object_observation)
+- 530: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 533: Firebending Student | controller=Simplytec | owner=Simplytec | zone=Graveyard (latest_object_observation)
+- 534: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 535: object 535 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 536: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 537: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 538: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 544: object 544 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 545: object 545 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 546: object 546 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 547: object 547 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 548: object 548 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 549: object 549 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 550: object 550 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 551: object 551 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 552: object 552 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 553: object 553 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 554: object 554 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 555: object 555 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 556: object 556 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 557: object 557 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 558: object 558 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 559: object 559 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 560: object 560 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 561: object 561 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 562: object 562 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 563: object 563 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 564: object 564 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 565: object 565 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 566: object 566 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Simplytec: 37 total items
+  zones: Battlefield=9, Exile=3, Graveyard=6, Hand=5, Stack=4, unknown=10
+  objects: Firebending Student x4, Involuntary Employment x4, Mountain x4, Abrade x2, Bonehoard Dracosaur x2, Burst Lightning x2, Chandra, Flameshaper x2, Coruscation Mage x2, Draconautics Engineer x2, Shock x2, Treasure, object 442
+gian31: 78 total items
+  zones: Battlefield=14, Hand=20, Stack=6, unknown=38
+  objects: Swamp x8, Plains x6, Shoot the Sheriff x6, Makeshift Binding x5, Bloodletter of Aclazotz x3, Case of the Uneaten Feast x3, Bloodthirsty Conqueror x2, Deep-Cavern Bat x2, Marauding Blight-Priest x2, Phyrexian Arena x2, Rush of Dread, object 447
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+Simplytec:
+  Battlefield (9): Coruscation Mage, Draconautics Engineer, Firebending Student, Firebending Student, Mountain, Mountain, Mountain, Mountain, Treasure
+  Graveyard: 6 card(s)
+gian31:
+  Battlefield (14): Bloodletter of Aclazotz, Bloodletter of Aclazotz, Bloodthirsty Conqueror, Deep-Cavern Bat, Marauding Blight-Priest, Plains, Plains, Plains, Shoot the Sheriff, Shoot the Sheriff, Swamp, Swamp, Swamp, Swamp
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+48 objects have no resolved final zone and are omitted from the known board state.
+Simplytec: 10 unknown object(s)
+gian31: 38 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=25, Stack=10
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Simplytec:
+  Battlefield (5): Mountain, Mountain, Mountain, Mountain, Treasure
+  Graveyard (6): Draconautics Engineer, Shock, Abrade, Burst Lightning, Involuntary Employment, Firebending Student
+  Exile (3): Chandra, Flameshaper, Coruscation Mage, Firebending Student
+gian31:
+  Battlefield (14): Plains, Swamp, Swamp, Phyrexian Arena, Swamp, Plains, Case of the Uneaten Feast, Marauding Blight-Priest, Swamp, Deep-Cavern Bat, Makeshift Binding, Plains, Makeshift Binding, Bloodthirsty Conqueror
+  Graveyard (3): Shoot the Sheriff, Bloodletter of Aclazotz, Shoot the Sheriff
+Known non-persistent entries (counts only):
+  Simplytec: Limbo=3, Revealed=1
+  gian31: Hand=3, Limbo=5, Pending=1
+  unknown: Hand=1, Library=152, Limbo=7
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: Simplytec Battlefield=1
+- Turn 2: Simplytec Battlefield=1; gian31 Battlefield=1
+- Turn 3: Simplytec Battlefield=3; gian31 Battlefield=1
+- Turn 4: Simplytec Battlefield=2; Simplytec Graveyard=1; gian31 Battlefield=2; gian31 Graveyard=1
+- Turn 5: Simplytec Battlefield=3; Simplytec Graveyard=1; gian31 Battlefield=2; gian31 Graveyard=1
+- Turn 6: Simplytec Battlefield=3; Simplytec Graveyard=1; gian31 Battlefield=4; gian31 Graveyard=1
+- Turn 7: Simplytec Battlefield=4; Simplytec Graveyard=2; gian31 Battlefield=4; gian31 Graveyard=1
+- Turn 8: Simplytec Battlefield=4; Simplytec Graveyard=2; gian31 Battlefield=6; gian31 Graveyard=1
+- Turn 9: Simplytec Battlefield=4; Simplytec Graveyard=4; gian31 Battlefield=5; gian31 Graveyard=2
+- Turn 10: Simplytec Battlefield=4; Simplytec Graveyard=4; gian31 Battlefield=8; gian31 Graveyard=2
+- Turn 11: Simplytec Battlefield=5; Simplytec Graveyard=4; gian31 Battlefield=8; gian31 Graveyard=2
+- Turn 12: Simplytec Battlefield=4; Simplytec Graveyard=4; Simplytec Exile=2; gian31 Battlefield=11; gian31 Graveyard=2
+- Turn 13: Simplytec Battlefield=5; Simplytec Graveyard=4; Simplytec Exile=2; gian31 Battlefield=11; gian31 Graveyard=2
+- Turn 14: Simplytec Battlefield=4; Simplytec Graveyard=4; Simplytec Exile=3; gian31 Battlefield=13; gian31 Graveyard=2
+- Turn 15: Simplytec Battlefield=4; Simplytec Graveyard=6; Simplytec Exile=3; gian31 Battlefield=13; gian31 Graveyard=3
+- Turn 16: Simplytec Battlefield=4; Simplytec Graveyard=6; Simplytec Exile=3; gian31 Battlefield=14; gian31 Graveyard=3
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 3: Draconautics Engineer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Firebending Student resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Phyrexian Arena resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Firebending Student resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Coruscation Mage resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Deep-Cavern Bat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
