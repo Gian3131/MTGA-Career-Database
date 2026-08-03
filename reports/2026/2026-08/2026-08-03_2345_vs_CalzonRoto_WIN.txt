@@ -1,0 +1,426 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, CalzonRoto
+Seat map: Seat 1=gian31, Seat 2=CalzonRoto
+Turn range (known): 1 - 9
+Records: 13
+Action chains: 11
+Winner: gian31
+Final life: {'gian31': 19, 'CalzonRoto': -1}
+Lethal fully explained: CalzonRoto 19 -> -1 (20/20 life loss directly attributed).
+Lethal coverage (normalized): complete; explained=20/20; unexplained=0.
+Match conclusion: Life total reached 0 observed for CalzonRoto.
+Last captured action before match-result payload: Turn 9 (Phase_Main1; Rush of Dread, seq 192).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 20 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 9 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9] (raw records=9; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 9 explicit Library -> Hand movement(s); named in the draw record=5, resolved through an explicit identity transition=2, unresolved=2.
+Unresolved draw identities (explicit movements retained): Turn 4, seq 58, object 297; Turn 6, seq 107, object 312.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Swamp [167], Rush of Dread [168], Swamp [169], Enduring Tenacity [170], Lunar Convocation [171], Bloodletter of Aclazotz [172], Plains [173].
+  - unknown: 7 observed card(s): object 227 [227], object 228 [228], object 229 [229], object 230 [230], object 231 [231], object 232 [232], object 233 [233].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 19, 'CalzonRoto': -1}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 9 (Phase_Main1; Rush of Dread, seq 192).
+Last captured life snapshot: CalzonRoto 19 -> -1 (seq 192).
+Tokens on battlefield at their last observation (not confirmed at match end): Bat [310] controller=gian31, created Turn 5, last observed Turn 9 seq 180, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: CalzonRoto reached -1 life; exact lethal-source coverage is reported separately.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Plains.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Sundown Pass.
+- Turn 3: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Lunar Convocation.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Authority of the Consuls.
+- Turn 5: actions: cards=0, abilities=5; life mutations=4; explicit battlefield entries=Scoured Barrens.
+- Turn 6: actions: cards=1, abilities=1; explicit battlefield entries=Mountain, Trapped in the Screen; explicit battlefield exits=Lunar Convocation.
+- Turn 7: actions: cards=1, abilities=1; combat snapshots=1; life mutations=2; explicit battlefield entries=Swamp, Bloodletter of Aclazotz.
+- Turn 8: actions: cards=1, abilities=0; explicit battlefield entries=Lush Portico, Warleader's Call.
+- Turn 9: actions: cards=1, abilities=0; life mutations=1; explicit battlefield entries=Swamp.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [289] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [289]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [290] Library (CalzonRoto) -> Hand (CalzonRoto) (Draw; GRE sequence 21).
+      Sundown Pass [291] Hand (CalzonRoto) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [289]
+      CalzonRoto: Battlefield: Sundown Pass [291]
+
+Turn 3
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=44] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=294)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 294) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 294) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [292] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 38).
+      Swamp [293] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 41).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Lunar Convocation [294], Plains [289], Swamp [293]
+      CalzonRoto: Battlefield: Sundown Pass [291]
+
+Turn 4
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=64] (active=CalzonRoto, phase=Phase_Main1, controller=CalzonRoto, owner=CalzonRoto, source_object=299)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 299) Hand (CalzonRoto) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 299) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 297 [297] Library (CalzonRoto) -> Hand (CalzonRoto) (Draw; GRE sequence 58).
+      Mountain [298] Hand (CalzonRoto) -> Battlefield (PlayLand; GRE sequence 61).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Lunar Convocation [294], Plains [289], Swamp [293]
+      CalzonRoto: Battlefield: Authority of the Consuls [299], Mountain [298], Sundown Pass [291]
+
+Turn 5
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=83] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=86] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=294, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 176 [176], Makeshift Binding [307] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Makeshift Binding (object 307) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=99] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=294, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 86 and 99; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: token creation
+      narrative: Ability of Lunar Convocation: a token is created.
+      explicit effect object references: Bat [310] (role/targeting only where the protocol identifies it)
+      token created: Bat (object 310, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 309).
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=101] (active=gian31, phase=Phase_Ending, step=Step_End, controller=CalzonRoto, owner=CalzonRoto, source_object=299, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: CalzonRoto gains 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=103] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=294, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: CalzonRoto loses 1 life.
+    net observed life change this turn: CalzonRoto +0; gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life: gian31 21 -> 19
+    life: CalzonRoto 20 -> 21
+    life: CalzonRoto 21 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [301] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 78).
+      Scoured Barrens [302] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 81).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Lunar Convocation [294], Plains [289], Scoured Barrens [302], Swamp [293]
+      CalzonRoto: Battlefield: Authority of the Consuls [299], Mountain [298], Sundown Pass [291]
+
+Turn 6
+  - Trapped in the Screen [valid_resolution_no_immediate_mutation, seq=113] (active=CalzonRoto, phase=Phase_Main1, controller=CalzonRoto, owner=CalzonRoto, source_object=314)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Trapped in the Screen resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Trapped in the Screen (object 314) Hand (CalzonRoto) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Trapped in the Screen (object 314) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Trapped in the Screen [observed_semantic_effect, seq=117] (active=CalzonRoto, phase=Phase_Main1, controller=CalzonRoto, owner=CalzonRoto, source_object=314, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Trapped in the Screen: exiles Lunar Convocation.
+      explicit effect object references: Lunar Convocation [294], Lunar Convocation [319] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Lunar Convocation (object 319) Battlefield -> Exile (Exile; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 312 [312] Library (CalzonRoto) -> Hand (CalzonRoto) (Draw; GRE sequence 107).
+      Mountain [313] Hand (CalzonRoto) -> Battlefield (PlayLand; GRE sequence 110).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [289], Scoured Barrens [302], Swamp [293]; Exile: Lunar Convocation [319]
+      CalzonRoto: Battlefield: Authority of the Consuls [299], Mountain [298], Mountain [313], Sundown Pass [291], Trapped in the Screen [314]
+
+Turn 7
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation, seq=137] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 322) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 322) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=139] (active=gian31, phase=Phase_Main1, controller=CalzonRoto, owner=CalzonRoto, source_object=299, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: CalzonRoto gains 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Bat [310] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-reconciled defending-player life-loss component: 1; observed attacker power total: 1; unresolved additional life loss: 1 (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: CalzonRoto -1 (individual changes below; gains and losses may offset)
+    life: CalzonRoto 20 -> 21
+    life (combat component reconciled: 1; unresolved residual life loss 1; exact assignment unavailable): CalzonRoto 21 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Marauding Blight-Priest [320] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 131).
+      Swamp [321] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 134).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodletter of Aclazotz [322], Plains [289], Scoured Barrens [302], Swamp [293], Swamp [321]; Exile: Lunar Convocation [319]
+      CalzonRoto: Battlefield: Authority of the Consuls [299], Mountain [298], Mountain [313], Sundown Pass [291], Trapped in the Screen [314]
+
+Turn 8
+  - Warleader's Call [valid_resolution_no_immediate_mutation, seq=168] (active=CalzonRoto, phase=Phase_Main1, controller=CalzonRoto, owner=CalzonRoto, source_object=331)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Warleader's Call resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Warleader's Call (object 331) Hand (CalzonRoto) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Warleader's Call (object 331) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Lush Portico [328] Library (CalzonRoto) -> Hand (CalzonRoto) (Draw; GRE sequence 159).
+      Lush Portico [329] Hand (CalzonRoto) -> Battlefield (PlayLand; GRE sequence 162).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodletter of Aclazotz [322], Plains [289], Scoured Barrens [302], Swamp [293], Swamp [321]; Exile: Lunar Convocation [319]
+      CalzonRoto: Battlefield: Authority of the Consuls [299], Lush Portico [329], Mountain [298], Mountain [313], Sundown Pass [291], Trapped in the Screen [314], Warleader's Call [331]
+
+Turn 9
+  - Rush of Dread [observed_semantic_effect, seq=192] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=337)
+      effects: life -20
+      narrative: Rush of Dread: CalzonRoto loses 20 life.
+      protocol-linked zone transfer: Rush of Dread (object 337) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Rush of Dread (object 343) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 337 -> transfer object 343 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: CalzonRoto -20 (individual changes below; gains and losses may offset)
+    life: CalzonRoto 19 -> -1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [335] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 182).
+      Swamp [336] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 185).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodletter of Aclazotz [322], Plains [289], Scoured Barrens [302], Swamp [293], Swamp [321], Swamp [336]; Exile: Lunar Convocation [319]; Graveyard: Rush of Dread [343]
+      CalzonRoto: Battlefield: Authority of the Consuls [299], Lush Portico [329], Mountain [298], Mountain [313], Sundown Pass [291], Trapped in the Screen [314], Warleader's Call [331]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 5, seq 84, Phase_Main1: gian31 21 -> 19. No source event correlated in captured records. Previous captured action: Scoured Barrens.
+- Turn 7, seq 149, Phase_Main1: CalzonRoto 21 -> 19. combat-reconciled component 1; unresolved residual 1. Previous captured action: Authority of the Consuls.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 9: CalzonRoto 19 -> -1 (required change 20). Explained by exact same-record evidence: 20/20; semantically attributed: 0/20; unexplained residual: 0/20.
+  Combat-reconciled component: 1/20 (pre-modifier power=1; explicit modifier power=+0; observed post-modifier power=1 (not used to attribute damage when it exceeds the observed loss); unresolved residual=0; individual assignment unavailable).
+  Combat snapshot observed at or before lethal: Turn 7; attackers=Bat [310]; observed snapshot power total=1; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 9, Rush of Dread (seq 192).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 1 token creations observed; 1 active as last observed; 0 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Bat [310] controller=gian31; created Turn 5 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 9, object 310 (latest observed P/T 1/1; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Mountain [owner/controller metadata unavailable] moves Library (CalzonRoto) -> Hand (CalzonRoto) (Draw).
+- Turn 2, seq 24: Sundown Pass [owner=CalzonRoto, controller=CalzonRoto] moves Hand (CalzonRoto) -> Battlefield (PlayLand).
+- Turn 3, seq 38: Scoured Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 41: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 42: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 44: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 58: object 297 [owner/controller metadata unavailable] moves Library (CalzonRoto) -> Hand (CalzonRoto) (Draw).
+- Turn 4, seq 61: Mountain [owner=CalzonRoto, controller=CalzonRoto] moves Hand (CalzonRoto) -> Battlefield (PlayLand).
+- Turn 4, seq 62: Authority of the Consuls [owner=CalzonRoto, controller=CalzonRoto] moves Hand (CalzonRoto) -> Stack (CastSpell).
+- Turn 4, seq 64: Authority of the Consuls [owner=CalzonRoto, controller=CalzonRoto] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 78: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 81: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 86: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 107: object 312 [owner/controller metadata unavailable] moves Library (CalzonRoto) -> Hand (CalzonRoto) (Draw).
+- Turn 6, seq 110: Mountain [owner=CalzonRoto, controller=CalzonRoto] moves Hand (CalzonRoto) -> Battlefield (PlayLand).
+- Turn 6, seq 111: Trapped in the Screen [owner=CalzonRoto, controller=CalzonRoto] moves Hand (CalzonRoto) -> Stack (CastSpell).
+- Turn 6, seq 113: Trapped in the Screen [owner=CalzonRoto, controller=CalzonRoto] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 117: Lunar Convocation [owner=gian31, controller=gian31] moves Battlefield -> Exile (Exile).
+- Turn 7, seq 131: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 134: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 135: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 137: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 159: Lush Portico [owner/controller metadata unavailable] moves Library (CalzonRoto) -> Hand (CalzonRoto) (Draw).
+- Turn 8, seq 162: Lush Portico [owner=CalzonRoto, controller=CalzonRoto] moves Hand (CalzonRoto) -> Battlefield (PlayLand).
+- Turn 8, seq 166: Warleader's Call [owner=CalzonRoto, controller=CalzonRoto] moves Hand (CalzonRoto) -> Stack (CastSpell).
+- Turn 8, seq 168: Warleader's Call [owner=CalzonRoto, controller=CalzonRoto] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 182: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 185: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 186: Rush of Dread [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 192: Rush of Dread [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 173 becomes object 289 [Plains].
+- Turn 2, seq 21: object 234 becomes object 290 [Mountain].
+- Turn 2, seq 24: object 227 becomes object 291 [Sundown Pass].
+- Turn 3, seq 38: object 174 becomes object 292 [Scoured Barrens].
+- Turn 3, seq 41: object 167 becomes object 293 [Swamp].
+- Turn 3, seq 42: object 171 becomes object 294 [Lunar Convocation].
+- Turn 4, seq 58: object 235 becomes object 297 [object 235].
+- Turn 4, seq 61: object 230 becomes object 298 [Mountain].
+- Turn 4, seq 62: object 229 becomes object 299 [Authority of the Consuls].
+- Turn 5, seq 78: object 175 becomes object 301 [Plains].
+- Turn 5, seq 81: object 292 becomes object 302 [Scoured Barrens].
+- Turn 5, seq 86: object 176 becomes object 307 [Makeshift Binding].
+- Turn 6, seq 107: object 236 becomes object 312 [object 236].
+- Turn 6, seq 110: object 290 becomes object 313 [Mountain].
+- Turn 6, seq 111: object 231 becomes object 314 [Trapped in the Screen].
+- Turn 6, seq 117: object 294 becomes object 319 [Lunar Convocation].
+- Turn 7, seq 131: object 177 becomes object 320 [Marauding Blight-Priest].
+- Turn 7, seq 134: object 169 becomes object 321 [Swamp].
+- Turn 7, seq 135: object 172 becomes object 322 [Bloodletter of Aclazotz].
+- Turn 8, seq 159: object 237 becomes object 328 [Lush Portico].
+- Turn 8, seq 162: object 328 becomes object 329 [Lush Portico].
+- Turn 8, seq 166: object 228 becomes object 331 [Warleader's Call].
+- Turn 9, seq 182: object 178 becomes object 335 [Swamp].
+- Turn 9, seq 185: object 335 becomes object 336 [Swamp].
+- Turn 9, seq 186: object 168 becomes object 337 [Rush of Dread].
+- Turn 9, seq 192: object 337 becomes object 343 [Rush of Dread].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Plains (object 289) from Hand (gian31) to Battlefield.
+- Turn 2: CalzonRoto plays Sundown Pass (object 291) from Hand (CalzonRoto) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 293) from Hand (gian31) to Battlefield.
+- Turn 4: CalzonRoto plays Mountain (object 298) from Hand (CalzonRoto) to Battlefield.
+- Turn 5: gian31 plays Scoured Barrens (object 302) from Hand (gian31) to Battlefield.
+- Turn 6: CalzonRoto plays Mountain (object 313) from Hand (CalzonRoto) to Battlefield.
+- Turn 7: gian31 plays Swamp (object 321) from Hand (gian31) to Battlefield.
+- Turn 8: CalzonRoto plays Lush Portico (object 329) from Hand (CalzonRoto) to Battlefield.
+- Turn 9: gian31 plays Swamp (object 336) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Lunar Convocation: casts=1; abilities=3 (triggered=3, activated=0) across turns [3, 5, 5, 5]
+  observed effect totals: draws=1, tokens=1, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: draw, life -1, synthetic event, token creation
+- Authority of the Consuls: casts=1; abilities=2 (triggered=2, activated=0) across turns [4, 5, 7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Trapped in the Screen: casts=1; abilities=1 (triggered=1, activated=0) across turns [6, 6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: exile
+- Bloodletter of Aclazotz: casts=1 across turns [7]
+- Rush of Dread: casts=1 across turns [9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: life -20, synthetic event
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [5]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Warleader's Call: casts=1 across turns [8]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 7 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Bat (gian31) -> CalzonRoto; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 167: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 168: Rush of Dread | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 169: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 170: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 171: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 172: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 173: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 289: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 291: Sundown Pass | controller=CalzonRoto | owner=CalzonRoto | zone=Battlefield (latest_object_observation)
+- 292: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 293: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 294: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 298: Mountain | controller=CalzonRoto | owner=CalzonRoto | zone=Battlefield (latest_object_observation)
+- 299: Authority of the Consuls | controller=CalzonRoto | owner=CalzonRoto | zone=Stack (latest_object_observation)
+- 301: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 302: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 303: object 303 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 304: object 304 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 307: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 308: object 308 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 309: object 309 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 310: Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 311: object 311 | controller=CalzonRoto | owner=CalzonRoto | zone=unknown (inferred unknown) (latest_object_observation)
+- 313: Mountain | controller=CalzonRoto | owner=CalzonRoto | zone=Battlefield (latest_object_observation)
+- 314: Trapped in the Screen | controller=CalzonRoto | owner=CalzonRoto | zone=Stack (latest_object_observation)
+- 318: object 318 | controller=CalzonRoto | owner=CalzonRoto | zone=unknown (inferred unknown) (latest_object_observation)
+- 319: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 320: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 321: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 322: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 327: object 327 | controller=CalzonRoto | owner=CalzonRoto | zone=unknown (inferred unknown) (latest_object_observation)
+- 329: Lush Portico | controller=CalzonRoto | owner=CalzonRoto | zone=Battlefield (latest_object_observation)
+- 330: object 330 | controller=CalzonRoto | owner=CalzonRoto | zone=unknown (inferred unknown) (latest_object_observation)
+- 331: Warleader's Call | controller=CalzonRoto | owner=CalzonRoto | zone=Stack (latest_object_observation)
+- 335: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 336: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 337: Rush of Dread | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 343: Rush of Dread | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+CalzonRoto: 11 total items
+  zones: Battlefield=4, Stack=3, unknown=4
+  objects: Mountain x2, Authority of the Consuls, Lush Portico, Sundown Pass, Trapped in the Screen, Warleader's Call, object 311, object 318, object 327, object 330
+gian31: 27 total items
+  zones: Battlefield=7, Exile=1, Hand=12, Stack=2, unknown=5
+  objects: Swamp x6, Lunar Convocation x3, Plains x3, Rush of Dread x3, Bloodletter of Aclazotz x2, Scoured Barrens x2, Bat, Enduring Tenacity, Makeshift Binding, Marauding Blight-Priest, object 303, object 304
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (7): Bat, Bloodletter of Aclazotz, Plains, Scoured Barrens, Swamp, Swamp, Swamp
+  Graveyard: 0 card(s)
+CalzonRoto:
+  Battlefield (4): Lush Portico, Mountain, Mountain, Sundown Pass
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+9 objects have no resolved final zone and are omitted from the known board state.
+CalzonRoto: 4 unknown object(s)
+gian31: 5 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=12, Stack=5
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+CalzonRoto:
+  Battlefield (7): Sundown Pass, Mountain, Authority of the Consuls, Mountain, Trapped in the Screen, Lush Portico, Warleader's Call
+gian31:
+  Battlefield (7): Plains, Swamp, Scoured Barrens, Bat, Swamp, Bloodletter of Aclazotz, Swamp
+  Graveyard (1): Rush of Dread
+  Exile (1): Lunar Convocation
+Known non-persistent entries (counts only):
+  CalzonRoto: Hand=2
+  gian31: Hand=4, Limbo=4, Stack=1
+  unknown: Hand=2, Library=99, Limbo=5
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1
+- Turn 2: CalzonRoto Battlefield=1; gian31 Battlefield=1
+- Turn 3: CalzonRoto Battlefield=1; gian31 Battlefield=3
+- Turn 4: CalzonRoto Battlefield=3; gian31 Battlefield=3
+- Turn 5: CalzonRoto Battlefield=3; gian31 Battlefield=4
+- Turn 6: CalzonRoto Battlefield=5; gian31 Battlefield=3; gian31 Exile=1
+- Turn 7: CalzonRoto Battlefield=5; gian31 Battlefield=5; gian31 Exile=1
+- Turn 8: CalzonRoto Battlefield=7; gian31 Battlefield=5; gian31 Exile=1
+- Turn 9: CalzonRoto Battlefield=7; gian31 Battlefield=6; gian31 Graveyard=1; gian31 Exile=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 3: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Trapped in the Screen resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Warleader's Call resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
