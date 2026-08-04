@@ -1,0 +1,610 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, GloomyButterfly
+Seat map: Seat 1=gian31, Seat 2=GloomyButterfly
+Turn range (known): 1 - 11
+Records: 26
+Action chains: 21
+Winner: gian31
+Final life: {'gian31': 15, 'GloomyButterfly': 4}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 11 (Phase_Main1; Ability of Lunar Convocation, seq 272).
+Later numbered GRE record(s): 1 after action sequence 272 across turn(s) [11]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+POST-ACTION GRE RECORDS - RESULT ORDER UNRESOLVED
+  - Turn 11, seq 278: tapped_changed.
+  These records are retained for traceability; their order relative to the match-result payload is not asserted.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 25 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 11 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] (raw records=11; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 12 explicit Library -> Hand movement(s); named in the draw record=6, resolved through an explicit identity transition=6, unresolved=0.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Lunar Convocation [159], Bloodletter of Aclazotz [160], Zoraline, Cosmos Caller [161], Plains [162], Swamp [163], Swamp [164], Makeshift Binding [165].
+  - unknown: 7 observed card(s): object 219 [219], object 220 [220], object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 15, 'GloomyButterfly': 4}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 11 (Phase_Main1; Ability of Lunar Convocation, seq 272).
+Last captured life snapshot: gian31 17 -> 15 (seq 270).
+Tokens on battlefield at their last observation (not confirmed at match end): Food [307] controller=GloomyButterfly, created Turn 6, last observed Turn 6 seq 116, P/T unavailable; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Cat [351] controller=GloomyButterfly, created Turn 10, last observed Turn 10 seq 244, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Plains.
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Curious Farm Animals.
+- Turn 3: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 4: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Plains, Helpful Hunter.
+- Turn 5: actions: cards=1, abilities=1; explicit battlefield entries=Swamp, Zoraline, Cosmos Caller.
+- Turn 6: actions: cards=1, abilities=1; explicit battlefield entries=Swamp, Cat Collector.
+- Turn 7: actions: cards=1, abilities=2; combat snapshots=1; life mutations=2; explicit battlefield entries=Swamp, Bloodletter of Aclazotz.
+- Turn 8: actions: cards=2, abilities=2; explicit battlefield entries=Skyknight Squire, Hinterland Sanctifier, Plains.
+- Turn 9: actions: cards=2, abilities=4; combat snapshots=1; life mutations=4; explicit battlefield entries=Plains, Makeshift Binding, Lunar Convocation; explicit battlefield exits=Skyknight Squire.
+- Turn 10: actions: cards=2, abilities=3; combat snapshots=1; life mutations=3; explicit battlefield entries=Swamp, Vengeful Bloodwitch; explicit battlefield exits=Zoraline, Cosmos Caller.
+- Turn 11: actions: cards=0, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [279] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [279]
+
+Turn 2
+  - Curious Farm Animals [valid_resolution_no_immediate_mutation, seq=27] (active=GloomyButterfly, phase=Phase_Main1, controller=GloomyButterfly, owner=GloomyButterfly, source_object=282)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Curious Farm Animals resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Curious Farm Animals (object 282) Hand (GloomyButterfly) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Curious Farm Animals (object 282) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [280] Library (GloomyButterfly) -> Hand (GloomyButterfly) (Draw; GRE sequence 21).
+      Plains [281] Hand (GloomyButterfly) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [279]
+      GloomyButterfly: Battlefield: Curious Farm Animals [282], Plains [281]
+
+Turn 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Stroke of Midnight [284] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 41).
+      Swamp [285] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [279], Swamp [285]
+      GloomyButterfly: Battlefield: Curious Farm Animals [282], Plains [281]
+
+Turn 4
+  - Helpful Hunter [valid_resolution_no_immediate_mutation, seq=64] (active=GloomyButterfly, phase=Phase_Main1, controller=GloomyButterfly, owner=GloomyButterfly, source_object=288)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Helpful Hunter resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Helpful Hunter (object 288) Hand (GloomyButterfly) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Helpful Hunter (object 288) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Helpful Hunter [observed_semantic_effect, seq=66] (active=GloomyButterfly, phase=Phase_Main1, controller=GloomyButterfly, owner=GloomyButterfly, source_object=288, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Helpful Hunter: draw.
+      explicit effect object references: object 228 [228], object 292 [292] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 292) Library (GloomyButterfly) -> Hand (GloomyButterfly) (Draw; shared object ID)
+  Combat snapshots observed (active=GloomyButterfly; frames: DeclareAttack -> DeclareBlock):
+      attackers: Curious Farm Animals [282] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [286] Library (GloomyButterfly) -> Hand (GloomyButterfly) (Draw; GRE sequence 58).
+      Plains [287] Hand (GloomyButterfly) -> Battlefield (PlayLand; GRE sequence 61).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [279], Swamp [285]
+      GloomyButterfly: Battlefield: Curious Farm Animals [282], Helpful Hunter [288], Plains [281], Plains [287]
+
+Turn 5
+  - Zoraline, Cosmos Caller [valid_resolution_no_immediate_mutation, seq=92] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=295)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Zoraline, Cosmos Caller resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Zoraline, Cosmos Caller (object 295) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Zoraline, Cosmos Caller (object 295) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Zoraline, Cosmos Caller [valid_resolution_no_immediate_mutation, seq=94] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Zoraline, Cosmos Caller resolves with no immediate observed mutation.
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [293] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 86).
+      Swamp [294] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 89).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [279], Swamp [285], Swamp [294], Zoraline, Cosmos Caller [295]
+      GloomyButterfly: Battlefield: Curious Farm Animals [282], Helpful Hunter [288], Plains [281], Plains [287]
+
+Turn 6
+  - Cat Collector [valid_resolution_no_immediate_mutation, seq=114] (active=GloomyButterfly, phase=Phase_Main1, controller=GloomyButterfly, owner=GloomyButterfly, source_object=302)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Cat Collector resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Cat Collector (object 302) Hand (GloomyButterfly) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Cat Collector (object 302) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Cat Collector [observed_semantic_effect, seq=116] (active=GloomyButterfly, phase=Phase_Main1, controller=GloomyButterfly, owner=GloomyButterfly, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Cat Collector: a token is created.
+      explicit effect object references: Food [307] (role/targeting only where the protocol identifies it)
+      token created: Food (object 307, controller=GloomyButterfly); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 306).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [300] Library (GloomyButterfly) -> Hand (GloomyButterfly) (Draw; GRE sequence 108).
+      Swamp [301] Hand (GloomyButterfly) -> Battlefield (PlayLand; GRE sequence 111).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [279], Swamp [285], Swamp [294], Zoraline, Cosmos Caller [295]
+      GloomyButterfly: Battlefield: Cat Collector [302], Curious Farm Animals [282], Helpful Hunter [288], Plains [281], Plains [287], Swamp [301]
+
+Turn 7
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation, seq=137] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=310)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 310) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 310) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Zoraline, Cosmos Caller [valid_resolution_no_immediate_mutation, seq=146] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Zoraline, Cosmos Caller resolves with no immediate observed mutation.
+  - Ability of Zoraline, Cosmos Caller [observed_semantic_effect, seq=148] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=295, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 146 and 148; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life +1
+      narrative: Ability of Zoraline, Cosmos Caller: gian31 gains 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Zoraline, Cosmos Caller [295] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat-reconciled defending-player life-loss component: 3; observed attacker power total: 3; unresolved additional life loss: 3 (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: GloomyButterfly -6; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 19 -> 20
+    life (combat component reconciled: 3; unresolved residual life loss 3; exact assignment unavailable): GloomyButterfly 20 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [308] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 131).
+      Swamp [309] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 134).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodletter of Aclazotz [310], Plains [279], Swamp [285], Swamp [294], Swamp [309], Zoraline, Cosmos Caller [295]
+      GloomyButterfly: Battlefield: Cat Collector [302], Curious Farm Animals [282], Helpful Hunter [288], Plains [281], Plains [287], Swamp [301]
+
+Turn 8
+  - Skyknight Squire [valid_resolution_no_immediate_mutation, seq=167] (active=GloomyButterfly, phase=Phase_Main1, controller=GloomyButterfly, owner=GloomyButterfly, source_object=318)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Skyknight Squire resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Skyknight Squire (object 318) Hand (GloomyButterfly) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Skyknight Squire (object 318) Stack -> Battlefield (Resolve; shared object ID)
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=170] (active=GloomyButterfly, phase=Phase_Main1, controller=GloomyButterfly, owner=GloomyButterfly, source_object=321)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 321) Hand (GloomyButterfly) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 321) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Skyknight Squire [observed_semantic_effect, seq=172] (active=GloomyButterfly, phase=Phase_Main1, controller=GloomyButterfly, owner=GloomyButterfly, source_object=318, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Skyknight Squire: Skyknight Squire gets +1/+1; 1 counter(s) are added to Skyknight Squire [318].
+  - Ability of Skyknight Squire [observed_semantic_effect, seq=173] (active=GloomyButterfly, phase=Phase_Main1, controller=GloomyButterfly, owner=GloomyButterfly, source_object=318, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 172 and 173; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Skyknight Squire: Skyknight Squire gets +1/+1; 1 counter(s) are added to Skyknight Squire [318].
+    additional protocol-observed zone movements not assigned to an action chain:
+      Skyknight Squire [317] Library (GloomyButterfly) -> Hand (GloomyButterfly) (Draw; GRE sequence 162).
+      Plains [324] Hand (GloomyButterfly) -> Battlefield (PlayLand; GRE sequence 174).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodletter of Aclazotz [310], Plains [279], Swamp [285], Swamp [294], Swamp [309], Zoraline, Cosmos Caller [295]
+      GloomyButterfly: Battlefield: Cat Collector [302], Curious Farm Animals [282], Helpful Hunter [288], Hinterland Sanctifier [321], Plains [281], Plains [287], Plains [324], Skyknight Squire [318], Swamp [301]
+
+Turn 9
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=195] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=327)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 327) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 327) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=199] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=327, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Skyknight Squire; gian31 gains 2 life.
+      explicit effect object references: Skyknight Squire [318], Skyknight Squire [332] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Skyknight Squire (object 332) Battlefield -> Exile (Exile; shared object ID)
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=202] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=333)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 333) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 333) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Zoraline, Cosmos Caller [valid_resolution_no_immediate_mutation, seq=211] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Zoraline, Cosmos Caller resolves with no immediate observed mutation.
+  - Ability of Zoraline, Cosmos Caller [observed_semantic_effect, seq=213] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=295, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 211 and 213; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life +1
+      narrative: Ability of Zoraline, Cosmos Caller: gian31 gains 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=225] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=333, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Lunar Convocation: GloomyButterfly loses 2 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Zoraline, Cosmos Caller [295] (unblocked, observed P/T 3/3), Bloodletter of Aclazotz [310] (unblocked, observed P/T 2/4)
+      blockers: none identified
+      combat-reconciled defending-player life-loss component: 5; observed attacker power total: 5; unresolved additional life loss: 5 (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: GloomyButterfly -12; gian31 +3 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 22
+    life: gian31 22 -> 23
+    life (combat component reconciled: 5; unresolved residual life loss 5; exact assignment unavailable): GloomyButterfly 14 -> 4
+    life: GloomyButterfly 4 -> 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [325] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 189).
+      Plains [326] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 192).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodletter of Aclazotz [310], Lunar Convocation [333], Makeshift Binding [327], Plains [279], Plains [326], Swamp [285], Swamp [294], Swamp [309], Zoraline, Cosmos Caller [295]
+      GloomyButterfly: Battlefield: Cat Collector [302], Curious Farm Animals [282], Helpful Hunter [288], Hinterland Sanctifier [321], Plains [281], Plains [287], Plains [324], Swamp [301]; Exile: Skyknight Squire [332]
+
+Turn 10
+  - Fell [observed_semantic_effect, seq=236] (active=GloomyButterfly, phase=Phase_Main1, controller=GloomyButterfly, owner=GloomyButterfly, source_object=340)
+      effects: destroy
+      narrative: Fell destroys Zoraline, Cosmos Caller.
+      explicit effect object references: Zoraline, Cosmos Caller [295], Zoraline, Cosmos Caller [343] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Fell (object 340) Hand (GloomyButterfly) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Zoraline, Cosmos Caller (object 343) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Fell (object 344) Stack -> Graveyard (GloomyButterfly) (Resolve; shared object ID)
+      identity continuity: source object 340 -> transfer object 344 (explicit GRE ObjectIdChanged chain).
+  - Vengeful Bloodwitch [valid_resolution_no_immediate_mutation, seq=240] (active=GloomyButterfly, phase=Phase_Main1, controller=GloomyButterfly, owner=GloomyButterfly, source_object=346)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Vengeful Bloodwitch resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Vengeful Bloodwitch (object 346) Hand (GloomyButterfly) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Vengeful Bloodwitch (object 346) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=242] (active=GloomyButterfly, phase=Phase_Main1, controller=GloomyButterfly, owner=GloomyButterfly, source_object=321, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: GloomyButterfly gains 1 life.
+  - Ability of Cat Collector [observed_semantic_effect, seq=244] (active=GloomyButterfly, phase=Phase_Main1, controller=GloomyButterfly, owner=GloomyButterfly, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Cat Collector: a token is created.
+      explicit effect object references: Cat [351] (role/targeting only where the protocol identifies it)
+      token created: Cat (object 351, controller=GloomyButterfly) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 350).
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=246] (active=GloomyButterfly, phase=Phase_Main1, controller=GloomyButterfly, owner=GloomyButterfly, source_object=321, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: GloomyButterfly gains 1 life.
+  Combat snapshots observed (active=GloomyButterfly; frames: DeclareAttack -> DeclareBlock):
+      attackers: Curious Farm Animals [282] (unblocked, observed P/T 1/1), Helpful Hunter [288] (unblocked, observed P/T 1/1), Cat Collector [302] (unblocked, observed P/T 3/2), Hinterland Sanctifier [321] (unblocked, observed P/T 1/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 6; observed attacker power total: 6; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: GloomyButterfly +2; gian31 -6 (individual changes below; gains and losses may offset)
+    life: GloomyButterfly 2 -> 3
+    life: GloomyButterfly 3 -> 4
+    life (combat fully reconciled: snapshot power 6 + observed modifiers 0 = 6; individual assignment unavailable): gian31 23 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Fell [339] Library (GloomyButterfly) -> Hand (GloomyButterfly) (Draw; GRE sequence 229).
+      Swamp [345] Hand (GloomyButterfly) -> Battlefield (PlayLand; GRE sequence 237).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodletter of Aclazotz [310], Lunar Convocation [333], Makeshift Binding [327], Plains [279], Plains [326], Swamp [285], Swamp [294], Swamp [309]; Graveyard: Zoraline, Cosmos Caller [343]
+      GloomyButterfly: Battlefield: Cat Collector [302], Curious Farm Animals [282], Helpful Hunter [288], Hinterland Sanctifier [321], Plains [281], Plains [287], Plains [324], Swamp [301], Swamp [345], Vengeful Bloodwitch [346]; Exile: Skyknight Squire [332]; Graveyard: Fell [344]
+
+Turn 11
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=272] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=333, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 171 [171], Rush of Dread [358] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Rush of Dread (object 358) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Bloodletter of Aclazotz [310] (unblocked, observed P/T 2/4)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      other-player life loss not explained by observed attacker damage: gian31 17 -> 15 (-2; phase=unknown; source unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): gian31 17 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hero's Downfall [353] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 266).
+      Swamp [354] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 269).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodletter of Aclazotz [310], Lunar Convocation [333], Makeshift Binding [327], Plains [279], Plains [326], Swamp [285], Swamp [294], Swamp [309], Swamp [354]; Graveyard: Zoraline, Cosmos Caller [343]
+      GloomyButterfly: Battlefield: Cat Collector [302], Curious Farm Animals [282], Helpful Hunter [288], Hinterland Sanctifier [321], Plains [281], Plains [287], Plains [324], Swamp [301], Swamp [345], Vengeful Bloodwitch [346]; Exile: Skyknight Squire [332]; Graveyard: Fell [344]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 7, seq 152, Phase_Combat: GloomyButterfly 20 -> 14. combat-reconciled component 3; unresolved residual 3. Previous captured action: Zoraline, Cosmos Caller.
+- Turn 9, seq 217, Phase_Combat: GloomyButterfly 14 -> 4. combat-reconciled component 5; unresolved residual 5. Previous captured action: Zoraline, Cosmos Caller.
+- Turn 11, seq 270: gian31 17 -> 15. Combat declaration observed; exact assignment unavailable.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 2 token creations observed; 2 active as last observed; 0 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Food [307] controller=GloomyButterfly; created Turn 6 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 6, object 307 (latest observed P/T unknown; current zone unconfirmed).
+- Cat [351] controller=GloomyButterfly; created Turn 10 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 10, object 351 (latest observed P/T 1/1; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Plains [owner/controller metadata unavailable] moves Library (GloomyButterfly) -> Hand (GloomyButterfly) (Draw).
+- Turn 2, seq 24: Plains [owner=GloomyButterfly, controller=GloomyButterfly] moves Hand (GloomyButterfly) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Curious Farm Animals [owner=GloomyButterfly, controller=GloomyButterfly] moves Hand (GloomyButterfly) -> Stack (CastSpell).
+- Turn 2, seq 27: Curious Farm Animals [owner=GloomyButterfly, controller=GloomyButterfly] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 41: Stroke of Midnight [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 44: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 58: Plains [owner/controller metadata unavailable] moves Library (GloomyButterfly) -> Hand (GloomyButterfly) (Draw).
+- Turn 4, seq 61: Plains [owner=GloomyButterfly, controller=GloomyButterfly] moves Hand (GloomyButterfly) -> Battlefield (PlayLand).
+- Turn 4, seq 62: Helpful Hunter [owner=GloomyButterfly, controller=GloomyButterfly] moves Hand (GloomyButterfly) -> Stack (CastSpell).
+- Turn 4, seq 64: Helpful Hunter [owner=GloomyButterfly, controller=GloomyButterfly] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 66: Hinterland Sanctifier [owner/controller metadata unavailable] moves Library (GloomyButterfly) -> Hand (GloomyButterfly) (Draw).
+- Turn 5, seq 86: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 89: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 90: Zoraline, Cosmos Caller [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 92: Zoraline, Cosmos Caller [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 108: Swamp [owner/controller metadata unavailable] moves Library (GloomyButterfly) -> Hand (GloomyButterfly) (Draw).
+- Turn 6, seq 111: Swamp [owner=GloomyButterfly, controller=GloomyButterfly] moves Hand (GloomyButterfly) -> Battlefield (PlayLand).
+- Turn 6, seq 112: Cat Collector [owner=GloomyButterfly, controller=GloomyButterfly] moves Hand (GloomyButterfly) -> Stack (CastSpell).
+- Turn 6, seq 114: Cat Collector [owner=GloomyButterfly, controller=GloomyButterfly] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 131: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 134: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 135: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 137: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 162: Skyknight Squire [owner/controller metadata unavailable] moves Library (GloomyButterfly) -> Hand (GloomyButterfly) (Draw).
+- Turn 8, seq 165: Skyknight Squire [owner=GloomyButterfly, controller=GloomyButterfly] moves Hand (GloomyButterfly) -> Stack (CastSpell).
+- Turn 8, seq 167: Skyknight Squire [owner=GloomyButterfly, controller=GloomyButterfly] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 168: Hinterland Sanctifier [owner=GloomyButterfly, controller=GloomyButterfly] moves Hand (GloomyButterfly) -> Stack (CastSpell).
+- Turn 8, seq 170: Hinterland Sanctifier [owner=GloomyButterfly, controller=GloomyButterfly] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 174: Plains [owner=GloomyButterfly, controller=GloomyButterfly] moves Hand (GloomyButterfly) -> Battlefield (PlayLand).
+- Turn 9, seq 189: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 192: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 193: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 195: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 199: Skyknight Squire [owner=GloomyButterfly, controller=GloomyButterfly] moves Battlefield -> Exile (Exile).
+- Turn 9, seq 200: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 202: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 229: Fell [owner/controller metadata unavailable] moves Library (GloomyButterfly) -> Hand (GloomyButterfly) (Draw).
+- Turn 10, seq 232: Fell [owner=GloomyButterfly, controller=GloomyButterfly] moves Hand (GloomyButterfly) -> Stack (CastSpell).
+- Turn 10, seq 236: Zoraline, Cosmos Caller [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 10, seq 236: Fell [owner=GloomyButterfly, controller=GloomyButterfly] moves Stack -> Graveyard (GloomyButterfly) (Resolve).
+- Turn 10, seq 237: Swamp [owner=GloomyButterfly, controller=GloomyButterfly] moves Hand (GloomyButterfly) -> Battlefield (PlayLand).
+- Turn 10, seq 238: Vengeful Bloodwitch [owner=GloomyButterfly, controller=GloomyButterfly] moves Hand (GloomyButterfly) -> Stack (CastSpell).
+- Turn 10, seq 240: Vengeful Bloodwitch [owner=GloomyButterfly, controller=GloomyButterfly] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 266: Hero's Downfall [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 269: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 11, seq 272: Rush of Dread [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 162 becomes object 279 [Plains].
+- Turn 2, seq 21: object 226 becomes object 280 [Plains].
+- Turn 2, seq 24: object 220 becomes object 281 [Plains].
+- Turn 2, seq 25: object 219 becomes object 282 [Curious Farm Animals].
+- Turn 3, seq 41: object 166 becomes object 284 [Stroke of Midnight].
+- Turn 3, seq 44: object 163 becomes object 285 [Swamp].
+- Turn 4, seq 58: object 227 becomes object 286 [Plains].
+- Turn 4, seq 61: object 280 becomes object 287 [Plains].
+- Turn 4, seq 62: object 225 becomes object 288 [Helpful Hunter].
+- Turn 4, seq 66: object 228 becomes object 292 [Hinterland Sanctifier].
+- Turn 5, seq 86: object 167 becomes object 293 [Swamp].
+- Turn 5, seq 89: object 164 becomes object 294 [Swamp].
+- Turn 5, seq 90: object 161 becomes object 295 [Zoraline, Cosmos Caller].
+- Turn 6, seq 108: object 229 becomes object 300 [Swamp].
+- Turn 6, seq 111: object 221 becomes object 301 [Swamp].
+- Turn 6, seq 112: object 224 becomes object 302 [Cat Collector].
+- Turn 7, seq 131: object 168 becomes object 308 [Swamp].
+- Turn 7, seq 134: object 293 becomes object 309 [Swamp].
+- Turn 7, seq 135: object 160 becomes object 310 [Bloodletter of Aclazotz].
+- Turn 8, seq 162: object 230 becomes object 317 [Skyknight Squire].
+- Turn 8, seq 165: object 317 becomes object 318 [Skyknight Squire].
+- Turn 8, seq 168: object 292 becomes object 321 [Hinterland Sanctifier].
+- Turn 8, seq 174: object 286 becomes object 324 [Plains].
+- Turn 9, seq 189: object 169 becomes object 325 [Plains].
+- Turn 9, seq 192: object 325 becomes object 326 [Plains].
+- Turn 9, seq 193: object 165 becomes object 327 [Makeshift Binding].
+- Turn 9, seq 199: object 318 becomes object 332 [Skyknight Squire].
+- Turn 9, seq 200: object 159 becomes object 333 [Lunar Convocation].
+- Turn 10, seq 229: object 231 becomes object 339 [Fell].
+- Turn 10, seq 232: object 339 becomes object 340 [Fell].
+- Turn 10, seq 236: object 295 becomes object 343 [Zoraline, Cosmos Caller].
+- Turn 10, seq 236: object 340 becomes object 344 [Fell].
+- Turn 10, seq 237: object 300 becomes object 345 [Swamp].
+- Turn 10, seq 238: object 223 becomes object 346 [Vengeful Bloodwitch].
+- Turn 11, seq 266: object 170 becomes object 353 [Hero's Downfall].
+- Turn 11, seq 269: object 308 becomes object 354 [Swamp].
+- Turn 11, seq 272: object 171 becomes object 358 [Rush of Dread].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Plains (object 279) from Hand (gian31) to Battlefield.
+- Turn 2: GloomyButterfly plays Plains (object 281) from Hand (GloomyButterfly) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 285) from Hand (gian31) to Battlefield.
+- Turn 4: GloomyButterfly plays Plains (object 287) from Hand (GloomyButterfly) to Battlefield.
+- Turn 5: gian31 plays Swamp (object 294) from Hand (gian31) to Battlefield.
+- Turn 6: GloomyButterfly plays Swamp (object 301) from Hand (GloomyButterfly) to Battlefield.
+- Turn 7: gian31 plays Swamp (object 309) from Hand (gian31) to Battlefield.
+- Turn 8: GloomyButterfly plays Plains (object 324) from Hand (GloomyButterfly) to Battlefield.
+- Turn 9: gian31 plays Plains (object 326) from Hand (gian31) to Battlefield.
+- Turn 10: GloomyButterfly plays Swamp (object 345) from Hand (GloomyButterfly) to Battlefield.
+- Turn 11: gian31 plays Swamp (object 354) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Zoraline, Cosmos Caller: casts=1; abilities=5 (triggered=5, activated=0) across turns [5, 5, 7, 7, 9, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Cat Collector: casts=1; abilities=2 (triggered=2, activated=0) across turns [6, 6, 10]
+  observed effect totals: draws=0, tokens=2, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Hinterland Sanctifier: casts=1; abilities=2 (triggered=2, activated=0) across turns [8, 10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Lunar Convocation: casts=1; abilities=2 (triggered=2, activated=0) across turns [9, 9, 11]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: draw, life -2
+- Skyknight Squire: casts=1; abilities=2 (triggered=2, activated=0) across turns [8, 8, 8]
+  observed effect totals: draws=0, tokens=0, counters=2, returns=0, damage=0, life_changes=0, other=2
+  observed effects: +1 counter(s), P/T +1/+1
+- Helpful Hunter: casts=1; abilities=1 (triggered=1, activated=0) across turns [4, 4]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [9, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Bloodletter of Aclazotz: casts=1 across turns [7]
+- Curious Farm Animals: casts=1 across turns [2]
+- Fell: casts=1 across turns [10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Vengeful Bloodwitch: casts=1 across turns [10]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 4 - DeclareAttack, DeclareBlock (active=GloomyButterfly)
+  attacker: Curious Farm Animals (GloomyButterfly) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Zoraline, Cosmos Caller (gian31) -> GloomyButterfly; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Zoraline, Cosmos Caller (gian31) -> GloomyButterfly; unblocked in this observed snapshot
+  attacker: Bloodletter of Aclazotz (gian31) -> GloomyButterfly; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, DeclareBlock (active=GloomyButterfly)
+  attacker: Curious Farm Animals (GloomyButterfly) -> gian31; unblocked in this observed snapshot
+  attacker: Helpful Hunter (GloomyButterfly) -> gian31; unblocked in this observed snapshot
+  attacker: Cat Collector (GloomyButterfly) -> gian31; unblocked in this observed snapshot
+  attacker: Hinterland Sanctifier (GloomyButterfly) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Bloodletter of Aclazotz (gian31) -> GloomyButterfly; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 7: Ability of Zoraline, Cosmos Caller (active=gian31) - Ability of Zoraline, Cosmos Caller resolves with no immediate observed mutation.
+- Turn 7: Ability of Zoraline, Cosmos Caller (active=gian31) - Ability of Zoraline, Cosmos Caller: gian31 gains 1 life.
+- Turn 9: Ability of Zoraline, Cosmos Caller (active=gian31) - Ability of Zoraline, Cosmos Caller resolves with no immediate observed mutation.
+- Turn 9: Ability of Zoraline, Cosmos Caller (active=gian31) - Ability of Zoraline, Cosmos Caller: gian31 gains 1 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 160: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 161: Zoraline, Cosmos Caller | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 279: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 281: Plains | controller=GloomyButterfly | owner=GloomyButterfly | zone=Battlefield (latest_object_observation)
+- 282: Curious Farm Animals | controller=GloomyButterfly | owner=GloomyButterfly | zone=Battlefield (latest_object_observation)
+- 284: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 285: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 287: Plains | controller=GloomyButterfly | owner=GloomyButterfly | zone=Battlefield (latest_object_observation)
+- 288: Helpful Hunter | controller=GloomyButterfly | owner=GloomyButterfly | zone=Battlefield (latest_object_observation)
+- 291: Gumdrop Poisoner | controller=GloomyButterfly | owner=GloomyButterfly | zone=unknown (inferred unknown) (latest_object_observation)
+- 293: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 294: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 295: Zoraline, Cosmos Caller | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 299: object 299 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 301: Swamp | controller=GloomyButterfly | owner=GloomyButterfly | zone=Battlefield (latest_object_observation)
+- 302: Cat Collector | controller=GloomyButterfly | owner=GloomyButterfly | zone=Battlefield (latest_object_observation)
+- 306: object 306 | controller=GloomyButterfly | owner=GloomyButterfly | zone=unknown (inferred unknown) (latest_object_observation)
+- 307: Food | controller=GloomyButterfly | owner=GloomyButterfly | zone=Battlefield (latest_object_observation)
+- 308: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 309: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 310: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 315: object 315 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 316: object 316 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 318: Skyknight Squire | controller=GloomyButterfly | owner=GloomyButterfly | zone=Battlefield (latest_object_observation)
+- 321: Hinterland Sanctifier | controller=GloomyButterfly | owner=GloomyButterfly | zone=Battlefield (latest_object_observation)
+- 323: object 323 | controller=GloomyButterfly | owner=GloomyButterfly | zone=unknown (inferred unknown) (latest_object_observation)
+- 324: Plains | controller=GloomyButterfly | owner=GloomyButterfly | zone=Battlefield (latest_object_observation)
+- 325: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 326: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 327: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 331: object 331 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 332: Skyknight Squire | controller=GloomyButterfly | owner=GloomyButterfly | zone=Exile (latest_object_observation)
+- 333: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 336: object 336 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 337: object 337 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 338: object 338 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 340: Fell | controller=GloomyButterfly | owner=GloomyButterfly | zone=Stack (latest_object_observation)
+- 343: Zoraline, Cosmos Caller | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 344: Fell | controller=GloomyButterfly | owner=GloomyButterfly | zone=unknown (inferred unknown) (latest_object_observation)
+- 345: Swamp | controller=GloomyButterfly | owner=GloomyButterfly | zone=Battlefield (latest_object_observation)
+- 346: Vengeful Bloodwitch | controller=GloomyButterfly | owner=GloomyButterfly | zone=Battlefield (latest_object_observation)
+- 349: object 349 | controller=GloomyButterfly | owner=GloomyButterfly | zone=unknown (inferred unknown) (latest_object_observation)
+- 350: object 350 | controller=GloomyButterfly | owner=GloomyButterfly | zone=unknown (inferred unknown) (latest_object_observation)
+- 351: Cat | controller=GloomyButterfly | owner=GloomyButterfly | zone=Battlefield (latest_object_observation)
+- 352: object 352 | controller=GloomyButterfly | owner=GloomyButterfly | zone=unknown (inferred unknown) (latest_object_observation)
+- 353: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 354: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 355: object 355 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 358: Rush of Dread | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+GloomyButterfly: 22 total items
+  zones: Battlefield=13, Exile=1, Stack=1, unknown=7
+  objects: Plains x3, Fell x2, Skyknight Squire x2, Swamp x2, Cat, Cat Collector, Curious Farm Animals, Food, Gumdrop Poisoner, Helpful Hunter, Hinterland Sanctifier, Vengeful Bloodwitch
+gian31: 32 total items
+  zones: Battlefield=8, Graveyard=1, Hand=13, Stack=2, unknown=8
+  objects: Swamp x8, Plains x4, Zoraline, Cosmos Caller x3, Bloodletter of Aclazotz x2, Lunar Convocation x2, Makeshift Binding x2, Hero's Downfall, Rush of Dread, Stroke of Midnight, object 299, object 315, object 316
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (8): Bloodletter of Aclazotz, Plains, Plains, Swamp, Swamp, Swamp, Swamp, Zoraline, Cosmos Caller
+  Graveyard: 1 card(s)
+GloomyButterfly:
+  Battlefield (13): Cat, Cat Collector, Curious Farm Animals, Food, Helpful Hunter, Hinterland Sanctifier, Plains, Plains, Plains, Skyknight Squire, Swamp, Swamp, Vengeful Bloodwitch
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+15 objects have no resolved final zone and are omitted from the known board state.
+GloomyButterfly: 7 unknown object(s)
+gian31: 8 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=13, Stack=3
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+GloomyButterfly:
+  Battlefield (12): Plains, Curious Farm Animals, Plains, Helpful Hunter, Swamp, Cat Collector, Food, Hinterland Sanctifier, Plains, Swamp, Vengeful Bloodwitch, Cat
+  Graveyard (1): Fell
+  Exile (1): Skyknight Squire
+gian31:
+  Battlefield (9): Plains, Swamp, Swamp, Swamp, Bloodletter of Aclazotz, Plains, Makeshift Binding, Lunar Convocation, Swamp
+  Graveyard (1): Zoraline, Cosmos Caller
+Known non-persistent entries (counts only):
+  GloomyButterfly: Limbo=2
+  gian31: Hand=3, Limbo=5
+  unknown: Hand=1, Library=94, Limbo=7
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1
+- Turn 2: GloomyButterfly Battlefield=2; gian31 Battlefield=1
+- Turn 3: GloomyButterfly Battlefield=2; gian31 Battlefield=2
+- Turn 4: GloomyButterfly Battlefield=4; gian31 Battlefield=2
+- Turn 5: GloomyButterfly Battlefield=4; gian31 Battlefield=4
+- Turn 6: GloomyButterfly Battlefield=6; gian31 Battlefield=4
+- Turn 7: GloomyButterfly Battlefield=6; gian31 Battlefield=6
+- Turn 8: GloomyButterfly Battlefield=9; gian31 Battlefield=6
+- Turn 9: GloomyButterfly Battlefield=8; GloomyButterfly Exile=1; gian31 Battlefield=9
+- Turn 10: GloomyButterfly Battlefield=10; GloomyButterfly Graveyard=1; GloomyButterfly Exile=1; gian31 Battlefield=8; gian31 Graveyard=1
+- Turn 11: GloomyButterfly Battlefield=10; GloomyButterfly Graveyard=1; GloomyButterfly Exile=1; gian31 Battlefield=9; gian31 Graveyard=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Curious Farm Animals resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Helpful Hunter resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Zoraline, Cosmos Caller resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Cat Collector resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Skyknight Squire resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Vengeful Bloodwitch resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
