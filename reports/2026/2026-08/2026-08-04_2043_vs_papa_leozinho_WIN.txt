@@ -1,0 +1,707 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: papa_leozinho, gian31
+Seat map: Seat 1=papa_leozinho, Seat 2=gian31
+Turn range (known): 1 - 12
+Unnumbered turn groups retained: 1
+Records: 38
+Action chains: 22
+Winner: gian31
+Final life: {'papa_leozinho': 10, 'gian31': 20}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 12 (Phase_Main1; Ability of Bloodthirsty Conqueror, seq 331).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 30 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 11 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12] (raw records=11; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 14 explicit Library -> Hand movement(s); named in the draw record=9, resolved through an explicit identity transition=3, unresolved=2.
+Unresolved draw identities (explicit movements retained): Turn 7, seq 121, object 302; Turn 9, seq 176, object 330.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Swamp [219], Case of the Uneaten Feast [220], Stroke of Midnight [221], Scoured Barrens [222], Plains [223], Phyrexian Arena [224], Plains [225].
+  - unknown: 7 observed card(s): object 159 [159], object 160 [160], object 161 [161], object 162 [162], object 163 [163], object 164 [164], object 165 [165].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'papa_leozinho': 10, 'gian31': 20}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 12 (Phase_Main1; Ability of Bloodthirsty Conqueror, seq 331).
+Last captured life snapshot: gian31 19 -> 20 (seq 331).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Dreamroot Cascade.
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Case of the Uneaten Feast.
+- Turn 3: actions: cards=1, abilities=0; explicit battlefield entries=Island, Llanowar Elves.
+- Turn 4: actions: cards=0, abilities=1; life mutations=1; explicit battlefield entries=Scoured Barrens.
+- Turn 5: actions: cards=1, abilities=0; explicit battlefield entries=Island, Skyserpent Seeker.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Phyrexian Arena.
+- Turn 7: actions: cards=0, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Island, Island, Botanical Sanctum.
+- Turn 8: actions: cards=1, abilities=3; life mutations=3; explicit battlefield entries=Plains, Enduring Tenacity.
+- Turn 9: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Ouroboroid.
+- Turn 10: actions: cards=3, abilities=7; life mutations=6; explicit battlefield entries=Plains, Makeshift Binding, Lunar Convocation; explicit battlefield exits=Skyserpent Seeker.
+- Turn 11: actions: cards=1, abilities=3; combat snapshots=1; explicit battlefield entries=Forest, Ouroboroid, Enduring Tenacity; explicit battlefield exits=Enduring Tenacity, Bat.
+- Turn 12: actions: cards=1, abilities=12; life mutations=13; explicit battlefield entries=Godless Shrine, Bloodthirsty Conqueror.
+- Turn None: actions: cards=0, abilities=0.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Dreamroot Cascade [279] Hand (papa_leozinho) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      papa_leozinho: Battlefield: Dreamroot Cascade [279]
+
+Turn 2
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=27] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 282) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 282) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [280] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 21).
+      Plains [281] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      papa_leozinho: Battlefield: Dreamroot Cascade [279]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Plains [281]
+
+Turn 3
+  - Llanowar Elves [valid_resolution_no_immediate_mutation, seq=47] (active=papa_leozinho, phase=Phase_Main1, controller=papa_leozinho, owner=papa_leozinho, source_object=286)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Llanowar Elves resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Llanowar Elves (object 286) Hand (papa_leozinho) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Llanowar Elves (object 286) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Island [284] Library (papa_leozinho) -> Hand (papa_leozinho) (Draw; GRE sequence 41).
+      Island [285] Hand (papa_leozinho) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      papa_leozinho: Battlefield: Dreamroot Cascade [279], Island [285], Llanowar Elves [286]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Plains [281]
+
+Turn 4
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=66] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=289, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [288] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 61).
+      Scoured Barrens [289] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 64).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      papa_leozinho: Battlefield: Dreamroot Cascade [279], Island [285], Llanowar Elves [286]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Plains [281], Scoured Barrens [289]
+
+Turn 5
+  - Skyserpent Seeker [valid_resolution_no_immediate_mutation, seq=86] (active=papa_leozinho, phase=Phase_Main1, controller=papa_leozinho, owner=papa_leozinho, source_object=293)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Skyserpent Seeker resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Skyserpent Seeker (object 293) Hand (papa_leozinho) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Skyserpent Seeker (object 293) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Ouroboroid [291] Library (papa_leozinho) -> Hand (papa_leozinho) (Draw; GRE sequence 80).
+      Island [292] Hand (papa_leozinho) -> Battlefield (PlayLand; GRE sequence 83).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      papa_leozinho: Battlefield: Dreamroot Cascade [279], Island [285], Island [292], Llanowar Elves [286], Skyserpent Seeker [293]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Plains [281], Scoured Barrens [289]
+
+Turn 6
+  - Phyrexian Arena [valid_resolution_no_immediate_mutation, seq=107] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=298)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Phyrexian Arena resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Phyrexian Arena (object 298) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Phyrexian Arena (object 298) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Enduring Tenacity [296] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 101).
+      Swamp [297] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 104).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      papa_leozinho: Battlefield: Dreamroot Cascade [279], Island [285], Island [292], Llanowar Elves [286], Skyserpent Seeker [293]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Phyrexian Arena [298], Plains [281], Scoured Barrens [289], Swamp [297]
+
+Turn 7
+  Combat snapshots observed (active=papa_leozinho; frames: DeclareAttack -> DeclareBlock):
+      attackers: Llanowar Elves [286] (unblocked, observed P/T 1/1), Skyserpent Seeker [293] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -3 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 21 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 302 [302] Library (papa_leozinho) -> Hand (papa_leozinho) (Draw; GRE sequence 121).
+      Island [303] Hand (papa_leozinho) -> Battlefield (PlayLand; GRE sequence 124).
+      Island [315] Library (papa_leozinho) -> Battlefield (Put; GRE sequence 127).
+      Botanical Sanctum [314] Library (papa_leozinho) -> Battlefield (Put; GRE sequence 127).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      papa_leozinho: Battlefield: Botanical Sanctum [314], Dreamroot Cascade [279], Island [285], Island [292], Island [303], Island [315], Llanowar Elves [286], Skyserpent Seeker [293]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Phyrexian Arena [298], Plains [281], Scoured Barrens [289], Swamp [297]
+
+Turn 8
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=148] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=298, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 229 [229], Godless Shrine [320] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Godless Shrine (object 320) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Enduring Tenacity [valid_resolution_no_immediate_mutation, seq=156] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=323)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Enduring Tenacity resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Enduring Tenacity (object 323) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Enduring Tenacity (object 323) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=158] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=162] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=323, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: papa_leozinho loses 1 life.
+    net observed life change this turn: gian31 +0; papa_leozinho -1 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 17
+    life: gian31 17 -> 18
+    life: papa_leozinho 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodletter of Aclazotz [321] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 150).
+      Plains [322] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 153).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      papa_leozinho: Battlefield: Botanical Sanctum [314], Dreamroot Cascade [279], Island [285], Island [292], Island [303], Island [315], Llanowar Elves [286], Skyserpent Seeker [293]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Enduring Tenacity [323], Phyrexian Arena [298], Plains [281], Plains [322], Scoured Barrens [289], Swamp [297]
+
+Turn 9
+  - Ouroboroid [valid_resolution_no_immediate_mutation, seq=181] (active=papa_leozinho, phase=Phase_Main1, controller=papa_leozinho, owner=papa_leozinho, source_object=331)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ouroboroid resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ouroboroid (object 331) Hand (papa_leozinho) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ouroboroid (object 331) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Ouroboroid [observed_semantic_effect, seq=185] (active=papa_leozinho, phase=Phase_Combat, step=Step_BeginCombat, controller=papa_leozinho, owner=papa_leozinho, source_object=331, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s), +1 counter(s)
+      narrative: Ability of Ouroboroid: Llanowar Elves gets +1/+1; Skyserpent Seeker gets +1/+1; Ouroboroid gets +1/+1; 1 counter(s) are added to Llanowar Elves [286]; 1 counter(s) are added to Skyserpent Seeker [293]; 1 counter(s) are added to Ouroboroid [331].
+      explicit effect object references: Llanowar Elves [286], Skyserpent Seeker [293] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=papa_leozinho; frames: DeclareAttack -> DeclareBlock):
+      attackers: Skyserpent Seeker [293] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -3 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 18 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 330 [330] Library (papa_leozinho) -> Hand (papa_leozinho) (Draw; GRE sequence 176).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      papa_leozinho: Battlefield: Botanical Sanctum [314], Dreamroot Cascade [279], Island [285], Island [292], Island [303], Island [315], Llanowar Elves [286], Ouroboroid [331], Skyserpent Seeker [293]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Enduring Tenacity [323], Phyrexian Arena [298], Plains [281], Plains [322], Scoured Barrens [289], Swamp [297]
+
+Turn 10
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=203] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=298, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 231 [231], Lunar Convocation [338] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Lunar Convocation (object 338) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=217] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=341)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 341) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 341) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=221] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=341, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Skyserpent Seeker; gian31 gains 2 life.
+      explicit effect object references: Skyserpent Seeker [293], Skyserpent Seeker [349] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Skyserpent Seeker (object 349) Battlefield -> Exile (Exile; shared object ID)
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=225] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=323, source_last_explicit_zone=Battlefield)
+      effects: life -2
+      narrative: Ability of Enduring Tenacity: papa_leozinho loses 2 life.
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=228] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=351)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 351) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 351) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=242] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=351, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Lunar Convocation: a token is created.
+      explicit effect object references: Bat [356] (role/targeting only where the protocol identifies it)
+      token created: Bat (object 356, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 355).
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=244] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=248] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=323, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: papa_leozinho loses 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=250] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=351, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: papa_leozinho loses 1 life.
+  - Snakeskin Veil [observed_semantic_effect, seq=215] (active=unknown, controller=papa_leozinho, owner=papa_leozinho, source_object=345)
+      chronology reconciliation: parser turn group None conflicts with Turn 10; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Snakeskin Veil: Ouroboroid gets +1/+1; 1 counter(s) are added to Ouroboroid [331].
+      explicit effect object references: Ouroboroid [331] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Snakeskin Veil (object 345) Hand (papa_leozinho) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Snakeskin Veil (object 347) Stack -> Graveyard (papa_leozinho) (Resolve; shared object ID)
+      identity continuity: source object 345 -> transfer object 347 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: gian31 +2; papa_leozinho -4 (individual changes below; gains and losses may offset)
+    life: gian31 15 -> 14
+    life: gian31 14 -> 16
+    life: papa_leozinho 19 -> 17
+    life: gian31 16 -> 17
+    life: papa_leozinho 17 -> 16
+    life: papa_leozinho 16 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hero's Downfall [339] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 205).
+      Plains [340] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 208).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      papa_leozinho: Battlefield: Botanical Sanctum [314], Dreamroot Cascade [279], Island [285], Island [292], Island [303], Island [315], Llanowar Elves [286], Ouroboroid [331]; Graveyard: Snakeskin Veil [347]; Exile: Skyserpent Seeker [349]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Enduring Tenacity [323], Lunar Convocation [351], Makeshift Binding [341], Phyrexian Arena [298], Plains [281], Plains [322], Plains [340], Scoured Barrens [289], Swamp [297]
+
+Turn 11
+  - Ouroboroid [valid_resolution_no_immediate_mutation, seq=260] (active=papa_leozinho, phase=Phase_Main1, controller=papa_leozinho, owner=papa_leozinho, source_object=361)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ouroboroid resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ouroboroid (object 361) Hand (papa_leozinho) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ouroboroid (object 361) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Ouroboroid [observed_semantic_effect, seq=265] (active=papa_leozinho, phase=Phase_Combat, step=Step_BeginCombat, controller=papa_leozinho, owner=papa_leozinho, source_object=331, source_last_explicit_zone=Battlefield)
+      effects: P/T +3/+3, P/T +3/+3, P/T +3/+3, +3 counter(s), +3 counter(s), +3 counter(s)
+      narrative: Ability of Ouroboroid: Llanowar Elves gets +3/+3; Ouroboroid gets +3/+3; Ouroboroid gets +3/+3; 3 counter(s) are added to Llanowar Elves [286]; 3 counter(s) are added to Ouroboroid [331]; 3 counter(s) are added to Ouroboroid [361].
+      explicit effect object references: Llanowar Elves [286], Ouroboroid [361] (role/targeting only where the protocol identifies it)
+  - Ability of Ouroboroid [observed_semantic_effect, seq=267] (active=papa_leozinho, phase=Phase_Combat, step=Step_BeginCombat, controller=papa_leozinho, owner=papa_leozinho, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: P/T +4/+4, P/T +4/+4, P/T +4/+4, +4 counter(s), +4 counter(s), +4 counter(s)
+      narrative: Ability of Ouroboroid: Llanowar Elves gets +4/+4; Ouroboroid gets +4/+4; Ouroboroid gets +4/+4; 4 counter(s) are added to Llanowar Elves [286]; 4 counter(s) are added to Ouroboroid [331]; 4 counter(s) are added to Ouroboroid [361].
+      explicit effect object references: Llanowar Elves [286], Ouroboroid [331] (role/targeting only where the protocol identifies it)
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=280] (active=papa_leozinho, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=323, source_last_explicit_zone=Battlefield, source_successor=371 observed Graveyard (gian31) -> Battlefield (Return))
+      effects: return to battlefield
+      narrative: Ability of Enduring Tenacity: a card/permanent returns.
+      explicit effect object references: Enduring Tenacity [368], Enduring Tenacity [371] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Enduring Tenacity (object 371) Graveyard (gian31) -> Battlefield (Return; shared object ID)
+  Combat snapshots observed (active=papa_leozinho; frames: DeclareAttack -> DeclareBlock -> CombatDamage):
+      attackers: Llanowar Elves [286] (blocked, observed P/T 9/9), Ouroboroid [331] (blocked, observed P/T 10/12)
+      blockers: Enduring Tenacity [323], Bat [356]
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat-result zone change: Enduring Tenacity [368] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat-result zone change: Bat [369] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [359] Library (papa_leozinho) -> Hand (papa_leozinho) (Draw; GRE sequence 254).
+      Forest [360] Hand (papa_leozinho) -> Battlefield (PlayLand; GRE sequence 257).
+      Enduring Tenacity [368] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 278).
+      Bat [369] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 278).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      papa_leozinho: Battlefield: Botanical Sanctum [314], Dreamroot Cascade [279], Forest [360], Island [285], Island [292], Island [303], Island [315], Llanowar Elves [286], Ouroboroid [331], Ouroboroid [361]; Graveyard: Snakeskin Veil [347]; Exile: Skyserpent Seeker [349]
+      gian31: Battlefield: Case of the Uneaten Feast [282], Enduring Tenacity [371], Lunar Convocation [351], Makeshift Binding [341], Phyrexian Arena [298], Plains [281], Plains [322], Plains [340], Scoured Barrens [289], Swamp [297]; Graveyard: Bat [369]
+
+Turn 12
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=290] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=298, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 233 [233], Bloodthirsty Conqueror [373] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 373) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation, seq=299] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=376)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 376) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 376) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=301] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=305] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=371, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: papa_leozinho loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=307] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=376, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=311] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=371, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: papa_leozinho loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=313] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=376, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=317] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=371, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: papa_leozinho loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=319] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=376, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=323] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=371, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: papa_leozinho loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=325] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=376, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=329] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=371, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: papa_leozinho loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=331] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=376, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+    net observed life change this turn: gian31 +3; papa_leozinho -5 (individual changes below; gains and losses may offset)
+    life: gian31 17 -> 16
+    life: gian31 16 -> 14
+    life: gian31 14 -> 15
+    life: papa_leozinho 15 -> 14
+    life: gian31 15 -> 16
+    life: papa_leozinho 14 -> 13
+    life: gian31 16 -> 17
+    life: papa_leozinho 13 -> 12
+    life: gian31 17 -> 18
+    life: papa_leozinho 12 -> 11
+    life: gian31 18 -> 19
+    life: papa_leozinho 11 -> 10
+    life: gian31 19 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Enduring Tenacity [374] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 292).
+      Godless Shrine [375] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 296).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      papa_leozinho: Battlefield: Botanical Sanctum [314], Dreamroot Cascade [279], Forest [360], Island [285], Island [292], Island [303], Island [315], Llanowar Elves [286], Ouroboroid [331], Ouroboroid [361]; Graveyard: Snakeskin Veil [347]; Exile: Skyserpent Seeker [349]
+      gian31: Battlefield: Bloodthirsty Conqueror [376], Case of the Uneaten Feast [282], Enduring Tenacity [371], Godless Shrine [375], Lunar Convocation [351], Makeshift Binding [341], Phyrexian Arena [298], Plains [281], Plains [322], Plains [340], Scoured Barrens [289], Swamp [297]; Graveyard: Bat [369]
+
+UNNUMBERED / UNRESOLVED TURN GROUP
+  - The captured records do not provide a verified numbered turn for the following events.
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 12, seq 296, Phase_Beginning: gian31 16 -> 14. No source event correlated in captured records. Previous captured action: Phyrexian Arena.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 1 token creations observed; 0 active as last observed; 1 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Bat [356] controller=gian31; created Turn 10 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 11 via Battlefield -> Graveyard (gian31) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Dreamroot Cascade [owner=papa_leozinho, controller=papa_leozinho] moves Hand (papa_leozinho) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 24: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 27: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 41: Island [owner/controller metadata unavailable] moves Library (papa_leozinho) -> Hand (papa_leozinho) (Draw).
+- Turn 3, seq 44: Island [owner=papa_leozinho, controller=papa_leozinho] moves Hand (papa_leozinho) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Llanowar Elves [owner=papa_leozinho, controller=papa_leozinho] moves Hand (papa_leozinho) -> Stack (CastSpell).
+- Turn 3, seq 47: Llanowar Elves [owner=papa_leozinho, controller=papa_leozinho] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 61: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 64: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 80: Ouroboroid [owner/controller metadata unavailable] moves Library (papa_leozinho) -> Hand (papa_leozinho) (Draw).
+- Turn 5, seq 83: Island [owner=papa_leozinho, controller=papa_leozinho] moves Hand (papa_leozinho) -> Battlefield (PlayLand).
+- Turn 5, seq 84: Skyserpent Seeker [owner=papa_leozinho, controller=papa_leozinho] moves Hand (papa_leozinho) -> Stack (CastSpell).
+- Turn 5, seq 86: Skyserpent Seeker [owner=papa_leozinho, controller=papa_leozinho] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 101: Enduring Tenacity [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 104: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 105: Phyrexian Arena [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 107: Phyrexian Arena [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 121: object 302 [owner/controller metadata unavailable] moves Library (papa_leozinho) -> Hand (papa_leozinho) (Draw).
+- Turn 7, seq 124: Island [owner=papa_leozinho, controller=papa_leozinho] moves Hand (papa_leozinho) -> Battlefield (PlayLand).
+- Turn 7, seq 127: Island [owner=papa_leozinho, controller=papa_leozinho] moves Library (papa_leozinho) -> Battlefield (Put).
+- Turn 7, seq 127: Botanical Sanctum [owner=papa_leozinho, controller=papa_leozinho] moves Library (papa_leozinho) -> Battlefield (Put).
+- Turn 8, seq 148: Godless Shrine [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 150: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 153: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 154: Enduring Tenacity [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 156: Enduring Tenacity [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 176: object 330 [owner/controller metadata unavailable] moves Library (papa_leozinho) -> Hand (papa_leozinho) (Draw).
+- Turn 9, seq 179: Ouroboroid [owner=papa_leozinho, controller=papa_leozinho] moves Hand (papa_leozinho) -> Stack (CastSpell).
+- Turn 9, seq 181: Ouroboroid [owner=papa_leozinho, controller=papa_leozinho] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 203: Lunar Convocation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 205: Hero's Downfall [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 208: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 209: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 211: Snakeskin Veil [owner=papa_leozinho, controller=papa_leozinho] moves Hand (papa_leozinho) -> Stack (CastSpell).
+- Turn 10, seq 215: Snakeskin Veil [owner=papa_leozinho, controller=papa_leozinho] moves Stack -> Graveyard (papa_leozinho) (Resolve).
+- Turn 10, seq 217: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 221: Skyserpent Seeker [owner=papa_leozinho, controller=papa_leozinho] moves Battlefield -> Exile (Exile).
+- Turn 10, seq 226: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 228: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 254: Forest [owner/controller metadata unavailable] moves Library (papa_leozinho) -> Hand (papa_leozinho) (Draw).
+- Turn 11, seq 257: Forest [owner=papa_leozinho, controller=papa_leozinho] moves Hand (papa_leozinho) -> Battlefield (PlayLand).
+- Turn 11, seq 258: Ouroboroid [owner=papa_leozinho, controller=papa_leozinho] moves Hand (papa_leozinho) -> Stack (CastSpell).
+- Turn 11, seq 260: Ouroboroid [owner=papa_leozinho, controller=papa_leozinho] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 278: Enduring Tenacity [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 11, seq 278: Bat [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 11, seq 280: Enduring Tenacity [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Battlefield (Return).
+- Turn 12, seq 290: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 292: Enduring Tenacity [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 296: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 297: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 299: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 163 becomes object 279 [Dreamroot Cascade].
+- Turn 2, seq 21: object 226 becomes object 280 [Plains].
+- Turn 2, seq 24: object 225 becomes object 281 [Plains].
+- Turn 2, seq 25: object 220 becomes object 282 [Case of the Uneaten Feast].
+- Turn 3, seq 41: object 166 becomes object 284 [Island].
+- Turn 3, seq 44: object 159 becomes object 285 [Island].
+- Turn 3, seq 45: object 164 becomes object 286 [Llanowar Elves].
+- Turn 4, seq 61: object 227 becomes object 288 [Makeshift Binding].
+- Turn 4, seq 64: object 222 becomes object 289 [Scoured Barrens].
+- Turn 5, seq 80: object 167 becomes object 291 [Ouroboroid].
+- Turn 5, seq 83: object 284 becomes object 292 [Island].
+- Turn 5, seq 84: object 162 becomes object 293 [Skyserpent Seeker].
+- Turn 6, seq 101: object 228 becomes object 296 [Enduring Tenacity].
+- Turn 6, seq 104: object 219 becomes object 297 [Swamp].
+- Turn 6, seq 105: object 224 becomes object 298 [Phyrexian Arena].
+- Turn 7, seq 121: object 168 becomes object 302 [object 168].
+- Turn 7, seq 124: object 165 becomes object 303 [Island].
+- Turn 7, seq 127: object 173 becomes object 315 [Island].
+- Turn 7, seq 127: object 171 becomes object 314 [Botanical Sanctum].
+- Turn 8, seq 148: object 229 becomes object 320 [Godless Shrine].
+- Turn 8, seq 150: object 230 becomes object 321 [Bloodletter of Aclazotz].
+- Turn 8, seq 153: object 280 becomes object 322 [Plains].
+- Turn 8, seq 154: object 296 becomes object 323 [Enduring Tenacity].
+- Turn 9, seq 176: object 174 becomes object 330 [object 174].
+- Turn 9, seq 179: object 160 becomes object 331 [Ouroboroid].
+- Turn 10, seq 203: object 231 becomes object 338 [Lunar Convocation].
+- Turn 10, seq 205: object 232 becomes object 339 [Hero's Downfall].
+- Turn 10, seq 208: object 223 becomes object 340 [Plains].
+- Turn 10, seq 209: object 288 becomes object 341 [Makeshift Binding].
+- Turn 10, seq 211: object 161 becomes object 345 [Snakeskin Veil].
+- Turn 10, seq 215: object 345 becomes object 347 [Snakeskin Veil].
+- Turn 10, seq 221: object 293 becomes object 349 [Skyserpent Seeker].
+- Turn 10, seq 226: object 338 becomes object 351 [Lunar Convocation].
+- Turn 11, seq 254: object 175 becomes object 359 [Forest].
+- Turn 11, seq 257: object 359 becomes object 360 [Forest].
+- Turn 11, seq 258: object 291 becomes object 361 [Ouroboroid].
+- Turn 11, seq 278: object 323 becomes object 368 [Enduring Tenacity].
+- Turn 11, seq 278: object 356 becomes object 369 [Bat].
+- Turn 11, seq 280: object 368 becomes object 371 [Enduring Tenacity].
+- Turn 12, seq 290: object 233 becomes object 373 [Bloodthirsty Conqueror].
+- Turn 12, seq 292: object 234 becomes object 374 [Enduring Tenacity].
+- Turn 12, seq 296: object 320 becomes object 375 [Godless Shrine].
+- Turn 12, seq 297: object 373 becomes object 376 [Bloodthirsty Conqueror].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: papa_leozinho plays Dreamroot Cascade (object 279) from Hand (papa_leozinho) to Battlefield.
+- Turn 2: gian31 plays Plains (object 281) from Hand (gian31) to Battlefield.
+- Turn 3: papa_leozinho plays Island (object 285) from Hand (papa_leozinho) to Battlefield.
+- Turn 4: gian31 plays Scoured Barrens (object 289) from Hand (gian31) to Battlefield.
+- Turn 5: papa_leozinho plays Island (object 292) from Hand (papa_leozinho) to Battlefield.
+- Turn 6: gian31 plays Swamp (object 297) from Hand (gian31) to Battlefield.
+- Turn 7: papa_leozinho plays Island (object 303) from Hand (papa_leozinho) to Battlefield.
+- Turn 8: gian31 plays Plains (object 322) from Hand (gian31) to Battlefield.
+- Turn 10: gian31 plays Plains (object 340) from Hand (gian31) to Battlefield.
+- Turn 11: papa_leozinho plays Forest (object 360) from Hand (papa_leozinho) to Battlefield.
+- Turn 12: gian31 plays Godless Shrine (object 375) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 10: ordered adjacent records Enduring Tenacity -> Lunar Convocation; observed repetitions=2; net life: papa_leozinho -4. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Enduring Tenacity=2, Lunar Convocation=2.
+  Individual ability records remain in the timeline.
+- Turn 12: ordered adjacent records Enduring Tenacity -> Bloodthirsty Conqueror; observed repetitions=5; net life: gian31 +5, papa_leozinho -5. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Bloodthirsty Conqueror=5, Enduring Tenacity=5.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 12: ordered adjacent records Enduring Tenacity -> Bloodthirsty Conqueror; observed repetitions=5 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Enduring Tenacity: casts=1; abilities=9 (triggered=9, activated=0) across turns [8, 8, 10, 10, 11, 12, 12, 12, 12, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=1, damage=0, life_changes=8, other=3
+  observed effects: life -1, life -2, return to battlefield, synthetic event
+- Bloodthirsty Conqueror: casts=1; abilities=5 (triggered=5, activated=0) across turns [12, 12, 12, 12, 12, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=0
+  observed effects: life +1
+- Ouroboroid: casts=2; abilities=3 (triggered=3, activated=0) across turns [9, 9, 11, 11, 11]
+  observed effect totals: draws=0, tokens=0, counters=9, returns=0, damage=0, life_changes=0, other=9
+  observed effects: +1 counter(s), +3 counter(s), +4 counter(s), P/T +1/+1, P/T +3/+3, P/T +4/+4
+- Case of the Uneaten Feast: casts=1; abilities=3 (triggered=3, activated=0) across turns [2, 8, 10, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=0
+  observed effects: life +1
+- Phyrexian Arena: casts=1; abilities=3 (triggered=3, activated=0) across turns [6, 8, 10, 12]
+  observed effect totals: draws=3, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=3
+  observed effects: draw, life -1, synthetic event
+- Lunar Convocation: casts=1; abilities=2 (triggered=2, activated=0) across turns [10, 10, 10]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life -1, token creation
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Llanowar Elves: casts=1 across turns [3]
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [4]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Skyserpent Seeker: casts=1 across turns [5]
+- Snakeskin Veil: casts=1 across turns [10]
+  observed effect totals: draws=0, tokens=0, counters=1, returns=0, damage=0, life_changes=0, other=1
+  observed effects: +1 counter(s), P/T +1/+1
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 7 - DeclareAttack, DeclareBlock (active=papa_leozinho)
+  attacker: Llanowar Elves (papa_leozinho) -> gian31; unblocked in this observed snapshot
+  attacker: Skyserpent Seeker (papa_leozinho) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=papa_leozinho)
+  attacker: Skyserpent Seeker (papa_leozinho) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock, CombatDamage (active=papa_leozinho)
+  attacker: Llanowar Elves (papa_leozinho) -> gian31; blocked by Enduring Tenacity
+  attacker: Ouroboroid (papa_leozinho) -> gian31; blocked by Bat
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 9: Ability of Ouroboroid (active=papa_leozinho) - Ability of Ouroboroid: Llanowar Elves gets +1/+1; Skyserpent Seeker gets +1/+1; Ouroboroid gets +1/+1; 1 counter(s) are added to target; 1 counter(s) are added to target; 1 counter(s) are added to target.
+- Turn 11: Ability of Ouroboroid (active=papa_leozinho) - Ability of Ouroboroid: Llanowar Elves gets +3/+3; Ouroboroid gets +3/+3; Ouroboroid gets +3/+3; 3 counter(s) are added to target; 3 counter(s) are added to target; 3 counter(s) are added to target.
+- Turn 11: Ability of Ouroboroid (active=papa_leozinho) - Ability of Ouroboroid: Llanowar Elves gets +4/+4; Ouroboroid gets +4/+4; Ouroboroid gets +4/+4; 4 counter(s) are added to target; 4 counter(s) are added to target; 4 counter(s) are added to target.
+- Turn 11: Ability of Enduring Tenacity (active=papa_leozinho controller=gian31) - Ability of Enduring Tenacity: a card/permanent returns.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 169: Ouroboroid | controller=papa_leozinho | owner=papa_leozinho | zone=unknown (inferred unknown) (latest_object_observation)
+- 170: Studious First-Year | controller=papa_leozinho | owner=papa_leozinho | zone=unknown (inferred unknown) (latest_object_observation)
+- 171: Botanical Sanctum | controller=papa_leozinho | owner=papa_leozinho | zone=Hand (latest_object_observation)
+- 172: Llanowar Elves | controller=papa_leozinho | owner=papa_leozinho | zone=unknown (inferred unknown) (latest_object_observation)
+- 173: Island | controller=papa_leozinho | owner=papa_leozinho | zone=Hand (latest_object_observation)
+- 219: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 220: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 221: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 222: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 223: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 224: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 225: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 279: Dreamroot Cascade | controller=papa_leozinho | owner=papa_leozinho | zone=Battlefield (latest_object_observation)
+- 280: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 281: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 282: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 285: Island | controller=papa_leozinho | owner=papa_leozinho | zone=Battlefield (latest_object_observation)
+- 286: Llanowar Elves | controller=papa_leozinho | owner=papa_leozinho | zone=Battlefield (latest_object_observation)
+- 288: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 289: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 290: object 290 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 292: Island | controller=papa_leozinho | owner=papa_leozinho | zone=Battlefield (latest_object_observation)
+- 293: Skyserpent Seeker | controller=papa_leozinho | owner=papa_leozinho | zone=Battlefield (latest_object_observation)
+- 296: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 297: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 298: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 303: Island | controller=papa_leozinho | owner=papa_leozinho | zone=Battlefield (latest_object_observation)
+- 304: object 304 | controller=papa_leozinho | owner=papa_leozinho | zone=unknown (inferred unknown) (latest_object_observation)
+- 309: Ouroboroid | controller=papa_leozinho | owner=papa_leozinho | zone=unknown (inferred unknown) (latest_object_observation)
+- 310: Studious First-Year | controller=papa_leozinho | owner=papa_leozinho | zone=unknown (inferred unknown) (latest_object_observation)
+- 311: Botanical Sanctum | controller=papa_leozinho | owner=papa_leozinho | zone=unknown (inferred unknown) (latest_object_observation)
+- 312: Llanowar Elves | controller=papa_leozinho | owner=papa_leozinho | zone=unknown (inferred unknown) (latest_object_observation)
+- 313: Island | controller=papa_leozinho | owner=papa_leozinho | zone=unknown (inferred unknown) (latest_object_observation)
+- 314: Botanical Sanctum | controller=papa_leozinho | owner=papa_leozinho | zone=Battlefield (latest_object_observation)
+- 315: Island | controller=papa_leozinho | owner=papa_leozinho | zone=Battlefield (latest_object_observation)
+- 319: object 319 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 320: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 321: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 322: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 323: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 328: object 328 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 329: object 329 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 331: Ouroboroid | controller=papa_leozinho | owner=papa_leozinho | zone=Battlefield (latest_object_observation)
+- 336: object 336 | controller=papa_leozinho | owner=papa_leozinho | zone=unknown (inferred unknown) (latest_object_observation)
+- 337: object 337 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 338: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 339: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 340: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 341: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 345: Snakeskin Veil | controller=papa_leozinho | owner=papa_leozinho | zone=Stack (latest_object_observation)
+- 347: Snakeskin Veil | controller=papa_leozinho | owner=papa_leozinho | zone=unknown (inferred unknown) (latest_object_observation)
+- 348: object 348 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 349: Skyserpent Seeker | controller=papa_leozinho | owner=papa_leozinho | zone=Exile (latest_object_observation)
+- 350: object 350 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 351: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 354: object 354 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 355: object 355 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 356: Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 357: object 357 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 358: object 358 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 360: Forest | controller=papa_leozinho | owner=papa_leozinho | zone=Battlefield (latest_object_observation)
+- 361: Ouroboroid | controller=papa_leozinho | owner=papa_leozinho | zone=Battlefield (latest_object_observation)
+- 366: object 366 | controller=papa_leozinho | owner=papa_leozinho | zone=unknown (inferred unknown) (latest_object_observation)
+- 367: object 367 | controller=papa_leozinho | owner=papa_leozinho | zone=unknown (inferred unknown) (latest_object_observation)
+- 368: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 370: object 370 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 371: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 372: object 372 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 373: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 374: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 375: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 376: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 382: object 382 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 383: object 383 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 384: object 384 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 385: object 385 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 386: object 386 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 387: object 387 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 388: object 388 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 389: object 389 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 390: object 390 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 391: object 391 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 392: object 392 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 393: object 393 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 56 total items
+  zones: Battlefield=10, Hand=17, Stack=4, unknown=25
+  objects: Plains x6, Enduring Tenacity x5, Bloodthirsty Conqueror x2, Case of the Uneaten Feast x2, Godless Shrine x2, Lunar Convocation x2, Makeshift Binding x2, Phyrexian Arena x2, Scoured Barrens x2, Swamp x2, Bat, Bloodletter of Aclazotz
+papa_leozinho: 28 total items
+  zones: Battlefield=11, Exile=1, Hand=2, Stack=1, unknown=13
+  objects: Island x6, Ouroboroid x4, Botanical Sanctum x3, Llanowar Elves x3, Skyserpent Seeker x2, Snakeskin Veil x2, Studious First-Year x2, Dreamroot Cascade, Forest, object 304, object 336, object 366
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+papa_leozinho:
+  Battlefield (11): Botanical Sanctum, Dreamroot Cascade, Forest, Island, Island, Island, Island, Llanowar Elves, Ouroboroid, Ouroboroid, Skyserpent Seeker
+  Graveyard: 0 card(s)
+gian31:
+  Battlefield (10): Bloodthirsty Conqueror, Enduring Tenacity, Enduring Tenacity, Enduring Tenacity, Godless Shrine, Plains, Plains, Plains, Scoured Barrens, Swamp
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+38 objects have no resolved final zone and are omitted from the known board state.
+gian31: 25 unknown object(s)
+papa_leozinho: 13 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=19, Stack=5
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+gian31:
+  Battlefield (12): Plains, Case of the Uneaten Feast, Scoured Barrens, Swamp, Phyrexian Arena, Plains, Plains, Makeshift Binding, Lunar Convocation, Enduring Tenacity, Godless Shrine, Bloodthirsty Conqueror
+  Graveyard (1): Enduring Tenacity
+papa_leozinho:
+  Battlefield (10): Dreamroot Cascade, Island, Llanowar Elves, Island, Island, Botanical Sanctum, Island, Ouroboroid, Forest, Ouroboroid
+  Graveyard (1): Snakeskin Veil
+  Exile (1): Skyserpent Seeker
+Known non-persistent entries (counts only):
+  gian31: Hand=4, Limbo=7, Stack=1
+  papa_leozinho: Hand=2, Limbo=2
+  unknown: Library=90, Limbo=8
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: papa_leozinho Battlefield=1
+- Turn 2: gian31 Battlefield=2; papa_leozinho Battlefield=1
+- Turn 3: gian31 Battlefield=2; papa_leozinho Battlefield=3
+- Turn 4: gian31 Battlefield=3; papa_leozinho Battlefield=3
+- Turn 5: gian31 Battlefield=3; papa_leozinho Battlefield=5
+- Turn 6: gian31 Battlefield=5; papa_leozinho Battlefield=5
+- Turn 7: gian31 Battlefield=5; papa_leozinho Battlefield=8
+- Turn 8: gian31 Battlefield=7; papa_leozinho Battlefield=8
+- Turn 9: gian31 Battlefield=7; papa_leozinho Battlefield=9
+- Turn 10: gian31 Battlefield=10; papa_leozinho Battlefield=8; papa_leozinho Graveyard=1; papa_leozinho Exile=1
+- Turn 11: gian31 Battlefield=10; gian31 Graveyard=1; papa_leozinho Battlefield=10; papa_leozinho Graveyard=1; papa_leozinho Exile=1
+- Turn 12: gian31 Battlefield=12; gian31 Graveyard=1; papa_leozinho Battlefield=10; papa_leozinho Graveyard=1; papa_leozinho Exile=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Llanowar Elves resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Skyserpent Seeker resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Phyrexian Arena resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Enduring Tenacity resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Ouroboroid resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Ouroboroid resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
