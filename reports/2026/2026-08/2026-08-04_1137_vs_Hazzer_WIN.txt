@@ -1,0 +1,1173 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Hazzer
+Seat map: Seat 1=gian31, Seat 2=Hazzer
+Turn range (known): 1 - 15
+Records: 88
+Action chains: 52
+Winner: gian31
+Final life: {'gian31': 29, 'Hazzer': 1}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 15 (Phase_Combat, Step_CombatDamage; Ability of Starscape Cleric, seq 652).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 30 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 12 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 15] (raw records=12; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 16 explicit Library -> Hand movement(s); named in the draw record=9, resolved through an explicit identity transition=7, unresolved=0.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Bloodthirsty Conqueror [175], Marauding Blight-Priest [176], Swamp [177], Enduring Tenacity [178], Makeshift Binding [179], Starscape Cleric [180], Plains [181].
+  - unknown: 7 observed card(s): object 235 [235], object 236 [236], object 237 [237], object 238 [238], object 239 [239], object 240 [240], object 241 [241].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 29, 'Hazzer': 1}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 15 (Phase_Combat, Step_CombatDamage; Ability of Starscape Cleric, seq 652).
+Last captured life snapshot: gian31 28 -> 29 (seq 645).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Plains.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Forest.
+- Turn 3: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Starscape Cleric.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Deep-Cavern Bat.
+- Turn 5: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, Marauding Blight-Priest.
+- Turn 6: actions: cards=1, abilities=0; combat snapshots=1; life mutations=2; explicit battlefield entries=Swamp, Virulent Emissary.
+- Turn 7: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Plains, Enduring Tenacity.
+- Turn 8: actions: cards=0, abilities=1; combat snapshots=1; life mutations=3; explicit battlefield entries=Forest, Vizier of the Menagerie.
+- Turn 9: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Starscape Cleric.
+- Turn 10: actions: cards=1, abilities=3; combat snapshots=1; life mutations=5; explicit battlefield entries=Swamp, South Wind Avatar.
+- Turn 11: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Phyrexian Arena.
+- Turn 12: actions: cards=2, abilities=6; combat snapshots=1; life mutations=7; explicit battlefield entries=Swamp, Old-Growth Educator, Teacher's Pest.
+- Turn 13: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Enduring Tenacity.
+- Turn 14: actions: cards=1, abilities=11; combat snapshots=1; life mutations=11; explicit battlefield entries=Jungle Hollow, Old-Growth Educator, Enduring Tenacity; explicit battlefield exits=Marauding Blight-Priest, Enduring Tenacity, Old-Growth Educator.
+- Turn 15: actions: cards=1, abilities=53; combat snapshots=1; life mutations=53; explicit battlefield entries=Swamp, Bloodthirsty Conqueror; explicit battlefield exits=Starscape Cleric.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [310] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [310]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Vizier of the Menagerie [311] Library (Hazzer) -> Hand (Hazzer) (Draw; GRE sequence 21).
+      Forest [312] Hand (Hazzer) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [310]
+      Hazzer: Battlefield: Forest [312]
+
+Turn 3
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=45] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=315)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 315) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 315) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [313] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 38).
+      Swamp [314] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 41).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [310], Starscape Cleric [315], Swamp [314]
+      Hazzer: Battlefield: Forest [312]
+
+Turn 4
+  - Deep-Cavern Bat [valid_resolution_no_immediate_mutation, seq=65] (active=Hazzer, phase=Phase_Main1, controller=Hazzer, owner=Hazzer, source_object=320)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deep-Cavern Bat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deep-Cavern Bat (object 320) Hand (Hazzer) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Deep-Cavern Bat (object 320) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [318] Library (Hazzer) -> Hand (Hazzer) (Draw; GRE sequence 59).
+      Swamp [319] Hand (Hazzer) -> Battlefield (PlayLand; GRE sequence 62).
+      Makeshift Binding [324] Hand (gian31) -> Exile (Exile; GRE sequence 70).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [310], Starscape Cleric [315], Swamp [314]; Exile: Makeshift Binding [324]
+      Hazzer: Battlefield: Deep-Cavern Bat [320], Forest [312], Swamp [319]
+
+Turn 5
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=90] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=331)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 331) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 331) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Starscape Cleric [315] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Hazzer -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Hazzer 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [329] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 84).
+      Swamp [330] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 87).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Marauding Blight-Priest [331], Plains [310], Starscape Cleric [315], Swamp [314], Swamp [330]; Exile: Makeshift Binding [324]
+      Hazzer: Battlefield: Deep-Cavern Bat [320], Forest [312], Swamp [319]
+
+Turn 6
+  - Virulent Emissary [valid_resolution_no_immediate_mutation, seq=117] (active=Hazzer, phase=Phase_Main1, controller=Hazzer, owner=Hazzer, source_object=337)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Virulent Emissary resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Virulent Emissary (object 337) Hand (Hazzer) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Virulent Emissary (object 337) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=Hazzer; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [320] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Hazzer +1; gian31 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 20 -> 19
+    life (gain observed during combat phase; exact source unavailable): Hazzer 18 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Virulent Emissary [335] Library (Hazzer) -> Hand (Hazzer) (Draw; GRE sequence 111).
+      Swamp [336] Hand (Hazzer) -> Battlefield (PlayLand; GRE sequence 114).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Marauding Blight-Priest [331], Plains [310], Starscape Cleric [315], Swamp [314], Swamp [330]; Exile: Makeshift Binding [324]
+      Hazzer: Battlefield: Deep-Cavern Bat [320], Forest [312], Swamp [319], Swamp [336], Virulent Emissary [337]
+
+Turn 7
+  - Enduring Tenacity [valid_resolution_no_immediate_mutation, seq=143] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=341)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Enduring Tenacity resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Enduring Tenacity (object 341) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Enduring Tenacity (object 341) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [315] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Hazzer -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Hazzer 19 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [339] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 137).
+      Plains [340] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 140).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Enduring Tenacity [341], Marauding Blight-Priest [331], Plains [310], Plains [340], Starscape Cleric [315], Swamp [314], Swamp [330]; Exile: Makeshift Binding [324]
+      Hazzer: Battlefield: Deep-Cavern Bat [320], Forest [312], Swamp [319], Swamp [336], Virulent Emissary [337]
+
+Turn 8
+  - Ability of Virulent Emissary [observed_semantic_effect, seq=171] (active=Hazzer, phase=Phase_Main1, controller=Hazzer, owner=Hazzer, source_object=337, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Virulent Emissary: Hazzer gains 1 life.
+  Combat snapshots observed (active=Hazzer; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [320] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Hazzer +2; gian31 -1 (individual changes below; gains and losses may offset)
+    life: Hazzer 17 -> 18
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 19 -> 18
+    life (semantically attributed to Virulent Emissary; direct protocol link unavailable): Hazzer 18 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [346] Library (Hazzer) -> Hand (Hazzer) (Draw; GRE sequence 163).
+      Forest [347] Hand (Hazzer) -> Battlefield (PlayLand; GRE sequence 166).
+      Vizier of the Menagerie [348] Hand (Hazzer) -> Stack (CastSpell; GRE sequence 167).
+      Vizier of the Menagerie [348] Stack -> Battlefield (Resolve; GRE sequence 169).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Enduring Tenacity [341], Marauding Blight-Priest [331], Plains [310], Plains [340], Starscape Cleric [315], Swamp [314], Swamp [330]; Exile: Makeshift Binding [324]
+      Hazzer: Battlefield: Deep-Cavern Bat [320], Forest [312], Forest [347], Swamp [319], Swamp [336], Virulent Emissary [337], Vizier of the Menagerie [348]
+
+Turn 9
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=197] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=355)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 355) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 355) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [315] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Hazzer -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Hazzer 19 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Marauding Blight-Priest [354] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 191).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Enduring Tenacity [341], Marauding Blight-Priest [331], Plains [310], Plains [340], Starscape Cleric [315], Starscape Cleric [355], Swamp [314], Swamp [330]; Exile: Makeshift Binding [324]
+      Hazzer: Battlefield: Deep-Cavern Bat [320], Forest [312], Forest [347], Swamp [319], Swamp [336], Virulent Emissary [337], Vizier of the Menagerie [348]
+
+Turn 10
+  - South Wind Avatar [valid_resolution_no_immediate_mutation, seq=223] (active=Hazzer, phase=Phase_Main1, controller=Hazzer, owner=Hazzer, source_object=360)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: South Wind Avatar resolves with no immediate observed mutation.
+      protocol-linked zone transfer: South Wind Avatar (object 360) Library (Hazzer) -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Library (Hazzer); enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: South Wind Avatar (object 360) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Virulent Emissary [observed_semantic_effect, seq=225] (active=Hazzer, phase=Phase_Main1, controller=Hazzer, owner=Hazzer, source_object=337, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Virulent Emissary: Hazzer gains 1 life.
+  - Ability of South Wind Avatar [observed_semantic_effect, seq=227] (active=Hazzer, phase=Phase_Main1, controller=Hazzer, owner=Hazzer, source_object=360, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of South Wind Avatar: gian31 loses 1 life.
+  - Ability of South Wind Avatar [observed_semantic_effect, seq=239] (active=Hazzer, phase=Phase_Combat, step=Step_CombatDamage, controller=Hazzer, owner=Hazzer, source_object=360, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 227 and 239; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life -1
+      narrative: Ability of South Wind Avatar: gian31 loses 1 life.
+  Combat snapshots observed (active=Hazzer; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [320] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Hazzer +2; gian31 -3 (individual changes below; gains and losses may offset)
+    life: Hazzer 17 -> 18
+    life: gian31 18 -> 17
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 17 -> 16
+    life (semantically attributed to Virulent Emissary; direct protocol link unavailable): Hazzer 18 -> 19
+    life: gian31 16 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [358] Library (Hazzer) -> Hand (Hazzer) (Draw; GRE sequence 217).
+      Swamp [359] Hand (Hazzer) -> Battlefield (PlayLand; GRE sequence 220).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Enduring Tenacity [341], Marauding Blight-Priest [331], Plains [310], Plains [340], Starscape Cleric [315], Starscape Cleric [355], Swamp [314], Swamp [330]; Exile: Makeshift Binding [324]
+      Hazzer: Battlefield: Deep-Cavern Bat [320], Forest [312], Forest [347], South Wind Avatar [360], Swamp [319], Swamp [336], Swamp [359], Virulent Emissary [337], Vizier of the Menagerie [348]
+
+Turn 11
+  - Phyrexian Arena [valid_resolution_no_immediate_mutation, seq=254] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=369)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Phyrexian Arena resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Phyrexian Arena (object 369) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Phyrexian Arena (object 369) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [315] (unblocked, observed P/T 2/1), Starscape Cleric [355] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Hazzer -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): Hazzer 19 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Phyrexian Arena [368] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 249).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Enduring Tenacity [341], Marauding Blight-Priest [331], Phyrexian Arena [369], Plains [310], Plains [340], Starscape Cleric [315], Starscape Cleric [355], Swamp [314], Swamp [330]; Exile: Makeshift Binding [324]
+      Hazzer: Battlefield: Deep-Cavern Bat [320], Forest [312], Forest [347], South Wind Avatar [360], Swamp [319], Swamp [336], Swamp [359], Virulent Emissary [337], Vizier of the Menagerie [348]
+
+Turn 12
+  - Old-Growth Educator [valid_resolution_no_immediate_mutation, seq=281] (active=Hazzer, phase=Phase_Main1, controller=Hazzer, owner=Hazzer, source_object=375)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Old-Growth Educator resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Old-Growth Educator (object 375) Hand (Hazzer) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Old-Growth Educator (object 375) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Virulent Emissary [observed_semantic_effect, seq=284] (active=Hazzer, phase=Phase_Main1, controller=Hazzer, owner=Hazzer, source_object=337, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Virulent Emissary: Hazzer gains 1 life.
+  - Ability of South Wind Avatar [observed_semantic_effect, seq=286] (active=Hazzer, phase=Phase_Main1, controller=Hazzer, owner=Hazzer, source_object=360, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of South Wind Avatar: gian31 loses 1 life.
+  - Ability of Old-Growth Educator [observed_semantic_effect, seq=288] (active=Hazzer, phase=Phase_Main1, controller=Hazzer, owner=Hazzer, source_object=375, source_last_explicit_zone=Battlefield)
+      effects: one +2/+2 counter; observed P/T change +2/+2 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Old-Growth Educator: Old-Growth Educator gets +2/+2; 2 counter(s) are added to Old-Growth Educator [375].
+  - Teacher's Pest [valid_resolution_no_immediate_mutation, seq=291] (active=Hazzer, phase=Phase_Main1, controller=Hazzer, owner=Hazzer, source_object=383)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Teacher's Pest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Teacher's Pest (object 383) Hand (Hazzer) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Teacher's Pest (object 383) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Virulent Emissary [observed_semantic_effect, seq=293] (active=Hazzer, phase=Phase_Main1, controller=Hazzer, owner=Hazzer, source_object=337, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Virulent Emissary: Hazzer gains 1 life.
+  - Ability of South Wind Avatar [observed_semantic_effect, seq=295] (active=Hazzer, phase=Phase_Main1, controller=Hazzer, owner=Hazzer, source_object=360, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of South Wind Avatar: gian31 loses 1 life.
+  - Ability of South Wind Avatar [observed_semantic_effect, seq=307] (active=Hazzer, phase=Phase_Combat, step=Step_CombatDamage, controller=Hazzer, owner=Hazzer, source_object=360, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 295 and 307; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life -1
+      narrative: Ability of South Wind Avatar: gian31 loses 1 life.
+  Combat snapshots observed (active=Hazzer; frames: DeclareAttack -> DeclareBlock):
+      attackers: Deep-Cavern Bat [320] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Hazzer +3; gian31 -4 (individual changes below; gains and losses may offset)
+    life: Hazzer 15 -> 16
+    life: gian31 15 -> 14
+    life: Hazzer 16 -> 17
+    life: gian31 14 -> 13
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 13 -> 12
+    life (semantically attributed to Virulent Emissary; direct protocol link unavailable): Hazzer 17 -> 18
+    life: gian31 12 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [373] Library (Hazzer) -> Hand (Hazzer) (Draw; GRE sequence 275).
+      Swamp [374] Hand (Hazzer) -> Battlefield (PlayLand; GRE sequence 278).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Enduring Tenacity [341], Marauding Blight-Priest [331], Phyrexian Arena [369], Plains [310], Plains [340], Starscape Cleric [315], Starscape Cleric [355], Swamp [314], Swamp [330]; Exile: Makeshift Binding [324]
+      Hazzer: Battlefield: Deep-Cavern Bat [320], Forest [312], Forest [347], Old-Growth Educator [375], South Wind Avatar [360], Swamp [319], Swamp [336], Swamp [359], Swamp [374], Teacher's Pest [383], Virulent Emissary [337], Vizier of the Menagerie [348]
+
+Turn 13
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=317] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=369, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 187 [187], Bloodletter of Aclazotz [390] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 390) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Enduring Tenacity [valid_resolution_no_immediate_mutation, seq=324] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=392)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Enduring Tenacity resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Enduring Tenacity (object 392) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Enduring Tenacity (object 392) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 11 -> 10
+    additional protocol-observed zone movements not assigned to an action chain:
+      Enduring Tenacity [391] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 319).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Enduring Tenacity [341], Enduring Tenacity [392], Marauding Blight-Priest [331], Phyrexian Arena [369], Plains [310], Plains [340], Starscape Cleric [315], Starscape Cleric [355], Swamp [314], Swamp [330]; Exile: Makeshift Binding [324]
+      Hazzer: Battlefield: Deep-Cavern Bat [320], Forest [312], Forest [347], Old-Growth Educator [375], South Wind Avatar [360], Swamp [319], Swamp [336], Swamp [359], Swamp [374], Teacher's Pest [383], Virulent Emissary [337], Vizier of the Menagerie [348]
+
+Turn 14
+  - Ability of Jungle Hollow [observed_semantic_effect, seq=344] (active=Hazzer, phase=Phase_Main1, controller=Hazzer, owner=Hazzer, source_object=398, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Jungle Hollow: Hazzer gains 1 life.
+  - Ability of South Wind Avatar [observed_semantic_effect, seq=346] (active=Hazzer, phase=Phase_Main1, controller=Hazzer, owner=Hazzer, source_object=360, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of South Wind Avatar: gian31 loses 1 life.
+  - Old-Growth Educator [valid_resolution_no_immediate_mutation, seq=349] (active=Hazzer, phase=Phase_Main1, controller=Hazzer, owner=Hazzer, source_object=401)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Old-Growth Educator resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Old-Growth Educator (object 401) Hand (Hazzer) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Old-Growth Educator (object 401) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Virulent Emissary [observed_semantic_effect, seq=352] (active=Hazzer, phase=Phase_Main1, controller=Hazzer, owner=Hazzer, source_object=337, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Virulent Emissary: Hazzer gains 1 life.
+  - Ability of South Wind Avatar [observed_semantic_effect, seq=354] (active=Hazzer, phase=Phase_Main1, controller=Hazzer, owner=Hazzer, source_object=360, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of South Wind Avatar: gian31 loses 1 life.
+  - Ability of Old-Growth Educator [observed_semantic_effect, seq=356] (active=Hazzer, phase=Phase_Main1, controller=Hazzer, owner=Hazzer, source_object=401, source_last_explicit_zone=Battlefield)
+      effects: one +2/+2 counter; observed P/T change +2/+2 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Old-Growth Educator: Old-Growth Educator gets +2/+2; 2 counter(s) are added to Old-Growth Educator [401].
+  - Ability of Teacher's Pest [observed_semantic_effect, seq=366] (active=Hazzer, phase=Phase_Combat, step=Step_DeclareAttack, controller=Hazzer, owner=Hazzer, source_object=383, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Teacher's Pest: Hazzer gains 1 life.
+  - Ability of South Wind Avatar [observed_semantic_effect, seq=368] (active=Hazzer, phase=Phase_Combat, step=Step_DeclareAttack, controller=Hazzer, owner=Hazzer, source_object=360, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of South Wind Avatar: gian31 loses 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=381] (active=Hazzer, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=341, source_last_explicit_zone=Battlefield, source_successor=417 observed Graveyard (gian31) -> Battlefield (Return))
+      effects: return to battlefield
+      narrative: Ability of Enduring Tenacity: a card/permanent returns.
+      explicit effect object references: Enduring Tenacity [413], Enduring Tenacity [417] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Enduring Tenacity (object 417) Graveyard (gian31) -> Battlefield (Return; shared object ID)
+  - Ability of South Wind Avatar [observed_semantic_effect, seq=383] (active=Hazzer, phase=Phase_Combat, step=Step_CombatDamage, controller=Hazzer, owner=Hazzer, source_object=360, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of South Wind Avatar: gian31 loses 1 life.
+  - Ability of South Wind Avatar [observed_semantic_effect, seq=385] (active=Hazzer, phase=Phase_Combat, step=Step_CombatDamage, controller=Hazzer, owner=Hazzer, source_object=360, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 383 and 385; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life +6
+      narrative: Ability of South Wind Avatar: Hazzer gains 6 life.
+  - Ability of South Wind Avatar [observed_semantic_effect, seq=387] (active=Hazzer, phase=Phase_Combat, step=Step_CombatDamage, controller=Hazzer, owner=Hazzer, source_object=360, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 385 and 387; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life -1
+      narrative: Ability of South Wind Avatar: gian31 loses 1 life.
+  Combat snapshots observed (active=Hazzer; frames: DeclareAttack):
+      attackers: Deep-Cavern Bat [320] (unblocked, observed P/T 1/1), Old-Growth Educator [375] (unblocked, observed P/T 6/6), Teacher's Pest [383] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-result zone change: Marauding Blight-Priest [412] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat-result zone change: Enduring Tenacity [413] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat-result zone change: Old-Growth Educator [414] Battlefield -> Graveyard (Hazzer) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Hazzer +10; gian31 -7 (individual changes below; gains and losses may offset)
+    life: Hazzer 18 -> 19
+    life: gian31 10 -> 9
+    life: Hazzer 19 -> 20
+    life: gian31 9 -> 8
+    life: Hazzer 20 -> 21
+    life: gian31 8 -> 7
+    life (unattributed loss during combat phase; not explained by observed attacker damage): gian31 7 -> 5
+    life (semantically attributed to Teacher's Pest; direct protocol link unavailable): Hazzer 21 -> 22
+    life: gian31 5 -> 4
+    life: Hazzer 22 -> 28
+    life: gian31 4 -> 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Jungle Hollow [397] Library (Hazzer) -> Hand (Hazzer) (Draw; GRE sequence 339).
+      Jungle Hollow [398] Hand (Hazzer) -> Battlefield (PlayLand; GRE sequence 342).
+      Marauding Blight-Priest [412] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 378).
+      Enduring Tenacity [413] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 378).
+      Old-Growth Educator [414] Battlefield -> Graveyard (Hazzer) (SBA_Damage; GRE sequence 378).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Enduring Tenacity [392], Enduring Tenacity [417], Phyrexian Arena [369], Plains [310], Plains [340], Starscape Cleric [315], Starscape Cleric [355], Swamp [314], Swamp [330]; Exile: Makeshift Binding [324]; Graveyard: Marauding Blight-Priest [412]
+      Hazzer: Battlefield: Deep-Cavern Bat [320], Forest [312], Forest [347], Jungle Hollow [398], Old-Growth Educator [401], South Wind Avatar [360], Swamp [319], Swamp [336], Swamp [359], Swamp [374], Teacher's Pest [383], Virulent Emissary [337], Vizier of the Menagerie [348]; Graveyard: Old-Growth Educator [414]
+
+Turn 15
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=397] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=369, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 189 [189], Swamp [420] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Swamp (object 420) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation, seq=405] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=423)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 423) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 423) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=420] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +2
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 2 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=427] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=429] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=436] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=438] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=445] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=447] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=454] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=456] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=463] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=465] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=472] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=474] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=481] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=483] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=490] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=492] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=499] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=501] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=508] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=510] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=517] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=519] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=526] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=528] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=535] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=537] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=544] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=546] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=553] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=555] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=562] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=564] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=571] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=573] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=580] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=582] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=589] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=591] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=598] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=600] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=607] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=609] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=616] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=618] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=625] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=627] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=634] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=636] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=643] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=645] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=652] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Hazzer loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> CombatDamage):
+      attackers: Starscape Cleric [315] (unblocked, observed P/T 2/1), Starscape Cleric [355] (unblocked, observed P/T 2/1)
+      blockers: Old-Growth Educator [401]
+      combat-result zone change: Starscape Cleric [430] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Hazzer -27; gian31 +26 (individual changes below; gains and losses may offset)
+    life: gian31 3 -> 2
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): Hazzer 28 -> 26
+    life: gian31 2 -> 4
+    life: Hazzer 26 -> 25
+    life: gian31 4 -> 5
+    life: Hazzer 25 -> 24
+    life: gian31 5 -> 6
+    life: Hazzer 24 -> 23
+    life: gian31 6 -> 7
+    life: Hazzer 23 -> 22
+    life: gian31 7 -> 8
+    life: Hazzer 22 -> 21
+    life: gian31 8 -> 9
+    life: Hazzer 21 -> 20
+    life: gian31 9 -> 10
+    life: Hazzer 20 -> 19
+    life: gian31 10 -> 11
+    life: Hazzer 19 -> 18
+    life: gian31 11 -> 12
+    life: Hazzer 18 -> 17
+    life: gian31 12 -> 13
+    life: Hazzer 17 -> 16
+    life: gian31 13 -> 14
+    life: Hazzer 16 -> 15
+    life: gian31 14 -> 15
+    life: Hazzer 15 -> 14
+    life: gian31 15 -> 16
+    life: Hazzer 14 -> 13
+    life: gian31 16 -> 17
+    life: Hazzer 13 -> 12
+    life: gian31 17 -> 18
+    life: Hazzer 12 -> 11
+    life: gian31 18 -> 19
+    life: Hazzer 11 -> 10
+    life: gian31 19 -> 20
+    life: Hazzer 10 -> 9
+    life: gian31 20 -> 21
+    life: Hazzer 9 -> 8
+    life: gian31 21 -> 22
+    life: Hazzer 8 -> 7
+    life: gian31 22 -> 23
+    life: Hazzer 7 -> 6
+    life: gian31 23 -> 24
+    life: Hazzer 6 -> 5
+    life: gian31 24 -> 25
+    life: Hazzer 5 -> 4
+    life: gian31 25 -> 26
+    life: Hazzer 4 -> 3
+    life: gian31 26 -> 27
+    life: Hazzer 3 -> 2
+    life: gian31 27 -> 28
+    life: Hazzer 2 -> 1
+    life: gian31 28 -> 29
+    additional protocol-observed zone movements not assigned to an action chain:
+      Godless Shrine [421] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 399).
+      Swamp [422] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 402).
+      Starscape Cleric [430] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 418).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodthirsty Conqueror [423], Enduring Tenacity [392], Enduring Tenacity [417], Phyrexian Arena [369], Plains [310], Plains [340], Starscape Cleric [355], Swamp [314], Swamp [330], Swamp [422]; Exile: Makeshift Binding [324]; Graveyard: Marauding Blight-Priest [412], Starscape Cleric [430]
+      Hazzer: Battlefield: Deep-Cavern Bat [320], Forest [312], Forest [347], Jungle Hollow [398], Old-Growth Educator [401], South Wind Avatar [360], Swamp [319], Swamp [336], Swamp [359], Swamp [374], Teacher's Pest [383], Virulent Emissary [337], Vizier of the Menagerie [348]; Graveyard: Old-Growth Educator [414]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 6, seq 127, Phase_Main1: Hazzer 18 -> 19. Combat declaration observed; exact assignment unavailable. Previous captured action: Virulent Emissary.
+- Turn 8, seq 181, Phase_Main1: Hazzer 18 -> 19. Semantic attribution: Virulent Emissary; direct protocol link unavailable. Previous captured action: Virulent Emissary.
+- Turn 10, seq 237, Phase_Main1: Hazzer 18 -> 19. Semantic attribution: Virulent Emissary; direct protocol link unavailable. Previous captured action: South Wind Avatar.
+- Turn 12, seq 305, Phase_Main1: Hazzer 17 -> 18. Semantic attribution: Virulent Emissary; direct protocol link unavailable. Previous captured action: South Wind Avatar.
+- Turn 14, seq 378, Phase_Combat: gian31 7 -> 5; Hazzer 21 -> 22. Semantic attribution: Teacher's Pest; direct protocol link unavailable. Previous captured action: South Wind Avatar.
+- Turn 15, seq 418, Phase_Main1: Hazzer 28 -> 26. Combat declaration observed; exact assignment unavailable. Previous captured action: Bloodthirsty Conqueror.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Vizier of the Menagerie [owner/controller metadata unavailable] moves Library (Hazzer) -> Hand (Hazzer) (Draw).
+- Turn 2, seq 24: Forest [owner=Hazzer, controller=Hazzer] moves Hand (Hazzer) -> Battlefield (PlayLand).
+- Turn 3, seq 38: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 41: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 42: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 45: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 59: Swamp [owner/controller metadata unavailable] moves Library (Hazzer) -> Hand (Hazzer) (Draw).
+- Turn 4, seq 62: Swamp [owner=Hazzer, controller=Hazzer] moves Hand (Hazzer) -> Battlefield (PlayLand).
+- Turn 4, seq 63: Deep-Cavern Bat [owner=Hazzer, controller=Hazzer] moves Hand (Hazzer) -> Stack (CastSpell).
+- Turn 4, seq 65: Deep-Cavern Bat [owner=Hazzer, controller=Hazzer] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 70: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Exile (Exile).
+- Turn 5, seq 84: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 87: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 88: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 90: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 111: Virulent Emissary [owner/controller metadata unavailable] moves Library (Hazzer) -> Hand (Hazzer) (Draw).
+- Turn 6, seq 114: Swamp [owner=Hazzer, controller=Hazzer] moves Hand (Hazzer) -> Battlefield (PlayLand).
+- Turn 6, seq 115: Virulent Emissary [owner=Hazzer, controller=Hazzer] moves Hand (Hazzer) -> Stack (CastSpell).
+- Turn 6, seq 117: Virulent Emissary [owner=Hazzer, controller=Hazzer] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 137: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 140: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 141: Enduring Tenacity [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 143: Enduring Tenacity [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 163: Forest [owner/controller metadata unavailable] moves Library (Hazzer) -> Hand (Hazzer) (Draw).
+- Turn 8, seq 166: Forest [owner=Hazzer, controller=Hazzer] moves Hand (Hazzer) -> Battlefield (PlayLand).
+- Turn 8, seq 167: Vizier of the Menagerie [owner=Hazzer, controller=Hazzer] moves Hand (Hazzer) -> Stack (CastSpell).
+- Turn 8, seq 169: Vizier of the Menagerie [owner=Hazzer, controller=Hazzer] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 191: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 194: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 197: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 217: Swamp [owner/controller metadata unavailable] moves Library (Hazzer) -> Hand (Hazzer) (Draw).
+- Turn 10, seq 220: Swamp [owner=Hazzer, controller=Hazzer] moves Hand (Hazzer) -> Battlefield (PlayLand).
+- Turn 10, seq 221: South Wind Avatar [owner=Hazzer, controller=Hazzer] moves Library (Hazzer) -> Stack (CastSpell).
+- Turn 10, seq 223: South Wind Avatar [owner=Hazzer, controller=Hazzer] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 249: Phyrexian Arena [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 252: Phyrexian Arena [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 254: Phyrexian Arena [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 275: Swamp [owner/controller metadata unavailable] moves Library (Hazzer) -> Hand (Hazzer) (Draw).
+- Turn 12, seq 278: Swamp [owner=Hazzer, controller=Hazzer] moves Hand (Hazzer) -> Battlefield (PlayLand).
+- Turn 12, seq 279: Old-Growth Educator [owner=Hazzer, controller=Hazzer] moves Hand (Hazzer) -> Stack (CastSpell).
+- Turn 12, seq 281: Old-Growth Educator [owner=Hazzer, controller=Hazzer] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 289: Teacher's Pest [owner=Hazzer, controller=Hazzer] moves Hand (Hazzer) -> Stack (CastSpell).
+- Turn 12, seq 291: Teacher's Pest [owner=Hazzer, controller=Hazzer] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 317: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 319: Enduring Tenacity [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 322: Enduring Tenacity [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 13, seq 324: Enduring Tenacity [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 339: Jungle Hollow [owner/controller metadata unavailable] moves Library (Hazzer) -> Hand (Hazzer) (Draw).
+- Turn 14, seq 342: Jungle Hollow [owner=Hazzer, controller=Hazzer] moves Hand (Hazzer) -> Battlefield (PlayLand).
+- Turn 14, seq 347: Old-Growth Educator [owner=Hazzer, controller=Hazzer] moves Hand (Hazzer) -> Stack (CastSpell).
+- Turn 14, seq 349: Old-Growth Educator [owner=Hazzer, controller=Hazzer] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 378: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 14, seq 378: Enduring Tenacity [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 14, seq 378: Old-Growth Educator [owner=Hazzer, controller=Hazzer] moves Battlefield -> Graveyard (Hazzer) (SBA_Damage).
+- Turn 14, seq 381: Enduring Tenacity [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Battlefield (Return).
+- Turn 15, seq 397: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 15, seq 399: Godless Shrine [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 15, seq 402: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 15, seq 403: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 15, seq 405: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 418: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 181 becomes object 310 [Plains].
+- Turn 2, seq 21: object 242 becomes object 311 [Vizier of the Menagerie].
+- Turn 2, seq 24: object 235 becomes object 312 [Forest].
+- Turn 3, seq 38: object 182 becomes object 313 [Starscape Cleric].
+- Turn 3, seq 41: object 177 becomes object 314 [Swamp].
+- Turn 3, seq 42: object 180 becomes object 315 [Starscape Cleric].
+- Turn 4, seq 59: object 243 becomes object 318 [Swamp].
+- Turn 4, seq 62: object 241 becomes object 319 [Swamp].
+- Turn 4, seq 63: object 236 becomes object 320 [Deep-Cavern Bat].
+- Turn 4, seq 70: object 179 becomes object 324 [Makeshift Binding].
+- Turn 5, seq 84: object 183 becomes object 329 [Swamp].
+- Turn 5, seq 87: object 329 becomes object 330 [Swamp].
+- Turn 5, seq 88: object 176 becomes object 331 [Marauding Blight-Priest].
+- Turn 6, seq 111: object 244 becomes object 335 [Virulent Emissary].
+- Turn 6, seq 114: object 318 becomes object 336 [Swamp].
+- Turn 6, seq 115: object 335 becomes object 337 [Virulent Emissary].
+- Turn 7, seq 137: object 184 becomes object 339 [Plains].
+- Turn 7, seq 140: object 339 becomes object 340 [Plains].
+- Turn 7, seq 141: object 178 becomes object 341 [Enduring Tenacity].
+- Turn 8, seq 163: object 245 becomes object 346 [Forest].
+- Turn 8, seq 166: object 346 becomes object 347 [Forest].
+- Turn 8, seq 167: object 311 becomes object 348 [Vizier of the Menagerie].
+- Turn 9, seq 191: object 185 becomes object 354 [Marauding Blight-Priest].
+- Turn 9, seq 194: object 313 becomes object 355 [Starscape Cleric].
+- Turn 10, seq 217: object 246 becomes object 358 [Swamp].
+- Turn 10, seq 220: object 358 becomes object 359 [Swamp].
+- Turn 10, seq 221: object 247 becomes object 360 [South Wind Avatar].
+- Turn 11, seq 249: object 186 becomes object 368 [Phyrexian Arena].
+- Turn 11, seq 252: object 368 becomes object 369 [Phyrexian Arena].
+- Turn 12, seq 275: object 248 becomes object 373 [Swamp].
+- Turn 12, seq 278: object 373 becomes object 374 [Swamp].
+- Turn 12, seq 279: object 239 becomes object 375 [Old-Growth Educator].
+- Turn 12, seq 289: object 238 becomes object 383 [Teacher's Pest].
+- Turn 13, seq 317: object 187 becomes object 390 [Bloodletter of Aclazotz].
+- Turn 13, seq 319: object 188 becomes object 391 [Enduring Tenacity].
+- Turn 13, seq 322: object 391 becomes object 392 [Enduring Tenacity].
+- Turn 14, seq 339: object 249 becomes object 397 [Jungle Hollow].
+- Turn 14, seq 342: object 397 becomes object 398 [Jungle Hollow].
+- Turn 14, seq 347: object 240 becomes object 401 [Old-Growth Educator].
+- Turn 14, seq 378: object 331 becomes object 412 [Marauding Blight-Priest].
+- Turn 14, seq 378: object 341 becomes object 413 [Enduring Tenacity].
+- Turn 14, seq 378: object 375 becomes object 414 [Old-Growth Educator].
+- Turn 14, seq 381: object 413 becomes object 417 [Enduring Tenacity].
+- Turn 15, seq 397: object 189 becomes object 420 [Swamp].
+- Turn 15, seq 399: object 190 becomes object 421 [Godless Shrine].
+- Turn 15, seq 402: object 420 becomes object 422 [Swamp].
+- Turn 15, seq 403: object 175 becomes object 423 [Bloodthirsty Conqueror].
+- Turn 15, seq 418: object 315 becomes object 430 [Starscape Cleric].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Plains (object 310) from Hand (gian31) to Battlefield.
+- Turn 2: Hazzer plays Forest (object 312) from Hand (Hazzer) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 314) from Hand (gian31) to Battlefield.
+- Turn 4: Hazzer plays Swamp (object 319) from Hand (Hazzer) to Battlefield.
+- Turn 5: gian31 plays Swamp (object 330) from Hand (gian31) to Battlefield.
+- Turn 6: Hazzer plays Swamp (object 336) from Hand (Hazzer) to Battlefield.
+- Turn 7: gian31 plays Plains (object 340) from Hand (gian31) to Battlefield.
+- Turn 8: Hazzer plays Forest (object 347) from Hand (Hazzer) to Battlefield.
+- Turn 10: Hazzer plays Swamp (object 359) from Hand (Hazzer) to Battlefield.
+- Turn 12: Hazzer plays Swamp (object 374) from Hand (Hazzer) to Battlefield.
+- Turn 14: Hazzer plays Jungle Hollow (object 398) from Hand (Hazzer) to Battlefield.
+- Turn 15: gian31 plays Swamp (object 422) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 12: ordered adjacent records Virulent Emissary -> South Wind Avatar; observed repetitions=2; net life: Hazzer +2, gian31 -2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): South Wind Avatar=3, Virulent Emissary=2.
+  Individual ability records remain in the timeline.
+- Turn 15: ordered adjacent records Bloodthirsty Conqueror -> Starscape Cleric; observed repetitions=26; net life: Hazzer -26, gian31 +27. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Bloodthirsty Conqueror=26, Starscape Cleric=26.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 15: ordered adjacent records Bloodthirsty Conqueror -> Starscape Cleric; observed repetitions=26 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Starscape Cleric: casts=2; abilities=26 (triggered=26, activated=0) across turns [3, 9, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=26, other=0
+  observed effects: life -1
+- Bloodthirsty Conqueror: casts=1; abilities=26 (triggered=26, activated=0) across turns [15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=26, other=0
+  observed effects: life +1, life +2
+- South Wind Avatar: casts=1; abilities=11 (triggered=11, activated=0) across turns [10, 10, 10, 12, 12, 12, 14, 14, 14, 14, 14, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=11, other=3
+  observed effects: life +6, life -1, synthetic event
+- Virulent Emissary: casts=1; abilities=5 (triggered=5, activated=0) across turns [6, 8, 10, 12, 12, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=0
+  observed effects: life +1
+- Old-Growth Educator: casts=2; abilities=2 (triggered=2, activated=0) across turns [12, 12, 14, 14]
+  observed effect totals: draws=0, tokens=0, counters=2, returns=0, damage=0, life_changes=0, other=2
+  observed effects: +2 counter(s), P/T +2/+2
+- Enduring Tenacity: casts=2; abilities=1 (triggered=1, activated=0) across turns [7, 13, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=1, damage=0, life_changes=0, other=0
+  observed effects: return to battlefield
+- Phyrexian Arena: casts=1; abilities=2 (triggered=2, activated=0) across turns [11, 13, 15]
+  observed effect totals: draws=2, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=2
+  observed effects: draw, life -1, synthetic event
+- Teacher's Pest: casts=1; abilities=1 (triggered=1, activated=0) across turns [12, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Deep-Cavern Bat: casts=1 across turns [4]
+- Jungle Hollow: abilities=1 (triggered=1, activated=0) across turns [14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Marauding Blight-Priest: casts=1 across turns [5]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 - DeclareAttack (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Hazzer; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 6 - DeclareAttack, DeclareBlock (active=Hazzer)
+  attacker: Deep-Cavern Bat (Hazzer) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Hazzer; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=Hazzer)
+  attacker: Deep-Cavern Bat (Hazzer) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Hazzer; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, DeclareBlock (active=Hazzer)
+  attacker: Deep-Cavern Bat (Hazzer) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Hazzer; unblocked in this observed snapshot
+  attacker: Starscape Cleric (gian31) -> Hazzer; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack, DeclareBlock (active=Hazzer)
+  attacker: Deep-Cavern Bat (Hazzer) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 14 - DeclareAttack (active=Hazzer)
+  attacker: Deep-Cavern Bat (Hazzer) -> gian31; unblocked in this observed snapshot
+  attacker: Old-Growth Educator (Hazzer) -> gian31; unblocked in this observed snapshot
+  attacker: Teacher's Pest (Hazzer) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 15 - DeclareAttack, CombatDamage (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Hazzer; unblocked in this observed snapshot
+  attacker: Starscape Cleric (gian31) -> Hazzer; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 10: Ability of South Wind Avatar (active=Hazzer) - Ability of South Wind Avatar: gian31 loses 1 life.
+- Turn 12: Ability of South Wind Avatar (active=Hazzer) - Ability of South Wind Avatar: gian31 loses 1 life.
+- Turn 14: Ability of Teacher's Pest (active=Hazzer) - Ability of Teacher's Pest: Hazzer gains 1 life.
+- Turn 14: Ability of South Wind Avatar (active=Hazzer) - Ability of South Wind Avatar: gian31 loses 1 life.
+- Turn 14: Ability of Enduring Tenacity (active=Hazzer controller=gian31) - Ability of Enduring Tenacity: a card/permanent returns.
+- Turn 14: Ability of South Wind Avatar (active=Hazzer) - Ability of South Wind Avatar: gian31 loses 1 life.
+- Turn 14: Ability of South Wind Avatar (active=Hazzer) - Ability of South Wind Avatar: Hazzer gains 6 life.
+- Turn 14: Ability of South Wind Avatar (active=Hazzer) - Ability of South Wind Avatar: gian31 loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 2 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+- Turn 15: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 15: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Hazzer loses 1 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 175: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 176: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 177: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 178: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 179: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 180: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 181: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 310: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 312: Forest | controller=Hazzer | owner=Hazzer | zone=Battlefield (latest_object_observation)
+- 313: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 314: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 315: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 319: Swamp | controller=Hazzer | owner=Hazzer | zone=Battlefield (latest_object_observation)
+- 320: Deep-Cavern Bat | controller=Hazzer | owner=Hazzer | zone=Battlefield (latest_object_observation)
+- 323: object 323 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 324: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 329: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 330: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 331: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 336: Swamp | controller=Hazzer | owner=Hazzer | zone=Battlefield (latest_object_observation)
+- 337: Virulent Emissary | controller=Hazzer | owner=Hazzer | zone=Battlefield (latest_object_observation)
+- 339: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 340: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 341: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 347: Forest | controller=Hazzer | owner=Hazzer | zone=Battlefield (latest_object_observation)
+- 348: Vizier of the Menagerie | controller=Hazzer | owner=Hazzer | zone=Battlefield (latest_object_observation)
+- 353: object 353 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 354: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 355: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 359: Swamp | controller=Hazzer | owner=Hazzer | zone=Battlefield (latest_object_observation)
+- 360: South Wind Avatar | controller=Hazzer | owner=Hazzer | zone=Battlefield (latest_object_observation)
+- 365: object 365 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 366: object 366 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 367: object 367 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 368: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 369: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 374: Swamp | controller=Hazzer | owner=Hazzer | zone=Battlefield (latest_object_observation)
+- 375: Old-Growth Educator | controller=Hazzer | owner=Hazzer | zone=Battlefield (latest_object_observation)
+- 380: object 380 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 381: object 381 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 382: object 382 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 383: Teacher's Pest | controller=Hazzer | owner=Hazzer | zone=Battlefield (latest_object_observation)
+- 386: object 386 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 387: object 387 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 388: object 388 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 389: object 389 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 390: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 391: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 392: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 398: Jungle Hollow | controller=Hazzer | owner=Hazzer | zone=Battlefield (latest_object_observation)
+- 399: object 399 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 400: object 400 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 401: Old-Growth Educator | controller=Hazzer | owner=Hazzer | zone=Battlefield (latest_object_observation)
+- 406: object 406 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 407: object 407 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 408: object 408 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 409: object 409 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 410: object 410 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 411: object 411 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 412: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 413: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 414: Old-Growth Educator | controller=Hazzer | owner=Hazzer | zone=Battlefield (latest_object_observation)
+- 415: object 415 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 416: object 416 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 417: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 418: object 418 | controller=Hazzer | owner=Hazzer | zone=unknown (inferred unknown) (latest_object_observation)
+- 419: object 419 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 420: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 421: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 422: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 423: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 429: object 429 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 430: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 431: object 431 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 432: object 432 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 433: object 433 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 434: object 434 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 435: object 435 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 436: object 436 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 437: object 437 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 438: object 438 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 439: object 439 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 440: object 440 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 441: object 441 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 442: object 442 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 443: object 443 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 444: object 444 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 445: object 445 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 446: object 446 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 447: object 447 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 448: object 448 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 449: object 449 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 450: object 450 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 451: object 451 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 452: object 452 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 453: object 453 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 454: object 454 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 455: object 455 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 456: object 456 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 457: object 457 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 458: object 458 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 459: object 459 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 460: object 460 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 461: object 461 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 462: object 462 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 463: object 463 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 464: object 464 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 465: object 465 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 466: object 466 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 467: object 467 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 468: object 468 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 469: object 469 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 470: object 470 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 471: object 471 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 472: object 472 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 473: object 473 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 474: object 474 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 475: object 475 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 476: object 476 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 477: object 477 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 478: object 478 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 479: object 479 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 480: object 480 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 481: object 481 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 482: object 482 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 483: object 483 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 484: object 484 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 485: object 485 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 486: object 486 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 487: object 487 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 488: object 488 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 489: object 489 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 490: object 490 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 491: object 491 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 492: object 492 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 493: object 493 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 494: object 494 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 495: object 495 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 496: object 496 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 497: object 497 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 498: object 498 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 499: object 499 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 500: object 500 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 501: object 501 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 502: object 502 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 503: object 503 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 504: object 504 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 505: object 505 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 506: object 506 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 507: object 507 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 508: object 508 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 509: object 509 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 510: object 510 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 511: object 511 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 512: object 512 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 513: object 513 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 514: object 514 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 515: object 515 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 516: object 516 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 517: object 517 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 518: object 518 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 519: object 519 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 520: object 520 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 521: object 521 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 522: object 522 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 523: object 523 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 524: object 524 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 525: object 525 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 526: object 526 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 527: object 527 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 528: object 528 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 529: object 529 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 530: object 530 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 531: object 531 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 532: object 532 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 533: object 533 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 534: object 534 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Hazzer: 36 total items
+  zones: Battlefield=15, unknown=21
+  objects: Swamp x4, Old-Growth Educator x3, Forest x2, Deep-Cavern Bat, Jungle Hollow, South Wind Avatar, Teacher's Pest, Virulent Emissary, Vizier of the Menagerie, object 323, object 353, object 365
+gian31: 141 total items
+  zones: Battlefield=15, Exile=1, Hand=16, Stack=1, unknown=108
+  objects: Enduring Tenacity x6, Swamp x6, Starscape Cleric x5, Marauding Blight-Priest x4, Plains x4, Bloodthirsty Conqueror x2, Makeshift Binding x2, Phyrexian Arena x2, Bloodletter of Aclazotz, Godless Shrine, object 389, object 415
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (15): Bloodthirsty Conqueror, Enduring Tenacity, Enduring Tenacity, Enduring Tenacity, Enduring Tenacity, Marauding Blight-Priest, Marauding Blight-Priest, Plains, Plains, Starscape Cleric, Starscape Cleric, Starscape Cleric, Swamp, Swamp, Swamp
+  Graveyard: 0 card(s)
+Hazzer:
+  Battlefield (15): Deep-Cavern Bat, Forest, Forest, Jungle Hollow, Old-Growth Educator, Old-Growth Educator, Old-Growth Educator, South Wind Avatar, Swamp, Swamp, Swamp, Swamp, Teacher's Pest, Virulent Emissary, Vizier of the Menagerie
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+129 objects have no resolved final zone and are omitted from the known board state.
+Hazzer: 21 unknown object(s)
+gian31: 108 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=16, Stack=1
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Hazzer:
+  Battlefield (13): Forest, Swamp, Deep-Cavern Bat, Swamp, Virulent Emissary, Forest, Vizier of the Menagerie, Swamp, South Wind Avatar, Swamp, Teacher's Pest, Jungle Hollow, Old-Growth Educator
+  Graveyard (1): Old-Growth Educator
+gian31:
+  Battlefield (10): Plains, Swamp, Swamp, Plains, Starscape Cleric, Phyrexian Arena, Enduring Tenacity, Enduring Tenacity, Swamp, Bloodthirsty Conqueror
+  Graveyard (2): Marauding Blight-Priest, Starscape Cleric
+  Exile (1): Makeshift Binding
+Known non-persistent entries (counts only):
+  Hazzer: Limbo=1
+  gian31: Hand=3, Limbo=7, Pending=1, Stack=52
+  unknown: Hand=1, Library=104, Limbo=7
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1
+- Turn 2: Hazzer Battlefield=1; gian31 Battlefield=1
+- Turn 3: Hazzer Battlefield=1; gian31 Battlefield=3
+- Turn 4: Hazzer Battlefield=3; gian31 Battlefield=3; gian31 Exile=1
+- Turn 5: Hazzer Battlefield=3; gian31 Battlefield=5; gian31 Exile=1
+- Turn 6: Hazzer Battlefield=5; gian31 Battlefield=5; gian31 Exile=1
+- Turn 7: Hazzer Battlefield=5; gian31 Battlefield=7; gian31 Exile=1
+- Turn 8: Hazzer Battlefield=7; gian31 Battlefield=7; gian31 Exile=1
+- Turn 9: Hazzer Battlefield=7; gian31 Battlefield=8; gian31 Exile=1
+- Turn 10: Hazzer Battlefield=9; gian31 Battlefield=8; gian31 Exile=1
+- Turn 11: Hazzer Battlefield=9; gian31 Battlefield=9; gian31 Exile=1
+- Turn 12: Hazzer Battlefield=12; gian31 Battlefield=9; gian31 Exile=1
+- Turn 13: Hazzer Battlefield=12; gian31 Battlefield=10; gian31 Exile=1
+- Turn 14: Hazzer Battlefield=13; Hazzer Graveyard=1; gian31 Battlefield=9; gian31 Graveyard=1; gian31 Exile=1
+- Turn 15: Hazzer Battlefield=13; Hazzer Graveyard=1; gian31 Battlefield=10; gian31 Graveyard=2; gian31 Exile=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 3: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Deep-Cavern Bat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Virulent Emissary resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Enduring Tenacity resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: South Wind Avatar resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Phyrexian Arena resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Old-Growth Educator resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Teacher's Pest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Enduring Tenacity resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Old-Growth Educator resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
