@@ -1,0 +1,699 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: Ponz, gian31
+Seat map: Seat 1=Ponz, Seat 2=gian31
+Turn range (known): 1 - 11
+Records: 32
+Action chains: 24
+Winner: Ponz
+Final life: {'Ponz': 16, 'gian31': -15}
+Lethal combat transition: gian31 10 -> -15. Observed unblocked attackers reconcile 24/25 life loss; 1 additional life loss remains unexplained (individual combat assignment unavailable).
+Lethal coverage (normalized): partial; explained=24/25; unexplained=1.
+Match conclusion: Life total reached 0 observed for gian31.
+Last captured action before match-result payload: Turn 11 (Phase_Combat, Step_DeclareAttack; Ability of Skyknight Squire, seq 338).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 29 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 9 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 9, 11] (raw records=10; equivalent duplicates=1). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 15 explicit Library -> Hand movement(s); named in the draw record=6, resolved through an explicit identity transition=7, unresolved=2.
+Unresolved draw identities (explicit movements retained): Turn 9, seq 242, object 349; Turn 11, seq 313, object 383.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Enduring Tenacity [219], Starscape Cleric [220], Marauding Blight-Priest [221], Phyrexian Arena [222], Makeshift Binding [223], Swamp [224], Swamp [225].
+  - unknown: 7 observed card(s): object 159 [159], object 160 [160], object 161 [161], object 162 [162], object 163 [163], object 164 [164], object 165 [165].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: Ponz; observed final life totals: {'Ponz': 16, 'gian31': -15}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 11 (Phase_Combat, Step_DeclareAttack; Ability of Skyknight Squire, seq 338).
+Last captured life snapshot: gian31 10 -> -15 (seq 343).
+Tokens on battlefield at their last observation (not confirmed at match end): Rabbit [365] controller=Ponz, created Turn 11, last observed Turn 11 seq 313, P/T 2/2; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Rabbit [368] controller=Ponz, created Turn 11, last observed Turn 11 seq 313, P/T 2/2; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Rabbit [371] controller=Ponz, created Turn 11, last observed Turn 11 seq 313, P/T 2/2; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Rabbit [374] controller=Ponz, created Turn 11, last observed Turn 11 seq 313, P/T 2/2; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Rabbit [377] controller=Ponz, created Turn 11, last observed Turn 11 seq 313, P/T 2/2; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Warrior [385] controller=Ponz, created Turn 11, last observed Turn 11 seq 333, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Warrior [386] controller=Ponz, created Turn 11, last observed Turn 11 seq 333, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: gian31 reached -15 life; exact lethal-source coverage is reported separately.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Plains.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 3: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Skyknight Squire.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Starscape Cleric.
+- Turn 5: actions: cards=2, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Plains, Political Triumph, Skyknight Squire.
+- Turn 6: actions: cards=1, abilities=2; combat snapshots=1; life mutations=3; explicit battlefield entries=Plains, Makeshift Binding; explicit battlefield exits=Skyknight Squire.
+- Turn 7: actions: cards=2, abilities=3; combat snapshots=1; life mutations=1; explicit battlefield entries=Plains, Novice Inspector, Political Triumph; explicit battlefield exits=Clue.
+- Turn 8: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Phyrexian Arena.
+- Turn 9: actions: cards=2, abilities=4; combat snapshots=1; life mutations=2; explicit battlefield entries=Plains, Inspiring Overseer, Voice of Victory; explicit battlefield exits=Political Triumph.
+- Turn 10: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Marauding Blight-Priest.
+- Turn 11: actions: cards=1, abilities=9; combat snapshots=1; life mutations=1; explicit battlefield entries=Plains; explicit battlefield exits=Political Triumph.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [279] Hand (Ponz) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Ponz: Battlefield: Plains [279]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodthirsty Conqueror [280] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 21).
+      Swamp [281] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Ponz: Battlefield: Plains [279]
+      gian31: Battlefield: Swamp [281]
+
+Turn 3
+  - Skyknight Squire [valid_resolution_no_immediate_mutation, seq=44] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=284)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Skyknight Squire resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Skyknight Squire (object 284) Hand (Ponz) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Skyknight Squire (object 284) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Political Triumph [282] Library (Ponz) -> Hand (Ponz) (Draw; GRE sequence 38).
+      Plains [283] Hand (Ponz) -> Battlefield (PlayLand; GRE sequence 41).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Ponz: Battlefield: Plains [279], Plains [283], Skyknight Squire [284]
+      gian31: Battlefield: Swamp [281]
+
+Turn 4
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=65] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=289)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 289) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 289) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Authority of the Consuls [287] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 58).
+      Swamp [288] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 61).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Ponz: Battlefield: Plains [279], Plains [283], Skyknight Squire [284]
+      gian31: Battlefield: Starscape Cleric [289], Swamp [281], Swamp [288]
+
+Turn 5
+  - Political Triumph [valid_resolution_no_immediate_mutation, seq=85] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=294)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Political Triumph resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Political Triumph (object 294) Hand (Ponz) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Political Triumph (object 294) Stack -> Battlefield (Resolve; shared object ID)
+  - Skyknight Squire [valid_resolution_no_immediate_mutation, seq=88] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=296)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Skyknight Squire resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Skyknight Squire (object 296) Hand (Ponz) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Skyknight Squire (object 296) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Skyknight Squire [observed_semantic_effect, seq=91] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=284, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Skyknight Squire: Skyknight Squire gets +1/+1; 1 counter(s) are added to Skyknight Squire [284].
+  Combat snapshots observed (active=Ponz; frames: DeclareAttack -> DeclareBlock):
+      attackers: Skyknight Squire [284] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Season of the Burrow [292] Library (Ponz) -> Hand (Ponz) (Draw; GRE sequence 79).
+      Plains [293] Hand (Ponz) -> Battlefield (PlayLand; GRE sequence 82).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Ponz: Battlefield: Plains [279], Plains [283], Plains [293], Political Triumph [294], Skyknight Squire [284], Skyknight Squire [296]
+      gian31: Battlefield: Starscape Cleric [289], Swamp [281], Swamp [288]
+
+Turn 6
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=120] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=303)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 303) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 303) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=124] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=303, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Skyknight Squire; gian31 gains 2 life.
+      explicit effect object references: Skyknight Squire [284], Skyknight Squire [308] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Skyknight Squire (object 308) Battlefield -> Exile (Exile; shared object ID)
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=126] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=289, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Ponz loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [289] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Ponz -3; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 20
+    life: Ponz 20 -> 19
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Ponz 19 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [301] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 114).
+      Plains [302] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 117).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Ponz: Battlefield: Plains [279], Plains [283], Plains [293], Political Triumph [294], Skyknight Squire [296]; Exile: Skyknight Squire [308]
+      gian31: Battlefield: Makeshift Binding [303], Plains [302], Starscape Cleric [289], Swamp [281], Swamp [288]
+
+Turn 7
+  - Novice Inspector [valid_resolution_no_immediate_mutation, seq=152] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=312)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Novice Inspector resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Novice Inspector (object 312) Hand (Ponz) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Novice Inspector (object 312) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Skyknight Squire [observed_semantic_effect, seq=155] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=296, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Skyknight Squire: Skyknight Squire gets +1/+1; 1 counter(s) are added to Skyknight Squire [296].
+  - Ability of Novice Inspector [observed_semantic_effect, seq=157] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=312, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Novice Inspector: a token is created.
+      explicit effect object references: Clue [317] (role/targeting only where the protocol identifies it)
+      token created: Clue (object 317, controller=Ponz); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 315).
+  - Ability of Clue [observed_semantic_effect, seq=163] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=317, source_successor=321 observed Battlefield -> Graveyard (Ponz) (Sacrifice))
+      effects: draw
+      narrative: Ability of Clue: draw.
+      explicit effect object references: object 171 [171], object 322 [322] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Political Triumph (object 322) Library (Ponz) -> Hand (Ponz) (Draw; shared object ID)
+  - Political Triumph [valid_resolution_no_immediate_mutation, seq=166] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=323)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Political Triumph resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Political Triumph (object 323) Hand (Ponz) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Political Triumph (object 323) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=Ponz; frames: DeclareAttack -> DeclareBlock):
+      attackers: Skyknight Squire [296] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [310] Library (Ponz) -> Hand (Ponz) (Draw; GRE sequence 146).
+      Plains [311] Hand (Ponz) -> Battlefield (PlayLand; GRE sequence 149).
+      Clue [321] Battlefield -> Graveyard (Ponz) (Sacrifice; GRE sequence 161).
+        sacrifice observed after Ability of Novice Inspector (seq 157); direct causal linkage is unavailable.
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Ponz: Battlefield: Novice Inspector [312], Plains [279], Plains [283], Plains [293], Plains [311], Political Triumph [294], Political Triumph [323], Skyknight Squire [296]; Exile: Skyknight Squire [308]; Graveyard: Clue [321]
+      gian31: Battlefield: Makeshift Binding [303], Plains [302], Starscape Cleric [289], Swamp [281], Swamp [288]
+
+Turn 8
+  - Phyrexian Arena [valid_resolution_no_immediate_mutation, seq=191] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=326)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Phyrexian Arena resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Phyrexian Arena (object 326) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Phyrexian Arena (object 326) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [289] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Ponz -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Ponz 17 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodthirsty Conqueror [325] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 186).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Ponz: Battlefield: Novice Inspector [312], Plains [279], Plains [283], Plains [293], Plains [311], Political Triumph [294], Political Triumph [323], Skyknight Squire [296]; Exile: Skyknight Squire [308]; Graveyard: Clue [321]
+      gian31: Battlefield: Makeshift Binding [303], Phyrexian Arena [326], Plains [302], Starscape Cleric [289], Swamp [281], Swamp [288]
+
+Turn 9
+  - Inspiring Overseer [valid_resolution_no_immediate_mutation, seq=217] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=332)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Inspiring Overseer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Inspiring Overseer (object 332) Hand (Ponz) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Inspiring Overseer (object 332) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Skyknight Squire [observed_semantic_effect, seq=220] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=296, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Skyknight Squire: Skyknight Squire gets +1/+1; 1 counter(s) are added to Skyknight Squire [296].
+  - Ability of Inspiring Overseer [observed_semantic_effect, seq=228] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=332, source_last_explicit_zone=Battlefield)
+      effects: draw, life +1
+      narrative: Ability of Inspiring Overseer: draw; Ponz gains 1 life.
+      explicit effect object references: object 175 [175], object 340 [340] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Voice of Victory (object 340) Library (Ponz) -> Hand (Ponz) (Draw; shared object ID)
+  - Voice of Victory [valid_resolution_no_immediate_mutation, seq=231] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=341)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Voice of Victory resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Voice of Victory (object 341) Hand (Ponz) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Voice of Victory (object 341) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Skyknight Squire [observed_semantic_effect, seq=234] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=296, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Skyknight Squire: Skyknight Squire gets +1/+1; 1 counter(s) are added to Skyknight Squire [296].
+  - Ability of Political Triumph [observed_semantic_effect, seq=242] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=294, source_last_explicit_zone=Battlefield, source_successor=348 observed Battlefield -> Graveyard (Ponz) (Sacrifice))
+      effects: sacrifice, draw, P/T +1/+1, P/T +1/+1, P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s), +1 counter(s), +1 counter(s)
+      narrative: Ability of Political Triumph: sacrifice; draw; Skyknight Squire gets +1/+1; Novice Inspector gets +1/+1; Inspiring Overseer gets +1/+1; Voice of Victory gets +1/+1; 1 counter(s) are added to Skyknight Squire [296]; 1 counter(s) are added to Novice Inspector [312]; 1 counter(s) are added to Inspiring Overseer [332]; 1 counter(s) are added to Voice of Victory [341].
+      explicit effect object references: object 177 [177], Skyknight Squire [296], Novice Inspector [312], Inspiring Overseer [332], Voice of Victory [341], Political Triumph [348], object 349 [349] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Political Triumph (object 348) Battlefield -> Graveyard (Ponz) (Sacrifice; shared object ID)
+      protocol-linked zone transfer: object 349 (object 349) Library (Ponz) -> Hand (Ponz) (Draw; shared object ID)
+  Combat snapshots observed (active=Ponz; frames: DeclareAttack -> DeclareBlock):
+      attackers: Skyknight Squire [296] (unblocked, observed P/T 5/5), Novice Inspector [312] (unblocked, observed P/T 2/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 7; observed attacker power total: 7; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Ponz +1; gian31 -7 (individual changes below; gains and losses may offset)
+    life: Ponz 15 -> 16
+    life (combat fully reconciled: snapshot power 7 + observed modifiers 0 = 7; individual assignment unavailable): gian31 18 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [330] Library (Ponz) -> Hand (Ponz) (Draw; GRE sequence 211).
+      Plains [331] Hand (Ponz) -> Battlefield (PlayLand; GRE sequence 214).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Ponz: Battlefield: Inspiring Overseer [332], Novice Inspector [312], Plains [279], Plains [283], Plains [293], Plains [311], Plains [331], Political Triumph [323], Skyknight Squire [296], Voice of Victory [341]; Exile: Skyknight Squire [308]; Graveyard: Clue [321], Political Triumph [348]
+      gian31: Battlefield: Makeshift Binding [303], Phyrexian Arena [326], Plains [302], Starscape Cleric [289], Swamp [281], Swamp [288]
+
+Turn 10
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=262] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 230 [230], Lunar Convocation [351] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Lunar Convocation (object 351) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=269] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=353)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 353) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 353) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 11 -> 10
+    additional protocol-observed zone movements not assigned to an action chain:
+      Marauding Blight-Priest [352] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 264).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Ponz: Battlefield: Inspiring Overseer [332], Novice Inspector [312], Plains [279], Plains [283], Plains [293], Plains [311], Plains [331], Political Triumph [323], Skyknight Squire [296], Voice of Victory [341]; Exile: Skyknight Squire [308]; Graveyard: Clue [321], Political Triumph [348]
+      gian31: Battlefield: Makeshift Binding [303], Marauding Blight-Priest [353], Phyrexian Arena [326], Plains [302], Starscape Cleric [289], Swamp [281], Swamp [288]
+
+Turn 11
+  - Season of the Burrow [observed_semantic_effect, seq=294] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=359)
+      effects: token creation, token creation, token creation, token creation, token creation
+      narrative: Season of the Burrow: a token is created; a token is created; a token is created; a token is created; a token is created.
+      explicit effect object references: Rabbit [365], Rabbit [368], Rabbit [371], Rabbit [374], Rabbit [377] (role/targeting only where the protocol identifies it)
+      token created: Rabbit (object 365, controller=Ponz) 2/2; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 359).
+      token created: Rabbit (object 368, controller=Ponz) 2/2; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 359).
+      token created: Rabbit (object 371, controller=Ponz) 2/2; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 359).
+      token created: Rabbit (object 374, controller=Ponz) 2/2; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 359).
+      token created: Rabbit (object 377, controller=Ponz) 2/2; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 359).
+      protocol-linked zone transfer: Season of the Burrow (object 359) Hand (Ponz) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Season of the Burrow (object 380) Stack -> Graveyard (Ponz) (Resolve; shared object ID)
+      identity continuity: source object 359 -> transfer object 380 (explicit GRE ObjectIdChanged chain).
+  - Ability of Skyknight Squire [observed_semantic_effect, seq=297] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=296, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Skyknight Squire: Skyknight Squire gets +1/+1; 1 counter(s) are added to Skyknight Squire [296].
+  - Ability of Skyknight Squire [observed_semantic_effect, seq=299] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=296, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 297 and 299; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Skyknight Squire: Skyknight Squire gets +1/+1; 1 counter(s) are added to Skyknight Squire [296].
+  - Ability of Skyknight Squire [observed_semantic_effect, seq=301] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=296, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 299 and 301; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Skyknight Squire: Skyknight Squire gets +1/+1; 1 counter(s) are added to Skyknight Squire [296].
+  - Ability of Skyknight Squire [observed_semantic_effect, seq=303] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=296, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 301 and 303; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Skyknight Squire: Skyknight Squire gets +1/+1; 1 counter(s) are added to Skyknight Squire [296].
+  - Ability of Skyknight Squire [observed_semantic_effect, seq=305] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=296, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 303 and 305; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Skyknight Squire: Skyknight Squire gets +1/+1; 1 counter(s) are added to Skyknight Squire [296].
+  - Ability of Political Triumph [observed_semantic_effect, seq=313] (active=Ponz, phase=Phase_Main1, controller=Ponz, owner=Ponz, source_object=323, source_last_explicit_zone=Battlefield, source_successor=382 observed Battlefield -> Graveyard (Ponz) (Sacrifice))
+      effects: sacrifice, draw, P/T +1/+1, P/T +1/+1, P/T +1/+1, P/T +1/+1, P/T +1/+1, P/T +1/+1, P/T +1/+1, P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s), +1 counter(s), +1 counter(s), +1 counter(s), +1 counter(s), +1 counter(s), +1 counter(s), +1 counter(s)
+      narrative: Ability of Political Triumph: sacrifice; draw; Inspiring Overseer gets +1/+1; Novice Inspector gets +1/+1; Skyknight Squire gets +1/+1; Voice of Victory gets +1/+1; Rabbit gets +1/+1; Rabbit gets +1/+1; Rabbit gets +1/+1; Rabbit gets +1/+1; Rabbit gets +1/+1; 1 counter(s) are added to Inspiring Overseer [332]; 1 counter(s) are added to Novice Inspector [312]; 1 counter(s) are added to Skyknight Squire [296]; 1 counter(s) are added to Voice of Victory [341]; 1 counter(s) are added to Rabbit [365]; 1 counter(s) are added to Rabbit [368]; 1 counter(s) are added to Rabbit [371]; 1 counter(s) are added to Rabbit [374]; 1 counter(s) are added to Rabbit [377].
+      explicit effect object references: object 181 [181], Skyknight Squire [296], Novice Inspector [312], Inspiring Overseer [332], Voice of Victory [341], Rabbit [365], Rabbit [368], Rabbit [371], Rabbit [374], Rabbit [377], Political Triumph [382], object 383 [383] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Political Triumph (object 382) Battlefield -> Graveyard (Ponz) (Sacrifice; shared object ID)
+      protocol-linked zone transfer: object 383 (object 383) Library (Ponz) -> Hand (Ponz) (Draw; shared object ID)
+  - Ability of Voice of Victory [observed_semantic_effect, seq=333] (active=Ponz, phase=Phase_Combat, step=Step_DeclareAttack, controller=Ponz, owner=Ponz, source_object=341, source_last_explicit_zone=Battlefield)
+      effects: token creation, token creation
+      narrative: Ability of Voice of Victory: a token is created; a token is created.
+      explicit effect object references: Warrior [385], Warrior [386] (role/targeting only where the protocol identifies it)
+      token created: Warrior (object 385, controller=Ponz) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 384).
+      token created: Warrior (object 386, controller=Ponz) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 384).
+  - Ability of Skyknight Squire [observed_semantic_effect, seq=336] (active=Ponz, phase=Phase_Combat, step=Step_DeclareAttack, controller=Ponz, owner=Ponz, source_object=296, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Skyknight Squire: Skyknight Squire gets +1/+1; 1 counter(s) are added to Skyknight Squire [296].
+  - Ability of Skyknight Squire [observed_semantic_effect, seq=338] (active=Ponz, phase=Phase_Combat, step=Step_DeclareAttack, controller=Ponz, owner=Ponz, source_object=296, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 336 and 338; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Skyknight Squire: Skyknight Squire gets +1/+1; 1 counter(s) are added to Skyknight Squire [296].
+  Combat snapshots observed (active=Ponz; frames: DeclareAttack):
+      attackers: Skyknight Squire [296] (unblocked, observed P/T 12/12), Novice Inspector [312] (unblocked, observed P/T 3/4), Inspiring Overseer [332] (unblocked, observed P/T 4/3), Voice of Victory [341] (unblocked, observed P/T 3/5), Warrior [385] (unblocked, observed P/T 1/1), Warrior [386] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-reconciled defending-player life-loss component: 24; observed attacker power total: 24; unresolved additional life loss: 1 (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -25 (individual changes below; gains and losses may offset)
+    life (combat component reconciled: 24; unresolved residual life loss 1; exact assignment unavailable): gian31 10 -> -15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [357] Library (Ponz) -> Hand (Ponz) (Draw; GRE sequence 286).
+      Plains [358] Hand (Ponz) -> Battlefield (PlayLand; GRE sequence 289).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Ponz: Battlefield: Inspiring Overseer [332], Novice Inspector [312], Plains [279], Plains [283], Plains [293], Plains [311], Plains [331], Plains [358], Skyknight Squire [296], Voice of Victory [341]; Exile: Skyknight Squire [308]; Graveyard: Clue [321], Political Triumph [348], Political Triumph [382], Season of the Burrow [380]
+      gian31: Battlefield: Makeshift Binding [303], Marauding Blight-Priest [353], Phyrexian Arena [326], Plains [302], Starscape Cleric [289], Swamp [281], Swamp [288]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 11, seq 343, Phase_Combat: gian31 10 -> -15. combat-reconciled component 24; unresolved residual 1. Previous captured action: Skyknight Squire.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 11: gian31 10 -> -15 (required change 25). Explained by exact same-record evidence: 0/25; semantically attributed: 0/25; unexplained residual: 1/25.
+  Combat-reconciled component: 24/25 (pre-modifier power=24; explicit modifier power=+2; observed post-modifier power=26 (not used to attribute damage when it exceeds the observed loss); unresolved residual=1; individual assignment unavailable).
+  Combat snapshot observed at or before lethal: Turn 11; attackers=Skyknight Squire [296], Novice Inspector [312], Inspiring Overseer [332], Voice of Victory [341], Warrior [385], Warrior [386]; observed snapshot power total=24; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 11, Ability of Skyknight Squire (seq 338).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 8 token creations observed; 7 active as last observed; 1 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Clue [317] controller=Ponz; created Turn 7 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 7 via Battlefield -> Graveyard (Ponz) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+- Rabbit [365] controller=Ponz; created Turn 11 (2/2); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 11, object 365 (latest observed P/T 2/2; current zone unconfirmed).
+- Rabbit [368] controller=Ponz; created Turn 11 (2/2); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 11, object 368 (latest observed P/T 2/2; current zone unconfirmed).
+- Rabbit [371] controller=Ponz; created Turn 11 (2/2); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 11, object 371 (latest observed P/T 2/2; current zone unconfirmed).
+- Rabbit [374] controller=Ponz; created Turn 11 (2/2); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 11, object 374 (latest observed P/T 2/2; current zone unconfirmed).
+- Rabbit [377] controller=Ponz; created Turn 11 (2/2); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 11, object 377 (latest observed P/T 2/2; current zone unconfirmed).
+- Warrior [385] controller=Ponz; created Turn 11 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 11, object 385 (latest observed P/T 1/1; current zone unconfirmed).
+- Warrior [386] controller=Ponz; created Turn 11 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 11, object 386 (latest observed P/T 1/1; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Plains [owner=Ponz, controller=Ponz] moves Hand (Ponz) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 24: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 38: Political Triumph [owner/controller metadata unavailable] moves Library (Ponz) -> Hand (Ponz) (Draw).
+- Turn 3, seq 41: Plains [owner=Ponz, controller=Ponz] moves Hand (Ponz) -> Battlefield (PlayLand).
+- Turn 3, seq 42: Skyknight Squire [owner=Ponz, controller=Ponz] moves Hand (Ponz) -> Stack (CastSpell).
+- Turn 3, seq 44: Skyknight Squire [owner=Ponz, controller=Ponz] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 58: Authority of the Consuls [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 61: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 62: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 65: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 79: Season of the Burrow [owner/controller metadata unavailable] moves Library (Ponz) -> Hand (Ponz) (Draw).
+- Turn 5, seq 82: Plains [owner=Ponz, controller=Ponz] moves Hand (Ponz) -> Battlefield (PlayLand).
+- Turn 5, seq 83: Political Triumph [owner=Ponz, controller=Ponz] moves Hand (Ponz) -> Stack (CastSpell).
+- Turn 5, seq 85: Political Triumph [owner=Ponz, controller=Ponz] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 86: Skyknight Squire [owner=Ponz, controller=Ponz] moves Hand (Ponz) -> Stack (CastSpell).
+- Turn 5, seq 88: Skyknight Squire [owner=Ponz, controller=Ponz] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 114: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 117: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 118: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 120: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 124: Skyknight Squire [owner=Ponz, controller=Ponz] moves Battlefield -> Exile (Exile).
+- Turn 7, seq 146: Plains [owner/controller metadata unavailable] moves Library (Ponz) -> Hand (Ponz) (Draw).
+- Turn 7, seq 149: Plains [owner=Ponz, controller=Ponz] moves Hand (Ponz) -> Battlefield (PlayLand).
+- Turn 7, seq 150: Novice Inspector [owner=Ponz, controller=Ponz] moves Hand (Ponz) -> Stack (CastSpell).
+- Turn 7, seq 152: Novice Inspector [owner=Ponz, controller=Ponz] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 161: Clue [owner/controller metadata unavailable] moves Battlefield -> Graveyard (Ponz) (Sacrifice).
+- Turn 7, seq 163: Political Triumph [owner/controller metadata unavailable] moves Library (Ponz) -> Hand (Ponz) (Draw).
+- Turn 7, seq 164: Political Triumph [owner=Ponz, controller=Ponz] moves Hand (Ponz) -> Stack (CastSpell).
+- Turn 7, seq 166: Political Triumph [owner=Ponz, controller=Ponz] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 186: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 189: Phyrexian Arena [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 191: Phyrexian Arena [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 211: Plains [owner/controller metadata unavailable] moves Library (Ponz) -> Hand (Ponz) (Draw).
+- Turn 9, seq 214: Plains [owner=Ponz, controller=Ponz] moves Hand (Ponz) -> Battlefield (PlayLand).
+- Turn 9, seq 215: Inspiring Overseer [owner=Ponz, controller=Ponz] moves Hand (Ponz) -> Stack (CastSpell).
+- Turn 9, seq 217: Inspiring Overseer [owner=Ponz, controller=Ponz] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 228: Voice of Victory [owner/controller metadata unavailable] moves Library (Ponz) -> Hand (Ponz) (Draw).
+- Turn 9, seq 229: Voice of Victory [owner=Ponz, controller=Ponz] moves Hand (Ponz) -> Stack (CastSpell).
+- Turn 9, seq 231: Voice of Victory [owner=Ponz, controller=Ponz] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 242: Political Triumph [owner=Ponz, controller=Ponz] moves Battlefield -> Graveyard (Ponz) (Sacrifice).
+- Turn 9, seq 242: object 349 [owner/controller metadata unavailable] moves Library (Ponz) -> Hand (Ponz) (Draw).
+- Turn 10, seq 262: Lunar Convocation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 264: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 267: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 269: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 286: Plains [owner/controller metadata unavailable] moves Library (Ponz) -> Hand (Ponz) (Draw).
+- Turn 11, seq 289: Plains [owner=Ponz, controller=Ponz] moves Hand (Ponz) -> Battlefield (PlayLand).
+- Turn 11, seq 291: Season of the Burrow [owner=Ponz, controller=Ponz] moves Hand (Ponz) -> Stack (CastSpell).
+- Turn 11, seq 294: Season of the Burrow [owner=Ponz, controller=Ponz] moves Stack -> Graveyard (Ponz) (Resolve).
+- Turn 11, seq 313: Political Triumph [owner=Ponz, controller=Ponz] moves Battlefield -> Graveyard (Ponz) (Sacrifice).
+- Turn 11, seq 313: object 383 [owner/controller metadata unavailable] moves Library (Ponz) -> Hand (Ponz) (Draw).
+Equivalent transfer duplicates retained as diagnostics (rendered once above):
+- Turn 11: Plains [358] Hand (Ponz) -> Battlefield (PlayLand); sequences 289, 290.
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 160 becomes object 279 [Plains].
+- Turn 2, seq 21: object 226 becomes object 280 [Bloodthirsty Conqueror].
+- Turn 2, seq 24: object 224 becomes object 281 [Swamp].
+- Turn 3, seq 38: object 166 becomes object 282 [Political Triumph].
+- Turn 3, seq 41: object 163 becomes object 283 [Plains].
+- Turn 3, seq 42: object 162 becomes object 284 [Skyknight Squire].
+- Turn 4, seq 58: object 227 becomes object 287 [Authority of the Consuls].
+- Turn 4, seq 61: object 225 becomes object 288 [Swamp].
+- Turn 4, seq 62: object 220 becomes object 289 [Starscape Cleric].
+- Turn 5, seq 79: object 167 becomes object 292 [Season of the Burrow].
+- Turn 5, seq 82: object 165 becomes object 293 [Plains].
+- Turn 5, seq 83: object 282 becomes object 294 [Political Triumph].
+- Turn 5, seq 86: object 164 becomes object 296 [Skyknight Squire].
+- Turn 6, seq 114: object 228 becomes object 301 [Plains].
+- Turn 6, seq 117: object 301 becomes object 302 [Plains].
+- Turn 6, seq 118: object 223 becomes object 303 [Makeshift Binding].
+- Turn 6, seq 124: object 284 becomes object 308 [Skyknight Squire].
+- Turn 7, seq 146: object 169 becomes object 310 [Plains].
+- Turn 7, seq 149: object 310 becomes object 311 [Plains].
+- Turn 7, seq 150: object 159 becomes object 312 [Novice Inspector].
+- Turn 7, seq 161: object 317 becomes object 321 [Clue].
+- Turn 7, seq 163: object 171 becomes object 322 [Political Triumph].
+- Turn 7, seq 164: object 322 becomes object 323 [Political Triumph].
+- Turn 8, seq 186: object 229 becomes object 325 [Bloodthirsty Conqueror].
+- Turn 8, seq 189: object 222 becomes object 326 [Phyrexian Arena].
+- Turn 9, seq 211: object 172 becomes object 330 [Plains].
+- Turn 9, seq 214: object 330 becomes object 331 [Plains].
+- Turn 9, seq 215: object 161 becomes object 332 [Inspiring Overseer].
+- Turn 9, seq 228: object 175 becomes object 340 [Voice of Victory].
+- Turn 9, seq 229: object 340 becomes object 341 [Voice of Victory].
+- Turn 9, seq 242: object 294 becomes object 348 [Political Triumph].
+- Turn 9, seq 242: object 177 becomes object 349 [object 177].
+- Turn 10, seq 262: object 230 becomes object 351 [Lunar Convocation].
+- Turn 10, seq 264: object 231 becomes object 352 [Marauding Blight-Priest].
+- Turn 10, seq 267: object 221 becomes object 353 [Marauding Blight-Priest].
+- Turn 11, seq 286: object 178 becomes object 357 [Plains].
+- Turn 11, seq 289: object 357 becomes object 358 [Plains].
+- Turn 11, seq 290: object 357 becomes object 358 [Plains].
+- Turn 11, seq 291: object 292 becomes object 359 [Season of the Burrow].
+- Turn 11, seq 294: object 359 becomes object 380 [Season of the Burrow].
+- Turn 11, seq 313: object 323 becomes object 382 [Political Triumph].
+- Turn 11, seq 313: object 181 becomes object 383 [object 181].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: Ponz plays Plains (object 279) from Hand (Ponz) to Battlefield.
+- Turn 2: gian31 plays Swamp (object 281) from Hand (gian31) to Battlefield.
+- Turn 3: Ponz plays Plains (object 283) from Hand (Ponz) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 288) from Hand (gian31) to Battlefield.
+- Turn 5: Ponz plays Plains (object 293) from Hand (Ponz) to Battlefield.
+- Turn 6: gian31 plays Plains (object 302) from Hand (gian31) to Battlefield.
+- Turn 7: Ponz plays Plains (object 311) from Hand (Ponz) to Battlefield.
+- Turn 9: Ponz plays Plains (object 331) from Hand (Ponz) to Battlefield.
+- Turn 11: Ponz plays Plains (object 358) from Hand (Ponz) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 11: ordered adjacent records Skyknight Squire -> Skyknight Squire; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Skyknight Squire: casts=2; abilities=11 (triggered=11, activated=0) across turns [3, 5, 5, 7, 9, 9, 11, 11, 11, 11, 11, 11, 11]
+  observed effect totals: draws=0, tokens=0, counters=11, returns=0, damage=0, life_changes=0, other=11
+  observed effects: +1 counter(s), P/T +1/+1
+- Political Triumph: casts=2; abilities=2 (triggered=2, activated=0) across turns [5, 7, 9, 11]
+  observed effect totals: draws=2, tokens=0, counters=13, returns=0, damage=0, life_changes=0, other=15
+  observed effects: +1 counter(s), P/T +1/+1, draw, sacrifice
+- Inspiring Overseer: casts=1; abilities=1 (triggered=1, activated=0) across turns [9, 9]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: draw, life +1
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [6, 6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Novice Inspector: casts=1; abilities=1 (triggered=1, activated=0) across turns [7, 7]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Phyrexian Arena: casts=1; abilities=1 (triggered=1, activated=0) across turns [8, 10]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: draw, life -1, synthetic event
+- Starscape Cleric: casts=1; abilities=1 (triggered=1, activated=0) across turns [4, 6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: life -1, synthetic event
+- Voice of Victory: casts=1; abilities=1 (triggered=1, activated=0) across turns [9, 11]
+  observed effect totals: draws=0, tokens=2, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Clue: abilities=1 (triggered=1, activated=0) across turns [7]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Marauding Blight-Priest: casts=1 across turns [10]
+- Season of the Burrow: casts=1 across turns [11]
+  observed effect totals: draws=0, tokens=5, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 - DeclareAttack, DeclareBlock (active=Ponz)
+  attacker: Skyknight Squire (Ponz) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 6 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Ponz; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=Ponz)
+  attacker: Skyknight Squire (Ponz) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Ponz; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=Ponz)
+  attacker: Skyknight Squire (Ponz) -> gian31; unblocked in this observed snapshot
+  attacker: Novice Inspector (Ponz) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack (active=Ponz)
+  attacker: Skyknight Squire (Ponz) -> gian31; unblocked in this observed snapshot
+  attacker: Novice Inspector (Ponz) -> gian31; unblocked in this observed snapshot
+  attacker: Inspiring Overseer (Ponz) -> gian31; unblocked in this observed snapshot
+  attacker: Voice of Victory (Ponz) -> gian31; unblocked in this observed snapshot
+  attacker: Warrior (Ponz) -> gian31; unblocked in this observed snapshot
+  attacker: Warrior (Ponz) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 11: Ability of Voice of Victory (active=Ponz) - Ability of Voice of Victory: a token is created; a token is created.
+- Turn 11: Ability of Skyknight Squire (active=Ponz) - Ability of Skyknight Squire: Skyknight Squire gets +1/+1; 1 counter(s) are added to target.
+- Turn 11: Ability of Skyknight Squire (active=Ponz) - Ability of Skyknight Squire: Skyknight Squire gets +1/+1; 1 counter(s) are added to target.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 219: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 220: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 221: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 222: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 223: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 224: Swamp | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 225: Swamp | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 279: Plains | controller=Ponz | owner=Ponz | zone=Battlefield (latest_object_observation)
+- 280: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 281: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 283: Plains | controller=Ponz | owner=Ponz | zone=Battlefield (latest_object_observation)
+- 284: Skyknight Squire | controller=Ponz | owner=Ponz | zone=Battlefield (latest_object_observation)
+- 287: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 288: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 289: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 293: Plains | controller=Ponz | owner=Ponz | zone=Battlefield (latest_object_observation)
+- 294: Political Triumph | controller=Ponz | owner=Ponz | zone=Stack (latest_object_observation)
+- 296: Skyknight Squire | controller=Ponz | owner=Ponz | zone=Battlefield (latest_object_observation)
+- 299: object 299 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 300: object 300 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 301: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 302: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 303: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 307: object 307 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 308: Skyknight Squire | controller=Ponz | owner=Ponz | zone=Exile (latest_object_observation)
+- 309: object 309 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 311: Plains | controller=Ponz | owner=Ponz | zone=Battlefield (latest_object_observation)
+- 312: Novice Inspector | controller=Ponz | owner=Ponz | zone=Battlefield (latest_object_observation)
+- 314: object 314 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 315: Rip the Seams | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 316: object 316 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 317: Clue | controller=Ponz | owner=Ponz | zone=Stack (latest_object_observation)
+- 318: object 318 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 323: Political Triumph | controller=Ponz | owner=Ponz | zone=Stack (latest_object_observation)
+- 325: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 326: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 331: Plains | controller=Ponz | owner=Ponz | zone=Battlefield (latest_object_observation)
+- 332: Inspiring Overseer | controller=Ponz | owner=Ponz | zone=Battlefield (latest_object_observation)
+- 336: object 336 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 337: object 337 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 338: object 338 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 339: object 339 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 341: Voice of Victory | controller=Ponz | owner=Ponz | zone=Battlefield (latest_object_observation)
+- 344: object 344 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 345: object 345 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 346: object 346 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 347: object 347 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 348: Political Triumph | controller=Ponz | owner=Ponz | zone=Graveyard (latest_object_observation)
+- 350: object 350 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 351: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 352: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 353: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 358: Plains | controller=Ponz | owner=Ponz | zone=Battlefield (latest_object_observation)
+- 359: Season of the Burrow | controller=Ponz | owner=Ponz | zone=Stack (latest_object_observation)
+- 365: Rabbit | controller=Ponz | owner=Ponz | zone=Battlefield (latest_object_observation)
+- 366: object 366 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 367: object 367 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 368: Rabbit | controller=Ponz | owner=Ponz | zone=Battlefield (latest_object_observation)
+- 369: object 369 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 370: object 370 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 371: Rabbit | controller=Ponz | owner=Ponz | zone=Battlefield (latest_object_observation)
+- 372: object 372 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 373: object 373 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 374: Rabbit | controller=Ponz | owner=Ponz | zone=Battlefield (latest_object_observation)
+- 375: object 375 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 376: object 376 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 377: Rabbit | controller=Ponz | owner=Ponz | zone=Battlefield (latest_object_observation)
+- 378: object 378 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 379: object 379 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 380: Season of the Burrow | controller=Ponz | owner=Ponz | zone=Graveyard (latest_object_observation)
+- 381: object 381 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 382: Political Triumph | controller=Ponz | owner=Ponz | zone=Graveyard (latest_object_observation)
+- 384: object 384 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 385: Warrior | controller=Ponz | owner=Ponz | zone=Battlefield (latest_object_observation)
+- 386: Warrior | controller=Ponz | owner=Ponz | zone=Battlefield (latest_object_observation)
+- 387: object 387 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 388: object 388 | controller=Ponz | owner=Ponz | zone=unknown (inferred unknown) (latest_object_observation)
+- 389: object 389 | controller=Ponz | owner=Ponz | zone=Stack (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Ponz: 55 total items
+  zones: Battlefield=18, Exile=1, Graveyard=3, Stack=5, unknown=28
+  objects: Plains x6, Rabbit x5, Political Triumph x4, Skyknight Squire x3, Season of the Burrow x2, Warrior x2, Clue, Inspiring Overseer, Novice Inspector, Rip the Seams, Voice of Victory, object 299
+gian31: 23 total items
+  zones: Battlefield=5, Hand=7, Stack=8, unknown=3
+  objects: Swamp x4, Marauding Blight-Priest x3, Bloodthirsty Conqueror x2, Makeshift Binding x2, Phyrexian Arena x2, Plains x2, Starscape Cleric x2, Authority of the Consuls, Enduring Tenacity, Lunar Convocation, object 307, object 309
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+Ponz:
+  Battlefield (18): Inspiring Overseer, Novice Inspector, Plains, Plains, Plains, Plains, Plains, Plains, Rabbit, Rabbit, Rabbit, Rabbit, Rabbit, Skyknight Squire, Skyknight Squire, Voice of Victory, Warrior, Warrior
+  Graveyard: 3 card(s)
+gian31:
+  Battlefield (5): Marauding Blight-Priest, Plains, Starscape Cleric, Swamp, Swamp
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+31 objects have no resolved final zone and are omitted from the known board state.
+Ponz: 28 unknown object(s)
+gian31: 3 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=7, Stack=13
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Ponz:
+  Battlefield (17): Plains, Plains, Plains, Skyknight Squire, Plains, Novice Inspector, Plains, Inspiring Overseer, Voice of Victory, Plains, Rabbit, Rabbit, Rabbit, Rabbit, Rabbit, Warrior, Warrior
+  Graveyard (3): Political Triumph, Season of the Burrow, Political Triumph
+  Exile (1): Skyknight Squire
+gian31:
+  Battlefield (7): Swamp, Swamp, Starscape Cleric, Plains, Makeshift Binding, Phyrexian Arena, Marauding Blight-Priest
+Known non-persistent entries (counts only):
+  Ponz: Hand=2, Limbo=4
+  gian31: Hand=6, Limbo=1
+  unknown: Library=91, Limbo=12
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: Ponz Battlefield=1
+- Turn 2: Ponz Battlefield=1; gian31 Battlefield=1
+- Turn 3: Ponz Battlefield=3; gian31 Battlefield=1
+- Turn 4: Ponz Battlefield=3; gian31 Battlefield=3
+- Turn 5: Ponz Battlefield=6; gian31 Battlefield=3
+- Turn 6: Ponz Battlefield=5; Ponz Exile=1; gian31 Battlefield=5
+- Turn 7: Ponz Battlefield=8; Ponz Graveyard=1; Ponz Exile=1; gian31 Battlefield=5
+- Turn 8: Ponz Battlefield=8; Ponz Graveyard=1; Ponz Exile=1; gian31 Battlefield=6
+- Turn 9: Ponz Battlefield=10; Ponz Graveyard=2; Ponz Exile=1; gian31 Battlefield=6
+- Turn 10: Ponz Battlefield=10; Ponz Graveyard=2; Ponz Exile=1; gian31 Battlefield=7
+- Turn 11: Ponz Battlefield=10; Ponz Graveyard=4; Ponz Exile=1; gian31 Battlefield=7
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 3: Skyknight Squire resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Political Triumph resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Skyknight Squire resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Novice Inspector resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Political Triumph resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Phyrexian Arena resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Inspiring Overseer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Voice of Victory resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
