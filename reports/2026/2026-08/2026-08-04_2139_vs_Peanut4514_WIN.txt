@@ -1,0 +1,800 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: Peanut4514, gian31
+Seat map: Seat 1=Peanut4514, Seat 2=gian31
+Turn range (known): 1 - 12
+Records: 58
+Action chains: 22
+Winner: gian31
+Final life: {'Peanut4514': 1, 'gian31': 29}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 12 (Phase_Combat, Step_CombatDamage; Ability of Enduring Tenacity, seq 403).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 26 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 10 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 6, 7, 8, 10, 11, 12] (raw records=10; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 12 explicit Library -> Hand movement(s); named in the draw record=7, resolved through an explicit identity transition=3, unresolved=2.
+Unresolved draw identities (explicit movements retained): Turn 3, seq 41, object 284; Turn 9, seq 203, object 331.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Plains [219], Enduring Tenacity [220], Bloodthirsty Conqueror [221], Authority of the Consuls [222], Scoured Barrens [223], Lunar Convocation [224], Swamp [225].
+  - unknown: 7 observed card(s): object 159 [159], object 160 [160], object 161 [161], object 162 [162], object 163 [163], object 164 [164], object 165 [165].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'Peanut4514': 1, 'gian31': 29}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 12 (Phase_Combat, Step_CombatDamage; Ability of Enduring Tenacity, seq 403).
+Last captured life snapshot: gian31 28 -> 29 (seq 399).
+Tokens on battlefield at their last observation (not confirmed at match end): Bat [329] controller=gian31, created Turn 8, last observed Turn 12 seq 315, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Bat [330] controller=gian31, created Turn 8, last observed Turn 8 seq 195, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Plains.
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Authority of the Consuls.
+- Turn 3: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Forest, Wary Thespian.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Lunar Convocation.
+- Turn 5: actions: cards=1, abilities=1; combat snapshots=1; life mutations=2; explicit battlefield entries=Charming Prince.
+- Turn 6: actions: cards=1, abilities=3; life mutations=3; explicit battlefield entries=Scoured Barrens, Lunar Convocation.
+- Turn 7: actions: cards=1, abilities=1; combat snapshots=1; life mutations=2; explicit battlefield entries=Forest, Good-Fortune Unicorn.
+- Turn 8: actions: cards=0, abilities=6; life mutations=4; explicit battlefield entries=Scoured Barrens.
+- Turn 9: actions: cards=1, abilities=2; combat snapshots=1; life mutations=2; explicit battlefield entries=Good-Fortune Unicorn.
+- Turn 10: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Enduring Tenacity.
+- Turn 11: actions: cards=1, abilities=6; combat snapshots=1; life mutations=2; explicit battlefield entries=Forest, Felidar Savior, Enduring Tenacity; explicit battlefield exits=Wary Thespian, Enduring Tenacity.
+- Turn 12: actions: cards=1, abilities=28; combat snapshots=1; life mutations=28; explicit battlefield entries=Swamp, Bloodthirsty Conqueror.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [279] Hand (Peanut4514) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Peanut4514: Battlefield: Plains [279]
+
+Turn 2
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=27] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 282) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 282) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hero's Downfall [280] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 21).
+      Plains [281] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Peanut4514: Battlefield: Plains [279]
+      gian31: Battlefield: Authority of the Consuls [282], Plains [281]
+
+Turn 3
+  - Wary Thespian [valid_resolution_no_immediate_mutation, seq=47] (active=Peanut4514, phase=Phase_Main1, controller=Peanut4514, owner=Peanut4514, source_object=286)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Wary Thespian resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Wary Thespian (object 286) Hand (Peanut4514) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Wary Thespian (object 286) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=49] (active=Peanut4514, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 284 [284] Library (Peanut4514) -> Hand (Peanut4514) (Draw; GRE sequence 41).
+      Forest [285] Hand (Peanut4514) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Peanut4514: Battlefield: Forest [285], Plains [279], Wary Thespian [286]
+      gian31: Battlefield: Authority of the Consuls [282], Plains [281]
+
+Turn 4
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=72] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=293)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 293) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 293) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Lunar Convocation [291] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 66).
+      Swamp [292] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 69).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Peanut4514: Battlefield: Forest [285], Plains [279], Wary Thespian [286]
+      gian31: Battlefield: Authority of the Consuls [282], Lunar Convocation [293], Plains [281], Swamp [292]
+
+Turn 5
+  - Charming Prince [valid_resolution_no_immediate_mutation, seq=105] (active=Peanut4514, phase=Phase_Main2, controller=Peanut4514, owner=Peanut4514, source_object=297)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Charming Prince resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Charming Prince (object 297) Hand (Peanut4514) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Charming Prince (object 297) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=108] (active=Peanut4514, phase=Phase_Main2, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  Combat snapshots observed (active=Peanut4514; frames: DeclareAttack -> DeclareBlock):
+      attackers: Wary Thespian [286] (unblocked, observed P/T 3/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 21 -> 18
+    life: gian31 18 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Good-Fortune Unicorn [296] Library (Peanut4514) -> Hand (Peanut4514) (Draw; GRE sequence 86).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Peanut4514: Battlefield: Charming Prince [297], Forest [285], Plains [279], Wary Thespian [286]
+      gian31: Battlefield: Authority of the Consuls [282], Lunar Convocation [293], Plains [281], Swamp [292]
+
+Turn 6
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=122] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=304, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=125] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=306)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 306) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 306) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=138] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=306, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: Peanut4514 loses 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=140] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: Peanut4514 loses 1 life.
+    net observed life change this turn: Peanut4514 -2; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 19 -> 20
+    life: Peanut4514 20 -> 19
+    life: Peanut4514 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [303] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 117).
+      Scoured Barrens [304] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 120).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Peanut4514: Battlefield: Charming Prince [297], Forest [285], Plains [279], Wary Thespian [286]
+      gian31: Battlefield: Authority of the Consuls [282], Lunar Convocation [293], Lunar Convocation [306], Plains [281], Scoured Barrens [304], Swamp [292]
+
+Turn 7
+  - Good-Fortune Unicorn [valid_resolution_no_immediate_mutation, seq=150] (active=Peanut4514, phase=Phase_Main1, controller=Peanut4514, owner=Peanut4514, source_object=313)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Good-Fortune Unicorn resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Good-Fortune Unicorn (object 313) Hand (Peanut4514) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Good-Fortune Unicorn (object 313) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=152] (active=Peanut4514, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  Combat snapshots observed (active=Peanut4514; frames: DeclareAttack -> DeclareBlock):
+      attackers: Wary Thespian [286] (unblocked, observed P/T 3/1), Charming Prince [297] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -4 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 21 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [311] Library (Peanut4514) -> Hand (Peanut4514) (Draw; GRE sequence 144).
+      Forest [312] Hand (Peanut4514) -> Battlefield (PlayLand; GRE sequence 147).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Peanut4514: Battlefield: Charming Prince [297], Forest [285], Forest [312], Good-Fortune Unicorn [313], Plains [279], Wary Thespian [286]
+      gian31: Battlefield: Authority of the Consuls [282], Lunar Convocation [293], Lunar Convocation [306], Plains [281], Scoured Barrens [304], Swamp [292]
+
+Turn 8
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=177] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=319, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=180] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 230 [230], Swamp [324] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Swamp (object 324) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=193] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=306, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Lunar Convocation: a token is created.
+      explicit effect object references: Bat [329] (role/targeting only where the protocol identifies it)
+      token created: Bat (object 329, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 328).
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=195] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Lunar Convocation: a token is created.
+      explicit effect object references: Bat [330] (role/targeting only where the protocol identifies it)
+      token created: Bat (object 330, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 327).
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=197] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=306, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: Peanut4514 loses 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=199] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: Peanut4514 loses 1 life.
+    net observed life change this turn: Peanut4514 -2; gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 16 -> 17
+    life: gian31 17 -> 15
+    life: Peanut4514 18 -> 17
+    life: Peanut4514 17 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Zoraline, Cosmos Caller [318] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 172).
+      Scoured Barrens [319] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 175).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Peanut4514: Battlefield: Charming Prince [297], Forest [285], Forest [312], Good-Fortune Unicorn [313], Plains [279], Wary Thespian [286]
+      gian31: Battlefield: Authority of the Consuls [282], Lunar Convocation [293], Lunar Convocation [306], Plains [281], Scoured Barrens [304], Scoured Barrens [319], Swamp [292]
+
+Turn 9
+  - Good-Fortune Unicorn [valid_resolution_no_immediate_mutation, seq=208] (active=Peanut4514, phase=Phase_Main1, controller=Peanut4514, owner=Peanut4514, source_object=332)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Good-Fortune Unicorn resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Good-Fortune Unicorn (object 332) Hand (Peanut4514) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Good-Fortune Unicorn (object 332) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=210] (active=Peanut4514, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Good-Fortune Unicorn [observed_semantic_effect, seq=212] (active=Peanut4514, phase=Phase_Main1, controller=Peanut4514, owner=Peanut4514, source_object=313, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Good-Fortune Unicorn: Good-Fortune Unicorn gets +1/+1; 1 counter(s) are added to Good-Fortune Unicorn [332].
+      explicit effect object references: Good-Fortune Unicorn [332] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=Peanut4514; frames: DeclareAttack):
+      attackers: Charming Prince [297] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 15 -> 16
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 16 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 331 [331] Library (Peanut4514) -> Hand (Peanut4514) (Draw; GRE sequence 203).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Peanut4514: Battlefield: Charming Prince [297], Forest [285], Forest [312], Good-Fortune Unicorn [313], Good-Fortune Unicorn [332], Plains [279], Wary Thespian [286]
+      gian31: Battlefield: Authority of the Consuls [282], Lunar Convocation [293], Lunar Convocation [306], Plains [281], Scoured Barrens [304], Scoured Barrens [319], Swamp [292]
+
+Turn 10
+  - Enduring Tenacity [valid_resolution_no_immediate_mutation, seq=239] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=340)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Enduring Tenacity resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Enduring Tenacity (object 340) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Enduring Tenacity (object 340) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [338] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 233).
+      Swamp [339] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 236).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Peanut4514: Battlefield: Charming Prince [297], Forest [285], Forest [312], Good-Fortune Unicorn [313], Good-Fortune Unicorn [332], Plains [279], Wary Thespian [286]
+      gian31: Battlefield: Authority of the Consuls [282], Enduring Tenacity [340], Lunar Convocation [293], Lunar Convocation [306], Plains [281], Scoured Barrens [304], Scoured Barrens [319], Swamp [292], Swamp [339]
+
+Turn 11
+  - Felidar Savior [valid_resolution_no_immediate_mutation, seq=260] (active=Peanut4514, phase=Phase_Main1, controller=Peanut4514, owner=Peanut4514, source_object=347)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Felidar Savior resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Felidar Savior (object 347) Hand (Peanut4514) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Felidar Savior (object 347) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=266] (active=Peanut4514, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=270] (active=Peanut4514, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=340, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+  - Ability of Good-Fortune Unicorn [observed_semantic_effect, seq=272] (active=Peanut4514, phase=Phase_Main1, controller=Peanut4514, owner=Peanut4514, source_object=332, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Good-Fortune Unicorn: Felidar Savior gets +1/+1; 1 counter(s) are added to Felidar Savior [347].
+      explicit effect object references: Felidar Savior [347] (role/targeting only where the protocol identifies it)
+  - Ability of Good-Fortune Unicorn [observed_semantic_effect, seq=274] (active=Peanut4514, phase=Phase_Main1, controller=Peanut4514, owner=Peanut4514, source_object=313, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Good-Fortune Unicorn: Felidar Savior gets +1/+1; 1 counter(s) are added to Felidar Savior [347].
+      explicit effect object references: Felidar Savior [347] (role/targeting only where the protocol identifies it)
+  - Ability of Felidar Savior [observed_semantic_effect, seq=276] (active=Peanut4514, phase=Phase_Main1, controller=Peanut4514, owner=Peanut4514, source_object=347, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s)
+      narrative: Ability of Felidar Savior: Wary Thespian gets +1/+1; Good-Fortune Unicorn gets +1/+1; 1 counter(s) are added to Wary Thespian [286]; 1 counter(s) are added to Good-Fortune Unicorn [313].
+      explicit effect object references: Wary Thespian [286], Good-Fortune Unicorn [313] (role/targeting only where the protocol identifies it)
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=290] (active=Peanut4514, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=340, source_last_explicit_zone=Battlefield, source_successor=361 observed Graveyard (gian31) -> Battlefield (Return))
+      effects: return to battlefield
+      narrative: Ability of Enduring Tenacity: a card/permanent returns.
+      explicit effect object references: Enduring Tenacity [358], Enduring Tenacity [361] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Enduring Tenacity (object 361) Graveyard (gian31) -> Battlefield (Return; shared object ID)
+  Combat snapshots observed (active=Peanut4514; frames: DeclareAttack):
+      attackers: Wary Thespian [286] (unblocked, observed P/T 4/2)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat-result zone change: Wary Thespian [357] Battlefield -> Graveyard (Peanut4514) (SBA_Damage).
+      combat-result zone change: Enduring Tenacity [358] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Peanut4514 -1; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 14 -> 15
+    life: Peanut4514 16 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [345] Library (Peanut4514) -> Hand (Peanut4514) (Draw; GRE sequence 254).
+      Forest [346] Hand (Peanut4514) -> Battlefield (PlayLand; GRE sequence 257).
+      Wary Thespian [357] Battlefield -> Graveyard (Peanut4514) (SBA_Damage; GRE sequence 288).
+      Enduring Tenacity [358] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 288).
+      Wildborn Preserver [362] Library (Peanut4514) -> Graveyard (Peanut4514) (Surveil; GRE sequence 293).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Peanut4514: Battlefield: Charming Prince [297], Felidar Savior [347], Forest [285], Forest [312], Forest [346], Good-Fortune Unicorn [313], Good-Fortune Unicorn [332], Plains [279]; Graveyard: Wary Thespian [357], Wildborn Preserver [362]
+      gian31: Battlefield: Authority of the Consuls [282], Enduring Tenacity [361], Lunar Convocation [293], Lunar Convocation [306], Plains [281], Scoured Barrens [304], Scoured Barrens [319], Swamp [292], Swamp [339]
+
+Turn 12
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation, seq=309] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=365)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 365) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 365) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=321] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=365, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=325] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=327] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=365, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=331] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=333] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=365, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=337] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=339] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=365, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=343] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=345] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=365, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=349] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=351] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=365, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=355] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=357] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=365, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=361] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=363] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=365, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=367] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=369] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=365, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=373] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=375] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=365, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=379] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=381] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=365, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=385] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=387] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=365, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=391] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=393] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=365, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=397] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=399] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=365, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=403] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Bat [329] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Peanut4514 -14; gian31 +14 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Peanut4514 15 -> 14
+    life: gian31 15 -> 16
+    life: Peanut4514 14 -> 13
+    life: gian31 16 -> 17
+    life: Peanut4514 13 -> 12
+    life: gian31 17 -> 18
+    life: Peanut4514 12 -> 11
+    life: gian31 18 -> 19
+    life: Peanut4514 11 -> 10
+    life: gian31 19 -> 20
+    life: Peanut4514 10 -> 9
+    life: gian31 20 -> 21
+    life: Peanut4514 9 -> 8
+    life: gian31 21 -> 22
+    life: Peanut4514 8 -> 7
+    life: gian31 22 -> 23
+    life: Peanut4514 7 -> 6
+    life: gian31 23 -> 24
+    life: Peanut4514 6 -> 5
+    life: gian31 24 -> 25
+    life: Peanut4514 5 -> 4
+    life: gian31 25 -> 26
+    life: Peanut4514 4 -> 3
+    life: gian31 26 -> 27
+    life: Peanut4514 3 -> 2
+    life: gian31 27 -> 28
+    life: Peanut4514 2 -> 1
+    life: gian31 28 -> 29
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [363] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 303).
+      Swamp [364] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 306).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Peanut4514: Battlefield: Charming Prince [297], Felidar Savior [347], Forest [285], Forest [312], Forest [346], Good-Fortune Unicorn [313], Good-Fortune Unicorn [332], Plains [279]; Graveyard: Wary Thespian [357], Wildborn Preserver [362]
+      gian31: Battlefield: Authority of the Consuls [282], Bloodthirsty Conqueror [365], Enduring Tenacity [361], Lunar Convocation [293], Lunar Convocation [306], Plains [281], Scoured Barrens [304], Scoured Barrens [319], Swamp [292], Swamp [339], Swamp [364]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 8, seq 178, Phase_Main1: gian31 17 -> 15. No source event correlated in captured records. Previous captured action: Scoured Barrens.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 2 token creations observed; 2 active as last observed; 0 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Bat [329] controller=gian31; created Turn 8 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 12, object 329 (latest observed P/T 1/1; current zone unconfirmed).
+- Bat [330] controller=gian31; created Turn 8 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 8, object 330 (latest observed P/T 1/1; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Plains [owner=Peanut4514, controller=Peanut4514] moves Hand (Peanut4514) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Hero's Downfall [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 24: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 27: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 41: object 284 [owner/controller metadata unavailable] moves Library (Peanut4514) -> Hand (Peanut4514) (Draw).
+- Turn 3, seq 44: Forest [owner=Peanut4514, controller=Peanut4514] moves Hand (Peanut4514) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Wary Thespian [owner=Peanut4514, controller=Peanut4514] moves Hand (Peanut4514) -> Stack (CastSpell).
+- Turn 3, seq 47: Wary Thespian [owner=Peanut4514, controller=Peanut4514] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 66: Lunar Convocation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 69: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 70: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 72: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 86: Good-Fortune Unicorn [owner/controller metadata unavailable] moves Library (Peanut4514) -> Hand (Peanut4514) (Draw).
+- Turn 5, seq 103: Charming Prince [owner=Peanut4514, controller=Peanut4514] moves Hand (Peanut4514) -> Stack (CastSpell).
+- Turn 5, seq 105: Charming Prince [owner=Peanut4514, controller=Peanut4514] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 117: Scoured Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 120: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 123: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 125: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 144: Forest [owner/controller metadata unavailable] moves Library (Peanut4514) -> Hand (Peanut4514) (Draw).
+- Turn 7, seq 147: Forest [owner=Peanut4514, controller=Peanut4514] moves Hand (Peanut4514) -> Battlefield (PlayLand).
+- Turn 7, seq 148: Good-Fortune Unicorn [owner=Peanut4514, controller=Peanut4514] moves Hand (Peanut4514) -> Stack (CastSpell).
+- Turn 7, seq 150: Good-Fortune Unicorn [owner=Peanut4514, controller=Peanut4514] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 172: Zoraline, Cosmos Caller [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 175: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 180: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 203: object 331 [owner/controller metadata unavailable] moves Library (Peanut4514) -> Hand (Peanut4514) (Draw).
+- Turn 9, seq 206: Good-Fortune Unicorn [owner=Peanut4514, controller=Peanut4514] moves Hand (Peanut4514) -> Stack (CastSpell).
+- Turn 9, seq 208: Good-Fortune Unicorn [owner=Peanut4514, controller=Peanut4514] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 233: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 236: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 237: Enduring Tenacity [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 239: Enduring Tenacity [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 254: Forest [owner/controller metadata unavailable] moves Library (Peanut4514) -> Hand (Peanut4514) (Draw).
+- Turn 11, seq 257: Forest [owner=Peanut4514, controller=Peanut4514] moves Hand (Peanut4514) -> Battlefield (PlayLand).
+- Turn 11, seq 258: Felidar Savior [owner=Peanut4514, controller=Peanut4514] moves Hand (Peanut4514) -> Stack (CastSpell).
+- Turn 11, seq 260: Felidar Savior [owner=Peanut4514, controller=Peanut4514] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 288: Wary Thespian [owner=Peanut4514, controller=Peanut4514] moves Battlefield -> Graveyard (Peanut4514) (SBA_Damage).
+- Turn 11, seq 288: Enduring Tenacity [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 11, seq 290: Enduring Tenacity [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Battlefield (Return).
+- Turn 11, seq 293: Wildborn Preserver [owner=Peanut4514, controller=Peanut4514] moves Library (Peanut4514) -> Graveyard (Peanut4514) (Surveil).
+- Turn 12, seq 303: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 306: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 307: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 309: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 159 becomes object 279 [Plains].
+- Turn 2, seq 21: object 226 becomes object 280 [Hero's Downfall].
+- Turn 2, seq 24: object 219 becomes object 281 [Plains].
+- Turn 2, seq 25: object 222 becomes object 282 [Authority of the Consuls].
+- Turn 3, seq 41: object 166 becomes object 284 [object 166].
+- Turn 3, seq 44: object 160 becomes object 285 [Forest].
+- Turn 3, seq 45: object 163 becomes object 286 [Wary Thespian].
+- Turn 4, seq 66: object 227 becomes object 291 [Lunar Convocation].
+- Turn 4, seq 69: object 225 becomes object 292 [Swamp].
+- Turn 4, seq 70: object 224 becomes object 293 [Lunar Convocation].
+- Turn 5, seq 86: object 167 becomes object 296 [Good-Fortune Unicorn].
+- Turn 5, seq 103: object 164 becomes object 297 [Charming Prince].
+- Turn 6, seq 117: object 228 becomes object 303 [Scoured Barrens].
+- Turn 6, seq 120: object 223 becomes object 304 [Scoured Barrens].
+- Turn 6, seq 123: object 291 becomes object 306 [Lunar Convocation].
+- Turn 7, seq 144: object 168 becomes object 311 [Forest].
+- Turn 7, seq 147: object 311 becomes object 312 [Forest].
+- Turn 7, seq 148: object 296 becomes object 313 [Good-Fortune Unicorn].
+- Turn 8, seq 172: object 229 becomes object 318 [Zoraline, Cosmos Caller].
+- Turn 8, seq 175: object 303 becomes object 319 [Scoured Barrens].
+- Turn 8, seq 180: object 230 becomes object 324 [Swamp].
+- Turn 9, seq 203: object 170 becomes object 331 [object 170].
+- Turn 9, seq 206: object 161 becomes object 332 [Good-Fortune Unicorn].
+- Turn 10, seq 233: object 231 becomes object 338 [Swamp].
+- Turn 10, seq 236: object 324 becomes object 339 [Swamp].
+- Turn 10, seq 237: object 220 becomes object 340 [Enduring Tenacity].
+- Turn 11, seq 254: object 171 becomes object 345 [Forest].
+- Turn 11, seq 257: object 345 becomes object 346 [Forest].
+- Turn 11, seq 258: object 162 becomes object 347 [Felidar Savior].
+- Turn 11, seq 288: object 286 becomes object 357 [Wary Thespian].
+- Turn 11, seq 288: object 340 becomes object 358 [Enduring Tenacity].
+- Turn 11, seq 290: object 358 becomes object 361 [Enduring Tenacity].
+- Turn 11, seq 293: object 172 becomes object 362 [Wildborn Preserver].
+- Turn 12, seq 303: object 232 becomes object 363 [Swamp].
+- Turn 12, seq 306: object 338 becomes object 364 [Swamp].
+- Turn 12, seq 307: object 221 becomes object 365 [Bloodthirsty Conqueror].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: Peanut4514 plays Plains (object 279) from Hand (Peanut4514) to Battlefield.
+- Turn 2: gian31 plays Plains (object 281) from Hand (gian31) to Battlefield.
+- Turn 3: Peanut4514 plays Forest (object 285) from Hand (Peanut4514) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 292) from Hand (gian31) to Battlefield.
+- Turn 6: gian31 plays Scoured Barrens (object 304) from Hand (gian31) to Battlefield.
+- Turn 7: Peanut4514 plays Forest (object 312) from Hand (Peanut4514) to Battlefield.
+- Turn 8: gian31 plays Scoured Barrens (object 319) from Hand (gian31) to Battlefield.
+- Turn 10: gian31 plays Swamp (object 339) from Hand (gian31) to Battlefield.
+- Turn 11: Peanut4514 plays Forest (object 346) from Hand (Peanut4514) to Battlefield.
+- Turn 12: gian31 plays Swamp (object 364) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 12: ordered adjacent records Bloodthirsty Conqueror -> Enduring Tenacity; observed repetitions=14; net life: Peanut4514 -14, gian31 +14. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Bloodthirsty Conqueror=14, Enduring Tenacity=14.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 8: ordered adjacent records Lunar Convocation -> Lunar Convocation; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+- Turn 12: ordered adjacent records Bloodthirsty Conqueror -> Enduring Tenacity; observed repetitions=14 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Enduring Tenacity: casts=1; abilities=16 (triggered=16, activated=0) across turns [10, 11, 11, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=1, damage=0, life_changes=15, other=1
+  observed effects: life -1, return to battlefield, synthetic event
+- Bloodthirsty Conqueror: casts=1; abilities=14 (triggered=14, activated=0) across turns [12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=14, other=0
+  observed effects: life +1
+- Lunar Convocation: casts=2; abilities=7 (triggered=7, activated=0) across turns [4, 6, 6, 6, 8, 8, 8, 8, 8]
+  observed effect totals: draws=1, tokens=2, counters=0, returns=0, damage=0, life_changes=4, other=2
+  observed effects: draw, life -1, synthetic event, token creation
+- Authority of the Consuls: casts=1; abilities=5 (triggered=5, activated=0) across turns [2, 3, 5, 7, 9, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=0
+  observed effects: life +1
+- Good-Fortune Unicorn: casts=2; abilities=3 (triggered=3, activated=0) across turns [7, 9, 9, 11, 11]
+  observed effect totals: draws=0, tokens=0, counters=3, returns=0, damage=0, life_changes=0, other=3
+  observed effects: +1 counter(s), P/T +1/+1
+- Felidar Savior: casts=1; abilities=1 (triggered=1, activated=0) across turns [11, 11]
+  observed effect totals: draws=0, tokens=0, counters=2, returns=0, damage=0, life_changes=0, other=2
+  observed effects: +1 counter(s), P/T +1/+1
+- Scoured Barrens: abilities=2 (triggered=2, activated=0) across turns [6, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Charming Prince: casts=1 across turns [5]
+- Wary Thespian: casts=1 across turns [3]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 - DeclareAttack, DeclareBlock (active=Peanut4514)
+  attacker: Wary Thespian (Peanut4514) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=Peanut4514)
+  attacker: Wary Thespian (Peanut4514) -> gian31; unblocked in this observed snapshot
+  attacker: Charming Prince (Peanut4514) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack (active=Peanut4514)
+  attacker: Charming Prince (Peanut4514) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack (active=Peanut4514)
+  attacker: Wary Thespian (Peanut4514) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Bat (gian31) -> Peanut4514; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 11: Ability of Enduring Tenacity (active=Peanut4514 controller=gian31) - Ability of Enduring Tenacity: a card/permanent returns.
+- Turn 12: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 12: Ability of Enduring Tenacity (active=gian31) - Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+- Turn 12: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 12: Ability of Enduring Tenacity (active=gian31) - Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+- Turn 12: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 12: Ability of Enduring Tenacity (active=gian31) - Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+- Turn 12: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 12: Ability of Enduring Tenacity (active=gian31) - Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+- Turn 12: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 12: Ability of Enduring Tenacity (active=gian31) - Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+- Turn 12: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 12: Ability of Enduring Tenacity (active=gian31) - Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+- Turn 12: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 12: Ability of Enduring Tenacity (active=gian31) - Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+- Turn 12: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 12: Ability of Enduring Tenacity (active=gian31) - Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+- Turn 12: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 12: Ability of Enduring Tenacity (active=gian31) - Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+- Turn 12: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 12: Ability of Enduring Tenacity (active=gian31) - Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+- Turn 12: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 12: Ability of Enduring Tenacity (active=gian31) - Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+- Turn 12: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 12: Ability of Enduring Tenacity (active=gian31) - Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+- Turn 12: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 12: Ability of Enduring Tenacity (active=gian31) - Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+- Turn 12: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 12: Ability of Enduring Tenacity (active=gian31) - Ability of Enduring Tenacity: Peanut4514 loses 1 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 219: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 220: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 221: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 222: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 223: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 224: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 225: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 279: Plains | controller=Peanut4514 | owner=Peanut4514 | zone=Battlefield (latest_object_observation)
+- 280: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 281: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 282: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 285: Forest | controller=Peanut4514 | owner=Peanut4514 | zone=Battlefield (latest_object_observation)
+- 286: Wary Thespian | controller=Peanut4514 | owner=Peanut4514 | zone=Battlefield (latest_object_observation)
+- 289: object 289 | controller=Peanut4514 | owner=Peanut4514 | zone=unknown (inferred unknown) (latest_object_observation)
+- 290: object 290 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 291: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 292: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 293: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 297: Charming Prince | controller=Peanut4514 | owner=Peanut4514 | zone=Battlefield (latest_object_observation)
+- 300: object 300 | controller=Peanut4514 | owner=Peanut4514 | zone=unknown (inferred unknown) (latest_object_observation)
+- 301: object 301 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 303: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 304: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 305: object 305 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 306: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 309: object 309 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 310: object 310 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 312: Forest | controller=Peanut4514 | owner=Peanut4514 | zone=Battlefield (latest_object_observation)
+- 313: Good-Fortune Unicorn | controller=Peanut4514 | owner=Peanut4514 | zone=Battlefield (latest_object_observation)
+- 317: object 317 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 318: Zoraline, Cosmos Caller | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 319: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 320: object 320 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 321: object 321 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 324: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 325: object 325 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 326: object 326 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 327: object 327 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 328: object 328 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 329: Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 330: Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 332: Good-Fortune Unicorn | controller=Peanut4514 | owner=Peanut4514 | zone=Battlefield (latest_object_observation)
+- 336: object 336 | controller=Peanut4514 | owner=Peanut4514 | zone=unknown (inferred unknown) (latest_object_observation)
+- 337: object 337 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 338: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 339: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 340: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 346: Forest | controller=Peanut4514 | owner=Peanut4514 | zone=Battlefield (latest_object_observation)
+- 347: Felidar Savior | controller=Peanut4514 | owner=Peanut4514 | zone=Battlefield (latest_object_observation)
+- 352: object 352 | controller=Peanut4514 | owner=Peanut4514 | zone=unknown (inferred unknown) (latest_object_observation)
+- 353: object 353 | controller=Peanut4514 | owner=Peanut4514 | zone=unknown (inferred unknown) (latest_object_observation)
+- 354: object 354 | controller=Peanut4514 | owner=Peanut4514 | zone=unknown (inferred unknown) (latest_object_observation)
+- 355: object 355 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 356: object 356 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 357: Wary Thespian | controller=Peanut4514 | owner=Peanut4514 | zone=Battlefield (latest_object_observation)
+- 358: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 359: object 359 | controller=Peanut4514 | owner=Peanut4514 | zone=unknown (inferred unknown) (latest_object_observation)
+- 360: object 360 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 361: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 362: Wildborn Preserver | controller=Peanut4514 | owner=Peanut4514 | zone=Battlefield (latest_object_observation)
+- 363: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 364: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 365: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 371: object 371 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 372: object 372 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 373: object 373 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 374: object 374 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 375: object 375 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 376: object 376 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 377: object 377 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 378: object 378 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 379: object 379 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 380: object 380 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 381: object 381 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 382: object 382 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 383: object 383 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 384: object 384 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 385: object 385 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 386: object 386 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 387: object 387 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 388: object 388 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 389: object 389 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 390: object 390 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 391: object 391 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 392: object 392 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 393: object 393 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 394: object 394 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 395: object 395 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 396: object 396 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 397: object 397 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 398: object 398 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 399: object 399 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Peanut4514: 18 total items
+  zones: Battlefield=11, unknown=7
+  objects: Forest x3, Good-Fortune Unicorn x2, Wary Thespian x2, Charming Prince, Felidar Savior, Plains, Wildborn Preserver, object 289, object 300, object 336, object 352, object 353
+gian31: 74 total items
+  zones: Battlefield=12, Hand=14, Stack=3, unknown=45
+  objects: Swamp x7, Enduring Tenacity x4, Lunar Convocation x4, Scoured Barrens x4, Authority of the Consuls x2, Bat x2, Bloodthirsty Conqueror x2, Plains x2, Hero's Downfall, Zoraline, Cosmos Caller, object 290, object 301
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+Peanut4514:
+  Battlefield (11): Charming Prince, Felidar Savior, Forest, Forest, Forest, Good-Fortune Unicorn, Good-Fortune Unicorn, Plains, Wary Thespian, Wary Thespian, Wildborn Preserver
+  Graveyard: 0 card(s)
+gian31:
+  Battlefield (12): Bat, Bat, Bloodthirsty Conqueror, Enduring Tenacity, Enduring Tenacity, Enduring Tenacity, Plains, Scoured Barrens, Scoured Barrens, Swamp, Swamp, Swamp
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+52 objects have no resolved final zone and are omitted from the known board state.
+Peanut4514: 7 unknown object(s)
+gian31: 45 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=14, Stack=3
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Peanut4514:
+  Battlefield (8): Plains, Forest, Charming Prince, Forest, Good-Fortune Unicorn, Good-Fortune Unicorn, Forest, Felidar Savior
+  Graveyard (2): Wary Thespian, Wildborn Preserver
+gian31:
+  Battlefield (13): Plains, Authority of the Consuls, Swamp, Lunar Convocation, Scoured Barrens, Lunar Convocation, Scoured Barrens, Bat, Bat, Swamp, Enduring Tenacity, Swamp, Bloodthirsty Conqueror
+  Graveyard (1): Enduring Tenacity
+Known non-persistent entries (counts only):
+  Peanut4514: Hand=2, Limbo=1
+  gian31: Hand=3, Limbo=5, Pending=1
+  unknown: Hand=1, Library=93, Limbo=6
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: Peanut4514 Battlefield=1
+- Turn 2: Peanut4514 Battlefield=1; gian31 Battlefield=2
+- Turn 3: Peanut4514 Battlefield=3; gian31 Battlefield=2
+- Turn 4: Peanut4514 Battlefield=3; gian31 Battlefield=4
+- Turn 5: Peanut4514 Battlefield=4; gian31 Battlefield=4
+- Turn 6: Peanut4514 Battlefield=4; gian31 Battlefield=6
+- Turn 7: Peanut4514 Battlefield=6; gian31 Battlefield=6
+- Turn 8: Peanut4514 Battlefield=6; gian31 Battlefield=7
+- Turn 9: Peanut4514 Battlefield=7; gian31 Battlefield=7
+- Turn 10: Peanut4514 Battlefield=7; gian31 Battlefield=9
+- Turn 11: Peanut4514 Battlefield=8; Peanut4514 Graveyard=2; gian31 Battlefield=9
+- Turn 12: Peanut4514 Battlefield=8; Peanut4514 Graveyard=2; gian31 Battlefield=11
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Wary Thespian resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Charming Prince resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Good-Fortune Unicorn resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Good-Fortune Unicorn resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Enduring Tenacity resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Felidar Savior resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
