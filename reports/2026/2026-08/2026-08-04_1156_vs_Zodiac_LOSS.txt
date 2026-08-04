@@ -1,0 +1,690 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Zodiac
+Seat map: Seat 1=gian31, Seat 2=Zodiac
+Turn range (known): 1 - 13
+Records: 30
+Action chains: 28
+Winner: Zodiac
+Final life: {'gian31': -1, 'Zodiac': 16}
+Lethal life snapshot: gian31 1 -> -1 (at least 2 damage/life loss observed; exact source may be unavailable).
+Lethal coverage (normalized): not determinable; explained=0/2; unexplained=2.
+Match conclusion: Life total reached 0 observed for gian31.
+Last captured action before match-result payload: Turn 13 (Phase_Combat, Step_DeclareAttack; Ability of Ruby, Daring Tracker, seq 336).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 28 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 11 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12] (raw records=11; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 15 explicit Library -> Hand movement(s); named in the draw record=8, resolved through an explicit identity transition=7, unresolved=0.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 6).
+  - gian31: 6 observed card(s): Phyrexian Arena [279], Makeshift Binding [281], Scoured Barrens [282], Swamp [283], Starscape Cleric [284], Case of the Uneaten Feast [285].
+  - unknown: 7 observed card(s): object 219 [219], object 220 [220], object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: Zodiac; observed final life totals: {'gian31': -1, 'Zodiac': 16}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 13 (Phase_Combat, Step_DeclareAttack; Ability of Ruby, Daring Tracker, seq 336).
+Last captured life snapshot: gian31 1 -> -1 (seq 340).
+Terminal condition observed: gian31 reached -1 life; exact lethal-source coverage is reported separately.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Gruul Guildgate.
+- Turn 2: actions: cards=0, abilities=1; life mutations=1; explicit battlefield entries=Scoured Barrens.
+- Turn 3: actions: cards=2, abilities=0; explicit battlefield entries=Forest, Ruby, Daring Tracker, Mild-Mannered Librarian.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Case of the Uneaten Feast.
+- Turn 5: actions: cards=0, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Mountain.
+- Turn 6: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Plains, Makeshift Binding; explicit battlefield exits=Mild-Mannered Librarian.
+- Turn 7: actions: cards=2, abilities=0; explicit battlefield entries=Gruul Guildgate, Courageous Goblin, Axgard Cavalry.
+- Turn 8: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Phyrexian Arena.
+- Turn 9: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Gruul Guildgate, Beast-Kin Ranger.
+- Turn 10: actions: cards=1, abilities=3; life mutations=3; explicit battlefield entries=Marauding Blight-Priest.
+- Turn 11: actions: cards=2, abilities=5; combat snapshots=1; life mutations=1; explicit battlefield entries=Mountain, Giant Cindermaw, Halana and Alena, Partners.
+- Turn 12: actions: cards=1, abilities=2; combat snapshots=1; life mutations=2; explicit battlefield entries=Scoured Barrens; explicit battlefield exits=Giant Cindermaw.
+- Turn 13: actions: cards=1, abilities=3; combat snapshots=1; life mutations=1; explicit battlefield exits=Marauding Blight-Priest.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Enduring Tenacity [339] Hand (gian31) -> Library (gian31) (Put; GRE sequence 6).
+      Gruul Guildgate [340] Hand (Zodiac) -> Battlefield (PlayLand; GRE sequence 9).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Zodiac: Battlefield: Gruul Guildgate [340]
+
+Turn 2
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=28] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=342, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hero's Downfall [341] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 23).
+      Scoured Barrens [342] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 26).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Zodiac: Battlefield: Gruul Guildgate [340]
+      gian31: Battlefield: Scoured Barrens [342]
+
+Turn 3
+  - Ruby, Daring Tracker [valid_resolution_no_immediate_mutation, seq=48] (active=Zodiac, phase=Phase_Main1, controller=Zodiac, owner=Zodiac, source_object=346)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ruby, Daring Tracker resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ruby, Daring Tracker (object 346) Hand (Zodiac) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ruby, Daring Tracker (object 346) Stack -> Battlefield (Resolve; shared object ID)
+  - Mild-Mannered Librarian [valid_resolution_no_immediate_mutation, seq=51] (active=Zodiac, phase=Phase_Main1, controller=Zodiac, owner=Zodiac, source_object=349)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Mild-Mannered Librarian resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Mild-Mannered Librarian (object 349) Hand (Zodiac) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Mild-Mannered Librarian (object 349) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [344] Library (Zodiac) -> Hand (Zodiac) (Draw; GRE sequence 42).
+      Forest [345] Hand (Zodiac) -> Battlefield (PlayLand; GRE sequence 45).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Zodiac: Battlefield: Forest [345], Gruul Guildgate [340], Mild-Mannered Librarian [349], Ruby, Daring Tracker [346]
+      gian31: Battlefield: Scoured Barrens [342]
+
+Turn 4
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=71] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=353)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 353) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 353) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [351] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 65).
+      Swamp [352] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 68).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Zodiac: Battlefield: Forest [345], Gruul Guildgate [340], Mild-Mannered Librarian [349], Ruby, Daring Tracker [346]
+      gian31: Battlefield: Case of the Uneaten Feast [353], Scoured Barrens [342], Swamp [352]
+
+Turn 5
+  - Ability of Mild-Mannered Librarian [observed_semantic_effect, seq=91] (active=Zodiac, phase=Phase_Main1, controller=Zodiac, owner=Zodiac, source_object=349, source_last_explicit_zone=Battlefield)
+      effects: one +2/+2 counter; observed P/T change +2/+2 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Mild-Mannered Librarian: draw; Mild-Mannered Librarian gets +2/+2; 2 counter(s) are added to Mild-Mannered Librarian [349].
+      explicit effect object references: object 228 [228], object 362 [362] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Mountain (object 362) Library (Zodiac) -> Hand (Zodiac) (Draw; shared object ID)
+  Combat snapshots observed (active=Zodiac; frames: DeclareAttack -> DeclareBlock):
+      attackers: Mild-Mannered Librarian [349] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -3 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 21 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Gruul Guildgate [355] Library (Zodiac) -> Hand (Zodiac) (Draw; GRE sequence 85).
+      Mountain [356] Hand (Zodiac) -> Battlefield (PlayLand; GRE sequence 88).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Zodiac: Battlefield: Forest [345], Gruul Guildgate [340], Mild-Mannered Librarian [349], Mountain [356], Ruby, Daring Tracker [346]
+      gian31: Battlefield: Case of the Uneaten Feast [353], Scoured Barrens [342], Swamp [352]
+
+Turn 6
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=117] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=365)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 365) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 365) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=121] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=365, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Mild-Mannered Librarian; gian31 gains 2 life.
+      explicit effect object references: Mild-Mannered Librarian [349], Mild-Mannered Librarian [370] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Mild-Mannered Librarian (object 370) Battlefield -> Exile (Exile; shared object ID)
+    net observed life change this turn: gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Stroke of Midnight [363] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 111).
+      Plains [364] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 114).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Zodiac: Battlefield: Forest [345], Gruul Guildgate [340], Mountain [356], Ruby, Daring Tracker [346]; Exile: Mild-Mannered Librarian [370]
+      gian31: Battlefield: Case of the Uneaten Feast [353], Makeshift Binding [365], Plains [364], Scoured Barrens [342], Swamp [352]
+
+Turn 7
+  - Courageous Goblin [valid_resolution_no_immediate_mutation, seq=141] (active=Zodiac, phase=Phase_Main1, controller=Zodiac, owner=Zodiac, source_object=373)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Courageous Goblin resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Courageous Goblin (object 373) Hand (Zodiac) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Courageous Goblin (object 373) Stack -> Battlefield (Resolve; shared object ID)
+  - Axgard Cavalry [valid_resolution_no_immediate_mutation, seq=144] (active=Zodiac, phase=Phase_Main1, controller=Zodiac, owner=Zodiac, source_object=376)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Axgard Cavalry resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Axgard Cavalry (object 376) Hand (Zodiac) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Axgard Cavalry (object 376) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Courageous Goblin [371] Library (Zodiac) -> Hand (Zodiac) (Draw; GRE sequence 135).
+      Gruul Guildgate [372] Hand (Zodiac) -> Battlefield (PlayLand; GRE sequence 138).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Zodiac: Battlefield: Axgard Cavalry [376], Courageous Goblin [373], Forest [345], Gruul Guildgate [340], Gruul Guildgate [372], Mountain [356], Ruby, Daring Tracker [346]; Exile: Mild-Mannered Librarian [370]
+      gian31: Battlefield: Case of the Uneaten Feast [353], Makeshift Binding [365], Plains [364], Scoured Barrens [342], Swamp [352]
+
+Turn 8
+  - Phyrexian Arena [valid_resolution_no_immediate_mutation, seq=164] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=381)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Phyrexian Arena resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Phyrexian Arena (object 381) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Phyrexian Arena (object 381) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [379] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 158).
+      Plains [380] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 161).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Zodiac: Battlefield: Axgard Cavalry [376], Courageous Goblin [373], Forest [345], Gruul Guildgate [340], Gruul Guildgate [372], Mountain [356], Ruby, Daring Tracker [346]; Exile: Mild-Mannered Librarian [370]
+      gian31: Battlefield: Case of the Uneaten Feast [353], Makeshift Binding [365], Phyrexian Arena [381], Plains [364], Plains [380], Scoured Barrens [342], Swamp [352]
+
+Turn 9
+  - Beast-Kin Ranger [valid_resolution_no_immediate_mutation, seq=184] (active=Zodiac, phase=Phase_Main1, controller=Zodiac, owner=Zodiac, source_object=387)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Beast-Kin Ranger resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Beast-Kin Ranger (object 387) Hand (Zodiac) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Beast-Kin Ranger (object 387) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Axgard Cavalry [valid_resolution_no_immediate_mutation, seq=189] (active=Zodiac, phase=Phase_Main1, controller=Zodiac, owner=Zodiac, source_object=376, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Axgard Cavalry resolves with no immediate observed mutation.
+  Combat snapshots observed (active=Zodiac; frames: DeclareAttack -> DeclareBlock):
+      attackers: Ruby, Daring Tracker [346] (unblocked, observed P/T 1/2), Courageous Goblin [373] (unblocked, observed P/T 2/2), Beast-Kin Ranger [387] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 6; observed attacker power total: 6; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -6 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 6 + observed modifiers 0 = 6; individual assignment unavailable): gian31 20 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Giant Cindermaw [385] Library (Zodiac) -> Hand (Zodiac) (Draw; GRE sequence 178).
+      Gruul Guildgate [386] Hand (Zodiac) -> Battlefield (PlayLand; GRE sequence 181).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Zodiac: Battlefield: Axgard Cavalry [376], Beast-Kin Ranger [387], Courageous Goblin [373], Forest [345], Gruul Guildgate [340], Gruul Guildgate [372], Gruul Guildgate [386], Mountain [356], Ruby, Daring Tracker [346]; Exile: Mild-Mannered Librarian [370]
+      gian31: Battlefield: Case of the Uneaten Feast [353], Makeshift Binding [365], Phyrexian Arena [381], Plains [364], Plains [380], Scoured Barrens [342], Swamp [352]
+
+Turn 10
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=209] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=381, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 290 [290], Marauding Blight-Priest [393] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 393) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=216] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=395)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 395) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 395) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=218] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=220] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=395, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Zodiac loses 1 life.
+    net observed life change this turn: Zodiac -1; gian31 +0 (individual changes below; gains and losses may offset)
+    life: gian31 14 -> 13
+    life: gian31 13 -> 14
+    life: Zodiac 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [394] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 211).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Zodiac: Battlefield: Axgard Cavalry [376], Beast-Kin Ranger [387], Courageous Goblin [373], Forest [345], Gruul Guildgate [340], Gruul Guildgate [372], Gruul Guildgate [386], Mountain [356], Ruby, Daring Tracker [346]; Exile: Mild-Mannered Librarian [370]
+      gian31: Battlefield: Case of the Uneaten Feast [353], Makeshift Binding [365], Marauding Blight-Priest [395], Phyrexian Arena [381], Plains [364], Plains [380], Scoured Barrens [342], Swamp [352]
+
+Turn 11
+  - Giant Cindermaw [valid_resolution_no_immediate_mutation, seq=240] (active=Zodiac, phase=Phase_Main1, controller=Zodiac, owner=Zodiac, source_object=403)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Giant Cindermaw resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Giant Cindermaw (object 403) Hand (Zodiac) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Giant Cindermaw (object 403) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Beast-Kin Ranger [observed_semantic_effect, seq=242] (active=Zodiac, phase=Phase_Main1, controller=Zodiac, owner=Zodiac, source_object=387, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+0
+      narrative: Ability of Beast-Kin Ranger: Beast-Kin Ranger gets +1/+0.
+  - Halana and Alena, Partners [valid_resolution_no_immediate_mutation, seq=245] (active=Zodiac, phase=Phase_Main1, controller=Zodiac, owner=Zodiac, source_object=408)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Halana and Alena, Partners resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Halana and Alena, Partners (object 408) Hand (Zodiac) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Halana and Alena, Partners (object 408) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Beast-Kin Ranger [observed_semantic_effect, seq=247] (active=Zodiac, phase=Phase_Main1, controller=Zodiac, owner=Zodiac, source_object=387, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+0
+      narrative: Ability of Beast-Kin Ranger: Beast-Kin Ranger gets +1/+0.
+  - Ability of Axgard Cavalry [valid_resolution_no_immediate_mutation, seq=252] (active=Zodiac, phase=Phase_Main1, controller=Zodiac, owner=Zodiac, source_object=376, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Axgard Cavalry resolves with no immediate observed mutation.
+  - Ability of Halana and Alena, Partners [observed_semantic_effect, seq=258] (active=Zodiac, phase=Phase_Combat, step=Step_BeginCombat, controller=Zodiac, owner=Zodiac, source_object=408, source_last_explicit_zone=Battlefield)
+      effects: one +2/+2 counter; observed P/T change +2/+2 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Halana and Alena, Partners: Axgard Cavalry gets +2/+2; 2 counter(s) are added to Axgard Cavalry [376].
+      explicit effect object references: Axgard Cavalry [376] (role/targeting only where the protocol identifies it)
+  - Ability of Courageous Goblin [observed_semantic_effect, seq=264] (active=Zodiac, phase=Phase_Combat, step=Step_DeclareAttack, controller=Zodiac, owner=Zodiac, source_object=373, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+0
+      narrative: Ability of Courageous Goblin: Courageous Goblin gets +1/+0.
+  Combat snapshots observed (active=Zodiac; frames: DeclareAttack):
+      attackers: Courageous Goblin [373] (unblocked, observed P/T 3/2), Beast-Kin Ranger [387] (unblocked, observed P/T 5/3), Giant Cindermaw [403] (unblocked, observed P/T 4/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 12; observed attacker power total: 12; snapshot comparison matches (exact assignment unavailable).
+      P/T timing: combat snapshot power=12; explicit modifiers in the same observed combat context add 1 power to 1/3 unblocked attackers; post-modifier observed reconstruction=13 (partially correlated; individual assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -12 (individual changes below; gains and losses may offset)
+    life (combat-correlated: observed unblocked power 12; life seq 269; exact assignment unavailable): gian31 14 -> 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Halana and Alena, Partners [401] Library (Zodiac) -> Hand (Zodiac) (Draw; GRE sequence 234).
+      Mountain [402] Hand (Zodiac) -> Battlefield (PlayLand; GRE sequence 237).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Zodiac: Battlefield: Axgard Cavalry [376], Beast-Kin Ranger [387], Courageous Goblin [373], Forest [345], Giant Cindermaw [403], Gruul Guildgate [340], Gruul Guildgate [372], Gruul Guildgate [386], Halana and Alena, Partners [408], Mountain [356], Mountain [402], Ruby, Daring Tracker [346]; Exile: Mild-Mannered Librarian [370]
+      gian31: Battlefield: Case of the Uneaten Feast [353], Makeshift Binding [365], Marauding Blight-Priest [395], Phyrexian Arena [381], Plains [364], Plains [380], Scoured Barrens [342], Swamp [352]
+
+Turn 12
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=279] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=381, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 292 [292], Lunar Convocation [418] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Lunar Convocation (object 418) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Ability of Scoured Barrens [valid_resolution_no_immediate_mutation, seq=286] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=420, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Scoured Barrens resolves with no immediate observed mutation.
+  - Hero's Downfall [observed_semantic_effect, seq=291] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=422)
+      effects: destroy
+      narrative: Hero's Downfall destroys Giant Cindermaw.
+      explicit effect object references: Giant Cindermaw [403], Giant Cindermaw [426] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hero's Downfall (object 422) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Giant Cindermaw (object 426) Battlefield -> Graveyard (Zodiac) (Destroy; shared object ID)
+      protocol-linked zone transfer: Hero's Downfall (object 427) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 422 -> transfer object 427 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Marauding Blight-Priest [395] (unblocked, observed P/T 3/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Zodiac -3; gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 2 -> 1
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): Zodiac 19 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [419] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 281).
+      Scoured Barrens [420] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 284).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Zodiac: Battlefield: Axgard Cavalry [376], Beast-Kin Ranger [387], Courageous Goblin [373], Forest [345], Gruul Guildgate [340], Gruul Guildgate [372], Gruul Guildgate [386], Halana and Alena, Partners [408], Mountain [356], Mountain [402], Ruby, Daring Tracker [346]; Exile: Mild-Mannered Librarian [370]; Graveyard: Giant Cindermaw [426]
+      gian31: Battlefield: Case of the Uneaten Feast [353], Makeshift Binding [365], Marauding Blight-Priest [395], Phyrexian Arena [381], Plains [364], Plains [380], Scoured Barrens [342], Scoured Barrens [420], Swamp [352]; Graveyard: Hero's Downfall [427]
+
+Turn 13
+  - Bushwhack [observed_semantic_effect, seq=321] (active=Zodiac, phase=Phase_Main1, controller=Zodiac, owner=Zodiac, source_object=429)
+      effects: 4 damage, 3 damage
+      narrative: Bushwhack: Marauding Blight-Priest takes 4 damage; Axgard Cavalry takes 3 damage.
+      explicit effect object references: Axgard Cavalry [376], Marauding Blight-Priest [395] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bushwhack (object 429) Hand (Zodiac) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bushwhack (object 431) Stack -> Graveyard (Zodiac) (Resolve; shared object ID)
+      identity continuity: source object 429 -> transfer object 431 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Marauding Blight-Priest (object 432) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+  - Ability of Halana and Alena, Partners [observed_semantic_effect, seq=327] (active=Zodiac, phase=Phase_Combat, step=Step_BeginCombat, controller=Zodiac, owner=Zodiac, source_object=408, source_last_explicit_zone=Battlefield)
+      effects: one +2/+2 counter; observed P/T change +2/+2 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Halana and Alena, Partners: Courageous Goblin gets +2/+2; 2 counter(s) are added to Courageous Goblin [373].
+      explicit effect object references: Courageous Goblin [373] (role/targeting only where the protocol identifies it)
+  - Ability of Courageous Goblin [observed_semantic_effect, seq=334] (active=Zodiac, phase=Phase_Combat, step=Step_DeclareAttack, controller=Zodiac, owner=Zodiac, source_object=373, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+0
+      narrative: Ability of Courageous Goblin: Courageous Goblin gets +1/+0.
+  - Ability of Ruby, Daring Tracker [observed_semantic_effect, seq=336] (active=Zodiac, phase=Phase_Combat, step=Step_DeclareAttack, controller=Zodiac, owner=Zodiac, source_object=346, source_last_explicit_zone=Battlefield)
+      effects: P/T +2/+2
+      narrative: Ability of Ruby, Daring Tracker: Ruby, Daring Tracker gets +2/+2.
+  Combat snapshots observed (active=Zodiac; frames: DeclareAttack -> DeclareBlock):
+      attackers: Ruby, Daring Tracker [346] (unblocked, observed P/T 3/4), Courageous Goblin [373] (unblocked, observed P/T 5/4), Axgard Cavalry [376] (unblocked, observed P/T 4/4), Beast-Kin Ranger [387] (unblocked, observed P/T 3/3), Halana and Alena, Partners [408] (unblocked, observed P/T 2/3)
+      blockers: none identified
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (unattributed loss during combat phase; not explained by observed attacker damage): gian31 1 -> -1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bushwhack [428] Library (Zodiac) -> Hand (Zodiac) (Draw; GRE sequence 312).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Zodiac: Battlefield: Axgard Cavalry [376], Beast-Kin Ranger [387], Courageous Goblin [373], Forest [345], Gruul Guildgate [340], Gruul Guildgate [372], Gruul Guildgate [386], Halana and Alena, Partners [408], Mountain [356], Mountain [402], Ruby, Daring Tracker [346]; Exile: Mild-Mannered Librarian [370]; Graveyard: Bushwhack [431], Giant Cindermaw [426]
+      gian31: Battlefield: Case of the Uneaten Feast [353], Makeshift Binding [365], Phyrexian Arena [381], Plains [364], Plains [380], Scoured Barrens [342], Scoured Barrens [420], Swamp [352]; Graveyard: Hero's Downfall [427], Marauding Blight-Priest [432]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 13, seq 340, Phase_Combat: gian31 1 -> -1. Combat declaration observed; exact assignment unavailable. Previous captured action: Ruby, Daring Tracker.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 13: gian31 1 -> -1 (required change 2). Explained by exact same-record evidence: 0/2; semantically attributed: 0/2; unexplained residual: 2/2.
+  Combat snapshot observed at or before lethal: Turn 13; attackers=Ruby, Daring Tracker [346], Courageous Goblin [373], Axgard Cavalry [376], Beast-Kin Ranger [387], Halana and Alena, Partners [408]; observed snapshot power total=17; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 13, Ability of Ruby, Daring Tracker (seq 336).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 6: Enduring Tenacity [owner=gian31, controller=gian31] moves Hand (gian31) -> Library (gian31) (Put).
+- Turn 1, seq 9: Gruul Guildgate [owner=Zodiac, controller=Zodiac] moves Hand (Zodiac) -> Battlefield (PlayLand).
+- Turn 2, seq 23: Hero's Downfall [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 26: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 42: Forest [owner/controller metadata unavailable] moves Library (Zodiac) -> Hand (Zodiac) (Draw).
+- Turn 3, seq 45: Forest [owner=Zodiac, controller=Zodiac] moves Hand (Zodiac) -> Battlefield (PlayLand).
+- Turn 3, seq 46: Ruby, Daring Tracker [owner=Zodiac, controller=Zodiac] moves Hand (Zodiac) -> Stack (CastSpell).
+- Turn 3, seq 48: Ruby, Daring Tracker [owner=Zodiac, controller=Zodiac] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 49: Mild-Mannered Librarian [owner=Zodiac, controller=Zodiac] moves Hand (Zodiac) -> Stack (CastSpell).
+- Turn 3, seq 51: Mild-Mannered Librarian [owner=Zodiac, controller=Zodiac] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 65: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 68: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 69: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 71: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 85: Gruul Guildgate [owner/controller metadata unavailable] moves Library (Zodiac) -> Hand (Zodiac) (Draw).
+- Turn 5, seq 88: Mountain [owner=Zodiac, controller=Zodiac] moves Hand (Zodiac) -> Battlefield (PlayLand).
+- Turn 5, seq 91: Mountain [owner/controller metadata unavailable] moves Library (Zodiac) -> Hand (Zodiac) (Draw).
+- Turn 6, seq 111: Stroke of Midnight [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 114: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 115: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 117: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 121: Mild-Mannered Librarian [owner=Zodiac, controller=Zodiac] moves Battlefield -> Exile (Exile).
+- Turn 7, seq 135: Courageous Goblin [owner/controller metadata unavailable] moves Library (Zodiac) -> Hand (Zodiac) (Draw).
+- Turn 7, seq 138: Gruul Guildgate [owner=Zodiac, controller=Zodiac] moves Hand (Zodiac) -> Battlefield (PlayLand).
+- Turn 7, seq 139: Courageous Goblin [owner=Zodiac, controller=Zodiac] moves Hand (Zodiac) -> Stack (CastSpell).
+- Turn 7, seq 141: Courageous Goblin [owner=Zodiac, controller=Zodiac] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 142: Axgard Cavalry [owner=Zodiac, controller=Zodiac] moves Hand (Zodiac) -> Stack (CastSpell).
+- Turn 7, seq 144: Axgard Cavalry [owner=Zodiac, controller=Zodiac] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 158: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 161: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 162: Phyrexian Arena [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 164: Phyrexian Arena [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 178: Giant Cindermaw [owner/controller metadata unavailable] moves Library (Zodiac) -> Hand (Zodiac) (Draw).
+- Turn 9, seq 181: Gruul Guildgate [owner=Zodiac, controller=Zodiac] moves Hand (Zodiac) -> Battlefield (PlayLand).
+- Turn 9, seq 182: Beast-Kin Ranger [owner=Zodiac, controller=Zodiac] moves Hand (Zodiac) -> Stack (CastSpell).
+- Turn 9, seq 184: Beast-Kin Ranger [owner=Zodiac, controller=Zodiac] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 209: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 211: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 214: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 216: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 234: Halana and Alena, Partners [owner/controller metadata unavailable] moves Library (Zodiac) -> Hand (Zodiac) (Draw).
+- Turn 11, seq 237: Mountain [owner=Zodiac, controller=Zodiac] moves Hand (Zodiac) -> Battlefield (PlayLand).
+- Turn 11, seq 238: Giant Cindermaw [owner=Zodiac, controller=Zodiac] moves Hand (Zodiac) -> Stack (CastSpell).
+- Turn 11, seq 240: Giant Cindermaw [owner=Zodiac, controller=Zodiac] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 243: Halana and Alena, Partners [owner=Zodiac, controller=Zodiac] moves Hand (Zodiac) -> Stack (CastSpell).
+- Turn 11, seq 245: Halana and Alena, Partners [owner=Zodiac, controller=Zodiac] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 279: Lunar Convocation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 281: Scoured Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 284: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 287: Hero's Downfall [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 291: Giant Cindermaw [owner=Zodiac, controller=Zodiac] moves Battlefield -> Graveyard (Zodiac) (Destroy).
+- Turn 12, seq 291: Hero's Downfall [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 13, seq 312: Bushwhack [owner/controller metadata unavailable] moves Library (Zodiac) -> Hand (Zodiac) (Draw).
+- Turn 13, seq 315: Bushwhack [owner=Zodiac, controller=Zodiac] moves Hand (Zodiac) -> Stack (CastSpell).
+- Turn 13, seq 321: Bushwhack [owner=Zodiac, controller=Zodiac] moves Stack -> Graveyard (Zodiac) (Resolve).
+- Turn 13, seq 321: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 6: object 280 becomes object 339 [Enduring Tenacity].
+- Turn 1, seq 9: object 219 becomes object 340 [Gruul Guildgate].
+- Turn 2, seq 23: object 286 becomes object 341 [Hero's Downfall].
+- Turn 2, seq 26: object 282 becomes object 342 [Scoured Barrens].
+- Turn 3, seq 42: object 226 becomes object 344 [Forest].
+- Turn 3, seq 45: object 344 becomes object 345 [Forest].
+- Turn 3, seq 46: object 221 becomes object 346 [Ruby, Daring Tracker].
+- Turn 3, seq 49: object 223 becomes object 349 [Mild-Mannered Librarian].
+- Turn 4, seq 65: object 287 becomes object 351 [Plains].
+- Turn 4, seq 68: object 283 becomes object 352 [Swamp].
+- Turn 4, seq 69: object 285 becomes object 353 [Case of the Uneaten Feast].
+- Turn 5, seq 85: object 227 becomes object 355 [Gruul Guildgate].
+- Turn 5, seq 88: object 222 becomes object 356 [Mountain].
+- Turn 5, seq 91: object 228 becomes object 362 [Mountain].
+- Turn 6, seq 111: object 288 becomes object 363 [Stroke of Midnight].
+- Turn 6, seq 114: object 351 becomes object 364 [Plains].
+- Turn 6, seq 115: object 281 becomes object 365 [Makeshift Binding].
+- Turn 6, seq 121: object 349 becomes object 370 [Mild-Mannered Librarian].
+- Turn 7, seq 135: object 229 becomes object 371 [Courageous Goblin].
+- Turn 7, seq 138: object 225 becomes object 372 [Gruul Guildgate].
+- Turn 7, seq 139: object 371 becomes object 373 [Courageous Goblin].
+- Turn 7, seq 142: object 220 becomes object 376 [Axgard Cavalry].
+- Turn 8, seq 158: object 289 becomes object 379 [Plains].
+- Turn 8, seq 161: object 379 becomes object 380 [Plains].
+- Turn 8, seq 162: object 279 becomes object 381 [Phyrexian Arena].
+- Turn 9, seq 178: object 230 becomes object 385 [Giant Cindermaw].
+- Turn 9, seq 181: object 355 becomes object 386 [Gruul Guildgate].
+- Turn 9, seq 182: object 224 becomes object 387 [Beast-Kin Ranger].
+- Turn 10, seq 209: object 290 becomes object 393 [Marauding Blight-Priest].
+- Turn 10, seq 211: object 291 becomes object 394 [Starscape Cleric].
+- Turn 10, seq 214: object 393 becomes object 395 [Marauding Blight-Priest].
+- Turn 11, seq 234: object 231 becomes object 401 [Halana and Alena, Partners].
+- Turn 11, seq 237: object 362 becomes object 402 [Mountain].
+- Turn 11, seq 238: object 385 becomes object 403 [Giant Cindermaw].
+- Turn 11, seq 243: object 401 becomes object 408 [Halana and Alena, Partners].
+- Turn 12, seq 279: object 292 becomes object 418 [Lunar Convocation].
+- Turn 12, seq 281: object 293 becomes object 419 [Scoured Barrens].
+- Turn 12, seq 284: object 419 becomes object 420 [Scoured Barrens].
+- Turn 12, seq 287: object 341 becomes object 422 [Hero's Downfall].
+- Turn 12, seq 291: object 403 becomes object 426 [Giant Cindermaw].
+- Turn 12, seq 291: object 422 becomes object 427 [Hero's Downfall].
+- Turn 13, seq 312: object 232 becomes object 428 [Bushwhack].
+- Turn 13, seq 315: object 428 becomes object 429 [Bushwhack].
+- Turn 13, seq 321: object 429 becomes object 431 [Bushwhack].
+- Turn 13, seq 321: object 395 becomes object 432 [Marauding Blight-Priest].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: Zodiac plays Gruul Guildgate (object 340) from Hand (Zodiac) to Battlefield.
+- Turn 2: gian31 plays Scoured Barrens (object 342) from Hand (gian31) to Battlefield.
+- Turn 3: Zodiac plays Forest (object 345) from Hand (Zodiac) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 352) from Hand (gian31) to Battlefield.
+- Turn 5: Zodiac plays Mountain (object 356) from Hand (Zodiac) to Battlefield.
+- Turn 6: gian31 plays Plains (object 364) from Hand (gian31) to Battlefield.
+- Turn 7: Zodiac plays Gruul Guildgate (object 372) from Hand (Zodiac) to Battlefield.
+- Turn 8: gian31 plays Plains (object 380) from Hand (gian31) to Battlefield.
+- Turn 9: Zodiac plays Gruul Guildgate (object 386) from Hand (Zodiac) to Battlefield.
+- Turn 11: Zodiac plays Mountain (object 402) from Hand (Zodiac) to Battlefield.
+- Turn 12: gian31 plays Scoured Barrens (object 420) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Axgard Cavalry: casts=1; abilities=2 (triggered=2, activated=0) across turns [7, 9, 11]
+- Beast-Kin Ranger: casts=1; abilities=2 (triggered=2, activated=0) across turns [9, 11, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: P/T +1/+0
+- Courageous Goblin: casts=1; abilities=2 (triggered=2, activated=0) across turns [7, 11, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: P/T +1/+0
+- Halana and Alena, Partners: casts=1; abilities=2 (triggered=2, activated=0) across turns [11, 11, 13]
+  observed effect totals: draws=0, tokens=0, counters=2, returns=0, damage=0, life_changes=0, other=2
+  observed effects: +2 counter(s), P/T +2/+2
+- Phyrexian Arena: casts=1; abilities=2 (triggered=2, activated=0) across turns [8, 10, 12]
+  observed effect totals: draws=2, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=2
+  observed effects: draw, life -1, synthetic event
+- Case of the Uneaten Feast: casts=1; abilities=1 (triggered=1, activated=0) across turns [4, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [6, 6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Marauding Blight-Priest: casts=1; abilities=1 (triggered=1, activated=0) across turns [10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: life -1, synthetic event
+- Mild-Mannered Librarian: casts=1; abilities=1 (triggered=1, activated=0) across turns [3, 5]
+  observed effect totals: draws=1, tokens=0, counters=1, returns=0, damage=0, life_changes=0, other=1
+  observed effects: +2 counter(s), P/T +2/+2, draw
+- Ruby, Daring Tracker: casts=1; abilities=1 (triggered=1, activated=0) across turns [3, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: P/T +2/+2
+- Scoured Barrens: abilities=2 (triggered=2, activated=0) across turns [2, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Bushwhack: casts=1 across turns [13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=2, life_changes=0, other=0
+  observed effects: 3 damage, 4 damage
+- Giant Cindermaw: casts=1 across turns [11]
+- Hero's Downfall: casts=1 across turns [12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 - DeclareAttack, DeclareBlock (active=Zodiac)
+  attacker: Mild-Mannered Librarian (Zodiac) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=Zodiac)
+  attacker: Ruby, Daring Tracker (Zodiac) -> gian31; unblocked in this observed snapshot
+  attacker: Courageous Goblin (Zodiac) -> gian31; unblocked in this observed snapshot
+  attacker: Beast-Kin Ranger (Zodiac) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack (active=Zodiac)
+  attacker: Courageous Goblin (Zodiac) -> gian31; unblocked in this observed snapshot
+  attacker: Beast-Kin Ranger (Zodiac) -> gian31; unblocked in this observed snapshot
+  attacker: Giant Cindermaw (Zodiac) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack (active=gian31)
+  attacker: Marauding Blight-Priest (gian31) -> Zodiac; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 - DeclareAttack, DeclareBlock (active=Zodiac)
+  attacker: Ruby, Daring Tracker (Zodiac) -> gian31; unblocked in this observed snapshot
+  attacker: Courageous Goblin (Zodiac) -> gian31; unblocked in this observed snapshot
+  attacker: Axgard Cavalry (Zodiac) -> gian31; unblocked in this observed snapshot
+  attacker: Beast-Kin Ranger (Zodiac) -> gian31; unblocked in this observed snapshot
+  attacker: Halana and Alena, Partners (Zodiac) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 11: Ability of Halana and Alena, Partners (active=Zodiac) - Ability of Halana and Alena, Partners: Axgard Cavalry gets +2/+2; 2 counter(s) are added to target.
+- Turn 11: Ability of Courageous Goblin (active=Zodiac) - Ability of Courageous Goblin: Courageous Goblin gets +1/+0.
+- Turn 13: Ability of Halana and Alena, Partners (active=Zodiac) - Ability of Halana and Alena, Partners: Courageous Goblin gets +2/+2; 2 counter(s) are added to target.
+- Turn 13: Ability of Courageous Goblin (active=Zodiac) - Ability of Courageous Goblin: Courageous Goblin gets +1/+0.
+- Turn 13: Ability of Ruby, Daring Tracker (active=Zodiac) - Ability of Ruby, Daring Tracker: Ruby, Daring Tracker gets +2/+2.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 160: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 161: Shoot the Sheriff | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 279: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 280: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 281: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 282: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 283: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 284: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 285: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 339: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 340: Gruul Guildgate | controller=Zodiac | owner=Zodiac | zone=Battlefield (latest_object_observation)
+- 341: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 342: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 343: object 343 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 345: Forest | controller=Zodiac | owner=Zodiac | zone=Battlefield (latest_object_observation)
+- 346: Ruby, Daring Tracker | controller=Zodiac | owner=Zodiac | zone=Battlefield (latest_object_observation)
+- 349: Mild-Mannered Librarian | controller=Zodiac | owner=Zodiac | zone=Battlefield (latest_object_observation)
+- 351: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 352: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 353: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 356: Mountain | controller=Zodiac | owner=Zodiac | zone=Battlefield (latest_object_observation)
+- 357: object 357 | controller=Zodiac | owner=Zodiac | zone=unknown (inferred unknown) (latest_object_observation)
+- 363: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 364: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 365: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 369: object 369 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 370: Mild-Mannered Librarian | controller=Zodiac | owner=Zodiac | zone=Exile (latest_object_observation)
+- 372: Gruul Guildgate | controller=Zodiac | owner=Zodiac | zone=Battlefield (latest_object_observation)
+- 373: Courageous Goblin | controller=Zodiac | owner=Zodiac | zone=Battlefield (latest_object_observation)
+- 376: Axgard Cavalry | controller=Zodiac | owner=Zodiac | zone=Battlefield (latest_object_observation)
+- 379: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 380: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 381: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 386: Gruul Guildgate | controller=Zodiac | owner=Zodiac | zone=Battlefield (latest_object_observation)
+- 387: Beast-Kin Ranger | controller=Zodiac | owner=Zodiac | zone=Battlefield (latest_object_observation)
+- 391: object 391 | controller=Zodiac | owner=Zodiac | zone=unknown (inferred unknown) (latest_object_observation)
+- 392: object 392 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 393: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 394: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 395: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 399: object 399 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 400: object 400 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 402: Mountain | controller=Zodiac | owner=Zodiac | zone=Battlefield (latest_object_observation)
+- 403: Giant Cindermaw | controller=Zodiac | owner=Zodiac | zone=Battlefield (latest_object_observation)
+- 407: object 407 | controller=Zodiac | owner=Zodiac | zone=unknown (inferred unknown) (latest_object_observation)
+- 408: Halana and Alena, Partners | controller=Zodiac | owner=Zodiac | zone=Battlefield (latest_object_observation)
+- 413: object 413 | controller=Zodiac | owner=Zodiac | zone=unknown (inferred unknown) (latest_object_observation)
+- 414: object 414 | controller=Zodiac | owner=Zodiac | zone=unknown (inferred unknown) (latest_object_observation)
+- 415: object 415 | controller=Zodiac | owner=Zodiac | zone=unknown (inferred unknown) (latest_object_observation)
+- 416: object 416 | controller=Zodiac | owner=Zodiac | zone=unknown (inferred unknown) (latest_object_observation)
+- 417: object 417 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 418: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 419: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 420: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 421: object 421 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 422: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 426: Giant Cindermaw | controller=Zodiac | owner=Zodiac | zone=Graveyard (latest_object_observation)
+- 427: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 429: Bushwhack | controller=Zodiac | owner=Zodiac | zone=Stack (latest_object_observation)
+- 431: Bushwhack | controller=Zodiac | owner=Zodiac | zone=Graveyard (latest_object_observation)
+- 432: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 433: object 433 | controller=Zodiac | owner=Zodiac | zone=unknown (inferred unknown) (latest_object_observation)
+- 434: object 434 | controller=Zodiac | owner=Zodiac | zone=unknown (inferred unknown) (latest_object_observation)
+- 435: object 435 | controller=Zodiac | owner=Zodiac | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Zodiac: 27 total items
+  zones: Battlefield=13, Exile=1, Graveyard=2, Stack=1, unknown=10
+  objects: Gruul Guildgate x3, Bushwhack x2, Giant Cindermaw x2, Mild-Mannered Librarian x2, Mountain x2, Axgard Cavalry, Beast-Kin Ranger, Courageous Goblin, Forest, Halana and Alena, Partners, Ruby, Daring Tracker, object 357
+gian31: 42 total items
+  zones: Battlefield=9, Hand=22, Stack=4, unknown=7
+  objects: Swamp x5, Hero's Downfall x4, Plains x4, Scoured Barrens x4, Enduring Tenacity x3, Marauding Blight-Priest x3, Case of the Uneaten Feast x2, Makeshift Binding x2, Phyrexian Arena x2, Starscape Cleric x2, Godless Shrine, Lunar Convocation
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (9): Enduring Tenacity, Hero's Downfall, Marauding Blight-Priest, Marauding Blight-Priest, Plains, Plains, Scoured Barrens, Scoured Barrens, Swamp
+  Graveyard: 0 card(s)
+Zodiac:
+  Battlefield (13): Axgard Cavalry, Beast-Kin Ranger, Courageous Goblin, Forest, Giant Cindermaw, Gruul Guildgate, Gruul Guildgate, Gruul Guildgate, Halana and Alena, Partners, Mild-Mannered Librarian, Mountain, Mountain, Ruby, Daring Tracker
+  Graveyard: 2 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+17 objects have no resolved final zone and are omitted from the known board state.
+Zodiac: 10 unknown object(s)
+gian31: 7 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=22, Stack=5
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Zodiac:
+  Battlefield (11): Gruul Guildgate, Forest, Ruby, Daring Tracker, Mountain, Gruul Guildgate, Courageous Goblin, Axgard Cavalry, Gruul Guildgate, Beast-Kin Ranger, Mountain, Halana and Alena, Partners
+  Graveyard (2): Giant Cindermaw, Bushwhack
+  Exile (1): Mild-Mannered Librarian
+gian31:
+  Battlefield (8): Scoured Barrens, Swamp, Case of the Uneaten Feast, Plains, Makeshift Binding, Plains, Phyrexian Arena, Scoured Barrens
+  Graveyard (2): Hero's Downfall, Marauding Blight-Priest
+Known non-persistent entries (counts only):
+  Zodiac: Limbo=2
+  gian31: Hand=4, Library=1, Limbo=4
+  unknown: Library=91, Limbo=8
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: Zodiac Battlefield=1
+- Turn 2: Zodiac Battlefield=1; gian31 Battlefield=1
+- Turn 3: Zodiac Battlefield=4; gian31 Battlefield=1
+- Turn 4: Zodiac Battlefield=4; gian31 Battlefield=3
+- Turn 5: Zodiac Battlefield=5; gian31 Battlefield=3
+- Turn 6: Zodiac Battlefield=4; Zodiac Exile=1; gian31 Battlefield=5
+- Turn 7: Zodiac Battlefield=7; Zodiac Exile=1; gian31 Battlefield=5
+- Turn 8: Zodiac Battlefield=7; Zodiac Exile=1; gian31 Battlefield=7
+- Turn 9: Zodiac Battlefield=9; Zodiac Exile=1; gian31 Battlefield=7
+- Turn 10: Zodiac Battlefield=9; Zodiac Exile=1; gian31 Battlefield=8
+- Turn 11: Zodiac Battlefield=12; Zodiac Exile=1; gian31 Battlefield=8
+- Turn 12: Zodiac Battlefield=11; Zodiac Graveyard=1; Zodiac Exile=1; gian31 Battlefield=9; gian31 Graveyard=1
+- Turn 13: Zodiac Battlefield=11; Zodiac Graveyard=2; Zodiac Exile=1; gian31 Battlefield=8; gian31 Graveyard=2
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 3: Ruby, Daring Tracker resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Mild-Mannered Librarian resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Courageous Goblin resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Axgard Cavalry resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Phyrexian Arena resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Beast-Kin Ranger resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Giant Cindermaw resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Halana and Alena, Partners resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
