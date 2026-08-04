@@ -1,0 +1,1088 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Carlinho Marques
+Seat map: Seat 1=gian31, Seat 2=Carlinho Marques
+Turn range (known): 1 - 16
+Unnumbered turn groups retained: 1
+Records: 61
+Action chains: 29
+Winner: gian31
+Final life: {'gian31': 28, 'Carlinho Marques': 1}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 16 (Phase_Ending, Step_End; Ability of Lunar Convocation, seq 541).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 35 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+WARNING: 1 player-zone assignment conflict(s) were observed. The ledger groups affected objects by explicit zone-transfer provenance; controller/owner metadata remains separately traceable.
+Land-drop coverage: 11 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 14] (raw records=11; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 21 explicit Library -> Hand movement(s); named in the draw record=10, resolved through an explicit identity transition=11, unresolved=0.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Scoured Barrens [159], Stroke of Midnight [160], Authority of the Consuls [161], Hero's Downfall [162], Plains [163], Phyrexian Arena [164], Authority of the Consuls [165].
+  - unknown: 7 observed card(s): object 219 [219], object 220 [220], object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 28, 'Carlinho Marques': 1}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 16 (Phase_Ending, Step_End; Ability of Lunar Convocation, seq 541).
+Last captured life snapshot: Carlinho Marques 4 -> 1 (seq 530).
+Tokens on battlefield at their last observation (not confirmed at match end): Fish [313] controller=gian31, created Turn 7, last observed Turn 16 seq 526, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Fish [377] controller=gian31, created Turn 12, last observed Turn 16 seq 526, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Faerie [389] controller=Carlinho Marques, created Turn 13, last observed Turn 15 seq 457, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Faerie [390] controller=Carlinho Marques, created Turn 13, last observed Turn 15 seq 457, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Bat [422] controller=gian31, created Turn 14, last observed Turn 16 seq 526, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Starscape Cleric [540] controller=gian31, created Turn 16, last observed Turn 16 seq 518, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Island.
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Authority of the Consuls.
+- Turn 3: actions: cards=0, abilities=0; explicit battlefield entries=Island.
+- Turn 4: actions: cards=0, abilities=1; life mutations=1; explicit battlefield entries=Scoured Barrens.
+- Turn 5: actions: cards=1, abilities=2; life mutations=1; explicit battlefield entries=Island, Spyglass Siren.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Authority of the Consuls.
+- Turn 7: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield exits=Authority of the Consuls.
+- Turn 8: actions: cards=2, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Plains, Authority of the Consuls.
+- Turn 9: actions: cards=0, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Island; explicit battlefield exits=Map.
+- Turn 10: actions: cards=2, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Godless Shrine, Case of the Uneaten Feast, Case of the Uneaten Feast.
+- Turn 11: actions: cards=2, abilities=3; combat snapshots=1; life mutations=2; explicit battlefield entries=Island, Spyglass Siren; explicit battlefield exits=Map, Spyglass Siren.
+- Turn 12: actions: cards=2, abilities=2; combat snapshots=1; life mutations=3; explicit battlefield entries=Lunar Convocation; explicit battlefield exits=Lunar Convocation.
+- Turn 13: actions: cards=1, abilities=5; combat snapshots=1; life mutations=5.
+- Turn 14: actions: cards=3, abilities=12; combat snapshots=1; life mutations=11; explicit battlefield entries=Swamp, Lunar Convocation, Starscape Cleric, Floodpits Drowner.
+- Turn 15: actions: cards=0, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield exits=Floodpits Drowner, Starscape Cleric.
+- Turn 16: actions: cards=3, abilities=16; combat snapshots=1; life mutations=13; explicit battlefield entries=Authority of the Consuls, Starscape Cleric, Floodpits Drowner.
+- Turn None: actions: cards=0, abilities=0.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Island [279] Hand (Carlinho Marques) -> Battlefield (PlayLand; GRE sequence 7).
+      Opt [280] Hand (Carlinho Marques) -> Stack (CastSpell; GRE sequence 8).
+      Spell Stutter [282] Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw; GRE sequence 11).
+      Opt [283] Stack -> Graveyard (Carlinho Marques) (Resolve; GRE sequence 11).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Carlinho Marques: Battlefield: Island [279]; Graveyard: Opt [283]
+
+Turn 2
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=31] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=286)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 286) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 286) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [284] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 25).
+      Plains [285] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 28).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Carlinho Marques: Battlefield: Island [279]; Graveyard: Opt [283]
+      gian31: Battlefield: Authority of the Consuls [286], Plains [285]
+
+Turn 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Island [288] Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw; GRE sequence 45).
+      Island [289] Hand (Carlinho Marques) -> Battlefield (PlayLand; GRE sequence 48).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Carlinho Marques: Battlefield: Island [279], Island [289]; Graveyard: Opt [283]
+      gian31: Battlefield: Authority of the Consuls [286], Plains [285]
+
+Turn 4
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=67] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=291, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [290] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 62).
+      Scoured Barrens [291] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 65).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Carlinho Marques: Battlefield: Island [279], Island [289]; Graveyard: Opt [283]
+      gian31: Battlefield: Authority of the Consuls [286], Plains [285], Scoured Barrens [291]
+
+Turn 5
+  - Spyglass Siren [valid_resolution_no_immediate_mutation, seq=87] (active=Carlinho Marques, phase=Phase_Main1, controller=Carlinho Marques, owner=Carlinho Marques, source_object=295)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Spyglass Siren resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Spyglass Siren (object 295) Hand (Carlinho Marques) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Spyglass Siren (object 295) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=89] (active=Carlinho Marques, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=286, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Spyglass Siren [observed_semantic_effect, seq=91] (active=Carlinho Marques, phase=Phase_Main1, controller=Carlinho Marques, owner=Carlinho Marques, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Spyglass Siren: a token is created.
+      explicit effect object references: Map [299] (role/targeting only where the protocol identifies it)
+      token created: Map (object 299, controller=Carlinho Marques); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 298).
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    additional protocol-observed zone movements not assigned to an action chain:
+      Spyglass Siren [293] Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw; GRE sequence 81).
+      Island [294] Hand (Carlinho Marques) -> Battlefield (PlayLand; GRE sequence 84).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Carlinho Marques: Battlefield: Island [279], Island [289], Island [294], Spyglass Siren [295]; Graveyard: Opt [283]
+      gian31: Battlefield: Authority of the Consuls [286], Plains [285], Scoured Barrens [291]
+
+Turn 6
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=118] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=302)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 302) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 302) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [300] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 105).
+      Swamp [301] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 108).
+      Spell Stutter [304] Hand (Carlinho Marques) -> Stack (CastSpell; GRE sequence 111).
+      Spell Stutter [309] Stack -> Graveyard (Carlinho Marques) (Resolve; GRE sequence 116).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Carlinho Marques: Battlefield: Island [279], Island [289], Island [294], Spyglass Siren [295]; Graveyard: Opt [283], Spell Stutter [309]
+      gian31: Battlefield: Authority of the Consuls [286], Authority of the Consuls [302], Plains [285], Scoured Barrens [291], Swamp [301]
+
+Turn 7
+  - Into the Flood Maw [observed_semantic_effect, seq=140] (active=Carlinho Marques, phase=Phase_Main1, controller=Carlinho Marques, owner=Carlinho Marques, source_object=311)
+      effects: return to battlefield, token creation
+      narrative: Into the Flood Maw: a card/permanent returns; a token is created.
+      explicit effect object references: Authority of the Consuls [286], Fish [313], Authority of the Consuls [314] (role/targeting only where the protocol identifies it)
+      token created: Fish (object 313, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 311).
+      protocol-linked zone transfer: Into the Flood Maw (object 311) Hand (Carlinho Marques) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 314) Battlefield -> Hand (gian31) (Return; shared object ID)
+      protocol-linked zone transfer: Into the Flood Maw (object 316) Stack -> Graveyard (Carlinho Marques) (Resolve; shared object ID)
+      identity continuity: source object 311 -> transfer object 316 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=Carlinho Marques; frames: DeclareAttack -> DeclareBlock):
+      attackers: Spyglass Siren [295] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 22 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Into the Flood Maw [310] Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw; GRE sequence 132).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Carlinho Marques: Battlefield: Island [279], Island [289], Island [294], Spyglass Siren [295]; Graveyard: Into the Flood Maw [316], Opt [283], Spell Stutter [309]
+      gian31: Battlefield: Authority of the Consuls [302], Plains [285], Scoured Barrens [291], Swamp [301]
+
+Turn 8
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=166] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=319)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 319) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 319) Stack -> Battlefield (Resolve; shared object ID)
+  - Spell Stutter [observed_semantic_effect, seq=173] (active=unknown, controller=Carlinho Marques, owner=Carlinho Marques, source_object=325)
+      chronology reconciliation: parser turn group 15 conflicts with Turn 8; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: none immediately observed
+      narrative: Observed zone movements: Spell Stutter, Phyrexian Arena, Spell Stutter.
+      explicit effect object references: Phyrexian Arena [321], Phyrexian Arena [328] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Spell Stutter (object 325) Hand (Carlinho Marques) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Phyrexian Arena (object 328) Stack -> Graveyard (gian31) (Countered; shared object ID)
+      protocol-linked zone transfer: Spell Stutter (object 329) Stack -> Graveyard (Carlinho Marques) (Resolve; shared object ID)
+      identity continuity: source object 325 -> transfer object 329 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Fish [313] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Carlinho Marques -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Carlinho Marques 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [317] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 160).
+      Plains [318] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 163).
+      Phyrexian Arena [321] Hand (gian31) -> Stack (CastSpell; GRE sequence 167).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Carlinho Marques: Battlefield: Island [279], Island [289], Island [294], Spyglass Siren [295]; Graveyard: Into the Flood Maw [316], Opt [283], Spell Stutter [309], Spell Stutter [329]
+      gian31: Battlefield: Authority of the Consuls [302], Authority of the Consuls [319], Plains [285], Plains [318], Scoured Barrens [291], Swamp [301]; Graveyard: Phyrexian Arena [328]
+
+Turn 9
+  - Ability of Map [observed_semantic_effect, seq=200] (active=Carlinho Marques, phase=Phase_Main1, controller=Carlinho Marques, owner=Carlinho Marques, source_object=299, source_successor=333 observed Battlefield -> Graveyard (Carlinho Marques) (Sacrifice))
+      effects: none immediately observed
+      narrative: Observed zone movements: Island.
+      explicit effect object references: Island [231], object 335 [335] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Island (object 335) Library (Carlinho Marques) -> Hand (Carlinho Marques) (Put; shared object ID)
+  Combat snapshots observed (active=Carlinho Marques; frames: DeclareAttack -> DeclareBlock):
+      attackers: Spyglass Siren [295] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 21 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Opt [330] Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw; GRE sequence 193).
+      Map [333] Battlefield -> Graveyard (Carlinho Marques) (Sacrifice; GRE sequence 198).
+      Island [337] Hand (Carlinho Marques) -> Battlefield (PlayLand; GRE sequence 201).
+      Opt [338] Hand (Carlinho Marques) -> Stack (CastSpell; GRE sequence 202).
+      Spyglass Siren [340] Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw; GRE sequence 205).
+      Opt [341] Stack -> Graveyard (Carlinho Marques) (Resolve; GRE sequence 205).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Carlinho Marques: Battlefield: Island [279], Island [289], Island [294], Island [337], Spyglass Siren [295]; Graveyard: Into the Flood Maw [316], Map [333], Opt [283], Opt [341], Spell Stutter [309], Spell Stutter [329]
+      gian31: Battlefield: Authority of the Consuls [302], Authority of the Consuls [319], Plains [285], Plains [318], Scoured Barrens [291], Swamp [301]; Graveyard: Phyrexian Arena [328]
+
+Turn 10
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=232] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=344)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 344) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 344) Stack -> Battlefield (Resolve; shared object ID)
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=234] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=344)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 344) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 344) Stack -> Battlefield (Resolve; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 344) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Fish [313] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Carlinho Marques -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Carlinho Marques 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Godless Shrine [342] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 225).
+      Godless Shrine [343] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 229).
+      Opt [346] Hand (gian31) -> Stack (CastSpell; GRE sequence 233).
+      Opt [346] Hand (Carlinho Marques) -> Stack (CastSpell; GRE sequence 252).
+      Island [348] Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw; GRE sequence 255).
+      Opt [349] Stack -> Graveyard (Carlinho Marques) (Resolve; GRE sequence 255).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Carlinho Marques: Battlefield: Island [279], Island [289], Island [294], Island [337], Spyglass Siren [295]; Graveyard: Into the Flood Maw [316], Map [333], Opt [283], Opt [341], Opt [349], Spell Stutter [309], Spell Stutter [329]
+      gian31: Battlefield: Authority of the Consuls [302], Authority of the Consuls [319], Case of the Uneaten Feast [344], Godless Shrine [343], Plains [285], Plains [318], Scoured Barrens [291], Swamp [301]; Graveyard: Phyrexian Arena [328]
+
+Turn 11
+  - Spyglass Siren [valid_resolution_no_immediate_mutation, seq=265] (active=Carlinho Marques, phase=Phase_Main1, controller=Carlinho Marques, owner=Carlinho Marques, source_object=352)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Spyglass Siren resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Spyglass Siren (object 352) Hand (Carlinho Marques) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Spyglass Siren (object 352) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=268] (active=Carlinho Marques, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=270] (active=Carlinho Marques, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=319, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Spyglass Siren [observed_semantic_effect, seq=272] (active=Carlinho Marques, phase=Phase_Main1, controller=Carlinho Marques, owner=Carlinho Marques, source_object=352, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Spyglass Siren: a token is created.
+      explicit effect object references: Map [357] (role/targeting only where the protocol identifies it)
+      token created: Map (object 357, controller=Carlinho Marques); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 356).
+  - Hero's Downfall [observed_semantic_effect, seq=292] (active=unknown, controller=gian31, owner=gian31, source_object=362)
+      chronology reconciliation: parser turn group None conflicts with Turn 11; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: destroy
+      narrative: Hero's Downfall destroys Spyglass Siren.
+      explicit effect object references: Spyglass Siren [295], Spyglass Siren [366] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hero's Downfall (object 362) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Spyglass Siren (object 366) Battlefield -> Graveyard (Carlinho Marques) (Destroy; shared object ID)
+      protocol-linked zone transfer: Hero's Downfall (object 367) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 362 -> transfer object 367 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=Carlinho Marques; frames: DeclareAttack -> DeclareBlock):
+      attackers: Spyglass Siren [295] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life: gian31 21 -> 22
+    additional protocol-observed zone movements not assigned to an action chain:
+      Into the Flood Maw [350] Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw; GRE sequence 259).
+      Island [351] Hand (Carlinho Marques) -> Battlefield (PlayLand; GRE sequence 262).
+      Map [360] Battlefield -> Graveyard (Carlinho Marques) (Sacrifice; GRE sequence 275).
+        sacrifice observed after Ability of Spyglass Siren (seq 272); direct causal linkage is unavailable.
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Carlinho Marques: Battlefield: Island [279], Island [289], Island [294], Island [337], Island [351], Spyglass Siren [352]; Graveyard: Into the Flood Maw [316], Map [333], Map [360], Opt [283], Opt [341], Opt [349], Spell Stutter [309], Spell Stutter [329], Spyglass Siren [366]
+      gian31: Battlefield: Authority of the Consuls [302], Authority of the Consuls [319], Case of the Uneaten Feast [344], Godless Shrine [343], Plains [285], Plains [318], Scoured Barrens [291], Swamp [301]; Graveyard: Hero's Downfall [367], Phyrexian Arena [328]
+
+Turn 12
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=309] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=369)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 369) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 369) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=319] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=344, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=321] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=369, source_last_explicit_zone=Battlefield, source_successor=379 observed Battlefield -> Hand (gian31) (Return))
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 172 [172], Rush of Dread [382] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Rush of Dread (object 382) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Into the Flood Maw [observed_semantic_effect, seq=317] (active=unknown, controller=Carlinho Marques, owner=Carlinho Marques, source_object=375)
+      chronology reconciliation: parser turn group None conflicts with Turn 12; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: return to battlefield, token creation
+      narrative: Into the Flood Maw: a card/permanent returns; a token is created.
+      explicit effect object references: Lunar Convocation [369], Fish [377], Lunar Convocation [379] (role/targeting only where the protocol identifies it)
+      token created: Fish (object 377, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 375).
+      protocol-linked zone transfer: Into the Flood Maw (object 375) Hand (Carlinho Marques) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 379) Battlefield -> Hand (gian31) (Return; shared object ID)
+      protocol-linked zone transfer: Into the Flood Maw (object 381) Stack -> Graveyard (Carlinho Marques) (Resolve; shared object ID)
+      identity continuity: source object 375 -> transfer object 381 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Fish [313] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      other-player life loss not explained by observed attacker damage: gian31 22 -> 20 (-2; phase=Phase_Main1; source unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Carlinho Marques -1; gian31 -1 (individual changes below; gains and losses may offset)
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): gian31 22 -> 20
+    life: gian31 20 -> 21
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Carlinho Marques 18 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Lunar Convocation [368] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 304).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Carlinho Marques: Battlefield: Island [279], Island [289], Island [294], Island [337], Island [351], Spyglass Siren [352]; Graveyard: Into the Flood Maw [316], Into the Flood Maw [381], Map [333], Map [360], Opt [283], Opt [341], Opt [349], Spell Stutter [309], Spell Stutter [329], Spyglass Siren [366]
+      gian31: Battlefield: Authority of the Consuls [302], Authority of the Consuls [319], Case of the Uneaten Feast [344], Godless Shrine [343], Plains [285], Plains [318], Scoured Barrens [291], Swamp [301]; Graveyard: Hero's Downfall [367], Phyrexian Arena [328]
+
+Turn 13
+  - Faebloom Trick [observed_semantic_effect, seq=346] (active=Carlinho Marques, phase=Phase_Main1, controller=Carlinho Marques, owner=Carlinho Marques, source_object=385)
+      effects: token creation, token creation
+      narrative: Faebloom Trick: a token is created; a token is created.
+      explicit effect object references: Faerie [389], Faerie [390] (role/targeting only where the protocol identifies it)
+      token created: Faerie (object 389, controller=Carlinho Marques) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 385).
+      token created: Faerie (object 390, controller=Carlinho Marques) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 385).
+      protocol-linked zone transfer: Faebloom Trick (object 385) Hand (Carlinho Marques) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Faebloom Trick (object 397) Stack -> Graveyard (Carlinho Marques) (Resolve; shared object ID)
+      identity continuity: source object 385 -> transfer object 397 (explicit GRE ObjectIdChanged chain).
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=351] (active=Carlinho Marques, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=353] (active=Carlinho Marques, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=302, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 351 and 353; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=355] (active=Carlinho Marques, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=319, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=357] (active=Carlinho Marques, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=319, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 355 and 357; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Faebloom Trick [valid_resolution_no_immediate_mutation, seq=359] (active=Carlinho Marques, phase=Phase_Main1, controller=Carlinho Marques, owner=Carlinho Marques, source_object=385, source_last_explicit_zone=Stack, source_successor=397 observed Stack -> Graveyard (Carlinho Marques) (Resolve))
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Faebloom Trick resolves with no immediate observed mutation.
+  Combat snapshots observed (active=Carlinho Marques; frames: DeclareAttack -> DeclareBlock):
+      attackers: Spyglass Siren [352] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 +3 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    life: gian31 22 -> 23
+    life: gian31 23 -> 24
+    life: gian31 24 -> 25
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 25 -> 24
+    additional protocol-observed zone movements not assigned to an action chain:
+      Faebloom Trick [383] Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw; GRE sequence 341).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Carlinho Marques: Battlefield: Island [279], Island [289], Island [294], Island [337], Island [351], Spyglass Siren [352]; Graveyard: Faebloom Trick [397], Into the Flood Maw [316], Into the Flood Maw [381], Map [333], Map [360], Opt [283], Opt [341], Opt [349], Spell Stutter [309], Spell Stutter [329], Spyglass Siren [366]
+      gian31: Battlefield: Authority of the Consuls [302], Authority of the Consuls [319], Case of the Uneaten Feast [344], Godless Shrine [343], Plains [285], Plains [318], Scoured Barrens [291], Swamp [301]; Graveyard: Hero's Downfall [367], Phyrexian Arena [328]
+
+Turn 14
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=385] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=400)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 400) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 400) Stack -> Battlefield (Resolve; shared object ID)
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=389] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=403)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 403) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 403) Stack -> Battlefield (Resolve; shared object ID)
+  - Floodpits Drowner [valid_resolution_no_immediate_mutation, seq=393] (active=gian31, phase=Phase_Main1, controller=Carlinho Marques, owner=Carlinho Marques, source_object=407)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Floodpits Drowner resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Floodpits Drowner (object 407) Hand (Carlinho Marques) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Floodpits Drowner (object 407) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Floodpits Drowner [observed_semantic_effect, seq=398] (active=gian31, phase=Phase_Main1, controller=Carlinho Marques, owner=Carlinho Marques, source_object=407, source_last_explicit_zone=Battlefield)
+      effects: +1 counter(s)
+      narrative: Ability of Floodpits Drowner: 1 counter(s) are added to Starscape Cleric [403].
+      explicit effect object references: Starscape Cleric [403] (role/targeting only where the protocol identifies it)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=400] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=402] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=403, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Carlinho Marques loses 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=404] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=319, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=406] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=403, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Carlinho Marques loses 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=409] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=400, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 174 [174], Starscape Cleric [418] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Starscape Cleric (object 418) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=411] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=344, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=413] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=403, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Carlinho Marques loses 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=432] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=400, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Lunar Convocation: a token is created.
+      explicit effect object references: Bat [422] (role/targeting only where the protocol identifies it)
+      token created: Bat (object 422, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 421).
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=434] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=344, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=436] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=403, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Carlinho Marques loses 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=438] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=400, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: Carlinho Marques loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Fish [313] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      other-player life loss not explained by observed attacker damage: gian31 26 -> 24 (-2; phase=Phase_Main1; source unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Carlinho Marques -6; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 24 -> 25
+    life: Carlinho Marques 17 -> 16
+    life: gian31 25 -> 26
+    life: Carlinho Marques 16 -> 15
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): gian31 26 -> 24
+    life: gian31 24 -> 25
+    life: Carlinho Marques 15 -> 14
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Carlinho Marques 14 -> 13
+    life: gian31 25 -> 26
+    life: Carlinho Marques 13 -> 12
+    life: Carlinho Marques 12 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [398] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 379).
+      Swamp [399] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 382).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Carlinho Marques: Battlefield: Floodpits Drowner [407], Island [279], Island [289], Island [294], Island [337], Island [351], Spyglass Siren [352]; Graveyard: Faebloom Trick [397], Into the Flood Maw [316], Into the Flood Maw [381], Map [333], Map [360], Opt [283], Opt [341], Opt [349], Spell Stutter [309], Spell Stutter [329], Spyglass Siren [366]
+      gian31: Battlefield: Authority of the Consuls [302], Authority of the Consuls [319], Case of the Uneaten Feast [344], Godless Shrine [343], Lunar Convocation [400], Plains [285], Plains [318], Scoured Barrens [291], Starscape Cleric [403], Swamp [301], Swamp [399]; Graveyard: Hero's Downfall [367], Phyrexian Arena [328]
+
+Turn 15
+  Combat snapshots observed (active=Carlinho Marques; frames: DeclareAttack -> DeclareBlock):
+      attackers: Spyglass Siren [352] (unblocked, observed P/T 1/1), Faerie [389] (unblocked, observed P/T 1/1), Faerie [390] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -3 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 26 -> 23
+    additional protocol-observed zone movements not assigned to an action chain:
+      Floodpits Drowner [425] Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw; GRE sequence 442).
+      Floodpits Drowner [429] Battlefield -> Library (Carlinho Marques) (Put; GRE sequence 449).
+      Starscape Cleric [430] Battlefield -> Library (gian31) (Put; GRE sequence 449).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Carlinho Marques: Battlefield: Island [279], Island [289], Island [294], Island [337], Island [351], Spyglass Siren [352]; Graveyard: Faebloom Trick [397], Into the Flood Maw [316], Into the Flood Maw [381], Map [333], Map [360], Opt [283], Opt [341], Opt [349], Spell Stutter [309], Spell Stutter [329], Spyglass Siren [366]
+      gian31: Battlefield: Authority of the Consuls [302], Authority of the Consuls [319], Case of the Uneaten Feast [344], Godless Shrine [343], Lunar Convocation [400], Plains [285], Plains [318], Scoured Barrens [291], Swamp [301], Swamp [399]; Graveyard: Hero's Downfall [367], Phyrexian Arena [328]
+
+Turn 16
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=477] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=520)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 520) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 520) Stack -> Battlefield (Resolve; shared object ID)
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=482] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=522)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 522) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 522) Stack -> Battlefield (Resolve; shared object ID)
+  - Floodpits Drowner [valid_resolution_no_immediate_mutation, seq=487] (active=gian31, phase=Phase_Main1, controller=Carlinho Marques, owner=Carlinho Marques, source_object=530)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Floodpits Drowner resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Floodpits Drowner (object 530) Hand (Carlinho Marques) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Floodpits Drowner (object 530) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Floodpits Drowner [observed_semantic_effect, seq=492] (active=gian31, phase=Phase_Main1, controller=Carlinho Marques, owner=Carlinho Marques, source_object=530, source_last_explicit_zone=Battlefield)
+      effects: +1 counter(s)
+      narrative: Ability of Floodpits Drowner: 1 counter(s) are added to Starscape Cleric [522].
+      explicit effect object references: Starscape Cleric [522] (role/targeting only where the protocol identifies it)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=494] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=520, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=496] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=522, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Carlinho Marques loses 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=498] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=500] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=522, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Carlinho Marques loses 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=502] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=319, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=504] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=522, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Carlinho Marques loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=506] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=522, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 504 and 506; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: token creation
+      narrative: Ability of Starscape Cleric: a token is created.
+      explicit effect object references: Starscape Cleric [540] (role/targeting only where the protocol identifies it)
+      token created: Starscape Cleric (object 540, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 528).
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=508] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=344, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=511] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=540)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Carlinho Marques loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=513] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=522, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Carlinho Marques loses 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=515] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=344, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=518] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=540)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Carlinho Marques loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=520] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=522, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Carlinho Marques loses 1 life.
+  - Ability of Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=539] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=344, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Case of the Uneaten Feast resolves with no immediate observed mutation.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=541] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=400, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: Carlinho Marques loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Fish [313] (unblocked, observed P/T 1/1), Fish [377] (unblocked, observed P/T 1/1), Bat [422] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Carlinho Marques -10; gian31 +5 (individual changes below; gains and losses may offset)
+    life: gian31 23 -> 24
+    life: Carlinho Marques 11 -> 10
+    life: gian31 24 -> 25
+    life: Carlinho Marques 10 -> 9
+    life: gian31 25 -> 26
+    life: Carlinho Marques 9 -> 8
+    life: gian31 26 -> 27
+    life: Carlinho Marques 8 -> 7
+    life: Carlinho Marques 7 -> 6
+    life: gian31 27 -> 28
+    life: Carlinho Marques 6 -> 5
+    life: Carlinho Marques 5 -> 4
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): Carlinho Marques 4 -> 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Authority of the Consuls [519] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 472).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Carlinho Marques: Battlefield: Floodpits Drowner [530], Island [279], Island [289], Island [294], Island [337], Island [351], Spyglass Siren [352]; Graveyard: Faebloom Trick [397], Into the Flood Maw [316], Into the Flood Maw [381], Map [333], Map [360], Opt [283], Opt [341], Opt [349], Spell Stutter [309], Spell Stutter [329], Spyglass Siren [366]
+      gian31: Battlefield: Authority of the Consuls [302], Authority of the Consuls [319], Authority of the Consuls [520], Case of the Uneaten Feast [344], Godless Shrine [343], Lunar Convocation [400], Plains [285], Plains [318], Scoured Barrens [291], Starscape Cleric [522], Swamp [301], Swamp [399]; Graveyard: Hero's Downfall [367], Phyrexian Arena [328]
+
+UNNUMBERED / UNRESOLVED TURN GROUP
+  - The captured records do not provide a verified numbered turn for the following events.
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 12, seq 310, Phase_Main1: gian31 22 -> 20. Combat declaration observed; exact assignment unavailable. Previous captured action: Lunar Convocation.
+- Turn 14, seq 407, Phase_Main1: gian31 26 -> 24. Combat declaration observed; exact assignment unavailable. Previous captured action: Starscape Cleric.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 8 token creations observed; 6 active as last observed; 2 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Map [299] controller=Carlinho Marques; created Turn 5 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 9 via Battlefield -> Graveyard (Carlinho Marques) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+- Fish [313] controller=gian31; created Turn 7 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 16, object 313 (latest observed P/T 1/1; current zone unconfirmed).
+- Map [357] controller=Carlinho Marques; created Turn 11 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 11 via Battlefield -> Graveyard (Carlinho Marques) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+- Fish [377] controller=gian31; created Turn 12 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 16, object 377 (latest observed P/T 1/1; current zone unconfirmed).
+- Faerie [389] controller=Carlinho Marques; created Turn 13 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 15, object 389 (latest observed P/T 1/1; current zone unconfirmed).
+- Faerie [390] controller=Carlinho Marques; created Turn 13 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 15, object 390 (latest observed P/T 1/1; current zone unconfirmed).
+- Bat [422] controller=gian31; created Turn 14 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 16, object 422 (latest observed P/T 1/1; current zone unconfirmed).
+- Starscape Cleric [540] controller=gian31; created Turn 16 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 16, object 540 (latest observed P/T 1/1; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Island [owner=Carlinho Marques, controller=Carlinho Marques] moves Hand (Carlinho Marques) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Opt [owner=Carlinho Marques, controller=Carlinho Marques] moves Hand (Carlinho Marques) -> Stack (CastSpell).
+- Turn 1, seq 11: Spell Stutter [owner/controller metadata unavailable] moves Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw).
+- Turn 1, seq 11: Opt [owner=Carlinho Marques, controller=Carlinho Marques] moves Stack -> Graveyard (Carlinho Marques) (Resolve).
+- Turn 2, seq 25: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 28: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 29: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 31: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 45: Island [owner/controller metadata unavailable] moves Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw).
+- Turn 3, seq 48: Island [owner=Carlinho Marques, controller=Carlinho Marques] moves Hand (Carlinho Marques) -> Battlefield (PlayLand).
+- Turn 4, seq 62: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 65: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 81: Spyglass Siren [owner/controller metadata unavailable] moves Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw).
+- Turn 5, seq 84: Island [owner=Carlinho Marques, controller=Carlinho Marques] moves Hand (Carlinho Marques) -> Battlefield (PlayLand).
+- Turn 5, seq 85: Spyglass Siren [owner=Carlinho Marques, controller=Carlinho Marques] moves Hand (Carlinho Marques) -> Stack (CastSpell).
+- Turn 5, seq 87: Spyglass Siren [owner=Carlinho Marques, controller=Carlinho Marques] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 105: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 108: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 109: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 111: Spell Stutter [owner=Carlinho Marques, controller=Carlinho Marques] moves Hand (Carlinho Marques) -> Stack (CastSpell).
+- Turn 6, seq 116: Spell Stutter [owner=Carlinho Marques, controller=Carlinho Marques] moves Stack -> Graveyard (Carlinho Marques) (Resolve).
+- Turn 6, seq 118: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 132: Into the Flood Maw [owner/controller metadata unavailable] moves Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw).
+- Turn 7, seq 135: Into the Flood Maw [owner=Carlinho Marques, controller=Carlinho Marques] moves Hand (Carlinho Marques) -> Stack (CastSpell).
+- Turn 7, seq 140: Authority of the Consuls [owner=gian31, controller=gian31] moves Battlefield -> Hand (gian31) (Return).
+- Turn 7, seq 140: Into the Flood Maw [owner=Carlinho Marques, controller=Carlinho Marques] moves Stack -> Graveyard (Carlinho Marques) (Resolve).
+- Turn 8, seq 160: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 163: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 164: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 166: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 167: Phyrexian Arena [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 169: Spell Stutter [owner=Carlinho Marques, controller=Carlinho Marques] moves Hand (Carlinho Marques) -> Stack (CastSpell).
+- Turn 8, seq 173: Phyrexian Arena [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Countered).
+- Turn 8, seq 173: Spell Stutter [owner=Carlinho Marques, controller=Carlinho Marques] moves Stack -> Graveyard (Carlinho Marques) (Resolve).
+- Turn 9, seq 193: Opt [owner/controller metadata unavailable] moves Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw).
+- Turn 9, seq 198: Map [owner/controller metadata unavailable] moves Battlefield -> Graveyard (Carlinho Marques) (Sacrifice).
+- Turn 9, seq 200: Island [owner/controller metadata unavailable] moves Library (Carlinho Marques) -> Hand (Carlinho Marques) (Put).
+- Turn 9, seq 201: Island [owner=Carlinho Marques, controller=Carlinho Marques] moves Hand (Carlinho Marques) -> Battlefield (PlayLand).
+- Turn 9, seq 202: Opt [owner=Carlinho Marques, controller=Carlinho Marques] moves Hand (Carlinho Marques) -> Stack (CastSpell).
+- Turn 9, seq 205: Spyglass Siren [owner/controller metadata unavailable] moves Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw).
+- Turn 9, seq 205: Opt [owner=Carlinho Marques, controller=Carlinho Marques] moves Stack -> Graveyard (Carlinho Marques) (Resolve).
+- Turn 10, seq 225: Godless Shrine [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 229: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 230: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 232: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 233: Opt [owner=Carlinho Marques, controller=Carlinho Marques] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 234: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 252: Opt [owner=Carlinho Marques, controller=Carlinho Marques] moves Hand (Carlinho Marques) -> Stack (CastSpell).
+- Turn 10, seq 255: Island [owner/controller metadata unavailable] moves Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw).
+- Turn 10, seq 255: Opt [owner=Carlinho Marques, controller=Carlinho Marques] moves Stack -> Graveyard (Carlinho Marques) (Resolve).
+- Turn 11, seq 259: Into the Flood Maw [owner/controller metadata unavailable] moves Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw).
+- Turn 11, seq 262: Island [owner=Carlinho Marques, controller=Carlinho Marques] moves Hand (Carlinho Marques) -> Battlefield (PlayLand).
+- Turn 11, seq 263: Spyglass Siren [owner=Carlinho Marques, controller=Carlinho Marques] moves Hand (Carlinho Marques) -> Stack (CastSpell).
+- Turn 11, seq 265: Spyglass Siren [owner=Carlinho Marques, controller=Carlinho Marques] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 275: Map [owner/controller metadata unavailable] moves Battlefield -> Graveyard (Carlinho Marques) (Sacrifice).
+- Turn 11, seq 288: Hero's Downfall [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 292: Spyglass Siren [owner=Carlinho Marques, controller=Carlinho Marques] moves Battlefield -> Graveyard (Carlinho Marques) (Destroy).
+- Turn 11, seq 292: Hero's Downfall [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 12, seq 304: Lunar Convocation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 307: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 309: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 312: Into the Flood Maw [owner=Carlinho Marques, controller=Carlinho Marques] moves Hand (Carlinho Marques) -> Stack (CastSpell).
+- Turn 12, seq 317: Lunar Convocation [owner=gian31, controller=gian31] moves Battlefield -> Hand (gian31) (Return).
+- Turn 12, seq 317: Into the Flood Maw [owner=Carlinho Marques, controller=Carlinho Marques] moves Stack -> Graveyard (Carlinho Marques) (Resolve).
+- Turn 12, seq 321: Rush of Dread [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 341: Faebloom Trick [owner/controller metadata unavailable] moves Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw).
+- Turn 13, seq 344: Faebloom Trick [owner=Carlinho Marques, controller=Carlinho Marques] moves Hand (Carlinho Marques) -> Stack (CastSpell).
+- Turn 13, seq 346: Faebloom Trick [owner=Carlinho Marques, controller=Carlinho Marques] moves Stack -> Graveyard (Carlinho Marques) (Resolve).
+- Turn 14, seq 379: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 382: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 14, seq 383: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 385: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 386: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 389: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 391: Floodpits Drowner [owner=Carlinho Marques, controller=Carlinho Marques] moves Hand (Carlinho Marques) -> Stack (CastSpell).
+- Turn 14, seq 393: Floodpits Drowner [owner=Carlinho Marques, controller=Carlinho Marques] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 409: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 15, seq 442: Floodpits Drowner [owner/controller metadata unavailable] moves Library (Carlinho Marques) -> Hand (Carlinho Marques) (Draw).
+- Turn 15, seq 449: Floodpits Drowner [owner=Carlinho Marques, controller=Carlinho Marques] moves Battlefield -> Library (Carlinho Marques) (Put).
+- Turn 15, seq 449: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Library (gian31) (Put).
+- Turn 16, seq 472: Authority of the Consuls [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 475: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 477: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 16, seq 478: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 482: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 16, seq 485: Floodpits Drowner [owner=Carlinho Marques, controller=Carlinho Marques] moves Hand (Carlinho Marques) -> Stack (CastSpell).
+- Turn 16, seq 487: Floodpits Drowner [owner=Carlinho Marques, controller=Carlinho Marques] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 219 becomes object 279 [Island].
+- Turn 1, seq 8: object 223 becomes object 280 [Opt].
+- Turn 1, seq 11: object 226 becomes object 282 [Spell Stutter].
+- Turn 1, seq 11: object 280 becomes object 283 [Opt].
+- Turn 2, seq 25: object 166 becomes object 284 [Swamp].
+- Turn 2, seq 28: object 163 becomes object 285 [Plains].
+- Turn 2, seq 29: object 165 becomes object 286 [Authority of the Consuls].
+- Turn 3, seq 45: object 227 becomes object 288 [Island].
+- Turn 3, seq 48: object 220 becomes object 289 [Island].
+- Turn 4, seq 62: object 167 becomes object 290 [Case of the Uneaten Feast].
+- Turn 4, seq 65: object 159 becomes object 291 [Scoured Barrens].
+- Turn 5, seq 81: object 228 becomes object 293 [Spyglass Siren].
+- Turn 5, seq 84: object 288 becomes object 294 [Island].
+- Turn 5, seq 85: object 293 becomes object 295 [Spyglass Siren].
+- Turn 6, seq 105: object 168 becomes object 300 [Starscape Cleric].
+- Turn 6, seq 108: object 284 becomes object 301 [Swamp].
+- Turn 6, seq 109: object 161 becomes object 302 [Authority of the Consuls].
+- Turn 6, seq 111: object 282 becomes object 304 [Spell Stutter].
+- Turn 6, seq 116: object 304 becomes object 309 [Spell Stutter].
+- Turn 7, seq 132: object 229 becomes object 310 [Into the Flood Maw].
+- Turn 7, seq 135: object 310 becomes object 311 [Into the Flood Maw].
+- Turn 7, seq 140: object 286 becomes object 314 [Authority of the Consuls].
+- Turn 7, seq 140: object 311 becomes object 316 [Into the Flood Maw].
+- Turn 8, seq 160: object 169 becomes object 317 [Plains].
+- Turn 8, seq 163: object 317 becomes object 318 [Plains].
+- Turn 8, seq 164: object 314 becomes object 319 [Authority of the Consuls].
+- Turn 8, seq 167: object 164 becomes object 321 [Phyrexian Arena].
+- Turn 8, seq 169: object 224 becomes object 325 [Spell Stutter].
+- Turn 8, seq 173: object 321 becomes object 328 [Phyrexian Arena].
+- Turn 8, seq 173: object 325 becomes object 329 [Spell Stutter].
+- Turn 9, seq 193: object 230 becomes object 330 [Opt].
+- Turn 9, seq 198: object 299 becomes object 333 [Map].
+- Turn 9, seq 200: object 231 becomes object 335 [Island].
+- Turn 9, seq 201: object 335 becomes object 337 [Island].
+- Turn 9, seq 202: object 330 becomes object 338 [Opt].
+- Turn 9, seq 205: object 232 becomes object 340 [Spyglass Siren].
+- Turn 9, seq 205: object 338 becomes object 341 [Opt].
+- Turn 10, seq 225: object 170 becomes object 342 [Godless Shrine].
+- Turn 10, seq 229: object 342 becomes object 343 [Godless Shrine].
+- Turn 10, seq 230: object 290 becomes object 344 [Case of the Uneaten Feast].
+- Turn 10, seq 233: object 300 becomes object 346 (Starscape Cleric -> Opt).
+- Turn 10, seq 252: object 222 becomes object 346 [Opt].
+- Turn 10, seq 255: object 234 becomes object 348 [Island].
+- Turn 10, seq 255: object 346 becomes object 349 [Opt].
+- Turn 11, seq 259: object 235 becomes object 350 [Into the Flood Maw].
+- Turn 11, seq 262: object 348 becomes object 351 [Island].
+- Turn 11, seq 263: object 340 becomes object 352 [Spyglass Siren].
+- Turn 11, seq 275: object 357 becomes object 360 [Map].
+- Turn 11, seq 288: object 162 becomes object 362 [Hero's Downfall].
+- Turn 11, seq 292: object 295 becomes object 366 [Spyglass Siren].
+- Turn 11, seq 292: object 362 becomes object 367 [Hero's Downfall].
+- Turn 12, seq 304: object 171 becomes object 368 [Lunar Convocation].
+- Turn 12, seq 307: object 368 becomes object 369 [Lunar Convocation].
+- Turn 12, seq 312: object 350 becomes object 375 [Into the Flood Maw].
+- Turn 12, seq 317: object 369 becomes object 379 [Lunar Convocation].
+- Turn 12, seq 317: object 375 becomes object 381 [Into the Flood Maw].
+- Turn 12, seq 321: object 172 becomes object 382 [Rush of Dread].
+- Turn 13, seq 341: object 236 becomes object 383 [Faebloom Trick].
+- Turn 13, seq 344: object 383 becomes object 385 [Faebloom Trick].
+- Turn 13, seq 346: object 385 becomes object 397 [Faebloom Trick].
+- Turn 14, seq 379: object 173 becomes object 398 [Swamp].
+- Turn 14, seq 382: object 398 becomes object 399 [Swamp].
+- Turn 14, seq 383: object 379 becomes object 400 [Lunar Convocation].
+- Turn 14, seq 386: object 300 becomes object 403 [Starscape Cleric].
+- Turn 14, seq 391: object 221 becomes object 407 [Floodpits Drowner].
+- Turn 14, seq 409: object 174 becomes object 418 [Starscape Cleric].
+- Turn 15, seq 442: object 237 becomes object 425 [Floodpits Drowner].
+- Turn 15, seq 449: object 407 becomes object 429 [Floodpits Drowner].
+- Turn 15, seq 449: object 403 becomes object 430 [Starscape Cleric].
+- Turn 16, seq 472: object 474 becomes object 519 [Authority of the Consuls].
+- Turn 16, seq 475: object 519 becomes object 520 [Authority of the Consuls].
+- Turn 16, seq 478: object 418 becomes object 522 [Starscape Cleric].
+- Turn 16, seq 485: object 425 becomes object 530 [Floodpits Drowner].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: Carlinho Marques plays Island (object 279) from Hand (Carlinho Marques) to Battlefield.
+- Turn 2: gian31 plays Plains (object 285) from Hand (gian31) to Battlefield.
+- Turn 3: Carlinho Marques plays Island (object 289) from Hand (Carlinho Marques) to Battlefield.
+- Turn 4: gian31 plays Scoured Barrens (object 291) from Hand (gian31) to Battlefield.
+- Turn 5: Carlinho Marques plays Island (object 294) from Hand (Carlinho Marques) to Battlefield.
+- Turn 6: gian31 plays Swamp (object 301) from Hand (gian31) to Battlefield.
+- Turn 8: gian31 plays Plains (object 318) from Hand (gian31) to Battlefield.
+- Turn 9: Carlinho Marques plays Island (object 337) from Hand (Carlinho Marques) to Battlefield.
+- Turn 10: gian31 plays Godless Shrine (object 343) from Hand (gian31) to Battlefield.
+- Turn 11: Carlinho Marques plays Island (object 351) from Hand (Carlinho Marques) to Battlefield.
+- Turn 14: gian31 plays Swamp (object 399) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 14: ordered adjacent records Authority of the Consuls -> Starscape Cleric; observed repetitions=2; net life: Carlinho Marques -2, gian31 +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Authority of the Consuls=2, Starscape Cleric=4.
+  Individual ability records remain in the timeline.
+- Turn 14: ordered adjacent records Starscape Cleric -> Lunar Convocation; observed repetitions=3; net life: Carlinho Marques -4. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Lunar Convocation=3, Starscape Cleric=4.
+  Individual ability records remain in the timeline.
+- Turn 14: ordered adjacent records Lunar Convocation -> Case of the Uneaten Feast; observed repetitions=2; net life: gian31 +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=2, Lunar Convocation=3.
+  Individual ability records remain in the timeline.
+- Turn 14: ordered adjacent records Case of the Uneaten Feast -> Starscape Cleric; observed repetitions=2; net life: Carlinho Marques -2, gian31 +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=2, Starscape Cleric=4.
+  Individual ability records remain in the timeline.
+- Turn 16: ordered adjacent records Authority of the Consuls -> Starscape Cleric; observed repetitions=3; net life: Carlinho Marques -3, gian31 +3. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Authority of the Consuls=3, Starscape Cleric=8.
+  Individual ability records remain in the timeline.
+- Turn 16: ordered adjacent records Starscape Cleric -> Case of the Uneaten Feast; observed repetitions=3; net life: Carlinho Marques -2, gian31 +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=3, Starscape Cleric=8.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 13: ordered adjacent records Authority of the Consuls -> Authority of the Consuls; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+- Turn 14: ordered adjacent records Authority of the Consuls -> Starscape Cleric; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+- Turn 14: ordered adjacent records Lunar Convocation -> Case of the Uneaten Feast -> Starscape Cleric; observed repetitions=2 (pattern length 3; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+- Turn 16: ordered adjacent records Authority of the Consuls -> Starscape Cleric; observed repetitions=3 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+- Turn 16: ordered adjacent records Starscape Cleric -> Case of the Uneaten Feast -> Starscape Cleric; observed repetitions=2 (pattern length 3; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Authority of the Consuls: casts=4; abilities=12 (triggered=12, activated=0) across turns [2, 5, 6, 8, 11, 11, 13, 13, 13, 13, 14, 14, 16, 16, 16, 16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=12, other=0
+  observed effects: life +1
+- Starscape Cleric: casts=2; abilities=12 (triggered=12, activated=0) across turns [14, 14, 14, 14, 14, 16, 16, 16, 16, 16, 16, 16, 16, 16]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=11, other=2
+  observed effects: life -1, synthetic event, token creation
+- Case of the Uneaten Feast: casts=2; abilities=6 (triggered=6, activated=0) across turns [10, 10, 12, 14, 14, 16, 16, 16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=0
+  observed effects: life +1
+- Lunar Convocation: casts=2; abilities=5 (triggered=5, activated=0) across turns [12, 12, 14, 14, 14, 14, 16]
+  observed effect totals: draws=2, tokens=1, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: draw, life -1, token creation
+- Floodpits Drowner: casts=2; abilities=2 (triggered=2, activated=0) across turns [14, 14, 16, 16]
+  observed effect totals: draws=0, tokens=0, counters=2, returns=0, damage=0, life_changes=0, other=0
+  observed effects: +1 counter(s)
+- Spyglass Siren: casts=2; abilities=2 (triggered=2, activated=0) across turns [5, 5, 11, 11]
+  observed effect totals: draws=0, tokens=2, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Faebloom Trick: casts=1; abilities=1 (triggered=1, activated=0) across turns [13, 13]
+  observed effect totals: draws=0, tokens=2, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Into the Flood Maw: casts=2 across turns [7, 12]
+  observed effect totals: draws=0, tokens=2, counters=0, returns=2, damage=0, life_changes=0, other=0
+  observed effects: return to battlefield, token creation
+- Hero's Downfall: casts=1 across turns [11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Map: abilities=1 (triggered=1, activated=0) across turns [9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: zone_transfer
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [4]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Spell Stutter: casts=1 across turns [8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: zone_transfer
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 7 - DeclareAttack, DeclareBlock (active=Carlinho Marques)
+  attacker: Spyglass Siren (Carlinho Marques) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Fish (gian31) -> Carlinho Marques; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=Carlinho Marques)
+  attacker: Spyglass Siren (Carlinho Marques) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Fish (gian31) -> Carlinho Marques; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=Carlinho Marques)
+  attacker: Spyglass Siren (Carlinho Marques) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Fish (gian31) -> Carlinho Marques; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 - DeclareAttack, DeclareBlock (active=Carlinho Marques)
+  attacker: Spyglass Siren (Carlinho Marques) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 14 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Fish (gian31) -> Carlinho Marques; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 15 - DeclareAttack, DeclareBlock (active=Carlinho Marques)
+  attacker: Spyglass Siren (Carlinho Marques) -> gian31; unblocked in this observed snapshot
+  attacker: Faerie (Carlinho Marques) -> gian31; unblocked in this observed snapshot
+  attacker: Faerie (Carlinho Marques) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 16 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Fish (gian31) -> Carlinho Marques; unblocked in this observed snapshot
+  attacker: Fish (gian31) -> Carlinho Marques; unblocked in this observed snapshot
+  attacker: Bat (gian31) -> Carlinho Marques; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 160: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 161: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 162: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 163: Plains | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 164: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 165: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 231: Island | controller=Carlinho Marques | owner=Carlinho Marques | zone=Stack (latest_object_observation)
+- 236: Faebloom Trick | controller=Carlinho Marques | owner=Carlinho Marques | zone=Stack (latest_object_observation)
+- 279: Island | controller=Carlinho Marques | owner=Carlinho Marques | zone=Battlefield (latest_object_observation)
+- 280: Opt | controller=Carlinho Marques | owner=Carlinho Marques | zone=Stack (latest_object_observation)
+- 283: Opt | controller=Carlinho Marques | owner=Carlinho Marques | zone=Graveyard (latest_object_observation)
+- 284: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 285: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 286: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 289: Island | controller=Carlinho Marques | owner=Carlinho Marques | zone=Battlefield (latest_object_observation)
+- 290: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 291: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 292: object 292 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 294: Island | controller=Carlinho Marques | owner=Carlinho Marques | zone=Battlefield (latest_object_observation)
+- 295: Spyglass Siren | controller=Carlinho Marques | owner=Carlinho Marques | zone=Battlefield (latest_object_observation)
+- 297: object 297 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 298: object 298 | controller=Carlinho Marques | owner=Carlinho Marques | zone=unknown (inferred unknown) (latest_object_observation)
+- 299: Map | controller=Carlinho Marques | owner=Carlinho Marques | zone=Stack (latest_object_observation)
+- 300: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 301: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 302: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 304: Spell Stutter | controller=Carlinho Marques | owner=Carlinho Marques | zone=Stack (latest_object_observation)
+- 309: Spell Stutter | controller=Carlinho Marques | owner=Carlinho Marques | zone=Graveyard (latest_object_observation)
+- 311: Into the Flood Maw | controller=Carlinho Marques | owner=Carlinho Marques | zone=Stack (latest_object_observation)
+- 313: Fish | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 314: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 315: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 316: Into the Flood Maw | controller=Carlinho Marques | owner=Carlinho Marques | zone=Graveyard (latest_object_observation)
+- 317: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 318: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 319: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 321: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 325: Spell Stutter | controller=Carlinho Marques | owner=Carlinho Marques | zone=Stack (latest_object_observation)
+- 328: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 329: Spell Stutter | controller=Carlinho Marques | owner=Carlinho Marques | zone=Graveyard (latest_object_observation)
+- 331: object 331 | controller=Carlinho Marques | owner=Carlinho Marques | zone=unknown (inferred unknown) (latest_object_observation)
+- 334: Island | controller=Carlinho Marques | owner=Carlinho Marques | zone=Battlefield (latest_object_observation)
+- 336: Island | controller=Carlinho Marques | owner=Carlinho Marques | zone=unknown (inferred unknown) (latest_object_observation)
+- 337: Island | controller=Carlinho Marques | owner=Carlinho Marques | zone=Battlefield (latest_object_observation)
+- 338: Opt | controller=Carlinho Marques | owner=Carlinho Marques | zone=Stack (latest_object_observation)
+- 341: Opt | controller=Carlinho Marques | owner=Carlinho Marques | zone=Graveyard (latest_object_observation)
+- 342: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 343: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 344: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 346: Opt | controller=Carlinho Marques | owner=Carlinho Marques | zone=Stack (latest_object_observation)
+- 349: Opt | controller=Carlinho Marques | owner=Carlinho Marques | zone=Graveyard (latest_object_observation)
+- 351: Island | controller=Carlinho Marques | owner=Carlinho Marques | zone=Battlefield (latest_object_observation)
+- 352: Spyglass Siren | controller=Carlinho Marques | owner=Carlinho Marques | zone=Battlefield (latest_object_observation)
+- 354: object 354 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 355: object 355 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 356: object 356 | controller=Carlinho Marques | owner=Carlinho Marques | zone=unknown (inferred unknown) (latest_object_observation)
+- 357: Map | controller=Carlinho Marques | owner=Carlinho Marques | zone=Stack (latest_object_observation)
+- 358: object 358 | controller=Carlinho Marques | owner=Carlinho Marques | zone=unknown (inferred unknown) (latest_object_observation)
+- 361: Faebloom Trick | controller=Carlinho Marques | owner=Carlinho Marques | zone=Battlefield (latest_object_observation)
+- 362: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 366: Spyglass Siren | controller=Carlinho Marques | owner=Carlinho Marques | zone=Graveyard (latest_object_observation)
+- 367: Hero's Downfall | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 368: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 369: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 372: object 372 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 375: Into the Flood Maw | controller=Carlinho Marques | owner=Carlinho Marques | zone=Stack (latest_object_observation)
+- 377: Fish | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 378: object 378 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 379: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 380: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 381: Into the Flood Maw | controller=Carlinho Marques | owner=Carlinho Marques | zone=Graveyard (latest_object_observation)
+- 382: Rush of Dread | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 384: Faebloom Trick | controller=Carlinho Marques | owner=Carlinho Marques | zone=unknown (inferred unknown) (latest_object_observation)
+- 385: Faebloom Trick | controller=Carlinho Marques | owner=Carlinho Marques | zone=Stack (latest_object_observation)
+- 389: Faerie | controller=Carlinho Marques | owner=Carlinho Marques | zone=Battlefield (latest_object_observation)
+- 390: Faerie | controller=Carlinho Marques | owner=Carlinho Marques | zone=Battlefield (latest_object_observation)
+- 391: object 391 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 392: object 392 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 393: object 393 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 394: object 394 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 396: object 396 | controller=Carlinho Marques | owner=Carlinho Marques | zone=unknown (inferred unknown) (latest_object_observation)
+- 397: Faebloom Trick | controller=Carlinho Marques | owner=Carlinho Marques | zone=Graveyard (latest_object_observation)
+- 398: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 399: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 400: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 403: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 406: object 406 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 407: Floodpits Drowner | controller=Carlinho Marques | owner=Carlinho Marques | zone=Battlefield (latest_object_observation)
+- 410: object 410 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 411: object 411 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 412: object 412 | controller=Carlinho Marques | owner=Carlinho Marques | zone=unknown (inferred unknown) (latest_object_observation)
+- 413: object 413 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 414: object 414 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 415: object 415 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 418: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 419: object 419 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 420: object 420 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 421: object 421 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 422: Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 423: object 423 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 424: object 424 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 426: object 426 | controller=Carlinho Marques | owner=Carlinho Marques | zone=unknown (inferred unknown) (latest_object_observation)
+- 429: Floodpits Drowner | controller=Carlinho Marques | owner=Carlinho Marques | zone=Battlefield (latest_object_observation)
+- 430: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 519: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 520: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 522: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 528: object 528 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 529: object 529 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 530: Floodpits Drowner | controller=Carlinho Marques | owner=Carlinho Marques | zone=Battlefield (latest_object_observation)
+- 533: object 533 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 534: object 534 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 535: object 535 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 536: object 536 | controller=Carlinho Marques | owner=Carlinho Marques | zone=unknown (inferred unknown) (latest_object_observation)
+- 537: object 537 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 538: object 538 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 539: object 539 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 540: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 541: object 541 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 542: object 542 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 543: object 543 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 544: object 544 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 545: object 545 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 546: object 546 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 547: object 547 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Carlinho Marques: 45 total items
+  zones: Battlefield=14, Graveyard=9, Stack=12, unknown=10
+  objects: Island x8, Opt x6, Faebloom Trick x5, Into the Flood Maw x4, Spell Stutter x4, Floodpits Drowner x3, Spyglass Siren x3, Faerie x2, Map x2, object 298, object 331, object 356
+gian31: 81 total items
+  zones: Battlefield=15, Hand=13, Stack=15, unknown=38
+  objects: Authority of the Consuls x9, Starscape Cleric x6, Lunar Convocation x5, Plains x4, Swamp x4, Hero's Downfall x3, Phyrexian Arena x3, Case of the Uneaten Feast x2, Fish x2, Godless Shrine x2, Scoured Barrens x2, Bat
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (15): Authority of the Consuls, Bat, Fish, Fish, Godless Shrine, Lunar Convocation, Plains, Plains, Scoured Barrens, Starscape Cleric, Starscape Cleric, Starscape Cleric, Starscape Cleric, Swamp, Swamp
+  Graveyard: 0 card(s)
+Carlinho Marques:
+  Battlefield (14): Faebloom Trick, Faerie, Faerie, Floodpits Drowner, Floodpits Drowner, Floodpits Drowner, Island, Island, Island, Island, Island, Island, Spyglass Siren, Spyglass Siren
+  Graveyard: 9 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+48 objects have no resolved final zone and are omitted from the known board state.
+Carlinho Marques: 10 unknown object(s)
+gian31: 38 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=13, Stack=27
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Player-zone assignment has explicit transfer conflicts in this match. Where a safe Hand -> Stack -> Battlefield or PlayLand provenance exists, that zone holder is used; other controller assignments remain protocol-observed rather than fully reconciled.
+Carlinho Marques:
+  Battlefield (9): Island, Island, Island, Island, Island, Spyglass Siren, Faerie, Faerie, Floodpits Drowner
+  Graveyard (9): Opt, Spell Stutter, Into the Flood Maw, Spell Stutter, Opt, Opt, Spyglass Siren, Into the Flood Maw, Faebloom Trick
+gian31:
+  Battlefield (16): Plains, Scoured Barrens, Swamp, Authority of the Consuls, Fish, Plains, Authority of the Consuls, Godless Shrine, Case of the Uneaten Feast, Fish, Swamp, Lunar Convocation, Bat, Authority of the Consuls, Starscape Cleric, Starscape Cleric
+  Graveyard (2): Phyrexian Arena, Hero's Downfall
+Known non-persistent entries (counts only):
+  Carlinho Marques: Limbo=1
+  gian31: Hand=2, Limbo=6
+  unknown: Hand=1, Library=87, Limbo=6
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: Carlinho Marques Battlefield=1; Carlinho Marques Graveyard=1
+- Turn 2: Carlinho Marques Battlefield=1; Carlinho Marques Graveyard=1; gian31 Battlefield=2
+- Turn 3: Carlinho Marques Battlefield=2; Carlinho Marques Graveyard=1; gian31 Battlefield=2
+- Turn 4: Carlinho Marques Battlefield=2; Carlinho Marques Graveyard=1; gian31 Battlefield=3
+- Turn 5: Carlinho Marques Battlefield=4; Carlinho Marques Graveyard=1; gian31 Battlefield=3
+- Turn 6: Carlinho Marques Battlefield=4; Carlinho Marques Graveyard=2; gian31 Battlefield=5
+- Turn 7: Carlinho Marques Battlefield=4; Carlinho Marques Graveyard=3; gian31 Battlefield=4
+- Turn 8: Carlinho Marques Battlefield=4; Carlinho Marques Graveyard=4; gian31 Battlefield=6; gian31 Graveyard=1
+- Turn 9: Carlinho Marques Battlefield=5; Carlinho Marques Graveyard=6; gian31 Battlefield=6; gian31 Graveyard=1
+- Turn 10: Carlinho Marques Battlefield=5; Carlinho Marques Graveyard=7; gian31 Battlefield=8; gian31 Graveyard=1
+- Turn 11: Carlinho Marques Battlefield=6; Carlinho Marques Graveyard=9; gian31 Battlefield=8; gian31 Graveyard=2
+- Turn 12: Carlinho Marques Battlefield=6; Carlinho Marques Graveyard=10; gian31 Battlefield=8; gian31 Graveyard=2
+- Turn 13: Carlinho Marques Battlefield=6; Carlinho Marques Graveyard=11; gian31 Battlefield=8; gian31 Graveyard=2
+- Turn 14: Carlinho Marques Battlefield=7; Carlinho Marques Graveyard=11; gian31 Battlefield=11; gian31 Graveyard=2
+- Turn 15: Carlinho Marques Battlefield=6; Carlinho Marques Graveyard=11; gian31 Battlefield=10; gian31 Graveyard=2
+- Turn 16: Carlinho Marques Battlefield=7; Carlinho Marques Graveyard=11; gian31 Battlefield=12; gian31 Graveyard=2
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Spyglass Siren resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Spyglass Siren resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Floodpits Drowner resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Floodpits Drowner resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
