@@ -1,0 +1,1274 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: fast_lion, gian31
+Seat map: Seat 1=fast_lion, Seat 2=gian31
+Turn range (known): 2 - 23
+Records: 68
+Action chains: 53
+Winner: fast_lion
+Final life: {'fast_lion': 9, 'gian31': 13}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 23 (Phase_Combat, Step_BeginCombat; Ability of Ouroboroid, seq 641).
+Later numbered GRE record(s): 1 after action sequence 641 across turn(s) [23]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+POST-ACTION GRE RECORDS - RESULT ORDER UNRESOLVED
+  - Turn 23, seq 645: tapped_changed.
+  These records are retained for traceability; their order relative to the match-result payload is not asserted.
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 47 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 15 distinct explicit PlayLand movement(s) across turns [2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 16, 19, 21, 22, 23] (raw records=15; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 27 explicit Library -> Hand movement(s); named in the draw record=15, resolved through an explicit identity transition=11, unresolved=1.
+Unresolved draw identities (explicit movements retained): Turn 23, seq 612, object 502.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Scoured Barrens [219], Plains [220], Bloodletter of Aclazotz [221], Starscape Cleric [222], Swamp [223], Stroke of Midnight [224], Hero's Downfall [225].
+  - unknown: 7 observed card(s): object 159 [159], object 160 [160], object 161 [161], object 162 [162], object 163 [163], object 164 [164], object 165 [165].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: fast_lion; observed final life totals: {'fast_lion': 9, 'gian31': 13}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 23 (Phase_Combat, Step_BeginCombat; Ability of Ouroboroid, seq 641).
+Last captured life snapshot: fast_lion 10 -> 9 (seq 624).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Authority of the Consuls.
+- Turn 3: actions: cards=0, abilities=0; explicit battlefield entries=Temple of Abandon.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Starscape Cleric.
+- Turn 5: actions: cards=1, abilities=3; life mutations=2; explicit battlefield entries=Forest, Badgermole Cub.
+- Turn 6: actions: cards=1, abilities=2; combat snapshots=1; life mutations=3; explicit battlefield entries=Plains; explicit battlefield exits=Badgermole Cub.
+- Turn 7: actions: cards=0, abilities=1; combat snapshots=1; life mutations=3; explicit battlefield entries=Los Diablos Missile Base.
+- Turn 8: actions: cards=1, abilities=2; combat snapshots=1; life mutations=3; explicit battlefield entries=Scoured Barrens, Marauding Blight-Priest.
+- Turn 9: actions: cards=0, abilities=3; life mutations=1; explicit battlefield entries=Los Diablos Missile Base, Temple of Abandon; explicit battlefield exits=Temple of Abandon, Starscape Cleric, Human, Marauding Blight-Priest.
+- Turn 10: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Bloodletter of Aclazotz.
+- Turn 11: actions: cards=1, abilities=0; explicit battlefield exits=Bloodletter of Aclazotz.
+- Turn 12: actions: cards=1, abilities=0; explicit battlefield entries=Bloodletter of Aclazotz.
+- Turn 13: actions: cards=1, abilities=1; explicit battlefield entries=Mjolnir, Hammer of Thor; explicit battlefield exits=Bloodletter of Aclazotz.
+- Turn 14: actions: cards=1, abilities=4; life mutations=3; explicit battlefield entries=Lunar Convocation, Scoured Barrens.
+- Turn 15: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Leatherhead, Swamp Stalker.
+- Turn 16: actions: cards=1, abilities=2; life mutations=2; explicit battlefield entries=Plains, Moonrise Cleric.
+- Turn 17: actions: cards=2, abilities=4; combat snapshots=1; life mutations=3; explicit battlefield entries=Badgermole Cub, Surrak, Elusive Hunter; explicit battlefield exits=Lunar Convocation.
+- Turn 18: actions: cards=2, abilities=3; combat snapshots=1; life mutations=3; explicit battlefield entries=Marauding Blight-Priest; explicit battlefield exits=Leatherhead, Swamp Stalker.
+- Turn 19: actions: cards=0, abilities=4; life mutations=4; explicit battlefield entries=Rugged Highlands, Summon: Esper Maduin.
+- Turn 20: actions: cards=1, abilities=5; combat snapshots=1; life mutations=5; explicit battlefield entries=Starscape Cleric.
+- Turn 21: actions: cards=2, abilities=4; combat snapshots=1; life mutations=2; explicit battlefield entries=Surveillance Room, Temple of Abandon, Ouroboroid; explicit battlefield exits=Temple of Abandon, Bat, Moonrise Cleric, Badgermole Cub, Surrak, Elusive Hunter, Marauding Blight-Priest, Starscape Cleric, Starscape Cleric.
+- Turn 22: actions: cards=2, abilities=1; life mutations=1; explicit battlefield entries=Swamp, Zoraline, Cosmos Caller, Moonrise Cleric, Starscape Cleric.
+- Turn 23: actions: cards=2, abilities=5; combat snapshots=1; life mutations=2; explicit battlefield entries=Fabled Passage, Ouroboroid, Forest; explicit battlefield exits=Esper Origins, Fabled Passage, Zoraline, Cosmos Caller.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 2
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=26] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=281)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 281) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 281) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Authority of the Consuls [279] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 20).
+      Plains [280] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 23).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Plains [280]
+
+Turn 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mjolnir, Hammer of Thor [283] Library (fast_lion) -> Hand (fast_lion) (Draw; GRE sequence 40).
+      Temple of Abandon [284] Hand (fast_lion) -> Battlefield (PlayLand; GRE sequence 43).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Plains [280]
+      fast_lion: Battlefield: Temple of Abandon [284]
+
+Turn 4
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=67] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 288) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 288) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [286] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 60).
+      Swamp [287] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 63).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Plains [280], Starscape Cleric [288], Swamp [287]
+      fast_lion: Battlefield: Temple of Abandon [284]
+
+Turn 5
+  - Badgermole Cub [valid_resolution_no_immediate_mutation, seq=87] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=293)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Badgermole Cub resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Badgermole Cub (object 293) Hand (fast_lion) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Badgermole Cub (object 293) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=91] (active=fast_lion, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=281, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=93] (active=fast_lion, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: fast_lion loses 1 life.
+  - Ability of Badgermole Cub [observed_semantic_effect, seq=95] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Badgermole Cub: Temple of Abandon gets +1/+1; 1 counter(s) are added to Temple of Abandon [284].
+      explicit effect object references: Temple of Abandon [284] (role/targeting only where the protocol identifies it)
+    net observed life change this turn: fast_lion -1; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life: fast_lion 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Los Diablos Missile Base [291] Library (fast_lion) -> Hand (fast_lion) (Draw; GRE sequence 81).
+      Forest [292] Hand (fast_lion) -> Battlefield (PlayLand; GRE sequence 84).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Plains [280], Starscape Cleric [288], Swamp [287]
+      fast_lion: Battlefield: Badgermole Cub [293], Forest [292], Temple of Abandon [284]
+
+Turn 6
+  - Stroke of Midnight [observed_semantic_effect, seq=117] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=301)
+      effects: destroy, token creation
+      narrative: Stroke of Midnight destroys Badgermole Cub.
+      explicit effect object references: Badgermole Cub [293], Badgermole Cub [305], Human [306] (role/targeting only where the protocol identifies it)
+      token created: Human (object 306, controller=fast_lion) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 301).
+      protocol-linked zone transfer: Stroke of Midnight (object 301) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Badgermole Cub (object 305) Battlefield -> Graveyard (fast_lion) (Destroy; shared object ID)
+      protocol-linked zone transfer: Stroke of Midnight (object 308) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 301 -> transfer object 308 (explicit GRE ObjectIdChanged chain).
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=119] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=281, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=121] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: fast_lion loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [288] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: fast_lion -3; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    life: fast_lion 19 -> 18
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): fast_lion 18 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [299] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 109).
+      Plains [300] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 112).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Plains [280], Plains [300], Starscape Cleric [288], Swamp [287]; Graveyard: Stroke of Midnight [308]
+      fast_lion: Battlefield: Forest [292], Temple of Abandon [284]; Graveyard: Badgermole Cub [305]
+
+Turn 7
+  - Ability of Los Diablos Missile Base [observed_semantic_effect, seq=146] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=311, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Los Diablos Missile Base: fast_lion gains 1 life.
+  Combat snapshots observed (active=fast_lion; frames: DeclareAttack -> DeclareBlock):
+      attackers: Human [306] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: fast_lion +3; gian31 -1 (individual changes below; gains and losses may offset)
+    life: fast_lion 16 -> 17
+    life (gain observed during combat phase; exact source unavailable): fast_lion 17 -> 19
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 22 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Esper Origins [310] Library (fast_lion) -> Hand (fast_lion) (Draw; GRE sequence 141).
+      Los Diablos Missile Base [311] Hand (fast_lion) -> Battlefield (PlayLand; GRE sequence 144).
+      Esper Origins [313] Hand (fast_lion) -> Stack (CastSpell; GRE sequence 147).
+      Esper Origins [316] Stack -> Graveyard (fast_lion) (Resolve; GRE sequence 150).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Plains [280], Plains [300], Starscape Cleric [288], Swamp [287]; Graveyard: Stroke of Midnight [308]
+      fast_lion: Battlefield: Forest [292], Los Diablos Missile Base [311], Temple of Abandon [284]; Graveyard: Badgermole Cub [305], Esper Origins [316]
+
+Turn 8
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=175] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=318, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=177] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: fast_lion loses 1 life.
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=180] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=321)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 321) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 321) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [288] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: fast_lion -3; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    life: fast_lion 19 -> 18
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): fast_lion 18 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Marauding Blight-Priest [317] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 170).
+      Scoured Barrens [318] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 173).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Marauding Blight-Priest [321], Plains [280], Plains [300], Scoured Barrens [318], Starscape Cleric [288], Swamp [287]; Graveyard: Stroke of Midnight [308]
+      fast_lion: Battlefield: Forest [292], Los Diablos Missile Base [311], Temple of Abandon [284]; Graveyard: Badgermole Cub [305], Esper Origins [316]
+
+Turn 9
+  - Ability of Los Diablos Missile Base [observed_semantic_effect, seq=205] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=326, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Los Diablos Missile Base: fast_lion gains 1 life.
+  - Ability of Mjolnir, Hammer of Thor [observed_semantic_effect, seq=208] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=283, source_last_explicit_zone=Hand (fast_lion), source_successor=332 observed Hand (fast_lion) -> Graveyard (fast_lion) (Discard))
+      effects: 2 damage, 2 damage, 2 damage, 2 damage
+      narrative: Ability of Mjolnir, Hammer of Thor: Temple of Abandon takes 2 damage; Starscape Cleric takes 2 damage; Human takes 2 damage; Marauding Blight-Priest takes 2 damage.
+      explicit effect object references: Temple of Abandon [284], Starscape Cleric [288], Human [306], Marauding Blight-Priest [321] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Temple of Abandon (object 333) Battlefield -> Graveyard (fast_lion) (SBA_Damage; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 334) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+      protocol-linked zone transfer: Human (object 335) Battlefield -> Graveyard (fast_lion) (SBA_Damage; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 336) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+  - Return that land to the battlefield tapped under your control [observed_semantic_effect, seq=210] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=284, source_last_explicit_zone=Battlefield, source_successor=339 observed Graveyard (fast_lion) -> Battlefield (Return))
+      runtime-name note: object 284 is observed as Return that land to the battlefield tapped under your control, Temple of Abandon in captured records; the name relationship is not explicitly identified.
+      effects: return to battlefield
+      narrative: Return that land to the battlefield tapped under your control: a card/permanent returns.
+      explicit effect object references: Temple of Abandon [333], Temple of Abandon [339] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Temple of Abandon (object 339) Graveyard (fast_lion) -> Battlefield (Return; shared object ID)
+    net observed life change this turn: fast_lion +1 (individual changes below; gains and losses may offset)
+    life: fast_lion 16 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Pawpatch Formation [325] Library (fast_lion) -> Hand (fast_lion) (Draw; GRE sequence 200).
+      Los Diablos Missile Base [326] Hand (fast_lion) -> Battlefield (PlayLand; GRE sequence 203).
+      Mjolnir, Hammer of Thor [332] Hand (fast_lion) -> Graveyard (fast_lion) (Discard; GRE sequence 206).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Plains [280], Plains [300], Scoured Barrens [318], Swamp [287]; Graveyard: Marauding Blight-Priest [336], Starscape Cleric [334], Stroke of Midnight [308]
+      fast_lion: Battlefield: Forest [292], Los Diablos Missile Base [311], Los Diablos Missile Base [326], Temple of Abandon [339]; Graveyard: Badgermole Cub [305], Esper Origins [316], Human [335], Mjolnir, Hammer of Thor [332]
+
+Turn 10
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation, seq=233] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=343)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 343) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 343) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodletter of Aclazotz [341] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 227).
+      Swamp [342] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 230).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Bloodletter of Aclazotz [343], Plains [280], Plains [300], Scoured Barrens [318], Swamp [287], Swamp [342]; Graveyard: Marauding Blight-Priest [336], Starscape Cleric [334], Stroke of Midnight [308]
+      fast_lion: Battlefield: Forest [292], Los Diablos Missile Base [311], Los Diablos Missile Base [326], Temple of Abandon [339]; Graveyard: Badgermole Cub [305], Esper Origins [316], Human [335], Mjolnir, Hammer of Thor [332]
+
+Turn 11
+  - Pawpatch Formation [observed_semantic_effect, seq=255] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=349)
+      effects: destroy
+      narrative: Pawpatch Formation destroys Bloodletter of Aclazotz.
+      explicit effect object references: Bloodletter of Aclazotz [343], Bloodletter of Aclazotz [352] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Pawpatch Formation (object 349) Hand (fast_lion) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 352) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Pawpatch Formation (object 353) Stack -> Graveyard (fast_lion) (Resolve; shared object ID)
+      identity continuity: source object 349 -> transfer object 353 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Avengers Disassembled [348] Library (fast_lion) -> Hand (fast_lion) (Draw; GRE sequence 247).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Plains [280], Plains [300], Scoured Barrens [318], Swamp [287], Swamp [342]; Graveyard: Bloodletter of Aclazotz [352], Marauding Blight-Priest [336], Starscape Cleric [334], Stroke of Midnight [308]
+      fast_lion: Battlefield: Forest [292], Los Diablos Missile Base [311], Los Diablos Missile Base [326], Temple of Abandon [339]; Graveyard: Badgermole Cub [305], Esper Origins [316], Human [335], Mjolnir, Hammer of Thor [332], Pawpatch Formation [353]
+
+Turn 12
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation, seq=274] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=355)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 355) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 355) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Lunar Convocation [354] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 269).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Bloodletter of Aclazotz [355], Plains [280], Plains [300], Scoured Barrens [318], Swamp [287], Swamp [342]; Graveyard: Bloodletter of Aclazotz [352], Marauding Blight-Priest [336], Starscape Cleric [334], Stroke of Midnight [308]
+      fast_lion: Battlefield: Forest [292], Los Diablos Missile Base [311], Los Diablos Missile Base [326], Temple of Abandon [339]; Graveyard: Badgermole Cub [305], Esper Origins [316], Human [335], Mjolnir, Hammer of Thor [332], Pawpatch Formation [353]
+
+Turn 13
+  - Mjolnir, Hammer of Thor [valid_resolution_no_immediate_mutation, seq=293] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=361)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Mjolnir, Hammer of Thor resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Mjolnir, Hammer of Thor (object 361) Hand (fast_lion) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Mjolnir, Hammer of Thor (object 361) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Mjolnir, Hammer of Thor [observed_semantic_effect, seq=297] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: 4 damage
+      narrative: Ability of Mjolnir, Hammer of Thor: Bloodletter of Aclazotz takes 4 damage.
+      explicit effect object references: Bloodletter of Aclazotz [355] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 367) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mjolnir, Hammer of Thor [360] Library (fast_lion) -> Hand (fast_lion) (Draw; GRE sequence 288).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Plains [280], Plains [300], Scoured Barrens [318], Swamp [287], Swamp [342]; Graveyard: Bloodletter of Aclazotz [352], Bloodletter of Aclazotz [367], Marauding Blight-Priest [336], Starscape Cleric [334], Stroke of Midnight [308]
+      fast_lion: Battlefield: Forest [292], Los Diablos Missile Base [311], Los Diablos Missile Base [326], Mjolnir, Hammer of Thor [361], Temple of Abandon [339]; Graveyard: Badgermole Cub [305], Esper Origins [316], Human [335], Mjolnir, Hammer of Thor [332], Pawpatch Formation [353]
+
+Turn 14
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=316] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=369)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 369) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 369) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=319] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=369, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 233 [233], Plains [375] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Plains (object 375) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=322] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=376, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=335] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=369, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Lunar Convocation: a token is created.
+      explicit effect object references: Bat [380] (role/targeting only where the protocol identifies it)
+      token created: Bat (object 380, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 379).
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=337] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=369, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 335 and 337; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life -1
+      narrative: Ability of Lunar Convocation: fast_lion loses 1 life.
+    net observed life change this turn: fast_lion -1; gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 22 -> 20
+    life: gian31 20 -> 21
+    life: fast_lion 17 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [368] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 311).
+      Scoured Barrens [376] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 320).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Lunar Convocation [369], Plains [280], Plains [300], Scoured Barrens [318], Scoured Barrens [376], Swamp [287], Swamp [342]; Graveyard: Bloodletter of Aclazotz [352], Bloodletter of Aclazotz [367], Marauding Blight-Priest [336], Starscape Cleric [334], Stroke of Midnight [308]
+      fast_lion: Battlefield: Forest [292], Los Diablos Missile Base [311], Los Diablos Missile Base [326], Mjolnir, Hammer of Thor [361], Temple of Abandon [339]; Graveyard: Badgermole Cub [305], Esper Origins [316], Human [335], Mjolnir, Hammer of Thor [332], Pawpatch Formation [353]
+
+Turn 15
+  - Leatherhead, Swamp Stalker [valid_resolution_no_immediate_mutation, seq=346] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=382)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Leatherhead, Swamp Stalker resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Leatherhead, Swamp Stalker (object 382) Hand (fast_lion) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leatherhead, Swamp Stalker (object 382) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=348] (active=fast_lion, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=281, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    additional protocol-observed zone movements not assigned to an action chain:
+      Surrak, Elusive Hunter [381] Library (fast_lion) -> Hand (fast_lion) (Draw; GRE sequence 341).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Lunar Convocation [369], Plains [280], Plains [300], Scoured Barrens [318], Scoured Barrens [376], Swamp [287], Swamp [342]; Graveyard: Bloodletter of Aclazotz [352], Bloodletter of Aclazotz [367], Marauding Blight-Priest [336], Starscape Cleric [334], Stroke of Midnight [308]
+      fast_lion: Battlefield: Forest [292], Leatherhead, Swamp Stalker [382], Los Diablos Missile Base [311], Los Diablos Missile Base [326], Mjolnir, Hammer of Thor [361], Temple of Abandon [339]; Graveyard: Badgermole Cub [305], Esper Origins [316], Human [335], Mjolnir, Hammer of Thor [332], Pawpatch Formation [353]
+
+Turn 16
+  - Moonrise Cleric [valid_resolution_no_immediate_mutation, seq=368] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=390)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Moonrise Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Moonrise Cleric (object 390) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Moonrise Cleric (object 390) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=371] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=369, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 235 [235], Marauding Blight-Priest [397] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 397) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=374] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=369, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 371 and 374; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 236 [236], Starscape Cleric [401] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Starscape Cleric (object 401) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+    net observed life change this turn: gian31 -4 (individual changes below; gains and losses may offset)
+    life: gian31 22 -> 20
+    life: gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Moonrise Cleric [388] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 362).
+      Plains [389] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 365).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Lunar Convocation [369], Moonrise Cleric [390], Plains [280], Plains [300], Plains [389], Scoured Barrens [318], Scoured Barrens [376], Swamp [287], Swamp [342]; Graveyard: Bloodletter of Aclazotz [352], Bloodletter of Aclazotz [367], Marauding Blight-Priest [336], Starscape Cleric [334], Stroke of Midnight [308]
+      fast_lion: Battlefield: Forest [292], Leatherhead, Swamp Stalker [382], Los Diablos Missile Base [311], Los Diablos Missile Base [326], Mjolnir, Hammer of Thor [361], Temple of Abandon [339]; Graveyard: Badgermole Cub [305], Esper Origins [316], Human [335], Mjolnir, Hammer of Thor [332], Pawpatch Formation [353]
+
+Turn 17
+  - Badgermole Cub [valid_resolution_no_immediate_mutation, seq=394] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=403)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Badgermole Cub resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Badgermole Cub (object 403) Hand (fast_lion) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Badgermole Cub (object 403) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=398] (active=fast_lion, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=281, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Badgermole Cub [observed_semantic_effect, seq=400] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=403, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Badgermole Cub: Temple of Abandon gets +1/+1; 1 counter(s) are added to Temple of Abandon [339].
+      explicit effect object references: Temple of Abandon [339] (role/targeting only where the protocol identifies it)
+  - Surrak, Elusive Hunter [valid_resolution_no_immediate_mutation, seq=403] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=408)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Surrak, Elusive Hunter resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Surrak, Elusive Hunter (object 408) Hand (fast_lion) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Surrak, Elusive Hunter (object 408) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=405] (active=fast_lion, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=281, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Leatherhead, Swamp Stalker [observed_semantic_effect, seq=423] (active=fast_lion, phase=Phase_Combat, step=Step_CombatDamage, controller=fast_lion, owner=fast_lion, source_object=382, source_last_explicit_zone=Battlefield)
+      effects: destroy
+      narrative: Ability of Leatherhead, Swamp Stalker destroys Lunar Convocation.
+      explicit effect object references: Lunar Convocation [369], Lunar Convocation [416] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Lunar Convocation (object 416) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+  Combat snapshots observed (active=fast_lion; frames: DeclareAttack):
+      attackers: Leatherhead, Swamp Stalker [382] (unblocked, observed P/T 5/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -3 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 19
+    life: gian31 19 -> 20
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 20 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Badgermole Cub [402] Library (fast_lion) -> Hand (fast_lion) (Draw; GRE sequence 389).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Moonrise Cleric [390], Plains [280], Plains [300], Plains [389], Scoured Barrens [318], Scoured Barrens [376], Swamp [287], Swamp [342]; Graveyard: Bloodletter of Aclazotz [352], Bloodletter of Aclazotz [367], Lunar Convocation [416], Marauding Blight-Priest [336], Starscape Cleric [334], Stroke of Midnight [308]
+      fast_lion: Battlefield: Badgermole Cub [403], Forest [292], Leatherhead, Swamp Stalker [382], Los Diablos Missile Base [311], Los Diablos Missile Base [326], Mjolnir, Hammer of Thor [361], Surrak, Elusive Hunter [408], Temple of Abandon [339]; Graveyard: Badgermole Cub [305], Esper Origins [316], Human [335], Mjolnir, Hammer of Thor [332], Pawpatch Formation [353]
+
+Turn 18
+  - Ability of Surrak, Elusive Hunter [observed_semantic_effect, seq=440] (active=gian31, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=408, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Surrak, Elusive Hunter: draw.
+      explicit effect object references: object 174 [174], object 423 [423] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Fabled Passage (object 423) Library (fast_lion) -> Hand (fast_lion) (Draw; shared object ID)
+  - Hero's Downfall [observed_semantic_effect, seq=442] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=418)
+      effects: destroy
+      narrative: Hero's Downfall destroys Leatherhead, Swamp Stalker.
+      explicit effect object references: Leatherhead, Swamp Stalker [382], Leatherhead, Swamp Stalker [424] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hero's Downfall (object 418) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leatherhead, Swamp Stalker (object 424) Battlefield -> Graveyard (fast_lion) (Destroy; shared object ID)
+      protocol-linked zone transfer: Hero's Downfall (object 425) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 418 -> transfer object 425 (explicit GRE ObjectIdChanged chain).
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=445] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=426)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 426) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 426) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Moonrise Cleric [observed_semantic_effect, seq=453] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Moonrise Cleric: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=455] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=426, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: fast_lion loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Moonrise Cleric [390] (unblocked, observed P/T 2/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: fast_lion -3; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 15 -> 16
+    life: fast_lion 16 -> 15
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): fast_lion 15 -> 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [417] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 433).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Marauding Blight-Priest [426], Moonrise Cleric [390], Plains [280], Plains [300], Plains [389], Scoured Barrens [318], Scoured Barrens [376], Swamp [287], Swamp [342]; Graveyard: Bloodletter of Aclazotz [352], Bloodletter of Aclazotz [367], Hero's Downfall [425], Lunar Convocation [416], Marauding Blight-Priest [336], Starscape Cleric [334], Stroke of Midnight [308]
+      fast_lion: Battlefield: Badgermole Cub [403], Forest [292], Los Diablos Missile Base [311], Los Diablos Missile Base [326], Mjolnir, Hammer of Thor [361], Surrak, Elusive Hunter [408], Temple of Abandon [339]; Graveyard: Badgermole Cub [305], Esper Origins [316], Human [335], Leatherhead, Swamp Stalker [424], Mjolnir, Hammer of Thor [332], Pawpatch Formation [353]
+
+Turn 19
+  - Ability of Rugged Highlands [observed_semantic_effect, seq=474] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=433, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Rugged Highlands: fast_lion gains 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=480] (active=fast_lion, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=281, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=482] (active=fast_lion, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=426, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: fast_lion loses 1 life.
+  - Ability of Summon: Esper Maduin [observed_semantic_effect, seq=484] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=442, source_last_explicit_zone=Battlefield)
+      effects: none immediately observed
+      narrative: Observed zone movements: Ouroboroid.
+      explicit effect object references: Ouroboroid [177], object 447 [447] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Ouroboroid (object 447) Library (fast_lion) -> Hand (fast_lion) (Put; shared object ID)
+    net observed life change this turn: fast_lion +2; gian31 +1 (individual changes below; gains and losses may offset)
+    life: fast_lion 13 -> 14
+    life: fast_lion 14 -> 16
+    life: gian31 16 -> 17
+    life: fast_lion 16 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Rugged Highlands [432] Library (fast_lion) -> Hand (fast_lion) (Draw; GRE sequence 469).
+      Rugged Highlands [433] Hand (fast_lion) -> Battlefield (PlayLand; GRE sequence 472).
+      Esper Origins [435] Graveyard (fast_lion) -> Stack (CastSpell; GRE sequence 475).
+      Llanowar Elves [440] Library (fast_lion) -> Graveyard (fast_lion) (Surveil; GRE sequence 478).
+      Esper Origins [441] Stack -> Exile (Exile; GRE sequence 478).
+      Summon: Esper Maduin [442] Exile -> Battlefield (Put; GRE sequence 478).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Marauding Blight-Priest [426], Moonrise Cleric [390], Plains [280], Plains [300], Plains [389], Scoured Barrens [318], Scoured Barrens [376], Swamp [287], Swamp [342]; Graveyard: Bloodletter of Aclazotz [352], Bloodletter of Aclazotz [367], Hero's Downfall [425], Lunar Convocation [416], Marauding Blight-Priest [336], Starscape Cleric [334], Stroke of Midnight [308]
+      fast_lion: Battlefield: Badgermole Cub [403], Forest [292], Los Diablos Missile Base [311], Los Diablos Missile Base [326], Mjolnir, Hammer of Thor [361], Rugged Highlands [433], Summon: Esper Maduin [442], Surrak, Elusive Hunter [408], Temple of Abandon [339]; Graveyard: Badgermole Cub [305], Human [335], Leatherhead, Swamp Stalker [424], Llanowar Elves [440], Mjolnir, Hammer of Thor [332], Pawpatch Formation [353]; Exile: Esper Origins [441]
+
+Turn 20
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=506] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=450)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 450) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 450) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=508] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=450, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Starscape Cleric: a token is created.
+      explicit effect object references: Starscape Cleric [457] (role/targeting only where the protocol identifies it)
+      token created: Starscape Cleric (object 457, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 456).
+  - Ability of Moonrise Cleric [observed_semantic_effect, seq=516] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=390, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Moonrise Cleric: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=519] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=457)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: fast_lion loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=521] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=450, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: fast_lion loses 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=523] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=426, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: fast_lion loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Moonrise Cleric [390] (unblocked, observed P/T 2/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: fast_lion -5; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 17 -> 18
+    life: fast_lion 15 -> 14
+    life: fast_lion 14 -> 13
+    life: fast_lion 13 -> 12
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): fast_lion 12 -> 10
+    additional protocol-observed zone movements not assigned to an action chain:
+      Zoraline, Cosmos Caller [449] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 499).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Marauding Blight-Priest [426], Moonrise Cleric [390], Plains [280], Plains [300], Plains [389], Scoured Barrens [318], Scoured Barrens [376], Starscape Cleric [450], Swamp [287], Swamp [342]; Graveyard: Bloodletter of Aclazotz [352], Bloodletter of Aclazotz [367], Hero's Downfall [425], Lunar Convocation [416], Marauding Blight-Priest [336], Starscape Cleric [334], Stroke of Midnight [308]
+      fast_lion: Battlefield: Badgermole Cub [403], Forest [292], Los Diablos Missile Base [311], Los Diablos Missile Base [326], Mjolnir, Hammer of Thor [361], Rugged Highlands [433], Summon: Esper Maduin [442], Surrak, Elusive Hunter [408], Temple of Abandon [339]; Graveyard: Badgermole Cub [305], Human [335], Leatherhead, Swamp Stalker [424], Llanowar Elves [440], Mjolnir, Hammer of Thor [332], Pawpatch Formation [353]; Exile: Esper Origins [441]
+
+Turn 21
+  - Ability of Summon: Esper Maduin [valid_resolution_no_immediate_mutation, seq=541] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=442, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Summon: Esper Maduin resolves with no immediate observed mutation.
+  - Avengers Disassembled [observed_semantic_effect, seq=549] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=466)
+      effects: 3 damage, 3 damage, 3 damage, 3 damage, 3 damage, 3 damage, 3 damage, 3 damage, 3 damage
+      narrative: Avengers Disassembled: Temple of Abandon takes 3 damage; Bat takes 3 damage; Moonrise Cleric takes 3 damage; Badgermole Cub takes 3 damage; Surrak, Elusive Hunter takes 3 damage; Marauding Blight-Priest takes 3 damage; Summon: Esper Maduin takes 3 damage; Starscape Cleric takes 3 damage; Starscape Cleric takes 3 damage.
+      explicit effect object references: Temple of Abandon [339], Bat [380], Moonrise Cleric [390], Badgermole Cub [403], Surrak, Elusive Hunter [408], Marauding Blight-Priest [426], Summon: Esper Maduin [442], Starscape Cleric [450], Starscape Cleric [457] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Avengers Disassembled (object 466) Hand (fast_lion) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Avengers Disassembled (object 469) Stack -> Graveyard (fast_lion) (Resolve; shared object ID)
+      identity continuity: source object 466 -> transfer object 469 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Temple of Abandon (object 470) Battlefield -> Graveyard (fast_lion) (SBA_Damage; shared object ID)
+      protocol-linked zone transfer: Bat (object 471) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+      protocol-linked zone transfer: Moonrise Cleric (object 472) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+      protocol-linked zone transfer: Badgermole Cub (object 473) Battlefield -> Graveyard (fast_lion) (SBA_Damage; shared object ID)
+      protocol-linked zone transfer: Surrak, Elusive Hunter (object 474) Battlefield -> Graveyard (fast_lion) (SBA_Damage; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 475) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 476) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 477) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+  - Return that land to the battlefield tapped under your control [observed_semantic_effect, seq=551] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=339, source_last_explicit_zone=Battlefield, source_successor=479 observed Graveyard (fast_lion) -> Battlefield (Return))
+      runtime-name note: object 339 is observed as Return that land to the battlefield tapped under your control, Temple of Abandon in captured records; the name relationship is not explicitly identified.
+      effects: return to battlefield
+      narrative: Return that land to the battlefield tapped under your control: a card/permanent returns.
+      explicit effect object references: Temple of Abandon [470], Temple of Abandon [479] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Temple of Abandon (object 479) Graveyard (fast_lion) -> Battlefield (Return; shared object ID)
+  - Ouroboroid [valid_resolution_no_immediate_mutation, seq=557] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=481)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ouroboroid resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ouroboroid (object 481) Hand (fast_lion) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ouroboroid (object 481) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=559] (active=fast_lion, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=281, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Ouroboroid [observed_semantic_effect, seq=563] (active=fast_lion, phase=Phase_Combat, step=Step_BeginCombat, controller=fast_lion, owner=fast_lion, source_object=481, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s)
+      narrative: Ability of Ouroboroid: Summon: Esper Maduin gets +1/+1; Ouroboroid gets +1/+1; 1 counter(s) are added to Summon: Esper Maduin [442]; 1 counter(s) are added to Ouroboroid [481].
+      explicit effect object references: Summon: Esper Maduin [442] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=fast_lion; frames: DeclareAttack -> DeclareBlock):
+      attackers: Summon: Esper Maduin [442] (unblocked, observed P/T 5/5)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -4 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 19
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 19 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Surveillance Room [462] Library (fast_lion) -> Hand (fast_lion) (Draw; GRE sequence 537).
+      Surveillance Room [464] Hand (fast_lion) -> Battlefield (PlayLand; GRE sequence 542).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Plains [280], Plains [300], Plains [389], Scoured Barrens [318], Scoured Barrens [376], Swamp [287], Swamp [342]; Graveyard: Bat [471], Bloodletter of Aclazotz [352], Bloodletter of Aclazotz [367], Hero's Downfall [425], Lunar Convocation [416], Marauding Blight-Priest [336], Marauding Blight-Priest [475], Moonrise Cleric [472], Starscape Cleric [334], Starscape Cleric [476], Starscape Cleric [477], Stroke of Midnight [308]
+      fast_lion: Battlefield: Forest [292], Los Diablos Missile Base [311], Los Diablos Missile Base [326], Mjolnir, Hammer of Thor [361], Ouroboroid [481], Rugged Highlands [433], Summon: Esper Maduin [442], Surveillance Room [464], Temple of Abandon [479]; Graveyard: Avengers Disassembled [469], Badgermole Cub [305], Badgermole Cub [473], Human [335], Leatherhead, Swamp Stalker [424], Llanowar Elves [440], Mjolnir, Hammer of Thor [332], Pawpatch Formation [353], Surrak, Elusive Hunter [474]; Exile: Esper Origins [441]
+
+Turn 22
+  - Zoraline, Cosmos Caller [valid_resolution_no_immediate_mutation, seq=587] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=489)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Zoraline, Cosmos Caller resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Zoraline, Cosmos Caller (object 489) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Zoraline, Cosmos Caller (object 489) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Zoraline, Cosmos Caller [observed_semantic_effect, seq=594] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=489, source_last_explicit_zone=Battlefield)
+      effects: return to battlefield, +1 counter(s)
+      narrative: Ability of Zoraline, Cosmos Caller: a card/permanent returns; 1 counter(s) are added to Moonrise Cleric [498].
+      explicit effect object references: Moonrise Cleric [472], Moonrise Cleric [498] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Moonrise Cleric (object 498) Graveyard (gian31) -> Battlefield (Return; shared object ID)
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=598] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=499)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 499) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 499) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life: gian31 14 -> 12
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [487] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 581).
+      Swamp [488] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 584).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Moonrise Cleric [498], Plains [280], Plains [300], Plains [389], Scoured Barrens [318], Scoured Barrens [376], Starscape Cleric [499], Swamp [287], Swamp [342], Swamp [488], Zoraline, Cosmos Caller [489]; Graveyard: Bat [471], Bloodletter of Aclazotz [352], Bloodletter of Aclazotz [367], Hero's Downfall [425], Lunar Convocation [416], Marauding Blight-Priest [336], Marauding Blight-Priest [475], Starscape Cleric [334], Starscape Cleric [476], Starscape Cleric [477], Stroke of Midnight [308]
+      fast_lion: Battlefield: Forest [292], Los Diablos Missile Base [311], Los Diablos Missile Base [326], Mjolnir, Hammer of Thor [361], Ouroboroid [481], Rugged Highlands [433], Summon: Esper Maduin [442], Surveillance Room [464], Temple of Abandon [479]; Graveyard: Avengers Disassembled [469], Badgermole Cub [305], Badgermole Cub [473], Human [335], Leatherhead, Swamp Stalker [424], Llanowar Elves [440], Mjolnir, Hammer of Thor [332], Pawpatch Formation [353], Surrak, Elusive Hunter [474]; Exile: Esper Origins [441]
+
+Turn 23
+  - Ability of Summon: Esper Maduin [observed_semantic_effect, seq=616] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=442, source_last_explicit_zone=Battlefield, source_successor=504 observed Battlefield -> Exile (Sacrifice))
+      effects: P/T +2/+2
+      narrative: Ability of Summon: Esper Maduin: Ouroboroid gets +2/+2.
+      explicit effect object references: Ouroboroid [481] (role/targeting only where the protocol identifies it)
+  - Ouroboroid [valid_resolution_no_immediate_mutation, seq=620] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=506)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ouroboroid resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ouroboroid (object 506) Hand (fast_lion) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ouroboroid (object 506) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=622] (active=fast_lion, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=281, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=624] (active=fast_lion, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=499, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: fast_lion loses 1 life.
+  - Fiery Annihilation [observed_semantic_effect, seq=634] (active=fast_lion, phase=Phase_Main1, controller=fast_lion, owner=fast_lion, source_object=554)
+      effects: 5 damage
+      narrative: Fiery Annihilation: Zoraline, Cosmos Caller takes 5 damage.
+      explicit effect object references: Zoraline, Cosmos Caller [489] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Fiery Annihilation (object 554) Hand (fast_lion) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fiery Annihilation (object 558) Stack -> Graveyard (fast_lion) (Resolve; shared object ID)
+      identity continuity: source object 554 -> transfer object 558 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Zoraline, Cosmos Caller (object 559) Battlefield -> Exile (SBA_Damage; shared object ID)
+      zone note: lethal damage was observed, but the protocol moved this object to Exile; a replacement effect or more specific protocol cause was not identified in captured records.
+  - Ability of Ouroboroid [observed_semantic_effect, seq=639] (active=fast_lion, phase=Phase_Combat, step=Step_BeginCombat, controller=fast_lion, owner=fast_lion, source_object=481, source_last_explicit_zone=Battlefield)
+      effects: P/T +4/+4, P/T +4/+4, +4 counter(s), +4 counter(s)
+      narrative: Ability of Ouroboroid: Ouroboroid gets +4/+4; Ouroboroid gets +4/+4; 4 counter(s) are added to Ouroboroid [481]; 4 counter(s) are added to Ouroboroid [506].
+      explicit effect object references: Ouroboroid [506] (role/targeting only where the protocol identifies it)
+  - Ability of Ouroboroid [observed_semantic_effect, seq=641] (active=fast_lion, phase=Phase_Combat, step=Step_BeginCombat, controller=fast_lion, owner=fast_lion, source_object=506, source_last_explicit_zone=Battlefield)
+      effects: P/T +5/+5, P/T +5/+5, +5 counter(s), +5 counter(s)
+      narrative: Ability of Ouroboroid: Ouroboroid gets +5/+5; Ouroboroid gets +5/+5; 5 counter(s) are added to Ouroboroid [481]; 5 counter(s) are added to Ouroboroid [506].
+      explicit effect object references: Ouroboroid [481] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=fast_lion; frames: DeclareAttack):
+      attackers: Ouroboroid [481] (unblocked, observed P/T 13/15)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: fast_lion -1; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 12 -> 13
+    life: fast_lion 10 -> 9
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 502 [502] Library (fast_lion) -> Hand (fast_lion) (Draw; GRE sequence 612).
+      Esper Origins [504] Battlefield -> Exile (Sacrifice; GRE sequence 616).
+        sacrifice observed after Ability of Summon: Esper Maduin (seq 616); direct causal linkage is unavailable.
+      Fabled Passage [505] Hand (fast_lion) -> Battlefield (PlayLand; GRE sequence 617).
+      Fabled Passage [514] Battlefield -> Graveyard (fast_lion) (Sacrifice; GRE sequence 625).
+        sacrifice observed after Ability of Starscape Cleric (seq 624); direct causal linkage is unavailable.
+      Forest [515] Library (fast_lion) -> Battlefield (Put; GRE sequence 628).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Moonrise Cleric [498], Plains [280], Plains [300], Plains [389], Scoured Barrens [318], Scoured Barrens [376], Starscape Cleric [499], Swamp [287], Swamp [342], Swamp [488]; Graveyard: Bat [471], Bloodletter of Aclazotz [352], Bloodletter of Aclazotz [367], Hero's Downfall [425], Lunar Convocation [416], Marauding Blight-Priest [336], Marauding Blight-Priest [475], Starscape Cleric [334], Starscape Cleric [476], Starscape Cleric [477], Stroke of Midnight [308]; Exile: Zoraline, Cosmos Caller [559]
+      fast_lion: Battlefield: Forest [292], Forest [515], Los Diablos Missile Base [311], Los Diablos Missile Base [326], Mjolnir, Hammer of Thor [361], Ouroboroid [481], Ouroboroid [506], Rugged Highlands [433], Surveillance Room [464], Temple of Abandon [479]; Graveyard: Avengers Disassembled [469], Badgermole Cub [305], Badgermole Cub [473], Fabled Passage [514], Fiery Annihilation [558], Human [335], Leatherhead, Swamp Stalker [424], Llanowar Elves [440], Mjolnir, Hammer of Thor [332], Pawpatch Formation [353], Surrak, Elusive Hunter [474]; Exile: Esper Origins [441], Esper Origins [504]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 7, seq 150, Phase_Main1: fast_lion 17 -> 19. Combat declaration observed; exact assignment unavailable. Previous captured action: Los Diablos Missile Base.
+- Turn 14, seq 317, Phase_Main1: gian31 22 -> 20. No source event correlated in captured records. Previous captured action: Lunar Convocation.
+- Turn 16, seq 369, Phase_Main1: gian31 22 -> 20; gian31 20 -> 18. No source event correlated in captured records. Previous captured action: Moonrise Cleric.
+- Turn 19, seq 478, Phase_Main1: fast_lion 14 -> 16. No source event correlated in captured records. Previous captured action: Rugged Highlands.
+- Turn 22, seq 590, Phase_Main1: gian31 14 -> 12. No source event correlated in captured records. Previous captured action: Zoraline, Cosmos Caller.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 3 token creations observed; 0 active as last observed; 3 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Human [306] controller=fast_lion; created Turn 6 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 9 via Battlefield -> Graveyard (fast_lion) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Bat [380] controller=gian31; created Turn 14 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 21 via Battlefield -> Graveyard (gian31) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Starscape Cleric [457] controller=gian31; created Turn 20 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 21 via Battlefield -> Graveyard (gian31) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 2, seq 20: Authority of the Consuls [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 23: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 24: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 26: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 40: Mjolnir, Hammer of Thor [owner=fast_lion, controller=fast_lion] moves Library (fast_lion) -> Hand (fast_lion) (Draw).
+- Turn 3, seq 43: Temple of Abandon [owner=fast_lion, controller=fast_lion] moves Hand (fast_lion) -> Battlefield (PlayLand).
+- Turn 4, seq 60: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 63: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 64: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 67: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 81: Los Diablos Missile Base [owner/controller metadata unavailable] moves Library (fast_lion) -> Hand (fast_lion) (Draw).
+- Turn 5, seq 84: Forest [owner=fast_lion, controller=fast_lion] moves Hand (fast_lion) -> Battlefield (PlayLand).
+- Turn 5, seq 85: Badgermole Cub [owner=fast_lion, controller=fast_lion] moves Hand (fast_lion) -> Stack (CastSpell).
+- Turn 5, seq 87: Badgermole Cub [owner=fast_lion, controller=fast_lion] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 109: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 112: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 113: Stroke of Midnight [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 117: Badgermole Cub [owner=fast_lion, controller=fast_lion] moves Battlefield -> Graveyard (fast_lion) (Destroy).
+- Turn 6, seq 117: Stroke of Midnight [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 7, seq 141: Esper Origins [owner/controller metadata unavailable] moves Library (fast_lion) -> Hand (fast_lion) (Draw).
+- Turn 7, seq 144: Los Diablos Missile Base [owner=fast_lion, controller=fast_lion] moves Hand (fast_lion) -> Battlefield (PlayLand).
+- Turn 7, seq 147: Esper Origins [owner=fast_lion, controller=fast_lion] moves Hand (fast_lion) -> Stack (CastSpell).
+- Turn 7, seq 150: Esper Origins [owner=fast_lion, controller=fast_lion] moves Stack -> Graveyard (fast_lion) (Resolve).
+- Turn 8, seq 170: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 173: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 178: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 180: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 200: Pawpatch Formation [owner/controller metadata unavailable] moves Library (fast_lion) -> Hand (fast_lion) (Draw).
+- Turn 9, seq 203: Los Diablos Missile Base [owner=fast_lion, controller=fast_lion] moves Hand (fast_lion) -> Battlefield (PlayLand).
+- Turn 9, seq 206: Mjolnir, Hammer of Thor [owner=fast_lion, controller=fast_lion] moves Hand (fast_lion) -> Graveyard (fast_lion) (Discard).
+- Turn 9, seq 208: Temple of Abandon [owner=fast_lion, controller=fast_lion] moves Battlefield -> Graveyard (fast_lion) (SBA_Damage).
+- Turn 9, seq 208: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 9, seq 208: Human [owner/controller metadata unavailable] moves Battlefield -> Graveyard (fast_lion) (SBA_Damage).
+- Turn 9, seq 208: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 9, seq 210: Temple of Abandon [owner=fast_lion, controller=fast_lion] moves Graveyard (fast_lion) -> Battlefield (Return).
+- Turn 10, seq 227: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 230: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 231: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 233: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 247: Avengers Disassembled [owner/controller metadata unavailable] moves Library (fast_lion) -> Hand (fast_lion) (Draw).
+- Turn 11, seq 250: Pawpatch Formation [owner=fast_lion, controller=fast_lion] moves Hand (fast_lion) -> Stack (CastSpell).
+- Turn 11, seq 255: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 11, seq 255: Pawpatch Formation [owner=fast_lion, controller=fast_lion] moves Stack -> Graveyard (fast_lion) (Resolve).
+- Turn 12, seq 269: Lunar Convocation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 272: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 274: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 288: Mjolnir, Hammer of Thor [owner/controller metadata unavailable] moves Library (fast_lion) -> Hand (fast_lion) (Draw).
+- Turn 13, seq 291: Mjolnir, Hammer of Thor [owner=fast_lion, controller=fast_lion] moves Hand (fast_lion) -> Stack (CastSpell).
+- Turn 13, seq 293: Mjolnir, Hammer of Thor [owner=fast_lion, controller=fast_lion] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 297: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 14, seq 311: Scoured Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 314: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 316: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 319: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 320: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 15, seq 341: Surrak, Elusive Hunter [owner/controller metadata unavailable] moves Library (fast_lion) -> Hand (fast_lion) (Draw).
+- Turn 15, seq 344: Leatherhead, Swamp Stalker [owner=fast_lion, controller=fast_lion] moves Hand (fast_lion) -> Stack (CastSpell).
+- Turn 15, seq 346: Leatherhead, Swamp Stalker [owner=fast_lion, controller=fast_lion] moves Stack -> Battlefield (Resolve).
+- Turn 16, seq 362: Moonrise Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 365: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 16, seq 366: Moonrise Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 368: Moonrise Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 16, seq 371: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 374: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 17, seq 389: Badgermole Cub [owner/controller metadata unavailable] moves Library (fast_lion) -> Hand (fast_lion) (Draw).
+- Turn 17, seq 392: Badgermole Cub [owner=fast_lion, controller=fast_lion] moves Hand (fast_lion) -> Stack (CastSpell).
+- Turn 17, seq 394: Badgermole Cub [owner=fast_lion, controller=fast_lion] moves Stack -> Battlefield (Resolve).
+- Turn 17, seq 401: Surrak, Elusive Hunter [owner=fast_lion, controller=fast_lion] moves Hand (fast_lion) -> Stack (CastSpell).
+- Turn 17, seq 403: Surrak, Elusive Hunter [owner=fast_lion, controller=fast_lion] moves Stack -> Battlefield (Resolve).
+- Turn 17, seq 423: Lunar Convocation [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 18, seq 433: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 18, seq 436: Hero's Downfall [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 18, seq 440: Fabled Passage [owner/controller metadata unavailable] moves Library (fast_lion) -> Hand (fast_lion) (Draw).
+- Turn 18, seq 442: Leatherhead, Swamp Stalker [owner=fast_lion, controller=fast_lion] moves Battlefield -> Graveyard (fast_lion) (Destroy).
+- Turn 18, seq 442: Hero's Downfall [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 18, seq 443: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 18, seq 445: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 19, seq 469: Rugged Highlands [owner/controller metadata unavailable] moves Library (fast_lion) -> Hand (fast_lion) (Draw).
+- Turn 19, seq 472: Rugged Highlands [owner=fast_lion, controller=fast_lion] moves Hand (fast_lion) -> Battlefield (PlayLand).
+- Turn 19, seq 475: Esper Origins [owner=fast_lion, controller=fast_lion] moves Graveyard (fast_lion) -> Stack (CastSpell).
+- Turn 19, seq 478: Llanowar Elves [owner=fast_lion, controller=fast_lion] moves Library (fast_lion) -> Graveyard (fast_lion) (Surveil).
+- Turn 19, seq 478: Esper Origins [owner=fast_lion, controller=fast_lion] moves Stack -> Exile (Exile).
+- Turn 19, seq 478: Summon: Esper Maduin [owner=fast_lion, controller=fast_lion] moves Exile -> Battlefield (Put).
+- Turn 19, seq 484: Ouroboroid [owner/controller metadata unavailable] moves Library (fast_lion) -> Hand (fast_lion) (Put).
+- Turn 20, seq 499: Zoraline, Cosmos Caller [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 20, seq 502: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 20, seq 506: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 21, seq 537: Surveillance Room [owner/controller metadata unavailable] moves Library (fast_lion) -> Hand (fast_lion) (Draw).
+- Turn 21, seq 542: Surveillance Room [owner=fast_lion, controller=fast_lion] moves Hand (fast_lion) -> Battlefield (PlayLand).
+- Turn 21, seq 546: Avengers Disassembled [owner=fast_lion, controller=fast_lion] moves Hand (fast_lion) -> Stack (CastSpell).
+- Turn 21, seq 549: Avengers Disassembled [owner=fast_lion, controller=fast_lion] moves Stack -> Graveyard (fast_lion) (Resolve).
+- Turn 21, seq 549: Temple of Abandon [owner=fast_lion, controller=fast_lion] moves Battlefield -> Graveyard (fast_lion) (SBA_Damage).
+- Turn 21, seq 549: Bat [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 21, seq 549: Moonrise Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 21, seq 549: Badgermole Cub [owner=fast_lion, controller=fast_lion] moves Battlefield -> Graveyard (fast_lion) (SBA_Damage).
+- Turn 21, seq 549: Surrak, Elusive Hunter [owner=fast_lion, controller=fast_lion] moves Battlefield -> Graveyard (fast_lion) (SBA_Damage).
+- Turn 21, seq 549: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 21, seq 549: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 21, seq 549: Starscape Cleric [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 21, seq 551: Temple of Abandon [owner=fast_lion, controller=fast_lion] moves Graveyard (fast_lion) -> Battlefield (Return).
+- Turn 21, seq 555: Ouroboroid [owner=fast_lion, controller=fast_lion] moves Hand (fast_lion) -> Stack (CastSpell).
+- Turn 21, seq 557: Ouroboroid [owner=fast_lion, controller=fast_lion] moves Stack -> Battlefield (Resolve).
+- Turn 22, seq 581: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 22, seq 584: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 22, seq 585: Zoraline, Cosmos Caller [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 22, seq 587: Zoraline, Cosmos Caller [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 22, seq 594: Moonrise Cleric [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Battlefield (Return).
+- Turn 22, seq 595: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 22, seq 598: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 23, seq 612: object 502 [owner/controller metadata unavailable] moves Library (fast_lion) -> Hand (fast_lion) (Draw).
+- Turn 23, seq 616: Esper Origins [owner=fast_lion, controller=fast_lion] moves Battlefield -> Exile (Sacrifice).
+- Turn 23, seq 617: Fabled Passage [owner=fast_lion, controller=fast_lion] moves Hand (fast_lion) -> Battlefield (PlayLand).
+- Turn 23, seq 618: Ouroboroid [owner=fast_lion, controller=fast_lion] moves Hand (fast_lion) -> Stack (CastSpell).
+- Turn 23, seq 620: Ouroboroid [owner=fast_lion, controller=fast_lion] moves Stack -> Battlefield (Resolve).
+- Turn 23, seq 625: Fabled Passage [owner=fast_lion, controller=fast_lion] moves Battlefield -> Graveyard (fast_lion) (Sacrifice).
+- Turn 23, seq 628: Forest [owner=fast_lion, controller=fast_lion] moves Library (fast_lion) -> Battlefield (Put).
+- Turn 23, seq 630: Fiery Annihilation [owner=fast_lion, controller=fast_lion] moves Hand (fast_lion) -> Stack (CastSpell).
+- Turn 23, seq 634: Fiery Annihilation [owner=fast_lion, controller=fast_lion] moves Stack -> Graveyard (fast_lion) (Resolve).
+- Turn 23, seq 634: Zoraline, Cosmos Caller [owner=gian31, controller=gian31] moves Battlefield -> Exile (SBA_Damage).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 2, seq 20: object 226 becomes object 279 [Authority of the Consuls].
+- Turn 2, seq 23: object 220 becomes object 280 [Plains].
+- Turn 2, seq 24: object 279 becomes object 281 [Authority of the Consuls].
+- Turn 3, seq 40: object 166 becomes object 283 [Mjolnir, Hammer of Thor].
+- Turn 3, seq 43: object 163 becomes object 284 [Temple of Abandon].
+- Turn 4, seq 60: object 227 becomes object 286 [Plains].
+- Turn 4, seq 63: object 223 becomes object 287 [Swamp].
+- Turn 4, seq 64: object 222 becomes object 288 [Starscape Cleric].
+- Turn 5, seq 81: object 167 becomes object 291 [Los Diablos Missile Base].
+- Turn 5, seq 84: object 161 becomes object 292 [Forest].
+- Turn 5, seq 85: object 165 becomes object 293 [Badgermole Cub].
+- Turn 6, seq 109: object 228 becomes object 299 [Swamp].
+- Turn 6, seq 112: object 286 becomes object 300 [Plains].
+- Turn 6, seq 113: object 224 becomes object 301 [Stroke of Midnight].
+- Turn 6, seq 117: object 293 becomes object 305 [Badgermole Cub].
+- Turn 6, seq 117: object 301 becomes object 308 [Stroke of Midnight].
+- Turn 7, seq 141: object 168 becomes object 310 [Esper Origins].
+- Turn 7, seq 144: object 164 becomes object 311 [Los Diablos Missile Base].
+- Turn 7, seq 147: object 310 becomes object 313 [Esper Origins].
+- Turn 7, seq 150: object 313 becomes object 316 [Esper Origins].
+- Turn 8, seq 170: object 229 becomes object 317 [Marauding Blight-Priest].
+- Turn 8, seq 173: object 219 becomes object 318 [Scoured Barrens].
+- Turn 8, seq 178: object 317 becomes object 321 [Marauding Blight-Priest].
+- Turn 9, seq 200: object 170 becomes object 325 [Pawpatch Formation].
+- Turn 9, seq 203: object 291 becomes object 326 [Los Diablos Missile Base].
+- Turn 9, seq 206: object 283 becomes object 332 [Mjolnir, Hammer of Thor].
+- Turn 9, seq 208: object 284 becomes object 333 [Temple of Abandon].
+- Turn 9, seq 208: object 288 becomes object 334 [Starscape Cleric].
+- Turn 9, seq 208: object 306 becomes object 335 [Human].
+- Turn 9, seq 208: object 321 becomes object 336 [Marauding Blight-Priest].
+- Turn 9, seq 210: object 333 becomes object 339 [Temple of Abandon].
+- Turn 10, seq 227: object 230 becomes object 341 [Bloodletter of Aclazotz].
+- Turn 10, seq 230: object 299 becomes object 342 [Swamp].
+- Turn 10, seq 231: object 221 becomes object 343 [Bloodletter of Aclazotz].
+- Turn 11, seq 247: object 169 becomes object 348 [Avengers Disassembled].
+- Turn 11, seq 250: object 325 becomes object 349 [Pawpatch Formation].
+- Turn 11, seq 255: object 343 becomes object 352 [Bloodletter of Aclazotz].
+- Turn 11, seq 255: object 349 becomes object 353 [Pawpatch Formation].
+- Turn 12, seq 269: object 231 becomes object 354 [Lunar Convocation].
+- Turn 12, seq 272: object 341 becomes object 355 [Bloodletter of Aclazotz].
+- Turn 13, seq 288: object 171 becomes object 360 [Mjolnir, Hammer of Thor].
+- Turn 13, seq 291: object 360 becomes object 361 [Mjolnir, Hammer of Thor].
+- Turn 13, seq 297: object 355 becomes object 367 [Bloodletter of Aclazotz].
+- Turn 14, seq 311: object 232 becomes object 368 [Scoured Barrens].
+- Turn 14, seq 314: object 354 becomes object 369 [Lunar Convocation].
+- Turn 14, seq 319: object 233 becomes object 375 [Plains].
+- Turn 14, seq 320: object 368 becomes object 376 [Scoured Barrens].
+- Turn 15, seq 341: object 172 becomes object 381 [Surrak, Elusive Hunter].
+- Turn 15, seq 344: object 160 becomes object 382 [Leatherhead, Swamp Stalker].
+- Turn 16, seq 362: object 234 becomes object 388 [Moonrise Cleric].
+- Turn 16, seq 365: object 375 becomes object 389 [Plains].
+- Turn 16, seq 366: object 388 becomes object 390 [Moonrise Cleric].
+- Turn 16, seq 371: object 235 becomes object 397 [Marauding Blight-Priest].
+- Turn 16, seq 374: object 236 becomes object 401 [Starscape Cleric].
+- Turn 17, seq 389: object 173 becomes object 402 [Badgermole Cub].
+- Turn 17, seq 392: object 402 becomes object 403 [Badgermole Cub].
+- Turn 17, seq 401: object 381 becomes object 408 [Surrak, Elusive Hunter].
+- Turn 17, seq 423: object 369 becomes object 416 [Lunar Convocation].
+- Turn 18, seq 433: object 237 becomes object 417 [Starscape Cleric].
+- Turn 18, seq 436: object 225 becomes object 418 [Hero's Downfall].
+- Turn 18, seq 440: object 174 becomes object 423 [Fabled Passage].
+- Turn 18, seq 442: object 382 becomes object 424 [Leatherhead, Swamp Stalker].
+- Turn 18, seq 442: object 418 becomes object 425 [Hero's Downfall].
+- Turn 18, seq 443: object 397 becomes object 426 [Marauding Blight-Priest].
+- Turn 19, seq 469: object 175 becomes object 432 [Rugged Highlands].
+- Turn 19, seq 472: object 432 becomes object 433 [Rugged Highlands].
+- Turn 19, seq 475: object 316 becomes object 435 [Esper Origins].
+- Turn 19, seq 478: object 176 becomes object 440 [Llanowar Elves].
+- Turn 19, seq 478: object 435 becomes object 441 [Esper Origins].
+- Turn 19, seq 478: object 441 becomes object 442 (Esper Origins -> Summon: Esper Maduin).
+- Turn 19, seq 484: object 177 becomes object 447 [Ouroboroid].
+- Turn 20, seq 499: object 238 becomes object 449 [Zoraline, Cosmos Caller].
+- Turn 20, seq 502: object 401 becomes object 450 [Starscape Cleric].
+- Turn 21, seq 537: object 178 becomes object 462 [Surveillance Room].
+- Turn 21, seq 542: object 462 becomes object 464 [Surveillance Room].
+- Turn 21, seq 546: object 348 becomes object 466 [Avengers Disassembled].
+- Turn 21, seq 549: object 466 becomes object 469 [Avengers Disassembled].
+- Turn 21, seq 549: object 339 becomes object 470 [Temple of Abandon].
+- Turn 21, seq 549: object 380 becomes object 471 [Bat].
+- Turn 21, seq 549: object 390 becomes object 472 [Moonrise Cleric].
+- Turn 21, seq 549: object 403 becomes object 473 [Badgermole Cub].
+- Turn 21, seq 549: object 408 becomes object 474 [Surrak, Elusive Hunter].
+- Turn 21, seq 549: object 426 becomes object 475 [Marauding Blight-Priest].
+- Turn 21, seq 549: object 450 becomes object 476 [Starscape Cleric].
+- Turn 21, seq 549: object 457 becomes object 477 [Starscape Cleric].
+- Turn 21, seq 551: object 470 becomes object 479 [Temple of Abandon].
+- Turn 21, seq 555: object 447 becomes object 481 [Ouroboroid].
+- Turn 22, seq 581: object 239 becomes object 487 [Swamp].
+- Turn 22, seq 584: object 487 becomes object 488 [Swamp].
+- Turn 22, seq 585: object 449 becomes object 489 [Zoraline, Cosmos Caller].
+- Turn 22, seq 594: object 472 becomes object 498 [Moonrise Cleric].
+- Turn 22, seq 595: object 417 becomes object 499 [Starscape Cleric].
+- Turn 23, seq 612: object 179 becomes object 502 [object 179].
+- Turn 23, seq 616: object 442 becomes object 504 (Summon: Esper Maduin -> Esper Origins).
+- Turn 23, seq 617: object 423 becomes object 505 [Fabled Passage].
+- Turn 23, seq 618: object 162 becomes object 506 [Ouroboroid].
+- Turn 23, seq 625: object 505 becomes object 514 [Fabled Passage].
+- Turn 23, seq 628: object 215 becomes object 515 [Forest].
+- Turn 23, seq 630: object 159 becomes object 554 [Fiery Annihilation].
+- Turn 23, seq 634: object 554 becomes object 558 [Fiery Annihilation].
+- Turn 23, seq 634: object 489 becomes object 559 [Zoraline, Cosmos Caller].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 2: gian31 plays Plains (object 280) from Hand (gian31) to Battlefield.
+- Turn 3: fast_lion plays Temple of Abandon (object 284) from Hand (fast_lion) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 287) from Hand (gian31) to Battlefield.
+- Turn 5: fast_lion plays Forest (object 292) from Hand (fast_lion) to Battlefield.
+- Turn 6: gian31 plays Plains (object 300) from Hand (gian31) to Battlefield.
+- Turn 7: fast_lion plays Los Diablos Missile Base (object 311) from Hand (fast_lion) to Battlefield.
+- Turn 8: gian31 plays Scoured Barrens (object 318) from Hand (gian31) to Battlefield.
+- Turn 9: fast_lion plays Los Diablos Missile Base (object 326) from Hand (fast_lion) to Battlefield.
+- Turn 10: gian31 plays Swamp (object 342) from Hand (gian31) to Battlefield.
+- Turn 14: gian31 plays Scoured Barrens (object 376) from Hand (gian31) to Battlefield.
+- Turn 16: gian31 plays Plains (object 389) from Hand (gian31) to Battlefield.
+- Turn 19: fast_lion plays Rugged Highlands (object 433) from Hand (fast_lion) to Battlefield.
+- Turn 21: fast_lion plays Surveillance Room (object 464) from Hand (fast_lion) to Battlefield.
+- Turn 22: gian31 plays Swamp (object 488) from Hand (gian31) to Battlefield.
+- Turn 23: fast_lion plays Fabled Passage (object 505) from Hand (fast_lion) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Starscape Cleric: casts=3; abilities=7 (triggered=7, activated=0) across turns [4, 5, 6, 8, 20, 20, 20, 20, 22, 23]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=6, other=5
+  observed effects: life -1, synthetic event, token creation
+- Authority of the Consuls: casts=1; abilities=8 (triggered=8, activated=0) across turns [2, 5, 6, 15, 17, 17, 19, 21, 23]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=8, other=0
+  observed effects: life +1
+- Lunar Convocation: casts=1; abilities=5 (triggered=5, activated=0) across turns [14, 14, 14, 14, 16, 16]
+  observed effect totals: draws=3, tokens=1, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: draw, life -1, synthetic event, token creation
+- Marauding Blight-Priest: casts=2; abilities=3 (triggered=3, activated=0) across turns [8, 18, 18, 19, 20]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=2
+  observed effects: life -1, synthetic event
+- Ouroboroid: casts=2; abilities=3 (triggered=3, activated=0) across turns [21, 21, 23, 23, 23]
+  observed effect totals: draws=0, tokens=0, counters=6, returns=0, damage=0, life_changes=0, other=6
+  observed effects: +1 counter(s), +4 counter(s), +5 counter(s), P/T +1/+1, P/T +4/+4, P/T +5/+5
+- Badgermole Cub: casts=2; abilities=2 (triggered=2, activated=0) across turns [5, 5, 17, 17]
+  observed effect totals: draws=0, tokens=0, counters=2, returns=0, damage=0, life_changes=0, other=2
+  observed effects: +1 counter(s), P/T +1/+1
+- Mjolnir, Hammer of Thor: casts=1; abilities=2 (triggered=2, activated=0) across turns [9, 13, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=5, life_changes=0, other=0
+  observed effects: 2 damage, 4 damage
+- Moonrise Cleric: casts=1; abilities=2 (triggered=2, activated=0) across turns [16, 18, 20]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Summon: Esper Maduin: abilities=3 (triggered=3, activated=0) across turns [19, 21, 23]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: P/T +2/+2, zone_transfer
+- Bloodletter of Aclazotz: casts=2 across turns [10, 12]
+- Leatherhead, Swamp Stalker: casts=1; abilities=1 (triggered=1, activated=0) across turns [15, 17]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Los Diablos Missile Base: abilities=2 (triggered=2, activated=0) across turns [7, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Return that land to the battlefield tapped under your control: abilities=2 (triggered=0, activated=2) across turns [9, 21]
+  runtime-name lineage: object 284 is also observed as Return that land to the battlefield tapped under your control, Temple of Abandon; relationship not explicitly identified.
+  runtime-name lineage: object 339 is also observed as Return that land to the battlefield tapped under your control, Temple of Abandon; relationship not explicitly identified.
+  observed effect totals: draws=0, tokens=0, counters=0, returns=2, damage=0, life_changes=0, other=0
+  observed effects: return to battlefield
+- Scoured Barrens: abilities=2 (triggered=2, activated=0) across turns [8, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Surrak, Elusive Hunter: casts=1; abilities=1 (triggered=1, activated=0) across turns [17, 18]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Zoraline, Cosmos Caller: casts=1; abilities=1 (triggered=1, activated=0) across turns [22, 22]
+  observed effect totals: draws=0, tokens=0, counters=1, returns=1, damage=0, life_changes=0, other=0
+  observed effects: +1 counter(s), return to battlefield
+- Avengers Disassembled: casts=1 across turns [21]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=9, life_changes=0, other=0
+  observed effects: 3 damage
+- Fiery Annihilation: casts=1 across turns [23]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 5 damage
+- Hero's Downfall: casts=1 across turns [18]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Pawpatch Formation: casts=1 across turns [11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Rugged Highlands: abilities=1 (triggered=1, activated=0) across turns [19]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Stroke of Midnight: casts=1 across turns [6]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy, token creation
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 6 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> fast_lion; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=fast_lion)
+  attacker: Human (fast_lion) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> fast_lion; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 17 - DeclareAttack (active=fast_lion)
+  attacker: Leatherhead, Swamp Stalker (fast_lion) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 18 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Moonrise Cleric (gian31) -> fast_lion; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 20 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Moonrise Cleric (gian31) -> fast_lion; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 21 - DeclareAttack, DeclareBlock (active=fast_lion)
+  attacker: Summon: Esper Maduin (fast_lion) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 23 - DeclareAttack (active=fast_lion)
+  attacker: Ouroboroid (fast_lion) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 17: Ability of Leatherhead, Swamp Stalker (active=fast_lion) - Ability of Leatherhead, Swamp Stalker: a permanent is destroyed.
+- Turn 18: Ability of Moonrise Cleric (active=gian31) - Ability of Moonrise Cleric: gian31 gains 1 life.
+- Turn 18: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: fast_lion loses 1 life.
+- Turn 20: Ability of Moonrise Cleric (active=gian31) - Ability of Moonrise Cleric: gian31 gains 1 life.
+- Turn 20: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: fast_lion loses 1 life.
+- Turn 20: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: fast_lion loses 1 life.
+- Turn 20: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: fast_lion loses 1 life.
+- Turn 21: Ability of Ouroboroid (active=fast_lion) - Ability of Ouroboroid: Summon: Esper Maduin gets +1/+1; Ouroboroid gets +1/+1; 1 counter(s) are added to target; 1 counter(s) are added to target.
+- Turn 23: Ability of Ouroboroid (active=fast_lion) - Ability of Ouroboroid: Ouroboroid gets +4/+4; Ouroboroid gets +4/+4; 4 counter(s) are added to target; 4 counter(s) are added to target.
+- Turn 23: Ability of Ouroboroid (active=fast_lion) - Ability of Ouroboroid: Ouroboroid gets +5/+5; Ouroboroid gets +5/+5; 5 counter(s) are added to target; 5 counter(s) are added to target.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 177: Ouroboroid | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 219: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 220: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 221: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 222: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 223: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 224: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 225: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 279: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 280: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 281: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 283: Mjolnir, Hammer of Thor | controller=fast_lion | owner=fast_lion | zone=Hand (latest_object_observation)
+- 284: Temple of Abandon | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 285: object 285 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 286: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 287: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 288: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 292: Forest | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 293: Badgermole Cub | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 296: object 296 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 297: object 297 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 298: object 298 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 299: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 300: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 301: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 305: Badgermole Cub | controller=fast_lion | owner=fast_lion | zone=Graveyard (latest_object_observation)
+- 306: Human | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 307: object 307 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 308: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 309: object 309 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 311: Los Diablos Missile Base | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 312: object 312 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 313: Esper Origins | controller=fast_lion | owner=fast_lion | zone=Stack (latest_object_observation)
+- 316: Esper Origins | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 317: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 318: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 319: object 319 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 320: object 320 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 321: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 326: Los Diablos Missile Base | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 327: object 327 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 328: object 328 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 332: Mjolnir, Hammer of Thor | controller=fast_lion | owner=fast_lion | zone=Graveyard (latest_object_observation)
+- 333: Temple of Abandon | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 334: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 336: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 337: object 337 | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 338: object 338 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 339: Temple of Abandon | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 340: object 340 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 341: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 342: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 343: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 349: Pawpatch Formation | controller=fast_lion | owner=fast_lion | zone=Stack (latest_object_observation)
+- 352: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 353: Pawpatch Formation | controller=fast_lion | owner=fast_lion | zone=Graveyard (latest_object_observation)
+- 354: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 355: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 361: Mjolnir, Hammer of Thor | controller=fast_lion | owner=fast_lion | zone=Stack (latest_object_observation)
+- 366: object 366 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 367: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 368: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 369: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 372: object 372 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 375: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 376: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 377: object 377 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 378: object 378 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 379: object 379 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 380: Bat | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 382: Leatherhead, Swamp Stalker | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 387: object 387 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 388: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 389: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 390: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 394: object 394 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 397: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 398: object 398 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 401: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 403: Badgermole Cub | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 406: object 406 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 407: object 407 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 408: Surrak, Elusive Hunter | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 412: object 412 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 413: object 413 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 415: object 415 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 416: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 417: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 418: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 419: object 419 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 424: Leatherhead, Swamp Stalker | controller=fast_lion | owner=fast_lion | zone=Graveyard (latest_object_observation)
+- 425: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 426: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 430: object 430 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 431: object 431 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 433: Rugged Highlands | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 434: object 434 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 435: Esper Origins | controller=fast_lion | owner=fast_lion | zone=Stack (latest_object_observation)
+- 440: Llanowar Elves | controller=fast_lion | owner=fast_lion | zone=Graveyard (latest_object_observation)
+- 441: Esper Origins | controller=fast_lion | owner=fast_lion | zone=Exile (latest_object_observation)
+- 442: Summon: Esper Maduin | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 443: object 443 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 444: object 444 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 445: object 445 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 446: Ouroboroid | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 448: Ouroboroid | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 449: Zoraline, Cosmos Caller | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 450: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 456: object 456 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 457: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 458: object 458 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 459: object 459 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 460: object 460 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 461: object 461 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 463: object 463 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 464: Surveillance Room | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 465: object 465 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 466: Avengers Disassembled | controller=fast_lion | owner=fast_lion | zone=Stack (latest_object_observation)
+- 469: Avengers Disassembled | controller=fast_lion | owner=fast_lion | zone=Graveyard (latest_object_observation)
+- 470: Temple of Abandon | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 472: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 473: Badgermole Cub | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 474: Surrak, Elusive Hunter | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 475: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 476: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 478: object 478 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 479: Temple of Abandon | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 480: object 480 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 481: Ouroboroid | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 485: object 485 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 486: object 486 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 487: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 488: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 489: Zoraline, Cosmos Caller | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 493: object 493 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 497: object 497 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 498: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 499: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 503: object 503 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 504: Esper Origins | controller=fast_lion | owner=fast_lion | zone=Graveyard (latest_object_observation)
+- 505: Fabled Passage | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 506: Ouroboroid | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 511: object 511 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 512: object 512 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 513: object 513 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 514: Fabled Passage | controller=fast_lion | owner=fast_lion | zone=Graveyard (latest_object_observation)
+- 515: Forest | controller=fast_lion | owner=fast_lion | zone=Battlefield (latest_object_observation)
+- 554: Fiery Annihilation | controller=fast_lion | owner=fast_lion | zone=Stack (latest_object_observation)
+- 558: Fiery Annihilation | controller=fast_lion | owner=fast_lion | zone=Graveyard (latest_object_observation)
+- 559: Zoraline, Cosmos Caller | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 560: object 560 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+- 561: object 561 | controller=fast_lion | owner=fast_lion | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+fast_lion: 67 total items
+  zones: Battlefield=25, Exile=1, Graveyard=9, Hand=1, Stack=6, unknown=25
+  objects: Esper Origins x5, Ouroboroid x5, Temple of Abandon x5, Badgermole Cub x4, Mjolnir, Hammer of Thor x3, Avengers Disassembled x2, Fabled Passage x2, Fiery Annihilation x2, Forest x2, Leatherhead, Swamp Stalker x2, Los Diablos Missile Base x2, Pawpatch Formation x2
+gian31: 85 total items
+  zones: Battlefield=36, Graveyard=2, Hand=14, Stack=4, unknown=29
+  objects: Starscape Cleric x9, Bloodletter of Aclazotz x6, Marauding Blight-Priest x6, Plains x6, Swamp x6, Moonrise Cleric x4, Scoured Barrens x4, Hero's Downfall x3, Lunar Convocation x3, Stroke of Midnight x3, Zoraline, Cosmos Caller x3, Authority of the Consuls x2
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+fast_lion:
+  Battlefield (25): Badgermole Cub, Badgermole Cub, Badgermole Cub, Esper Origins, Fabled Passage, Forest, Forest, Human, Leatherhead, Swamp Stalker, Los Diablos Missile Base, Los Diablos Missile Base, Ouroboroid, Ouroboroid, Ouroboroid, Rugged Highlands, Summon: Esper Maduin, Surrak, Elusive Hunter, Surrak, Elusive Hunter, Surveillance Room, Temple of Abandon, Temple of Abandon, Temple of Abandon, Temple of Abandon, Temple of Abandon, object 337
+  Graveyard: 9 card(s)
+gian31:
+  Battlefield (36): Bat, Bloodletter of Aclazotz, Bloodletter of Aclazotz, Bloodletter of Aclazotz, Bloodletter of Aclazotz, Hero's Downfall, Hero's Downfall, Marauding Blight-Priest, Marauding Blight-Priest, Marauding Blight-Priest, Marauding Blight-Priest, Moonrise Cleric, Moonrise Cleric, Moonrise Cleric, Plains, Plains, Plains, Plains, Scoured Barrens, Scoured Barrens, Scoured Barrens, Starscape Cleric, Starscape Cleric, Starscape Cleric, Starscape Cleric, Starscape Cleric, Starscape Cleric, Starscape Cleric, Stroke of Midnight, Stroke of Midnight, Swamp, Swamp, Swamp, Swamp, Zoraline, Cosmos Caller, Zoraline, Cosmos Caller
+  Graveyard: 2 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+54 objects have no resolved final zone and are omitted from the known board state.
+fast_lion: 25 unknown object(s)
+gian31: 29 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=15, Stack=10
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+fast_lion:
+  Battlefield (10): Forest, Los Diablos Missile Base, Los Diablos Missile Base, Mjolnir, Hammer of Thor, Rugged Highlands, Surveillance Room, Temple of Abandon, Ouroboroid, Ouroboroid, Forest
+  Graveyard (10): Badgermole Cub, Mjolnir, Hammer of Thor, Pawpatch Formation, Leatherhead, Swamp Stalker, Llanowar Elves, Avengers Disassembled, Badgermole Cub, Surrak, Elusive Hunter, Fabled Passage, Fiery Annihilation
+  Exile (1): Esper Origins
+gian31:
+  Battlefield (11): Plains, Authority of the Consuls, Swamp, Plains, Scoured Barrens, Swamp, Scoured Barrens, Plains, Swamp, Moonrise Cleric, Starscape Cleric
+  Graveyard (9): Stroke of Midnight, Starscape Cleric, Marauding Blight-Priest, Bloodletter of Aclazotz, Bloodletter of Aclazotz, Lunar Convocation, Hero's Downfall, Marauding Blight-Priest, Starscape Cleric
+  Exile (1): Zoraline, Cosmos Caller
+Known non-persistent entries (counts only):
+  fast_lion: Hand=1, Limbo=10
+  gian31: Limbo=10
+  unknown: Library=77, Limbo=10
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 2: gian31 Battlefield=2
+- Turn 3: fast_lion Battlefield=1; gian31 Battlefield=2
+- Turn 4: fast_lion Battlefield=1; gian31 Battlefield=4
+- Turn 5: fast_lion Battlefield=3; gian31 Battlefield=4
+- Turn 6: fast_lion Battlefield=2; fast_lion Graveyard=1; gian31 Battlefield=5; gian31 Graveyard=1
+- Turn 7: fast_lion Battlefield=3; fast_lion Graveyard=2; gian31 Battlefield=5; gian31 Graveyard=1
+- Turn 8: fast_lion Battlefield=3; fast_lion Graveyard=2; gian31 Battlefield=7; gian31 Graveyard=1
+- Turn 9: fast_lion Battlefield=4; fast_lion Graveyard=4; gian31 Battlefield=5; gian31 Graveyard=3
+- Turn 10: fast_lion Battlefield=4; fast_lion Graveyard=4; gian31 Battlefield=7; gian31 Graveyard=3
+- Turn 11: fast_lion Battlefield=4; fast_lion Graveyard=5; gian31 Battlefield=6; gian31 Graveyard=4
+- Turn 12: fast_lion Battlefield=4; fast_lion Graveyard=5; gian31 Battlefield=7; gian31 Graveyard=4
+- Turn 13: fast_lion Battlefield=5; fast_lion Graveyard=5; gian31 Battlefield=6; gian31 Graveyard=5
+- Turn 14: fast_lion Battlefield=5; fast_lion Graveyard=5; gian31 Battlefield=8; gian31 Graveyard=5
+- Turn 15: fast_lion Battlefield=6; fast_lion Graveyard=5; gian31 Battlefield=8; gian31 Graveyard=5
+- Turn 16: fast_lion Battlefield=6; fast_lion Graveyard=5; gian31 Battlefield=10; gian31 Graveyard=5
+- Turn 17: fast_lion Battlefield=8; fast_lion Graveyard=5; gian31 Battlefield=9; gian31 Graveyard=6
+- Turn 18: fast_lion Battlefield=7; fast_lion Graveyard=6; gian31 Battlefield=10; gian31 Graveyard=7
+- Turn 19: fast_lion Battlefield=9; fast_lion Graveyard=6; fast_lion Exile=1; gian31 Battlefield=10; gian31 Graveyard=7
+- Turn 20: fast_lion Battlefield=9; fast_lion Graveyard=6; fast_lion Exile=1; gian31 Battlefield=11; gian31 Graveyard=7
+- Turn 21: fast_lion Battlefield=9; fast_lion Graveyard=9; fast_lion Exile=1; gian31 Battlefield=8; gian31 Graveyard=12
+- Turn 22: fast_lion Battlefield=9; fast_lion Graveyard=9; fast_lion Exile=1; gian31 Battlefield=12; gian31 Graveyard=11
+- Turn 23: fast_lion Battlefield=10; fast_lion Graveyard=11; fast_lion Exile=2; gian31 Battlefield=11; gian31 Graveyard=11; gian31 Exile=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Badgermole Cub resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Mjolnir, Hammer of Thor resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: Leatherhead, Swamp Stalker resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Moonrise Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 17: Badgermole Cub resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 17: Surrak, Elusive Hunter resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 18: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 20: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 21: Ouroboroid resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 22: Zoraline, Cosmos Caller resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 22: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 23: Ouroboroid resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
