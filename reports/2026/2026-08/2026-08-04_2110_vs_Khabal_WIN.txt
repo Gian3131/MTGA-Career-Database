@@ -1,0 +1,1092 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: Khabal, gian31
+Seat map: Seat 1=Khabal, Seat 2=gian31
+Turn range (known): 1 - 14
+Records: 92
+Action chains: 21
+Winner: gian31
+Final life: {'Khabal': 1, 'gian31': 47}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 14 (Phase_Combat, Step_CombatDamage; Ability of Starscape Cleric, seq 484).
+Technical note: the analyzer creates a companion final_match_reconstruction.json beside this report. Its inclusion in an external archive depends on the selected export option.
+Protocol ledger coverage: 25 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 10 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 12, 13, 14] (raw records=10; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 13 explicit Library -> Hand movement(s); named in the draw record=7, resolved through an explicit identity transition=5, unresolved=1.
+Unresolved draw identities (explicit movements retained): Turn 5, seq 98, object 300.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Makeshift Binding [221], Bloodthirsty Conqueror [222], Authority of the Consuls [223], Marauding Blight-Priest [224], Plains [225], Stroke of Midnight [226], Scoured Barrens [227].
+  - unknown: 7 observed card(s): object 161 [161], object 162 [162], object 163 [163], object 164 [164], object 165 [165], object 166 [166], object 167 [167].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'Khabal': 1, 'gian31': 47}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 14 (Phase_Combat, Step_CombatDamage; Ability of Starscape Cleric, seq 484).
+Last captured life snapshot: gian31 46 -> 47 (seq 482).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Freya Crescent.
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Authority of the Consuls.
+- Turn 3: actions: cards=1, abilities=1; combat snapshots=1; life mutations=2; explicit battlefield entries=Plains, Sheltered by Ghosts; explicit battlefield exits=Authority of the Consuls.
+- Turn 4: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Scoured Barrens, Authority of the Consuls.
+- Turn 5: actions: cards=0, abilities=0; combat snapshots=1; life mutations=2; explicit battlefield entries=Plains.
+- Turn 6: actions: cards=2, abilities=0; life mutations=1; explicit battlefield entries=Swamp, Marauding Blight-Priest; explicit battlefield exits=Marauding Blight-Priest.
+- Turn 7: actions: cards=1, abilities=2; combat snapshots=1; life mutations=3; explicit battlefield entries=Plains, Practiced Scrollsmith.
+- Turn 8: actions: cards=1, abilities=0; explicit battlefield exits=Practiced Scrollsmith.
+- Turn 9: actions: cards=2, abilities=1; combat snapshots=1; life mutations=5; explicit battlefield entries=Adelbert Steiner.
+- Turn 10: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Makeshift Binding; explicit battlefield exits=Adelbert Steiner.
+- Turn 11: actions: cards=0, abilities=0; combat snapshots=1; life mutations=2.
+- Turn 12: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Starscape Cleric.
+- Turn 13: actions: cards=1, abilities=2; combat snapshots=1; life mutations=4; explicit battlefield entries=Plains, Cloud, Planet's Champion.
+- Turn 14: actions: cards=1, abilities=70; combat snapshots=1; life mutations=70; explicit battlefield entries=Swamp, Bloodthirsty Conqueror.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Freya Crescent [valid_resolution_no_immediate_mutation, seq=10] (active=Khabal, phase=Phase_Main1, controller=Khabal, owner=Khabal, source_object=282)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Freya Crescent resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Freya Crescent (object 282) Hand (Khabal) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Freya Crescent (object 282) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [281] Hand (Khabal) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Khabal: Battlefield: Freya Crescent [282], Mountain [281]
+
+Turn 2
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=30] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=286)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 286) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 286) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [284] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 24).
+      Plains [285] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 27).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Khabal: Battlefield: Freya Crescent [282], Mountain [281]
+      gian31: Battlefield: Authority of the Consuls [286], Plains [285]
+
+Turn 3
+  - Sheltered by Ghosts [valid_resolution_no_immediate_mutation, seq=52] (active=Khabal, phase=Phase_Main1, controller=Khabal, owner=Khabal, source_object=290)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sheltered by Ghosts resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sheltered by Ghosts (object 290) Hand (Khabal) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sheltered by Ghosts (object 290) Stack -> Battlefield (Resolve; shared object ID)
+      Aura attachment target: unavailable in captured GRE records.
+  - Ability of Sheltered by Ghosts [observed_semantic_effect, seq=56] (active=Khabal, phase=Phase_Main1, controller=Khabal, owner=Khabal, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Sheltered by Ghosts: exiles Authority of the Consuls.
+      explicit effect object references: Authority of the Consuls [286], Authority of the Consuls [294] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Authority of the Consuls (object 294) Battlefield -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=Khabal; frames: DeclareAttack -> DeclareBlock):
+      attackers: Freya Crescent [282] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Khabal +2; gian31 -2 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): Khabal 20 -> 22
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [288] Library (Khabal) -> Hand (Khabal) (Draw; GRE sequence 44).
+      Plains [289] Hand (Khabal) -> Battlefield (PlayLand; GRE sequence 47).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Khabal: Battlefield: Freya Crescent [282], Mountain [281], Plains [289], Sheltered by Ghosts [290]
+      gian31: Battlefield: Plains [285]; Exile: Authority of the Consuls [294]
+
+Turn 4
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=81] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=296, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=84] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=298)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 298) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 298) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Authority of the Consuls [295] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 76).
+      Scoured Barrens [296] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 79).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Khabal: Battlefield: Freya Crescent [282], Mountain [281], Plains [289], Sheltered by Ghosts [290]
+      gian31: Battlefield: Authority of the Consuls [298], Plains [285], Scoured Barrens [296]; Exile: Authority of the Consuls [294]
+
+Turn 5
+  Combat snapshots observed (active=Khabal; frames: DeclareAttack -> DeclareBlock):
+      attackers: Freya Crescent [282] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Khabal +2; gian31 -2 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): Khabal 22 -> 24
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 19 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 300 [300] Library (Khabal) -> Hand (Khabal) (Draw; GRE sequence 98).
+      Plains [301] Hand (Khabal) -> Battlefield (PlayLand; GRE sequence 101).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Khabal: Battlefield: Freya Crescent [282], Mountain [281], Plains [289], Plains [301], Sheltered by Ghosts [290]
+      gian31: Battlefield: Authority of the Consuls [298], Plains [285], Scoured Barrens [296]; Exile: Authority of the Consuls [294]
+
+Turn 6
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=127] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=304)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 304) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 304) Stack -> Battlefield (Resolve; shared object ID)
+  - Lightning Helix [observed_semantic_effect, seq=135] (active=unknown, controller=Khabal, owner=Khabal, source_object=308)
+      chronology reconciliation: parser turn group 14 conflicts with Turn 6; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: 3 damage, life +3
+      narrative: Lightning Helix: Marauding Blight-Priest takes 3 damage; Khabal gains 3 life.
+      explicit effect object references: Marauding Blight-Priest [304] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Lightning Helix (object 308) Hand (Khabal) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lightning Helix (object 311) Stack -> Graveyard (Khabal) (Resolve; shared object ID)
+      identity continuity: source object 308 -> transfer object 311 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Marauding Blight-Priest (object 312) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+    net observed life change this turn: Khabal +3 (individual changes below; gains and losses may offset)
+    life: Khabal 24 -> 27
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [302] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 121).
+      Swamp [303] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 124).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Khabal: Battlefield: Freya Crescent [282], Mountain [281], Plains [289], Plains [301], Sheltered by Ghosts [290]; Graveyard: Lightning Helix [311]
+      gian31: Battlefield: Authority of the Consuls [298], Plains [285], Scoured Barrens [296], Swamp [303]; Exile: Authority of the Consuls [294]; Graveyard: Marauding Blight-Priest [312]
+
+Turn 7
+  - Practiced Scrollsmith [valid_resolution_no_immediate_mutation, seq=153] (active=Khabal, phase=Phase_Main1, controller=Khabal, owner=Khabal, source_object=315)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Practiced Scrollsmith resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Practiced Scrollsmith (object 315) Hand (Khabal) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Practiced Scrollsmith (object 315) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=157] (active=Khabal, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=298, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Practiced Scrollsmith [observed_semantic_effect, seq=159] (active=Khabal, phase=Phase_Main1, controller=Khabal, owner=Khabal, source_object=315, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Practiced Scrollsmith: exiles Lightning Helix.
+      explicit effect object references: Lightning Helix [311], Lightning Helix [321] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Lightning Helix (object 321) Graveyard (Khabal) -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=Khabal; frames: DeclareAttack -> DeclareBlock):
+      attackers: Freya Crescent [282] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Khabal +2; gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 17 -> 18
+    life (gain observed during combat phase; exact source unavailable): Khabal 27 -> 29
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 18 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Practiced Scrollsmith [313] Library (Khabal) -> Hand (Khabal) (Draw; GRE sequence 147).
+      Plains [314] Hand (Khabal) -> Battlefield (PlayLand; GRE sequence 150).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Khabal: Battlefield: Freya Crescent [282], Mountain [281], Plains [289], Plains [301], Plains [314], Practiced Scrollsmith [315], Sheltered by Ghosts [290]; Exile: Lightning Helix [321]
+      gian31: Battlefield: Authority of the Consuls [298], Plains [285], Scoured Barrens [296], Swamp [303]; Exile: Authority of the Consuls [294]; Graveyard: Marauding Blight-Priest [312]
+
+Turn 8
+  - Hero's Downfall [observed_semantic_effect, seq=194] (active=gian31, phase=Phase_Main2, controller=gian31, owner=gian31, source_object=323)
+      effects: destroy
+      narrative: Hero's Downfall destroys Practiced Scrollsmith.
+      explicit effect object references: Practiced Scrollsmith [315], Practiced Scrollsmith [327] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hero's Downfall (object 323) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Practiced Scrollsmith (object 327) Battlefield -> Graveyard (Khabal) (Destroy; shared object ID)
+      protocol-linked zone transfer: Hero's Downfall (object 328) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 323 -> transfer object 328 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hero's Downfall [322] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 179).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Khabal: Battlefield: Freya Crescent [282], Mountain [281], Plains [289], Plains [301], Plains [314], Sheltered by Ghosts [290]; Exile: Lightning Helix [321]; Graveyard: Practiced Scrollsmith [327]
+      gian31: Battlefield: Authority of the Consuls [298], Plains [285], Scoured Barrens [296], Swamp [303]; Exile: Authority of the Consuls [294]; Graveyard: Hero's Downfall [328], Marauding Blight-Priest [312]
+
+Turn 9
+  - Adelbert Steiner [valid_resolution_no_immediate_mutation, seq=205] (active=Khabal, phase=Phase_Main1, controller=Khabal, owner=Khabal, source_object=330)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Adelbert Steiner resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Adelbert Steiner (object 330) Hand (Khabal) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Adelbert Steiner (object 330) Stack -> Battlefield (Resolve; shared object ID)
+  - Lightning Helix [observed_semantic_effect, seq=210] (active=Khabal, phase=Phase_Main1, controller=Khabal, owner=Khabal, source_object=334)
+      effects: 3 damage; life -3; life +3 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Lightning Helix: gian31 takes 3 damage (resulting in 3 life lost); Khabal gains 3 life.
+      explicit effect object references: gian31 [player seat 2] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Lightning Helix (object 334) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Lightning Helix (object 337) Stack -> Graveyard (Khabal) (Resolve; shared object ID)
+      identity continuity: source object 334 -> transfer object 337 (explicit GRE ObjectIdChanged chain).
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=212] (active=Khabal, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=298, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  Combat snapshots observed (active=Khabal; frames: DeclareAttack -> DeclareBlock):
+      attackers: Freya Crescent [282] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Khabal +5; gian31 -4 (individual changes below; gains and losses may offset)
+    life: Khabal 29 -> 32
+    life (semantically attributed to Lightning Helix; direct protocol link unavailable): gian31 16 -> 13
+    life: gian31 13 -> 14
+    life (gain observed during combat phase; exact source unavailable): Khabal 32 -> 34
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 14 -> 12
+    additional protocol-observed zone movements not assigned to an action chain:
+      Adelbert Steiner [329] Library (Khabal) -> Hand (Khabal) (Draw; GRE sequence 200).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Khabal: Battlefield: Adelbert Steiner [330], Freya Crescent [282], Mountain [281], Plains [289], Plains [301], Plains [314], Sheltered by Ghosts [290]; Graveyard: Lightning Helix [337], Practiced Scrollsmith [327]
+      gian31: Battlefield: Authority of the Consuls [298], Plains [285], Scoured Barrens [296], Swamp [303]; Exile: Authority of the Consuls [294]; Graveyard: Hero's Downfall [328], Marauding Blight-Priest [312]
+
+Turn 10
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=237] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=339)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 339) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 339) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=241] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=339, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Adelbert Steiner; gian31 gains 2 life.
+      explicit effect object references: Adelbert Steiner [330], Adelbert Steiner [344] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Adelbert Steiner (object 344) Battlefield -> Exile (Exile; shared object ID)
+    net observed life change this turn: gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 12 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [338] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 232).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Khabal: Battlefield: Freya Crescent [282], Mountain [281], Plains [289], Plains [301], Plains [314], Sheltered by Ghosts [290]; Graveyard: Lightning Helix [337], Practiced Scrollsmith [327]; Exile: Adelbert Steiner [344]
+      gian31: Battlefield: Authority of the Consuls [298], Makeshift Binding [339], Plains [285], Scoured Barrens [296], Swamp [303]; Exile: Authority of the Consuls [294]; Graveyard: Hero's Downfall [328], Marauding Blight-Priest [312]
+
+Turn 11
+  Combat snapshots observed (active=Khabal; frames: DeclareAttack -> DeclareBlock):
+      attackers: Freya Crescent [282] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Khabal +2; gian31 -2 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): Khabal 34 -> 36
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 14 -> 12
+    additional protocol-observed zone movements not assigned to an action chain:
+      Cloud, Planet's Champion [345] Library (Khabal) -> Hand (Khabal) (Draw; GRE sequence 255).
+
+Turn 12
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=284] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=348)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 348) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 348) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [346] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 277).
+      Swamp [347] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 280).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Khabal: Battlefield: Freya Crescent [282], Mountain [281], Plains [289], Plains [301], Plains [314], Sheltered by Ghosts [290]; Graveyard: Lightning Helix [337], Practiced Scrollsmith [327]; Exile: Adelbert Steiner [344]
+      gian31: Battlefield: Authority of the Consuls [298], Makeshift Binding [339], Plains [285], Scoured Barrens [296], Starscape Cleric [348], Swamp [303], Swamp [347]; Exile: Authority of the Consuls [294]; Graveyard: Hero's Downfall [328], Marauding Blight-Priest [312]
+
+Turn 13
+  - Cloud, Planet's Champion [valid_resolution_no_immediate_mutation, seq=304] (active=Khabal, phase=Phase_Main1, controller=Khabal, owner=Khabal, source_object=353)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Cloud, Planet's Champion resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Cloud, Planet's Champion (object 353) Hand (Khabal) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Cloud, Planet's Champion (object 353) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=306] (active=Khabal, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=298, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=308] (active=Khabal, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  Combat snapshots observed (active=Khabal; frames: DeclareAttack -> DeclareBlock):
+      attackers: Freya Crescent [282] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Khabal +1; gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 12 -> 13
+    life: Khabal 36 -> 35
+    life (gain observed during combat phase; exact source unavailable): Khabal 35 -> 37
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 13 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [351] Library (Khabal) -> Hand (Khabal) (Draw; GRE sequence 298).
+      Plains [352] Hand (Khabal) -> Battlefield (PlayLand; GRE sequence 301).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Khabal: Battlefield: Cloud, Planet's Champion [353], Freya Crescent [282], Mountain [281], Plains [289], Plains [301], Plains [314], Plains [352], Sheltered by Ghosts [290]; Graveyard: Lightning Helix [337], Practiced Scrollsmith [327]; Exile: Adelbert Steiner [344]
+      gian31: Battlefield: Authority of the Consuls [298], Makeshift Binding [339], Plains [285], Scoured Barrens [296], Starscape Cleric [348], Swamp [303], Swamp [347]; Exile: Authority of the Consuls [294]; Graveyard: Hero's Downfall [328], Marauding Blight-Priest [312]
+
+Turn 14
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation, seq=334] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=363)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 363) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 363) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=346] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +2
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 2 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=348] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=350] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=352] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=354] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=356] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=358] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=360] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=362] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=364] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=366] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=368] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=370] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=372] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=374] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=376] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=378] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=380] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=382] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=384] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=386] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=388] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=390] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=392] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=394] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=396] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=398] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=400] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=402] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=404] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=406] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=408] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=410] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=412] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=414] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=416] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=418] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=420] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=422] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=424] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=426] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=428] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=430] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=432] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=434] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=436] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=438] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=440] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=442] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=444] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=446] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=448] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=450] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=452] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=454] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=456] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=458] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=460] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=462] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=464] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=466] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=468] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=470] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=472] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=474] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=476] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=478] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=480] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=482] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=363, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=484] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: Khabal loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [348] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Khabal -36; gian31 +36 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Khabal 37 -> 35
+    life: gian31 11 -> 13
+    life: Khabal 35 -> 34
+    life: gian31 13 -> 14
+    life: Khabal 34 -> 33
+    life: gian31 14 -> 15
+    life: Khabal 33 -> 32
+    life: gian31 15 -> 16
+    life: Khabal 32 -> 31
+    life: gian31 16 -> 17
+    life: Khabal 31 -> 30
+    life: gian31 17 -> 18
+    life: Khabal 30 -> 29
+    life: gian31 18 -> 19
+    life: Khabal 29 -> 28
+    life: gian31 19 -> 20
+    life: Khabal 28 -> 27
+    life: gian31 20 -> 21
+    life: Khabal 27 -> 26
+    life: gian31 21 -> 22
+    life: Khabal 26 -> 25
+    life: gian31 22 -> 23
+    life: Khabal 25 -> 24
+    life: gian31 23 -> 24
+    life: Khabal 24 -> 23
+    life: gian31 24 -> 25
+    life: Khabal 23 -> 22
+    life: gian31 25 -> 26
+    life: Khabal 22 -> 21
+    life: gian31 26 -> 27
+    life: Khabal 21 -> 20
+    life: gian31 27 -> 28
+    life: Khabal 20 -> 19
+    life: gian31 28 -> 29
+    life: Khabal 19 -> 18
+    life: gian31 29 -> 30
+    life: Khabal 18 -> 17
+    life: gian31 30 -> 31
+    life: Khabal 17 -> 16
+    life: gian31 31 -> 32
+    life: Khabal 16 -> 15
+    life: gian31 32 -> 33
+    life: Khabal 15 -> 14
+    life: gian31 33 -> 34
+    life: Khabal 14 -> 13
+    life: gian31 34 -> 35
+    life: Khabal 13 -> 12
+    life: gian31 35 -> 36
+    life: Khabal 12 -> 11
+    life: gian31 36 -> 37
+    life: Khabal 11 -> 10
+    life: gian31 37 -> 38
+    life: Khabal 10 -> 9
+    life: gian31 38 -> 39
+    life: Khabal 9 -> 8
+    life: gian31 39 -> 40
+    life: Khabal 8 -> 7
+    life: gian31 40 -> 41
+    life: Khabal 7 -> 6
+    life: gian31 41 -> 42
+    life: Khabal 6 -> 5
+    life: gian31 42 -> 43
+    life: Khabal 5 -> 4
+    life: gian31 43 -> 44
+    life: Khabal 4 -> 3
+    life: gian31 44 -> 45
+    life: Khabal 3 -> 2
+    life: gian31 45 -> 46
+    life: Khabal 2 -> 1
+    life: gian31 46 -> 47
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [361] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 328).
+      Swamp [362] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 331).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Khabal: Battlefield: Cloud, Planet's Champion [353], Freya Crescent [282], Mountain [281], Plains [289], Plains [301], Plains [314], Plains [352], Sheltered by Ghosts [290]; Graveyard: Lightning Helix [337], Practiced Scrollsmith [327]; Exile: Adelbert Steiner [344]
+      gian31: Battlefield: Authority of the Consuls [298], Bloodthirsty Conqueror [363], Makeshift Binding [339], Plains [285], Scoured Barrens [296], Starscape Cleric [348], Swamp [303], Swamp [347], Swamp [362]; Exile: Authority of the Consuls [294]; Graveyard: Hero's Downfall [328], Marauding Blight-Priest [312]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 3, seq 66, Phase_Main1: Khabal 20 -> 22. Combat declaration observed; exact assignment unavailable. Previous captured action: Sheltered by Ghosts.
+- Turn 5, seq 111: Khabal 22 -> 24. Combat declaration observed; exact assignment unavailable.
+- Turn 7, seq 169, Phase_Main1: Khabal 27 -> 29. Combat declaration observed; exact assignment unavailable. Previous captured action: Practiced Scrollsmith.
+- Turn 9, seq 210, Phase_Main1: gian31 16 -> 13; Khabal 32 -> 34. Semantic attribution: Lightning Helix; direct protocol link unavailable. Previous captured action: Lightning Helix.
+- Turn 11, seq 267: Khabal 34 -> 36. Combat declaration observed; exact assignment unavailable.
+- Turn 13, seq 318, Phase_Main1: Khabal 35 -> 37. Combat declaration observed; exact assignment unavailable. Previous captured action: Starscape Cleric.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Mountain [owner=Khabal, controller=Khabal] moves Hand (Khabal) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Freya Crescent [owner=Khabal, controller=Khabal] moves Hand (Khabal) -> Stack (CastSpell).
+- Turn 1, seq 10: Freya Crescent [owner=Khabal, controller=Khabal] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 24: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 27: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 28: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 30: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 44: Plains [owner/controller metadata unavailable] moves Library (Khabal) -> Hand (Khabal) (Draw).
+- Turn 3, seq 47: Plains [owner=Khabal, controller=Khabal] moves Hand (Khabal) -> Battlefield (PlayLand).
+- Turn 3, seq 48: Sheltered by Ghosts [owner=Khabal, controller=Khabal] moves Hand (Khabal) -> Stack (CastSpell).
+- Turn 3, seq 52: Sheltered by Ghosts [owner=Khabal, controller=Khabal] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 56: Authority of the Consuls [owner=gian31, controller=gian31] moves Battlefield -> Exile (Exile).
+- Turn 4, seq 76: Authority of the Consuls [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 79: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 82: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 84: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 98: object 300 [owner/controller metadata unavailable] moves Library (Khabal) -> Hand (Khabal) (Draw).
+- Turn 5, seq 101: Plains [owner=Khabal, controller=Khabal] moves Hand (Khabal) -> Battlefield (PlayLand).
+- Turn 6, seq 121: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 124: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 125: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 127: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 131: Lightning Helix [owner=Khabal, controller=Khabal] moves Hand (Khabal) -> Stack (CastSpell).
+- Turn 6, seq 135: Lightning Helix [owner=Khabal, controller=Khabal] moves Stack -> Graveyard (Khabal) (Resolve).
+- Turn 6, seq 135: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 7, seq 147: Practiced Scrollsmith [owner/controller metadata unavailable] moves Library (Khabal) -> Hand (Khabal) (Draw).
+- Turn 7, seq 150: Plains [owner=Khabal, controller=Khabal] moves Hand (Khabal) -> Battlefield (PlayLand).
+- Turn 7, seq 151: Practiced Scrollsmith [owner=Khabal, controller=Khabal] moves Hand (Khabal) -> Stack (CastSpell).
+- Turn 7, seq 153: Practiced Scrollsmith [owner=Khabal, controller=Khabal] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 159: Lightning Helix [owner=Khabal, controller=Khabal] moves Graveyard (Khabal) -> Exile (Exile).
+- Turn 8, seq 179: Hero's Downfall [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 190: Hero's Downfall [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 194: Practiced Scrollsmith [owner=Khabal, controller=Khabal] moves Battlefield -> Graveyard (Khabal) (Destroy).
+- Turn 8, seq 194: Hero's Downfall [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 9, seq 200: Adelbert Steiner [owner/controller metadata unavailable] moves Library (Khabal) -> Hand (Khabal) (Draw).
+- Turn 9, seq 203: Adelbert Steiner [owner=Khabal, controller=Khabal] moves Hand (Khabal) -> Stack (CastSpell).
+- Turn 9, seq 205: Adelbert Steiner [owner=Khabal, controller=Khabal] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 206: Lightning Helix [owner=Khabal, controller=Khabal] moves Exile -> Stack (CastSpell).
+- Turn 9, seq 210: Lightning Helix [owner=Khabal, controller=Khabal] moves Stack -> Graveyard (Khabal) (Resolve).
+- Turn 10, seq 232: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 235: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 237: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 241: Adelbert Steiner [owner=Khabal, controller=Khabal] moves Battlefield -> Exile (Exile).
+- Turn 11, seq 255: Cloud, Planet's Champion [owner/controller metadata unavailable] moves Library (Khabal) -> Hand (Khabal) (Draw).
+- Turn 12, seq 277: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 280: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 281: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 284: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 298: Plains [owner/controller metadata unavailable] moves Library (Khabal) -> Hand (Khabal) (Draw).
+- Turn 13, seq 301: Plains [owner=Khabal, controller=Khabal] moves Hand (Khabal) -> Battlefield (PlayLand).
+- Turn 13, seq 302: Cloud, Planet's Champion [owner=Khabal, controller=Khabal] moves Hand (Khabal) -> Stack (CastSpell).
+- Turn 13, seq 304: Cloud, Planet's Champion [owner=Khabal, controller=Khabal] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 328: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 331: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 14, seq 332: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 334: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 163 becomes object 281 [Mountain].
+- Turn 1, seq 8: object 165 becomes object 282 [Freya Crescent].
+- Turn 2, seq 24: object 228 becomes object 284 [Swamp].
+- Turn 2, seq 27: object 225 becomes object 285 [Plains].
+- Turn 2, seq 28: object 223 becomes object 286 [Authority of the Consuls].
+- Turn 3, seq 44: object 168 becomes object 288 [Plains].
+- Turn 3, seq 47: object 166 becomes object 289 [Plains].
+- Turn 3, seq 48: object 164 becomes object 290 [Sheltered by Ghosts].
+- Turn 3, seq 56: object 286 becomes object 294 [Authority of the Consuls].
+- Turn 4, seq 76: object 229 becomes object 295 [Authority of the Consuls].
+- Turn 4, seq 79: object 227 becomes object 296 [Scoured Barrens].
+- Turn 4, seq 82: object 295 becomes object 298 [Authority of the Consuls].
+- Turn 5, seq 98: object 169 becomes object 300 [object 169].
+- Turn 5, seq 101: object 167 becomes object 301 [Plains].
+- Turn 6, seq 121: object 230 becomes object 302 [Makeshift Binding].
+- Turn 6, seq 124: object 284 becomes object 303 [Swamp].
+- Turn 6, seq 125: object 224 becomes object 304 [Marauding Blight-Priest].
+- Turn 6, seq 131: object 161 becomes object 308 [Lightning Helix].
+- Turn 6, seq 135: object 308 becomes object 311 [Lightning Helix].
+- Turn 6, seq 135: object 304 becomes object 312 [Marauding Blight-Priest].
+- Turn 7, seq 147: object 170 becomes object 313 [Practiced Scrollsmith].
+- Turn 7, seq 150: object 288 becomes object 314 [Plains].
+- Turn 7, seq 151: object 313 becomes object 315 [Practiced Scrollsmith].
+- Turn 7, seq 159: object 311 becomes object 321 [Lightning Helix].
+- Turn 8, seq 179: object 231 becomes object 322 [Hero's Downfall].
+- Turn 8, seq 190: object 322 becomes object 323 [Hero's Downfall].
+- Turn 8, seq 194: object 315 becomes object 327 [Practiced Scrollsmith].
+- Turn 8, seq 194: object 323 becomes object 328 [Hero's Downfall].
+- Turn 9, seq 200: object 171 becomes object 329 [Adelbert Steiner].
+- Turn 9, seq 203: object 329 becomes object 330 [Adelbert Steiner].
+- Turn 9, seq 206: object 321 becomes object 334 [Lightning Helix].
+- Turn 9, seq 210: object 334 becomes object 337 [Lightning Helix].
+- Turn 10, seq 232: object 232 becomes object 338 [Starscape Cleric].
+- Turn 10, seq 235: object 221 becomes object 339 [Makeshift Binding].
+- Turn 10, seq 241: object 330 becomes object 344 [Adelbert Steiner].
+- Turn 11, seq 255: object 172 becomes object 345 [Cloud, Planet's Champion].
+- Turn 12, seq 277: object 233 becomes object 346 [Swamp].
+- Turn 12, seq 280: object 346 becomes object 347 [Swamp].
+- Turn 12, seq 281: object 338 becomes object 348 [Starscape Cleric].
+- Turn 13, seq 298: object 173 becomes object 351 [Plains].
+- Turn 13, seq 301: object 351 becomes object 352 [Plains].
+- Turn 13, seq 302: object 345 becomes object 353 [Cloud, Planet's Champion].
+- Turn 14, seq 328: object 234 becomes object 361 [Swamp].
+- Turn 14, seq 331: object 361 becomes object 362 [Swamp].
+- Turn 14, seq 332: object 222 becomes object 363 [Bloodthirsty Conqueror].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: Khabal plays Mountain (object 281) from Hand (Khabal) to Battlefield.
+- Turn 2: gian31 plays Plains (object 285) from Hand (gian31) to Battlefield.
+- Turn 3: Khabal plays Plains (object 289) from Hand (Khabal) to Battlefield.
+- Turn 4: gian31 plays Scoured Barrens (object 296) from Hand (gian31) to Battlefield.
+- Turn 5: Khabal plays Plains (object 301) from Hand (Khabal) to Battlefield.
+- Turn 6: gian31 plays Swamp (object 303) from Hand (gian31) to Battlefield.
+- Turn 7: Khabal plays Plains (object 314) from Hand (Khabal) to Battlefield.
+- Turn 12: gian31 plays Swamp (object 347) from Hand (gian31) to Battlefield.
+- Turn 13: Khabal plays Plains (object 352) from Hand (Khabal) to Battlefield.
+- Turn 14: gian31 plays Swamp (object 362) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 14: ordered adjacent records Bloodthirsty Conqueror -> Starscape Cleric; observed repetitions=35; net life: Khabal -35, gian31 +36. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Bloodthirsty Conqueror=35, Starscape Cleric=35.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 14: ordered adjacent records Bloodthirsty Conqueror -> Starscape Cleric; observed repetitions=35 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Starscape Cleric: casts=1; abilities=36 (triggered=36, activated=0) across turns [12, 13, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=36, other=1
+  observed effects: life -1, synthetic event
+- Bloodthirsty Conqueror: casts=1; abilities=35 (triggered=35, activated=0) across turns [14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=35, other=0
+  observed effects: life +1, life +2
+- Authority of the Consuls: casts=2; abilities=3 (triggered=3, activated=0) across turns [2, 4, 7, 9, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=0
+  observed effects: life +1
+- Lightning Helix: casts=2 across turns [9, 6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=2, life_changes=3, other=1
+  observed effects: 3 damage, life +3, life -3, synthetic event
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Practiced Scrollsmith: casts=1; abilities=1 (triggered=1, activated=0) across turns [7, 7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: exile
+- Sheltered by Ghosts: casts=1; abilities=1 (triggered=1, activated=0) across turns [3, 3]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: exile
+- Adelbert Steiner: casts=1 across turns [9]
+- Cloud, Planet's Champion: casts=1 across turns [13]
+- Freya Crescent: casts=1 across turns [1]
+- Hero's Downfall: casts=1 across turns [8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Marauding Blight-Priest: casts=1 across turns [6]
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [4]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 3 - DeclareAttack, DeclareBlock (active=Khabal)
+  attacker: Freya Crescent (Khabal) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 5 - DeclareAttack, DeclareBlock (active=Khabal)
+  attacker: Freya Crescent (Khabal) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=Khabal)
+  attacker: Freya Crescent (Khabal) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=Khabal)
+  attacker: Freya Crescent (Khabal) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=Khabal)
+  attacker: Freya Crescent (Khabal) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 - DeclareAttack, DeclareBlock (active=Khabal)
+  attacker: Freya Crescent (Khabal) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 14 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> Khabal; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 2 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: Khabal loses 1 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 221: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 222: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 223: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 224: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 225: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 226: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 227: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 281: Mountain | controller=Khabal | owner=Khabal | zone=Battlefield (latest_object_observation)
+- 282: Freya Crescent | controller=Khabal | owner=Khabal | zone=Battlefield (latest_object_observation)
+- 284: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 285: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 286: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 289: Plains | controller=Khabal | owner=Khabal | zone=Battlefield (latest_object_observation)
+- 290: Sheltered by Ghosts | controller=Khabal | owner=Khabal | zone=Stack (latest_object_observation)
+- 293: object 293 | controller=Khabal | owner=Khabal | zone=unknown (inferred unknown) (latest_object_observation)
+- 294: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 295: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 296: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 297: object 297 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 298: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 301: Plains | controller=Khabal | owner=Khabal | zone=Battlefield (latest_object_observation)
+- 302: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 303: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 304: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 308: Lightning Helix | controller=Khabal | owner=Khabal | zone=Stack (latest_object_observation)
+- 311: Lightning Helix | controller=Khabal | owner=Khabal | zone=Hand (latest_object_observation)
+- 312: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 314: Plains | controller=Khabal | owner=Khabal | zone=Battlefield (latest_object_observation)
+- 315: Practiced Scrollsmith | controller=Khabal | owner=Khabal | zone=Battlefield (latest_object_observation)
+- 319: object 319 | controller=Khabal | owner=Khabal | zone=unknown (inferred unknown) (latest_object_observation)
+- 320: object 320 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 321: Lightning Helix | controller=Khabal | owner=Khabal | zone=Exile (latest_object_observation)
+- 322: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 323: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 327: Practiced Scrollsmith | controller=Khabal | owner=Khabal | zone=Graveyard (latest_object_observation)
+- 328: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 330: Adelbert Steiner | controller=Khabal | owner=Khabal | zone=Battlefield (latest_object_observation)
+- 333: object 333 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 334: Lightning Helix | controller=Khabal | owner=Khabal | zone=Stack (latest_object_observation)
+- 337: Lightning Helix | controller=Khabal | owner=Khabal | zone=Graveyard (latest_object_observation)
+- 338: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 339: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 343: object 343 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 344: Adelbert Steiner | controller=Khabal | owner=Khabal | zone=Exile (latest_object_observation)
+- 346: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 347: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 348: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 352: Plains | controller=Khabal | owner=Khabal | zone=Battlefield (latest_object_observation)
+- 353: Cloud, Planet's Champion | controller=Khabal | owner=Khabal | zone=Battlefield (latest_object_observation)
+- 359: object 359 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 360: object 360 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 361: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 362: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 363: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 369: object 369 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 370: object 370 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 371: object 371 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 372: object 372 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 373: object 373 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 374: object 374 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 375: object 375 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 376: object 376 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 377: object 377 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 378: object 378 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 379: object 379 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 380: object 380 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 381: object 381 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 382: object 382 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 383: object 383 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 384: object 384 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 385: object 385 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 386: object 386 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 387: object 387 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 388: object 388 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 389: object 389 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 390: object 390 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 391: object 391 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 392: object 392 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 393: object 393 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 394: object 394 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 395: object 395 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 396: object 396 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 397: object 397 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 398: object 398 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 399: object 399 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 400: object 400 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 401: object 401 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 402: object 402 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 403: object 403 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 404: object 404 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 405: object 405 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 406: object 406 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 407: object 407 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 408: object 408 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 409: object 409 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 410: object 410 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 411: object 411 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 412: object 412 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 413: object 413 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 414: object 414 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 415: object 415 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 416: object 416 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 417: object 417 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 418: object 418 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 419: object 419 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 420: object 420 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 421: object 421 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 422: object 422 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 423: object 423 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 424: object 424 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 425: object 425 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 426: object 426 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 427: object 427 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 428: object 428 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 429: object 429 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 430: object 430 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 431: object 431 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 432: object 432 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 433: object 433 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 434: object 434 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 435: object 435 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 436: object 436 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 437: object 437 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 438: object 438 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 439: object 439 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Khabal: 19 total items
+  zones: Battlefield=9, Exile=2, Graveyard=2, Hand=1, Stack=3, unknown=2
+  objects: Lightning Helix x5, Plains x4, Adelbert Steiner x2, Practiced Scrollsmith x2, Cloud, Planet's Champion, Freya Crescent, Mountain, Sheltered by Ghosts, object 293, object 319
+gian31: 106 total items
+  zones: Battlefield=10, Exile=1, Hand=14, Stack=4, unknown=77
+  objects: Swamp x6, Authority of the Consuls x5, Hero's Downfall x3, Makeshift Binding x3, Marauding Blight-Priest x3, Bloodthirsty Conqueror x2, Plains x2, Scoured Barrens x2, Starscape Cleric x2, Stroke of Midnight, object 297, object 320
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+Khabal:
+  Battlefield (9): Adelbert Steiner, Cloud, Planet's Champion, Freya Crescent, Mountain, Plains, Plains, Plains, Plains, Practiced Scrollsmith
+  Graveyard: 2 card(s)
+gian31:
+  Battlefield (10): Bloodthirsty Conqueror, Hero's Downfall, Marauding Blight-Priest, Marauding Blight-Priest, Plains, Scoured Barrens, Starscape Cleric, Swamp, Swamp, Swamp
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+79 objects have no resolved final zone and are omitted from the known board state.
+Khabal: 2 unknown object(s)
+gian31: 77 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=15, Stack=7
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Khabal:
+  Battlefield (8): Mountain, Freya Crescent, Plains, Sheltered by Ghosts, Plains, Plains, Plains, Cloud, Planet's Champion
+  Graveyard (2): Practiced Scrollsmith, Lightning Helix
+  Exile (1): Adelbert Steiner
+gian31:
+  Battlefield (9): Plains, Scoured Barrens, Authority of the Consuls, Swamp, Makeshift Binding, Swamp, Starscape Cleric, Swamp, Bloodthirsty Conqueror
+  Graveyard (2): Marauding Blight-Priest, Hero's Downfall
+  Exile (1): Authority of the Consuls
+Known non-persistent entries (counts only):
+  Khabal: Hand=1, Limbo=1
+  gian31: Hand=2, Limbo=4, Pending=1
+  unknown: Hand=1, Library=93, Limbo=5
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: Khabal Battlefield=2
+- Turn 2: Khabal Battlefield=2; gian31 Battlefield=2
+- Turn 3: Khabal Battlefield=4; gian31 Battlefield=1; gian31 Exile=1
+- Turn 4: Khabal Battlefield=4; gian31 Battlefield=3; gian31 Exile=1
+- Turn 5: Khabal Battlefield=5; gian31 Battlefield=3; gian31 Exile=1
+- Turn 6: Khabal Battlefield=5; Khabal Graveyard=1; gian31 Battlefield=4; gian31 Graveyard=1; gian31 Exile=1
+- Turn 7: Khabal Battlefield=7; Khabal Exile=1; gian31 Battlefield=4; gian31 Graveyard=1; gian31 Exile=1
+- Turn 8: Khabal Battlefield=6; Khabal Graveyard=1; Khabal Exile=1; gian31 Battlefield=4; gian31 Graveyard=2; gian31 Exile=1
+- Turn 9: Khabal Battlefield=7; Khabal Graveyard=2; gian31 Battlefield=4; gian31 Graveyard=2; gian31 Exile=1
+- Turn 10: Khabal Battlefield=6; Khabal Graveyard=2; Khabal Exile=1; gian31 Battlefield=5; gian31 Graveyard=2; gian31 Exile=1
+- Turn 11: Khabal Battlefield=6; Khabal Graveyard=2; Khabal Exile=1; gian31 Battlefield=5; gian31 Graveyard=2; gian31 Exile=1
+- Turn 12: Khabal Battlefield=6; Khabal Graveyard=2; Khabal Exile=1; gian31 Battlefield=7; gian31 Graveyard=2; gian31 Exile=1
+- Turn 13: Khabal Battlefield=8; Khabal Graveyard=2; Khabal Exile=1; gian31 Battlefield=7; gian31 Graveyard=2; gian31 Exile=1
+- Turn 14: Khabal Battlefield=8; Khabal Graveyard=2; Khabal Exile=1; gian31 Battlefield=9; gian31 Graveyard=2; gian31 Exile=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Freya Crescent resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 2: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Sheltered by Ghosts resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Practiced Scrollsmith resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Adelbert Steiner resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Cloud, Planet's Champion resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
