@@ -1,0 +1,651 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: Agguas, gian31
+Seat map: Seat 1=Agguas, Seat 2=gian31
+Turn range (known): 1 - 11
+Records: 37
+Action chains: 16
+Winner: gian31
+Final life: {'Agguas': -1, 'gian31': 31}
+Lethal combat transition: Agguas 4 -> -1. 2 unblocked attackers and observed P/T modifiers reconcile to 5 power; individual combat assignment unavailable.
+Lethal coverage (normalized): complete; explained=5/5; unexplained=0.
+Match conclusion: Life total reached 0 observed for Agguas.
+Last captured action before match-result payload: Turn 11 (Phase_Combat, Step_DeclareAttack; Ability of Marauding Blight-Priest, seq 296).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 21 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 10 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 10, 11] (raw records=10; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 10 explicit Library -> Hand movement(s); named in the draw record=5, resolved through an explicit identity transition=3, unresolved=2.
+Unresolved draw identities (explicit movements retained): Turn 2, seq 21, object 280; Turn 10, seq 226, object 333.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Plains [219], Swamp [220], Lunar Convocation [221], Bloodletter of Aclazotz [222], Moonrise Cleric [223], Zoraline, Cosmos Caller [224], Bloodletter of Aclazotz [225].
+  - unknown: 7 observed card(s): object 159 [159], object 160 [160], object 161 [161], object 162 [162], object 163 [163], object 164 [164], object 165 [165].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'Agguas': -1, 'gian31': 31}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 11 (Phase_Combat, Step_DeclareAttack; Ability of Marauding Blight-Priest, seq 296).
+Last captured life snapshot: Agguas 4 -> -1 (seq 300).
+Tokens on battlefield at their last observation (not confirmed at match end): Cat [344] controller=Agguas, created Turn 10, last observed Turn 10 seq 238, P/T 2/2; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Cat [345] controller=Agguas, created Turn 10, last observed Turn 10 seq 238, P/T 2/2; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: Agguas reached -1 life; exact lethal-source coverage is reported separately.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Plains.
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Leonin Vanguard.
+- Turn 3: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Lunar Convocation.
+- Turn 4: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Plains, Ajani's Pridemate.
+- Turn 5: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Moonrise Cleric.
+- Turn 6: actions: cards=1, abilities=1; explicit battlefield entries=Plains, Banishing Light; explicit battlefield exits=Lunar Convocation.
+- Turn 7: actions: cards=2, abilities=3; combat snapshots=1; life mutations=3; explicit battlefield entries=Swamp, Authority of the Consuls, Zoraline, Cosmos Caller.
+- Turn 8: actions: cards=0, abilities=0; explicit battlefield entries=Plains.
+- Turn 9: actions: cards=1, abilities=7; combat snapshots=1; life mutations=7; explicit battlefield entries=Marauding Blight-Priest.
+- Turn 10: actions: cards=1, abilities=9; life mutations=7; explicit battlefield entries=Plains, Regal Caracal.
+- Turn 11: actions: cards=0, abilities=8; combat snapshots=1; life mutations=9; explicit battlefield entries=Scoured Barrens.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [279] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [279]
+
+Turn 2
+  - Leonin Vanguard [valid_resolution_no_immediate_mutation, seq=27] (active=Agguas, phase=Phase_Main1, controller=Agguas, owner=Agguas, source_object=282)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Leonin Vanguard resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Leonin Vanguard (object 282) Hand (Agguas) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leonin Vanguard (object 282) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 280 [280] Library (Agguas) -> Hand (Agguas) (Draw; GRE sequence 21).
+      Plains [281] Hand (Agguas) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [279]
+      Agguas: Battlefield: Leonin Vanguard [282], Plains [281]
+
+Turn 3
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=47] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=286)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 286) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 286) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [284] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 41).
+      Swamp [285] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Lunar Convocation [286], Plains [279], Swamp [285]
+      Agguas: Battlefield: Leonin Vanguard [282], Plains [281]
+
+Turn 4
+  - Ajani's Pridemate [valid_resolution_no_immediate_mutation, seq=67] (active=Agguas, phase=Phase_Main1, controller=Agguas, owner=Agguas, source_object=291)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ajani's Pridemate resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ajani's Pridemate (object 291) Hand (Agguas) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ajani's Pridemate (object 291) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=Agguas; frames: DeclareAttack -> DeclareBlock):
+      attackers: Leonin Vanguard [282] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Regal Caracal [289] Library (Agguas) -> Hand (Agguas) (Draw; GRE sequence 61).
+      Plains [290] Hand (Agguas) -> Battlefield (PlayLand; GRE sequence 64).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Lunar Convocation [286], Plains [279], Swamp [285]
+      Agguas: Battlefield: Ajani's Pridemate [291], Leonin Vanguard [282], Plains [281], Plains [290]
+
+Turn 5
+  - Moonrise Cleric [valid_resolution_no_immediate_mutation, seq=93] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=296)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Moonrise Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Moonrise Cleric (object 296) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Moonrise Cleric (object 296) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [294] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 87).
+      Plains [295] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 90).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Lunar Convocation [286], Moonrise Cleric [296], Plains [279], Plains [295], Swamp [285]
+      Agguas: Battlefield: Ajani's Pridemate [291], Leonin Vanguard [282], Plains [281], Plains [290]
+
+Turn 6
+  - Banishing Light [valid_resolution_no_immediate_mutation, seq=113] (active=Agguas, phase=Phase_Main1, controller=Agguas, owner=Agguas, source_object=302)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Banishing Light resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Banishing Light (object 302) Hand (Agguas) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Banishing Light (object 302) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Banishing Light [observed_semantic_effect, seq=117] (active=Agguas, phase=Phase_Main1, controller=Agguas, owner=Agguas, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Banishing Light: exiles Lunar Convocation.
+      explicit effect object references: Lunar Convocation [286], Lunar Convocation [307] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Lunar Convocation (object 307) Battlefield -> Exile (Exile; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [300] Library (Agguas) -> Hand (Agguas) (Draw; GRE sequence 107).
+      Plains [301] Hand (Agguas) -> Battlefield (PlayLand; GRE sequence 110).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Moonrise Cleric [296], Plains [279], Plains [295], Swamp [285]; Exile: Lunar Convocation [307]
+      Agguas: Battlefield: Ajani's Pridemate [291], Banishing Light [302], Leonin Vanguard [282], Plains [281], Plains [290], Plains [301]
+
+Turn 7
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=138] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=310)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 310) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 310) Stack -> Battlefield (Resolve; shared object ID)
+  - Zoraline, Cosmos Caller [valid_resolution_no_immediate_mutation, seq=141] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=312)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Zoraline, Cosmos Caller resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Zoraline, Cosmos Caller (object 312) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Zoraline, Cosmos Caller (object 312) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Zoraline, Cosmos Caller [valid_resolution_no_immediate_mutation, seq=143] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=312, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Zoraline, Cosmos Caller resolves with no immediate observed mutation.
+  - Ability of Zoraline, Cosmos Caller [observed_semantic_effect, seq=152] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=312, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 143 and 152; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life +1
+      narrative: Ability of Zoraline, Cosmos Caller: gian31 gains 1 life.
+  - Ability of Moonrise Cleric [observed_semantic_effect, seq=154] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=296, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Moonrise Cleric: gian31 gains 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Moonrise Cleric [296] (unblocked, observed P/T 2/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Agguas -2; gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 19 -> 20
+    life: gian31 20 -> 21
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Agguas 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Authority of the Consuls [308] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 132).
+      Swamp [309] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 135).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [310], Moonrise Cleric [296], Plains [279], Plains [295], Swamp [285], Swamp [309], Zoraline, Cosmos Caller [312]; Exile: Lunar Convocation [307]
+      Agguas: Battlefield: Ajani's Pridemate [291], Banishing Light [302], Leonin Vanguard [282], Plains [281], Plains [290], Plains [301]
+
+Turn 8
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [319] Library (Agguas) -> Hand (Agguas) (Draw; GRE sequence 168).
+      Plains [320] Hand (Agguas) -> Battlefield (PlayLand; GRE sequence 171).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [310], Moonrise Cleric [296], Plains [279], Plains [295], Swamp [285], Swamp [309], Zoraline, Cosmos Caller [312]; Exile: Lunar Convocation [307]
+      Agguas: Battlefield: Ajani's Pridemate [291], Banishing Light [302], Leonin Vanguard [282], Plains [281], Plains [290], Plains [301], Plains [320]
+
+Turn 9
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=191] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 322) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 322) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Zoraline, Cosmos Caller [valid_resolution_no_immediate_mutation, seq=200] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=312, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Zoraline, Cosmos Caller resolves with no immediate observed mutation.
+  - Ability of Zoraline, Cosmos Caller [observed_semantic_effect, seq=202] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=312, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 200 and 202; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: life +1
+      narrative: Ability of Zoraline, Cosmos Caller: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=204] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Agguas loses 1 life.
+  - Ability of Zoraline, Cosmos Caller [observed_semantic_effect, seq=206] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=312, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Zoraline, Cosmos Caller: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=208] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Agguas loses 1 life.
+  - Ability of Moonrise Cleric [observed_semantic_effect, seq=210] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=296, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Moonrise Cleric: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=212] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Agguas loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Moonrise Cleric [296] (unblocked, observed P/T 2/3), Zoraline, Cosmos Caller [312] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Agguas -8; gian31 +3 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    life: Agguas 18 -> 17
+    life: gian31 22 -> 23
+    life: Agguas 17 -> 16
+    life: gian31 23 -> 24
+    life: Agguas 16 -> 15
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): Agguas 15 -> 10
+    additional protocol-observed zone movements not assigned to an action chain:
+      Marauding Blight-Priest [321] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 186).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [310], Marauding Blight-Priest [322], Moonrise Cleric [296], Plains [279], Plains [295], Swamp [285], Swamp [309], Zoraline, Cosmos Caller [312]; Exile: Lunar Convocation [307]
+      Agguas: Battlefield: Ajani's Pridemate [291], Banishing Light [302], Leonin Vanguard [282], Plains [281], Plains [290], Plains [301], Plains [320]
+
+Turn 10
+  - Regal Caracal [valid_resolution_no_immediate_mutation, seq=232] (active=Agguas, phase=Phase_Main1, controller=Agguas, owner=Agguas, source_object=335)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Regal Caracal resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Regal Caracal (object 335) Hand (Agguas) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Regal Caracal (object 335) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=234] (active=Agguas, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=310, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=236] (active=Agguas, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Agguas loses 1 life.
+  - Ability of Regal Caracal [observed_semantic_effect, seq=238] (active=Agguas, phase=Phase_Main1, controller=Agguas, owner=Agguas, source_object=335, source_last_explicit_zone=Battlefield)
+      effects: token creation, token creation
+      narrative: Ability of Regal Caracal: a token is created; a token is created.
+      explicit effect object references: Cat [344], Cat [345] (role/targeting only where the protocol identifies it)
+      token created: Cat (object 344, controller=Agguas) 2/2; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 341).
+      token created: Cat (object 345, controller=Agguas) 2/2; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 341).
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=241] (active=Agguas, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=310, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=243] (active=Agguas, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Agguas loses 1 life.
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=245] (active=Agguas, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=310, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=247] (active=Agguas, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Agguas loses 1 life.
+  - Ability of Leonin Vanguard [observed_semantic_effect, seq=251] (active=Agguas, phase=Phase_Combat, step=Step_BeginCombat, controller=Agguas, owner=Agguas, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, life +1
+      narrative: Ability of Leonin Vanguard: Leonin Vanguard gets +1/+1; Agguas gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=253] (active=Agguas, phase=Phase_Combat, step=Step_BeginCombat, controller=Agguas, owner=Agguas, source_object=291, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [291].
+    net observed life change this turn: Agguas -2; gian31 +3 (individual changes below; gains and losses may offset)
+    life: gian31 24 -> 25
+    life: Agguas 10 -> 9
+    life: gian31 25 -> 26
+    life: Agguas 9 -> 8
+    life: gian31 26 -> 27
+    life: Agguas 8 -> 7
+    life: Agguas 7 -> 8
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 333 [333] Library (Agguas) -> Hand (Agguas) (Draw; GRE sequence 226).
+      Plains [334] Hand (Agguas) -> Battlefield (PlayLand; GRE sequence 229).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [310], Marauding Blight-Priest [322], Moonrise Cleric [296], Plains [279], Plains [295], Swamp [285], Swamp [309], Zoraline, Cosmos Caller [312]; Exile: Lunar Convocation [307]
+      Agguas: Battlefield: Ajani's Pridemate [291], Banishing Light [302], Leonin Vanguard [282], Plains [281], Plains [290], Plains [301], Plains [320], Plains [334], Regal Caracal [335]
+
+Turn 11
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=271] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=353, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=273] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Agguas loses 1 life.
+  - Ability of Zoraline, Cosmos Caller [observed_semantic_effect, seq=286] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=312, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Zoraline, Cosmos Caller: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=288] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Agguas loses 1 life.
+  - Ability of Zoraline, Cosmos Caller [observed_semantic_effect, seq=290] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=312, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Zoraline, Cosmos Caller: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=292] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Agguas loses 1 life.
+  - Ability of Moonrise Cleric [observed_semantic_effect, seq=294] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=296, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Moonrise Cleric: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=296] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=322, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: Agguas loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Moonrise Cleric [296] (unblocked, observed P/T 2/3), Zoraline, Cosmos Caller [312] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Agguas -9; gian31 +4 (individual changes below; gains and losses may offset)
+    life: gian31 27 -> 28
+    life: Agguas 8 -> 7
+    life: gian31 28 -> 29
+    life: Agguas 7 -> 6
+    life: gian31 29 -> 30
+    life: Agguas 6 -> 5
+    life: gian31 30 -> 31
+    life: Agguas 5 -> 4
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): Agguas 4 -> -1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [352] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 266).
+      Scoured Barrens [353] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 269).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [310], Marauding Blight-Priest [322], Moonrise Cleric [296], Plains [279], Plains [295], Scoured Barrens [353], Swamp [285], Swamp [309], Zoraline, Cosmos Caller [312]; Exile: Lunar Convocation [307]
+      Agguas: Battlefield: Ajani's Pridemate [291], Banishing Light [302], Leonin Vanguard [282], Plains [281], Plains [290], Plains [301], Plains [320], Plains [334], Regal Caracal [335]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- No life mutation without an exact same-record source was observed.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 11: Agguas 4 -> -1 (required change 5). Explained by exact same-record evidence: 0/5; semantically attributed: 0/5; unexplained residual: 0/5.
+  Fully reconciled from observed combat state and modifiers: 5/5 (pre-modifier power=5; explicit modifier power=+0; reconstructed post-modifier power=5; individual assignment unavailable).
+  Combat snapshot observed at or before lethal: Turn 11; attackers=Moonrise Cleric [296], Zoraline, Cosmos Caller [312]; observed snapshot power total=5; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 11, Ability of Marauding Blight-Priest (seq 296).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 2 token creations observed; 2 active as last observed; 0 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Cat [344] controller=Agguas; created Turn 10 (2/2); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 10, object 344 (latest observed P/T 2/2; current zone unconfirmed).
+- Cat [345] controller=Agguas; created Turn 10 (2/2); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 10, object 345 (latest observed P/T 2/2; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 21: object 280 [owner/controller metadata unavailable] moves Library (Agguas) -> Hand (Agguas) (Draw).
+- Turn 2, seq 24: Plains [owner=Agguas, controller=Agguas] moves Hand (Agguas) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Leonin Vanguard [owner=Agguas, controller=Agguas] moves Hand (Agguas) -> Stack (CastSpell).
+- Turn 2, seq 27: Leonin Vanguard [owner=Agguas, controller=Agguas] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 41: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 44: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 47: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 61: Regal Caracal [owner/controller metadata unavailable] moves Library (Agguas) -> Hand (Agguas) (Draw).
+- Turn 4, seq 64: Plains [owner=Agguas, controller=Agguas] moves Hand (Agguas) -> Battlefield (PlayLand).
+- Turn 4, seq 65: Ajani's Pridemate [owner=Agguas, controller=Agguas] moves Hand (Agguas) -> Stack (CastSpell).
+- Turn 4, seq 67: Ajani's Pridemate [owner=Agguas, controller=Agguas] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 87: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 90: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 91: Moonrise Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 93: Moonrise Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 107: Plains [owner/controller metadata unavailable] moves Library (Agguas) -> Hand (Agguas) (Draw).
+- Turn 6, seq 110: Plains [owner=Agguas, controller=Agguas] moves Hand (Agguas) -> Battlefield (PlayLand).
+- Turn 6, seq 111: Banishing Light [owner=Agguas, controller=Agguas] moves Hand (Agguas) -> Stack (CastSpell).
+- Turn 6, seq 113: Banishing Light [owner=Agguas, controller=Agguas] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 117: Lunar Convocation [owner=gian31, controller=gian31] moves Battlefield -> Exile (Exile).
+- Turn 7, seq 132: Authority of the Consuls [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 135: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 136: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 138: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 139: Zoraline, Cosmos Caller [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 141: Zoraline, Cosmos Caller [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 168: Plains [owner/controller metadata unavailable] moves Library (Agguas) -> Hand (Agguas) (Draw).
+- Turn 8, seq 171: Plains [owner=Agguas, controller=Agguas] moves Hand (Agguas) -> Battlefield (PlayLand).
+- Turn 9, seq 186: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 189: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 191: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 226: object 333 [owner/controller metadata unavailable] moves Library (Agguas) -> Hand (Agguas) (Draw).
+- Turn 10, seq 229: Plains [owner=Agguas, controller=Agguas] moves Hand (Agguas) -> Battlefield (PlayLand).
+- Turn 10, seq 230: Regal Caracal [owner=Agguas, controller=Agguas] moves Hand (Agguas) -> Stack (CastSpell).
+- Turn 10, seq 232: Regal Caracal [owner=Agguas, controller=Agguas] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 266: Scoured Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 269: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 219 becomes object 279 [Plains].
+- Turn 2, seq 21: object 166 becomes object 280 [object 166].
+- Turn 2, seq 24: object 160 becomes object 281 [Plains].
+- Turn 2, seq 25: object 163 becomes object 282 [Leonin Vanguard].
+- Turn 3, seq 41: object 226 becomes object 284 [Plains].
+- Turn 3, seq 44: object 220 becomes object 285 [Swamp].
+- Turn 3, seq 45: object 221 becomes object 286 [Lunar Convocation].
+- Turn 4, seq 61: object 167 becomes object 289 [Regal Caracal].
+- Turn 4, seq 64: object 164 becomes object 290 [Plains].
+- Turn 4, seq 65: object 162 becomes object 291 [Ajani's Pridemate].
+- Turn 5, seq 87: object 227 becomes object 294 [Swamp].
+- Turn 5, seq 90: object 284 becomes object 295 [Plains].
+- Turn 5, seq 91: object 223 becomes object 296 [Moonrise Cleric].
+- Turn 6, seq 107: object 168 becomes object 300 [Plains].
+- Turn 6, seq 110: object 300 becomes object 301 [Plains].
+- Turn 6, seq 111: object 159 becomes object 302 [Banishing Light].
+- Turn 6, seq 117: object 286 becomes object 307 [Lunar Convocation].
+- Turn 7, seq 132: object 228 becomes object 308 [Authority of the Consuls].
+- Turn 7, seq 135: object 294 becomes object 309 [Swamp].
+- Turn 7, seq 136: object 308 becomes object 310 [Authority of the Consuls].
+- Turn 7, seq 139: object 224 becomes object 312 [Zoraline, Cosmos Caller].
+- Turn 8, seq 168: object 169 becomes object 319 [Plains].
+- Turn 8, seq 171: object 319 becomes object 320 [Plains].
+- Turn 9, seq 186: object 229 becomes object 321 [Marauding Blight-Priest].
+- Turn 9, seq 189: object 321 becomes object 322 [Marauding Blight-Priest].
+- Turn 10, seq 226: object 170 becomes object 333 [object 170].
+- Turn 10, seq 229: object 165 becomes object 334 [Plains].
+- Turn 10, seq 230: object 289 becomes object 335 [Regal Caracal].
+- Turn 11, seq 266: object 230 becomes object 352 [Scoured Barrens].
+- Turn 11, seq 269: object 352 becomes object 353 [Scoured Barrens].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Plains (object 279) from Hand (gian31) to Battlefield.
+- Turn 2: Agguas plays Plains (object 281) from Hand (Agguas) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 285) from Hand (gian31) to Battlefield.
+- Turn 4: Agguas plays Plains (object 290) from Hand (Agguas) to Battlefield.
+- Turn 5: gian31 plays Plains (object 295) from Hand (gian31) to Battlefield.
+- Turn 6: Agguas plays Plains (object 301) from Hand (Agguas) to Battlefield.
+- Turn 7: gian31 plays Swamp (object 309) from Hand (gian31) to Battlefield.
+- Turn 8: Agguas plays Plains (object 320) from Hand (Agguas) to Battlefield.
+- Turn 10: Agguas plays Plains (object 334) from Hand (Agguas) to Battlefield.
+- Turn 11: gian31 plays Scoured Barrens (object 353) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 9: ordered adjacent records Zoraline, Cosmos Caller -> Marauding Blight-Priest; observed repetitions=2; net life: Agguas -2, gian31 +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Marauding Blight-Priest=3, Zoraline, Cosmos Caller=3.
+  Individual ability records remain in the timeline.
+- Turn 10: ordered adjacent records Authority of the Consuls -> Marauding Blight-Priest; observed repetitions=3; net life: Agguas -3, gian31 +3. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Authority of the Consuls=3, Marauding Blight-Priest=3.
+  Individual ability records remain in the timeline.
+- Turn 11: ordered adjacent records Marauding Blight-Priest -> Zoraline, Cosmos Caller; observed repetitions=2; net life: Agguas -2, gian31 +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Marauding Blight-Priest=4, Zoraline, Cosmos Caller=2.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 9: ordered adjacent records Zoraline, Cosmos Caller -> Marauding Blight-Priest; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+- Turn 10: ordered adjacent records Authority of the Consuls -> Marauding Blight-Priest; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+- Turn 11: ordered adjacent records Marauding Blight-Priest -> Zoraline, Cosmos Caller; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Marauding Blight-Priest: casts=1; abilities=10 (triggered=10, activated=0) across turns [9, 9, 9, 9, 10, 10, 10, 11, 11, 11, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=10, other=3
+  observed effects: life -1, synthetic event
+- Zoraline, Cosmos Caller: casts=1; abilities=7 (triggered=7, activated=0) across turns [7, 7, 7, 9, 9, 9, 11, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=0
+  observed effects: life +1
+- Authority of the Consuls: casts=1; abilities=3 (triggered=3, activated=0) across turns [7, 10, 10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=0
+  observed effects: life +1
+- Moonrise Cleric: casts=1; abilities=3 (triggered=3, activated=0) across turns [5, 7, 9, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=0
+  observed effects: life +1
+- Ajani's Pridemate: casts=1; abilities=1 (triggered=1, activated=0) across turns [4, 10]
+  observed effect totals: draws=0, tokens=0, counters=1, returns=0, damage=0, life_changes=0, other=1
+  observed effects: +1 counter(s), P/T +1/+1
+- Banishing Light: casts=1; abilities=1 (triggered=1, activated=0) across turns [6, 6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: exile
+- Leonin Vanguard: casts=1; abilities=1 (triggered=1, activated=0) across turns [2, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: P/T +1/+1, life +1
+- Regal Caracal: casts=1; abilities=1 (triggered=1, activated=0) across turns [10, 10]
+  observed effect totals: draws=0, tokens=2, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Lunar Convocation: casts=1 across turns [3]
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 4 - DeclareAttack, DeclareBlock (active=Agguas)
+  attacker: Leonin Vanguard (Agguas) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Moonrise Cleric (gian31) -> Agguas; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Moonrise Cleric (gian31) -> Agguas; unblocked in this observed snapshot
+  attacker: Zoraline, Cosmos Caller (gian31) -> Agguas; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Moonrise Cleric (gian31) -> Agguas; unblocked in this observed snapshot
+  attacker: Zoraline, Cosmos Caller (gian31) -> Agguas; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 7: Ability of Zoraline, Cosmos Caller (active=gian31) - Ability of Zoraline, Cosmos Caller: gian31 gains 1 life.
+- Turn 7: Ability of Moonrise Cleric (active=gian31) - Ability of Moonrise Cleric: gian31 gains 1 life.
+- Turn 9: Ability of Zoraline, Cosmos Caller (active=gian31) - Ability of Zoraline, Cosmos Caller resolves with no immediate observed mutation.
+- Turn 9: Ability of Zoraline, Cosmos Caller (active=gian31) - Ability of Zoraline, Cosmos Caller: gian31 gains 1 life.
+- Turn 9: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: Agguas loses 1 life.
+- Turn 9: Ability of Zoraline, Cosmos Caller (active=gian31) - Ability of Zoraline, Cosmos Caller: gian31 gains 1 life.
+- Turn 9: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: Agguas loses 1 life.
+- Turn 9: Ability of Moonrise Cleric (active=gian31) - Ability of Moonrise Cleric: gian31 gains 1 life.
+- Turn 9: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: Agguas loses 1 life.
+- Turn 10: Ability of Leonin Vanguard (active=Agguas) - Ability of Leonin Vanguard: Leonin Vanguard gets +1/+1; Agguas gains 1 life.
+- Turn 10: Ability of Ajani's Pridemate (active=Agguas) - Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to target.
+- Turn 11: Ability of Zoraline, Cosmos Caller (active=gian31) - Ability of Zoraline, Cosmos Caller: gian31 gains 1 life.
+- Turn 11: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: Agguas loses 1 life.
+- Turn 11: Ability of Zoraline, Cosmos Caller (active=gian31) - Ability of Zoraline, Cosmos Caller: gian31 gains 1 life.
+- Turn 11: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: Agguas loses 1 life.
+- Turn 11: Ability of Moonrise Cleric (active=gian31) - Ability of Moonrise Cleric: gian31 gains 1 life.
+- Turn 11: Ability of Marauding Blight-Priest (active=gian31) - Ability of Marauding Blight-Priest: Agguas loses 1 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 219: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 220: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 221: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 222: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 223: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 224: Zoraline, Cosmos Caller | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 225: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 279: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 281: Plains | controller=Agguas | owner=Agguas | zone=Battlefield (latest_object_observation)
+- 282: Leonin Vanguard | controller=Agguas | owner=Agguas | zone=Battlefield (latest_object_observation)
+- 284: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 285: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 286: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 290: Plains | controller=Agguas | owner=Agguas | zone=Battlefield (latest_object_observation)
+- 291: Ajani's Pridemate | controller=Agguas | owner=Agguas | zone=Battlefield (latest_object_observation)
+- 294: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 295: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 296: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 301: Plains | controller=Agguas | owner=Agguas | zone=Battlefield (latest_object_observation)
+- 302: Banishing Light | controller=Agguas | owner=Agguas | zone=Stack (latest_object_observation)
+- 306: object 306 | controller=Agguas | owner=Agguas | zone=unknown (inferred unknown) (latest_object_observation)
+- 307: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 308: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 309: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 310: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 312: Zoraline, Cosmos Caller | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 316: object 316 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 317: object 317 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 318: object 318 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 320: Plains | controller=Agguas | owner=Agguas | zone=Battlefield (latest_object_observation)
+- 321: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 322: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 326: object 326 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 327: object 327 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 328: object 328 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 329: object 329 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 330: object 330 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 331: object 331 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 332: object 332 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 334: Plains | controller=Agguas | owner=Agguas | zone=Battlefield (latest_object_observation)
+- 335: Regal Caracal | controller=Agguas | owner=Agguas | zone=Battlefield (latest_object_observation)
+- 341: object 341 | controller=Agguas | owner=Agguas | zone=unknown (inferred unknown) (latest_object_observation)
+- 342: object 342 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 343: object 343 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 344: Cat | controller=Agguas | owner=Agguas | zone=Battlefield (latest_object_observation)
+- 345: Cat | controller=Agguas | owner=Agguas | zone=Battlefield (latest_object_observation)
+- 346: object 346 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 347: object 347 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 348: object 348 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 349: object 349 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 350: object 350 | controller=Agguas | owner=Agguas | zone=unknown (inferred unknown) (latest_object_observation)
+- 351: Deal Gone Bad | controller=Agguas | owner=Agguas | zone=unknown (inferred unknown) (latest_object_observation)
+- 352: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 353: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 354: object 354 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 355: object 355 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 356: object 356 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 357: object 357 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 358: object 358 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 359: object 359 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 360: object 360 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 361: object 361 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 362: object 362 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Agguas: 15 total items
+  zones: Battlefield=10, Stack=1, unknown=4
+  objects: Plains x5, Cat x2, Ajani's Pridemate, Banishing Light, Deal Gone Bad, Leonin Vanguard, Regal Caracal, object 306, object 341, object 350
+gian31: 48 total items
+  zones: Battlefield=8, Exile=1, Hand=10, Stack=2, unknown=27
+  objects: Plains x4, Swamp x4, Lunar Convocation x3, Authority of the Consuls x2, Bloodletter of Aclazotz x2, Marauding Blight-Priest x2, Moonrise Cleric x2, Scoured Barrens x2, Zoraline, Cosmos Caller x2, object 316, object 317, object 318
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+Agguas:
+  Battlefield (10): Ajani's Pridemate, Cat, Cat, Leonin Vanguard, Plains, Plains, Plains, Plains, Plains, Regal Caracal
+  Graveyard: 0 card(s)
+gian31:
+  Battlefield (8): Marauding Blight-Priest, Moonrise Cleric, Plains, Plains, Scoured Barrens, Swamp, Swamp, Zoraline, Cosmos Caller
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+31 objects have no resolved final zone and are omitted from the known board state.
+Agguas: 4 unknown object(s)
+gian31: 27 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=10, Stack=3
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Agguas:
+  Battlefield (11): Plains, Leonin Vanguard, Plains, Ajani's Pridemate, Plains, Banishing Light, Plains, Plains, Regal Caracal, Cat, Cat
+gian31:
+  Battlefield (9): Plains, Swamp, Plains, Moonrise Cleric, Swamp, Authority of the Consuls, Zoraline, Cosmos Caller, Marauding Blight-Priest, Scoured Barrens
+  Exile (1): Lunar Convocation
+Known non-persistent entries (counts only):
+  Agguas: Hand=2
+  gian31: Hand=2, Limbo=2
+  unknown: Hand=1, Library=96, Limbo=5
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1
+- Turn 2: Agguas Battlefield=2; gian31 Battlefield=1
+- Turn 3: Agguas Battlefield=2; gian31 Battlefield=3
+- Turn 4: Agguas Battlefield=4; gian31 Battlefield=3
+- Turn 5: Agguas Battlefield=4; gian31 Battlefield=5
+- Turn 6: Agguas Battlefield=6; gian31 Battlefield=4; gian31 Exile=1
+- Turn 7: Agguas Battlefield=6; gian31 Battlefield=7; gian31 Exile=1
+- Turn 8: Agguas Battlefield=7; gian31 Battlefield=7; gian31 Exile=1
+- Turn 9: Agguas Battlefield=7; gian31 Battlefield=8; gian31 Exile=1
+- Turn 10: Agguas Battlefield=9; gian31 Battlefield=8; gian31 Exile=1
+- Turn 11: Agguas Battlefield=9; gian31 Battlefield=9; gian31 Exile=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Leonin Vanguard resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Ajani's Pridemate resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Moonrise Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Banishing Light resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Zoraline, Cosmos Caller resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Regal Caracal resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
