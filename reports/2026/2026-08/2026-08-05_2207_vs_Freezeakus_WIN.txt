@@ -1,0 +1,599 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Freezeakus
+Seat map: Seat 1=gian31, Seat 2=Freezeakus
+Turn range (known): 1 - 11
+Records: 26
+Action chains: 22
+Winner: gian31
+Final life: {'gian31': 20, 'Freezeakus': 11}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 11 (Phase_Main1; Ability of The Unbeatable Squirrel Girl, seq 301).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 23 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+WARNING: 1 player-zone assignment conflict(s) were observed. The ledger groups affected objects by explicit zone-transfer provenance; controller/owner metadata remains separately traceable.
+Land-drop coverage: 9 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 9, 11] (raw records=9; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 10 explicit Library -> Hand movement(s); named in the draw record=7, resolved through an explicit identity transition=2, unresolved=1.
+Unresolved draw identities (explicit movements retained): Turn 8, seq 188, object 334.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Jagged Barrens [161], Binding Negotiation [162], Binding Negotiation [163], At Knifepoint [164], Mountain [165], Swamp [166], Tinybones, the Pickpocket [167].
+  - unknown: 7 observed card(s): object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225], object 226 [226], object 227 [227].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 20, 'Freezeakus': 11}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 11 (Phase_Main1; Ability of The Unbeatable Squirrel Girl, seq 301).
+Last captured life snapshot: Freezeakus 16 -> 11 (seq 236).
+Tokens on battlefield at their last observation (not confirmed at match end): Squirrel [381] controller=gian31, created Turn 11, last observed Turn 11 seq 301, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Tinybones, the Pickpocket.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Forest.
+- Turn 3: actions: cards=0, abilities=0; explicit battlefield entries=Mountain.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Forest, Innkeeper's Talent.
+- Turn 5: actions: cards=1, abilities=1; combat snapshots=1; life mutations=2; explicit battlefield entries=Jagged Barrens, Bristly Bill, Spine Sower.
+- Turn 6: actions: cards=1, abilities=1; explicit battlefield entries=Plains, Transdimensional Bovine.
+- Turn 7: actions: cards=1, abilities=3; combat snapshots=1; life mutations=2; explicit battlefield entries=Jagged Barrens, Gastal Raider.
+- Turn 8: actions: cards=1, abilities=2; explicit battlefield entries=Mona Lisa, Science Geek.
+- Turn 9: actions: cards=1, abilities=4; combat snapshots=1; life mutations=1; explicit battlefield entries=Mountain, Gonti, Night Minister.
+- Turn 10: actions: cards=2, abilities=3; explicit battlefield entries=Elspeth, Storm Slayer, Innkeeper's Talent; explicit battlefield exits=Gonti, Night Minister.
+- Turn 11: actions: cards=1, abilities=2; explicit battlefield entries=Plains, The Unbeatable Squirrel Girl.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Tinybones, the Pickpocket [valid_resolution_no_immediate_mutation, seq=10] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, the Pickpocket resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 282) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 282) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [281] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [281], Tinybones, the Pickpocket [282]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Innkeeper's Talent [284] Library (Freezeakus) -> Hand (Freezeakus) (Draw; GRE sequence 24).
+      Forest [285] Hand (Freezeakus) -> Battlefield (PlayLand; GRE sequence 27).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [281], Tinybones, the Pickpocket [282]
+      Freezeakus: Battlefield: Forest [285]
+
+Turn 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Gonti, Night Minister [286] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 41).
+      Mountain [287] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 44).
+      Binding Negotiation [288] Hand (gian31) -> Stack (CastSpell; GRE sequence 45).
+      Bristly Bill, Spine Sower [298] Hand (Freezeakus) -> Graveyard (Freezeakus) (Discard; GRE sequence 50).
+      Binding Negotiation [299] Stack -> Graveyard (gian31) (Resolve; GRE sequence 50).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [287], Swamp [281], Tinybones, the Pickpocket [282]; Graveyard: Binding Negotiation [299]
+      Freezeakus: Battlefield: Forest [285]; Graveyard: Bristly Bill, Spine Sower [298]
+
+Turn 4
+  - Innkeeper's Talent [valid_resolution_no_immediate_mutation, seq=71] (active=Freezeakus, phase=Phase_Main1, controller=Freezeakus, owner=Freezeakus, source_object=302)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Innkeeper's Talent resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Innkeeper's Talent (object 302) Hand (Freezeakus) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Innkeeper's Talent (object 302) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Moonshaker Cavalry [300] Library (Freezeakus) -> Hand (Freezeakus) (Draw; GRE sequence 65).
+      Forest [301] Hand (Freezeakus) -> Battlefield (PlayLand; GRE sequence 68).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [287], Swamp [281], Tinybones, the Pickpocket [282]; Graveyard: Binding Negotiation [299]
+      Freezeakus: Battlefield: Forest [285], Forest [301], Innkeeper's Talent [302]; Graveyard: Bristly Bill, Spine Sower [298]
+
+Turn 5
+  - Ability of Jagged Barrens [observed_semantic_effect, seq=92] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Jagged Barrens: Freezeakus takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: Freezeakus [player seat 2] (role/targeting only where the protocol identifies it)
+  - Bristly Bill, Spine Sower [valid_resolution_no_immediate_mutation, seq=110] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=Freezeakus, source_object=310)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bristly Bill, Spine Sower resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bristly Bill, Spine Sower (object 310) Graveyard (Freezeakus) -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Graveyard (Freezeakus); enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Bristly Bill, Spine Sower (object 310) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Tinybones, the Pickpocket [282] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 1; snapshot comparison does not reconcile (exact assignment unavailable).
+      numerical observation: defending-player life loss is 2x the observed snapshot power; an exact modifying source was not protocol-linked.
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Freezeakus -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Freezeakus 20 -> 19
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Freezeakus 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Gastal Raider [306] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 85).
+      Jagged Barrens [307] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 88).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bristly Bill, Spine Sower [310], Jagged Barrens [307], Mountain [287], Swamp [281], Tinybones, the Pickpocket [282]; Graveyard: Binding Negotiation [299]
+      Freezeakus: Battlefield: Forest [285], Forest [301], Innkeeper's Talent [302]
+
+Turn 6
+  - Transdimensional Bovine [valid_resolution_no_immediate_mutation, seq=126] (active=Freezeakus, phase=Phase_Main1, controller=Freezeakus, owner=Freezeakus, source_object=315)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Transdimensional Bovine resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Transdimensional Bovine (object 315) Hand (Freezeakus) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Transdimensional Bovine (object 315) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Innkeeper's Talent [observed_semantic_effect, seq=132] (active=Freezeakus, phase=Phase_Combat, step=Step_BeginCombat, controller=Freezeakus, owner=Freezeakus, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Innkeeper's Talent: Transdimensional Bovine gets +1/+1; 1 counter(s) are added to Transdimensional Bovine [315].
+      explicit effect object references: Transdimensional Bovine [315] (role/targeting only where the protocol identifies it)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Transdimensional Bovine [313] Library (Freezeakus) -> Hand (Freezeakus) (Draw; GRE sequence 120).
+      Plains [314] Hand (Freezeakus) -> Battlefield (PlayLand; GRE sequence 123).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bristly Bill, Spine Sower [310], Jagged Barrens [307], Mountain [287], Swamp [281], Tinybones, the Pickpocket [282]; Graveyard: Binding Negotiation [299]
+      Freezeakus: Battlefield: Forest [285], Forest [301], Innkeeper's Talent [302], Plains [314], Transdimensional Bovine [315]
+
+Turn 7
+  - Ability of Bristly Bill, Spine Sower [observed_semantic_effect, seq=154] (active=gian31, phase=Phase_Main1, controller=gian31, owner=Freezeakus, source_object=310, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Bristly Bill, Spine Sower: Bristly Bill, Spine Sower gets +1/+1; 1 counter(s) are added to Bristly Bill, Spine Sower [310].
+  - Ability of Jagged Barrens [observed_semantic_effect, seq=156] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=321, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Jagged Barrens: Freezeakus takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: Freezeakus [player seat 2] (role/targeting only where the protocol identifies it)
+  - Gastal Raider [valid_resolution_no_immediate_mutation, seq=159] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=324)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Gastal Raider resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Gastal Raider (object 324) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gastal Raider (object 324) Stack -> Battlefield (Resolve; shared object ID)
+  - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. [valid_resolution_no_immediate_mutation, seq=178] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=329)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Tinybones, the Pickpocket [282] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 1; snapshot comparison does not reconcile (exact assignment unavailable).
+      numerical observation: defending-player life loss is 2x the observed snapshot power; an exact modifying source was not protocol-linked.
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Freezeakus -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Freezeakus 18 -> 17
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Freezeakus 17 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Jagged Barrens [320] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 144).
+      Jagged Barrens [321] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 147).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bristly Bill, Spine Sower [310], Gastal Raider [324], Jagged Barrens [307], Jagged Barrens [321], Mountain [287], Swamp [281], Tinybones, the Pickpocket [282]; Graveyard: Binding Negotiation [299]
+      Freezeakus: Battlefield: Forest [285], Forest [301], Innkeeper's Talent [302], Plains [314], Transdimensional Bovine [315]
+
+Turn 8
+  - Mona Lisa, Science Geek [valid_resolution_no_immediate_mutation, seq=193] (active=Freezeakus, phase=Phase_Main1, controller=Freezeakus, owner=Freezeakus, source_object=336)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Mona Lisa, Science Geek resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Mona Lisa, Science Geek (object 336) Hand (Freezeakus) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Mona Lisa, Science Geek (object 336) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Innkeeper's Talent [valid_resolution_no_immediate_mutation, seq=196] (active=Freezeakus, phase=Phase_Main1, controller=Freezeakus, owner=Freezeakus, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Innkeeper's Talent resolves with no immediate observed mutation.
+  - Ability of Innkeeper's Talent [observed_semantic_effect, seq=202] (active=Freezeakus, phase=Phase_Combat, step=Step_BeginCombat, controller=Freezeakus, owner=Freezeakus, source_object=302, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 196 and 202; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Innkeeper's Talent: Mona Lisa, Science Geek gets +1/+1; 1 counter(s) are added to Mona Lisa, Science Geek [336].
+      explicit effect object references: Mona Lisa, Science Geek [336] (role/targeting only where the protocol identifies it)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 334 [334] Library (Freezeakus) -> Hand (Freezeakus) (Draw; GRE sequence 188).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bristly Bill, Spine Sower [310], Gastal Raider [324], Jagged Barrens [307], Jagged Barrens [321], Mountain [287], Swamp [281], Tinybones, the Pickpocket [282]; Graveyard: Binding Negotiation [299]
+      Freezeakus: Battlefield: Forest [285], Forest [301], Innkeeper's Talent [302], Mona Lisa, Science Geek [336], Plains [314], Transdimensional Bovine [315]
+
+Turn 9
+  - Ability of Bristly Bill, Spine Sower [observed_semantic_effect, seq=221] (active=gian31, phase=Phase_Main1, controller=gian31, owner=Freezeakus, source_object=310, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Bristly Bill, Spine Sower: Bristly Bill, Spine Sower gets +1/+1; 1 counter(s) are added to Bristly Bill, Spine Sower [310].
+  - Gonti, Night Minister [valid_resolution_no_immediate_mutation, seq=224] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=346)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Gonti, Night Minister resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Gonti, Night Minister (object 346) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gonti, Night Minister (object 346) Stack -> Battlefield (Resolve; shared object ID)
+  - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. [valid_resolution_no_immediate_mutation, seq=239] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=329)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=241] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=346, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Gonti, Night Minister: exiles The Unbeatable Squirrel Girl.
+      explicit effect object references: The Unbeatable Squirrel Girl [232], The Unbeatable Squirrel Girl [356] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: The Unbeatable Squirrel Girl (object 356) Library (Freezeakus) -> Exile (Exile; shared object ID)
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=243] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=346, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 241 and 243; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: exile
+      narrative: Ability of Gonti, Night Minister: exiles Plains.
+      explicit effect object references: Plains [233], Plains [358] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Plains (object 358) Library (Freezeakus) -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Tinybones, the Pickpocket [282] (unblocked, observed P/T 1/1), Bristly Bill, Spine Sower [310] (unblocked, observed P/T 4/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Freezeakus -5 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): Freezeakus 16 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [343] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 214).
+      Mountain [344] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 217).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bristly Bill, Spine Sower [310], Gastal Raider [324], Gonti, Night Minister [346], Jagged Barrens [307], Jagged Barrens [321], Mountain [287], Mountain [344], Swamp [281], Tinybones, the Pickpocket [282]; Graveyard: Binding Negotiation [299]; Exile: Plains [358], The Unbeatable Squirrel Girl [356]
+      Freezeakus: Battlefield: Forest [285], Forest [301], Innkeeper's Talent [302], Mona Lisa, Science Geek [336], Plains [314], Transdimensional Bovine [315]
+
+Turn 10
+  - Elspeth, Storm Slayer [valid_resolution_no_immediate_mutation, seq=258] (active=Freezeakus, phase=Phase_Main1, controller=Freezeakus, owner=Freezeakus, source_object=361)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Elspeth, Storm Slayer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Elspeth, Storm Slayer (object 361) Hand (Freezeakus) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Elspeth, Storm Slayer (object 361) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Elspeth, Storm Slayer [observed_semantic_effect, seq=263] (active=Freezeakus, phase=Phase_Main1, controller=Freezeakus, owner=Freezeakus, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: destroy
+      narrative: Ability of Elspeth, Storm Slayer destroys Gonti, Night Minister.
+      explicit effect object references: Gonti, Night Minister [346], Gonti, Night Minister [367] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Gonti, Night Minister (object 367) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+  - Innkeeper's Talent [valid_resolution_no_immediate_mutation, seq=266] (active=Freezeakus, phase=Phase_Main1, controller=Freezeakus, owner=Freezeakus, source_object=368)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Innkeeper's Talent resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Innkeeper's Talent (object 368) Hand (Freezeakus) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Innkeeper's Talent (object 368) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Innkeeper's Talent [observed_semantic_effect, seq=275] (active=Freezeakus, phase=Phase_Combat, step=Step_BeginCombat, controller=Freezeakus, owner=Freezeakus, source_object=368, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Innkeeper's Talent: Transdimensional Bovine gets +1/+1; 1 counter(s) are added to Transdimensional Bovine [315].
+      explicit effect object references: Transdimensional Bovine [315] (role/targeting only where the protocol identifies it)
+  - Ability of Innkeeper's Talent [observed_semantic_effect, seq=277] (active=Freezeakus, phase=Phase_Combat, step=Step_BeginCombat, controller=Freezeakus, owner=Freezeakus, source_object=302, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Innkeeper's Talent: Transdimensional Bovine gets +1/+1; 1 counter(s) are added to Transdimensional Bovine [315].
+      explicit effect object references: Transdimensional Bovine [315] (role/targeting only where the protocol identifies it)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Elspeth, Storm Slayer [360] Library (Freezeakus) -> Hand (Freezeakus) (Draw; GRE sequence 253).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bristly Bill, Spine Sower [310], Gastal Raider [324], Jagged Barrens [307], Jagged Barrens [321], Mountain [287], Mountain [344], Swamp [281], Tinybones, the Pickpocket [282]; Graveyard: Binding Negotiation [299], Gonti, Night Minister [367]; Exile: Plains [358], The Unbeatable Squirrel Girl [356]
+      Freezeakus: Battlefield: Elspeth, Storm Slayer [361], Forest [285], Forest [301], Innkeeper's Talent [302], Innkeeper's Talent [368], Mona Lisa, Science Geek [336], Plains [314], Transdimensional Bovine [315]
+
+Turn 11
+  - Ability of Bristly Bill, Spine Sower [observed_semantic_effect, seq=296] (active=gian31, phase=Phase_Main1, controller=gian31, owner=Freezeakus, source_object=310, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Bristly Bill, Spine Sower: Bristly Bill, Spine Sower gets +1/+1; 1 counter(s) are added to Bristly Bill, Spine Sower [310].
+  - The Unbeatable Squirrel Girl [valid_resolution_no_immediate_mutation, seq=299] (active=gian31, phase=Phase_Main1, controller=gian31, owner=Freezeakus, source_object=375)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: The Unbeatable Squirrel Girl resolves with no immediate observed mutation.
+      protocol-linked zone transfer: The Unbeatable Squirrel Girl (object 375) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: The Unbeatable Squirrel Girl (object 375) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of The Unbeatable Squirrel Girl [observed_semantic_effect, seq=301] (active=gian31, phase=Phase_Main1, controller=gian31, owner=Freezeakus, source_object=375, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of The Unbeatable Squirrel Girl: a token is created.
+      explicit effect object references: Squirrel [381] (role/targeting only where the protocol identifies it)
+      token created: Squirrel (object 381, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 380).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Fell [372] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 289).
+      Plains [373] Exile -> Battlefield (PlayLand; GRE sequence 292).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bristly Bill, Spine Sower [310], Gastal Raider [324], Jagged Barrens [307], Jagged Barrens [321], Mountain [287], Mountain [344], Plains [373], Swamp [281], The Unbeatable Squirrel Girl [375], Tinybones, the Pickpocket [282]; Graveyard: Binding Negotiation [299], Gonti, Night Minister [367]
+      Freezeakus: Battlefield: Elspeth, Storm Slayer [361], Forest [285], Forest [301], Innkeeper's Talent [302], Innkeeper's Talent [368], Mona Lisa, Science Geek [336], Plains [314], Transdimensional Bovine [315]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- No life mutation without an exact same-record source was observed.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 1 token creations observed; 1 active as last observed; 0 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Squirrel [381] controller=gian31; created Turn 11 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 11, object 381 (latest observed P/T 1/1; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 1, seq 10: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 24: Innkeeper's Talent [owner=Freezeakus, controller=Freezeakus] moves Library (Freezeakus) -> Hand (Freezeakus) (Draw).
+- Turn 2, seq 27: Forest [owner=Freezeakus, controller=Freezeakus] moves Hand (Freezeakus) -> Battlefield (PlayLand).
+- Turn 3, seq 41: Gonti, Night Minister [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 44: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Binding Negotiation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 50: Bristly Bill, Spine Sower [owner=Freezeakus, controller=gian31] moves Hand (Freezeakus) -> Graveyard (Freezeakus) (Discard).
+- Turn 3, seq 50: Binding Negotiation [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 4, seq 65: Moonshaker Cavalry [owner=Freezeakus, controller=Freezeakus] moves Library (Freezeakus) -> Hand (Freezeakus) (Draw).
+- Turn 4, seq 68: Forest [owner=Freezeakus, controller=Freezeakus] moves Hand (Freezeakus) -> Battlefield (PlayLand).
+- Turn 4, seq 69: Innkeeper's Talent [owner=Freezeakus, controller=Freezeakus] moves Hand (Freezeakus) -> Stack (CastSpell).
+- Turn 4, seq 71: Innkeeper's Talent [owner=Freezeakus, controller=Freezeakus] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 85: Gastal Raider [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 88: Jagged Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 107: Bristly Bill, Spine Sower [owner=Freezeakus, controller=gian31] moves Graveyard (Freezeakus) -> Stack (CastSpell).
+- Turn 5, seq 110: Bristly Bill, Spine Sower [owner=Freezeakus, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 120: Transdimensional Bovine [owner/controller metadata unavailable] moves Library (Freezeakus) -> Hand (Freezeakus) (Draw).
+- Turn 6, seq 123: Plains [owner=Freezeakus, controller=Freezeakus] moves Hand (Freezeakus) -> Battlefield (PlayLand).
+- Turn 6, seq 124: Transdimensional Bovine [owner=Freezeakus, controller=Freezeakus] moves Hand (Freezeakus) -> Stack (CastSpell).
+- Turn 6, seq 126: Transdimensional Bovine [owner=Freezeakus, controller=Freezeakus] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 144: Jagged Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 147: Jagged Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 157: Gastal Raider [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 159: Gastal Raider [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 188: object 334 [owner/controller metadata unavailable] moves Library (Freezeakus) -> Hand (Freezeakus) (Draw).
+- Turn 8, seq 191: Mona Lisa, Science Geek [owner=Freezeakus, controller=Freezeakus] moves Hand (Freezeakus) -> Stack (CastSpell).
+- Turn 8, seq 193: Mona Lisa, Science Geek [owner=Freezeakus, controller=Freezeakus] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 214: Mountain [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 217: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 222: Gonti, Night Minister [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 224: Gonti, Night Minister [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 241: The Unbeatable Squirrel Girl [owner=Freezeakus, controller=gian31] moves Library (Freezeakus) -> Exile (Exile).
+- Turn 9, seq 243: Plains [owner=Freezeakus, controller=gian31] moves Library (Freezeakus) -> Exile (Exile).
+- Turn 10, seq 253: Elspeth, Storm Slayer [owner/controller metadata unavailable] moves Library (Freezeakus) -> Hand (Freezeakus) (Draw).
+- Turn 10, seq 256: Elspeth, Storm Slayer [owner=Freezeakus, controller=Freezeakus] moves Hand (Freezeakus) -> Stack (CastSpell).
+- Turn 10, seq 258: Elspeth, Storm Slayer [owner=Freezeakus, controller=Freezeakus] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 263: Gonti, Night Minister [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 10, seq 264: Innkeeper's Talent [owner=Freezeakus, controller=Freezeakus] moves Hand (Freezeakus) -> Stack (CastSpell).
+- Turn 10, seq 266: Innkeeper's Talent [owner=Freezeakus, controller=Freezeakus] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 289: Fell [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 292: Plains [owner=Freezeakus, controller=gian31] moves Exile -> Battlefield (PlayLand).
+- Turn 11, seq 297: The Unbeatable Squirrel Girl [owner=Freezeakus, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 11, seq 299: The Unbeatable Squirrel Girl [owner=Freezeakus, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 166 becomes object 281 [Swamp].
+- Turn 1, seq 8: object 167 becomes object 282 [Tinybones, the Pickpocket].
+- Turn 2, seq 24: object 228 becomes object 284 [Innkeeper's Talent].
+- Turn 2, seq 27: object 221 becomes object 285 [Forest].
+- Turn 3, seq 41: object 168 becomes object 286 [Gonti, Night Minister].
+- Turn 3, seq 44: object 165 becomes object 287 [Mountain].
+- Turn 3, seq 45: object 162 becomes object 288 [Binding Negotiation].
+- Turn 3, seq 50: object 227 becomes object 298 [Bristly Bill, Spine Sower].
+- Turn 3, seq 50: object 288 becomes object 299 [Binding Negotiation].
+- Turn 4, seq 65: object 229 becomes object 300 [Moonshaker Cavalry].
+- Turn 4, seq 68: object 225 becomes object 301 [Forest].
+- Turn 4, seq 69: object 284 becomes object 302 [Innkeeper's Talent].
+- Turn 5, seq 85: object 169 becomes object 306 [Gastal Raider].
+- Turn 5, seq 88: object 161 becomes object 307 [Jagged Barrens].
+- Turn 5, seq 107: object 298 becomes object 310 [Bristly Bill, Spine Sower].
+- Turn 6, seq 120: object 230 becomes object 313 [Transdimensional Bovine].
+- Turn 6, seq 123: object 223 becomes object 314 [Plains].
+- Turn 6, seq 124: object 313 becomes object 315 [Transdimensional Bovine].
+- Turn 7, seq 144: object 170 becomes object 320 [Jagged Barrens].
+- Turn 7, seq 147: object 320 becomes object 321 [Jagged Barrens].
+- Turn 7, seq 157: object 306 becomes object 324 [Gastal Raider].
+- Turn 8, seq 188: object 231 becomes object 334 [object 231].
+- Turn 8, seq 191: object 224 becomes object 336 [Mona Lisa, Science Geek].
+- Turn 9, seq 214: object 171 becomes object 343 [Mountain].
+- Turn 9, seq 217: object 343 becomes object 344 [Mountain].
+- Turn 9, seq 222: object 286 becomes object 346 [Gonti, Night Minister].
+- Turn 9, seq 241: object 232 becomes object 356 [The Unbeatable Squirrel Girl].
+- Turn 9, seq 243: object 233 becomes object 358 [Plains].
+- Turn 10, seq 253: object 234 becomes object 360 [Elspeth, Storm Slayer].
+- Turn 10, seq 256: object 360 becomes object 361 [Elspeth, Storm Slayer].
+- Turn 10, seq 263: object 346 becomes object 367 [Gonti, Night Minister].
+- Turn 10, seq 264: object 222 becomes object 368 [Innkeeper's Talent].
+- Turn 11, seq 289: object 172 becomes object 372 [Fell].
+- Turn 11, seq 292: object 358 becomes object 373 [Plains].
+- Turn 11, seq 297: object 356 becomes object 375 [The Unbeatable Squirrel Girl].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Swamp (object 281) from Hand (gian31) to Battlefield.
+- Turn 2: Freezeakus plays Forest (object 285) from Hand (Freezeakus) to Battlefield.
+- Turn 3: gian31 plays Mountain (object 287) from Hand (gian31) to Battlefield.
+- Turn 4: Freezeakus plays Forest (object 301) from Hand (Freezeakus) to Battlefield.
+- Turn 5: gian31 plays Jagged Barrens (object 307) from Hand (gian31) to Battlefield.
+- Turn 6: Freezeakus plays Plains (object 314) from Hand (Freezeakus) to Battlefield.
+- Turn 7: gian31 plays Jagged Barrens (object 321) from Hand (gian31) to Battlefield.
+- Turn 9: gian31 plays Mountain (object 344) from Hand (gian31) to Battlefield.
+- Turn 11: gian31 plays Plains (object 373) from Exile to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Innkeeper's Talent: casts=2; abilities=5 (triggered=5, activated=0) across turns [4, 6, 8, 8, 10, 10, 10]
+  observed effect totals: draws=0, tokens=0, counters=4, returns=0, damage=0, life_changes=0, other=4
+  observed effects: +1 counter(s), P/T +1/+1
+- Bristly Bill, Spine Sower: casts=1; abilities=3 (triggered=3, activated=0) across turns [5, 7, 9, 11]
+  observed effect totals: draws=0, tokens=0, counters=3, returns=0, damage=0, life_changes=0, other=3
+  observed effects: +1 counter(s), P/T +1/+1
+- Gonti, Night Minister: casts=1; abilities=2 (triggered=2, activated=0) across turns [9, 9, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: exile
+- Elspeth, Storm Slayer: casts=1; abilities=1 (triggered=1, activated=0) across turns [10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Jagged Barrens: abilities=2 (triggered=2, activated=0) across turns [5, 7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=2, life_changes=2, other=2
+  observed effects: 1 damage, life -1, synthetic event
+- The Unbeatable Squirrel Girl: casts=1; abilities=1 (triggered=1, activated=0) across turns [11, 11]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn.: abilities=2 (triggered=0, activated=2) across turns [7, 9]
+- Gastal Raider: casts=1 across turns [7]
+- Mona Lisa, Science Geek: casts=1 across turns [8]
+- Tinybones, the Pickpocket: casts=1 across turns [1]
+- Transdimensional Bovine: casts=1 across turns [6]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Tinybones, the Pickpocket (gian31) -> Freezeakus; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack (active=gian31)
+  attacker: Tinybones, the Pickpocket (gian31) -> Freezeakus; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack (active=gian31)
+  attacker: Tinybones, the Pickpocket (gian31) -> Freezeakus; unblocked in this observed snapshot
+  attacker: Bristly Bill, Spine Sower (gian31) -> Freezeakus; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 5: Bristly Bill, Spine Sower (active=gian31) - Bristly Bill, Spine Sower resolves with no immediate observed mutation.
+- Turn 6: Ability of Innkeeper's Talent (active=Freezeakus) - Ability of Innkeeper's Talent: Transdimensional Bovine gets +1/+1; 1 counter(s) are added to target.
+- Turn 7: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. (active=gian31) - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+- Turn 8: Ability of Innkeeper's Talent (active=Freezeakus) - Ability of Innkeeper's Talent: Mona Lisa, Science Geek gets +1/+1; 1 counter(s) are added to target.
+- Turn 9: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. (active=gian31) - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+- Turn 9: Ability of Gonti, Night Minister (active=gian31) - Ability of Gonti, Night Minister: exile.
+- Turn 9: Ability of Gonti, Night Minister (active=gian31) - Ability of Gonti, Night Minister: exile.
+- Turn 10: Ability of Innkeeper's Talent (active=Freezeakus) - Ability of Innkeeper's Talent: Transdimensional Bovine gets +1/+1; 1 counter(s) are added to target.
+- Turn 10: Ability of Innkeeper's Talent (active=Freezeakus) - Ability of Innkeeper's Talent: Transdimensional Bovine gets +1/+1; 1 counter(s) are added to target.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 161: Jagged Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: At Knifepoint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 166: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 167: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 222: Innkeeper's Talent | controller=Freezeakus | owner=Freezeakus | zone=Hand (latest_object_observation)
+- 223: Plains | controller=Freezeakus | owner=Freezeakus | zone=Hand (latest_object_observation)
+- 224: Mona Lisa, Science Geek | controller=Freezeakus | owner=Freezeakus | zone=Hand (latest_object_observation)
+- 225: Forest | controller=Freezeakus | owner=Freezeakus | zone=Hand (latest_object_observation)
+- 226: Moonshaker Cavalry | controller=Freezeakus | owner=Freezeakus | zone=Hand (latest_object_observation)
+- 227: Bristly Bill, Spine Sower | controller=Freezeakus | owner=Freezeakus | zone=Hand (latest_object_observation)
+- 232: The Unbeatable Squirrel Girl | controller=Freezeakus | owner=Freezeakus | zone=Hand (latest_object_observation)
+- 233: Plains | controller=Freezeakus | owner=Freezeakus | zone=Hand (latest_object_observation)
+- 281: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 282: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 284: Innkeeper's Talent | controller=Freezeakus | owner=Freezeakus | zone=Hand (latest_object_observation)
+- 285: Forest | controller=Freezeakus | owner=Freezeakus | zone=Battlefield (latest_object_observation)
+- 286: Gonti, Night Minister | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 287: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 288: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 291: Plains | controller=Freezeakus | owner=Freezeakus | zone=Hand (latest_object_observation)
+- 292: Mona Lisa, Science Geek | controller=Freezeakus | owner=Freezeakus | zone=Hand (latest_object_observation)
+- 293: Forest | controller=Freezeakus | owner=Freezeakus | zone=Hand (latest_object_observation)
+- 294: Innkeeper's Talent | controller=Freezeakus | owner=Freezeakus | zone=Hand (latest_object_observation)
+- 295: Bristly Bill, Spine Sower | controller=Freezeakus | owner=Freezeakus | zone=Hand (latest_object_observation)
+- 296: Moonshaker Cavalry | controller=Freezeakus | owner=Freezeakus | zone=Hand (latest_object_observation)
+- 297: Innkeeper's Talent | controller=Freezeakus | owner=Freezeakus | zone=Hand (latest_object_observation)
+- 298: Bristly Bill, Spine Sower | controller=gian31 | owner=Freezeakus | zone=Graveyard (latest_object_observation)
+- 299: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 300: Moonshaker Cavalry | controller=Freezeakus | owner=Freezeakus | zone=Hand (latest_object_observation)
+- 301: Forest | controller=Freezeakus | owner=Freezeakus | zone=Battlefield (latest_object_observation)
+- 302: Innkeeper's Talent | controller=Freezeakus | owner=Freezeakus | zone=Stack (latest_object_observation)
+- 306: Gastal Raider | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 307: Jagged Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 308: object 308 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 309: object 309 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 310: Bristly Bill, Spine Sower | controller=gian31 | owner=Freezeakus | zone=Battlefield (latest_object_observation)
+- 314: Plains | controller=Freezeakus | owner=Freezeakus | zone=Battlefield (latest_object_observation)
+- 315: Transdimensional Bovine | controller=Freezeakus | owner=Freezeakus | zone=Battlefield (latest_object_observation)
+- 319: object 319 | controller=Freezeakus | owner=Freezeakus | zone=unknown (inferred unknown) (latest_object_observation)
+- 320: Jagged Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 321: Jagged Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 322: object 322 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 323: object 323 | controller=gian31 | owner=Freezeakus | zone=unknown (inferred unknown) (latest_object_observation)
+- 324: Gastal Raider | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 328: object 328 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 329: object 329 | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 330: Moonshaker Cavalry | controller=Freezeakus | owner=Freezeakus | zone=Hand (latest_object_observation)
+- 331: object 331 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 333: object 333 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 336: Mona Lisa, Science Geek | controller=Freezeakus | owner=Freezeakus | zone=Battlefield (latest_object_observation)
+- 340: object 340 | controller=Freezeakus | owner=Freezeakus | zone=unknown (inferred unknown) (latest_object_observation)
+- 341: object 341 | controller=Freezeakus | owner=Freezeakus | zone=unknown (inferred unknown) (latest_object_observation)
+- 342: object 342 | controller=Freezeakus | owner=Freezeakus | zone=unknown (inferred unknown) (latest_object_observation)
+- 343: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 344: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 345: object 345 | controller=gian31 | owner=Freezeakus | zone=unknown (inferred unknown) (latest_object_observation)
+- 346: Gonti, Night Minister | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 351: object 351 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 352: object 352 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 353: object 353 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 355: object 355 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 356: The Unbeatable Squirrel Girl | controller=gian31 | owner=Freezeakus | zone=Exile (latest_object_observation)
+- 358: Plains | controller=gian31 | owner=Freezeakus | zone=Exile (latest_object_observation)
+- 361: Elspeth, Storm Slayer | controller=Freezeakus | owner=Freezeakus | zone=Stack (latest_object_observation)
+- 366: object 366 | controller=Freezeakus | owner=Freezeakus | zone=unknown (inferred unknown) (latest_object_observation)
+- 367: Gonti, Night Minister | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 368: Innkeeper's Talent | controller=Freezeakus | owner=Freezeakus | zone=Stack (latest_object_observation)
+- 370: object 370 | controller=Freezeakus | owner=Freezeakus | zone=unknown (inferred unknown) (latest_object_observation)
+- 371: object 371 | controller=Freezeakus | owner=Freezeakus | zone=unknown (inferred unknown) (latest_object_observation)
+- 372: Fell | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 373: Plains | controller=gian31 | owner=Freezeakus | zone=Battlefield (latest_object_observation)
+- 374: object 374 | controller=gian31 | owner=Freezeakus | zone=unknown (inferred unknown) (latest_object_observation)
+- 375: The Unbeatable Squirrel Girl | controller=gian31 | owner=Freezeakus | zone=Battlefield (latest_object_observation)
+- 380: object 380 | controller=gian31 | owner=Freezeakus | zone=unknown (inferred unknown) (latest_object_observation)
+- 381: Squirrel | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Freezeakus: 33 total items
+  zones: Battlefield=5, Hand=18, Stack=3, unknown=7
+  objects: Innkeeper's Talent x6, Forest x4, Moonshaker Cavalry x4, Plains x4, Mona Lisa, Science Geek x3, Bristly Bill, Spine Sower x2, Elspeth, Storm Slayer, The Unbeatable Squirrel Girl, Transdimensional Bovine, object 319, object 340, object 341
+gian31: 45 total items
+  zones: Battlefield=12, Exile=2, Graveyard=3, Hand=13, Stack=1, unknown=14
+  objects: Binding Negotiation x4, Jagged Barrens x4, Mountain x4, Gonti, Night Minister x3, Bristly Bill, Spine Sower x2, Gastal Raider x2, Plains x2, Swamp x2, The Unbeatable Squirrel Girl x2, Tinybones, the Pickpocket x2, At Knifepoint, Fell
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (12): Bristly Bill, Spine Sower, Gastal Raider, Gonti, Night Minister, Jagged Barrens, Jagged Barrens, Mountain, Mountain, Plains, Squirrel, Swamp, The Unbeatable Squirrel Girl, Tinybones, the Pickpocket
+  Graveyard: 3 card(s)
+Freezeakus:
+  Battlefield (5): Forest, Forest, Mona Lisa, Science Geek, Plains, Transdimensional Bovine
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+21 objects have no resolved final zone and are omitted from the known board state.
+Freezeakus: 7 unknown object(s)
+gian31: 14 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=31, Stack=4
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Player-zone assignment has explicit transfer conflicts in this match. Where a safe Hand -> Stack -> Battlefield or PlayLand provenance exists, that zone holder is used; other controller assignments remain protocol-observed rather than fully reconciled.
+Freezeakus:
+  Battlefield (8): Forest, Forest, Innkeeper's Talent, Plains, Transdimensional Bovine, Mona Lisa, Science Geek, Elspeth, Storm Slayer, Innkeeper's Talent
+gian31:
+  Battlefield (11): Swamp, Tinybones, the Pickpocket, Mountain, Jagged Barrens, Bristly Bill, Spine Sower, Jagged Barrens, Gastal Raider, Mountain, Plains, The Unbeatable Squirrel Girl, Squirrel
+  Graveyard (2): Binding Negotiation, Gonti, Night Minister
+  Exile (1): The Unbeatable Squirrel Girl
+Known non-persistent entries (counts only):
+  Freezeakus: Hand=2, Limbo=2, Revealed=2
+  gian31: Hand=3, Limbo=5
+  unknown: Hand=1, Library=94, Limbo=5
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=2
+- Turn 2: Freezeakus Battlefield=1; gian31 Battlefield=2
+- Turn 3: Freezeakus Battlefield=1; Freezeakus Graveyard=1; gian31 Battlefield=3; gian31 Graveyard=1
+- Turn 4: Freezeakus Battlefield=3; Freezeakus Graveyard=1; gian31 Battlefield=3; gian31 Graveyard=1
+- Turn 5: Freezeakus Battlefield=3; gian31 Battlefield=5; gian31 Graveyard=1
+- Turn 6: Freezeakus Battlefield=5; gian31 Battlefield=5; gian31 Graveyard=1
+- Turn 7: Freezeakus Battlefield=5; gian31 Battlefield=7; gian31 Graveyard=1
+- Turn 8: Freezeakus Battlefield=6; gian31 Battlefield=7; gian31 Graveyard=1
+- Turn 9: Freezeakus Battlefield=6; gian31 Battlefield=9; gian31 Graveyard=1; gian31 Exile=2
+- Turn 10: Freezeakus Battlefield=8; gian31 Battlefield=8; gian31 Graveyard=2; gian31 Exile=2
+- Turn 11: Freezeakus Battlefield=8; gian31 Battlefield=10; gian31 Graveyard=2
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Tinybones, the Pickpocket resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Innkeeper's Talent resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Bristly Bill, Spine Sower resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Transdimensional Bovine resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Gastal Raider resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Mona Lisa, Science Geek resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Gonti, Night Minister resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Elspeth, Storm Slayer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Innkeeper's Talent resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: The Unbeatable Squirrel Girl resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
