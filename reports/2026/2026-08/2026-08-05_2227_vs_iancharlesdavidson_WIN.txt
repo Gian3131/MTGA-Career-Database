@@ -1,0 +1,779 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, iancharlesdavidson
+Seat map: Seat 1=gian31, Seat 2=iancharlesdavidson
+Turn range (known): 1 - 16
+Records: 23
+Action chains: 21
+Winner: gian31
+Final life: {'gian31': 20, 'iancharlesdavidson': 9}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 16 (Phase_Main2; Ability of At Knifepoint, seq 422).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 43 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 12 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 11, 12, 13, 15, 16] (raw records=13; equivalent duplicates=1). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 18 explicit Library -> Hand movement(s); named in the draw record=12, resolved through an explicit identity transition=6, unresolved=0.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 6).
+  - gian31: 7 observed card(s): Tinybones, Bauble Burglar [163], Cruelclaw's Heist [164], Swamp [165], Fell [166], Vaan, Street Thief [167], Gastal Raider [168], Jagged Barrens [169].
+  - unknown: 6 observed card(s): object 288 [288], object 283 [283], object 284 [284], object 285 [285], object 286 [286], object 287 [287].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 20, 'iancharlesdavidson': 9}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 16 (Phase_Main2; Ability of At Knifepoint, seq 422).
+Last captured life snapshot: iancharlesdavidson 11 -> 9 (seq 409).
+Tokens on battlefield at their last observation (not confirmed at match end): Mercenary [591] controller=gian31, created Turn 16, last observed Turn 16 seq 422, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 2: actions: cards=0, abilities=1; life mutations=1; explicit battlefield entries=Jagged Barrens.
+- Turn 3: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Tinybones, Bauble Burglar.
+- Turn 5: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Ultron, Artificial Malevolence.
+- Turn 6: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Razortrap Gorge; explicit battlefield exits=Ultron, Artificial Malevolence.
+- Turn 7: actions: cards=0, abilities=0; explicit battlefield entries=Castle Doom.
+- Turn 8: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Gastal Raider.
+- Turn 9: actions: cards=1, abilities=0; explicit battlefield entries=Hedron Archive.
+- Turn 10: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Laughing Jasper Flint.
+- Turn 11: actions: cards=0, abilities=0; explicit battlefield entries=Swamp; explicit battlefield exits=Tinybones, Bauble Burglar, Gastal Raider, Laughing Jasper Flint.
+- Turn 12: actions: cards=1, abilities=2; life mutations=1; explicit battlefield entries=Jagged Barrens, Vaan, Street Thief.
+- Turn 13: actions: cards=2, abilities=0; explicit battlefield entries=Swamp, Ultron Drone, Arc Reactor.
+- Turn 14: actions: cards=2, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Goblin Smuggler, Tinybones, the Pickpocket.
+- Turn 15: actions: cards=0, abilities=3; explicit battlefield entries=Swamp; explicit battlefield exits=Hedron Archive.
+- Turn 16: actions: cards=1, abilities=2; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, At Knifepoint; explicit battlefield exits=Robot Villain, Treasure, Treasure.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 343 [343] Hand (iancharlesdavidson) -> Library (iancharlesdavidson) (Put; GRE sequence 6).
+      Swamp [344] Hand (iancharlesdavidson) -> Battlefield (PlayLand; GRE sequence 9).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      iancharlesdavidson: Battlefield: Swamp [344]
+
+Turn 2
+  - Ability of Jagged Barrens [observed_semantic_effect, seq=30] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=346, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Jagged Barrens: iancharlesdavidson takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: iancharlesdavidson [player seat 2] (role/targeting only where the protocol identifies it)
+    net observed life change this turn: iancharlesdavidson -1 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Jagged Barrens; direct protocol link unavailable): iancharlesdavidson 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Goblin Smuggler [345] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 23).
+      Jagged Barrens [346] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 26).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      iancharlesdavidson: Battlefield: Swamp [344]
+      gian31: Battlefield: Jagged Barrens [346]
+
+Turn 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [348] Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw; GRE sequence 44).
+      Swamp [349] Hand (iancharlesdavidson) -> Battlefield (PlayLand; GRE sequence 47).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      iancharlesdavidson: Battlefield: Swamp [344], Swamp [349]
+      gian31: Battlefield: Jagged Barrens [346]
+
+Turn 4
+  - Tinybones, Bauble Burglar [valid_resolution_no_immediate_mutation, seq=67] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=352)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, Bauble Burglar resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 352) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 352) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Razortrap Gorge [350] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 61).
+      Swamp [351] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 64).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      iancharlesdavidson: Battlefield: Swamp [344], Swamp [349]
+      gian31: Battlefield: Jagged Barrens [346], Swamp [351], Tinybones, Bauble Burglar [352]
+
+Turn 5
+  - Ultron, Artificial Malevolence [valid_resolution_no_immediate_mutation, seq=88] (active=iancharlesdavidson, phase=Phase_Main1, controller=iancharlesdavidson, owner=iancharlesdavidson, source_object=357)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ultron, Artificial Malevolence resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ultron, Artificial Malevolence (object 357) Hand (iancharlesdavidson) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ultron, Artificial Malevolence (object 357) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Ultron, Artificial Malevolence [355] Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw; GRE sequence 81).
+      Swamp [356] Hand (iancharlesdavidson) -> Battlefield (PlayLand; GRE sequence 84).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      iancharlesdavidson: Battlefield: Swamp [344], Swamp [349], Swamp [356], Ultron, Artificial Malevolence [357]
+      gian31: Battlefield: Jagged Barrens [346], Swamp [351], Tinybones, Bauble Burglar [352]
+
+Turn 6
+  - Fell [observed_semantic_effect, seq=110] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=363)
+      effects: destroy
+      narrative: Fell destroys Ultron, Artificial Malevolence.
+      explicit effect object references: Ultron, Artificial Malevolence [357], Ultron, Artificial Malevolence [366] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Fell (object 363) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ultron, Artificial Malevolence (object 366) Battlefield -> Graveyard (iancharlesdavidson) (Destroy; shared object ID)
+      protocol-linked zone transfer: Fell (object 367) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 363 -> transfer object 367 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Tinybones, Bauble Burglar [352] (unblocked, observed P/T 1/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: iancharlesdavidson -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): iancharlesdavidson 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Laughing Jasper Flint [361] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 102).
+      Razortrap Gorge [362] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 105).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      iancharlesdavidson: Battlefield: Swamp [344], Swamp [349], Swamp [356]; Graveyard: Ultron, Artificial Malevolence [366]
+      gian31: Battlefield: Jagged Barrens [346], Razortrap Gorge [362], Swamp [351], Tinybones, Bauble Burglar [352]; Graveyard: Fell [367]
+
+Turn 7
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hedron Archive [368] Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw; GRE sequence 130).
+      Castle Doom [369] Hand (iancharlesdavidson) -> Battlefield (PlayLand; GRE sequence 133).
+      Ancient Vendetta [370] Hand (iancharlesdavidson) -> Stack (CastSpell; GRE sequence 134).
+      Fell [377] Library (gian31) -> Exile (Exile; GRE sequence 141).
+      Fell [376] Library (gian31) -> Exile (Exile; GRE sequence 141).
+      Fell [375] Library (gian31) -> Exile (Exile; GRE sequence 141).
+      Fell [378] Graveyard (gian31) -> Exile (Exile; GRE sequence 141).
+      Ancient Vendetta [431] Stack -> Graveyard (iancharlesdavidson) (Resolve; GRE sequence 142).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      iancharlesdavidson: Battlefield: Castle Doom [369], Swamp [344], Swamp [349], Swamp [356]; Graveyard: Ancient Vendetta [431], Ultron, Artificial Malevolence [366]
+      gian31: Battlefield: Jagged Barrens [346], Razortrap Gorge [362], Swamp [351], Tinybones, Bauble Burglar [352]; Exile: Fell [375], Fell [376], Fell [377], Fell [378]
+
+Turn 8
+  - Gastal Raider [valid_resolution_no_immediate_mutation, seq=161] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=433)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Gastal Raider resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Gastal Raider (object 433) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gastal Raider (object 433) Stack -> Battlefield (Resolve; shared object ID)
+  - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. [valid_resolution_no_immediate_mutation, seq=178] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=438)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Tinybones, Bauble Burglar [352] (unblocked, observed P/T 1/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: iancharlesdavidson -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): iancharlesdavidson 18 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      At Knifepoint [432] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 156).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      iancharlesdavidson: Battlefield: Castle Doom [369], Swamp [344], Swamp [349], Swamp [356]; Graveyard: Ancient Vendetta [431], Ultron, Artificial Malevolence [366]
+      gian31: Battlefield: Gastal Raider [433], Jagged Barrens [346], Razortrap Gorge [362], Swamp [351], Tinybones, Bauble Burglar [352]; Exile: Fell [375], Fell [376], Fell [377], Fell [378]
+
+Turn 9
+  - Hedron Archive [valid_resolution_no_immediate_mutation, seq=194] (active=iancharlesdavidson, phase=Phase_Main1, controller=iancharlesdavidson, owner=iancharlesdavidson, source_object=445)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hedron Archive resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hedron Archive (object 445) Hand (iancharlesdavidson) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hedron Archive (object 445) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Deadly Cover-Up [444] Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw; GRE sequence 188).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      iancharlesdavidson: Battlefield: Castle Doom [369], Hedron Archive [445], Swamp [344], Swamp [349], Swamp [356]; Graveyard: Ancient Vendetta [431], Ultron, Artificial Malevolence [366]
+      gian31: Battlefield: Gastal Raider [433], Jagged Barrens [346], Razortrap Gorge [362], Swamp [351], Tinybones, Bauble Burglar [352]; Exile: Fell [375], Fell [376], Fell [377], Fell [378]
+
+Turn 10
+  - Laughing Jasper Flint [valid_resolution_no_immediate_mutation, seq=213] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=451)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Laughing Jasper Flint resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Laughing Jasper Flint (object 451) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Laughing Jasper Flint (object 451) Stack -> Battlefield (Resolve; shared object ID)
+  - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. [valid_resolution_no_immediate_mutation, seq=225] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=438)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Tinybones, Bauble Burglar [352] (unblocked, observed P/T 1/3), Gastal Raider [433] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: iancharlesdavidson -3 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): iancharlesdavidson 17 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tinybones, the Pickpocket [450] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 208).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      iancharlesdavidson: Battlefield: Castle Doom [369], Hedron Archive [445], Swamp [344], Swamp [349], Swamp [356]; Graveyard: Ancient Vendetta [431], Ultron, Artificial Malevolence [366]
+      gian31: Battlefield: Gastal Raider [433], Jagged Barrens [346], Laughing Jasper Flint [451], Razortrap Gorge [362], Swamp [351], Tinybones, Bauble Burglar [352]; Exile: Fell [375], Fell [376], Fell [377], Fell [378]
+
+Turn 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [457] Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw; GRE sequence 235).
+      Swamp [458] Hand (iancharlesdavidson) -> Battlefield (PlayLand; GRE sequence 238).
+      Deadly Cover-Up [459] Hand (iancharlesdavidson) -> Stack (CastSpell; GRE sequence 239).
+      Ancient Vendetta [465] Graveyard (iancharlesdavidson) -> Exile (Exile; GRE sequence 242).
+      Ultron, Artificial Malevolence [464] Graveyard (iancharlesdavidson) -> Exile (Exile; GRE sequence 242).
+      Tinybones, Bauble Burglar [466] Battlefield -> Graveyard (gian31) (Destroy; GRE sequence 244).
+      Gastal Raider [467] Battlefield -> Graveyard (gian31) (Destroy; GRE sequence 244).
+      Laughing Jasper Flint [468] Battlefield -> Graveyard (gian31) (Destroy; GRE sequence 244).
+      Gastal Raider [469] Graveyard (gian31) -> Exile (Exile; GRE sequence 245).
+      Gastal Raider [472] Library (gian31) -> Exile (Exile; GRE sequence 246).
+      Gastal Raider [471] Library (gian31) -> Exile (Exile; GRE sequence 246).
+      Gastal Raider [470] Library (gian31) -> Exile (Exile; GRE sequence 246).
+      Deadly Cover-Up [517] Stack -> Graveyard (iancharlesdavidson) (Resolve; GRE sequence 247).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      iancharlesdavidson: Battlefield: Castle Doom [369], Hedron Archive [445], Swamp [344], Swamp [349], Swamp [356], Swamp [458]; Exile: Ancient Vendetta [465], Ultron, Artificial Malevolence [464]; Graveyard: Deadly Cover-Up [517]
+      gian31: Battlefield: Jagged Barrens [346], Razortrap Gorge [362], Swamp [351]; Exile: Fell [375], Fell [376], Fell [377], Fell [378], Gastal Raider [469], Gastal Raider [470], Gastal Raider [471], Gastal Raider [472]; Graveyard: Laughing Jasper Flint [468], Tinybones, Bauble Burglar [466]
+
+Turn 12
+  - Ability of Jagged Barrens [observed_semantic_effect, seq=268] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=519, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Jagged Barrens: iancharlesdavidson takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: iancharlesdavidson [player seat 2] (role/targeting only where the protocol identifies it)
+  - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. [valid_resolution_no_immediate_mutation, seq=270] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=438)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+  - Vaan, Street Thief [valid_resolution_no_immediate_mutation, seq=273] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=523)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Vaan, Street Thief resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Vaan, Street Thief (object 523) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Vaan, Street Thief (object 523) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: iancharlesdavidson -1 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Jagged Barrens; direct protocol link unavailable): iancharlesdavidson 14 -> 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Jagged Barrens [518] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 261).
+      Jagged Barrens [519] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 264).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      iancharlesdavidson: Battlefield: Castle Doom [369], Hedron Archive [445], Swamp [344], Swamp [349], Swamp [356], Swamp [458]; Exile: Ancient Vendetta [465], Ultron, Artificial Malevolence [464]; Graveyard: Deadly Cover-Up [517]
+      gian31: Battlefield: Jagged Barrens [346], Jagged Barrens [519], Razortrap Gorge [362], Swamp [351], Vaan, Street Thief [523]; Exile: Fell [375], Fell [376], Fell [377], Fell [378], Gastal Raider [469], Gastal Raider [470], Gastal Raider [471], Gastal Raider [472]; Graveyard: Laughing Jasper Flint [468], Tinybones, Bauble Burglar [466]
+
+Turn 13
+  - Ultron Drone [valid_resolution_no_immediate_mutation, seq=294] (active=iancharlesdavidson, phase=Phase_Main1, controller=iancharlesdavidson, owner=iancharlesdavidson, source_object=529)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ultron Drone resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ultron Drone (object 529) Hand (iancharlesdavidson) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ultron Drone (object 529) Stack -> Battlefield (Resolve; shared object ID)
+  - Arc Reactor [valid_resolution_no_immediate_mutation, seq=298] (active=iancharlesdavidson, phase=Phase_Main1, controller=iancharlesdavidson, owner=iancharlesdavidson, source_object=533)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Arc Reactor resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Arc Reactor (object 533) Hand (iancharlesdavidson) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Arc Reactor (object 533) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [527] Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw; GRE sequence 287).
+      Swamp [528] Hand (iancharlesdavidson) -> Battlefield (PlayLand; GRE sequence 290).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      iancharlesdavidson: Battlefield: Arc Reactor [533], Castle Doom [369], Hedron Archive [445], Swamp [344], Swamp [349], Swamp [356], Swamp [458], Swamp [528], Ultron Drone [529]; Exile: Ancient Vendetta [465], Ultron, Artificial Malevolence [464]; Graveyard: Deadly Cover-Up [517]
+      gian31: Battlefield: Jagged Barrens [346], Jagged Barrens [519], Razortrap Gorge [362], Swamp [351], Vaan, Street Thief [523]; Exile: Fell [375], Fell [376], Fell [377], Fell [378], Gastal Raider [469], Gastal Raider [470], Gastal Raider [471], Gastal Raider [472]; Graveyard: Laughing Jasper Flint [468], Tinybones, Bauble Burglar [466]
+
+Turn 14
+  - Goblin Smuggler [valid_resolution_no_immediate_mutation, seq=317] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=539)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Goblin Smuggler resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Goblin Smuggler (object 539) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Goblin Smuggler (object 539) Stack -> Battlefield (Resolve; shared object ID)
+  - Tinybones, the Pickpocket [valid_resolution_no_immediate_mutation, seq=320] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=543)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, the Pickpocket resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 543) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 543) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Goblin Smuggler [valid_resolution_no_immediate_mutation, seq=325] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=539, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Goblin Smuggler resolves with no immediate observed mutation.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Vaan, Street Thief [523] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: iancharlesdavidson -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): iancharlesdavidson 13 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Binding Negotiation [538] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 312).
+      Requiting Hex [548] Library (iancharlesdavidson) -> Exile (Exile; GRE sequence 337).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      iancharlesdavidson: Battlefield: Arc Reactor [533], Castle Doom [369], Hedron Archive [445], Swamp [344], Swamp [349], Swamp [356], Swamp [458], Swamp [528], Ultron Drone [529]; Exile: Ancient Vendetta [465], Requiting Hex [548], Ultron, Artificial Malevolence [464]; Graveyard: Deadly Cover-Up [517]
+      gian31: Battlefield: Goblin Smuggler [539], Jagged Barrens [346], Jagged Barrens [519], Razortrap Gorge [362], Swamp [351], Tinybones, the Pickpocket [543], Vaan, Street Thief [523]; Exile: Fell [375], Fell [376], Fell [377], Fell [378], Gastal Raider [469], Gastal Raider [470], Gastal Raider [471], Gastal Raider [472]; Graveyard: Laughing Jasper Flint [468], Tinybones, Bauble Burglar [466]
+
+Turn 15
+  - Ability of Hedron Archive [observed_semantic_effect, seq=356] (active=iancharlesdavidson, phase=Phase_Main1, controller=iancharlesdavidson, owner=iancharlesdavidson, source_object=445, source_last_explicit_zone=Battlefield, source_successor=555 observed Battlefield -> Graveyard (iancharlesdavidson) (Sacrifice))
+      effects: draw, draw
+      narrative: Ability of Hedron Archive: draw; draw.
+      explicit effect object references: object 298 [298], object 299 [299], Swamp [556], Doctor Doom [557] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Swamp (object 556) Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw; shared object ID)
+      protocol-linked zone transfer: Doctor Doom (object 557) Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw; shared object ID)
+  - Ability of Hedron Archive [observed_semantic_effect, seq=357] (active=iancharlesdavidson, phase=Phase_Main1, controller=iancharlesdavidson, owner=iancharlesdavidson, source_object=445, source_last_explicit_zone=Battlefield, source_successor=555 observed Battlefield -> Graveyard (iancharlesdavidson) (Sacrifice))
+      diagnostic: distinct consecutive ability records observed at seq 356 and 357; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: draw, draw
+      narrative: Ability of Hedron Archive: draw; draw.
+      explicit effect object references: object 298 [298], object 299 [299], Swamp [556], Doctor Doom [557] (role/targeting only where the protocol identifies it)
+  - Ability of Ultron Drone [observed_semantic_effect, seq=361] (active=iancharlesdavidson, phase=Phase_Main1, controller=iancharlesdavidson, owner=iancharlesdavidson, source_object=529, source_last_explicit_zone=Battlefield)
+      effects: one +2/+2 counter; observed P/T change +2/+2 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ultron Drone: Ultron Drone gets +2/+2; 2 counter(s) are added to Ultron Drone [529]; a token is created.
+      explicit effect object references: Robot Villain [563] (role/targeting only where the protocol identifies it)
+      token created: Robot Villain (object 563, controller=iancharlesdavidson) 2/2; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 558).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [550] Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw; GRE sequence 348).
+      Swamp [551] Hand (iancharlesdavidson) -> Battlefield (PlayLand; GRE sequence 351).
+      Hedron Archive [555] Battlefield -> Graveyard (iancharlesdavidson) (Sacrifice; GRE sequence 354).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      iancharlesdavidson: Battlefield: Arc Reactor [533], Castle Doom [369], Swamp [344], Swamp [349], Swamp [356], Swamp [458], Swamp [528], Swamp [551], Ultron Drone [529]; Exile: Ancient Vendetta [465], Requiting Hex [548], Ultron, Artificial Malevolence [464]; Graveyard: Deadly Cover-Up [517], Hedron Archive [555]
+      gian31: Battlefield: Goblin Smuggler [539], Jagged Barrens [346], Jagged Barrens [519], Razortrap Gorge [362], Swamp [351], Tinybones, the Pickpocket [543], Vaan, Street Thief [523]; Exile: Fell [375], Fell [376], Fell [377], Fell [378], Gastal Raider [469], Gastal Raider [470], Gastal Raider [471], Gastal Raider [472]; Graveyard: Laughing Jasper Flint [468], Tinybones, Bauble Burglar [466]
+
+Turn 16
+  - At Knifepoint [valid_resolution_no_immediate_mutation, seq=390] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=575)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: At Knifepoint resolves with no immediate observed mutation.
+      protocol-linked zone transfer: At Knifepoint (object 575) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: At Knifepoint (object 575) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Goblin Smuggler [valid_resolution_no_immediate_mutation, seq=395] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=539, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Goblin Smuggler resolves with no immediate observed mutation.
+  - Ability of At Knifepoint [observed_semantic_effect, seq=422] (active=gian31, phase=Phase_Main2, controller=gian31, owner=gian31, source_object=575, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of At Knifepoint: a token is created.
+      explicit effect object references: Mercenary [591] (role/targeting only where the protocol identifies it)
+      token created: Mercenary (object 591, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 590).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Vaan, Street Thief [523] (unblocked, observed P/T 2/2), Tinybones, the Pickpocket [543] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: iancharlesdavidson -2 (individual changes below; gains and losses may offset)
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): iancharlesdavidson 11 -> 9
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [564] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 376).
+      Swamp [565] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 379).
+      Cruelclaw's Heist [566] Hand (gian31) -> Stack (CastSpell; GRE sequence 380).
+      Swamp [569] Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw; GRE sequence 385).
+      Doctor Doom [573] Hand (iancharlesdavidson) -> Exile (Exile; GRE sequence 387).
+      Cruelclaw's Heist [574] Stack -> Graveyard (gian31) (Resolve; GRE sequence 387).
+      Robot Villain [580] Battlefield -> Graveyard (iancharlesdavidson) (SBA_Deathtouch; GRE sequence 407).
+      The Vision [583] Library (iancharlesdavidson) -> Exile (Exile; GRE sequence 411).
+      Binding Negotiation [585] Hand (gian31) -> Stack (CastSpell; GRE sequence 417).
+      Treasure [587] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 420).
+        sacrifice observed after Ability of Goblin Smuggler (seq 395); direct causal linkage is unavailable.
+      Treasure [589] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 420).
+        sacrifice observed after Ability of Goblin Smuggler (seq 395); direct causal linkage is unavailable.
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      iancharlesdavidson: Battlefield: Arc Reactor [533], Castle Doom [369], Swamp [344], Swamp [349], Swamp [356], Swamp [458], Swamp [528], Swamp [551], Ultron Drone [529]; Exile: Ancient Vendetta [465], Doctor Doom [573], Requiting Hex [548], The Vision [583], Ultron, Artificial Malevolence [464]; Graveyard: Deadly Cover-Up [517], Hedron Archive [555], Robot Villain [580]
+      gian31: Battlefield: At Knifepoint [575], Goblin Smuggler [539], Jagged Barrens [346], Jagged Barrens [519], Razortrap Gorge [362], Swamp [351], Swamp [565], Tinybones, the Pickpocket [543], Vaan, Street Thief [523]; Exile: Fell [375], Fell [376], Fell [377], Fell [378], Gastal Raider [469], Gastal Raider [470], Gastal Raider [471], Gastal Raider [472]; Graveyard: Cruelclaw's Heist [574], Laughing Jasper Flint [468], Tinybones, Bauble Burglar [466], Treasure [587], Treasure [589]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 2, seq 30, Phase_Main1: iancharlesdavidson 20 -> 19. Semantic attribution: Jagged Barrens; direct protocol link unavailable. Previous captured action: Jagged Barrens.
+- Turn 12, seq 268, Phase_Main1: iancharlesdavidson 14 -> 13. Semantic attribution: Jagged Barrens; direct protocol link unavailable. Previous captured action: Jagged Barrens.
+- Turn 16, seq 409, Phase_Main1: iancharlesdavidson 11 -> 9. Combat declaration observed; exact assignment unavailable. Previous captured action: Goblin Smuggler.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 2 token creations observed; 1 active as last observed; 1 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Robot Villain [563] controller=iancharlesdavidson; created Turn 15 (2/2); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 16 via Battlefield -> Graveyard (iancharlesdavidson) (SBA_Deathtouch); ceases to exist after that observed move (token rules consequence).
+- Mercenary [591] controller=gian31; created Turn 16 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 16, object 591 (latest observed P/T 1/1; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 6: object 343 [owner/controller metadata unavailable] moves Hand (iancharlesdavidson) -> Library (iancharlesdavidson) (Put).
+- Turn 1, seq 9: Swamp [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Hand (iancharlesdavidson) -> Battlefield (PlayLand).
+- Turn 2, seq 23: Goblin Smuggler [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 26: Jagged Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 44: Swamp [owner/controller metadata unavailable] moves Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw).
+- Turn 3, seq 47: Swamp [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Hand (iancharlesdavidson) -> Battlefield (PlayLand).
+- Turn 4, seq 61: Razortrap Gorge [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 64: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 65: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 67: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 81: Ultron, Artificial Malevolence [owner/controller metadata unavailable] moves Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw).
+- Turn 5, seq 84: Swamp [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Hand (iancharlesdavidson) -> Battlefield (PlayLand).
+- Turn 5, seq 85: Ultron, Artificial Malevolence [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Hand (iancharlesdavidson) -> Stack (CastSpell).
+- Turn 5, seq 88: Ultron, Artificial Malevolence [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 102: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 105: Razortrap Gorge [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 106: Fell [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 110: Ultron, Artificial Malevolence [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Battlefield -> Graveyard (iancharlesdavidson) (Destroy).
+- Turn 6, seq 110: Fell [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 7, seq 130: Hedron Archive [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw).
+- Turn 7, seq 133: Castle Doom [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Hand (iancharlesdavidson) -> Battlefield (PlayLand).
+- Turn 7, seq 134: Ancient Vendetta [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Hand (iancharlesdavidson) -> Stack (CastSpell).
+- Turn 7, seq 141: Fell [owner=gian31, controller=gian31] moves Library (gian31) -> Exile (Exile).
+- Turn 7, seq 141: Fell [owner=gian31, controller=gian31] moves Library (gian31) -> Exile (Exile).
+- Turn 7, seq 141: Fell [owner=gian31, controller=gian31] moves Library (gian31) -> Exile (Exile).
+- Turn 7, seq 141: Fell [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Exile (Exile).
+- Turn 7, seq 142: Ancient Vendetta [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Stack -> Graveyard (iancharlesdavidson) (Resolve).
+- Turn 8, seq 156: At Knifepoint [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 159: Gastal Raider [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 161: Gastal Raider [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 188: Deadly Cover-Up [owner/controller metadata unavailable] moves Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw).
+- Turn 9, seq 191: Hedron Archive [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Hand (iancharlesdavidson) -> Stack (CastSpell).
+- Turn 9, seq 194: Hedron Archive [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 208: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 211: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 213: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 235: Swamp [owner/controller metadata unavailable] moves Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw).
+- Turn 11, seq 238: Swamp [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Hand (iancharlesdavidson) -> Battlefield (PlayLand).
+- Turn 11, seq 239: Deadly Cover-Up [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Hand (iancharlesdavidson) -> Stack (CastSpell).
+- Turn 11, seq 242: Ancient Vendetta [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Graveyard (iancharlesdavidson) -> Exile (Exile).
+- Turn 11, seq 242: Ultron, Artificial Malevolence [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Graveyard (iancharlesdavidson) -> Exile (Exile).
+- Turn 11, seq 244: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 11, seq 244: Gastal Raider [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 11, seq 244: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 11, seq 245: Gastal Raider [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Exile (Exile).
+- Turn 11, seq 246: Gastal Raider [owner=gian31, controller=gian31] moves Library (gian31) -> Exile (Exile).
+- Turn 11, seq 246: Gastal Raider [owner=gian31, controller=gian31] moves Library (gian31) -> Exile (Exile).
+- Turn 11, seq 246: Gastal Raider [owner=gian31, controller=gian31] moves Library (gian31) -> Exile (Exile).
+- Turn 11, seq 247: Deadly Cover-Up [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Stack -> Graveyard (iancharlesdavidson) (Resolve).
+- Turn 12, seq 261: Jagged Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 264: Jagged Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 271: Vaan, Street Thief [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 273: Vaan, Street Thief [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 287: Swamp [owner/controller metadata unavailable] moves Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw).
+- Turn 13, seq 290: Swamp [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Hand (iancharlesdavidson) -> Battlefield (PlayLand).
+- Turn 13, seq 291: Ultron Drone [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Hand (iancharlesdavidson) -> Stack (CastSpell).
+- Turn 13, seq 294: Ultron Drone [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 295: Arc Reactor [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Hand (iancharlesdavidson) -> Stack (CastSpell).
+- Turn 13, seq 298: Arc Reactor [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 312: Binding Negotiation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 315: Goblin Smuggler [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 317: Goblin Smuggler [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 318: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 320: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 337: Requiting Hex [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Library (iancharlesdavidson) -> Exile (Exile).
+- Turn 15, seq 348: Swamp [owner/controller metadata unavailable] moves Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw).
+- Turn 15, seq 351: Swamp [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Hand (iancharlesdavidson) -> Battlefield (PlayLand).
+- Turn 15, seq 354: Hedron Archive [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Battlefield -> Graveyard (iancharlesdavidson) (Sacrifice).
+- Turn 15, seq 356: Swamp [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw).
+- Turn 15, seq 356: Doctor Doom [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw).
+- Turn 16, seq 376: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 379: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 16, seq 380: Cruelclaw's Heist [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 385: Swamp [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw).
+- Turn 16, seq 387: Doctor Doom [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Hand (iancharlesdavidson) -> Exile (Exile).
+- Turn 16, seq 387: Cruelclaw's Heist [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 16, seq 388: At Knifepoint [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 390: At Knifepoint [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 16, seq 407: Robot Villain [owner/controller metadata unavailable] moves Battlefield -> Graveyard (iancharlesdavidson) (SBA_Deathtouch).
+- Turn 16, seq 411: The Vision [owner=iancharlesdavidson, controller=iancharlesdavidson] moves Library (iancharlesdavidson) -> Exile (Exile).
+- Turn 16, seq 417: Binding Negotiation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 420: Treasure [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 16, seq 420: Treasure [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+Equivalent transfer duplicates retained as diagnostics (rendered once above):
+- Turn 15: Swamp [551] Hand (iancharlesdavidson) -> Battlefield (PlayLand); sequences 351, 352.
+- Turn 15: Swamp [556] Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw); sequences 356, 357.
+- Turn 15: Doctor Doom [557] Library (iancharlesdavidson) -> Hand (iancharlesdavidson) (Draw); sequences 356, 357.
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 6: object 289 becomes object 343 [object 289].
+- Turn 1, seq 9: object 283 becomes object 344 [Swamp].
+- Turn 2, seq 23: object 170 becomes object 345 [Goblin Smuggler].
+- Turn 2, seq 26: object 169 becomes object 346 [Jagged Barrens].
+- Turn 3, seq 44: object 290 becomes object 348 [Swamp].
+- Turn 3, seq 47: object 348 becomes object 349 [Swamp].
+- Turn 4, seq 61: object 171 becomes object 350 [Razortrap Gorge].
+- Turn 4, seq 64: object 165 becomes object 351 [Swamp].
+- Turn 4, seq 65: object 163 becomes object 352 [Tinybones, Bauble Burglar].
+- Turn 5, seq 81: object 291 becomes object 355 [Ultron, Artificial Malevolence].
+- Turn 5, seq 84: object 285 becomes object 356 [Swamp].
+- Turn 5, seq 85: object 355 becomes object 357 [Ultron, Artificial Malevolence].
+- Turn 6, seq 102: object 172 becomes object 361 [Laughing Jasper Flint].
+- Turn 6, seq 105: object 350 becomes object 362 [Razortrap Gorge].
+- Turn 6, seq 106: object 166 becomes object 363 [Fell].
+- Turn 6, seq 110: object 357 becomes object 366 [Ultron, Artificial Malevolence].
+- Turn 6, seq 110: object 363 becomes object 367 [Fell].
+- Turn 7, seq 130: object 292 becomes object 368 [Hedron Archive].
+- Turn 7, seq 133: object 284 becomes object 369 [Castle Doom].
+- Turn 7, seq 134: object 286 becomes object 370 [Ancient Vendetta].
+- Turn 7, seq 141: object 212 becomes object 377 [Fell].
+- Turn 7, seq 141: object 209 becomes object 376 [Fell].
+- Turn 7, seq 141: object 195 becomes object 375 [Fell].
+- Turn 7, seq 141: object 367 becomes object 378 [Fell].
+- Turn 7, seq 142: object 370 becomes object 431 [Ancient Vendetta].
+- Turn 8, seq 156: object 384 becomes object 432 [At Knifepoint].
+- Turn 8, seq 159: object 168 becomes object 433 [Gastal Raider].
+- Turn 9, seq 188: object 293 becomes object 444 [Deadly Cover-Up].
+- Turn 9, seq 191: object 368 becomes object 445 [Hedron Archive].
+- Turn 10, seq 208: object 385 becomes object 450 [Tinybones, the Pickpocket].
+- Turn 10, seq 211: object 361 becomes object 451 [Laughing Jasper Flint].
+- Turn 11, seq 235: object 294 becomes object 457 [Swamp].
+- Turn 11, seq 238: object 457 becomes object 458 [Swamp].
+- Turn 11, seq 239: object 444 becomes object 459 [Deadly Cover-Up].
+- Turn 11, seq 242: object 431 becomes object 465 [Ancient Vendetta].
+- Turn 11, seq 242: object 366 becomes object 464 [Ultron, Artificial Malevolence].
+- Turn 11, seq 244: object 352 becomes object 466 [Tinybones, Bauble Burglar].
+- Turn 11, seq 244: object 433 becomes object 467 [Gastal Raider].
+- Turn 11, seq 244: object 451 becomes object 468 [Laughing Jasper Flint].
+- Turn 11, seq 245: object 467 becomes object 469 [Gastal Raider].
+- Turn 11, seq 246: object 418 becomes object 472 [Gastal Raider].
+- Turn 11, seq 246: object 402 becomes object 471 [Gastal Raider].
+- Turn 11, seq 246: object 397 becomes object 470 [Gastal Raider].
+- Turn 11, seq 247: object 459 becomes object 517 [Deadly Cover-Up].
+- Turn 12, seq 261: object 475 becomes object 518 [Jagged Barrens].
+- Turn 12, seq 264: object 518 becomes object 519 [Jagged Barrens].
+- Turn 12, seq 271: object 167 becomes object 523 [Vaan, Street Thief].
+- Turn 13, seq 287: object 295 becomes object 527 [Swamp].
+- Turn 13, seq 290: object 527 becomes object 528 [Swamp].
+- Turn 13, seq 291: object 287 becomes object 529 [Ultron Drone].
+- Turn 13, seq 295: object 288 becomes object 533 [Arc Reactor].
+- Turn 14, seq 312: object 476 becomes object 538 [Binding Negotiation].
+- Turn 14, seq 315: object 345 becomes object 539 [Goblin Smuggler].
+- Turn 14, seq 318: object 450 becomes object 543 [Tinybones, the Pickpocket].
+- Turn 14, seq 337: object 296 becomes object 548 [Requiting Hex].
+- Turn 15, seq 348: object 297 becomes object 550 [Swamp].
+- Turn 15, seq 351: object 550 becomes object 551 [Swamp].
+- Turn 15, seq 352: object 550 becomes object 551 [Swamp].
+- Turn 15, seq 354: object 445 becomes object 555 [Hedron Archive].
+- Turn 15, seq 356: object 298 becomes object 556 [Swamp].
+- Turn 15, seq 356: object 299 becomes object 557 [Doctor Doom].
+- Turn 15, seq 357: object 298 becomes object 556 [Swamp].
+- Turn 15, seq 357: object 299 becomes object 557 [Doctor Doom].
+- Turn 16, seq 376: object 477 becomes object 564 [Swamp].
+- Turn 16, seq 379: object 564 becomes object 565 [Swamp].
+- Turn 16, seq 380: object 164 becomes object 566 [Cruelclaw's Heist].
+- Turn 16, seq 385: object 300 becomes object 569 [Swamp].
+- Turn 16, seq 387: object 557 becomes object 573 [Doctor Doom].
+- Turn 16, seq 387: object 566 becomes object 574 [Cruelclaw's Heist].
+- Turn 16, seq 388: object 432 becomes object 575 [At Knifepoint].
+- Turn 16, seq 407: object 563 becomes object 580 [Robot Villain].
+- Turn 16, seq 411: object 301 becomes object 583 [The Vision].
+- Turn 16, seq 417: object 538 becomes object 585 [Binding Negotiation].
+- Turn 16, seq 420: object 549 becomes object 587 [Treasure].
+- Turn 16, seq 420: object 584 becomes object 589 [Treasure].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: iancharlesdavidson plays Swamp (object 344) from Hand (iancharlesdavidson) to Battlefield.
+- Turn 2: gian31 plays Jagged Barrens (object 346) from Hand (gian31) to Battlefield.
+- Turn 3: iancharlesdavidson plays Swamp (object 349) from Hand (iancharlesdavidson) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 351) from Hand (gian31) to Battlefield.
+- Turn 5: iancharlesdavidson plays Swamp (object 356) from Hand (iancharlesdavidson) to Battlefield.
+- Turn 6: gian31 plays Razortrap Gorge (object 362) from Hand (gian31) to Battlefield.
+- Turn 7: iancharlesdavidson plays Castle Doom (object 369) from Hand (iancharlesdavidson) to Battlefield.
+- Turn 11: iancharlesdavidson plays Swamp (object 458) from Hand (iancharlesdavidson) to Battlefield.
+- Turn 12: gian31 plays Jagged Barrens (object 519) from Hand (gian31) to Battlefield.
+- Turn 13: iancharlesdavidson plays Swamp (object 528) from Hand (iancharlesdavidson) to Battlefield.
+- Turn 15: iancharlesdavidson plays Swamp (object 551) from Hand (iancharlesdavidson) to Battlefield.
+- Turn 16: gian31 plays Swamp (object 565) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Goblin Smuggler: casts=1; abilities=2 (triggered=2, activated=0) across turns [14, 14, 16]
+- Hedron Archive: casts=1; abilities=2 (triggered=2, activated=0) across turns [9, 15, 15]
+  observed effect totals: draws=4, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn.: abilities=3 (triggered=0, activated=3) across turns [8, 10, 12]
+- At Knifepoint: casts=1; abilities=1 (triggered=1, activated=0) across turns [16, 16]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Jagged Barrens: abilities=2 (triggered=2, activated=0) across turns [2, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=2, life_changes=2, other=2
+  observed effects: 1 damage, life -1, synthetic event
+- Ultron Drone: casts=1; abilities=1 (triggered=1, activated=0) across turns [13, 15]
+  observed effect totals: draws=0, tokens=1, counters=1, returns=0, damage=0, life_changes=0, other=1
+  observed effects: +2 counter(s), P/T +2/+2, token creation
+- Arc Reactor: casts=1 across turns [13]
+- Fell: casts=1 across turns [6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Gastal Raider: casts=1 across turns [8]
+- Laughing Jasper Flint: casts=1 across turns [10]
+- Tinybones, Bauble Burglar: casts=1 across turns [4]
+- Tinybones, the Pickpocket: casts=1 across turns [14]
+- Ultron, Artificial Malevolence: casts=1 across turns [5]
+- Vaan, Street Thief: casts=1 across turns [12]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 6 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Tinybones, Bauble Burglar (gian31) -> iancharlesdavidson; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Tinybones, Bauble Burglar (gian31) -> iancharlesdavidson; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Tinybones, Bauble Burglar (gian31) -> iancharlesdavidson; unblocked in this observed snapshot
+  attacker: Gastal Raider (gian31) -> iancharlesdavidson; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 14 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Vaan, Street Thief (gian31) -> iancharlesdavidson; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 16 - DeclareAttack (active=gian31)
+  attacker: Vaan, Street Thief (gian31) -> iancharlesdavidson; unblocked in this observed snapshot
+  attacker: Tinybones, the Pickpocket (gian31) -> iancharlesdavidson; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 8: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. (active=gian31) - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+- Turn 10: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. (active=gian31) - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 163: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Cruelclaw's Heist | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 166: Fell | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 167: Vaan, Street Thief | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 168: Gastal Raider | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 169: Jagged Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 287: Ultron Drone | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Hand (latest_object_observation)
+- 288: Arc Reactor | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Hand (latest_object_observation)
+- 344: Swamp | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Battlefield (latest_object_observation)
+- 345: Goblin Smuggler | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 346: Jagged Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 347: object 347 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 349: Swamp | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Battlefield (latest_object_observation)
+- 350: Razortrap Gorge | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 351: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 352: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 356: Swamp | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Battlefield (latest_object_observation)
+- 357: Ultron, Artificial Malevolence | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Battlefield (latest_object_observation)
+- 361: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 362: Razortrap Gorge | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 363: Fell | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 366: Ultron, Artificial Malevolence | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Graveyard (latest_object_observation)
+- 367: Fell | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 368: Hedron Archive | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Hand (latest_object_observation)
+- 369: Castle Doom | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Battlefield (latest_object_observation)
+- 370: Ancient Vendetta | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Stack (latest_object_observation)
+- 375: Fell | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 376: Fell | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 377: Fell | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 378: Fell | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 431: Ancient Vendetta | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Hand (latest_object_observation)
+- 432: At Knifepoint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 433: Gastal Raider | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 437: object 437 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 438: object 438 | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 439: Arc Reactor | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Hand (latest_object_observation)
+- 440: Hedron Archive | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Hand (latest_object_observation)
+- 441: Ultron Drone | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Hand (latest_object_observation)
+- 443: object 443 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 445: Hedron Archive | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Stack (latest_object_observation)
+- 450: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 451: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 456: object 456 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 458: Swamp | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Battlefield (latest_object_observation)
+- 459: Deadly Cover-Up | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Stack (latest_object_observation)
+- 464: Ultron, Artificial Malevolence | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Exile (latest_object_observation)
+- 465: Ancient Vendetta | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Exile (latest_object_observation)
+- 466: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 467: Gastal Raider | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 468: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 469: Gastal Raider | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 470: Gastal Raider | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 471: Gastal Raider | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 472: Gastal Raider | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 517: Deadly Cover-Up | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Graveyard (latest_object_observation)
+- 518: Jagged Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 519: Jagged Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 520: object 520 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 522: object 522 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 523: Vaan, Street Thief | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 528: Swamp | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Battlefield (latest_object_observation)
+- 529: Ultron Drone | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Battlefield (latest_object_observation)
+- 533: Arc Reactor | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Stack (latest_object_observation)
+- 538: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 539: Goblin Smuggler | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 543: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 545: object 545 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 547: object 547 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 548: Requiting Hex | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Exile (latest_object_observation)
+- 549: Treasure | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 551: Swamp | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Battlefield (latest_object_observation)
+- 552: Send in the Pest | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Stack (latest_object_observation)
+- 555: Hedron Archive | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Graveyard (latest_object_observation)
+- 556: Swamp | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Hand (latest_object_observation)
+- 557: Doctor Doom | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Hand (latest_object_observation)
+- 558: object 558 | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Stack (latest_object_observation)
+- 563: Robot Villain | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Hand (latest_object_observation)
+- 564: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 565: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 566: Cruelclaw's Heist | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 569: Swamp | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Hand (latest_object_observation)
+- 570: Doctor Doom | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Hand (latest_object_observation)
+- 571: Swamp | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Hand (latest_object_observation)
+- 572: Swamp | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Hand (latest_object_observation)
+- 573: Doctor Doom | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Exile (latest_object_observation)
+- 574: Cruelclaw's Heist | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 575: At Knifepoint | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 579: object 579 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 582: object 582 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 583: The Vision | controller=iancharlesdavidson | owner=iancharlesdavidson | zone=Exile (latest_object_observation)
+- 584: Treasure | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 585: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 590: object 590 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 591: Mercenary | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 58 total items
+  zones: Battlefield=12, Exile=8, Graveyard=4, Hand=19, Stack=15
+  objects: Fell x7, Gastal Raider x7, Jagged Barrens x4, Swamp x4, Cruelclaw's Heist x3, Laughing Jasper Flint x3, Tinybones, Bauble Burglar x3, At Knifepoint x2, Binding Negotiation x2, Goblin Smuggler x2, Razortrap Gorge x2, Tinybones, the Pickpocket x2
+iancharlesdavidson: 37 total items
+  zones: Battlefield=9, Exile=5, Graveyard=3, Hand=14, Stack=6
+  objects: Swamp x10, Hedron Archive x4, Ancient Vendetta x3, Arc Reactor x3, Doctor Doom x3, Ultron Drone x3, Ultron, Artificial Malevolence x3, Deadly Cover-Up x2, Castle Doom, Requiting Hex, Robot Villain, Send in the Pest
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (12): Gastal Raider, Goblin Smuggler, Jagged Barrens, Jagged Barrens, Laughing Jasper Flint, Mercenary, Razortrap Gorge, Swamp, Swamp, Tinybones, Bauble Burglar, Tinybones, the Pickpocket, Vaan, Street Thief
+  Graveyard: 4 card(s)
+iancharlesdavidson:
+  Battlefield (9): Castle Doom, Swamp, Swamp, Swamp, Swamp, Swamp, Swamp, Ultron Drone, Ultron, Artificial Malevolence
+  Graveyard: 3 card(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=33, Stack=21
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+gian31:
+  Battlefield (10): Jagged Barrens, Swamp, Razortrap Gorge, Jagged Barrens, Vaan, Street Thief, Goblin Smuggler, Tinybones, the Pickpocket, Swamp, At Knifepoint, Mercenary
+  Graveyard (3): Tinybones, Bauble Burglar, Laughing Jasper Flint, Cruelclaw's Heist
+  Exile (8): Fell, Fell, Fell, Fell, Gastal Raider, Gastal Raider, Gastal Raider, Gastal Raider
+iancharlesdavidson:
+  Battlefield (9): Swamp, Swamp, Swamp, Castle Doom, Swamp, Swamp, Ultron Drone, Arc Reactor, Swamp
+  Graveyard (2): Deadly Cover-Up, Hedron Archive
+  Exile (5): Ultron, Artificial Malevolence, Ancient Vendetta, Requiting Hex, Doctor Doom, The Vision
+Known non-persistent entries (counts only):
+  gian31: Hand=1, Limbo=9, Stack=1
+  iancharlesdavidson: Hand=2, Library=1, Limbo=3, Revealed=2
+  unknown: Library=80, Limbo=9
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: iancharlesdavidson Battlefield=1
+- Turn 2: gian31 Battlefield=1; iancharlesdavidson Battlefield=1
+- Turn 3: gian31 Battlefield=1; iancharlesdavidson Battlefield=2
+- Turn 4: gian31 Battlefield=3; iancharlesdavidson Battlefield=2
+- Turn 5: gian31 Battlefield=3; iancharlesdavidson Battlefield=4
+- Turn 6: gian31 Battlefield=4; gian31 Graveyard=1; iancharlesdavidson Battlefield=3; iancharlesdavidson Graveyard=1
+- Turn 7: gian31 Battlefield=4; gian31 Exile=4; iancharlesdavidson Battlefield=4; iancharlesdavidson Graveyard=2
+- Turn 8: gian31 Battlefield=5; gian31 Exile=4; iancharlesdavidson Battlefield=4; iancharlesdavidson Graveyard=2
+- Turn 9: gian31 Battlefield=5; gian31 Exile=4; iancharlesdavidson Battlefield=5; iancharlesdavidson Graveyard=2
+- Turn 10: gian31 Battlefield=6; gian31 Exile=4; iancharlesdavidson Battlefield=5; iancharlesdavidson Graveyard=2
+- Turn 11: gian31 Battlefield=3; gian31 Graveyard=2; gian31 Exile=8; iancharlesdavidson Battlefield=6; iancharlesdavidson Graveyard=1; iancharlesdavidson Exile=2
+- Turn 12: gian31 Battlefield=5; gian31 Graveyard=2; gian31 Exile=8; iancharlesdavidson Battlefield=6; iancharlesdavidson Graveyard=1; iancharlesdavidson Exile=2
+- Turn 13: gian31 Battlefield=5; gian31 Graveyard=2; gian31 Exile=8; iancharlesdavidson Battlefield=9; iancharlesdavidson Graveyard=1; iancharlesdavidson Exile=2
+- Turn 14: gian31 Battlefield=7; gian31 Graveyard=2; gian31 Exile=8; iancharlesdavidson Battlefield=9; iancharlesdavidson Graveyard=1; iancharlesdavidson Exile=3
+- Turn 15: gian31 Battlefield=7; gian31 Graveyard=2; gian31 Exile=8; iancharlesdavidson Battlefield=9; iancharlesdavidson Graveyard=2; iancharlesdavidson Exile=3
+- Turn 16: gian31 Battlefield=9; gian31 Graveyard=5; gian31 Exile=8; iancharlesdavidson Battlefield=9; iancharlesdavidson Graveyard=3; iancharlesdavidson Exile=5
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 4: Tinybones, Bauble Burglar resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Ultron, Artificial Malevolence resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Gastal Raider resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Hedron Archive resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Laughing Jasper Flint resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Vaan, Street Thief resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Ultron Drone resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Arc Reactor resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Goblin Smuggler resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Tinybones, the Pickpocket resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: At Knifepoint resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
