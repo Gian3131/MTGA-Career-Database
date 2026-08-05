@@ -1,0 +1,912 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: Shabazyan, gian31
+Seat map: Seat 1=Shabazyan, Seat 2=gian31
+Turn range (known): 1 - 18
+Records: 38
+Action chains: 32
+Winner: gian31
+Final life: {'Shabazyan': 13, 'gian31': 10}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 18 (Phase_Main1; Laughing Jasper Flint, seq 476).
+Later numbered GRE record(s): 4 after action sequence 476 across turn(s) [18]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+POST-ACTION GRE RECORDS - RESULT ORDER UNRESOLVED
+  - Turn 18, seq 482: tapped_changed.
+  - Turn 18, seq 482: tapped_changed.
+  - Turn 18, seq 482: tapped_changed.
+  - Turn 18, seq 482: tapped_changed.
+  These records are retained for traceability; their order relative to the match-result payload is not asserted.
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 38 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 12 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] (raw records=12; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 17 explicit Library -> Hand movement(s); named in the draw record=11, resolved through an explicit identity transition=5, unresolved=1.
+Unresolved draw identities (explicit movements retained): Turn 11, seq 254, object 362.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): At Knifepoint [221], Jagged Barrens [222], At Knifepoint [223], Swamp [224], Vaan, Street Thief [225], Tinybones, Bauble Burglar [226], Fell [227].
+  - unknown: 7 observed card(s): object 161 [161], object 162 [162], object 163 [163], object 164 [164], object 165 [165], object 166 [166], object 167 [167].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'Shabazyan': 13, 'gian31': 10}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 18 (Phase_Main1; Laughing Jasper Flint, seq 476).
+Last captured life snapshot: gian31 11 -> 10 (seq 454).
+Tokens on battlefield at their last observation (not confirmed at match end): Wizard [344] controller=Shabazyan, created Turn 9, last observed Turn 17 seq 452, P/T 1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Mercenary [426] controller=gian31, created Turn 16, last observed Turn 18 seq 482, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Mercenary [427] controller=gian31, created Turn 16, last observed Turn 18 seq 482, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=1; life mutations=1; explicit battlefield entries=Jagged Barrens.
+- Turn 2: actions: cards=0, abilities=1; life mutations=1; explicit battlefield entries=Jagged Barrens.
+- Turn 3: actions: cards=0, abilities=1; life mutations=1; explicit battlefield entries=Jagged Barrens.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Tinybones, Bauble Burglar.
+- Turn 5: actions: cards=0, abilities=0; explicit battlefield entries=Swamp; explicit battlefield exits=Tinybones, Bauble Burglar.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Gastal Raider.
+- Turn 7: actions: cards=1, abilities=2; life mutations=2; explicit battlefield entries=Bloodfell Caves, Tithing Blade; explicit battlefield exits=Gastal Raider.
+- Turn 8: actions: cards=1, abilities=2; life mutations=1; explicit battlefield entries=Jagged Barrens, Vaan, Street Thief.
+- Turn 9: actions: cards=1, abilities=2; life mutations=1; explicit battlefield entries=Jagged Barrens, Kuja, Genome Sorcerer.
+- Turn 10: actions: cards=2, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Mountain, At Knifepoint; explicit battlefield exits=Kuja, Genome Sorcerer.
+- Turn 11: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Summon: G.F. Cerberus.
+- Turn 12: actions: cards=2, abilities=2; combat snapshots=1; life mutations=1; explicit battlefield entries=Razortrap Gorge, At Knifepoint; explicit battlefield exits=Summon: G.F. Cerberus.
+- Turn 13: actions: cards=0, abilities=2; life mutations=2; explicit battlefield exits=Mercenary.
+- Turn 14: actions: cards=1, abilities=0; combat snapshots=1; explicit battlefield entries=Treasure Dredger; explicit battlefield exits=Wizard.
+- Turn 15: actions: cards=1, abilities=3; life mutations=2; explicit battlefield entries=Black Mage's Rod.
+- Turn 16: actions: cards=2, abilities=3; combat snapshots=1; life mutations=1; explicit battlefield entries=Laughing Jasper Flint; explicit battlefield exits=Hero.
+- Turn 17: actions: cards=1, abilities=2; life mutations=2; explicit battlefield exits=Laughing Jasper Flint.
+- Turn 18: actions: cards=1, abilities=0; combat snapshots=1; explicit battlefield entries=Laughing Jasper Flint.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Ability of Jagged Barrens [observed_semantic_effect, seq=11] (active=Shabazyan, phase=Phase_Main1, controller=Shabazyan, owner=Shabazyan, source_object=281, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Jagged Barrens: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 2] (role/targeting only where the protocol identifies it)
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Jagged Barrens; direct protocol link unavailable): gian31 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Jagged Barrens [281] Hand (Shabazyan) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shabazyan: Battlefield: Jagged Barrens [281]
+
+Turn 2
+  - Ability of Jagged Barrens [observed_semantic_effect, seq=32] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=284, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Jagged Barrens: Shabazyan takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: Shabazyan [player seat 1] (role/targeting only where the protocol identifies it)
+    net observed life change this turn: Shabazyan -1 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Jagged Barrens; direct protocol link unavailable): Shabazyan 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Gastal Raider [283] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 25).
+      Jagged Barrens [284] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 28).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shabazyan: Battlefield: Jagged Barrens [281]
+      gian31: Battlefield: Jagged Barrens [284]
+
+Turn 3
+  - Ability of Jagged Barrens [observed_semantic_effect, seq=53] (active=Shabazyan, phase=Phase_Main1, controller=Shabazyan, owner=Shabazyan, source_object=287, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Jagged Barrens: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 2] (role/targeting only where the protocol identifies it)
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Jagged Barrens; direct protocol link unavailable): gian31 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Kuja, Genome Sorcerer [286] Library (Shabazyan) -> Hand (Shabazyan) (Draw; GRE sequence 46).
+      Jagged Barrens [287] Hand (Shabazyan) -> Battlefield (PlayLand; GRE sequence 49).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shabazyan: Battlefield: Jagged Barrens [281], Jagged Barrens [287]
+      gian31: Battlefield: Jagged Barrens [284]
+
+Turn 4
+  - Tinybones, Bauble Burglar [valid_resolution_no_immediate_mutation, seq=73] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=291)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, Bauble Burglar resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 291) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 291) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [289] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 67).
+      Swamp [290] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 70).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shabazyan: Battlefield: Jagged Barrens [281], Jagged Barrens [287]
+      gian31: Battlefield: Jagged Barrens [284], Swamp [290], Tinybones, Bauble Burglar [291]
+
+Turn 5
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodfell Caves [294] Library (Shabazyan) -> Hand (Shabazyan) (Draw; GRE sequence 87).
+      Swamp [295] Hand (Shabazyan) -> Battlefield (PlayLand; GRE sequence 90).
+      Cornered by Black Mages [296] Hand (Shabazyan) -> Stack (CastSpell; GRE sequence 91).
+      Tinybones, Bauble Burglar [300] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 96).
+      Cornered by Black Mages [302] Stack -> Graveyard (Shabazyan) (Resolve; GRE sequence 96).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shabazyan: Battlefield: Jagged Barrens [281], Jagged Barrens [287], Swamp [295]; Graveyard: Cornered by Black Mages [302]
+      gian31: Battlefield: Jagged Barrens [284], Swamp [290]; Graveyard: Tinybones, Bauble Burglar [300]
+
+Turn 6
+  - Gastal Raider [valid_resolution_no_immediate_mutation, seq=116] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=305)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Gastal Raider resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Gastal Raider (object 305) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gastal Raider (object 305) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Jagged Barrens [303] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 110).
+      Swamp [304] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 113).
+      Withering Torment [316] Hand (Shabazyan) -> Graveyard (Shabazyan) (Discard; GRE sequence 121).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shabazyan: Battlefield: Jagged Barrens [281], Jagged Barrens [287], Swamp [295]; Graveyard: Cornered by Black Mages [302], Withering Torment [316]
+      gian31: Battlefield: Gastal Raider [305], Jagged Barrens [284], Swamp [290], Swamp [304]; Graveyard: Tinybones, Bauble Burglar [300]
+
+Turn 7
+  - Ability of Bloodfell Caves [observed_semantic_effect, seq=140] (active=Shabazyan, phase=Phase_Main1, controller=Shabazyan, owner=Shabazyan, source_object=318, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodfell Caves: Shabazyan gains 1 life.
+  - Ability of Wizard [observed_semantic_effect, seq=143] (active=Shabazyan, phase=Phase_Main1, controller=Shabazyan, owner=Shabazyan, source_object=301)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Wizard: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 2] (role/targeting only where the protocol identifies it)
+  - Tithing Blade [valid_resolution_no_immediate_mutation, seq=145] (active=Shabazyan, phase=Phase_Main1, controller=Shabazyan, owner=Shabazyan, source_object=320)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tithing Blade resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tithing Blade (object 320) Hand (Shabazyan) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tithing Blade (object 320) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: Shabazyan +1; gian31 -1 (individual changes below; gains and losses may offset)
+    life: Shabazyan 19 -> 20
+    life (semantically attributed to Wizard; direct protocol link unavailable): gian31 18 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Jagged Barrens [317] Library (Shabazyan) -> Hand (Shabazyan) (Draw; GRE sequence 135).
+      Bloodfell Caves [318] Hand (Shabazyan) -> Battlefield (PlayLand; GRE sequence 138).
+      Gastal Raider [325] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 148).
+        sacrifice observed after Tithing Blade (seq 145); direct causal linkage is unavailable.
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shabazyan: Battlefield: Bloodfell Caves [318], Jagged Barrens [281], Jagged Barrens [287], Swamp [295], Tithing Blade [320]; Graveyard: Cornered by Black Mages [302], Withering Torment [316]
+      gian31: Battlefield: Jagged Barrens [284], Swamp [290], Swamp [304]; Graveyard: Gastal Raider [325], Tinybones, Bauble Burglar [300]
+
+Turn 8
+  - Ability of Jagged Barrens [observed_semantic_effect, seq=170] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=327, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Jagged Barrens: Shabazyan takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: Shabazyan [player seat 1] (role/targeting only where the protocol identifies it)
+  - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. [valid_resolution_no_immediate_mutation, seq=172] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=310)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+  - Vaan, Street Thief [valid_resolution_no_immediate_mutation, seq=175] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=331)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Vaan, Street Thief resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Vaan, Street Thief (object 331) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Vaan, Street Thief (object 331) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: Shabazyan -1 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Jagged Barrens; direct protocol link unavailable): Shabazyan 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [326] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 163).
+      Jagged Barrens [327] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 166).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shabazyan: Battlefield: Bloodfell Caves [318], Jagged Barrens [281], Jagged Barrens [287], Swamp [295], Tithing Blade [320]; Graveyard: Cornered by Black Mages [302], Withering Torment [316]
+      gian31: Battlefield: Jagged Barrens [284], Jagged Barrens [327], Swamp [290], Swamp [304], Vaan, Street Thief [331]; Graveyard: Gastal Raider [325], Tinybones, Bauble Burglar [300]
+
+Turn 9
+  - Ability of Jagged Barrens [observed_semantic_effect, seq=196] (active=Shabazyan, phase=Phase_Main1, controller=Shabazyan, owner=Shabazyan, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Jagged Barrens: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 2] (role/targeting only where the protocol identifies it)
+  - Kuja, Genome Sorcerer [valid_resolution_no_immediate_mutation, seq=199] (active=Shabazyan, phase=Phase_Main1, controller=Shabazyan, owner=Shabazyan, source_object=338)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Kuja, Genome Sorcerer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Kuja, Genome Sorcerer (object 338) Hand (Shabazyan) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Kuja, Genome Sorcerer (object 338) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Kuja, Genome Sorcerer [observed_semantic_effect, seq=212] (active=Shabazyan, phase=Phase_Ending, step=Step_End, controller=Shabazyan, owner=Shabazyan, source_object=338, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Kuja, Genome Sorcerer: a token is created.
+      explicit effect object references: Wizard [344] (role/targeting only where the protocol identifies it)
+      token created: Wizard (object 344, controller=Shabazyan); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 343).
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Jagged Barrens; direct protocol link unavailable): gian31 17 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [335] Library (Shabazyan) -> Hand (Shabazyan) (Draw; GRE sequence 189).
+      Jagged Barrens [336] Hand (Shabazyan) -> Battlefield (PlayLand; GRE sequence 192).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shabazyan: Battlefield: Bloodfell Caves [318], Jagged Barrens [281], Jagged Barrens [287], Jagged Barrens [336], Kuja, Genome Sorcerer [338], Swamp [295], Tithing Blade [320]; Graveyard: Cornered by Black Mages [302], Withering Torment [316]
+      gian31: Battlefield: Jagged Barrens [284], Jagged Barrens [327], Swamp [290], Swamp [304], Vaan, Street Thief [331]; Graveyard: Gastal Raider [325], Tinybones, Bauble Burglar [300]
+
+Turn 10
+  - Fell [observed_semantic_effect, seq=224] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=347)
+      effects: destroy
+      narrative: Fell destroys Kuja, Genome Sorcerer.
+      explicit effect object references: Kuja, Genome Sorcerer [338], Kuja, Genome Sorcerer [350] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Fell (object 347) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Kuja, Genome Sorcerer (object 350) Battlefield -> Graveyard (Shabazyan) (Destroy; shared object ID)
+      protocol-linked zone transfer: Fell (object 351) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 347 -> transfer object 351 (explicit GRE ObjectIdChanged chain).
+  - At Knifepoint [valid_resolution_no_immediate_mutation, seq=227] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=352)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: At Knifepoint resolves with no immediate observed mutation.
+      protocol-linked zone transfer: At Knifepoint (object 352) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: At Knifepoint (object 352) Stack -> Battlefield (Resolve; shared object ID)
+  - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. [valid_resolution_no_immediate_mutation, seq=241] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=310)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Vaan, Street Thief [331] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Shabazyan -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Shabazyan 19 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Razortrap Gorge [345] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 216).
+      Mountain [346] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 219).
+      Hero's Downfall [360] Library (Shabazyan) -> Exile (Exile; GRE sequence 243).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shabazyan: Battlefield: Bloodfell Caves [318], Jagged Barrens [281], Jagged Barrens [287], Jagged Barrens [336], Swamp [295], Tithing Blade [320]; Graveyard: Cornered by Black Mages [302], Kuja, Genome Sorcerer [350], Withering Torment [316]; Exile: Hero's Downfall [360]
+      gian31: Battlefield: At Knifepoint [352], Jagged Barrens [284], Jagged Barrens [327], Mountain [346], Swamp [290], Swamp [304], Vaan, Street Thief [331]; Graveyard: Fell [351], Gastal Raider [325], Tinybones, Bauble Burglar [300]
+
+Turn 11
+  - Summon: G.F. Cerberus [valid_resolution_no_immediate_mutation, seq=260] (active=Shabazyan, phase=Phase_Main1, controller=Shabazyan, owner=Shabazyan, source_object=364)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Summon: G.F. Cerberus resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Summon: G.F. Cerberus (object 364) Hand (Shabazyan) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Summon: G.F. Cerberus (object 364) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 362 [362] Library (Shabazyan) -> Hand (Shabazyan) (Draw; GRE sequence 254).
+      Mountain [363] Hand (Shabazyan) -> Battlefield (PlayLand; GRE sequence 257).
+      Abrade [370] Library (Shabazyan) -> Graveyard (Shabazyan) (Surveil; GRE sequence 263).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shabazyan: Battlefield: Bloodfell Caves [318], Jagged Barrens [281], Jagged Barrens [287], Jagged Barrens [336], Mountain [363], Summon: G.F. Cerberus [364], Swamp [295], Tithing Blade [320]; Graveyard: Abrade [370], Cornered by Black Mages [302], Kuja, Genome Sorcerer [350], Withering Torment [316]; Exile: Hero's Downfall [360]
+      gian31: Battlefield: At Knifepoint [352], Jagged Barrens [284], Jagged Barrens [327], Mountain [346], Swamp [290], Swamp [304], Vaan, Street Thief [331]; Graveyard: Fell [351], Gastal Raider [325], Tinybones, Bauble Burglar [300]
+
+Turn 12
+  - Ability of At Knifepoint [observed_semantic_effect, seq=286] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=352, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of At Knifepoint: a token is created.
+      explicit effect object references: Mercenary [377] (role/targeting only where the protocol identifies it)
+      token created: Mercenary (object 377, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 376).
+  - Fell [observed_semantic_effect, seq=288] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=373)
+      effects: destroy
+      narrative: Fell destroys Summon: G.F. Cerberus.
+      explicit effect object references: Summon: G.F. Cerberus [364], Summon: G.F. Cerberus [378] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Fell (object 373) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Summon: G.F. Cerberus (object 378) Battlefield -> Graveyard (Shabazyan) (Destroy; shared object ID)
+      protocol-linked zone transfer: Fell (object 379) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 373 -> transfer object 379 (explicit GRE ObjectIdChanged chain).
+  - At Knifepoint [valid_resolution_no_immediate_mutation, seq=291] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=380)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: At Knifepoint resolves with no immediate observed mutation.
+      protocol-linked zone transfer: At Knifepoint (object 380) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: At Knifepoint (object 380) Stack -> Battlefield (Resolve; shared object ID)
+  - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. [valid_resolution_no_immediate_mutation, seq=305] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=310)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Vaan, Street Thief [331] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Shabazyan -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Shabazyan 17 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Fell [371] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 278).
+      Razortrap Gorge [372] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 281).
+      Temple of Malice [388] Library (Shabazyan) -> Exile (Exile; GRE sequence 307).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shabazyan: Battlefield: Bloodfell Caves [318], Jagged Barrens [281], Jagged Barrens [287], Jagged Barrens [336], Mountain [363], Swamp [295], Tithing Blade [320]; Graveyard: Abrade [370], Cornered by Black Mages [302], Kuja, Genome Sorcerer [350], Summon: G.F. Cerberus [378], Withering Torment [316]; Exile: Hero's Downfall [360], Temple of Malice [388]
+      gian31: Battlefield: At Knifepoint [352], At Knifepoint [380], Jagged Barrens [284], Jagged Barrens [327], Mountain [346], Razortrap Gorge [372], Swamp [290], Swamp [304], Vaan, Street Thief [331]; Graveyard: Fell [351], Fell [379], Gastal Raider [325], Tinybones, Bauble Burglar [300]
+
+Turn 13
+  - Ability of Wizard [observed_semantic_effect, seq=326] (active=Shabazyan, phase=Phase_Main1, controller=Shabazyan, owner=Shabazyan, source_object=344)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Wizard: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 2] (role/targeting only where the protocol identifies it)
+  - Ability of Wizard [observed_semantic_effect, seq=328] (active=Shabazyan, phase=Phase_Main1, controller=Shabazyan, owner=Shabazyan, source_object=301)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Wizard: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 2] (role/targeting only where the protocol identifies it)
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Wizard; direct protocol link unavailable): gian31 16 -> 15
+    life (semantically attributed to Wizard; direct protocol link unavailable): gian31 15 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Cornered by Black Mages [390] Library (Shabazyan) -> Hand (Shabazyan) (Draw; GRE sequence 318).
+      Cornered by Black Mages [391] Hand (Shabazyan) -> Stack (CastSpell; GRE sequence 321).
+      Mercenary [397] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 331).
+        sacrifice observed after Ability of Wizard (seq 328); direct causal linkage is unavailable.
+      Cornered by Black Mages [399] Stack -> Graveyard (Shabazyan) (Resolve; GRE sequence 331).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shabazyan: Battlefield: Bloodfell Caves [318], Jagged Barrens [281], Jagged Barrens [287], Jagged Barrens [336], Mountain [363], Swamp [295], Tithing Blade [320]; Graveyard: Abrade [370], Cornered by Black Mages [302], Cornered by Black Mages [399], Kuja, Genome Sorcerer [350], Summon: G.F. Cerberus [378], Withering Torment [316]; Exile: Hero's Downfall [360], Temple of Malice [388]
+      gian31: Battlefield: At Knifepoint [352], At Knifepoint [380], Jagged Barrens [284], Jagged Barrens [327], Mountain [346], Razortrap Gorge [372], Swamp [290], Swamp [304], Vaan, Street Thief [331]; Graveyard: Fell [351], Fell [379], Gastal Raider [325], Mercenary [397], Tinybones, Bauble Burglar [300]
+
+Turn 14
+  - Treasure Dredger [valid_resolution_no_immediate_mutation, seq=351] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=401)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Treasure Dredger resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Treasure Dredger (object 401) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Treasure Dredger (object 401) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> CombatDamage):
+      attackers: Vaan, Street Thief [331] (blocked, observed P/T 2/2)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat-result zone change: Wizard [404] Battlefield -> Graveyard (Shabazyan) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    additional protocol-observed zone movements not assigned to an action chain:
+      Treasure Dredger [400] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 346).
+      Wizard [404] Battlefield -> Graveyard (Shabazyan) (SBA_Damage; GRE sequence 363).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shabazyan: Battlefield: Bloodfell Caves [318], Jagged Barrens [281], Jagged Barrens [287], Jagged Barrens [336], Mountain [363], Swamp [295], Tithing Blade [320]; Graveyard: Abrade [370], Cornered by Black Mages [302], Cornered by Black Mages [399], Kuja, Genome Sorcerer [350], Summon: G.F. Cerberus [378], Withering Torment [316], Wizard [404]; Exile: Hero's Downfall [360], Temple of Malice [388]
+      gian31: Battlefield: At Knifepoint [352], At Knifepoint [380], Jagged Barrens [284], Jagged Barrens [327], Mountain [346], Razortrap Gorge [372], Swamp [290], Swamp [304], Treasure Dredger [401], Vaan, Street Thief [331]; Graveyard: Fell [351], Fell [379], Gastal Raider [325], Mercenary [397], Tinybones, Bauble Burglar [300]
+
+Turn 15
+  - Ability of Wizard [observed_semantic_effect, seq=379] (active=Shabazyan, phase=Phase_Main1, controller=Shabazyan, owner=Shabazyan, source_object=344)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Wizard: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 2] (role/targeting only where the protocol identifies it)
+  - Ability of Wizard [observed_semantic_effect, seq=381] (active=Shabazyan, phase=Phase_Main1, controller=Shabazyan, owner=Shabazyan, source_object=301)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Wizard: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 2] (role/targeting only where the protocol identifies it)
+  - Black Mage's Rod [valid_resolution_no_immediate_mutation, seq=383] (active=Shabazyan, phase=Phase_Main1, controller=Shabazyan, owner=Shabazyan, source_object=406)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Black Mage's Rod resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Black Mage's Rod (object 406) Hand (Shabazyan) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Black Mage's Rod (object 406) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Black Mage's Rod [observed_semantic_effect, seq=385] (active=Shabazyan, phase=Phase_Main1, controller=Shabazyan, owner=Shabazyan, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Black Mage's Rod: a token is created.
+      explicit effect object references: Hero [412] (role/targeting only where the protocol identifies it)
+      token created: Hero (object 412, controller=Shabazyan) 2/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 411).
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Wizard; direct protocol link unavailable): gian31 14 -> 13
+    life (semantically attributed to Wizard; direct protocol link unavailable): gian31 13 -> 12
+    additional protocol-observed zone movements not assigned to an action chain:
+      Black Mage's Rod [405] Library (Shabazyan) -> Hand (Shabazyan) (Draw; GRE sequence 373).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shabazyan: Battlefield: Black Mage's Rod [406], Bloodfell Caves [318], Jagged Barrens [281], Jagged Barrens [287], Jagged Barrens [336], Mountain [363], Swamp [295], Tithing Blade [320]; Graveyard: Abrade [370], Cornered by Black Mages [302], Cornered by Black Mages [399], Kuja, Genome Sorcerer [350], Summon: G.F. Cerberus [378], Withering Torment [316], Wizard [404]; Exile: Hero's Downfall [360], Temple of Malice [388]
+      gian31: Battlefield: At Knifepoint [352], At Knifepoint [380], Jagged Barrens [284], Jagged Barrens [327], Mountain [346], Razortrap Gorge [372], Swamp [290], Swamp [304], Treasure Dredger [401], Vaan, Street Thief [331]; Graveyard: Fell [351], Fell [379], Gastal Raider [325], Mercenary [397], Tinybones, Bauble Burglar [300]
+
+Turn 16
+  - Laughing Jasper Flint [valid_resolution_no_immediate_mutation, seq=405] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=414)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Laughing Jasper Flint resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Laughing Jasper Flint (object 414) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Laughing Jasper Flint (object 414) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of At Knifepoint [observed_semantic_effect, seq=425] (active=gian31, phase=Phase_Combat, step=Step_FirstStrikeDamage, controller=gian31, owner=gian31, source_object=380, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of At Knifepoint: a token is created.
+      explicit effect object references: Mercenary [426] (role/targeting only where the protocol identifies it)
+      token created: Mercenary (object 426, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 425).
+  - Ability of At Knifepoint [observed_semantic_effect, seq=427] (active=gian31, phase=Phase_Combat, step=Step_FirstStrikeDamage, controller=gian31, owner=gian31, source_object=352, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of At Knifepoint: a token is created.
+      explicit effect object references: Mercenary [427] (role/targeting only where the protocol identifies it)
+      token created: Mercenary (object 427, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 424).
+  - Ability of Vaan, Street Thief [observed_semantic_effect, seq=429] (active=gian31, phase=Phase_Combat, step=Step_FirstStrikeDamage, controller=gian31, owner=gian31, source_object=331, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s), +1 counter(s)
+      narrative: Ability of Vaan, Street Thief: Vaan, Street Thief gets +1/+1; Treasure Dredger gets +1/+1; Laughing Jasper Flint gets +1/+1; 1 counter(s) are added to Vaan, Street Thief [331]; 1 counter(s) are added to Treasure Dredger [401]; 1 counter(s) are added to Laughing Jasper Flint [414].
+      explicit effect object references: Treasure Dredger [401], Laughing Jasper Flint [414] (role/targeting only where the protocol identifies it)
+  - Shock [observed_semantic_effect, seq=431] (active=gian31, phase=Phase_Combat, step=Step_FirstStrikeDamage, controller=gian31, owner=Shabazyan, source_object=421)
+      effects: 2 damage
+      narrative: Shock: Hero takes 2 damage.
+      explicit effect object references: Hero [412] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shock (object 421) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Shock (object 428) Stack -> Graveyard (Shabazyan) (Resolve; shared object ID)
+      identity continuity: source object 421 -> transfer object 428 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Hero (object 429) Battlefield -> Graveyard (Shabazyan) (SBA_Damage; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Treasure Dredger [401] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat-result zone change: Hero [429] Battlefield -> Graveyard (Shabazyan) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Shabazyan -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): Shabazyan 15 -> 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Laughing Jasper Flint [413] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 400).
+      Shock [420] Library (Shabazyan) -> Exile (Exile; GRE sequence 418).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shabazyan: Battlefield: Black Mage's Rod [406], Bloodfell Caves [318], Jagged Barrens [281], Jagged Barrens [287], Jagged Barrens [336], Mountain [363], Swamp [295], Tithing Blade [320]; Graveyard: Abrade [370], Cornered by Black Mages [302], Cornered by Black Mages [399], Hero [429], Kuja, Genome Sorcerer [350], Shock [428], Summon: G.F. Cerberus [378], Withering Torment [316], Wizard [404]; Exile: Hero's Downfall [360], Temple of Malice [388]
+      gian31: Battlefield: At Knifepoint [352], At Knifepoint [380], Jagged Barrens [284], Jagged Barrens [327], Laughing Jasper Flint [414], Mountain [346], Razortrap Gorge [372], Swamp [290], Swamp [304], Treasure Dredger [401], Vaan, Street Thief [331]; Graveyard: Fell [351], Fell [379], Gastal Raider [325], Mercenary [397], Tinybones, Bauble Burglar [300]
+
+Turn 17
+  - Ability of Wizard [observed_semantic_effect, seq=452] (active=Shabazyan, phase=Phase_Main1, controller=Shabazyan, owner=Shabazyan, source_object=344)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Wizard: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 2] (role/targeting only where the protocol identifies it)
+  - Ability of Wizard [observed_semantic_effect, seq=454] (active=Shabazyan, phase=Phase_Main1, controller=Shabazyan, owner=Shabazyan, source_object=301)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Wizard: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 2] (role/targeting only where the protocol identifies it)
+  - Eaten Alive [observed_semantic_effect, seq=456] (active=Shabazyan, phase=Phase_Main1, controller=Shabazyan, owner=Shabazyan, source_object=431)
+      effects: exile
+      narrative: Eaten Alive: exiles Laughing Jasper Flint.
+      explicit effect object references: Laughing Jasper Flint [414], Laughing Jasper Flint [439] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Eaten Alive (object 431) Hand (Shabazyan) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Laughing Jasper Flint (object 439) Battlefield -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Eaten Alive (object 440) Stack -> Graveyard (Shabazyan) (Resolve; shared object ID)
+      identity continuity: source object 431 -> transfer object 440 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Wizard; direct protocol link unavailable): gian31 12 -> 11
+    life (semantically attributed to Wizard; direct protocol link unavailable): gian31 11 -> 10
+    additional protocol-observed zone movements not assigned to an action chain:
+      Eaten Alive [430] Library (Shabazyan) -> Hand (Shabazyan) (Draw; GRE sequence 443).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shabazyan: Battlefield: Black Mage's Rod [406], Bloodfell Caves [318], Jagged Barrens [281], Jagged Barrens [287], Jagged Barrens [336], Mountain [363], Swamp [295], Tithing Blade [320]; Graveyard: Abrade [370], Cornered by Black Mages [302], Cornered by Black Mages [399], Eaten Alive [440], Hero [429], Kuja, Genome Sorcerer [350], Shock [428], Summon: G.F. Cerberus [378], Withering Torment [316], Wizard [404]; Exile: Hero's Downfall [360], Temple of Malice [388]
+      gian31: Battlefield: At Knifepoint [352], At Knifepoint [380], Jagged Barrens [284], Jagged Barrens [327], Mountain [346], Razortrap Gorge [372], Swamp [290], Swamp [304], Treasure Dredger [401], Vaan, Street Thief [331]; Graveyard: Fell [351], Fell [379], Gastal Raider [325], Mercenary [397], Tinybones, Bauble Burglar [300]; Exile: Laughing Jasper Flint [439]
+
+Turn 18
+  - Laughing Jasper Flint [valid_resolution_no_immediate_mutation, seq=476] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=442)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Laughing Jasper Flint resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Laughing Jasper Flint (object 442) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Laughing Jasper Flint (object 442) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Vaan, Street Thief [331] (unblocked, observed P/T 3/3), Treasure Dredger [401] (unblocked, observed P/T 3/3), Mercenary [426] (unblocked, observed P/T 1/1), Mercenary [427] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat damage assignment: unknown unless explicitly observed
+    additional protocol-observed zone movements not assigned to an action chain:
+      Laughing Jasper Flint [441] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 471).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Shabazyan: Battlefield: Black Mage's Rod [406], Bloodfell Caves [318], Jagged Barrens [281], Jagged Barrens [287], Jagged Barrens [336], Mountain [363], Swamp [295], Tithing Blade [320]; Graveyard: Abrade [370], Cornered by Black Mages [302], Cornered by Black Mages [399], Eaten Alive [440], Hero [429], Kuja, Genome Sorcerer [350], Shock [428], Summon: G.F. Cerberus [378], Withering Torment [316], Wizard [404]; Exile: Hero's Downfall [360], Temple of Malice [388]
+      gian31: Battlefield: At Knifepoint [352], At Knifepoint [380], Jagged Barrens [284], Jagged Barrens [327], Laughing Jasper Flint [442], Mountain [346], Razortrap Gorge [372], Swamp [290], Swamp [304], Treasure Dredger [401], Vaan, Street Thief [331]; Graveyard: Fell [351], Fell [379], Gastal Raider [325], Mercenary [397], Tinybones, Bauble Burglar [300]; Exile: Laughing Jasper Flint [439]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 1, seq 11, Phase_Main1: gian31 20 -> 19. Semantic attribution: Jagged Barrens; direct protocol link unavailable. Previous captured action: Jagged Barrens.
+- Turn 2, seq 32, Phase_Main1: Shabazyan 20 -> 19. Semantic attribution: Jagged Barrens; direct protocol link unavailable. Previous captured action: Jagged Barrens.
+- Turn 3, seq 53, Phase_Main1: gian31 19 -> 18. Semantic attribution: Jagged Barrens; direct protocol link unavailable. Previous captured action: Jagged Barrens.
+- Turn 7, seq 143, Phase_Main1: gian31 18 -> 17. Semantic attribution: Wizard; direct protocol link unavailable. Previous captured action: Wizard.
+- Turn 8, seq 170, Phase_Main1: Shabazyan 20 -> 19. Semantic attribution: Jagged Barrens; direct protocol link unavailable. Previous captured action: Jagged Barrens.
+- Turn 9, seq 196, Phase_Main1: gian31 17 -> 16. Semantic attribution: Jagged Barrens; direct protocol link unavailable. Previous captured action: Jagged Barrens.
+- Turn 13, seq 326, Phase_Main1: gian31 16 -> 15; gian31 15 -> 14. Semantic attribution: Wizard; direct protocol link unavailable. Previous captured action: Wizard.
+- Turn 15, seq 379, Phase_Main1: gian31 14 -> 13; gian31 13 -> 12. Semantic attribution: Wizard; direct protocol link unavailable. Previous captured action: Wizard.
+- Turn 17, seq 452, Phase_Main1: gian31 12 -> 11; gian31 11 -> 10. Semantic attribution: Wizard; direct protocol link unavailable. Previous captured action: Wizard.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 5 token creations observed; 3 active as last observed; 2 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Wizard [344] controller=Shabazyan; created Turn 9 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 17, object 344 (latest observed P/T unknown; current zone unconfirmed).
+- Mercenary [377] controller=gian31; created Turn 12 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 13 via Battlefield -> Graveyard (gian31) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+- Hero [412] controller=Shabazyan; created Turn 15 (2/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 16 via Battlefield -> Graveyard (Shabazyan) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Mercenary [426] controller=gian31; created Turn 16 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 18, object 426 (latest observed P/T 1/1; current zone unconfirmed).
+- Mercenary [427] controller=gian31; created Turn 16 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 18, object 427 (latest observed P/T 1/1; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Jagged Barrens [owner=Shabazyan, controller=Shabazyan] moves Hand (Shabazyan) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Gastal Raider [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 28: Jagged Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 46: Kuja, Genome Sorcerer [owner=Shabazyan, controller=Shabazyan] moves Library (Shabazyan) -> Hand (Shabazyan) (Draw).
+- Turn 3, seq 49: Jagged Barrens [owner=Shabazyan, controller=Shabazyan] moves Hand (Shabazyan) -> Battlefield (PlayLand).
+- Turn 4, seq 67: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 70: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 71: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 73: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 87: Bloodfell Caves [owner=Shabazyan, controller=Shabazyan] moves Library (Shabazyan) -> Hand (Shabazyan) (Draw).
+- Turn 5, seq 90: Swamp [owner=Shabazyan, controller=Shabazyan] moves Hand (Shabazyan) -> Battlefield (PlayLand).
+- Turn 5, seq 91: Cornered by Black Mages [owner=Shabazyan, controller=Shabazyan] moves Hand (Shabazyan) -> Stack (CastSpell).
+- Turn 5, seq 96: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 5, seq 96: Cornered by Black Mages [owner=Shabazyan, controller=Shabazyan] moves Stack -> Graveyard (Shabazyan) (Resolve).
+- Turn 6, seq 110: Jagged Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 113: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 114: Gastal Raider [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 116: Gastal Raider [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 121: Withering Torment [owner=Shabazyan, controller=Shabazyan] moves Hand (Shabazyan) -> Graveyard (Shabazyan) (Discard).
+- Turn 7, seq 135: Jagged Barrens [owner/controller metadata unavailable] moves Library (Shabazyan) -> Hand (Shabazyan) (Draw).
+- Turn 7, seq 138: Bloodfell Caves [owner=Shabazyan, controller=Shabazyan] moves Hand (Shabazyan) -> Battlefield (PlayLand).
+- Turn 7, seq 141: Tithing Blade [owner=Shabazyan, controller=Shabazyan] moves Hand (Shabazyan) -> Stack (CastSpell).
+- Turn 7, seq 145: Tithing Blade [owner=Shabazyan, controller=Shabazyan] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 148: Gastal Raider [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 8, seq 163: Mountain [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 166: Jagged Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 173: Vaan, Street Thief [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 175: Vaan, Street Thief [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 189: Mountain [owner/controller metadata unavailable] moves Library (Shabazyan) -> Hand (Shabazyan) (Draw).
+- Turn 9, seq 192: Jagged Barrens [owner=Shabazyan, controller=Shabazyan] moves Hand (Shabazyan) -> Battlefield (PlayLand).
+- Turn 9, seq 197: Kuja, Genome Sorcerer [owner=Shabazyan, controller=Shabazyan] moves Hand (Shabazyan) -> Stack (CastSpell).
+- Turn 9, seq 199: Kuja, Genome Sorcerer [owner=Shabazyan, controller=Shabazyan] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 216: Razortrap Gorge [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 219: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 220: Fell [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 224: Kuja, Genome Sorcerer [owner=Shabazyan, controller=Shabazyan] moves Battlefield -> Graveyard (Shabazyan) (Destroy).
+- Turn 10, seq 224: Fell [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 10, seq 225: At Knifepoint [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 227: At Knifepoint [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 243: Hero's Downfall [owner=Shabazyan, controller=Shabazyan] moves Library (Shabazyan) -> Exile (Exile).
+- Turn 11, seq 254: object 362 [owner/controller metadata unavailable] moves Library (Shabazyan) -> Hand (Shabazyan) (Draw).
+- Turn 11, seq 257: Mountain [owner=Shabazyan, controller=Shabazyan] moves Hand (Shabazyan) -> Battlefield (PlayLand).
+- Turn 11, seq 258: Summon: G.F. Cerberus [owner=Shabazyan, controller=Shabazyan] moves Hand (Shabazyan) -> Stack (CastSpell).
+- Turn 11, seq 260: Summon: G.F. Cerberus [owner=Shabazyan, controller=Shabazyan] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 263: Abrade [owner=Shabazyan, controller=Shabazyan] moves Library (Shabazyan) -> Graveyard (Shabazyan) (Surveil).
+- Turn 12, seq 278: Fell [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 281: Razortrap Gorge [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 282: Fell [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 288: Summon: G.F. Cerberus [owner=Shabazyan, controller=Shabazyan] moves Battlefield -> Graveyard (Shabazyan) (Destroy).
+- Turn 12, seq 288: Fell [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 12, seq 289: At Knifepoint [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 291: At Knifepoint [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 307: Temple of Malice [owner=Shabazyan, controller=Shabazyan] moves Library (Shabazyan) -> Exile (Exile).
+- Turn 13, seq 318: Cornered by Black Mages [owner/controller metadata unavailable] moves Library (Shabazyan) -> Hand (Shabazyan) (Draw).
+- Turn 13, seq 321: Cornered by Black Mages [owner=Shabazyan, controller=Shabazyan] moves Hand (Shabazyan) -> Stack (CastSpell).
+- Turn 13, seq 331: Mercenary [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 13, seq 331: Cornered by Black Mages [owner=Shabazyan, controller=Shabazyan] moves Stack -> Graveyard (Shabazyan) (Resolve).
+- Turn 14, seq 346: Treasure Dredger [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 349: Treasure Dredger [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 351: Treasure Dredger [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 363: Wizard [owner/controller metadata unavailable] moves Battlefield -> Graveyard (Shabazyan) (SBA_Damage).
+- Turn 15, seq 373: Black Mage's Rod [owner/controller metadata unavailable] moves Library (Shabazyan) -> Hand (Shabazyan) (Draw).
+- Turn 15, seq 376: Black Mage's Rod [owner=Shabazyan, controller=Shabazyan] moves Hand (Shabazyan) -> Stack (CastSpell).
+- Turn 15, seq 383: Black Mage's Rod [owner=Shabazyan, controller=Shabazyan] moves Stack -> Battlefield (Resolve).
+- Turn 16, seq 400: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 403: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 405: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 16, seq 418: Shock [owner=Shabazyan, controller=gian31] moves Library (Shabazyan) -> Exile (Exile).
+- Turn 16, seq 419: Shock [owner=Shabazyan, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 16, seq 431: Shock [owner=Shabazyan, controller=Shabazyan] moves Stack -> Graveyard (Shabazyan) (Resolve).
+- Turn 16, seq 431: Hero [owner/controller metadata unavailable] moves Battlefield -> Graveyard (Shabazyan) (SBA_Damage).
+- Turn 17, seq 443: Eaten Alive [owner/controller metadata unavailable] moves Library (Shabazyan) -> Hand (Shabazyan) (Draw).
+- Turn 17, seq 446: Eaten Alive [owner=Shabazyan, controller=Shabazyan] moves Hand (Shabazyan) -> Stack (CastSpell).
+- Turn 17, seq 456: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Battlefield -> Exile (Exile).
+- Turn 17, seq 456: Eaten Alive [owner=Shabazyan, controller=Shabazyan] moves Stack -> Graveyard (Shabazyan) (Resolve).
+- Turn 18, seq 471: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 18, seq 474: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 18, seq 476: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 166 becomes object 281 [Jagged Barrens].
+- Turn 2, seq 25: object 228 becomes object 283 [Gastal Raider].
+- Turn 2, seq 28: object 222 becomes object 284 [Jagged Barrens].
+- Turn 3, seq 46: object 168 becomes object 286 [Kuja, Genome Sorcerer].
+- Turn 3, seq 49: object 162 becomes object 287 [Jagged Barrens].
+- Turn 4, seq 67: object 229 becomes object 289 [Swamp].
+- Turn 4, seq 70: object 224 becomes object 290 [Swamp].
+- Turn 4, seq 71: object 226 becomes object 291 [Tinybones, Bauble Burglar].
+- Turn 5, seq 87: object 169 becomes object 294 [Bloodfell Caves].
+- Turn 5, seq 90: object 161 becomes object 295 [Swamp].
+- Turn 5, seq 91: object 163 becomes object 296 [Cornered by Black Mages].
+- Turn 5, seq 96: object 291 becomes object 300 [Tinybones, Bauble Burglar].
+- Turn 5, seq 96: object 296 becomes object 302 [Cornered by Black Mages].
+- Turn 6, seq 110: object 230 becomes object 303 [Jagged Barrens].
+- Turn 6, seq 113: object 289 becomes object 304 [Swamp].
+- Turn 6, seq 114: object 283 becomes object 305 [Gastal Raider].
+- Turn 6, seq 121: object 165 becomes object 316 [Withering Torment].
+- Turn 7, seq 135: object 170 becomes object 317 [Jagged Barrens].
+- Turn 7, seq 138: object 294 becomes object 318 [Bloodfell Caves].
+- Turn 7, seq 141: object 167 becomes object 320 [Tithing Blade].
+- Turn 7, seq 148: object 305 becomes object 325 [Gastal Raider].
+- Turn 8, seq 163: object 231 becomes object 326 [Mountain].
+- Turn 8, seq 166: object 303 becomes object 327 [Jagged Barrens].
+- Turn 8, seq 173: object 225 becomes object 331 [Vaan, Street Thief].
+- Turn 9, seq 189: object 171 becomes object 335 [Mountain].
+- Turn 9, seq 192: object 317 becomes object 336 [Jagged Barrens].
+- Turn 9, seq 197: object 286 becomes object 338 [Kuja, Genome Sorcerer].
+- Turn 10, seq 216: object 232 becomes object 345 [Razortrap Gorge].
+- Turn 10, seq 219: object 326 becomes object 346 [Mountain].
+- Turn 10, seq 220: object 227 becomes object 347 [Fell].
+- Turn 10, seq 224: object 338 becomes object 350 [Kuja, Genome Sorcerer].
+- Turn 10, seq 224: object 347 becomes object 351 [Fell].
+- Turn 10, seq 225: object 223 becomes object 352 [At Knifepoint].
+- Turn 10, seq 243: object 172 becomes object 360 [Hero's Downfall].
+- Turn 11, seq 254: object 173 becomes object 362 [object 173].
+- Turn 11, seq 257: object 335 becomes object 363 [Mountain].
+- Turn 11, seq 258: object 164 becomes object 364 [Summon: G.F. Cerberus].
+- Turn 11, seq 263: object 174 becomes object 370 [Abrade].
+- Turn 12, seq 278: object 233 becomes object 371 [Fell].
+- Turn 12, seq 281: object 345 becomes object 372 [Razortrap Gorge].
+- Turn 12, seq 282: object 371 becomes object 373 [Fell].
+- Turn 12, seq 288: object 364 becomes object 378 [Summon: G.F. Cerberus].
+- Turn 12, seq 288: object 373 becomes object 379 [Fell].
+- Turn 12, seq 289: object 221 becomes object 380 [At Knifepoint].
+- Turn 12, seq 307: object 175 becomes object 388 [Temple of Malice].
+- Turn 13, seq 318: object 176 becomes object 390 [Cornered by Black Mages].
+- Turn 13, seq 321: object 390 becomes object 391 [Cornered by Black Mages].
+- Turn 13, seq 331: object 377 becomes object 397 [Mercenary].
+- Turn 13, seq 331: object 391 becomes object 399 [Cornered by Black Mages].
+- Turn 14, seq 346: object 234 becomes object 400 [Treasure Dredger].
+- Turn 14, seq 349: object 400 becomes object 401 [Treasure Dredger].
+- Turn 14, seq 363: object 398 becomes object 404 [Wizard].
+- Turn 15, seq 373: object 177 becomes object 405 [Black Mage's Rod].
+- Turn 15, seq 376: object 405 becomes object 406 [Black Mage's Rod].
+- Turn 16, seq 400: object 235 becomes object 413 [Laughing Jasper Flint].
+- Turn 16, seq 403: object 413 becomes object 414 [Laughing Jasper Flint].
+- Turn 16, seq 418: object 178 becomes object 420 [Shock].
+- Turn 16, seq 419: object 420 becomes object 421 [Shock].
+- Turn 16, seq 431: object 421 becomes object 428 [Shock].
+- Turn 16, seq 431: object 412 becomes object 429 [Hero].
+- Turn 17, seq 443: object 179 becomes object 430 [Eaten Alive].
+- Turn 17, seq 446: object 430 becomes object 431 [Eaten Alive].
+- Turn 17, seq 456: object 414 becomes object 439 [Laughing Jasper Flint].
+- Turn 17, seq 456: object 431 becomes object 440 [Eaten Alive].
+- Turn 18, seq 471: object 236 becomes object 441 [Laughing Jasper Flint].
+- Turn 18, seq 474: object 441 becomes object 442 [Laughing Jasper Flint].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: Shabazyan plays Jagged Barrens (object 281) from Hand (Shabazyan) to Battlefield.
+- Turn 2: gian31 plays Jagged Barrens (object 284) from Hand (gian31) to Battlefield.
+- Turn 3: Shabazyan plays Jagged Barrens (object 287) from Hand (Shabazyan) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 290) from Hand (gian31) to Battlefield.
+- Turn 5: Shabazyan plays Swamp (object 295) from Hand (Shabazyan) to Battlefield.
+- Turn 6: gian31 plays Swamp (object 304) from Hand (gian31) to Battlefield.
+- Turn 7: Shabazyan plays Bloodfell Caves (object 318) from Hand (Shabazyan) to Battlefield.
+- Turn 8: gian31 plays Jagged Barrens (object 327) from Hand (gian31) to Battlefield.
+- Turn 9: Shabazyan plays Jagged Barrens (object 336) from Hand (Shabazyan) to Battlefield.
+- Turn 10: gian31 plays Mountain (object 346) from Hand (gian31) to Battlefield.
+- Turn 11: Shabazyan plays Mountain (object 363) from Hand (Shabazyan) to Battlefield.
+- Turn 12: gian31 plays Razortrap Gorge (object 372) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Wizard: abilities=7 (triggered=7, activated=0) across turns [7, 13, 13, 15, 15, 17, 17]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=7, life_changes=7, other=4
+  observed effects: 1 damage, life -1, synthetic event
+- At Knifepoint: casts=2; abilities=3 (triggered=3, activated=0) across turns [10, 12, 12, 16, 16]
+  observed effect totals: draws=0, tokens=3, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Jagged Barrens: abilities=5 (triggered=5, activated=0) across turns [1, 2, 3, 8, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=5, life_changes=5, other=5
+  observed effects: 1 damage, life -1, synthetic event
+- Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn.: abilities=3 (triggered=0, activated=3) across turns [8, 10, 12]
+- Black Mage's Rod: casts=1; abilities=1 (triggered=1, activated=0) across turns [15, 15]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Fell: casts=2 across turns [10, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: destroy
+- Kuja, Genome Sorcerer: casts=1; abilities=1 (triggered=1, activated=0) across turns [9, 9]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Laughing Jasper Flint: casts=2 across turns [16, 18]
+- Vaan, Street Thief: casts=1; abilities=1 (triggered=1, activated=0) across turns [8, 16]
+  observed effect totals: draws=0, tokens=0, counters=3, returns=0, damage=0, life_changes=0, other=3
+  observed effects: +1 counter(s), P/T +1/+1
+- Bloodfell Caves: abilities=1 (triggered=1, activated=0) across turns [7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Eaten Alive: casts=1 across turns [17]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: exile
+- Gastal Raider: casts=1 across turns [6]
+- Shock: casts=1 across turns [16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 2 damage
+- Summon: G.F. Cerberus: casts=1 across turns [11]
+- Tinybones, Bauble Burglar: casts=1 across turns [4]
+- Tithing Blade: casts=1 across turns [7]
+- Treasure Dredger: casts=1 across turns [14]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 10 - DeclareAttack (active=gian31)
+  attacker: Vaan, Street Thief (gian31) -> Shabazyan; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack (active=gian31)
+  attacker: Vaan, Street Thief (gian31) -> Shabazyan; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 14 - DeclareAttack, CombatDamage (active=gian31)
+  attacker: Vaan, Street Thief (gian31) -> Shabazyan; blocked by unknown blocker
+  combat damage assignment: unknown unless explicitly observed
+Turn 16 - DeclareAttack (active=gian31)
+  attacker: Treasure Dredger (gian31) -> Shabazyan; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 18 - DeclareAttack (active=gian31)
+  attacker: Vaan, Street Thief (gian31) -> Shabazyan; unblocked in this observed snapshot
+  attacker: Treasure Dredger (gian31) -> Shabazyan; unblocked in this observed snapshot
+  attacker: Mercenary (gian31) -> Shabazyan; unblocked in this observed snapshot
+  attacker: Mercenary (gian31) -> Shabazyan; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 10: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. (active=gian31) - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+- Turn 12: Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. (active=gian31) - Whenever one or more opponents lose life during your turn, if your speed is less than 4, increase your speed by 1. This ability triggers only once each turn. resolves with no immediate observed mutation.
+- Turn 16: Ability of At Knifepoint (active=gian31) - Ability of At Knifepoint: a token is created.
+- Turn 16: Ability of At Knifepoint (active=gian31) - Ability of At Knifepoint: a token is created.
+- Turn 16: Ability of Vaan, Street Thief (active=gian31) - Ability of Vaan, Street Thief: Vaan, Street Thief gets +1/+1; Treasure Dredger gets +1/+1; Laughing Jasper Flint gets +1/+1; 1 counter(s) are added to target; 1 counter(s) are added to target; 1 counter(s) are added to target.
+- Turn 16: Shock (active=gian31) - Shock: Hero takes 2 damage.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 164: Summon: G.F. Cerberus | controller=Shabazyan | owner=Shabazyan | zone=Hand (latest_object_observation)
+- 165: Withering Torment | controller=Shabazyan | owner=Shabazyan | zone=Hand (latest_object_observation)
+- 167: Tithing Blade | controller=Shabazyan | owner=Shabazyan | zone=Hand (latest_object_observation)
+- 221: At Knifepoint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 222: Jagged Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 223: At Knifepoint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 224: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 225: Vaan, Street Thief | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 226: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 227: Fell | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 281: Jagged Barrens | controller=Shabazyan | owner=Shabazyan | zone=Battlefield (latest_object_observation)
+- 282: object 282 | controller=Shabazyan | owner=Shabazyan | zone=unknown (inferred unknown) (latest_object_observation)
+- 283: Gastal Raider | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 284: Jagged Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 285: object 285 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 286: Kuja, Genome Sorcerer | controller=Shabazyan | owner=Shabazyan | zone=Hand (latest_object_observation)
+- 287: Jagged Barrens | controller=Shabazyan | owner=Shabazyan | zone=Battlefield (latest_object_observation)
+- 288: object 288 | controller=Shabazyan | owner=Shabazyan | zone=unknown (inferred unknown) (latest_object_observation)
+- 289: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 290: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 291: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 294: Bloodfell Caves | controller=Shabazyan | owner=Shabazyan | zone=Hand (latest_object_observation)
+- 295: Swamp | controller=Shabazyan | owner=Shabazyan | zone=Battlefield (latest_object_observation)
+- 296: Cornered by Black Mages | controller=Shabazyan | owner=Shabazyan | zone=Stack (latest_object_observation)
+- 300: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 301: Wizard | controller=Shabazyan | owner=Shabazyan | zone=Battlefield (latest_object_observation)
+- 302: Cornered by Black Mages | controller=Shabazyan | owner=Shabazyan | zone=Graveyard (latest_object_observation)
+- 303: Jagged Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 304: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 305: Gastal Raider | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 309: object 309 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 310: object 310 | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 311: Withering Torment | controller=Shabazyan | owner=Shabazyan | zone=Hand (latest_object_observation)
+- 312: Tithing Blade | controller=Shabazyan | owner=Shabazyan | zone=Hand (latest_object_observation)
+- 313: Bloodfell Caves | controller=Shabazyan | owner=Shabazyan | zone=Hand (latest_object_observation)
+- 314: Kuja, Genome Sorcerer | controller=Shabazyan | owner=Shabazyan | zone=Hand (latest_object_observation)
+- 315: Summon: G.F. Cerberus | controller=Shabazyan | owner=Shabazyan | zone=Hand (latest_object_observation)
+- 316: Withering Torment | controller=Shabazyan | owner=Shabazyan | zone=Graveyard (latest_object_observation)
+- 318: Bloodfell Caves | controller=Shabazyan | owner=Shabazyan | zone=Battlefield (latest_object_observation)
+- 319: object 319 | controller=Shabazyan | owner=Shabazyan | zone=unknown (inferred unknown) (latest_object_observation)
+- 320: Tithing Blade | controller=Shabazyan | owner=Shabazyan | zone=Stack (latest_object_observation)
+- 323: object 323 | controller=Shabazyan | owner=Shabazyan | zone=unknown (inferred unknown) (latest_object_observation)
+- 324: object 324 | controller=Shabazyan | owner=Shabazyan | zone=unknown (inferred unknown) (latest_object_observation)
+- 325: Gastal Raider | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 326: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 327: Jagged Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 328: object 328 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 330: object 330 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 331: Vaan, Street Thief | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 336: Jagged Barrens | controller=Shabazyan | owner=Shabazyan | zone=Battlefield (latest_object_observation)
+- 337: object 337 | controller=Shabazyan | owner=Shabazyan | zone=unknown (inferred unknown) (latest_object_observation)
+- 338: Kuja, Genome Sorcerer | controller=Shabazyan | owner=Shabazyan | zone=Battlefield (latest_object_observation)
+- 343: object 343 | controller=Shabazyan | owner=Shabazyan | zone=unknown (inferred unknown) (latest_object_observation)
+- 344: Wizard | controller=Shabazyan | owner=Shabazyan | zone=Battlefield (latest_object_observation)
+- 345: Razortrap Gorge | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 346: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 347: Fell | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 350: Kuja, Genome Sorcerer | controller=Shabazyan | owner=Shabazyan | zone=Graveyard (latest_object_observation)
+- 351: Fell | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 352: At Knifepoint | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 357: object 357 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 359: object 359 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 360: Hero's Downfall | controller=Shabazyan | owner=Shabazyan | zone=Exile (latest_object_observation)
+- 361: Treasure | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 363: Mountain | controller=Shabazyan | owner=Shabazyan | zone=Battlefield (latest_object_observation)
+- 364: Summon: G.F. Cerberus | controller=Shabazyan | owner=Shabazyan | zone=Battlefield (latest_object_observation)
+- 369: object 369 | controller=Shabazyan | owner=Shabazyan | zone=unknown (inferred unknown) (latest_object_observation)
+- 370: Abrade | controller=Shabazyan | owner=Shabazyan | zone=Graveyard (latest_object_observation)
+- 371: Fell | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 372: Razortrap Gorge | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 373: Fell | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 376: object 376 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 377: Mercenary | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 378: Summon: G.F. Cerberus | controller=Shabazyan | owner=Shabazyan | zone=Graveyard (latest_object_observation)
+- 379: Fell | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 380: At Knifepoint | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 385: object 385 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 387: object 387 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 388: Temple of Malice | controller=Shabazyan | owner=Shabazyan | zone=Exile (latest_object_observation)
+- 389: Treasure | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 391: Cornered by Black Mages | controller=Shabazyan | owner=Shabazyan | zone=Stack (latest_object_observation)
+- 395: object 395 | controller=Shabazyan | owner=Shabazyan | zone=unknown (inferred unknown) (latest_object_observation)
+- 396: object 396 | controller=Shabazyan | owner=Shabazyan | zone=unknown (inferred unknown) (latest_object_observation)
+- 398: Wizard | controller=Shabazyan | owner=Shabazyan | zone=Hand (latest_object_observation)
+- 399: Cornered by Black Mages | controller=Shabazyan | owner=Shabazyan | zone=Graveyard (latest_object_observation)
+- 400: Treasure Dredger | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 401: Treasure Dredger | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 406: Black Mage's Rod | controller=Shabazyan | owner=Shabazyan | zone=Stack (latest_object_observation)
+- 409: object 409 | controller=Shabazyan | owner=Shabazyan | zone=unknown (inferred unknown) (latest_object_observation)
+- 410: object 410 | controller=Shabazyan | owner=Shabazyan | zone=unknown (inferred unknown) (latest_object_observation)
+- 411: object 411 | controller=Shabazyan | owner=Shabazyan | zone=unknown (inferred unknown) (latest_object_observation)
+- 412: Hero | controller=Shabazyan | owner=Shabazyan | zone=Hand (latest_object_observation)
+- 413: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 414: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 419: object 419 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 420: Shock | controller=gian31 | owner=Shabazyan | zone=Exile (latest_object_observation)
+- 421: Shock | controller=gian31 | owner=Shabazyan | zone=Stack (latest_object_observation)
+- 423: object 423 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 424: object 424 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 425: object 425 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 426: Mercenary | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 427: Mercenary | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 428: Shock | controller=Shabazyan | owner=Shabazyan | zone=Graveyard (latest_object_observation)
+- 431: Eaten Alive | controller=Shabazyan | owner=Shabazyan | zone=Stack (latest_object_observation)
+- 437: object 437 | controller=Shabazyan | owner=Shabazyan | zone=unknown (inferred unknown) (latest_object_observation)
+- 438: object 438 | controller=Shabazyan | owner=Shabazyan | zone=unknown (inferred unknown) (latest_object_observation)
+- 439: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 440: Eaten Alive | controller=Shabazyan | owner=Shabazyan | zone=Graveyard (latest_object_observation)
+- 441: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 442: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Shabazyan: 52 total items
+  zones: Battlefield=10, Exile=2, Graveyard=8, Hand=12, Stack=5, unknown=15
+  objects: Cornered by Black Mages x4, Kuja, Genome Sorcerer x4, Summon: G.F. Cerberus x4, Bloodfell Caves x3, Jagged Barrens x3, Tithing Blade x3, Withering Torment x3, Wizard x3, Eaten Alive x2, Abrade, Black Mage's Rod, Hero
+gian31: 58 total items
+  zones: Battlefield=16, Exile=2, Graveyard=4, Hand=18, Stack=5, unknown=13
+  objects: Fell x6, Laughing Jasper Flint x5, At Knifepoint x4, Jagged Barrens x4, Swamp x4, Gastal Raider x3, Mercenary x3, Tinybones, Bauble Burglar x3, Mountain x2, Razortrap Gorge x2, Shock x2, Treasure x2
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+Shabazyan:
+  Battlefield (10): Bloodfell Caves, Jagged Barrens, Jagged Barrens, Jagged Barrens, Kuja, Genome Sorcerer, Mountain, Summon: G.F. Cerberus, Swamp, Wizard, Wizard
+  Graveyard: 8 card(s)
+gian31:
+  Battlefield (16): Gastal Raider, Jagged Barrens, Jagged Barrens, Laughing Jasper Flint, Laughing Jasper Flint, Mercenary, Mercenary, Mountain, Razortrap Gorge, Swamp, Swamp, Tinybones, Bauble Burglar, Treasure, Treasure, Treasure Dredger, Vaan, Street Thief
+  Graveyard: 4 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+28 objects have no resolved final zone and are omitted from the known board state.
+Shabazyan: 15 unknown object(s)
+gian31: 13 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=30, Stack=10
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Shabazyan:
+  Battlefield (10): Jagged Barrens, Jagged Barrens, Swamp, Wizard, Bloodfell Caves, Tithing Blade, Jagged Barrens, Wizard, Mountain, Black Mage's Rod
+  Graveyard (8): Cornered by Black Mages, Withering Torment, Kuja, Genome Sorcerer, Abrade, Summon: G.F. Cerberus, Cornered by Black Mages, Shock, Eaten Alive
+  Exile (2): Hero's Downfall, Temple of Malice
+gian31:
+  Battlefield (15): Jagged Barrens, Swamp, Swamp, Jagged Barrens, Vaan, Street Thief, Mountain, At Knifepoint, Treasure, Razortrap Gorge, At Knifepoint, Treasure, Treasure Dredger, Mercenary, Mercenary, Laughing Jasper Flint
+  Graveyard (4): Tinybones, Bauble Burglar, Gastal Raider, Fell, Fell
+  Exile (1): Laughing Jasper Flint
+Known non-persistent entries (counts only):
+  Shabazyan: Hand=1, Limbo=2
+  gian31: Limbo=6
+  unknown: Library=85, Limbo=5
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: Shabazyan Battlefield=1
+- Turn 2: Shabazyan Battlefield=1; gian31 Battlefield=1
+- Turn 3: Shabazyan Battlefield=2; gian31 Battlefield=1
+- Turn 4: Shabazyan Battlefield=2; gian31 Battlefield=3
+- Turn 5: Shabazyan Battlefield=3; Shabazyan Graveyard=1; gian31 Battlefield=2; gian31 Graveyard=1
+- Turn 6: Shabazyan Battlefield=3; Shabazyan Graveyard=2; gian31 Battlefield=4; gian31 Graveyard=1
+- Turn 7: Shabazyan Battlefield=5; Shabazyan Graveyard=2; gian31 Battlefield=3; gian31 Graveyard=2
+- Turn 8: Shabazyan Battlefield=5; Shabazyan Graveyard=2; gian31 Battlefield=5; gian31 Graveyard=2
+- Turn 9: Shabazyan Battlefield=7; Shabazyan Graveyard=2; gian31 Battlefield=5; gian31 Graveyard=2
+- Turn 10: Shabazyan Battlefield=6; Shabazyan Graveyard=3; Shabazyan Exile=1; gian31 Battlefield=7; gian31 Graveyard=3
+- Turn 11: Shabazyan Battlefield=8; Shabazyan Graveyard=4; Shabazyan Exile=1; gian31 Battlefield=7; gian31 Graveyard=3
+- Turn 12: Shabazyan Battlefield=7; Shabazyan Graveyard=5; Shabazyan Exile=2; gian31 Battlefield=9; gian31 Graveyard=4
+- Turn 13: Shabazyan Battlefield=7; Shabazyan Graveyard=6; Shabazyan Exile=2; gian31 Battlefield=9; gian31 Graveyard=5
+- Turn 14: Shabazyan Battlefield=7; Shabazyan Graveyard=7; Shabazyan Exile=2; gian31 Battlefield=10; gian31 Graveyard=5
+- Turn 15: Shabazyan Battlefield=8; Shabazyan Graveyard=7; Shabazyan Exile=2; gian31 Battlefield=10; gian31 Graveyard=5
+- Turn 16: Shabazyan Battlefield=8; Shabazyan Graveyard=9; Shabazyan Exile=2; gian31 Battlefield=11; gian31 Graveyard=5
+- Turn 17: Shabazyan Battlefield=8; Shabazyan Graveyard=10; Shabazyan Exile=2; gian31 Battlefield=10; gian31 Graveyard=5; gian31 Exile=1
+- Turn 18: Shabazyan Battlefield=8; Shabazyan Graveyard=10; Shabazyan Exile=2; gian31 Battlefield=11; gian31 Graveyard=5; gian31 Exile=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 4: Tinybones, Bauble Burglar resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Gastal Raider resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Tithing Blade resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Vaan, Street Thief resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Kuja, Genome Sorcerer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: At Knifepoint resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Summon: G.F. Cerberus resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: At Knifepoint resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Treasure Dredger resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: Black Mage's Rod resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Laughing Jasper Flint resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 18: Laughing Jasper Flint resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
