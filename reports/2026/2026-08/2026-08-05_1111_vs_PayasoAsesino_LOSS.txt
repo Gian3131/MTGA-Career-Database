@@ -1,0 +1,750 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, PayasoAsesino
+Seat map: Seat 1=gian31, Seat 2=PayasoAsesino
+Turn range (known): 1 - 14
+Records: 37
+Action chains: 22
+Winner: PayasoAsesino
+Final life: {'gian31': 5, 'PayasoAsesino': 19}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 12 (Phase_Combat, Step_CombatDamage; Ability of Enduring Tenacity, seq 331).
+Later numbered GRE record(s): 28 after action sequence 331 across turn(s) [13, 14]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+POST-ACTION GRE RECORDS - RESULT ORDER UNRESOLVED
+  - Turn 13, seq 339: tapped_changed.
+  - Turn 13, seq 339: tapped_changed.
+  - Turn 13, seq 339: tapped_changed.
+  - Turn 13, seq 339: tapped_changed.
+  - Turn 13, seq 341: identity_changed.
+  - Turn 13, seq 341: zone_transfer (Draw).
+  - Turn 13, seq 344: identity_changed.
+  - Turn 13, seq 344: zone_transfer (CastSpell).
+  - Turn 13, seq 347: tapped_changed.
+  - Turn 13, seq 347: tapped_changed.
+  - Turn 13, seq 347: tapped_changed.
+  - Turn 13, seq 347: tapped_changed.
+  - Turn 13, seq 350: identity_changed.
+  - Turn 13, seq 350: zone_transfer (Sacrifice).
+  - Turn 13, seq 350: identity_changed.
+  - Turn 13, seq 350: zone_transfer (Sacrifice).
+  - Turn 13, seq 350: identity_changed.
+  - Turn 13, seq 350: zone_transfer (Resolve).
+  - Turn 14, seq 363: tapped_changed.
+  - Turn 14, seq 363: tapped_changed.
+  - Turn 14, seq 363: tapped_changed.
+  - Turn 14, seq 363: tapped_changed.
+  - Turn 14, seq 363: tapped_changed.
+  - Turn 14, seq 363: tapped_changed.
+  - Turn 14, seq 365: identity_changed.
+  - Turn 14, seq 365: zone_transfer (Draw).
+  - Turn 14, seq 373: tapped_changed.
+  - Turn 14, seq 373: tapped_changed.
+  These records are retained for traceability; their order relative to the match-result payload is not asserted.
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 26 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 8 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 8, 9] (raw records=8; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 13 explicit Library -> Hand movement(s); named in the draw record=6, resolved through an explicit identity transition=5, unresolved=2.
+Unresolved draw identities (explicit movements retained): Turn 12, seq 298, object 356; Turn 14, seq 365, object 378.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Lunar Convocation [160], Plains [161], Enduring Tenacity [162], Marauding Blight-Priest [163], Godless Shrine [164], Moonrise Cleric [165], Authority of the Consuls [166].
+  - unknown: 7 observed card(s): object 220 [220], object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225], object 226 [226].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: PayasoAsesino; observed final life totals: {'gian31': 5, 'PayasoAsesino': 19}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 12 (Phase_Combat, Step_CombatDamage; Ability of Enduring Tenacity, seq 331).
+Last captured life snapshot: gian31 11 -> 5 (seq 327).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Authority of the Consuls.
+- Turn 2: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Plains, Leonin Vanguard.
+- Turn 3: actions: cards=1, abilities=0; life mutations=1; explicit battlefield entries=Godless Shrine, Lunar Convocation.
+- Turn 4: actions: cards=1, abilities=1; combat snapshots=1; life mutations=2; explicit battlefield entries=Plains, Ajani's Pridemate.
+- Turn 5: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Moonrise Cleric.
+- Turn 6: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Plains, Pacifism.
+- Turn 7: actions: cards=1, abilities=0; explicit battlefield entries=Marauding Blight-Priest.
+- Turn 8: actions: cards=1, abilities=7; combat snapshots=1; life mutations=6; explicit battlefield entries=Plains, Arahbo, the First Fang.
+- Turn 9: actions: cards=1, abilities=5; life mutations=5; explicit battlefield entries=Scoured Barrens, Makeshift Binding; explicit battlefield exits=Arahbo, the First Fang.
+- Turn 10: actions: cards=1, abilities=6; combat snapshots=1; life mutations=5; explicit battlefield entries=Leonin Vanguard.
+- Turn 11: actions: cards=1, abilities=0; explicit battlefield entries=Enduring Tenacity.
+- Turn 12: actions: cards=1, abilities=5; combat snapshots=1; life mutations=3; explicit battlefield entries=Angelic Destiny, Enduring Tenacity; explicit battlefield exits=Enduring Tenacity.
+- Turn 13: actions: cards=0, abilities=0; explicit battlefield exits=Cat, Leonin Vanguard.
+- Turn 14: actions: cards=0, abilities=0; combat snapshots=1.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=10] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=281)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 281) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 281) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [280] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Plains [280]
+
+Turn 2
+  - Leonin Vanguard [valid_resolution_no_immediate_mutation, seq=30] (active=PayasoAsesino, phase=Phase_Main1, controller=PayasoAsesino, owner=PayasoAsesino, source_object=285)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Leonin Vanguard resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Leonin Vanguard (object 285) Hand (PayasoAsesino) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leonin Vanguard (object 285) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=32] (active=PayasoAsesino, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=281, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [283] Library (PayasoAsesino) -> Hand (PayasoAsesino) (Draw; GRE sequence 24).
+      Plains [284] Hand (PayasoAsesino) -> Battlefield (PlayLand; GRE sequence 27).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Plains [280]
+      PayasoAsesino: Battlefield: Leonin Vanguard [285], Plains [284]
+
+Turn 3
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=53] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 290) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 290) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [288] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 46).
+      Godless Shrine [289] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 50).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Godless Shrine [289], Lunar Convocation [290], Plains [280]
+      PayasoAsesino: Battlefield: Leonin Vanguard [285], Plains [284]
+
+Turn 4
+  - Ajani's Pridemate [valid_resolution_no_immediate_mutation, seq=73] (active=PayasoAsesino, phase=Phase_Main1, controller=PayasoAsesino, owner=PayasoAsesino, source_object=295)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ajani's Pridemate resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ajani's Pridemate (object 295) Hand (PayasoAsesino) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ajani's Pridemate (object 295) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=75] (active=PayasoAsesino, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=281, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  Combat snapshots observed (active=PayasoAsesino; frames: DeclareAttack -> DeclareBlock):
+      attackers: Leonin Vanguard [285] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 +0 (individual changes below; gains and losses may offset)
+    life: gian31 19 -> 20
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Ajani's Pridemate [293] Library (PayasoAsesino) -> Hand (PayasoAsesino) (Draw; GRE sequence 67).
+      Plains [294] Hand (PayasoAsesino) -> Battlefield (PlayLand; GRE sequence 70).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Godless Shrine [289], Lunar Convocation [290], Plains [280]
+      PayasoAsesino: Battlefield: Ajani's Pridemate [295], Leonin Vanguard [285], Plains [284], Plains [294]
+
+Turn 5
+  - Moonrise Cleric [valid_resolution_no_immediate_mutation, seq=101] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=301)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Moonrise Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Moonrise Cleric (object 301) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Moonrise Cleric (object 301) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [299] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 95).
+      Swamp [300] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 98).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Godless Shrine [289], Lunar Convocation [290], Moonrise Cleric [301], Plains [280], Swamp [300]
+      PayasoAsesino: Battlefield: Ajani's Pridemate [295], Leonin Vanguard [285], Plains [284], Plains [294]
+
+Turn 6
+  - Pacifism [valid_resolution_no_immediate_mutation, seq=123] (active=PayasoAsesino, phase=Phase_Main1, controller=PayasoAsesino, owner=PayasoAsesino, source_object=307)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Pacifism resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Pacifism (object 307) Hand (PayasoAsesino) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Pacifism (object 307) Stack -> Battlefield (Resolve; shared object ID)
+      Aura attachment target: unavailable in captured GRE records.
+  Combat snapshots observed (active=PayasoAsesino; frames: DeclareAttack -> DeclareBlock):
+      attackers: Leonin Vanguard [285] (unblocked, observed P/T 1/1), Ajani's Pridemate [295] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -3 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 19 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Pacifism [305] Library (PayasoAsesino) -> Hand (PayasoAsesino) (Draw; GRE sequence 115).
+      Plains [306] Hand (PayasoAsesino) -> Battlefield (PlayLand; GRE sequence 118).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Godless Shrine [289], Lunar Convocation [290], Moonrise Cleric [301], Plains [280], Swamp [300]
+      PayasoAsesino: Battlefield: Ajani's Pridemate [295], Leonin Vanguard [285], Pacifism [307], Plains [284], Plains [294], Plains [306]
+
+Turn 7
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=148] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=311)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 311) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 311) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [310] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 143).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Godless Shrine [289], Lunar Convocation [290], Marauding Blight-Priest [311], Moonrise Cleric [301], Plains [280], Swamp [300]
+      PayasoAsesino: Battlefield: Ajani's Pridemate [295], Leonin Vanguard [285], Pacifism [307], Plains [284], Plains [294], Plains [306]
+
+Turn 8
+  - Arahbo, the First Fang [valid_resolution_no_immediate_mutation, seq=168] (active=PayasoAsesino, phase=Phase_Main1, controller=PayasoAsesino, owner=PayasoAsesino, source_object=317)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Arahbo, the First Fang resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Arahbo, the First Fang (object 317) Hand (PayasoAsesino) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Arahbo, the First Fang (object 317) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=170] (active=PayasoAsesino, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=281, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=172] (active=PayasoAsesino, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=311, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: PayasoAsesino loses 1 life.
+  - Ability of Arahbo, the First Fang [observed_semantic_effect, seq=174] (active=PayasoAsesino, phase=Phase_Main1, controller=PayasoAsesino, owner=PayasoAsesino, source_object=317, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Arahbo, the First Fang: a token is created.
+      explicit effect object references: Cat [324] (role/targeting only where the protocol identifies it)
+      token created: Cat (object 324, controller=PayasoAsesino) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 322).
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=176] (active=PayasoAsesino, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=281, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=178] (active=PayasoAsesino, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=311, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: PayasoAsesino loses 1 life.
+  - Ability of Leonin Vanguard [observed_semantic_effect, seq=182] (active=PayasoAsesino, phase=Phase_Combat, step=Step_BeginCombat, controller=PayasoAsesino, owner=PayasoAsesino, source_object=285, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, life +1
+      narrative: Ability of Leonin Vanguard: Leonin Vanguard gets +1/+1; PayasoAsesino gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=184] (active=PayasoAsesino, phase=Phase_Combat, step=Step_BeginCombat, controller=PayasoAsesino, owner=PayasoAsesino, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [295].
+  Combat snapshots observed (active=PayasoAsesino; frames: DeclareAttack):
+      attackers: Ajani's Pridemate [295] (unblocked, observed P/T 4/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: PayasoAsesino -1; gian31 -2 (individual changes below; gains and losses may offset)
+    life: gian31 16 -> 17
+    life: PayasoAsesino 20 -> 19
+    life: gian31 17 -> 18
+    life: PayasoAsesino 19 -> 18
+    life: PayasoAsesino 18 -> 19
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): gian31 18 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [315] Library (PayasoAsesino) -> Hand (PayasoAsesino) (Draw; GRE sequence 162).
+      Plains [316] Hand (PayasoAsesino) -> Battlefield (PlayLand; GRE sequence 165).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Godless Shrine [289], Lunar Convocation [290], Marauding Blight-Priest [311], Moonrise Cleric [301], Plains [280], Swamp [300]
+      PayasoAsesino: Battlefield: Ajani's Pridemate [295], Arahbo, the First Fang [317], Leonin Vanguard [285], Pacifism [307], Plains [284], Plains [294], Plains [306], Plains [316]
+
+Turn 9
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=208] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=330, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=210] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=311, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: PayasoAsesino loses 1 life.
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=213] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=333)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 333) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 333) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=217] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=333, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Arahbo, the First Fang; gian31 gains 2 life.
+      explicit effect object references: Arahbo, the First Fang [317], Arahbo, the First Fang [338] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Arahbo, the First Fang (object 338) Battlefield -> Exile (Exile; shared object ID)
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=219] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=311, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: PayasoAsesino loses 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=234] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: PayasoAsesino loses 1 life.
+    net observed life change this turn: PayasoAsesino -3; gian31 +3 (individual changes below; gains and losses may offset)
+    life: gian31 14 -> 15
+    life: PayasoAsesino 19 -> 18
+    life: gian31 15 -> 17
+    life: PayasoAsesino 18 -> 17
+    life: PayasoAsesino 17 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [329] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 203).
+      Scoured Barrens [330] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 206).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Godless Shrine [289], Lunar Convocation [290], Makeshift Binding [333], Marauding Blight-Priest [311], Moonrise Cleric [301], Plains [280], Scoured Barrens [330], Swamp [300]
+      PayasoAsesino: Battlefield: Ajani's Pridemate [295], Leonin Vanguard [285], Pacifism [307], Plains [284], Plains [294], Plains [306], Plains [316]; Exile: Arahbo, the First Fang [338]
+
+Turn 10
+  - Leonin Vanguard [valid_resolution_no_immediate_mutation, seq=243] (active=PayasoAsesino, phase=Phase_Main1, controller=PayasoAsesino, owner=PayasoAsesino, source_object=342)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Leonin Vanguard resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Leonin Vanguard (object 342) Hand (PayasoAsesino) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Leonin Vanguard (object 342) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=245] (active=PayasoAsesino, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=281, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=247] (active=PayasoAsesino, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=311, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: PayasoAsesino loses 1 life.
+  - Ability of Leonin Vanguard [observed_semantic_effect, seq=252] (active=PayasoAsesino, phase=Phase_Combat, step=Step_BeginCombat, controller=PayasoAsesino, owner=PayasoAsesino, source_object=342, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, life +1
+      narrative: Ability of Leonin Vanguard: Leonin Vanguard gets +1/+1; PayasoAsesino gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=254] (active=PayasoAsesino, phase=Phase_Combat, step=Step_BeginCombat, controller=PayasoAsesino, owner=PayasoAsesino, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [295].
+  - Ability of Leonin Vanguard [observed_semantic_effect, seq=256] (active=PayasoAsesino, phase=Phase_Combat, step=Step_BeginCombat, controller=PayasoAsesino, owner=PayasoAsesino, source_object=285, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, life +1
+      narrative: Ability of Leonin Vanguard: Leonin Vanguard gets +1/+1; PayasoAsesino gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=258] (active=PayasoAsesino, phase=Phase_Combat, step=Step_BeginCombat, controller=PayasoAsesino, owner=PayasoAsesino, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [295].
+  Combat snapshots observed (active=PayasoAsesino; frames: DeclareAttack -> DeclareBlock):
+      attackers: Leonin Vanguard [285] (unblocked, observed P/T 2/2), Ajani's Pridemate [295] (unblocked, observed P/T 5/5)
+      blockers: none identified
+      combat-correlated defending-player life loss: 7; observed attacker power total: 7; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: PayasoAsesino +1; gian31 -6 (individual changes below; gains and losses may offset)
+    life: gian31 17 -> 18
+    life: PayasoAsesino 16 -> 15
+    life: PayasoAsesino 15 -> 16
+    life: PayasoAsesino 16 -> 17
+    life (combat fully reconciled: snapshot power 7 + observed modifiers 0 = 7; individual assignment unavailable): gian31 18 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Leonin Vanguard [341] Library (PayasoAsesino) -> Hand (PayasoAsesino) (Draw; GRE sequence 238).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Godless Shrine [289], Lunar Convocation [290], Makeshift Binding [333], Marauding Blight-Priest [311], Moonrise Cleric [301], Plains [280], Scoured Barrens [330], Swamp [300]
+      PayasoAsesino: Battlefield: Ajani's Pridemate [295], Leonin Vanguard [285], Leonin Vanguard [342], Pacifism [307], Plains [284], Plains [294], Plains [306], Plains [316]; Exile: Arahbo, the First Fang [338]
+
+Turn 11
+  - Enduring Tenacity [valid_resolution_no_immediate_mutation, seq=283] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=351)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Enduring Tenacity resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Enduring Tenacity (object 351) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Enduring Tenacity (object 351) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Rush of Dread [350] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 278).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Enduring Tenacity [351], Godless Shrine [289], Lunar Convocation [290], Makeshift Binding [333], Marauding Blight-Priest [311], Moonrise Cleric [301], Plains [280], Scoured Barrens [330], Swamp [300]
+      PayasoAsesino: Battlefield: Ajani's Pridemate [295], Leonin Vanguard [285], Leonin Vanguard [342], Pacifism [307], Plains [284], Plains [294], Plains [306], Plains [316]; Exile: Arahbo, the First Fang [338]
+
+Turn 12
+  - Angelic Destiny [valid_resolution_no_immediate_mutation, seq=305] (active=PayasoAsesino, phase=Phase_Main1, controller=PayasoAsesino, owner=PayasoAsesino, source_object=357)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Angelic Destiny resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Angelic Destiny (object 357) Hand (PayasoAsesino) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Angelic Destiny (object 357) Stack -> Battlefield (Resolve; shared object ID)
+      Aura attachment target: unavailable in captured GRE records.
+  - Ability of Leonin Vanguard [observed_semantic_effect, seq=310] (active=PayasoAsesino, phase=Phase_Combat, step=Step_BeginCombat, controller=PayasoAsesino, owner=PayasoAsesino, source_object=342, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, life +1
+      narrative: Ability of Leonin Vanguard: Leonin Vanguard gets +1/+1; PayasoAsesino gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=312] (active=PayasoAsesino, phase=Phase_Combat, step=Step_BeginCombat, controller=PayasoAsesino, owner=PayasoAsesino, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [295].
+  - Ability of Leonin Vanguard [observed_semantic_effect, seq=314] (active=PayasoAsesino, phase=Phase_Combat, step=Step_BeginCombat, controller=PayasoAsesino, owner=PayasoAsesino, source_object=285, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, life +1
+      narrative: Ability of Leonin Vanguard: Leonin Vanguard gets +1/+1; PayasoAsesino gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=316] (active=PayasoAsesino, phase=Phase_Combat, step=Step_BeginCombat, controller=PayasoAsesino, owner=PayasoAsesino, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [295].
+  - Ability of Enduring Tenacity [observed_semantic_effect, seq=331] (active=PayasoAsesino, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=351, source_last_explicit_zone=Battlefield, source_successor=368 observed Graveyard (gian31) -> Battlefield (Return))
+      effects: return to battlefield
+      narrative: Ability of Enduring Tenacity: a card/permanent returns.
+      explicit effect object references: Enduring Tenacity [366], Enduring Tenacity [368] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Enduring Tenacity (object 368) Graveyard (gian31) -> Battlefield (Return; shared object ID)
+  Combat snapshots observed (active=PayasoAsesino; frames: DeclareAttack -> CombatDamage):
+      attackers: Leonin Vanguard [285] (unblocked, observed P/T 6/6), Ajani's Pridemate [295] (blocked, observed P/T 7/7)
+      blockers: none identified
+      combat-correlated defending-player life loss: 6; observed attacker power total: 13; snapshot comparison does not reconcile (exact assignment unavailable).
+      combat-result zone change: Enduring Tenacity [366] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: PayasoAsesino +2; gian31 -6 (individual changes below; gains and losses may offset)
+    life: PayasoAsesino 17 -> 18
+    life: PayasoAsesino 18 -> 19
+    life (combat fully reconciled: snapshot power 6 + observed modifiers 0 = 6; individual assignment unavailable): gian31 11 -> 5
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 356 [356] Library (PayasoAsesino) -> Hand (PayasoAsesino) (Draw; GRE sequence 298).
+      Enduring Tenacity [366] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 329).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Enduring Tenacity [368], Godless Shrine [289], Lunar Convocation [290], Makeshift Binding [333], Marauding Blight-Priest [311], Moonrise Cleric [301], Plains [280], Scoured Barrens [330], Swamp [300]
+      PayasoAsesino: Battlefield: Ajani's Pridemate [295], Angelic Destiny [357], Leonin Vanguard [285], Leonin Vanguard [342], Pacifism [307], Plains [284], Plains [294], Plains [306], Plains [316]; Exile: Arahbo, the First Fang [338]
+
+Turn 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Marauding Blight-Priest [369] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 341).
+      Rush of Dread [370] Hand (gian31) -> Stack (CastSpell; GRE sequence 344).
+      Cat [375] Battlefield -> Graveyard (PayasoAsesino) (Sacrifice; GRE sequence 350).
+      Leonin Vanguard [376] Battlefield -> Graveyard (PayasoAsesino) (Sacrifice; GRE sequence 350).
+      Rush of Dread [377] Stack -> Graveyard (gian31) (Resolve; GRE sequence 350).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Authority of the Consuls [281], Enduring Tenacity [368], Godless Shrine [289], Lunar Convocation [290], Makeshift Binding [333], Marauding Blight-Priest [311], Moonrise Cleric [301], Plains [280], Scoured Barrens [330], Swamp [300]; Graveyard: Rush of Dread [377]
+      PayasoAsesino: Battlefield: Ajani's Pridemate [295], Angelic Destiny [357], Leonin Vanguard [285], Pacifism [307], Plains [284], Plains [294], Plains [306], Plains [316]; Exile: Arahbo, the First Fang [338]; Graveyard: Cat [375], Leonin Vanguard [376]
+
+Turn 14
+  Combat snapshots observed (active=PayasoAsesino; frames: DeclareAttack -> DeclareBlock):
+      attackers: Leonin Vanguard [285] (unblocked, observed P/T 5/5), Ajani's Pridemate [295] (unblocked, observed P/T 7/7)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat damage assignment: unknown unless explicitly observed
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 378 [378] Library (PayasoAsesino) -> Hand (PayasoAsesino) (Draw; GRE sequence 365).
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 3, seq 50: gian31 21 -> 19. No source event correlated in captured records.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 1 token creations observed; 0 active as last observed; 1 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Cat [324] controller=PayasoAsesino; created Turn 8 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 13 via Battlefield -> Graveyard (PayasoAsesino) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 1, seq 10: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 24: Plains [owner/controller metadata unavailable] moves Library (PayasoAsesino) -> Hand (PayasoAsesino) (Draw).
+- Turn 2, seq 27: Plains [owner=PayasoAsesino, controller=PayasoAsesino] moves Hand (PayasoAsesino) -> Battlefield (PlayLand).
+- Turn 2, seq 28: Leonin Vanguard [owner=PayasoAsesino, controller=PayasoAsesino] moves Hand (PayasoAsesino) -> Stack (CastSpell).
+- Turn 2, seq 30: Leonin Vanguard [owner=PayasoAsesino, controller=PayasoAsesino] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 46: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 50: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 51: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 53: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 67: Ajani's Pridemate [owner/controller metadata unavailable] moves Library (PayasoAsesino) -> Hand (PayasoAsesino) (Draw).
+- Turn 4, seq 70: Plains [owner=PayasoAsesino, controller=PayasoAsesino] moves Hand (PayasoAsesino) -> Battlefield (PlayLand).
+- Turn 4, seq 71: Ajani's Pridemate [owner=PayasoAsesino, controller=PayasoAsesino] moves Hand (PayasoAsesino) -> Stack (CastSpell).
+- Turn 4, seq 73: Ajani's Pridemate [owner=PayasoAsesino, controller=PayasoAsesino] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 95: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 98: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 99: Moonrise Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 101: Moonrise Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 115: Pacifism [owner/controller metadata unavailable] moves Library (PayasoAsesino) -> Hand (PayasoAsesino) (Draw).
+- Turn 6, seq 118: Plains [owner=PayasoAsesino, controller=PayasoAsesino] moves Hand (PayasoAsesino) -> Battlefield (PlayLand).
+- Turn 6, seq 119: Pacifism [owner=PayasoAsesino, controller=PayasoAsesino] moves Hand (PayasoAsesino) -> Stack (CastSpell).
+- Turn 6, seq 123: Pacifism [owner=PayasoAsesino, controller=PayasoAsesino] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 143: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 146: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 148: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 162: Plains [owner/controller metadata unavailable] moves Library (PayasoAsesino) -> Hand (PayasoAsesino) (Draw).
+- Turn 8, seq 165: Plains [owner=PayasoAsesino, controller=PayasoAsesino] moves Hand (PayasoAsesino) -> Battlefield (PlayLand).
+- Turn 8, seq 166: Arahbo, the First Fang [owner=PayasoAsesino, controller=PayasoAsesino] moves Hand (PayasoAsesino) -> Stack (CastSpell).
+- Turn 8, seq 168: Arahbo, the First Fang [owner=PayasoAsesino, controller=PayasoAsesino] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 203: Scoured Barrens [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 206: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 211: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 213: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 217: Arahbo, the First Fang [owner=PayasoAsesino, controller=PayasoAsesino] moves Battlefield -> Exile (Exile).
+- Turn 10, seq 238: Leonin Vanguard [owner/controller metadata unavailable] moves Library (PayasoAsesino) -> Hand (PayasoAsesino) (Draw).
+- Turn 10, seq 241: Leonin Vanguard [owner=PayasoAsesino, controller=PayasoAsesino] moves Hand (PayasoAsesino) -> Stack (CastSpell).
+- Turn 10, seq 243: Leonin Vanguard [owner=PayasoAsesino, controller=PayasoAsesino] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 278: Rush of Dread [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 281: Enduring Tenacity [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 283: Enduring Tenacity [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 298: object 356 [owner/controller metadata unavailable] moves Library (PayasoAsesino) -> Hand (PayasoAsesino) (Draw).
+- Turn 12, seq 301: Angelic Destiny [owner=PayasoAsesino, controller=PayasoAsesino] moves Hand (PayasoAsesino) -> Stack (CastSpell).
+- Turn 12, seq 305: Angelic Destiny [owner=PayasoAsesino, controller=PayasoAsesino] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 329: Enduring Tenacity [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 12, seq 331: Enduring Tenacity [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Battlefield (Return).
+- Turn 13, seq 341: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 344: Rush of Dread [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 13, seq 350: Cat [owner/controller metadata unavailable] moves Battlefield -> Graveyard (PayasoAsesino) (Sacrifice).
+- Turn 13, seq 350: Leonin Vanguard [owner=PayasoAsesino, controller=PayasoAsesino] moves Battlefield -> Graveyard (PayasoAsesino) (Sacrifice).
+- Turn 13, seq 350: Rush of Dread [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 14, seq 365: object 378 [owner/controller metadata unavailable] moves Library (PayasoAsesino) -> Hand (PayasoAsesino) (Draw).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 161 becomes object 280 [Plains].
+- Turn 1, seq 8: object 166 becomes object 281 [Authority of the Consuls].
+- Turn 2, seq 24: object 227 becomes object 283 [Plains].
+- Turn 2, seq 27: object 223 becomes object 284 [Plains].
+- Turn 2, seq 28: object 224 becomes object 285 [Leonin Vanguard].
+- Turn 3, seq 46: object 167 becomes object 288 [Makeshift Binding].
+- Turn 3, seq 50: object 164 becomes object 289 [Godless Shrine].
+- Turn 3, seq 51: object 160 becomes object 290 [Lunar Convocation].
+- Turn 4, seq 67: object 228 becomes object 293 [Ajani's Pridemate].
+- Turn 4, seq 70: object 283 becomes object 294 [Plains].
+- Turn 4, seq 71: object 293 becomes object 295 [Ajani's Pridemate].
+- Turn 5, seq 95: object 168 becomes object 299 [Swamp].
+- Turn 5, seq 98: object 299 becomes object 300 [Swamp].
+- Turn 5, seq 99: object 165 becomes object 301 [Moonrise Cleric].
+- Turn 6, seq 115: object 229 becomes object 305 [Pacifism].
+- Turn 6, seq 118: object 226 becomes object 306 [Plains].
+- Turn 6, seq 119: object 305 becomes object 307 [Pacifism].
+- Turn 7, seq 143: object 169 becomes object 310 [Starscape Cleric].
+- Turn 7, seq 146: object 163 becomes object 311 [Marauding Blight-Priest].
+- Turn 8, seq 162: object 230 becomes object 315 [Plains].
+- Turn 8, seq 165: object 315 becomes object 316 [Plains].
+- Turn 8, seq 166: object 221 becomes object 317 [Arahbo, the First Fang].
+- Turn 9, seq 203: object 170 becomes object 329 [Scoured Barrens].
+- Turn 9, seq 206: object 329 becomes object 330 [Scoured Barrens].
+- Turn 9, seq 211: object 288 becomes object 333 [Makeshift Binding].
+- Turn 9, seq 217: object 317 becomes object 338 [Arahbo, the First Fang].
+- Turn 10, seq 238: object 231 becomes object 341 [Leonin Vanguard].
+- Turn 10, seq 241: object 341 becomes object 342 [Leonin Vanguard].
+- Turn 11, seq 278: object 171 becomes object 350 [Rush of Dread].
+- Turn 11, seq 281: object 162 becomes object 351 [Enduring Tenacity].
+- Turn 12, seq 298: object 232 becomes object 356 [object 232].
+- Turn 12, seq 301: object 220 becomes object 357 [Angelic Destiny].
+- Turn 12, seq 329: object 351 becomes object 366 [Enduring Tenacity].
+- Turn 12, seq 331: object 366 becomes object 368 [Enduring Tenacity].
+- Turn 13, seq 341: object 172 becomes object 369 [Marauding Blight-Priest].
+- Turn 13, seq 344: object 350 becomes object 370 [Rush of Dread].
+- Turn 13, seq 350: object 324 becomes object 375 [Cat].
+- Turn 13, seq 350: object 342 becomes object 376 [Leonin Vanguard].
+- Turn 13, seq 350: object 370 becomes object 377 [Rush of Dread].
+- Turn 14, seq 365: object 233 becomes object 378 [object 233].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Plains (object 280) from Hand (gian31) to Battlefield.
+- Turn 2: PayasoAsesino plays Plains (object 284) from Hand (PayasoAsesino) to Battlefield.
+- Turn 3: gian31 plays Godless Shrine (object 289) from Hand (gian31) to Battlefield.
+- Turn 4: PayasoAsesino plays Plains (object 294) from Hand (PayasoAsesino) to Battlefield.
+- Turn 5: gian31 plays Swamp (object 300) from Hand (gian31) to Battlefield.
+- Turn 6: PayasoAsesino plays Plains (object 306) from Hand (PayasoAsesino) to Battlefield.
+- Turn 8: PayasoAsesino plays Plains (object 316) from Hand (PayasoAsesino) to Battlefield.
+- Turn 9: gian31 plays Scoured Barrens (object 330) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 8: ordered adjacent records Authority of the Consuls -> Marauding Blight-Priest; observed repetitions=2; net life: PayasoAsesino -2, gian31 +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Authority of the Consuls=2, Marauding Blight-Priest=2.
+  Individual ability records remain in the timeline.
+- Turn 10: ordered adjacent records Leonin Vanguard -> Ajani's Pridemate; observed repetitions=2; net life: Leonin Vanguard gets +1/+1; PayasoAsesino +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Ajani's Pridemate=2, Leonin Vanguard=2.
+  Individual ability records remain in the timeline.
+- Turn 12: ordered adjacent records Leonin Vanguard -> Ajani's Pridemate; observed repetitions=2; net life: Leonin Vanguard gets +1/+1; PayasoAsesino +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Ajani's Pridemate=2, Leonin Vanguard=2.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 10: ordered adjacent records Leonin Vanguard -> Ajani's Pridemate; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+- Turn 12: ordered adjacent records Leonin Vanguard -> Ajani's Pridemate; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Leonin Vanguard: casts=2; abilities=5 (triggered=5, activated=0) across turns [2, 8, 10, 10, 10, 12, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=5
+  observed effects: P/T +1/+1, life +1
+- Ajani's Pridemate: casts=1; abilities=5 (triggered=5, activated=0) across turns [4, 8, 10, 10, 12, 12]
+  observed effect totals: draws=0, tokens=0, counters=5, returns=0, damage=0, life_changes=0, other=5
+  observed effects: +1 counter(s), P/T +1/+1
+- Authority of the Consuls: casts=1; abilities=5 (triggered=5, activated=0) across turns [1, 2, 4, 8, 8, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=0
+  observed effects: life +1
+- Marauding Blight-Priest: casts=1; abilities=5 (triggered=5, activated=0) across turns [7, 8, 8, 9, 9, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=3
+  observed effects: life -1, synthetic event
+- Arahbo, the First Fang: casts=1; abilities=1 (triggered=1, activated=0) across turns [8, 8]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Enduring Tenacity: casts=1; abilities=1 (triggered=1, activated=0) across turns [11, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=1, damage=0, life_changes=0, other=0
+  observed effects: return to battlefield
+- Lunar Convocation: casts=1; abilities=1 (triggered=1, activated=0) across turns [3, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life -1
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [9, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Angelic Destiny: casts=1 across turns [12]
+- Moonrise Cleric: casts=1 across turns [5]
+- Pacifism: casts=1 across turns [6]
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 4 - DeclareAttack, DeclareBlock (active=PayasoAsesino)
+  attacker: Leonin Vanguard (PayasoAsesino) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 6 - DeclareAttack, DeclareBlock (active=PayasoAsesino)
+  attacker: Leonin Vanguard (PayasoAsesino) -> gian31; unblocked in this observed snapshot
+  attacker: Ajani's Pridemate (PayasoAsesino) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack (active=PayasoAsesino)
+  attacker: Ajani's Pridemate (PayasoAsesino) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, DeclareBlock (active=PayasoAsesino)
+  attacker: Leonin Vanguard (PayasoAsesino) -> gian31; unblocked in this observed snapshot
+  attacker: Ajani's Pridemate (PayasoAsesino) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack, CombatDamage (active=PayasoAsesino)
+  attacker: Leonin Vanguard (PayasoAsesino) -> gian31; unblocked in this observed snapshot
+  attacker: Ajani's Pridemate (PayasoAsesino) -> gian31; blocked by unknown blocker
+  combat damage assignment: unknown unless explicitly observed
+Turn 14 - DeclareAttack, DeclareBlock (active=PayasoAsesino)
+  attacker: Leonin Vanguard (PayasoAsesino) -> gian31; unblocked in this observed snapshot
+  attacker: Ajani's Pridemate (PayasoAsesino) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 8: Ability of Leonin Vanguard (active=PayasoAsesino) - Ability of Leonin Vanguard: Leonin Vanguard gets +1/+1; PayasoAsesino gains 1 life.
+- Turn 8: Ability of Ajani's Pridemate (active=PayasoAsesino) - Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to target.
+- Turn 10: Ability of Leonin Vanguard (active=PayasoAsesino) - Ability of Leonin Vanguard: Leonin Vanguard gets +1/+1; PayasoAsesino gains 1 life.
+- Turn 10: Ability of Ajani's Pridemate (active=PayasoAsesino) - Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to target.
+- Turn 10: Ability of Leonin Vanguard (active=PayasoAsesino) - Ability of Leonin Vanguard: Leonin Vanguard gets +1/+1; PayasoAsesino gains 1 life.
+- Turn 10: Ability of Ajani's Pridemate (active=PayasoAsesino) - Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to target.
+- Turn 12: Ability of Leonin Vanguard (active=PayasoAsesino) - Ability of Leonin Vanguard: Leonin Vanguard gets +1/+1; PayasoAsesino gains 1 life.
+- Turn 12: Ability of Ajani's Pridemate (active=PayasoAsesino) - Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to target.
+- Turn 12: Ability of Leonin Vanguard (active=PayasoAsesino) - Ability of Leonin Vanguard: Leonin Vanguard gets +1/+1; PayasoAsesino gains 1 life.
+- Turn 12: Ability of Ajani's Pridemate (active=PayasoAsesino) - Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to target.
+- Turn 12: Ability of Enduring Tenacity (active=PayasoAsesino controller=gian31) - Ability of Enduring Tenacity: a card/permanent returns.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 160: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 161: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 166: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 280: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 281: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 284: Plains | controller=PayasoAsesino | owner=PayasoAsesino | zone=Battlefield (latest_object_observation)
+- 285: Leonin Vanguard | controller=PayasoAsesino | owner=PayasoAsesino | zone=Battlefield (latest_object_observation)
+- 287: object 287 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 288: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 289: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 290: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 294: Plains | controller=PayasoAsesino | owner=PayasoAsesino | zone=Battlefield (latest_object_observation)
+- 295: Ajani's Pridemate | controller=PayasoAsesino | owner=PayasoAsesino | zone=Battlefield (latest_object_observation)
+- 298: object 298 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 299: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 300: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 301: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 306: Plains | controller=PayasoAsesino | owner=PayasoAsesino | zone=Battlefield (latest_object_observation)
+- 307: Pacifism | controller=PayasoAsesino | owner=PayasoAsesino | zone=Stack (latest_object_observation)
+- 310: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 311: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 316: Plains | controller=PayasoAsesino | owner=PayasoAsesino | zone=Battlefield (latest_object_observation)
+- 317: Arahbo, the First Fang | controller=PayasoAsesino | owner=PayasoAsesino | zone=Battlefield (latest_object_observation)
+- 321: object 321 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 322: object 322 | controller=PayasoAsesino | owner=PayasoAsesino | zone=unknown (inferred unknown) (latest_object_observation)
+- 323: object 323 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 324: Cat | controller=PayasoAsesino | owner=PayasoAsesino | zone=Hand (latest_object_observation)
+- 325: object 325 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 326: object 326 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 327: object 327 | controller=PayasoAsesino | owner=PayasoAsesino | zone=unknown (inferred unknown) (latest_object_observation)
+- 328: Deal Gone Bad | controller=PayasoAsesino | owner=PayasoAsesino | zone=unknown (inferred unknown) (latest_object_observation)
+- 329: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 330: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 331: object 331 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 332: object 332 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 333: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 337: object 337 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 338: Arahbo, the First Fang | controller=PayasoAsesino | owner=PayasoAsesino | zone=Exile (latest_object_observation)
+- 339: object 339 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 340: object 340 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 342: Leonin Vanguard | controller=PayasoAsesino | owner=PayasoAsesino | zone=Battlefield (latest_object_observation)
+- 344: object 344 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 345: object 345 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 346: object 346 | controller=PayasoAsesino | owner=PayasoAsesino | zone=unknown (inferred unknown) (latest_object_observation)
+- 347: object 347 | controller=PayasoAsesino | owner=PayasoAsesino | zone=unknown (inferred unknown) (latest_object_observation)
+- 348: Deal Gone Bad | controller=PayasoAsesino | owner=PayasoAsesino | zone=unknown (inferred unknown) (latest_object_observation)
+- 349: Deal Gone Bad | controller=PayasoAsesino | owner=PayasoAsesino | zone=unknown (inferred unknown) (latest_object_observation)
+- 350: Rush of Dread | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 351: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 357: Angelic Destiny | controller=PayasoAsesino | owner=PayasoAsesino | zone=Stack (latest_object_observation)
+- 362: object 362 | controller=PayasoAsesino | owner=PayasoAsesino | zone=unknown (inferred unknown) (latest_object_observation)
+- 363: object 363 | controller=PayasoAsesino | owner=PayasoAsesino | zone=unknown (inferred unknown) (latest_object_observation)
+- 364: Deal Gone Bad | controller=PayasoAsesino | owner=PayasoAsesino | zone=unknown (inferred unknown) (latest_object_observation)
+- 365: Deal Gone Bad | controller=PayasoAsesino | owner=PayasoAsesino | zone=unknown (inferred unknown) (latest_object_observation)
+- 366: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 367: object 367 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 368: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 369: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 370: Rush of Dread | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 376: Leonin Vanguard | controller=PayasoAsesino | owner=PayasoAsesino | zone=Graveyard (latest_object_observation)
+- 377: Rush of Dread | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+PayasoAsesino: 24 total items
+  zones: Battlefield=8, Exile=1, Graveyard=1, Hand=1, Stack=2, unknown=11
+  objects: Deal Gone Bad x5, Plains x4, Leonin Vanguard x3, Arahbo, the First Fang x2, Ajani's Pridemate, Angelic Destiny, Cat, Pacifism, object 322, object 327, object 346, object 347
+gian31: 41 total items
+  zones: Battlefield=9, Hand=13, Stack=4, unknown=15
+  objects: Enduring Tenacity x4, Marauding Blight-Priest x3, Rush of Dread x3, Authority of the Consuls x2, Godless Shrine x2, Lunar Convocation x2, Makeshift Binding x2, Moonrise Cleric x2, Plains x2, Scoured Barrens x2, Swamp x2, Starscape Cleric
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (9): Enduring Tenacity, Enduring Tenacity, Enduring Tenacity, Godless Shrine, Marauding Blight-Priest, Moonrise Cleric, Plains, Scoured Barrens, Swamp
+  Graveyard: 0 card(s)
+PayasoAsesino:
+  Battlefield (8): Ajani's Pridemate, Arahbo, the First Fang, Leonin Vanguard, Leonin Vanguard, Plains, Plains, Plains, Plains
+  Graveyard: 1 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+26 objects have no resolved final zone and are omitted from the known board state.
+PayasoAsesino: 11 unknown object(s)
+gian31: 15 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=14, Stack=6
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+PayasoAsesino:
+  Battlefield (8): Plains, Leonin Vanguard, Plains, Ajani's Pridemate, Plains, Pacifism, Plains, Angelic Destiny
+  Graveyard (1): Leonin Vanguard
+  Exile (1): Arahbo, the First Fang
+gian31:
+  Battlefield (10): Plains, Authority of the Consuls, Godless Shrine, Lunar Convocation, Swamp, Moonrise Cleric, Marauding Blight-Priest, Scoured Barrens, Makeshift Binding, Enduring Tenacity
+  Graveyard (1): Rush of Dread
+Known non-persistent entries (counts only):
+  PayasoAsesino: Hand=2, Limbo=2
+  gian31: Hand=2, Limbo=3, Stack=1
+  unknown: Hand=2, Library=93, Limbo=4
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=2
+- Turn 2: PayasoAsesino Battlefield=2; gian31 Battlefield=2
+- Turn 3: PayasoAsesino Battlefield=2; gian31 Battlefield=4
+- Turn 4: PayasoAsesino Battlefield=4; gian31 Battlefield=4
+- Turn 5: PayasoAsesino Battlefield=4; gian31 Battlefield=6
+- Turn 6: PayasoAsesino Battlefield=6; gian31 Battlefield=6
+- Turn 7: PayasoAsesino Battlefield=6; gian31 Battlefield=7
+- Turn 8: PayasoAsesino Battlefield=8; gian31 Battlefield=7
+- Turn 9: PayasoAsesino Battlefield=7; PayasoAsesino Exile=1; gian31 Battlefield=9
+- Turn 10: PayasoAsesino Battlefield=8; PayasoAsesino Exile=1; gian31 Battlefield=9
+- Turn 11: PayasoAsesino Battlefield=8; PayasoAsesino Exile=1; gian31 Battlefield=10
+- Turn 12: PayasoAsesino Battlefield=9; PayasoAsesino Exile=1; gian31 Battlefield=10
+- Turn 13: PayasoAsesino Battlefield=8; PayasoAsesino Graveyard=2; PayasoAsesino Exile=1; gian31 Battlefield=10; gian31 Graveyard=1
+- Turn 14: PayasoAsesino Battlefield=8; PayasoAsesino Graveyard=2; PayasoAsesino Exile=1; gian31 Battlefield=10; gian31 Graveyard=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 2: Leonin Vanguard resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Ajani's Pridemate resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Moonrise Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Pacifism resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Arahbo, the First Fang resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Leonin Vanguard resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Enduring Tenacity resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Angelic Destiny resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
