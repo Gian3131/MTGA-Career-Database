@@ -1,0 +1,1079 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: sameer6563, gian31
+Seat map: Seat 1=sameer6563, Seat 2=gian31
+Turn range (known): 1 - 16
+Records: 74
+Action chains: 40
+Winner: gian31
+Final life: {'sameer6563': 1, 'gian31': 24}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 16 (Phase_Main1; Ability of Marauding Blight-Priest, seq 487).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 49 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 13 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 13, 14, 16] (raw records=13; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 22 explicit Library -> Hand movement(s); named in the draw record=15, resolved through an explicit identity transition=5, unresolved=2.
+Unresolved draw identities (explicit movements retained): Turn 3, seq 40, object 346; Turn 15, seq 396, object 547.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 6).
+  - gian31: 7 observed card(s): Scoured Barrens [221], Swamp [222], Makeshift Binding [223], Phyrexian Arena [224], Bloodletter of Aclazotz [225], Swamp [226], Lunar Convocation [227].
+  - unknown: 6 observed card(s): object 281 [281], object 282 [282], object 283 [283], object 284 [284], object 286 [286], object 287 [287].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'sameer6563': 1, 'gian31': 24}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 16 (Phase_Main1; Ability of Marauding Blight-Priest, seq 487).
+Last captured life snapshot: gian31 23 -> 24 (seq 485).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Sandsteppe Citadel.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Plains.
+- Turn 3: actions: cards=0, abilities=0; explicit battlefield entries=Temple of Silence.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Lunar Convocation.
+- Turn 5: actions: cards=1, abilities=0; explicit battlefield entries=Restless Fortress, The Mind Stone.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Phyrexian Arena.
+- Turn 7: actions: cards=1, abilities=1; explicit battlefield entries=Omenpath Journey, Sandsteppe Citadel.
+- Turn 8: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Shattered Sanctum, Bloodletter of Aclazotz.
+- Turn 9: actions: cards=1, abilities=3; life mutations=1; explicit battlefield entries=Forlorn Flats, Pit of Offerings; explicit battlefield exits=Bloodletter of Aclazotz.
+- Turn 10: actions: cards=1, abilities=6; life mutations=5; explicit battlefield entries=Scoured Barrens, Case of the Uneaten Feast.
+- Turn 11: actions: cards=0, abilities=4; life mutations=1; explicit battlefield entries=Creosote Heath.
+- Turn 12: actions: cards=2, abilities=7; combat snapshots=1; life mutations=7; explicit battlefield entries=Swamp, Marauding Blight-Priest; explicit battlefield exits=Omenpath Journey.
+- Turn 13: actions: cards=2, abilities=3; explicit battlefield entries=The Rise of Sozin, Peter Parker's Camera, Pit of Offerings; explicit battlefield exits=Bat, Marauding Blight-Priest, Human, Bat.
+- Turn 14: actions: cards=1, abilities=14; life mutations=12; explicit battlefield entries=Swamp, Starscape Cleric.
+- Turn 15: actions: cards=1, abilities=3; explicit battlefield entries=The Coming of Galactus, The Rise of Sozin; explicit battlefield exits=Lunar Convocation, The Rise of Sozin, Starscape Cleric, Starscape Cleric, Bat.
+- Turn 16: actions: cards=2, abilities=17; life mutations=16; explicit battlefield entries=Plains, Marauding Blight-Priest, Bloodthirsty Conqueror.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 342 [342] Hand (sameer6563) -> Library (sameer6563) (Put; GRE sequence 6).
+      Sandsteppe Citadel [343] Hand (sameer6563) -> Battlefield (PlayLand; GRE sequence 9).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      sameer6563: Battlefield: Sandsteppe Citadel [343]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [344] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 23).
+      Plains [345] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 26).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      sameer6563: Battlefield: Sandsteppe Citadel [343]
+      gian31: Battlefield: Plains [345]
+
+Turn 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 346 [346] Library (sameer6563) -> Hand (sameer6563) (Draw; GRE sequence 40).
+      Temple of Silence [347] Hand (sameer6563) -> Battlefield (PlayLand; GRE sequence 43).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      sameer6563: Battlefield: Sandsteppe Citadel [343], Temple of Silence [347]
+      gian31: Battlefield: Plains [345]
+
+Turn 4
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=66] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=351)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 351) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 351) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Case of the Uneaten Feast [349] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 60).
+      Swamp [350] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 63).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      sameer6563: Battlefield: Sandsteppe Citadel [343], Temple of Silence [347]
+      gian31: Battlefield: Lunar Convocation [351], Plains [345], Swamp [350]
+
+Turn 5
+  - The Mind Stone [valid_resolution_no_immediate_mutation, seq=86] (active=sameer6563, phase=Phase_Main1, controller=sameer6563, owner=sameer6563, source_object=356)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: The Mind Stone resolves with no immediate observed mutation.
+      protocol-linked zone transfer: The Mind Stone (object 356) Hand (sameer6563) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: The Mind Stone (object 356) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Omenpath Journey [354] Library (sameer6563) -> Hand (sameer6563) (Draw; GRE sequence 80).
+      Restless Fortress [355] Hand (sameer6563) -> Battlefield (PlayLand; GRE sequence 83).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      sameer6563: Battlefield: Restless Fortress [355], Sandsteppe Citadel [343], Temple of Silence [347], The Mind Stone [356]
+      gian31: Battlefield: Lunar Convocation [351], Plains [345], Swamp [350]
+
+Turn 6
+  - Phyrexian Arena [valid_resolution_no_immediate_mutation, seq=106] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=361)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Phyrexian Arena resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Phyrexian Arena (object 361) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Phyrexian Arena (object 361) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shattered Sanctum [359] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 100).
+      Swamp [360] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 103).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      sameer6563: Battlefield: Restless Fortress [355], Sandsteppe Citadel [343], Temple of Silence [347], The Mind Stone [356]
+      gian31: Battlefield: Lunar Convocation [351], Phyrexian Arena [361], Plains [345], Swamp [350], Swamp [360]
+
+Turn 7
+  - Omenpath Journey [valid_resolution_no_immediate_mutation, seq=125] (active=sameer6563, phase=Phase_Main1, controller=sameer6563, owner=sameer6563, source_object=366)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Omenpath Journey resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Omenpath Journey (object 366) Hand (sameer6563) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Omenpath Journey (object 366) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Omenpath Journey [observed_semantic_effect, seq=141] (active=sameer6563, phase=Phase_Ending, step=Step_End, controller=sameer6563, owner=sameer6563, source_object=366, source_last_explicit_zone=Battlefield)
+      effects: none immediately observed
+      narrative: Observed zone movements: Sandsteppe Citadel.
+      explicit effect object references: Sandsteppe Citadel [374], Sandsteppe Citadel [425] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Sandsteppe Citadel (object 425) Exile -> Battlefield (Put; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Pit of Offerings [365] Library (sameer6563) -> Hand (sameer6563) (Draw; GRE sequence 120).
+      Restless Cottage [375] Library (sameer6563) -> Exile (Exile; GRE sequence 128).
+      Sandsteppe Citadel [374] Library (sameer6563) -> Exile (Exile; GRE sequence 128).
+      Creosote Heath [373] Library (sameer6563) -> Exile (Exile; GRE sequence 128).
+      Command Bridge [372] Library (sameer6563) -> Exile (Exile; GRE sequence 128).
+      Pit of Offerings [376] Library (sameer6563) -> Exile (Exile; GRE sequence 128).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      sameer6563: Battlefield: Omenpath Journey [366], Restless Fortress [355], Sandsteppe Citadel [343], Sandsteppe Citadel [425], Temple of Silence [347], The Mind Stone [356]; Exile: Command Bridge [372], Creosote Heath [373], Pit of Offerings [376], Restless Cottage [375]
+      gian31: Battlefield: Lunar Convocation [351], Phyrexian Arena [361], Plains [345], Swamp [350], Swamp [360]
+
+Turn 8
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=145] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 231 [231], Makeshift Binding [427] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Makeshift Binding (object 427) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation, seq=153] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=430)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 430) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 430) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Rush of Dread [428] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 147).
+      Shattered Sanctum [429] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 150).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      sameer6563: Battlefield: Omenpath Journey [366], Restless Fortress [355], Sandsteppe Citadel [343], Sandsteppe Citadel [425], Temple of Silence [347], The Mind Stone [356]; Exile: Command Bridge [372], Creosote Heath [373], Pit of Offerings [376], Restless Cottage [375]
+      gian31: Battlefield: Bloodletter of Aclazotz [430], Lunar Convocation [351], Phyrexian Arena [361], Plains [345], Shattered Sanctum [429], Swamp [350], Swamp [360]
+
+Turn 9
+  - Ability of Forlorn Flats [observed_semantic_effect, seq=174] (active=sameer6563, phase=Phase_Main1, controller=sameer6563, owner=sameer6563, source_object=436, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Forlorn Flats: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 2] (role/targeting only where the protocol identifies it)
+  - Deadly Cover-Up [observed_semantic_effect, seq=178] (active=sameer6563, phase=Phase_Main1, controller=sameer6563, owner=sameer6563, source_object=438)
+      effects: destroy
+      narrative: Deadly Cover-Up destroys Bloodletter of Aclazotz.
+      explicit effect object references: Bloodletter of Aclazotz [430], Bloodletter of Aclazotz [444] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Deadly Cover-Up (object 438) Hand (sameer6563) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 444) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Deadly Cover-Up (object 445) Stack -> Graveyard (sameer6563) (Resolve; shared object ID)
+      identity continuity: source object 438 -> transfer object 445 (explicit GRE ObjectIdChanged chain).
+  - Ability of Omenpath Journey [observed_semantic_effect, seq=190] (active=sameer6563, phase=Phase_Ending, step=Step_End, controller=sameer6563, owner=sameer6563, source_object=366, source_last_explicit_zone=Battlefield)
+      effects: none immediately observed
+      narrative: Observed zone movements: Pit of Offerings.
+      explicit effect object references: Pit of Offerings [376], Pit of Offerings [447] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Pit of Offerings (object 447) Exile -> Battlefield (Put; shared object ID)
+  - Ability of Pit of Offerings [observed_semantic_effect, seq=194] (active=sameer6563, phase=Phase_Ending, step=Step_End, controller=sameer6563, owner=sameer6563, source_object=447, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Pit of Offerings: exiles Bloodletter of Aclazotz.
+      explicit effect object references: Bloodletter of Aclazotz [444], Bloodletter of Aclazotz [449] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 449) Graveyard (gian31) -> Exile (Exile; shared object ID)
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Forlorn Flats; direct protocol link unavailable): gian31 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forlorn Flats [435] Library (sameer6563) -> Hand (sameer6563) (Draw; GRE sequence 167).
+      Forlorn Flats [436] Hand (sameer6563) -> Battlefield (PlayLand; GRE sequence 170).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      sameer6563: Battlefield: Forlorn Flats [436], Omenpath Journey [366], Pit of Offerings [447], Restless Fortress [355], Sandsteppe Citadel [343], Sandsteppe Citadel [425], Temple of Silence [347], The Mind Stone [356]; Exile: Command Bridge [372], Creosote Heath [373], Restless Cottage [375]; Graveyard: Deadly Cover-Up [445]
+      gian31: Battlefield: Lunar Convocation [351], Phyrexian Arena [361], Plains [345], Shattered Sanctum [429], Swamp [350], Swamp [360]; Exile: Bloodletter of Aclazotz [449]
+
+Turn 10
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=198] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 233 [233], Makeshift Binding [451] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Makeshift Binding (object 451) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=205] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=453, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=208] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=351, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 235 [235], Stroke of Midnight [458] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Stroke of Midnight (object 458) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Case of the Uneaten Feast [valid_resolution_no_immediate_mutation, seq=211] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=459)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Uneaten Feast resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 459) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Uneaten Feast (object 459) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=224] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=351, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Lunar Convocation: a token is created.
+      explicit effect object references: Bat [463] (role/targeting only where the protocol identifies it)
+      token created: Bat (object 463, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 462).
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=226] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=459, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=228] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=351, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: sameer6563 loses 1 life.
+    net observed life change this turn: gian31 -1; sameer6563 -1 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 17
+    life: gian31 17 -> 18
+    life: gian31 18 -> 16
+    life: gian31 16 -> 17
+    life: sameer6563 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [452] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 200).
+      Scoured Barrens [453] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 203).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      sameer6563: Battlefield: Forlorn Flats [436], Omenpath Journey [366], Pit of Offerings [447], Restless Fortress [355], Sandsteppe Citadel [343], Sandsteppe Citadel [425], Temple of Silence [347], The Mind Stone [356]; Exile: Command Bridge [372], Creosote Heath [373], Restless Cottage [375]; Graveyard: Deadly Cover-Up [445]
+      gian31: Battlefield: Case of the Uneaten Feast [459], Lunar Convocation [351], Phyrexian Arena [361], Plains [345], Scoured Barrens [453], Shattered Sanctum [429], Swamp [350], Swamp [360]; Exile: Bloodletter of Aclazotz [449]
+
+Turn 11
+  - Ability of The Mind Stone [valid_resolution_no_immediate_mutation, seq=237] (active=sameer6563, phase=Phase_Main1, controller=sameer6563, owner=sameer6563, source_object=356, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of The Mind Stone resolves with no immediate observed mutation.
+  - Ability of The Mind Stone [valid_resolution_no_immediate_mutation, seq=251] (active=sameer6563, phase=Phase_Ending, step=Step_End, controller=sameer6563, owner=sameer6563, source_object=356, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 237 and 251; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of The Mind Stone resolves with no immediate observed mutation.
+  - Ability of Omenpath Journey [observed_semantic_effect, seq=253] (active=sameer6563, phase=Phase_Ending, step=Step_End, controller=sameer6563, owner=sameer6563, source_object=366, source_last_explicit_zone=Battlefield)
+      effects: none immediately observed
+      narrative: Observed zone movements: Creosote Heath.
+      explicit effect object references: Creosote Heath [373], Creosote Heath [475] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Creosote Heath (object 475) Exile -> Battlefield (Put; shared object ID)
+  - Ability of Creosote Heath [observed_semantic_effect, seq=257] (active=sameer6563, phase=Phase_Ending, step=Step_End, controller=sameer6563, owner=sameer6563, source_object=475, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Creosote Heath: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 2] (role/targeting only where the protocol identifies it)
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Creosote Heath; direct protocol link unavailable): gian31 17 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Peter Parker's Camera [465] Library (sameer6563) -> Hand (sameer6563) (Draw; GRE sequence 232).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      sameer6563: Battlefield: Creosote Heath [475], Forlorn Flats [436], Omenpath Journey [366], Pit of Offerings [447], Restless Fortress [355], Sandsteppe Citadel [343], Sandsteppe Citadel [425], Temple of Silence [347], The Mind Stone [356]; Exile: Command Bridge [372], Restless Cottage [375]; Graveyard: Deadly Cover-Up [445]
+      gian31: Battlefield: Case of the Uneaten Feast [459], Lunar Convocation [351], Phyrexian Arena [361], Plains [345], Scoured Barrens [453], Shattered Sanctum [429], Swamp [350], Swamp [360]; Exile: Bloodletter of Aclazotz [449]
+
+Turn 12
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=261] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 236 [236], Marauding Blight-Priest [478] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 478) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=269] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=481)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 481) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 481) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=271] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=459, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=273] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=481, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: sameer6563 loses 1 life.
+  - Stroke of Midnight [observed_semantic_effect, seq=278] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=487)
+      effects: destroy, token creation
+      narrative: Stroke of Midnight destroys Omenpath Journey.
+      explicit effect object references: Omenpath Journey [366], Omenpath Journey [491], Human [492] (role/targeting only where the protocol identifies it)
+      token created: Human (object 492, controller=sameer6563) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 487).
+      protocol-linked zone transfer: Stroke of Midnight (object 487) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Omenpath Journey (object 491) Battlefield -> Graveyard (sameer6563) (Destroy; shared object ID)
+      protocol-linked zone transfer: Stroke of Midnight (object 493) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 487 -> transfer object 493 (explicit GRE ObjectIdChanged chain).
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=297] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=351, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Lunar Convocation: a token is created.
+      explicit effect object references: Bat [496] (role/targeting only where the protocol identifies it)
+      token created: Bat (object 496, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 495).
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=299] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=459, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=301] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=481, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: sameer6563 loses 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=303] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=351, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: sameer6563 loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Bat [463] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 +1; sameer6563 -4 (individual changes below; gains and losses may offset)
+    life: gian31 16 -> 15
+    life: gian31 15 -> 16
+    life: sameer6563 19 -> 18
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): sameer6563 18 -> 17
+    life: gian31 16 -> 17
+    life: sameer6563 17 -> 16
+    life: sameer6563 16 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodthirsty Conqueror [479] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 263).
+      Swamp [480] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 266).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      sameer6563: Battlefield: Creosote Heath [475], Forlorn Flats [436], Pit of Offerings [447], Restless Fortress [355], Sandsteppe Citadel [343], Sandsteppe Citadel [425], Temple of Silence [347], The Mind Stone [356]; Exile: Command Bridge [372], Restless Cottage [375]; Graveyard: Deadly Cover-Up [445], Omenpath Journey [491]
+      gian31: Battlefield: Case of the Uneaten Feast [459], Lunar Convocation [351], Marauding Blight-Priest [481], Phyrexian Arena [361], Plains [345], Scoured Barrens [453], Shattered Sanctum [429], Swamp [350], Swamp [360], Swamp [480]; Exile: Bloodletter of Aclazotz [449]; Graveyard: Stroke of Midnight [493]
+
+Turn 13
+  - The Rise of Sozin [valid_resolution_no_immediate_mutation, seq=312] (active=sameer6563, phase=Phase_Main1, controller=sameer6563, owner=sameer6563, source_object=500)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: The Rise of Sozin resolves with no immediate observed mutation.
+      protocol-linked zone transfer: The Rise of Sozin (object 500) Hand (sameer6563) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: The Rise of Sozin (object 500) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of The Rise of Sozin [observed_semantic_effect, seq=314] (active=sameer6563, phase=Phase_Main1, controller=sameer6563, owner=sameer6563, source_object=500, source_last_explicit_zone=Battlefield)
+      effects: destroy, destroy, destroy, destroy
+      narrative: Ability of The Rise of Sozin destroys Bat, Marauding Blight-Priest, Human, Bat.
+      explicit effect object references: Bat [463], Marauding Blight-Priest [481], Human [492], Bat [496], object 508 [508], Marauding Blight-Priest [509], object 510 [510], object 511 [511] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bat (object 508) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 509) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Human (object 510) Battlefield -> Graveyard (sameer6563) (Destroy; shared object ID)
+      protocol-linked zone transfer: Bat (object 511) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+  - Peter Parker's Camera [valid_resolution_no_immediate_mutation, seq=317] (active=sameer6563, phase=Phase_Main1, controller=sameer6563, owner=sameer6563, source_object=512)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Peter Parker's Camera resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Peter Parker's Camera (object 512) Hand (sameer6563) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Peter Parker's Camera (object 512) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Pit of Offerings [observed_semantic_effect, seq=323] (active=sameer6563, phase=Phase_Main1, controller=sameer6563, owner=sameer6563, source_object=514, source_last_explicit_zone=Battlefield)
+      effects: exile, exile
+      narrative: Ability of Pit of Offerings: exiles Stroke of Midnight, Marauding Blight-Priest; exile.
+      explicit effect object references: Stroke of Midnight [493], Marauding Blight-Priest [509], Stroke of Midnight [516], Marauding Blight-Priest [517] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Stroke of Midnight (object 516) Graveyard (gian31) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 517) Graveyard (gian31) -> Exile (Exile; shared object ID)
+  - Ability of The Mind Stone [valid_resolution_no_immediate_mutation, seq=336] (active=sameer6563, phase=Phase_Ending, step=Step_End, controller=sameer6563, owner=sameer6563, source_object=356, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of The Mind Stone resolves with no immediate observed mutation.
+    additional protocol-observed zone movements not assigned to an action chain:
+      The Coming of Galactus [499] Library (sameer6563) -> Hand (sameer6563) (Draw; GRE sequence 307).
+      Pit of Offerings [514] Hand (sameer6563) -> Battlefield (PlayLand; GRE sequence 318).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      sameer6563: Battlefield: Creosote Heath [475], Forlorn Flats [436], Peter Parker's Camera [512], Pit of Offerings [447], Pit of Offerings [514], Restless Fortress [355], Sandsteppe Citadel [343], Sandsteppe Citadel [425], Temple of Silence [347], The Mind Stone [356], The Rise of Sozin [500]; Exile: Command Bridge [372], Restless Cottage [375]; Graveyard: Deadly Cover-Up [445], Human [510], Omenpath Journey [491]
+      gian31: Battlefield: Case of the Uneaten Feast [459], Lunar Convocation [351], Phyrexian Arena [361], Plains [345], Scoured Barrens [453], Shattered Sanctum [429], Swamp [350], Swamp [360], Swamp [480]; Exile: Bloodletter of Aclazotz [449], Marauding Blight-Priest [517], Stroke of Midnight [516]; Graveyard: Bat [508], Bat [511]
+
+Turn 14
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=340] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 238 [238], Starscape Cleric [520] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Starscape Cleric (object 520) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=350] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=523)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 523) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 523) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=353] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=523, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Starscape Cleric: a token is created.
+      explicit effect object references: Starscape Cleric [531] (role/targeting only where the protocol identifies it)
+      token created: Starscape Cleric (object 531, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 529).
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=355] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=459, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=358] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=531)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: sameer6563 loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=360] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=523, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: sameer6563 loses 1 life.
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=362] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=459, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=365] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=531)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: sameer6563 loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=367] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=523, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: sameer6563 loses 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=370] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=351, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 240 [240], Marauding Blight-Priest [540] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 540) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=383] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=351, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 370 and 383; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: token creation
+      narrative: Ability of Lunar Convocation: a token is created.
+      explicit effect object references: Bat [543] (role/targeting only where the protocol identifies it)
+      token created: Bat (object 543, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 542).
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=385] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=459, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=388] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=531)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: sameer6563 loses 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=390] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=523, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: sameer6563 loses 1 life.
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=392] (active=gian31, phase=Phase_Ending, step=Step_End, controller=gian31, owner=gian31, source_object=351, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Lunar Convocation: sameer6563 loses 1 life.
+    net observed life change this turn: gian31 +0; sameer6563 -7 (individual changes below; gains and losses may offset)
+    life: gian31 17 -> 16
+    life: gian31 16 -> 17
+    life: sameer6563 15 -> 14
+    life: sameer6563 14 -> 13
+    life: gian31 17 -> 18
+    life: sameer6563 13 -> 12
+    life: sameer6563 12 -> 11
+    life: gian31 18 -> 16
+    life: gian31 16 -> 17
+    life: sameer6563 11 -> 10
+    life: sameer6563 10 -> 9
+    life: sameer6563 9 -> 8
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [521] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 342).
+      Swamp [522] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 345).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      sameer6563: Battlefield: Creosote Heath [475], Forlorn Flats [436], Peter Parker's Camera [512], Pit of Offerings [447], Pit of Offerings [514], Restless Fortress [355], Sandsteppe Citadel [343], Sandsteppe Citadel [425], Temple of Silence [347], The Mind Stone [356], The Rise of Sozin [500]; Exile: Command Bridge [372], Restless Cottage [375]; Graveyard: Deadly Cover-Up [445], Human [510], Omenpath Journey [491]
+      gian31: Battlefield: Case of the Uneaten Feast [459], Lunar Convocation [351], Phyrexian Arena [361], Plains [345], Scoured Barrens [453], Shattered Sanctum [429], Starscape Cleric [523], Swamp [350], Swamp [360], Swamp [480], Swamp [522]; Exile: Bloodletter of Aclazotz [449], Marauding Blight-Priest [517], Stroke of Midnight [516]; Graveyard: Bat [508], Bat [511]
+
+Turn 15
+  - The Coming of Galactus [valid_resolution_no_immediate_mutation, seq=420] (active=sameer6563, phase=Phase_Main1, controller=sameer6563, owner=sameer6563, source_object=638)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: The Coming of Galactus resolves with no immediate observed mutation.
+      protocol-linked zone transfer: The Coming of Galactus (object 638) Hand (sameer6563) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: The Coming of Galactus (object 638) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of The Coming of Galactus [observed_semantic_effect, seq=424] (active=sameer6563, phase=Phase_Main1, controller=sameer6563, owner=sameer6563, source_object=638, source_last_explicit_zone=Battlefield)
+      effects: destroy
+      narrative: Ability of The Coming of Galactus destroys Lunar Convocation.
+      explicit effect object references: Lunar Convocation [351], Lunar Convocation [645] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Lunar Convocation (object 645) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+  - Ability of The Mind Stone [observed_semantic_effect, seq=438] (active=sameer6563, phase=Phase_Ending, step=Step_End, controller=sameer6563, owner=sameer6563, source_object=356, source_last_explicit_zone=Battlefield)
+      effects: exile, return to battlefield
+      narrative: Ability of The Mind Stone: exiles The Rise of Sozin; a card/permanent returns.
+      explicit effect object references: The Rise of Sozin [500], The Rise of Sozin [647], The Rise of Sozin [648] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: The Rise of Sozin (object 647) Battlefield -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: The Rise of Sozin (object 648) Exile -> Battlefield (Return; shared object ID)
+  - Ability of The Rise of Sozin [observed_semantic_effect, seq=440] (active=sameer6563, phase=Phase_Ending, step=Step_End, controller=sameer6563, owner=sameer6563, source_object=648, source_last_explicit_zone=Battlefield)
+      effects: destroy, destroy, destroy
+      narrative: Ability of The Rise of Sozin destroys Starscape Cleric, Starscape Cleric, Bat.
+      explicit effect object references: Starscape Cleric [523], Starscape Cleric [531], Bat [543], Starscape Cleric [650], object 651 [651], object 652 [652] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Starscape Cleric (object 650) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 651) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Bat (object 652) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 547 [547] Library (sameer6563) -> Hand (sameer6563) (Draw; GRE sequence 396).
+      Stroke of Midnight [553] Library (gian31) -> Exile (Exile; GRE sequence 411).
+      Enduring Tenacity [599] Library (gian31) -> Exile (Exile; GRE sequence 416).
+      Enduring Tenacity [600] Library (gian31) -> Exile (Exile; GRE sequence 416).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      sameer6563: Battlefield: Creosote Heath [475], Forlorn Flats [436], Peter Parker's Camera [512], Pit of Offerings [447], Pit of Offerings [514], Restless Fortress [355], Sandsteppe Citadel [343], Sandsteppe Citadel [425], Temple of Silence [347], The Coming of Galactus [638], The Mind Stone [356], The Rise of Sozin [648]; Exile: Command Bridge [372], Restless Cottage [375], The Rise of Sozin [647]; Graveyard: Deadly Cover-Up [445], Human [510], Omenpath Journey [491]
+      gian31: Battlefield: Case of the Uneaten Feast [459], Phyrexian Arena [361], Plains [345], Scoured Barrens [453], Shattered Sanctum [429], Swamp [350], Swamp [360], Swamp [480], Swamp [522]; Exile: Bloodletter of Aclazotz [449], Enduring Tenacity [599], Enduring Tenacity [600], Marauding Blight-Priest [517], Stroke of Midnight [516], Stroke of Midnight [553]; Graveyard: Bat [508], Bat [511], Bat [652], Lunar Convocation [645], Starscape Cleric [650], Starscape Cleric [651]
+
+Turn 16
+  - Ability of Phyrexian Arena [observed_semantic_effect, seq=444] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=361, source_last_explicit_zone=Battlefield)
+      effects: draw, life -1
+      narrative: Ability of Phyrexian Arena: draw; gian31 loses 1 life.
+      explicit effect object references: object 601 [601], Plains [654] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Plains (object 654) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=452] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=657)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 657) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 657) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=454] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=459, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=456] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=657, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: sameer6563 loses 1 life.
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation, seq=459] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=663)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 663) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 663) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Uneaten Feast [observed_semantic_effect, seq=461] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=459, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Case of the Uneaten Feast: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=463] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=657, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: sameer6563 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=465] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=663, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=467] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=657, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: sameer6563 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=469] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=663, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=471] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=657, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: sameer6563 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=473] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=663, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=475] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=657, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: sameer6563 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=477] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=663, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=479] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=657, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: sameer6563 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=481] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=663, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=483] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=657, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: sameer6563 loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=485] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=663, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Marauding Blight-Priest [observed_semantic_effect, seq=487] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=657, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Marauding Blight-Priest: sameer6563 loses 1 life.
+    net observed life change this turn: gian31 +7; sameer6563 -7 (individual changes below; gains and losses may offset)
+    life: gian31 17 -> 16
+    life: gian31 16 -> 17
+    life: sameer6563 8 -> 7
+    life: gian31 17 -> 18
+    life: sameer6563 7 -> 6
+    life: gian31 18 -> 19
+    life: sameer6563 6 -> 5
+    life: gian31 19 -> 20
+    life: sameer6563 5 -> 4
+    life: gian31 20 -> 21
+    life: sameer6563 4 -> 3
+    life: gian31 21 -> 22
+    life: sameer6563 3 -> 2
+    life: gian31 22 -> 23
+    life: sameer6563 2 -> 1
+    life: gian31 23 -> 24
+    additional protocol-observed zone movements not assigned to an action chain:
+      Godless Shrine [655] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 446).
+      Plains [656] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 449).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      sameer6563: Battlefield: Creosote Heath [475], Forlorn Flats [436], Peter Parker's Camera [512], Pit of Offerings [447], Pit of Offerings [514], Restless Fortress [355], Sandsteppe Citadel [343], Sandsteppe Citadel [425], Temple of Silence [347], The Coming of Galactus [638], The Mind Stone [356], The Rise of Sozin [648]; Exile: Command Bridge [372], Restless Cottage [375], The Rise of Sozin [647]; Graveyard: Deadly Cover-Up [445], Human [510], Omenpath Journey [491]
+      gian31: Battlefield: Bloodthirsty Conqueror [663], Case of the Uneaten Feast [459], Marauding Blight-Priest [657], Phyrexian Arena [361], Plains [345], Plains [656], Scoured Barrens [453], Shattered Sanctum [429], Swamp [350], Swamp [360], Swamp [480], Swamp [522]; Exile: Bloodletter of Aclazotz [449], Enduring Tenacity [599], Enduring Tenacity [600], Marauding Blight-Priest [517], Stroke of Midnight [516], Stroke of Midnight [553]; Graveyard: Bat [508], Bat [511], Bat [652], Lunar Convocation [645], Starscape Cleric [650], Starscape Cleric [651]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 9, seq 174, Phase_Main1: gian31 19 -> 18. Semantic attribution: Forlorn Flats; direct protocol link unavailable. Previous captured action: Forlorn Flats.
+- Turn 10, seq 206, Phase_Main1: gian31 18 -> 16. No source event correlated in captured records. Previous captured action: Scoured Barrens.
+- Turn 11, seq 257, Phase_Ending: gian31 17 -> 16. Semantic attribution: Creosote Heath; direct protocol link unavailable. Previous captured action: Creosote Heath.
+- Turn 14, seq 368, Phase_Main1: gian31 18 -> 16. No source event correlated in captured records. Previous captured action: Starscape Cleric.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 5 token creations observed; 0 active as last observed; 5 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Bat [463] controller=gian31; created Turn 10 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 13 via Battlefield -> Graveyard (gian31) (Destroy); ceases to exist after that observed move (token rules consequence).
+- Human [492] controller=sameer6563; created Turn 12 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 13 via Battlefield -> Graveyard (sameer6563) (Destroy); ceases to exist after that observed move (token rules consequence).
+- Bat [496] controller=gian31; created Turn 12 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 13 via Battlefield -> Graveyard (gian31) (Destroy); ceases to exist after that observed move (token rules consequence).
+- Starscape Cleric [531] controller=gian31; created Turn 14 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 15 via Battlefield -> Graveyard (gian31) (Destroy); ceases to exist after that observed move (token rules consequence).
+- Bat [543] controller=gian31; created Turn 14 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 15 via Battlefield -> Graveyard (gian31) (Destroy); ceases to exist after that observed move (token rules consequence).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 6: object 342 [owner/controller metadata unavailable] moves Hand (sameer6563) -> Library (sameer6563) (Put).
+- Turn 1, seq 9: Sandsteppe Citadel [owner=sameer6563, controller=sameer6563] moves Hand (sameer6563) -> Battlefield (PlayLand).
+- Turn 2, seq 23: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 26: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 40: object 346 [owner/controller metadata unavailable] moves Library (sameer6563) -> Hand (sameer6563) (Draw).
+- Turn 3, seq 43: Temple of Silence [owner=sameer6563, controller=sameer6563] moves Hand (sameer6563) -> Battlefield (PlayLand).
+- Turn 4, seq 60: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 63: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 64: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 66: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 80: Omenpath Journey [owner/controller metadata unavailable] moves Library (sameer6563) -> Hand (sameer6563) (Draw).
+- Turn 5, seq 83: Restless Fortress [owner=sameer6563, controller=sameer6563] moves Hand (sameer6563) -> Battlefield (PlayLand).
+- Turn 5, seq 84: The Mind Stone [owner=sameer6563, controller=sameer6563] moves Hand (sameer6563) -> Stack (CastSpell).
+- Turn 5, seq 86: The Mind Stone [owner=sameer6563, controller=sameer6563] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 100: Shattered Sanctum [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 103: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 104: Phyrexian Arena [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 106: Phyrexian Arena [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 120: Pit of Offerings [owner/controller metadata unavailable] moves Library (sameer6563) -> Hand (sameer6563) (Draw).
+- Turn 7, seq 123: Omenpath Journey [owner=sameer6563, controller=sameer6563] moves Hand (sameer6563) -> Stack (CastSpell).
+- Turn 7, seq 125: Omenpath Journey [owner=sameer6563, controller=sameer6563] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 128: Restless Cottage [owner=sameer6563, controller=sameer6563] moves Library (sameer6563) -> Exile (Exile).
+- Turn 7, seq 128: Sandsteppe Citadel [owner=sameer6563, controller=sameer6563] moves Library (sameer6563) -> Exile (Exile).
+- Turn 7, seq 128: Creosote Heath [owner=sameer6563, controller=sameer6563] moves Library (sameer6563) -> Exile (Exile).
+- Turn 7, seq 128: Command Bridge [owner=sameer6563, controller=sameer6563] moves Library (sameer6563) -> Exile (Exile).
+- Turn 7, seq 128: Pit of Offerings [owner=sameer6563, controller=sameer6563] moves Library (sameer6563) -> Exile (Exile).
+- Turn 7, seq 141: Sandsteppe Citadel [owner=sameer6563, controller=sameer6563] moves Exile -> Battlefield (Put).
+- Turn 8, seq 145: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 147: Rush of Dread [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 150: Shattered Sanctum [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 151: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 153: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 167: Forlorn Flats [owner/controller metadata unavailable] moves Library (sameer6563) -> Hand (sameer6563) (Draw).
+- Turn 9, seq 170: Forlorn Flats [owner=sameer6563, controller=sameer6563] moves Hand (sameer6563) -> Battlefield (PlayLand).
+- Turn 9, seq 175: Deadly Cover-Up [owner=sameer6563, controller=sameer6563] moves Hand (sameer6563) -> Stack (CastSpell).
+- Turn 9, seq 178: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 9, seq 178: Deadly Cover-Up [owner=sameer6563, controller=sameer6563] moves Stack -> Graveyard (sameer6563) (Resolve).
+- Turn 9, seq 190: Pit of Offerings [owner=sameer6563, controller=sameer6563] moves Exile -> Battlefield (Put).
+- Turn 9, seq 194: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Exile (Exile).
+- Turn 10, seq 198: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 200: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 203: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 208: Stroke of Midnight [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 209: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 211: Case of the Uneaten Feast [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 232: Peter Parker's Camera [owner/controller metadata unavailable] moves Library (sameer6563) -> Hand (sameer6563) (Draw).
+- Turn 11, seq 253: Creosote Heath [owner=sameer6563, controller=sameer6563] moves Exile -> Battlefield (Put).
+- Turn 12, seq 261: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 263: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 266: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 267: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 269: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 274: Stroke of Midnight [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 278: Omenpath Journey [owner=sameer6563, controller=sameer6563] moves Battlefield -> Graveyard (sameer6563) (Destroy).
+- Turn 12, seq 278: Stroke of Midnight [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 13, seq 307: The Coming of Galactus [owner/controller metadata unavailable] moves Library (sameer6563) -> Hand (sameer6563) (Draw).
+- Turn 13, seq 310: The Rise of Sozin [owner=sameer6563, controller=sameer6563] moves Hand (sameer6563) -> Stack (CastSpell).
+- Turn 13, seq 312: The Rise of Sozin [owner=sameer6563, controller=sameer6563] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 314: Bat [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 13, seq 314: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 13, seq 314: Human [owner/controller metadata unavailable] moves Battlefield -> Graveyard (sameer6563) (Destroy).
+- Turn 13, seq 314: Bat [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 13, seq 315: Peter Parker's Camera [owner=sameer6563, controller=sameer6563] moves Hand (sameer6563) -> Stack (CastSpell).
+- Turn 13, seq 317: Peter Parker's Camera [owner=sameer6563, controller=sameer6563] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 318: Pit of Offerings [owner=sameer6563, controller=sameer6563] moves Hand (sameer6563) -> Battlefield (PlayLand).
+- Turn 13, seq 323: Stroke of Midnight [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Exile (Exile).
+- Turn 13, seq 323: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Exile (Exile).
+- Turn 14, seq 340: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 342: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 345: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 14, seq 346: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 350: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 370: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 15, seq 396: object 547 [owner/controller metadata unavailable] moves Library (sameer6563) -> Hand (sameer6563) (Draw).
+- Turn 15, seq 411: Stroke of Midnight [owner=gian31, controller=gian31] moves Library (gian31) -> Exile (Exile).
+- Turn 15, seq 416: Enduring Tenacity [owner=gian31, controller=gian31] moves Library (gian31) -> Exile (Exile).
+- Turn 15, seq 416: Enduring Tenacity [owner=gian31, controller=gian31] moves Library (gian31) -> Exile (Exile).
+- Turn 15, seq 418: The Coming of Galactus [owner=sameer6563, controller=sameer6563] moves Hand (sameer6563) -> Stack (CastSpell).
+- Turn 15, seq 420: The Coming of Galactus [owner=sameer6563, controller=sameer6563] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 424: Lunar Convocation [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 15, seq 438: The Rise of Sozin [owner=sameer6563, controller=sameer6563] moves Battlefield -> Exile (Exile).
+- Turn 15, seq 438: The Rise of Sozin [owner=sameer6563, controller=sameer6563] moves Exile -> Battlefield (Return).
+- Turn 15, seq 440: Starscape Cleric [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 15, seq 440: Starscape Cleric [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 15, seq 440: Bat [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 16, seq 444: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 446: Godless Shrine [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 449: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 16, seq 450: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 452: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 16, seq 457: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 459: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 6: object 285 becomes object 342 [object 285].
+- Turn 1, seq 9: object 284 becomes object 343 [Sandsteppe Citadel].
+- Turn 2, seq 23: object 228 becomes object 344 [Plains].
+- Turn 2, seq 26: object 344 becomes object 345 [Plains].
+- Turn 3, seq 40: object 288 becomes object 346 [object 288].
+- Turn 3, seq 43: object 282 becomes object 347 [Temple of Silence].
+- Turn 4, seq 60: object 229 becomes object 349 [Case of the Uneaten Feast].
+- Turn 4, seq 63: object 226 becomes object 350 [Swamp].
+- Turn 4, seq 64: object 227 becomes object 351 [Lunar Convocation].
+- Turn 5, seq 80: object 290 becomes object 354 [Omenpath Journey].
+- Turn 5, seq 83: object 283 becomes object 355 [Restless Fortress].
+- Turn 5, seq 84: object 286 becomes object 356 [The Mind Stone].
+- Turn 6, seq 100: object 230 becomes object 359 [Shattered Sanctum].
+- Turn 6, seq 103: object 222 becomes object 360 [Swamp].
+- Turn 6, seq 104: object 224 becomes object 361 [Phyrexian Arena].
+- Turn 7, seq 120: object 291 becomes object 365 [Pit of Offerings].
+- Turn 7, seq 123: object 354 becomes object 366 [Omenpath Journey].
+- Turn 7, seq 128: object 317 becomes object 375 [Restless Cottage].
+- Turn 7, seq 128: object 310 becomes object 374 [Sandsteppe Citadel].
+- Turn 7, seq 128: object 307 becomes object 373 [Creosote Heath].
+- Turn 7, seq 128: object 300 becomes object 372 [Command Bridge].
+- Turn 7, seq 128: object 339 becomes object 376 [Pit of Offerings].
+- Turn 7, seq 141: object 374 becomes object 425 [Sandsteppe Citadel].
+- Turn 8, seq 145: object 231 becomes object 427 [Makeshift Binding].
+- Turn 8, seq 147: object 232 becomes object 428 [Rush of Dread].
+- Turn 8, seq 150: object 359 becomes object 429 [Shattered Sanctum].
+- Turn 8, seq 151: object 225 becomes object 430 [Bloodletter of Aclazotz].
+- Turn 9, seq 167: object 377 becomes object 435 [Forlorn Flats].
+- Turn 9, seq 170: object 435 becomes object 436 [Forlorn Flats].
+- Turn 9, seq 175: object 287 becomes object 438 [Deadly Cover-Up].
+- Turn 9, seq 178: object 430 becomes object 444 [Bloodletter of Aclazotz].
+- Turn 9, seq 178: object 438 becomes object 445 [Deadly Cover-Up].
+- Turn 9, seq 190: object 376 becomes object 447 [Pit of Offerings].
+- Turn 9, seq 194: object 444 becomes object 449 [Bloodletter of Aclazotz].
+- Turn 10, seq 198: object 233 becomes object 451 [Makeshift Binding].
+- Turn 10, seq 200: object 234 becomes object 452 [Swamp].
+- Turn 10, seq 203: object 221 becomes object 453 [Scoured Barrens].
+- Turn 10, seq 208: object 235 becomes object 458 [Stroke of Midnight].
+- Turn 10, seq 209: object 349 becomes object 459 [Case of the Uneaten Feast].
+- Turn 11, seq 232: object 378 becomes object 465 [Peter Parker's Camera].
+- Turn 11, seq 253: object 373 becomes object 475 [Creosote Heath].
+- Turn 12, seq 261: object 236 becomes object 478 [Marauding Blight-Priest].
+- Turn 12, seq 263: object 237 becomes object 479 [Bloodthirsty Conqueror].
+- Turn 12, seq 266: object 452 becomes object 480 [Swamp].
+- Turn 12, seq 267: object 478 becomes object 481 [Marauding Blight-Priest].
+- Turn 12, seq 274: object 458 becomes object 487 [Stroke of Midnight].
+- Turn 12, seq 278: object 366 becomes object 491 [Omenpath Journey].
+- Turn 12, seq 278: object 487 becomes object 493 [Stroke of Midnight].
+- Turn 13, seq 307: object 379 becomes object 499 [The Coming of Galactus].
+- Turn 13, seq 310: object 281 becomes object 500 [The Rise of Sozin].
+- Turn 13, seq 314: object 463 becomes object 508 [Bat].
+- Turn 13, seq 314: object 481 becomes object 509 [Marauding Blight-Priest].
+- Turn 13, seq 314: object 492 becomes object 510 [Human].
+- Turn 13, seq 314: object 496 becomes object 511 [Bat].
+- Turn 13, seq 315: object 465 becomes object 512 [Peter Parker's Camera].
+- Turn 13, seq 318: object 365 becomes object 514 [Pit of Offerings].
+- Turn 13, seq 323: object 493 becomes object 516 [Stroke of Midnight].
+- Turn 13, seq 323: object 509 becomes object 517 [Marauding Blight-Priest].
+- Turn 14, seq 340: object 238 becomes object 520 [Starscape Cleric].
+- Turn 14, seq 342: object 239 becomes object 521 [Swamp].
+- Turn 14, seq 345: object 521 becomes object 522 [Swamp].
+- Turn 14, seq 346: object 520 becomes object 523 [Starscape Cleric].
+- Turn 14, seq 370: object 240 becomes object 540 [Marauding Blight-Priest].
+- Turn 15, seq 396: object 380 becomes object 547 [object 380].
+- Turn 15, seq 411: object 277 becomes object 553 [Stroke of Midnight].
+- Turn 15, seq 416: object 570 becomes object 599 [Enduring Tenacity].
+- Turn 15, seq 416: object 590 becomes object 600 [Enduring Tenacity].
+- Turn 15, seq 418: object 499 becomes object 638 [The Coming of Galactus].
+- Turn 15, seq 424: object 351 becomes object 645 [Lunar Convocation].
+- Turn 15, seq 438: object 500 becomes object 647 [The Rise of Sozin].
+- Turn 15, seq 438: object 647 becomes object 648 [The Rise of Sozin].
+- Turn 15, seq 440: object 523 becomes object 650 [Starscape Cleric].
+- Turn 15, seq 440: object 531 becomes object 651 [Starscape Cleric].
+- Turn 15, seq 440: object 543 becomes object 652 [Bat].
+- Turn 16, seq 444: object 601 becomes object 654 [Plains].
+- Turn 16, seq 446: object 602 becomes object 655 [Godless Shrine].
+- Turn 16, seq 449: object 654 becomes object 656 [Plains].
+- Turn 16, seq 450: object 540 becomes object 657 [Marauding Blight-Priest].
+- Turn 16, seq 457: object 479 becomes object 663 [Bloodthirsty Conqueror].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: sameer6563 plays Sandsteppe Citadel (object 343) from Hand (sameer6563) to Battlefield.
+- Turn 2: gian31 plays Plains (object 345) from Hand (gian31) to Battlefield.
+- Turn 3: sameer6563 plays Temple of Silence (object 347) from Hand (sameer6563) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 350) from Hand (gian31) to Battlefield.
+- Turn 5: sameer6563 plays Restless Fortress (object 355) from Hand (sameer6563) to Battlefield.
+- Turn 6: gian31 plays Swamp (object 360) from Hand (gian31) to Battlefield.
+- Turn 8: gian31 plays Shattered Sanctum (object 429) from Hand (gian31) to Battlefield.
+- Turn 9: sameer6563 plays Forlorn Flats (object 436) from Hand (sameer6563) to Battlefield.
+- Turn 10: gian31 plays Scoured Barrens (object 453) from Hand (gian31) to Battlefield.
+- Turn 12: gian31 plays Swamp (object 480) from Hand (gian31) to Battlefield.
+- Turn 13: sameer6563 plays Pit of Offerings (object 514) from Hand (sameer6563) to Battlefield.
+- Turn 14: gian31 plays Swamp (object 522) from Hand (gian31) to Battlefield.
+- Turn 16: gian31 plays Plains (object 656) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 12: ordered adjacent records Case of the Uneaten Feast -> Marauding Blight-Priest; observed repetitions=2; net life: gian31 +2, sameer6563 -2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=2, Marauding Blight-Priest=2.
+  Individual ability records remain in the timeline.
+- Turn 12: ordered adjacent records Marauding Blight-Priest -> Lunar Convocation; observed repetitions=2; net life: sameer6563 -3. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Lunar Convocation=2, Marauding Blight-Priest=2.
+  Individual ability records remain in the timeline.
+- Turn 14: ordered adjacent records Starscape Cleric -> Case of the Uneaten Feast; observed repetitions=2; net life: gian31 +2, sameer6563 -1. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=3, Starscape Cleric=7.
+  Individual ability records remain in the timeline.
+- Turn 14: ordered adjacent records Starscape Cleric -> Lunar Convocation; observed repetitions=2; net life: sameer6563 -3. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Lunar Convocation=3, Starscape Cleric=7.
+  Individual ability records remain in the timeline.
+- Turn 16: ordered adjacent records Case of the Uneaten Feast -> Marauding Blight-Priest; observed repetitions=2; net life: gian31 +2, sameer6563 -2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Case of the Uneaten Feast=2, Marauding Blight-Priest=8.
+  Individual ability records remain in the timeline.
+- Turn 16: ordered adjacent records Marauding Blight-Priest -> Bloodthirsty Conqueror; observed repetitions=6; net life: gian31 +6, sameer6563 -6. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Bloodthirsty Conqueror=6, Marauding Blight-Priest=8.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 14: ordered adjacent records Starscape Cleric -> Case of the Uneaten Feast -> Starscape Cleric; observed repetitions=2 (pattern length 3; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+- Turn 16: ordered adjacent records Marauding Blight-Priest -> Bloodthirsty Conqueror; observed repetitions=6 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Marauding Blight-Priest: casts=2; abilities=10 (triggered=10, activated=0) across turns [12, 12, 12, 16, 16, 16, 16, 16, 16, 16, 16, 16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=10, other=2
+  observed effects: life -1, synthetic event
+- Case of the Uneaten Feast: casts=1; abilities=8 (triggered=8, activated=0) across turns [10, 10, 12, 12, 14, 14, 14, 16, 16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=8, other=0
+  observed effects: life +1
+- Lunar Convocation: casts=1; abilities=8 (triggered=8, activated=0) across turns [4, 10, 10, 10, 12, 12, 14, 14, 14]
+  observed effect totals: draws=2, tokens=3, counters=0, returns=0, damage=0, life_changes=3, other=1
+  observed effects: draw, life -1, synthetic event, token creation
+- Starscape Cleric: casts=1; abilities=7 (triggered=7, activated=0) across turns [14, 14, 14, 14, 14, 14, 14, 14]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=6, other=1
+  observed effects: life -1, synthetic event, token creation
+- Bloodthirsty Conqueror: casts=1; abilities=6 (triggered=6, activated=0) across turns [16, 16, 16, 16, 16, 16, 16]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=6, other=0
+  observed effects: life +1
+- Phyrexian Arena: casts=1; abilities=5 (triggered=5, activated=0) across turns [6, 8, 10, 12, 14, 16]
+  observed effect totals: draws=5, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=5
+  observed effects: draw, life -1, synthetic event
+- The Mind Stone: casts=1; abilities=4 (triggered=4, activated=0) across turns [5, 11, 11, 13, 15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=1, damage=0, life_changes=0, other=1
+  observed effects: exile, return to battlefield
+- Omenpath Journey: casts=1; abilities=3 (triggered=3, activated=0) across turns [7, 7, 9, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=3
+  observed effects: zone_transfer
+- The Rise of Sozin: casts=1; abilities=2 (triggered=2, activated=0) across turns [13, 13, 15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=7
+  observed effects: destroy
+- Pit of Offerings: abilities=2 (triggered=2, activated=0) across turns [9, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=3
+  observed effects: exile
+- The Coming of Galactus: casts=1; abilities=1 (triggered=1, activated=0) across turns [15, 15]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Bloodletter of Aclazotz: casts=1 across turns [8]
+- Creosote Heath: abilities=1 (triggered=1, activated=0) across turns [11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=1, other=1
+  observed effects: 1 damage, life -1, synthetic event
+- Deadly Cover-Up: casts=1 across turns [9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Forlorn Flats: abilities=1 (triggered=1, activated=0) across turns [9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=1, other=1
+  observed effects: 1 damage, life -1, synthetic event
+- Peter Parker's Camera: casts=1 across turns [13]
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Stroke of Midnight: casts=1 across turns [12]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy, token creation
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 12 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Bat (gian31) -> sameer6563; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 221: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 222: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 223: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 224: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 225: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 226: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 227: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 343: Sandsteppe Citadel | controller=sameer6563 | owner=sameer6563 | zone=Battlefield (latest_object_observation)
+- 344: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 345: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 347: Temple of Silence | controller=sameer6563 | owner=sameer6563 | zone=Battlefield (latest_object_observation)
+- 348: object 348 | controller=sameer6563 | owner=sameer6563 | zone=unknown (inferred unknown) (latest_object_observation)
+- 349: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 350: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 351: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 355: Restless Fortress | controller=sameer6563 | owner=sameer6563 | zone=Battlefield (latest_object_observation)
+- 356: The Mind Stone | controller=sameer6563 | owner=sameer6563 | zone=Stack (latest_object_observation)
+- 359: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 360: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 361: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 366: Omenpath Journey | controller=sameer6563 | owner=sameer6563 | zone=Stack (latest_object_observation)
+- 371: object 371 | controller=sameer6563 | owner=sameer6563 | zone=unknown (inferred unknown) (latest_object_observation)
+- 372: Command Bridge | controller=sameer6563 | owner=sameer6563 | zone=Exile (latest_object_observation)
+- 373: Creosote Heath | controller=sameer6563 | owner=sameer6563 | zone=Exile (latest_object_observation)
+- 374: Sandsteppe Citadel | controller=sameer6563 | owner=sameer6563 | zone=Exile (latest_object_observation)
+- 375: Restless Cottage | controller=sameer6563 | owner=sameer6563 | zone=Exile (latest_object_observation)
+- 376: Pit of Offerings | controller=sameer6563 | owner=sameer6563 | zone=Exile (latest_object_observation)
+- 424: object 424 | controller=sameer6563 | owner=sameer6563 | zone=unknown (inferred unknown) (latest_object_observation)
+- 425: Sandsteppe Citadel | controller=sameer6563 | owner=sameer6563 | zone=Battlefield (latest_object_observation)
+- 426: object 426 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 427: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 428: Rush of Dread | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 429: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 430: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 436: Forlorn Flats | controller=sameer6563 | owner=sameer6563 | zone=Battlefield (latest_object_observation)
+- 437: object 437 | controller=sameer6563 | owner=sameer6563 | zone=unknown (inferred unknown) (latest_object_observation)
+- 438: Deadly Cover-Up | controller=sameer6563 | owner=sameer6563 | zone=Stack (latest_object_observation)
+- 444: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 445: Deadly Cover-Up | controller=sameer6563 | owner=sameer6563 | zone=Graveyard (latest_object_observation)
+- 446: object 446 | controller=sameer6563 | owner=sameer6563 | zone=unknown (inferred unknown) (latest_object_observation)
+- 447: Pit of Offerings | controller=sameer6563 | owner=sameer6563 | zone=Battlefield (latest_object_observation)
+- 448: object 448 | controller=sameer6563 | owner=sameer6563 | zone=unknown (inferred unknown) (latest_object_observation)
+- 449: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 450: object 450 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 451: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 452: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 453: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 454: object 454 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 455: object 455 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 458: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 459: Case of the Uneaten Feast | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 461: object 461 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 462: object 462 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 463: Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 464: object 464 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 466: object 466 | controller=sameer6563 | owner=sameer6563 | zone=unknown (inferred unknown) (latest_object_observation)
+- 473: object 473 | controller=sameer6563 | owner=sameer6563 | zone=unknown (inferred unknown) (latest_object_observation)
+- 474: object 474 | controller=sameer6563 | owner=sameer6563 | zone=unknown (inferred unknown) (latest_object_observation)
+- 475: Creosote Heath | controller=sameer6563 | owner=sameer6563 | zone=Battlefield (latest_object_observation)
+- 476: object 476 | controller=sameer6563 | owner=sameer6563 | zone=unknown (inferred unknown) (latest_object_observation)
+- 477: object 477 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 478: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 479: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 480: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 481: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 485: object 485 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 486: object 486 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 487: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 491: Omenpath Journey | controller=sameer6563 | owner=sameer6563 | zone=Graveyard (latest_object_observation)
+- 492: Human | controller=sameer6563 | owner=sameer6563 | zone=Hand (latest_object_observation)
+- 493: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 494: object 494 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 495: object 495 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 496: Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 497: object 497 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 498: object 498 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 500: The Rise of Sozin | controller=sameer6563 | owner=sameer6563 | zone=Stack (latest_object_observation)
+- 507: object 507 | controller=sameer6563 | owner=sameer6563 | zone=unknown (inferred unknown) (latest_object_observation)
+- 509: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 512: Peter Parker's Camera | controller=sameer6563 | owner=sameer6563 | zone=Stack (latest_object_observation)
+- 514: Pit of Offerings | controller=sameer6563 | owner=sameer6563 | zone=Battlefield (latest_object_observation)
+- 515: object 515 | controller=sameer6563 | owner=sameer6563 | zone=unknown (inferred unknown) (latest_object_observation)
+- 516: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 517: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 518: object 518 | controller=sameer6563 | owner=sameer6563 | zone=unknown (inferred unknown) (latest_object_observation)
+- 519: object 519 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 520: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 521: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 522: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 523: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 529: object 529 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 530: object 530 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 531: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 532: object 532 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 533: object 533 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 534: object 534 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 535: object 535 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 536: object 536 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 537: object 537 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 540: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 541: object 541 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 542: object 542 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 543: Bat | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 544: object 544 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 545: object 545 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 546: object 546 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 548: object 548 | controller=sameer6563 | owner=sameer6563 | zone=unknown (inferred unknown) (latest_object_observation)
+- 549: object 549 | controller=sameer6563 | owner=sameer6563 | zone=unknown (inferred unknown) (latest_object_observation)
+- 552: object 552 | controller=sameer6563 | owner=sameer6563 | zone=unknown (inferred unknown) (latest_object_observation)
+- 553: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 599: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 600: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 638: The Coming of Galactus | controller=sameer6563 | owner=sameer6563 | zone=Stack (latest_object_observation)
+- 644: object 644 | controller=sameer6563 | owner=sameer6563 | zone=unknown (inferred unknown) (latest_object_observation)
+- 645: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 646: object 646 | controller=sameer6563 | owner=sameer6563 | zone=unknown (inferred unknown) (latest_object_observation)
+- 647: The Rise of Sozin | controller=sameer6563 | owner=sameer6563 | zone=Exile (latest_object_observation)
+- 648: The Rise of Sozin | controller=sameer6563 | owner=sameer6563 | zone=Battlefield (latest_object_observation)
+- 649: object 649 | controller=sameer6563 | owner=sameer6563 | zone=unknown (inferred unknown) (latest_object_observation)
+- 650: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 653: object 653 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 654: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 655: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 656: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 657: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 661: object 661 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 662: object 662 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 663: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 669: object 669 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 670: object 670 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 671: object 671 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 672: object 672 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 673: object 673 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 674: object 674 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 675: object 675 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 676: object 676 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 677: object 677 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 678: object 678 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 679: object 679 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 680: object 680 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 681: object 681 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 682: object 682 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 683: object 683 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 100 total items
+  zones: Battlefield=13, Exile=6, Graveyard=4, Hand=27, Stack=4, unknown=46
+  objects: Swamp x8, Marauding Blight-Priest x6, Stroke of Midnight x5, Bloodletter of Aclazotz x4, Plains x4, Starscape Cleric x4, Bat x3, Lunar Convocation x3, Makeshift Binding x3, Bloodthirsty Conqueror x2, Case of the Uneaten Feast x2, Enduring Tenacity x2
+sameer6563: 43 total items
+  zones: Battlefield=9, Exile=6, Graveyard=2, Hand=1, Stack=6, unknown=19
+  objects: Pit of Offerings x3, Sandsteppe Citadel x3, The Rise of Sozin x3, Creosote Heath x2, Deadly Cover-Up x2, Omenpath Journey x2, Command Bridge, Forlorn Flats, Human, Peter Parker's Camera, Restless Cottage, Restless Fortress
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+sameer6563:
+  Battlefield (9): Creosote Heath, Forlorn Flats, Pit of Offerings, Pit of Offerings, Restless Fortress, Sandsteppe Citadel, Sandsteppe Citadel, Temple of Silence, The Rise of Sozin
+  Graveyard: 2 card(s)
+gian31:
+  Battlefield (13): Bloodletter of Aclazotz, Bloodthirsty Conqueror, Marauding Blight-Priest, Marauding Blight-Priest, Plains, Plains, Scoured Barrens, Shattered Sanctum, Starscape Cleric, Swamp, Swamp, Swamp, Swamp
+  Graveyard: 4 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+65 objects have no resolved final zone and are omitted from the known board state.
+gian31: 46 unknown object(s)
+sameer6563: 19 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=28, Stack=10
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+gian31:
+  Battlefield (12): Plains, Swamp, Swamp, Phyrexian Arena, Shattered Sanctum, Scoured Barrens, Case of the Uneaten Feast, Swamp, Swamp, Plains, Marauding Blight-Priest, Bloodthirsty Conqueror
+  Graveyard (2): Lunar Convocation, Starscape Cleric
+  Exile (6): Bloodletter of Aclazotz, Stroke of Midnight, Marauding Blight-Priest, Stroke of Midnight, Enduring Tenacity, Enduring Tenacity
+sameer6563:
+  Battlefield (12): Sandsteppe Citadel, Temple of Silence, Restless Fortress, The Mind Stone, Sandsteppe Citadel, Forlorn Flats, Pit of Offerings, Creosote Heath, Peter Parker's Camera, Pit of Offerings, The Coming of Galactus, The Rise of Sozin
+  Graveyard (2): Deadly Cover-Up, Omenpath Journey
+  Exile (2): Command Bridge, Restless Cottage
+Known non-persistent entries (counts only):
+  gian31: Hand=5, Limbo=9, Pending=1
+  sameer6563: Hand=2, Limbo=2
+  unknown: Library=78, Limbo=10, Revealed=4
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: sameer6563 Battlefield=1
+- Turn 2: gian31 Battlefield=1; sameer6563 Battlefield=1
+- Turn 3: gian31 Battlefield=1; sameer6563 Battlefield=2
+- Turn 4: gian31 Battlefield=3; sameer6563 Battlefield=2
+- Turn 5: gian31 Battlefield=3; sameer6563 Battlefield=4
+- Turn 6: gian31 Battlefield=5; sameer6563 Battlefield=4
+- Turn 7: gian31 Battlefield=5; sameer6563 Battlefield=6; sameer6563 Exile=4
+- Turn 8: gian31 Battlefield=7; sameer6563 Battlefield=6; sameer6563 Exile=4
+- Turn 9: gian31 Battlefield=6; gian31 Exile=1; sameer6563 Battlefield=8; sameer6563 Graveyard=1; sameer6563 Exile=3
+- Turn 10: gian31 Battlefield=8; gian31 Exile=1; sameer6563 Battlefield=8; sameer6563 Graveyard=1; sameer6563 Exile=3
+- Turn 11: gian31 Battlefield=8; gian31 Exile=1; sameer6563 Battlefield=9; sameer6563 Graveyard=1; sameer6563 Exile=2
+- Turn 12: gian31 Battlefield=10; gian31 Graveyard=1; gian31 Exile=1; sameer6563 Battlefield=8; sameer6563 Graveyard=2; sameer6563 Exile=2
+- Turn 13: gian31 Battlefield=9; gian31 Graveyard=2; gian31 Exile=3; sameer6563 Battlefield=11; sameer6563 Graveyard=3; sameer6563 Exile=2
+- Turn 14: gian31 Battlefield=11; gian31 Graveyard=2; gian31 Exile=3; sameer6563 Battlefield=11; sameer6563 Graveyard=3; sameer6563 Exile=2
+- Turn 15: gian31 Battlefield=9; gian31 Graveyard=6; gian31 Exile=6; sameer6563 Battlefield=12; sameer6563 Graveyard=3; sameer6563 Exile=3
+- Turn 16: gian31 Battlefield=12; gian31 Graveyard=6; gian31 Exile=6; sameer6563 Battlefield=12; sameer6563 Graveyard=3; sameer6563 Exile=3
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 4: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: The Mind Stone resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Phyrexian Arena resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Omenpath Journey resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Case of the Uneaten Feast resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: The Rise of Sozin resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Peter Parker's Camera resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: The Coming of Galactus resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
