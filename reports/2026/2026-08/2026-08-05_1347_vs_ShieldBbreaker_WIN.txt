@@ -1,0 +1,1331 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: ShieldBbreaker, gian31
+Seat map: Seat 1=ShieldBbreaker, Seat 2=gian31
+Turn range (known): 1 - 22
+Unnumbered turn groups retained: 1
+Records: 92
+Action chains: 34
+Winner: gian31
+Final life: {'ShieldBbreaker': 1, 'gian31': 48}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 22 (Phase_Combat, Step_CombatDamage; Ability of Starscape Cleric, seq 638).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 46 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 16 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 14, 16, 19, 21, 22] (raw records=17; equivalent duplicates=1). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 31 explicit Library -> Hand movement(s); named in the draw record=12, resolved through an explicit identity transition=17, unresolved=2.
+Unresolved draw identities (explicit movements retained): Turn 15, seq 288, object 426; Turn 19, seq 416, object 493.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Enduring Tenacity [289], Swamp [290], Plains [291], Bloodletter of Aclazotz [292], Plains [293], Authority of the Consuls [294], Makeshift Binding [295].
+  - unknown: 7 observed card(s): object 196 [196], object 197 [197], object 198 [198], object 199 [199], object 200 [200], object 201 [201], object 202 [202].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'ShieldBbreaker': 1, 'gian31': 48}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 22 (Phase_Combat, Step_CombatDamage; Ability of Starscape Cleric, seq 638).
+Last captured life snapshot: gian31 47 -> 48 (seq 636).
+Tokens on battlefield at their last observation (not confirmed at match end): Human [446] controller=ShieldBbreaker, created Turn 16, last observed Turn 21 seq 496, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Otter [516] controller=ShieldBbreaker, created Turn 21, last observed Turn 21 seq 476, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Island.
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Authority of the Consuls.
+- Turn 3: actions: cards=0, abilities=0; explicit battlefield entries=Agna Qel'a.
+- Turn 4: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 5: actions: cards=0, abilities=0; explicit battlefield entries=Capital City.
+- Turn 6: actions: cards=0, abilities=0; explicit battlefield entries=Shattered Sanctum.
+- Turn 7: actions: cards=0, abilities=0; explicit battlefield entries=Cavern of Souls.
+- Turn 8: actions: cards=1, abilities=0; explicit battlefield entries=Plains.
+- Turn 9: actions: cards=1, abilities=0; explicit battlefield entries=Island.
+- Turn 10: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Lunar Convocation.
+- Turn 11: actions: cards=0, abilities=0; explicit battlefield entries=Capital City.
+- Turn 12: actions: cards=1, abilities=0.
+- Turn 13: actions: cards=0, abilities=0; explicit battlefield entries=Island.
+- Turn 14: actions: cards=2, abilities=0; explicit battlefield entries=Swamp, Moonrise Cleric; explicit battlefield exits=Moonrise Cleric.
+- Turn 15: actions: cards=1, abilities=2; life mutations=1; explicit battlefield entries=Ugin, Eye of the Storms; explicit battlefield exits=Lunar Convocation.
+- Turn 16: actions: cards=2, abilities=1; life mutations=1; explicit battlefield entries=Swamp, Moonrise Cleric; explicit battlefield exits=Ugin, Eye of the Storms.
+- Turn 17: actions: cards=1, abilities=2; combat snapshots=1; life mutations=2; explicit battlefield entries=Ugin, Eye of the Storms; explicit battlefield exits=Moonrise Cleric.
+- Turn 18: actions: cards=1, abilities=0; explicit battlefield entries=Bloodthirsty Conqueror.
+- Turn 19: actions: cards=2, abilities=3; combat snapshots=1; life mutations=3; explicit battlefield entries=Taigam, Master Opportunist, Island; explicit battlefield exits=Bloodthirsty Conqueror.
+- Turn 20: actions: cards=2, abilities=0; explicit battlefield entries=Starscape Cleric.
+- Turn 21: actions: cards=2, abilities=8; combat snapshots=1; life mutations=6; explicit battlefield entries=Baxter Building, Stormchaser's Talent, Deceit.
+- Turn 22: actions: cards=1, abilities=56; combat snapshots=1; life mutations=56; explicit battlefield entries=Swamp, Bloodthirsty Conqueror.
+- Turn None: actions: cards=0, abilities=0.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Island [349] Hand (ShieldBbreaker) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Island [349]
+
+Turn 2
+  - Authority of the Consuls [valid_resolution_no_immediate_mutation, seq=27] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=352)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Authority of the Consuls resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Authority of the Consuls (object 352) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Authority of the Consuls (object 352) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Moonrise Cleric [350] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 21).
+      Plains [351] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Island [349]
+      gian31: Battlefield: Authority of the Consuls [352], Plains [351]
+
+Turn 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Dazzling Denial [354] Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw; GRE sequence 41).
+      Agna Qel'a [355] Hand (ShieldBbreaker) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Island [349]
+      gian31: Battlefield: Authority of the Consuls [352], Plains [351]
+
+Turn 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Stroke of Midnight [356] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 58).
+      Swamp [357] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 61).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Island [349]
+      gian31: Battlefield: Authority of the Consuls [352], Plains [351], Swamp [357]
+
+Turn 5
+    additional protocol-observed zone movements not assigned to an action chain:
+      Capital City [358] Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw; GRE sequence 75).
+      Capital City [359] Hand (ShieldBbreaker) -> Battlefield (PlayLand; GRE sequence 78).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Capital City [359], Island [349]
+      gian31: Battlefield: Authority of the Consuls [352], Plains [351], Swamp [357]
+
+Turn 6
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shattered Sanctum [360] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 92).
+      Shattered Sanctum [361] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 95).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Capital City [359], Island [349]
+      gian31: Battlefield: Authority of the Consuls [352], Plains [351], Shattered Sanctum [361], Swamp [357]
+
+Turn 7
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bounce Off [362] Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw; GRE sequence 109).
+      Cavern of Souls [363] Hand (ShieldBbreaker) -> Battlefield (PlayLand; GRE sequence 113).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Capital City [359], Cavern of Souls [363], Island [349]
+      gian31: Battlefield: Authority of the Consuls [352], Plains [351], Shattered Sanctum [361], Swamp [357]
+
+Turn 8
+  - Three Steps Ahead [observed_semantic_effect, seq=140] (active=unknown, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=369)
+      chronology reconciliation: parser turn group 20 conflicts with Turn 8; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: none immediately observed
+      narrative: Observed zone movements: Three Steps Ahead, Starscape Cleric, Three Steps Ahead.
+      explicit effect object references: Starscape Cleric [366], Starscape Cleric [373] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Three Steps Ahead (object 369) Hand (ShieldBbreaker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 373) Stack -> Graveyard (gian31) (Countered; shared object ID)
+      protocol-linked zone transfer: Three Steps Ahead (object 374) Stack -> Graveyard (ShieldBbreaker) (Resolve; shared object ID)
+      identity continuity: source object 369 -> transfer object 374 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [364] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 127).
+      Plains [365] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 130).
+      Starscape Cleric [366] Hand (gian31) -> Stack (CastSpell; GRE sequence 131).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Capital City [359], Cavern of Souls [363], Island [349]; Graveyard: Three Steps Ahead [374]
+      gian31: Battlefield: Authority of the Consuls [352], Plains [351], Plains [365], Shattered Sanctum [361], Swamp [357]; Graveyard: Starscape Cleric [373]
+
+Turn 9
+  - Pearl of Wisdom [observed_semantic_effect, seq=159] (active=ShieldBbreaker, phase=Phase_Main1, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=376)
+      effects: draw, draw
+      narrative: Pearl of Wisdom: draw; draw.
+      explicit effect object references: object 207 [207], object 208 [208], object 380 [380], object 381 [381] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Pearl of Wisdom (object 376) Hand (ShieldBbreaker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bounce Off (object 380) Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw; shared object ID)
+      protocol-linked zone transfer: Island (object 381) Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw; shared object ID)
+      protocol-linked zone transfer: Pearl of Wisdom (object 382) Stack -> Graveyard (ShieldBbreaker) (Resolve; shared object ID)
+      identity continuity: source object 376 -> transfer object 382 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Ugin, Eye of the Storms [375] Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw; GRE sequence 154).
+      Island [383] Hand (ShieldBbreaker) -> Battlefield (PlayLand; GRE sequence 160).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Capital City [359], Cavern of Souls [363], Island [349], Island [383]; Graveyard: Pearl of Wisdom [382], Three Steps Ahead [374]
+      gian31: Battlefield: Authority of the Consuls [352], Plains [351], Plains [365], Shattered Sanctum [361], Swamp [357]; Graveyard: Starscape Cleric [373]
+
+Turn 10
+  - Lunar Convocation [valid_resolution_no_immediate_mutation, seq=179] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=385)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Lunar Convocation resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Lunar Convocation (object 385) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lunar Convocation (object 385) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Lunar Convocation [observed_semantic_effect, seq=182] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=385, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Lunar Convocation: draw.
+      explicit effect object references: object 301 [301], Marauding Blight-Priest [391] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 391) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Lunar Convocation [384] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 174).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Capital City [359], Cavern of Souls [363], Island [349], Island [383]; Graveyard: Pearl of Wisdom [382], Three Steps Ahead [374]
+      gian31: Battlefield: Authority of the Consuls [352], Lunar Convocation [385], Plains [351], Plains [365], Shattered Sanctum [361], Swamp [357]; Graveyard: Starscape Cleric [373]
+
+Turn 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Sleight of Hand [392] Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw; GRE sequence 196).
+      Sleight of Hand [393] Hand (ShieldBbreaker) -> Stack (CastSpell; GRE sequence 199).
+      Capital City [395] Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Put; GRE sequence 202).
+      object 396 [396] Library (ShieldBbreaker) -> Library (ShieldBbreaker) (Put; GRE sequence 202).
+      Sleight of Hand [397] Stack -> Graveyard (ShieldBbreaker) (Resolve; GRE sequence 202).
+      Capital City [398] Hand (ShieldBbreaker) -> Battlefield (PlayLand; GRE sequence 203).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Capital City [359], Capital City [398], Cavern of Souls [363], Island [349], Island [383]; Graveyard: Pearl of Wisdom [382], Sleight of Hand [397], Three Steps Ahead [374]
+      gian31: Battlefield: Authority of the Consuls [352], Lunar Convocation [385], Plains [351], Plains [365], Shattered Sanctum [361], Swamp [357]; Graveyard: Starscape Cleric [373]
+
+Turn 12
+  - Dazzling Denial [observed_semantic_effect, seq=226] (active=unknown, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=404)
+      chronology reconciliation: parser turn group 22 conflicts with Turn 12; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: none immediately observed
+      narrative: Observed zone movements: Dazzling Denial, Marauding Blight-Priest, Dazzling Denial.
+      explicit effect object references: Marauding Blight-Priest [400], Marauding Blight-Priest [407] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Dazzling Denial (object 404) Hand (ShieldBbreaker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 407) Stack -> Graveyard (gian31) (Countered; shared object ID)
+      protocol-linked zone transfer: Dazzling Denial (object 408) Stack -> Graveyard (ShieldBbreaker) (Resolve; shared object ID)
+      identity continuity: source object 404 -> transfer object 408 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodthirsty Conqueror [399] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 217).
+      Marauding Blight-Priest [400] Hand (gian31) -> Stack (CastSpell; GRE sequence 220).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Capital City [359], Capital City [398], Cavern of Souls [363], Island [349], Island [383]; Graveyard: Dazzling Denial [408], Pearl of Wisdom [382], Sleight of Hand [397], Three Steps Ahead [374]
+      gian31: Battlefield: Authority of the Consuls [352], Lunar Convocation [385], Plains [351], Plains [365], Shattered Sanctum [361], Swamp [357]; Graveyard: Marauding Blight-Priest [407], Starscape Cleric [373]
+
+Turn 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Opt [409] Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw; GRE sequence 240).
+      Opt [410] Hand (ShieldBbreaker) -> Stack (CastSpell; GRE sequence 243).
+      Island [412] Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw; GRE sequence 246).
+      Opt [413] Stack -> Graveyard (ShieldBbreaker) (Resolve; GRE sequence 246).
+      Island [414] Hand (ShieldBbreaker) -> Battlefield (PlayLand; GRE sequence 247).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Capital City [359], Capital City [398], Cavern of Souls [363], Island [349], Island [383], Island [414]; Graveyard: Dazzling Denial [408], Opt [413], Pearl of Wisdom [382], Sleight of Hand [397], Three Steps Ahead [374]
+      gian31: Battlefield: Authority of the Consuls [352], Lunar Convocation [385], Plains [351], Plains [365], Shattered Sanctum [361], Swamp [357]; Graveyard: Marauding Blight-Priest [407], Starscape Cleric [373]
+
+Turn 14
+  - Moonrise Cleric [valid_resolution_no_immediate_mutation, seq=268] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=417)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Moonrise Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Moonrise Cleric (object 417) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Moonrise Cleric (object 417) Stack -> Battlefield (Resolve; shared object ID)
+  - Bounce Off [observed_semantic_effect, seq=276] (active=unknown, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=421)
+      chronology reconciliation: parser turn group 22 conflicts with Turn 14; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: return to battlefield
+      narrative: Bounce Off: a card/permanent returns.
+      explicit effect object references: Moonrise Cleric [417], Moonrise Cleric [423] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bounce Off (object 421) Hand (ShieldBbreaker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Moonrise Cleric (object 423) Battlefield -> Hand (gian31) (Return; shared object ID)
+      protocol-linked zone transfer: Bounce Off (object 425) Stack -> Graveyard (ShieldBbreaker) (Resolve; shared object ID)
+      identity continuity: source object 421 -> transfer object 425 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [415] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 262).
+      Swamp [416] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 265).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Capital City [359], Capital City [398], Cavern of Souls [363], Island [349], Island [383], Island [414]; Graveyard: Bounce Off [425], Dazzling Denial [408], Opt [413], Pearl of Wisdom [382], Sleight of Hand [397], Three Steps Ahead [374]
+      gian31: Battlefield: Authority of the Consuls [352], Lunar Convocation [385], Plains [351], Plains [365], Shattered Sanctum [361], Swamp [357], Swamp [416]; Graveyard: Marauding Blight-Priest [407], Starscape Cleric [373]
+
+Turn 15
+  - Ability of Ugin, Eye of the Storms [observed_semantic_effect, seq=295] (active=ShieldBbreaker, phase=Phase_Main1, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=427, source_last_explicit_zone=Stack)
+      effects: exile
+      narrative: Ability of Ugin, Eye of the Storms: exiles Lunar Convocation.
+      explicit effect object references: Lunar Convocation [385], Lunar Convocation [436] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Lunar Convocation (object 436) Battlefield -> Exile (Exile; shared object ID)
+  - Ugin, Eye of the Storms [valid_resolution_no_immediate_mutation, seq=297] (active=ShieldBbreaker, phase=Phase_Main1, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=427)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ugin, Eye of the Storms resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ugin, Eye of the Storms (object 427) Hand (ShieldBbreaker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ugin, Eye of the Storms (object 427) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Ugin, Eye of the Storms [observed_semantic_effect, seq=300] (active=ShieldBbreaker, phase=Phase_Main1, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=427, source_last_explicit_zone=Battlefield)
+      effects: draw, life +3
+      narrative: Ability of Ugin, Eye of the Storms: draw; ShieldBbreaker gains 3 life.
+      explicit effect object references: object 216 [216], object 438 [438] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Deceit (object 438) Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw; shared object ID)
+    net observed life change this turn: ShieldBbreaker +3 (individual changes below; gains and losses may offset)
+    life: ShieldBbreaker 20 -> 23
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 426 [426] Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw; GRE sequence 288).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Capital City [359], Capital City [398], Cavern of Souls [363], Island [349], Island [383], Island [414], Ugin, Eye of the Storms [427]; Graveyard: Bounce Off [425], Dazzling Denial [408], Opt [413], Pearl of Wisdom [382], Sleight of Hand [397], Three Steps Ahead [374]
+      gian31: Battlefield: Authority of the Consuls [352], Plains [351], Plains [365], Shattered Sanctum [361], Swamp [357], Swamp [416]; Graveyard: Marauding Blight-Priest [407], Starscape Cleric [373]; Exile: Lunar Convocation [436]
+
+Turn 16
+  - Stroke of Midnight [observed_semantic_effect, seq=322] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=441)
+      effects: destroy, token creation
+      narrative: Stroke of Midnight destroys Ugin, Eye of the Storms.
+      explicit effect object references: Ugin, Eye of the Storms [427], Ugin, Eye of the Storms [445], Human [446] (role/targeting only where the protocol identifies it)
+      token created: Human (object 446, controller=ShieldBbreaker) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 441).
+      protocol-linked zone transfer: Stroke of Midnight (object 441) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ugin, Eye of the Storms (object 445) Battlefield -> Graveyard (ShieldBbreaker) (Destroy; shared object ID)
+      protocol-linked zone transfer: Stroke of Midnight (object 448) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 441 -> transfer object 448 (explicit GRE ObjectIdChanged chain).
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=324] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=352, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Moonrise Cleric [valid_resolution_no_immediate_mutation, seq=327] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=449)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Moonrise Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Moonrise Cleric (object 449) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Moonrise Cleric (object 449) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [439] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 314).
+      Swamp [440] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 317).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Capital City [359], Capital City [398], Cavern of Souls [363], Island [349], Island [383], Island [414]; Graveyard: Bounce Off [425], Dazzling Denial [408], Opt [413], Pearl of Wisdom [382], Sleight of Hand [397], Three Steps Ahead [374], Ugin, Eye of the Storms [445]
+      gian31: Battlefield: Authority of the Consuls [352], Moonrise Cleric [449], Plains [351], Plains [365], Shattered Sanctum [361], Swamp [357], Swamp [416], Swamp [440]; Graveyard: Marauding Blight-Priest [407], Starscape Cleric [373], Stroke of Midnight [448]; Exile: Lunar Convocation [436]
+
+Turn 17
+  - Ability of Ugin, Eye of the Storms [observed_semantic_effect, seq=348] (active=ShieldBbreaker, phase=Phase_Main1, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=454, source_last_explicit_zone=Stack)
+      effects: exile
+      narrative: Ability of Ugin, Eye of the Storms: exiles Moonrise Cleric.
+      explicit effect object references: Moonrise Cleric [449], Moonrise Cleric [463] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Moonrise Cleric (object 463) Battlefield -> Exile (Exile; shared object ID)
+  - Ugin, Eye of the Storms [valid_resolution_no_immediate_mutation, seq=350] (active=ShieldBbreaker, phase=Phase_Main1, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=454)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ugin, Eye of the Storms resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ugin, Eye of the Storms (object 454) Hand (ShieldBbreaker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ugin, Eye of the Storms (object 454) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Ugin, Eye of the Storms [observed_semantic_effect, seq=353] (active=ShieldBbreaker, phase=Phase_Main1, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=454, source_last_explicit_zone=Battlefield)
+      effects: draw, life +3
+      narrative: Ability of Ugin, Eye of the Storms: draw; ShieldBbreaker gains 3 life.
+      explicit effect object references: object 218 [218], object 465 [465] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Taigam, Master Opportunist (object 465) Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw; shared object ID)
+  Combat snapshots observed (active=ShieldBbreaker; frames: DeclareAttack -> DeclareBlock):
+      attackers: Human [446] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: ShieldBbreaker +3; gian31 -1 (individual changes below; gains and losses may offset)
+    life: ShieldBbreaker 23 -> 26
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Sleight of Hand [453] Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw; GRE sequence 341).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Capital City [359], Capital City [398], Cavern of Souls [363], Island [349], Island [383], Island [414], Ugin, Eye of the Storms [454]; Graveyard: Bounce Off [425], Dazzling Denial [408], Opt [413], Pearl of Wisdom [382], Sleight of Hand [397], Three Steps Ahead [374], Ugin, Eye of the Storms [445]
+      gian31: Battlefield: Authority of the Consuls [352], Plains [351], Plains [365], Shattered Sanctum [361], Swamp [357], Swamp [416], Swamp [440]; Graveyard: Marauding Blight-Priest [407], Starscape Cleric [373], Stroke of Midnight [448]; Exile: Lunar Convocation [436], Moonrise Cleric [463]
+
+Turn 18
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation, seq=380] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=467)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 467) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 467) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 467) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Starscape Cleric [466] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 373).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Capital City [359], Capital City [398], Cavern of Souls [363], Island [349], Island [383], Island [414], Ugin, Eye of the Storms [454]; Graveyard: Bounce Off [425], Dazzling Denial [408], Opt [413], Pearl of Wisdom [382], Sleight of Hand [397], Three Steps Ahead [374], Ugin, Eye of the Storms [445]
+      gian31: Battlefield: Authority of the Consuls [352], Bloodthirsty Conqueror [467], Plains [351], Plains [365], Shattered Sanctum [361], Swamp [357], Swamp [416], Swamp [440]; Graveyard: Marauding Blight-Priest [407], Starscape Cleric [373], Stroke of Midnight [448]; Exile: Lunar Convocation [436], Moonrise Cleric [463]
+
+Turn 19
+  - Taigam, Master Opportunist [valid_resolution_no_immediate_mutation, seq=399] (active=ShieldBbreaker, phase=Phase_Main1, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=474)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Taigam, Master Opportunist resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Taigam, Master Opportunist (object 474) Hand (ShieldBbreaker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Taigam, Master Opportunist (object 474) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=401] (active=ShieldBbreaker, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=352, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Taigam, Master Opportunist [observed_semantic_effect, seq=406] (active=ShieldBbreaker, phase=Phase_Main1, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=474, source_last_explicit_zone=Battlefield)
+      effects: exile, +4 counter(s)
+      narrative: Observed zone movements: Bounce Off, Bounce Off.
+      explicit effect object references: Bounce Off [478], Bounce Off [481], Bounce Off [482] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bounce Off (object 481) Stack -> Stack (Copy; shared object ID)
+      protocol-linked zone transfer: Bounce Off (object 482) Stack -> Exile (Exile; shared object ID)
+  - Bounce Off [observed_semantic_effect, seq=408] (active=ShieldBbreaker, phase=Phase_Main1, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=480)
+      effects: return to battlefield
+      narrative: Bounce Off: a card/permanent returns.
+      explicit effect object references: Bloodthirsty Conqueror [467], Bloodthirsty Conqueror [483] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 483) Battlefield -> Hand (gian31) (Return; shared object ID)
+      protocol-linked zone transfer: Bounce Off (object 485) Stack -> Graveyard (ShieldBbreaker) (Resolve; shared object ID)
+      identity continuity: source object 480 -> transfer object 485 (explicit GRE ObjectIdChanged chain).
+  - Ability of Ugin, Eye of the Storms [observed_semantic_effect, seq=416] (active=ShieldBbreaker, phase=Phase_Main1, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=454, source_last_explicit_zone=Battlefield)
+      effects: draw, life +3
+      narrative: Ability of Ugin, Eye of the Storms: draw; ShieldBbreaker gains 3 life.
+      explicit effect object references: object 222 [222], object 493 [493] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 493 (object 493) Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw; shared object ID)
+  Combat snapshots observed (active=ShieldBbreaker; frames: DeclareAttack -> DeclareBlock):
+      attackers: Human [446] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: ShieldBbreaker +3; gian31 +0 (individual changes below; gains and losses may offset)
+    life: gian31 18 -> 19
+    life: ShieldBbreaker 26 -> 29
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Dazzling Denial [473] Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw; GRE sequence 394).
+      Bounce Off [478] Hand (ShieldBbreaker) -> Stack (CastSpell; GRE sequence 402).
+      Sleight of Hand [486] Hand (ShieldBbreaker) -> Stack (CastSpell; GRE sequence 409).
+      Island [488] Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Put; GRE sequence 412).
+      object 489 [489] Library (ShieldBbreaker) -> Library (ShieldBbreaker) (Put; GRE sequence 412).
+      Sleight of Hand [490] Stack -> Graveyard (ShieldBbreaker) (Resolve; GRE sequence 412).
+      Island [491] Hand (ShieldBbreaker) -> Battlefield (PlayLand; GRE sequence 413).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Capital City [359], Capital City [398], Cavern of Souls [363], Island [349], Island [383], Island [414], Island [491], Taigam, Master Opportunist [474], Ugin, Eye of the Storms [454]; Graveyard: Bounce Off [425], Bounce Off [485], Dazzling Denial [408], Opt [413], Pearl of Wisdom [382], Sleight of Hand [397], Sleight of Hand [490], Three Steps Ahead [374], Ugin, Eye of the Storms [445]; Exile: Bounce Off [482]
+      gian31: Battlefield: Authority of the Consuls [352], Plains [351], Plains [365], Shattered Sanctum [361], Swamp [357], Swamp [416], Swamp [440]; Graveyard: Marauding Blight-Priest [407], Starscape Cleric [373], Stroke of Midnight [448]; Exile: Lunar Convocation [436], Moonrise Cleric [463]
+
+Turn 20
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=442] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=495)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 495) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 495) Stack -> Battlefield (Resolve; shared object ID)
+  - Dazzling Denial [observed_semantic_effect, seq=449] (active=unknown, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=503)
+      chronology reconciliation: parser turn group None conflicts with Turn 20; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: none immediately observed
+      narrative: Observed zone movements: Dazzling Denial, Bloodletter of Aclazotz, Dazzling Denial.
+      explicit effect object references: Bloodletter of Aclazotz [498], Bloodletter of Aclazotz [506] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Dazzling Denial (object 503) Hand (ShieldBbreaker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 506) Stack -> Graveyard (gian31) (Countered; shared object ID)
+      protocol-linked zone transfer: Dazzling Denial (object 507) Stack -> Graveyard (ShieldBbreaker) (Resolve; shared object ID)
+      identity continuity: source object 503 -> transfer object 507 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Authority of the Consuls [494] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 436).
+      Bloodletter of Aclazotz [498] Hand (gian31) -> Stack (CastSpell; GRE sequence 443).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Capital City [359], Capital City [398], Cavern of Souls [363], Island [349], Island [383], Island [414], Island [491], Taigam, Master Opportunist [474], Ugin, Eye of the Storms [454]; Graveyard: Bounce Off [425], Bounce Off [485], Dazzling Denial [408], Dazzling Denial [507], Opt [413], Pearl of Wisdom [382], Sleight of Hand [397], Sleight of Hand [490], Three Steps Ahead [374], Ugin, Eye of the Storms [445]; Exile: Bounce Off [482]
+      gian31: Battlefield: Authority of the Consuls [352], Plains [351], Plains [365], Shattered Sanctum [361], Starscape Cleric [495], Swamp [357], Swamp [416], Swamp [440]; Graveyard: Bloodletter of Aclazotz [506], Marauding Blight-Priest [407], Starscape Cleric [373], Stroke of Midnight [448]; Exile: Lunar Convocation [436], Moonrise Cleric [463]
+
+Turn 21
+  - Ability of Bounce Off [observed_semantic_effect, seq=463] (active=ShieldBbreaker, phase=Phase_Beginning, step=Step_Upkeep, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=482, source_last_explicit_zone=Exile)
+      effects: counter_removed
+      narrative: Ability of Bounce Off: counter_removed.
+  - Ability of Ugin, Eye of the Storms [observed_semantic_effect, seq=470] (active=ShieldBbreaker, phase=Phase_Main1, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=454, source_last_explicit_zone=Battlefield)
+      effects: draw, life +3
+      narrative: Ability of Ugin, Eye of the Storms: draw; ShieldBbreaker gains 3 life.
+      explicit effect object references: object 224 [224], object 511 [511] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Stormchaser's Talent (object 511) Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw; shared object ID)
+  - Stormchaser's Talent [valid_resolution_no_immediate_mutation, seq=474] (active=ShieldBbreaker, phase=Phase_Main1, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=513)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Stormchaser's Talent resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Stormchaser's Talent (object 513) Hand (ShieldBbreaker) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Stormchaser's Talent (object 513) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Stormchaser's Talent [observed_semantic_effect, seq=476] (active=ShieldBbreaker, phase=Phase_Main1, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=513, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Stormchaser's Talent: a token is created.
+      explicit effect object references: Otter [516] (role/targeting only where the protocol identifies it)
+      token created: Otter (object 516, controller=ShieldBbreaker) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 515).
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=478] (active=ShieldBbreaker, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=352, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=480] (active=ShieldBbreaker, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Taigam, Master Opportunist [observed_semantic_effect, seq=484] (active=ShieldBbreaker, phase=Phase_Main1, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=474, source_last_explicit_zone=Battlefield)
+      effects: exile, +4 counter(s)
+      narrative: Observed zone movements: Deceit, Deceit.
+      explicit effect object references: Deceit [519], Deceit [528], Deceit [529] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Deceit (object 528) Stack -> Stack (Copy; shared object ID)
+      protocol-linked zone transfer: Deceit (object 529) Stack -> Exile (Exile; shared object ID)
+  - Deceit [valid_resolution_no_immediate_mutation, seq=486] (active=ShieldBbreaker, phase=Phase_Main1, controller=ShieldBbreaker, owner=ShieldBbreaker, source_object=527)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Deceit resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Deceit (object 528) Stack -> Battlefield (Resolve; shared object ID)
+      identity continuity: source object 527 -> transfer object 528 (explicit GRE ObjectIdChanged chain).
+  - Ability of Authority of the Consuls [observed_semantic_effect, seq=488] (active=ShieldBbreaker, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=352, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Authority of the Consuls: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=490] (active=ShieldBbreaker, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  Combat snapshots observed (active=ShieldBbreaker; frames: DeclareAttack -> DeclareBlock):
+      attackers: Human [446] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: ShieldBbreaker +1; gian31 +1 (individual changes below; gains and losses may offset)
+    life: ShieldBbreaker 29 -> 32
+    life: gian31 18 -> 19
+    life: ShieldBbreaker 32 -> 31
+    life: gian31 19 -> 20
+    life: ShieldBbreaker 31 -> 30
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Baxter Building [509] Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw; GRE sequence 465).
+      Baxter Building [512] Hand (ShieldBbreaker) -> Battlefield (PlayLand; GRE sequence 471).
+      Deceit [519] Hand (ShieldBbreaker) -> Stack (CastSpell; GRE sequence 481).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Baxter Building [512], Capital City [359], Capital City [398], Cavern of Souls [363], Deceit [528], Island [349], Island [383], Island [414], Island [491], Stormchaser's Talent [513], Taigam, Master Opportunist [474], Ugin, Eye of the Storms [454]; Graveyard: Bounce Off [425], Bounce Off [485], Dazzling Denial [408], Dazzling Denial [507], Opt [413], Pearl of Wisdom [382], Sleight of Hand [397], Sleight of Hand [490], Three Steps Ahead [374], Ugin, Eye of the Storms [445]; Exile: Bounce Off [482], Deceit [529]
+      gian31: Battlefield: Authority of the Consuls [352], Plains [351], Plains [365], Shattered Sanctum [361], Starscape Cleric [495], Swamp [357], Swamp [416], Swamp [440]; Graveyard: Bloodletter of Aclazotz [506], Marauding Blight-Priest [407], Starscape Cleric [373], Stroke of Midnight [448]; Exile: Lunar Convocation [436], Moonrise Cleric [463]
+
+Turn 22
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation, seq=516] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=534)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 534) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 534) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=528] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +2
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 2 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=530] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=532] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=534] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=536] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=538] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=540] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=542] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=544] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=546] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=548] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=550] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=552] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=554] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=556] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=558] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=560] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=562] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=564] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=566] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=568] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=570] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=572] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=574] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=576] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=578] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=580] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=582] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=584] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=586] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=588] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=590] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=592] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=594] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=596] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=598] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=600] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=602] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=604] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=606] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=608] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=610] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=612] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=614] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=616] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=618] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=620] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=622] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=624] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=626] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=628] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=630] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=632] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=634] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=636] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=534, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=638] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=495, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [495] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: ShieldBbreaker -29; gian31 +29 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): ShieldBbreaker 30 -> 28
+    life: gian31 19 -> 21
+    life: ShieldBbreaker 28 -> 27
+    life: gian31 21 -> 22
+    life: ShieldBbreaker 27 -> 26
+    life: gian31 22 -> 23
+    life: ShieldBbreaker 26 -> 25
+    life: gian31 23 -> 24
+    life: ShieldBbreaker 25 -> 24
+    life: gian31 24 -> 25
+    life: ShieldBbreaker 24 -> 23
+    life: gian31 25 -> 26
+    life: ShieldBbreaker 23 -> 22
+    life: gian31 26 -> 27
+    life: ShieldBbreaker 22 -> 21
+    life: gian31 27 -> 28
+    life: ShieldBbreaker 21 -> 20
+    life: gian31 28 -> 29
+    life: ShieldBbreaker 20 -> 19
+    life: gian31 29 -> 30
+    life: ShieldBbreaker 19 -> 18
+    life: gian31 30 -> 31
+    life: ShieldBbreaker 18 -> 17
+    life: gian31 31 -> 32
+    life: ShieldBbreaker 17 -> 16
+    life: gian31 32 -> 33
+    life: ShieldBbreaker 16 -> 15
+    life: gian31 33 -> 34
+    life: ShieldBbreaker 15 -> 14
+    life: gian31 34 -> 35
+    life: ShieldBbreaker 14 -> 13
+    life: gian31 35 -> 36
+    life: ShieldBbreaker 13 -> 12
+    life: gian31 36 -> 37
+    life: ShieldBbreaker 12 -> 11
+    life: gian31 37 -> 38
+    life: ShieldBbreaker 11 -> 10
+    life: gian31 38 -> 39
+    life: ShieldBbreaker 10 -> 9
+    life: gian31 39 -> 40
+    life: ShieldBbreaker 9 -> 8
+    life: gian31 40 -> 41
+    life: ShieldBbreaker 8 -> 7
+    life: gian31 41 -> 42
+    life: ShieldBbreaker 7 -> 6
+    life: gian31 42 -> 43
+    life: ShieldBbreaker 6 -> 5
+    life: gian31 43 -> 44
+    life: ShieldBbreaker 5 -> 4
+    life: gian31 44 -> 45
+    life: ShieldBbreaker 4 -> 3
+    life: gian31 45 -> 46
+    life: ShieldBbreaker 3 -> 2
+    life: gian31 46 -> 47
+    life: ShieldBbreaker 2 -> 1
+    life: gian31 47 -> 48
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [532] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 510).
+      Swamp [533] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 513).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      ShieldBbreaker: Battlefield: Agna Qel'a [355], Baxter Building [512], Capital City [359], Capital City [398], Cavern of Souls [363], Deceit [528], Island [349], Island [383], Island [414], Island [491], Stormchaser's Talent [513], Taigam, Master Opportunist [474], Ugin, Eye of the Storms [454]; Graveyard: Bounce Off [425], Bounce Off [485], Dazzling Denial [408], Dazzling Denial [507], Opt [413], Pearl of Wisdom [382], Sleight of Hand [397], Sleight of Hand [490], Three Steps Ahead [374], Ugin, Eye of the Storms [445]; Exile: Bounce Off [482], Deceit [529]
+      gian31: Battlefield: Authority of the Consuls [352], Bloodthirsty Conqueror [534], Plains [351], Plains [365], Shattered Sanctum [361], Starscape Cleric [495], Swamp [357], Swamp [416], Swamp [440], Swamp [533]; Graveyard: Bloodletter of Aclazotz [506], Marauding Blight-Priest [407], Starscape Cleric [373], Stroke of Midnight [448]; Exile: Lunar Convocation [436], Moonrise Cleric [463]
+
+UNNUMBERED / UNRESOLVED TURN GROUP
+  - The captured records do not provide a verified numbered turn for the following events.
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 10, seq 180, Phase_Main1: gian31 20 -> 18. No source event correlated in captured records. Previous captured action: Lunar Convocation.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 2 token creations observed; 2 active as last observed; 0 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Human [446] controller=ShieldBbreaker; created Turn 16 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 21, object 446 (latest observed P/T 1/1; current zone unconfirmed).
+- Otter [516] controller=ShieldBbreaker; created Turn 21 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 21, object 516 (latest observed P/T 1/1; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Island [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Moonrise Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 24: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Authority of the Consuls [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 27: Authority of the Consuls [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 41: Dazzling Denial [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw).
+- Turn 3, seq 44: Agna Qel'a [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Battlefield (PlayLand).
+- Turn 4, seq 58: Stroke of Midnight [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 61: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 75: Capital City [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw).
+- Turn 5, seq 78: Capital City [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Battlefield (PlayLand).
+- Turn 6, seq 92: Shattered Sanctum [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 95: Shattered Sanctum [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 109: Bounce Off [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw).
+- Turn 7, seq 113: Cavern of Souls [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Battlefield (PlayLand).
+- Turn 8, seq 127: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 130: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 131: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 134: Three Steps Ahead [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Stack (CastSpell).
+- Turn 8, seq 140: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Countered).
+- Turn 8, seq 140: Three Steps Ahead [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Stack -> Graveyard (ShieldBbreaker) (Resolve).
+- Turn 9, seq 154: Ugin, Eye of the Storms [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw).
+- Turn 9, seq 157: Pearl of Wisdom [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Stack (CastSpell).
+- Turn 9, seq 159: Bounce Off [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw).
+- Turn 9, seq 159: Island [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw).
+- Turn 9, seq 159: Pearl of Wisdom [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Stack -> Graveyard (ShieldBbreaker) (Resolve).
+- Turn 9, seq 160: Island [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Battlefield (PlayLand).
+- Turn 10, seq 174: Lunar Convocation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 177: Lunar Convocation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 179: Lunar Convocation [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 182: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 196: Sleight of Hand [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw).
+- Turn 11, seq 199: Sleight of Hand [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Stack (CastSpell).
+- Turn 11, seq 202: Capital City [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Put).
+- Turn 11, seq 202: object 396 [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Library (ShieldBbreaker) (Put).
+- Turn 11, seq 202: Sleight of Hand [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Stack -> Graveyard (ShieldBbreaker) (Resolve).
+- Turn 11, seq 203: Capital City [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Battlefield (PlayLand).
+- Turn 12, seq 217: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 220: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 222: Dazzling Denial [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Stack (CastSpell).
+- Turn 12, seq 226: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Countered).
+- Turn 12, seq 226: Dazzling Denial [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Stack -> Graveyard (ShieldBbreaker) (Resolve).
+- Turn 13, seq 240: Opt [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw).
+- Turn 13, seq 243: Opt [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Stack (CastSpell).
+- Turn 13, seq 246: Island [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw).
+- Turn 13, seq 246: Opt [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Stack -> Graveyard (ShieldBbreaker) (Resolve).
+- Turn 13, seq 247: Island [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Battlefield (PlayLand).
+- Turn 14, seq 262: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 265: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 14, seq 266: Moonrise Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 268: Moonrise Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 272: Bounce Off [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Stack (CastSpell).
+- Turn 14, seq 276: Moonrise Cleric [owner=gian31, controller=gian31] moves Battlefield -> Hand (gian31) (Return).
+- Turn 14, seq 276: Bounce Off [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Stack -> Graveyard (ShieldBbreaker) (Resolve).
+- Turn 15, seq 288: object 426 [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw).
+- Turn 15, seq 291: Ugin, Eye of the Storms [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Stack (CastSpell).
+- Turn 15, seq 295: Lunar Convocation [owner=gian31, controller=gian31] moves Battlefield -> Exile (Exile).
+- Turn 15, seq 297: Ugin, Eye of the Storms [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 300: Deceit [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw).
+- Turn 16, seq 314: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 16, seq 317: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 16, seq 318: Stroke of Midnight [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 322: Ugin, Eye of the Storms [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Battlefield -> Graveyard (ShieldBbreaker) (Destroy).
+- Turn 16, seq 322: Stroke of Midnight [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 16, seq 325: Moonrise Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 16, seq 327: Moonrise Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 17, seq 341: Sleight of Hand [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw).
+- Turn 17, seq 344: Ugin, Eye of the Storms [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Stack (CastSpell).
+- Turn 17, seq 348: Moonrise Cleric [owner=gian31, controller=gian31] moves Battlefield -> Exile (Exile).
+- Turn 17, seq 350: Ugin, Eye of the Storms [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Stack -> Battlefield (Resolve).
+- Turn 17, seq 353: Taigam, Master Opportunist [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw).
+- Turn 18, seq 373: Starscape Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 18, seq 376: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 18, seq 378: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 18, seq 380: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 19, seq 394: Dazzling Denial [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw).
+- Turn 19, seq 397: Taigam, Master Opportunist [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Stack (CastSpell).
+- Turn 19, seq 399: Taigam, Master Opportunist [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Stack -> Battlefield (Resolve).
+- Turn 19, seq 402: Bounce Off [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Stack (CastSpell).
+- Turn 19, seq 406: Bounce Off [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Stack -> Stack (Copy).
+- Turn 19, seq 406: Bounce Off [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Stack -> Exile (Exile).
+- Turn 19, seq 408: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Battlefield -> Hand (gian31) (Return).
+- Turn 19, seq 408: Bounce Off [owner/controller metadata unavailable] moves Stack -> Graveyard (ShieldBbreaker) (Resolve).
+- Turn 19, seq 409: Sleight of Hand [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Stack (CastSpell).
+- Turn 19, seq 412: Island [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Put).
+- Turn 19, seq 412: object 489 [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Library (ShieldBbreaker) (Put).
+- Turn 19, seq 412: Sleight of Hand [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Stack -> Graveyard (ShieldBbreaker) (Resolve).
+- Turn 19, seq 413: Island [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Battlefield (PlayLand).
+- Turn 19, seq 416: object 493 [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw).
+- Turn 20, seq 436: Authority of the Consuls [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 20, seq 439: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 20, seq 442: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 20, seq 443: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 20, seq 445: Dazzling Denial [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Stack (CastSpell).
+- Turn 20, seq 449: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Countered).
+- Turn 20, seq 449: Dazzling Denial [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Stack -> Graveyard (ShieldBbreaker) (Resolve).
+- Turn 21, seq 465: Baxter Building [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw).
+- Turn 21, seq 470: Stormchaser's Talent [owner/controller metadata unavailable] moves Library (ShieldBbreaker) -> Hand (ShieldBbreaker) (Draw).
+- Turn 21, seq 471: Baxter Building [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Battlefield (PlayLand).
+- Turn 21, seq 472: Stormchaser's Talent [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Stack (CastSpell).
+- Turn 21, seq 474: Stormchaser's Talent [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Stack -> Battlefield (Resolve).
+- Turn 21, seq 481: Deceit [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Hand (ShieldBbreaker) -> Stack (CastSpell).
+- Turn 21, seq 484: Deceit [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Stack -> Stack (Copy).
+- Turn 21, seq 484: Deceit [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Stack -> Exile (Exile).
+- Turn 21, seq 486: Deceit [owner=ShieldBbreaker, controller=ShieldBbreaker] moves Stack -> Battlefield (Resolve).
+- Turn 22, seq 510: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 22, seq 513: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 22, seq 514: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 22, seq 516: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+Equivalent transfer duplicates retained as diagnostics (rendered once above):
+- Turn 13: Island [414] Hand (ShieldBbreaker) -> Battlefield (PlayLand); sequences 247, 248.
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 199 becomes object 349 [Island].
+- Turn 2, seq 21: object 296 becomes object 350 [Moonrise Cleric].
+- Turn 2, seq 24: object 293 becomes object 351 [Plains].
+- Turn 2, seq 25: object 294 becomes object 352 [Authority of the Consuls].
+- Turn 3, seq 41: object 203 becomes object 354 [Dazzling Denial].
+- Turn 3, seq 44: object 196 becomes object 355 [Agna Qel'a].
+- Turn 4, seq 58: object 297 becomes object 356 [Stroke of Midnight].
+- Turn 4, seq 61: object 290 becomes object 357 [Swamp].
+- Turn 5, seq 75: object 204 becomes object 358 [Capital City].
+- Turn 5, seq 78: object 358 becomes object 359 [Capital City].
+- Turn 6, seq 92: object 298 becomes object 360 [Shattered Sanctum].
+- Turn 6, seq 95: object 360 becomes object 361 [Shattered Sanctum].
+- Turn 7, seq 109: object 205 becomes object 362 [Bounce Off].
+- Turn 7, seq 113: object 197 becomes object 363 [Cavern of Souls].
+- Turn 8, seq 127: object 299 becomes object 364 [Starscape Cleric].
+- Turn 8, seq 130: object 291 becomes object 365 [Plains].
+- Turn 8, seq 131: object 364 becomes object 366 [Starscape Cleric].
+- Turn 8, seq 134: object 198 becomes object 369 [Three Steps Ahead].
+- Turn 8, seq 140: object 366 becomes object 373 [Starscape Cleric].
+- Turn 8, seq 140: object 369 becomes object 374 [Three Steps Ahead].
+- Turn 9, seq 154: object 206 becomes object 375 [Ugin, Eye of the Storms].
+- Turn 9, seq 157: object 200 becomes object 376 [Pearl of Wisdom].
+- Turn 9, seq 159: object 207 becomes object 380 [Bounce Off].
+- Turn 9, seq 159: object 208 becomes object 381 [Island].
+- Turn 9, seq 159: object 376 becomes object 382 [Pearl of Wisdom].
+- Turn 9, seq 160: object 381 becomes object 383 [Island].
+- Turn 10, seq 174: object 300 becomes object 384 [Lunar Convocation].
+- Turn 10, seq 177: object 384 becomes object 385 [Lunar Convocation].
+- Turn 10, seq 182: object 301 becomes object 391 [Marauding Blight-Priest].
+- Turn 11, seq 196: object 209 becomes object 392 [Sleight of Hand].
+- Turn 11, seq 199: object 392 becomes object 393 [Sleight of Hand].
+- Turn 11, seq 202: object 211 becomes object 395 [Capital City].
+- Turn 11, seq 202: object 210 becomes object 396 [object 210].
+- Turn 11, seq 202: object 393 becomes object 397 [Sleight of Hand].
+- Turn 11, seq 203: object 395 becomes object 398 [Capital City].
+- Turn 12, seq 217: object 302 becomes object 399 [Bloodthirsty Conqueror].
+- Turn 12, seq 220: object 391 becomes object 400 [Marauding Blight-Priest].
+- Turn 12, seq 222: object 354 becomes object 404 [Dazzling Denial].
+- Turn 12, seq 226: object 400 becomes object 407 [Marauding Blight-Priest].
+- Turn 12, seq 226: object 404 becomes object 408 [Dazzling Denial].
+- Turn 13, seq 240: object 212 becomes object 409 [Opt].
+- Turn 13, seq 243: object 409 becomes object 410 [Opt].
+- Turn 13, seq 246: object 214 becomes object 412 [Island].
+- Turn 13, seq 246: object 410 becomes object 413 [Opt].
+- Turn 13, seq 247: object 412 becomes object 414 [Island].
+- Turn 13, seq 248: object 412 becomes object 414 [Island].
+- Turn 14, seq 262: object 303 becomes object 415 [Swamp].
+- Turn 14, seq 265: object 415 becomes object 416 [Swamp].
+- Turn 14, seq 266: object 350 becomes object 417 [Moonrise Cleric].
+- Turn 14, seq 272: object 380 becomes object 421 [Bounce Off].
+- Turn 14, seq 276: object 417 becomes object 423 [Moonrise Cleric].
+- Turn 14, seq 276: object 421 becomes object 425 [Bounce Off].
+- Turn 15, seq 288: object 215 becomes object 426 [object 215].
+- Turn 15, seq 291: object 375 becomes object 427 [Ugin, Eye of the Storms].
+- Turn 15, seq 295: object 385 becomes object 436 [Lunar Convocation].
+- Turn 15, seq 300: object 216 becomes object 438 [Deceit].
+- Turn 16, seq 314: object 304 becomes object 439 [Swamp].
+- Turn 16, seq 317: object 439 becomes object 440 [Swamp].
+- Turn 16, seq 318: object 356 becomes object 441 [Stroke of Midnight].
+- Turn 16, seq 322: object 427 becomes object 445 [Ugin, Eye of the Storms].
+- Turn 16, seq 322: object 441 becomes object 448 [Stroke of Midnight].
+- Turn 16, seq 325: object 423 becomes object 449 [Moonrise Cleric].
+- Turn 17, seq 341: object 217 becomes object 453 [Sleight of Hand].
+- Turn 17, seq 344: object 201 becomes object 454 [Ugin, Eye of the Storms].
+- Turn 17, seq 348: object 449 becomes object 463 [Moonrise Cleric].
+- Turn 17, seq 353: object 218 becomes object 465 [Taigam, Master Opportunist].
+- Turn 18, seq 373: object 305 becomes object 466 [Starscape Cleric].
+- Turn 18, seq 376: object 466 becomes object 467 (Starscape Cleric -> Bloodthirsty Conqueror).
+- Turn 18, seq 378: object 399 becomes object 467 [Bloodthirsty Conqueror].
+- Turn 19, seq 394: object 219 becomes object 473 [Dazzling Denial].
+- Turn 19, seq 397: object 465 becomes object 474 [Taigam, Master Opportunist].
+- Turn 19, seq 402: object 362 becomes object 478 [Bounce Off].
+- Turn 19, seq 406: object 478 becomes object 482 [Bounce Off].
+- Turn 19, seq 408: object 467 becomes object 483 [Bloodthirsty Conqueror].
+- Turn 19, seq 408: object 481 becomes object 485 [Bounce Off].
+- Turn 19, seq 409: object 453 becomes object 486 [Sleight of Hand].
+- Turn 19, seq 412: object 220 becomes object 488 [Island].
+- Turn 19, seq 412: object 221 becomes object 489 [object 221].
+- Turn 19, seq 412: object 486 becomes object 490 [Sleight of Hand].
+- Turn 19, seq 413: object 488 becomes object 491 [Island].
+- Turn 19, seq 416: object 222 becomes object 493 [object 222].
+- Turn 20, seq 436: object 306 becomes object 494 [Authority of the Consuls].
+- Turn 20, seq 439: object 466 becomes object 495 [Starscape Cleric].
+- Turn 20, seq 443: object 292 becomes object 498 [Bloodletter of Aclazotz].
+- Turn 20, seq 445: object 473 becomes object 503 [Dazzling Denial].
+- Turn 20, seq 449: object 498 becomes object 506 [Bloodletter of Aclazotz].
+- Turn 20, seq 449: object 503 becomes object 507 [Dazzling Denial].
+- Turn 21, seq 465: object 223 becomes object 509 [Baxter Building].
+- Turn 21, seq 470: object 224 becomes object 511 [Stormchaser's Talent].
+- Turn 21, seq 471: object 509 becomes object 512 [Baxter Building].
+- Turn 21, seq 472: object 511 becomes object 513 [Stormchaser's Talent].
+- Turn 21, seq 481: object 438 becomes object 519 [Deceit].
+- Turn 21, seq 484: object 519 becomes object 529 [Deceit].
+- Turn 22, seq 510: object 307 becomes object 532 [Swamp].
+- Turn 22, seq 513: object 532 becomes object 533 [Swamp].
+- Turn 22, seq 514: object 483 becomes object 534 [Bloodthirsty Conqueror].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: ShieldBbreaker plays Island (object 349) from Hand (ShieldBbreaker) to Battlefield.
+- Turn 2: gian31 plays Plains (object 351) from Hand (gian31) to Battlefield.
+- Turn 3: ShieldBbreaker plays Agna Qel'a (object 355) from Hand (ShieldBbreaker) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 357) from Hand (gian31) to Battlefield.
+- Turn 5: ShieldBbreaker plays Capital City (object 359) from Hand (ShieldBbreaker) to Battlefield.
+- Turn 6: gian31 plays Shattered Sanctum (object 361) from Hand (gian31) to Battlefield.
+- Turn 7: ShieldBbreaker plays Cavern of Souls (object 363) from Hand (ShieldBbreaker) to Battlefield.
+- Turn 8: gian31 plays Plains (object 365) from Hand (gian31) to Battlefield.
+- Turn 9: ShieldBbreaker plays Island (object 383) from Hand (ShieldBbreaker) to Battlefield.
+- Turn 11: ShieldBbreaker plays Capital City (object 398) from Hand (ShieldBbreaker) to Battlefield.
+- Turn 13: ShieldBbreaker plays Island (object 414) from Hand (ShieldBbreaker) to Battlefield.
+- Turn 14: gian31 plays Swamp (object 416) from Hand (gian31) to Battlefield.
+- Turn 16: gian31 plays Swamp (object 440) from Hand (gian31) to Battlefield.
+- Turn 19: ShieldBbreaker plays Island (object 491) from Hand (ShieldBbreaker) to Battlefield.
+- Turn 21: ShieldBbreaker plays Baxter Building (object 512) from Hand (ShieldBbreaker) to Battlefield.
+- Turn 22: gian31 plays Swamp (object 533) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 21: ordered adjacent records Authority of the Consuls -> Starscape Cleric; observed repetitions=2; net life: ShieldBbreaker -2, gian31 +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Authority of the Consuls=2, Starscape Cleric=2.
+  Individual ability records remain in the timeline.
+- Turn 22: ordered adjacent records Bloodthirsty Conqueror -> Starscape Cleric; observed repetitions=28; net life: ShieldBbreaker -28, gian31 +29. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Bloodthirsty Conqueror=28, Starscape Cleric=28.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 22: ordered adjacent records Bloodthirsty Conqueror -> Starscape Cleric; observed repetitions=28 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Starscape Cleric: casts=1; abilities=30 (triggered=30, activated=0) across turns [20, 21, 21, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=30, other=1
+  observed effects: life -1, synthetic event
+- Bloodthirsty Conqueror: casts=2; abilities=28 (triggered=28, activated=0) across turns [18, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=28, other=0
+  observed effects: life +1, life +2
+- Ugin, Eye of the Storms: casts=2; abilities=6 (triggered=6, activated=0) across turns [15, 15, 15, 17, 17, 17, 19, 21]
+  observed effect totals: draws=4, tokens=0, counters=0, returns=0, damage=0, life_changes=4, other=2
+  observed effects: draw, exile, life +3
+- Authority of the Consuls: casts=1; abilities=4 (triggered=4, activated=0) across turns [2, 16, 19, 21, 21]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=4, other=0
+  observed effects: life +1
+- Bounce Off: casts=2; abilities=1 (triggered=1, activated=0) across turns [19, 21, 14]
+  observed effect totals: draws=0, tokens=0, counters=1, returns=2, damage=0, life_changes=0, other=0
+  observed effects: counter_removed, return to battlefield
+- Taigam, Master Opportunist: casts=1; abilities=2 (triggered=2, activated=0) across turns [19, 19, 21]
+  observed effect totals: draws=0, tokens=0, counters=2, returns=0, damage=0, life_changes=0, other=4
+  observed effects: +4 counter(s), exile, zone_transfer
+- Dazzling Denial: casts=2 across turns [12, 20]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: zone_transfer
+- Lunar Convocation: casts=1; abilities=1 (triggered=1, activated=0) across turns [10, 10]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Moonrise Cleric: casts=2 across turns [14, 16]
+- Stormchaser's Talent: casts=1; abilities=1 (triggered=1, activated=0) across turns [21, 21]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Deceit: casts=1 across turns [21]
+- Pearl of Wisdom: casts=1 across turns [9]
+  observed effect totals: draws=2, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Stroke of Midnight: casts=1 across turns [16]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy, token creation
+- Three Steps Ahead: casts=1 across turns [8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: zone_transfer
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 17 - DeclareAttack, DeclareBlock (active=ShieldBbreaker)
+  attacker: Human (ShieldBbreaker) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 19 - DeclareAttack, DeclareBlock (active=ShieldBbreaker)
+  attacker: Human (ShieldBbreaker) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 21 - DeclareAttack, DeclareBlock (active=ShieldBbreaker)
+  attacker: Human (ShieldBbreaker) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 22 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> ShieldBbreaker; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 2 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+- Turn 22: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 22: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: ShieldBbreaker loses 1 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 289: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 290: Swamp | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 291: Plains | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 292: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 293: Plains | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 294: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 295: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 349: Island | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Battlefield (latest_object_observation)
+- 350: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 351: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 352: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 355: Agna Qel'a | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Battlefield (latest_object_observation)
+- 356: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 357: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 359: Capital City | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Battlefield (latest_object_observation)
+- 360: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 361: Shattered Sanctum | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 363: Cavern of Souls | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Battlefield (latest_object_observation)
+- 364: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 365: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 366: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 369: Three Steps Ahead | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Stack (latest_object_observation)
+- 373: Starscape Cleric | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 374: Three Steps Ahead | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Graveyard (latest_object_observation)
+- 376: Pearl of Wisdom | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Stack (latest_object_observation)
+- 382: Pearl of Wisdom | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Graveyard (latest_object_observation)
+- 383: Island | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Battlefield (latest_object_observation)
+- 384: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 385: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 388: object 388 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 391: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 393: Sleight of Hand | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Stack (latest_object_observation)
+- 397: Sleight of Hand | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Graveyard (latest_object_observation)
+- 398: Capital City | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Battlefield (latest_object_observation)
+- 399: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 400: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 404: Dazzling Denial | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Stack (latest_object_observation)
+- 407: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 408: Dazzling Denial | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Graveyard (latest_object_observation)
+- 410: Opt | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Stack (latest_object_observation)
+- 413: Opt | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Graveyard (latest_object_observation)
+- 414: Island | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Battlefield (latest_object_observation)
+- 415: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 416: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 417: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 421: Bounce Off | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Stack (latest_object_observation)
+- 423: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 424: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 425: Bounce Off | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Graveyard (latest_object_observation)
+- 427: Ugin, Eye of the Storms | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Stack (latest_object_observation)
+- 435: object 435 | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=unknown (inferred unknown) (latest_object_observation)
+- 436: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 437: object 437 | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=unknown (inferred unknown) (latest_object_observation)
+- 439: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 440: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 441: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 445: Ugin, Eye of the Storms | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Graveyard (latest_object_observation)
+- 446: Human | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Battlefield (latest_object_observation)
+- 447: object 447 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 448: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 449: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 454: Ugin, Eye of the Storms | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Stack (latest_object_observation)
+- 462: object 462 | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=unknown (inferred unknown) (latest_object_observation)
+- 463: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 464: object 464 | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=unknown (inferred unknown) (latest_object_observation)
+- 466: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 467: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 474: Taigam, Master Opportunist | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Battlefield (latest_object_observation)
+- 476: object 476 | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=unknown (inferred unknown) (latest_object_observation)
+- 477: object 477 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 478: Bounce Off | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Stack (latest_object_observation)
+- 480: object 480 | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=unknown (inferred unknown) (latest_object_observation)
+- 481: Bounce Off | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Stack (latest_object_observation)
+- 482: Bounce Off | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Exile (latest_object_observation)
+- 483: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 484: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 486: Sleight of Hand | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Stack (latest_object_observation)
+- 490: Sleight of Hand | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Graveyard (latest_object_observation)
+- 491: Island | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Battlefield (latest_object_observation)
+- 492: object 492 | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=unknown (inferred unknown) (latest_object_observation)
+- 494: Authority of the Consuls | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 495: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 498: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 503: Dazzling Denial | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Stack (latest_object_observation)
+- 506: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 507: Dazzling Denial | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Graveyard (latest_object_observation)
+- 508: object 508 | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=unknown (inferred unknown) (latest_object_observation)
+- 510: object 510 | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=unknown (inferred unknown) (latest_object_observation)
+- 512: Baxter Building | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Battlefield (latest_object_observation)
+- 513: Stormchaser's Talent | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Stack (latest_object_observation)
+- 515: object 515 | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=unknown (inferred unknown) (latest_object_observation)
+- 516: Otter | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Battlefield (latest_object_observation)
+- 517: object 517 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 518: object 518 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 519: Deceit | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Stack (latest_object_observation)
+- 527: object 527 | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=unknown (inferred unknown) (latest_object_observation)
+- 528: Deceit | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Battlefield (latest_object_observation)
+- 529: Deceit | controller=ShieldBbreaker | owner=ShieldBbreaker | zone=Exile (latest_object_observation)
+- 530: object 530 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 531: object 531 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 532: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 533: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 534: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 540: object 540 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 541: object 541 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 542: object 542 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 543: object 543 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 544: object 544 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 545: object 545 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 546: object 546 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 547: object 547 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 548: object 548 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 549: object 549 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 550: object 550 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 551: object 551 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 552: object 552 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 553: object 553 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 554: object 554 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 555: object 555 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 556: object 556 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 557: object 557 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 558: object 558 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 559: object 559 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 560: object 560 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 561: object 561 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 562: object 562 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 563: object 563 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 564: object 564 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 565: object 565 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 566: object 566 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 567: object 567 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 568: object 568 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 569: object 569 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 570: object 570 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 571: object 571 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 572: object 572 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 573: object 573 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 574: object 574 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 575: object 575 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 576: object 576 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 577: object 577 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 578: object 578 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 579: object 579 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 580: object 580 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 581: object 581 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 582: object 582 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 583: object 583 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 584: object 584 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 585: object 585 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 586: object 586 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 587: object 587 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 588: object 588 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 589: object 589 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 590: object 590 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 591: object 591 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 592: object 592 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 593: object 593 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 594: object 594 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 595: object 595 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 596: object 596 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+ShieldBbreaker: 49 total items
+  zones: Battlefield=13, Exile=2, Graveyard=9, Stack=14, unknown=11
+  objects: Bounce Off x5, Dazzling Denial x4, Island x4, Sleight of Hand x4, Deceit x3, Ugin, Eye of the Storms x3, Capital City x2, Opt x2, Pearl of Wisdom x2, Three Steps Ahead x2, Agna Qel'a, Baxter Building
+gian31: 111 total items
+  zones: Battlefield=14, Exile=2, Hand=16, Stack=11, unknown=68
+  objects: Swamp x8, Moonrise Cleric x6, Bloodthirsty Conqueror x5, Starscape Cleric x5, Plains x4, Authority of the Consuls x3, Bloodletter of Aclazotz x3, Lunar Convocation x3, Marauding Blight-Priest x3, Stroke of Midnight x3, Shattered Sanctum x2, Enduring Tenacity
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+ShieldBbreaker:
+  Battlefield (13): Agna Qel'a, Baxter Building, Capital City, Capital City, Cavern of Souls, Deceit, Human, Island, Island, Island, Island, Otter, Taigam, Master Opportunist
+  Graveyard: 9 card(s)
+gian31:
+  Battlefield (14): Bloodthirsty Conqueror, Bloodthirsty Conqueror, Bloodthirsty Conqueror, Moonrise Cleric, Moonrise Cleric, Moonrise Cleric, Plains, Plains, Shattered Sanctum, Starscape Cleric, Swamp, Swamp, Swamp, Swamp
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+79 objects have no resolved final zone and are omitted from the known board state.
+ShieldBbreaker: 11 unknown object(s)
+gian31: 68 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=16, Stack=25
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+ShieldBbreaker:
+  Battlefield (15): Island, Agna Qel'a, Capital City, Cavern of Souls, Island, Capital City, Island, Human, Ugin, Eye of the Storms, Taigam, Master Opportunist, Island, Baxter Building, Stormchaser's Talent, Otter, Deceit
+  Graveyard (9): Three Steps Ahead, Pearl of Wisdom, Sleight of Hand, Dazzling Denial, Opt, Bounce Off, Ugin, Eye of the Storms, Sleight of Hand, Dazzling Denial
+  Exile (2): Bounce Off, Deceit
+gian31:
+  Battlefield (10): Plains, Authority of the Consuls, Swamp, Shattered Sanctum, Plains, Swamp, Swamp, Starscape Cleric, Swamp, Bloodthirsty Conqueror
+  Graveyard (4): Starscape Cleric, Marauding Blight-Priest, Stroke of Midnight, Bloodletter of Aclazotz
+  Exile (2): Lunar Convocation, Moonrise Cleric
+Known non-persistent entries (counts only):
+  ShieldBbreaker: Hand=2, Library=2, Limbo=3
+  gian31: Hand=3, Limbo=5, Pending=1
+  unknown: Hand=1, Library=106, Limbo=8
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: ShieldBbreaker Battlefield=1
+- Turn 2: ShieldBbreaker Battlefield=1; gian31 Battlefield=2
+- Turn 3: ShieldBbreaker Battlefield=2; gian31 Battlefield=2
+- Turn 4: ShieldBbreaker Battlefield=2; gian31 Battlefield=3
+- Turn 5: ShieldBbreaker Battlefield=3; gian31 Battlefield=3
+- Turn 6: ShieldBbreaker Battlefield=3; gian31 Battlefield=4
+- Turn 7: ShieldBbreaker Battlefield=4; gian31 Battlefield=4
+- Turn 8: ShieldBbreaker Battlefield=4; ShieldBbreaker Graveyard=1; gian31 Battlefield=5; gian31 Graveyard=1
+- Turn 9: ShieldBbreaker Battlefield=5; ShieldBbreaker Graveyard=2; gian31 Battlefield=5; gian31 Graveyard=1
+- Turn 10: ShieldBbreaker Battlefield=5; ShieldBbreaker Graveyard=2; gian31 Battlefield=6; gian31 Graveyard=1
+- Turn 11: ShieldBbreaker Battlefield=6; ShieldBbreaker Graveyard=3; gian31 Battlefield=6; gian31 Graveyard=1
+- Turn 12: ShieldBbreaker Battlefield=6; ShieldBbreaker Graveyard=4; gian31 Battlefield=6; gian31 Graveyard=2
+- Turn 13: ShieldBbreaker Battlefield=7; ShieldBbreaker Graveyard=5; gian31 Battlefield=6; gian31 Graveyard=2
+- Turn 14: ShieldBbreaker Battlefield=7; ShieldBbreaker Graveyard=6; gian31 Battlefield=7; gian31 Graveyard=2
+- Turn 15: ShieldBbreaker Battlefield=8; ShieldBbreaker Graveyard=6; gian31 Battlefield=6; gian31 Graveyard=2; gian31 Exile=1
+- Turn 16: ShieldBbreaker Battlefield=7; ShieldBbreaker Graveyard=7; gian31 Battlefield=8; gian31 Graveyard=3; gian31 Exile=1
+- Turn 17: ShieldBbreaker Battlefield=8; ShieldBbreaker Graveyard=7; gian31 Battlefield=7; gian31 Graveyard=3; gian31 Exile=2
+- Turn 18: ShieldBbreaker Battlefield=8; ShieldBbreaker Graveyard=7; gian31 Battlefield=8; gian31 Graveyard=3; gian31 Exile=2
+- Turn 19: ShieldBbreaker Battlefield=10; ShieldBbreaker Graveyard=9; ShieldBbreaker Exile=1; gian31 Battlefield=7; gian31 Graveyard=3; gian31 Exile=2
+- Turn 20: ShieldBbreaker Battlefield=10; ShieldBbreaker Graveyard=10; ShieldBbreaker Exile=1; gian31 Battlefield=8; gian31 Graveyard=4; gian31 Exile=2
+- Turn 21: ShieldBbreaker Battlefield=13; ShieldBbreaker Graveyard=10; ShieldBbreaker Exile=2; gian31 Battlefield=8; gian31 Graveyard=4; gian31 Exile=2
+- Turn 22: ShieldBbreaker Battlefield=13; ShieldBbreaker Graveyard=10; ShieldBbreaker Exile=2; gian31 Battlefield=10; gian31 Graveyard=4; gian31 Exile=2
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Authority of the Consuls resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Lunar Convocation resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Moonrise Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: Ugin, Eye of the Storms resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Moonrise Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 17: Ugin, Eye of the Storms resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 18: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 19: Taigam, Master Opportunist resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 20: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 21: Stormchaser's Talent resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 21: Deceit resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 22: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
