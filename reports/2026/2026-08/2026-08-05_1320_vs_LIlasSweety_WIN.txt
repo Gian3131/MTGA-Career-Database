@@ -1,0 +1,698 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: LIlasSweety, gian31
+Seat map: Seat 1=LIlasSweety, Seat 2=gian31
+Turn range (known): 1 - 14
+Records: 32
+Action chains: 20
+Winner: gian31
+Final life: {'LIlasSweety': 1, 'gian31': 23}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 14 (Phase_Combat, Step_CombatDamage; Ability of Starscape Cleric, seq 364).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 25 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 11 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 13, 14] (raw records=11; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 13 explicit Library -> Hand movement(s); named in the draw record=7, resolved through an explicit identity transition=6, unresolved=0.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Plains [219], Starscape Cleric [220], Marauding Blight-Priest [221], Phyrexian Arena [222], Moonrise Cleric [223], Swamp [224], Swamp [225].
+  - unknown: 7 observed card(s): object 159 [159], object 160 [160], object 161 [161], object 162 [162], object 163 [163], object 164 [164], object 165 [165].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'LIlasSweety': 1, 'gian31': 23}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 14 (Phase_Combat, Step_CombatDamage; Ability of Starscape Cleric, seq 364).
+Last captured life snapshot: gian31 22 -> 23 (seq 362).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Temple of Mystery.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Plains.
+- Turn 3: actions: cards=1, abilities=0; explicit battlefield entries=Forest, Druid of the Cowl.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Starscape Cleric.
+- Turn 5: actions: cards=1, abilities=0; explicit battlefield entries=Simic Guildgate, Druid of the Cowl.
+- Turn 6: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, Moonrise Cleric.
+- Turn 7: actions: cards=1, abilities=0; explicit battlefield entries=Island, Elfsworn Giant.
+- Turn 8: actions: cards=1, abilities=4; combat snapshots=1; life mutations=5; explicit battlefield entries=Godless Shrine, Makeshift Binding; explicit battlefield exits=Elfsworn Giant.
+- Turn 9: actions: cards=1, abilities=1; explicit battlefield entries=Simic Guildgate, Apothecary Stomper.
+- Turn 10: actions: cards=1, abilities=2; combat snapshots=1; life mutations=3; explicit battlefield exits=Apothecary Stomper.
+- Turn 11: actions: cards=2, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Druid of the Cowl, Bigfin Bouncer; explicit battlefield exits=Moonrise Cleric.
+- Turn 12: actions: cards=1, abilities=0; explicit battlefield entries=Moonrise Cleric.
+- Turn 13: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Forest, Exclusion Mage; explicit battlefield exits=Moonrise Cleric.
+- Turn 14: actions: cards=1, abilities=10; combat snapshots=1; life mutations=10; explicit battlefield entries=Swamp, Bloodthirsty Conqueror.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Temple of Mystery [279] Hand (LIlasSweety) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LIlasSweety: Battlefield: Temple of Mystery [279]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bloodthirsty Conqueror [281] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 24).
+      Plains [282] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 27).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LIlasSweety: Battlefield: Temple of Mystery [279]
+      gian31: Battlefield: Plains [282]
+
+Turn 3
+  - Druid of the Cowl [valid_resolution_no_immediate_mutation, seq=47] (active=LIlasSweety, phase=Phase_Main1, controller=LIlasSweety, owner=LIlasSweety, source_object=285)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Druid of the Cowl resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Druid of the Cowl (object 285) Hand (LIlasSweety) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Druid of the Cowl (object 285) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Simic Guildgate [283] Library (LIlasSweety) -> Hand (LIlasSweety) (Draw; GRE sequence 41).
+      Forest [284] Hand (LIlasSweety) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LIlasSweety: Battlefield: Druid of the Cowl [285], Forest [284], Temple of Mystery [279]
+      gian31: Battlefield: Plains [282]
+
+Turn 4
+  - Starscape Cleric [valid_resolution_no_immediate_mutation, seq=68] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Starscape Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Starscape Cleric (object 290) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Starscape Cleric (object 290) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hero's Downfall [288] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 61).
+      Swamp [289] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 64).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LIlasSweety: Battlefield: Druid of the Cowl [285], Forest [284], Temple of Mystery [279]
+      gian31: Battlefield: Plains [282], Starscape Cleric [290], Swamp [289]
+
+Turn 5
+  - Druid of the Cowl [valid_resolution_no_immediate_mutation, seq=88] (active=LIlasSweety, phase=Phase_Main1, controller=LIlasSweety, owner=LIlasSweety, source_object=295)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Druid of the Cowl resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Druid of the Cowl (object 295) Hand (LIlasSweety) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Druid of the Cowl (object 295) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Island [293] Library (LIlasSweety) -> Hand (LIlasSweety) (Draw; GRE sequence 82).
+      Simic Guildgate [294] Hand (LIlasSweety) -> Battlefield (PlayLand; GRE sequence 85).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LIlasSweety: Battlefield: Druid of the Cowl [285], Druid of the Cowl [295], Forest [284], Simic Guildgate [294], Temple of Mystery [279]
+      gian31: Battlefield: Plains [282], Starscape Cleric [290], Swamp [289]
+
+Turn 6
+  - Moonrise Cleric [valid_resolution_no_immediate_mutation, seq=109] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=300)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Moonrise Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Moonrise Cleric (object 300) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Moonrise Cleric (object 300) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [290] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: LIlasSweety -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): LIlasSweety 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Godless Shrine [298] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 103).
+      Swamp [299] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 106).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LIlasSweety: Battlefield: Druid of the Cowl [285], Druid of the Cowl [295], Forest [284], Simic Guildgate [294], Temple of Mystery [279]
+      gian31: Battlefield: Moonrise Cleric [300], Plains [282], Starscape Cleric [290], Swamp [289], Swamp [299]
+
+Turn 7
+  - Elfsworn Giant [valid_resolution_no_immediate_mutation, seq=135] (active=LIlasSweety, phase=Phase_Main1, controller=LIlasSweety, owner=LIlasSweety, source_object=306)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Elfsworn Giant resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Elfsworn Giant (object 306) Hand (LIlasSweety) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Elfsworn Giant (object 306) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Simic Guildgate [304] Library (LIlasSweety) -> Hand (LIlasSweety) (Draw; GRE sequence 129).
+      Island [305] Hand (LIlasSweety) -> Battlefield (PlayLand; GRE sequence 132).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LIlasSweety: Battlefield: Druid of the Cowl [285], Druid of the Cowl [295], Elfsworn Giant [306], Forest [284], Island [305], Simic Guildgate [294], Temple of Mystery [279]
+      gian31: Battlefield: Moonrise Cleric [300], Plains [282], Starscape Cleric [290], Swamp [289], Swamp [299]
+
+Turn 8
+  - Makeshift Binding [valid_resolution_no_immediate_mutation, seq=157] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=314)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Makeshift Binding resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Makeshift Binding (object 314) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Makeshift Binding (object 314) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Makeshift Binding [observed_semantic_effect, seq=161] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=314, source_last_explicit_zone=Battlefield)
+      effects: exile, life +2
+      narrative: Ability of Makeshift Binding: exiles Elfsworn Giant; gian31 gains 2 life.
+      explicit effect object references: Elfsworn Giant [306], Elfsworn Giant [319] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Elfsworn Giant (object 319) Battlefield -> Exile (Exile; shared object ID)
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=163] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: LIlasSweety loses 1 life.
+  - Ability of Moonrise Cleric [observed_semantic_effect, seq=171] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=300, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Moonrise Cleric: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=173] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: LIlasSweety loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [290] (unblocked, observed P/T 2/1), Moonrise Cleric [300] (unblocked, observed P/T 2/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: LIlasSweety -6; gian31 +3 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 22
+    life: LIlasSweety 18 -> 17
+    life: gian31 22 -> 23
+    life: LIlasSweety 17 -> 16
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): LIlasSweety 16 -> 12
+    additional protocol-observed zone movements not assigned to an action chain:
+      Makeshift Binding [312] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 150).
+      Godless Shrine [313] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 154).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LIlasSweety: Battlefield: Druid of the Cowl [285], Druid of the Cowl [295], Forest [284], Island [305], Simic Guildgate [294], Temple of Mystery [279]; Exile: Elfsworn Giant [319]
+      gian31: Battlefield: Godless Shrine [313], Makeshift Binding [314], Moonrise Cleric [300], Plains [282], Starscape Cleric [290], Swamp [289], Swamp [299]
+
+Turn 9
+  - Apothecary Stomper [valid_resolution_no_immediate_mutation, seq=193] (active=LIlasSweety, phase=Phase_Main1, controller=LIlasSweety, owner=LIlasSweety, source_object=325)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Apothecary Stomper resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Apothecary Stomper (object 325) Hand (LIlasSweety) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Apothecary Stomper (object 325) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Apothecary Stomper [observed_semantic_effect, seq=198] (active=LIlasSweety, phase=Phase_Main1, controller=LIlasSweety, owner=LIlasSweety, source_object=325, source_last_explicit_zone=Battlefield)
+      effects: one +2/+2 counter; observed P/T change +2/+2 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Apothecary Stomper: Apothecary Stomper gets +2/+2; 2 counter(s) are added to Apothecary Stomper [325].
+    additional protocol-observed zone movements not assigned to an action chain:
+      Apothecary Stomper [323] Library (LIlasSweety) -> Hand (LIlasSweety) (Draw; GRE sequence 187).
+      Simic Guildgate [324] Hand (LIlasSweety) -> Battlefield (PlayLand; GRE sequence 190).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LIlasSweety: Battlefield: Apothecary Stomper [325], Druid of the Cowl [285], Druid of the Cowl [295], Forest [284], Island [305], Simic Guildgate [294], Simic Guildgate [324], Temple of Mystery [279]; Exile: Elfsworn Giant [319]
+      gian31: Battlefield: Godless Shrine [313], Makeshift Binding [314], Moonrise Cleric [300], Plains [282], Starscape Cleric [290], Swamp [289], Swamp [299]
+
+Turn 10
+  - Hero's Downfall [observed_semantic_effect, seq=219] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=335)
+      effects: destroy
+      narrative: Hero's Downfall destroys Apothecary Stomper.
+      explicit effect object references: Apothecary Stomper [325], Apothecary Stomper [339] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hero's Downfall (object 335) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Apothecary Stomper (object 339) Battlefield -> Graveyard (LIlasSweety) (Destroy; shared object ID)
+      protocol-linked zone transfer: Hero's Downfall (object 340) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 335 -> transfer object 340 (explicit GRE ObjectIdChanged chain).
+  - Ability of Moonrise Cleric [observed_semantic_effect, seq=227] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=300, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Moonrise Cleric: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=229] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: LIlasSweety loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [290] (unblocked, observed P/T 2/1), Moonrise Cleric [300] (unblocked, observed P/T 2/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: LIlasSweety -5; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 23 -> 24
+    life: LIlasSweety 12 -> 11
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): LIlasSweety 11 -> 7
+    additional protocol-observed zone movements not assigned to an action chain:
+      Marauding Blight-Priest [334] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 212).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LIlasSweety: Battlefield: Druid of the Cowl [285], Druid of the Cowl [295], Forest [284], Island [305], Simic Guildgate [294], Simic Guildgate [324], Temple of Mystery [279]; Exile: Elfsworn Giant [319]; Graveyard: Apothecary Stomper [339]
+      gian31: Battlefield: Godless Shrine [313], Makeshift Binding [314], Moonrise Cleric [300], Plains [282], Starscape Cleric [290], Swamp [289], Swamp [299]; Graveyard: Hero's Downfall [340]
+
+Turn 11
+  - Druid of the Cowl [valid_resolution_no_immediate_mutation, seq=248] (active=LIlasSweety, phase=Phase_Main1, controller=LIlasSweety, owner=LIlasSweety, source_object=344)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Druid of the Cowl resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Druid of the Cowl (object 344) Hand (LIlasSweety) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Druid of the Cowl (object 344) Stack -> Battlefield (Resolve; shared object ID)
+  - Bigfin Bouncer [valid_resolution_no_immediate_mutation, seq=251] (active=LIlasSweety, phase=Phase_Main1, controller=LIlasSweety, owner=LIlasSweety, source_object=347)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bigfin Bouncer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bigfin Bouncer (object 347) Hand (LIlasSweety) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bigfin Bouncer (object 347) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Bigfin Bouncer [observed_semantic_effect, seq=255] (active=LIlasSweety, phase=Phase_Main1, controller=LIlasSweety, owner=LIlasSweety, source_object=347, source_last_explicit_zone=Battlefield)
+      effects: return to battlefield
+      narrative: Ability of Bigfin Bouncer: a card/permanent returns.
+      explicit effect object references: Moonrise Cleric [300], Moonrise Cleric [353] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Moonrise Cleric (object 353) Battlefield -> Hand (gian31) (Return; shared object ID)
+  Combat snapshots observed (active=LIlasSweety; frames: DeclareAttack -> DeclareBlock):
+      attackers: Druid of the Cowl [295] (unblocked, observed P/T 1/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 24 -> 23
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bigfin Bouncer [343] Library (LIlasSweety) -> Hand (LIlasSweety) (Draw; GRE sequence 243).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LIlasSweety: Battlefield: Bigfin Bouncer [347], Druid of the Cowl [285], Druid of the Cowl [295], Druid of the Cowl [344], Forest [284], Island [305], Simic Guildgate [294], Simic Guildgate [324], Temple of Mystery [279]; Exile: Elfsworn Giant [319]; Graveyard: Apothecary Stomper [339]
+      gian31: Battlefield: Godless Shrine [313], Makeshift Binding [314], Plains [282], Starscape Cleric [290], Swamp [289], Swamp [299]; Graveyard: Hero's Downfall [340]
+
+Turn 12
+  - Moonrise Cleric [valid_resolution_no_immediate_mutation, seq=280] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=356)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Moonrise Cleric resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Moonrise Cleric (object 356) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Moonrise Cleric (object 356) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Lunar Convocation [355] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 275).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LIlasSweety: Battlefield: Bigfin Bouncer [347], Druid of the Cowl [285], Druid of the Cowl [295], Druid of the Cowl [344], Forest [284], Island [305], Simic Guildgate [294], Simic Guildgate [324], Temple of Mystery [279]; Exile: Elfsworn Giant [319]; Graveyard: Apothecary Stomper [339]
+      gian31: Battlefield: Godless Shrine [313], Makeshift Binding [314], Moonrise Cleric [356], Plains [282], Starscape Cleric [290], Swamp [289], Swamp [299]; Graveyard: Hero's Downfall [340]
+
+Turn 13
+  - Exclusion Mage [valid_resolution_no_immediate_mutation, seq=301] (active=LIlasSweety, phase=Phase_Main1, controller=LIlasSweety, owner=LIlasSweety, source_object=362)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Exclusion Mage resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Exclusion Mage (object 362) Hand (LIlasSweety) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Exclusion Mage (object 362) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Exclusion Mage [observed_semantic_effect, seq=305] (active=LIlasSweety, phase=Phase_Main1, controller=LIlasSweety, owner=LIlasSweety, source_object=362, source_last_explicit_zone=Battlefield)
+      effects: return to battlefield
+      narrative: Ability of Exclusion Mage: a card/permanent returns.
+      explicit effect object references: Moonrise Cleric [356], Moonrise Cleric [367] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Moonrise Cleric (object 367) Battlefield -> Hand (gian31) (Return; shared object ID)
+  Combat snapshots observed (active=LIlasSweety; frames: DeclareAttack -> DeclareBlock):
+      attackers: Druid of the Cowl [285] (unblocked, observed P/T 1/3), Druid of the Cowl [295] (unblocked, observed P/T 1/3), Druid of the Cowl [344] (unblocked, observed P/T 1/3), Bigfin Bouncer [347] (unblocked, observed P/T 3/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 6; observed attacker power total: 6; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -6 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 6 + observed modifiers 0 = 6; individual assignment unavailable): gian31 23 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [360] Library (LIlasSweety) -> Hand (LIlasSweety) (Draw; GRE sequence 295).
+      Forest [361] Hand (LIlasSweety) -> Battlefield (PlayLand; GRE sequence 298).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LIlasSweety: Battlefield: Bigfin Bouncer [347], Druid of the Cowl [285], Druid of the Cowl [295], Druid of the Cowl [344], Exclusion Mage [362], Forest [284], Forest [361], Island [305], Simic Guildgate [294], Simic Guildgate [324], Temple of Mystery [279]; Exile: Elfsworn Giant [319]; Graveyard: Apothecary Stomper [339]
+      gian31: Battlefield: Godless Shrine [313], Makeshift Binding [314], Plains [282], Starscape Cleric [290], Swamp [289], Swamp [299]; Graveyard: Hero's Downfall [340]
+
+Turn 14
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation, seq=334] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=371)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 371) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 371) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=346] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=371, source_last_explicit_zone=Battlefield)
+      effects: life +2
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 2 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=348] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: LIlasSweety loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=350] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=371, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=352] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: LIlasSweety loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=354] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=371, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=356] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: LIlasSweety loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=358] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=371, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=360] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: LIlasSweety loses 1 life.
+  - Ability of Bloodthirsty Conqueror [observed_semantic_effect, seq=362] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=371, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+  - Ability of Starscape Cleric [observed_semantic_effect, seq=364] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=290, source_last_explicit_zone=Battlefield)
+      effects: life -1
+      narrative: Ability of Starscape Cleric: LIlasSweety loses 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Starscape Cleric [290] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: LIlasSweety -6; gian31 +6 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): LIlasSweety 7 -> 5
+    life: gian31 17 -> 19
+    life: LIlasSweety 5 -> 4
+    life: gian31 19 -> 20
+    life: LIlasSweety 4 -> 3
+    life: gian31 20 -> 21
+    life: LIlasSweety 3 -> 2
+    life: gian31 21 -> 22
+    life: LIlasSweety 2 -> 1
+    life: gian31 22 -> 23
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [369] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 328).
+      Swamp [370] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 331).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LIlasSweety: Battlefield: Bigfin Bouncer [347], Druid of the Cowl [285], Druid of the Cowl [295], Druid of the Cowl [344], Exclusion Mage [362], Forest [284], Forest [361], Island [305], Simic Guildgate [294], Simic Guildgate [324], Temple of Mystery [279]; Exile: Elfsworn Giant [319]; Graveyard: Apothecary Stomper [339]
+      gian31: Battlefield: Bloodthirsty Conqueror [371], Godless Shrine [313], Makeshift Binding [314], Plains [282], Starscape Cleric [290], Swamp [289], Swamp [299], Swamp [370]; Graveyard: Hero's Downfall [340]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- No life mutation without an exact same-record source was observed.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Temple of Mystery [owner=LIlasSweety, controller=LIlasSweety] moves Hand (LIlasSweety) -> Battlefield (PlayLand).
+- Turn 2, seq 24: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 27: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 41: Simic Guildgate [owner/controller metadata unavailable] moves Library (LIlasSweety) -> Hand (LIlasSweety) (Draw).
+- Turn 3, seq 44: Forest [owner=LIlasSweety, controller=LIlasSweety] moves Hand (LIlasSweety) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Druid of the Cowl [owner=LIlasSweety, controller=LIlasSweety] moves Hand (LIlasSweety) -> Stack (CastSpell).
+- Turn 3, seq 47: Druid of the Cowl [owner=LIlasSweety, controller=LIlasSweety] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 61: Hero's Downfall [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 64: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 65: Starscape Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 68: Starscape Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 82: Island [owner/controller metadata unavailable] moves Library (LIlasSweety) -> Hand (LIlasSweety) (Draw).
+- Turn 5, seq 85: Simic Guildgate [owner=LIlasSweety, controller=LIlasSweety] moves Hand (LIlasSweety) -> Battlefield (PlayLand).
+- Turn 5, seq 86: Druid of the Cowl [owner=LIlasSweety, controller=LIlasSweety] moves Hand (LIlasSweety) -> Stack (CastSpell).
+- Turn 5, seq 88: Druid of the Cowl [owner=LIlasSweety, controller=LIlasSweety] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 103: Godless Shrine [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 106: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 107: Moonrise Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 109: Moonrise Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 129: Simic Guildgate [owner/controller metadata unavailable] moves Library (LIlasSweety) -> Hand (LIlasSweety) (Draw).
+- Turn 7, seq 132: Island [owner=LIlasSweety, controller=LIlasSweety] moves Hand (LIlasSweety) -> Battlefield (PlayLand).
+- Turn 7, seq 133: Elfsworn Giant [owner=LIlasSweety, controller=LIlasSweety] moves Hand (LIlasSweety) -> Stack (CastSpell).
+- Turn 7, seq 135: Elfsworn Giant [owner=LIlasSweety, controller=LIlasSweety] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 150: Makeshift Binding [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 154: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 155: Makeshift Binding [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 157: Makeshift Binding [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 161: Elfsworn Giant [owner=LIlasSweety, controller=LIlasSweety] moves Battlefield -> Exile (Exile).
+- Turn 9, seq 187: Apothecary Stomper [owner/controller metadata unavailable] moves Library (LIlasSweety) -> Hand (LIlasSweety) (Draw).
+- Turn 9, seq 190: Simic Guildgate [owner=LIlasSweety, controller=LIlasSweety] moves Hand (LIlasSweety) -> Battlefield (PlayLand).
+- Turn 9, seq 191: Apothecary Stomper [owner=LIlasSweety, controller=LIlasSweety] moves Hand (LIlasSweety) -> Stack (CastSpell).
+- Turn 9, seq 193: Apothecary Stomper [owner=LIlasSweety, controller=LIlasSweety] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 212: Marauding Blight-Priest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 215: Hero's Downfall [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 219: Apothecary Stomper [owner=LIlasSweety, controller=LIlasSweety] moves Battlefield -> Graveyard (LIlasSweety) (Destroy).
+- Turn 10, seq 219: Hero's Downfall [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 11, seq 243: Bigfin Bouncer [owner/controller metadata unavailable] moves Library (LIlasSweety) -> Hand (LIlasSweety) (Draw).
+- Turn 11, seq 246: Druid of the Cowl [owner=LIlasSweety, controller=LIlasSweety] moves Hand (LIlasSweety) -> Stack (CastSpell).
+- Turn 11, seq 248: Druid of the Cowl [owner=LIlasSweety, controller=LIlasSweety] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 249: Bigfin Bouncer [owner=LIlasSweety, controller=LIlasSweety] moves Hand (LIlasSweety) -> Stack (CastSpell).
+- Turn 11, seq 251: Bigfin Bouncer [owner=LIlasSweety, controller=LIlasSweety] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 255: Moonrise Cleric [owner=gian31, controller=gian31] moves Battlefield -> Hand (gian31) (Return).
+- Turn 12, seq 275: Lunar Convocation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 278: Moonrise Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 280: Moonrise Cleric [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 295: Forest [owner/controller metadata unavailable] moves Library (LIlasSweety) -> Hand (LIlasSweety) (Draw).
+- Turn 13, seq 298: Forest [owner=LIlasSweety, controller=LIlasSweety] moves Hand (LIlasSweety) -> Battlefield (PlayLand).
+- Turn 13, seq 299: Exclusion Mage [owner=LIlasSweety, controller=LIlasSweety] moves Hand (LIlasSweety) -> Stack (CastSpell).
+- Turn 13, seq 301: Exclusion Mage [owner=LIlasSweety, controller=LIlasSweety] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 305: Moonrise Cleric [owner=gian31, controller=gian31] moves Battlefield -> Hand (gian31) (Return).
+- Turn 14, seq 328: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 331: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 14, seq 332: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 334: Bloodthirsty Conqueror [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 160 becomes object 279 [Temple of Mystery].
+- Turn 2, seq 24: object 226 becomes object 281 [Bloodthirsty Conqueror].
+- Turn 2, seq 27: object 219 becomes object 282 [Plains].
+- Turn 3, seq 41: object 166 becomes object 283 [Simic Guildgate].
+- Turn 3, seq 44: object 165 becomes object 284 [Forest].
+- Turn 3, seq 45: object 163 becomes object 285 [Druid of the Cowl].
+- Turn 4, seq 61: object 227 becomes object 288 [Hero's Downfall].
+- Turn 4, seq 64: object 224 becomes object 289 [Swamp].
+- Turn 4, seq 65: object 220 becomes object 290 [Starscape Cleric].
+- Turn 5, seq 82: object 167 becomes object 293 [Island].
+- Turn 5, seq 85: object 283 becomes object 294 [Simic Guildgate].
+- Turn 5, seq 86: object 159 becomes object 295 [Druid of the Cowl].
+- Turn 6, seq 103: object 228 becomes object 298 [Godless Shrine].
+- Turn 6, seq 106: object 225 becomes object 299 [Swamp].
+- Turn 6, seq 107: object 223 becomes object 300 [Moonrise Cleric].
+- Turn 7, seq 129: object 168 becomes object 304 [Simic Guildgate].
+- Turn 7, seq 132: object 293 becomes object 305 [Island].
+- Turn 7, seq 133: object 161 becomes object 306 [Elfsworn Giant].
+- Turn 8, seq 150: object 229 becomes object 312 [Makeshift Binding].
+- Turn 8, seq 154: object 298 becomes object 313 [Godless Shrine].
+- Turn 8, seq 155: object 312 becomes object 314 [Makeshift Binding].
+- Turn 8, seq 161: object 306 becomes object 319 [Elfsworn Giant].
+- Turn 9, seq 187: object 169 becomes object 323 [Apothecary Stomper].
+- Turn 9, seq 190: object 304 becomes object 324 [Simic Guildgate].
+- Turn 9, seq 191: object 323 becomes object 325 [Apothecary Stomper].
+- Turn 10, seq 212: object 230 becomes object 334 [Marauding Blight-Priest].
+- Turn 10, seq 215: object 288 becomes object 335 [Hero's Downfall].
+- Turn 10, seq 219: object 325 becomes object 339 [Apothecary Stomper].
+- Turn 10, seq 219: object 335 becomes object 340 [Hero's Downfall].
+- Turn 11, seq 243: object 170 becomes object 343 [Bigfin Bouncer].
+- Turn 11, seq 246: object 164 becomes object 344 [Druid of the Cowl].
+- Turn 11, seq 249: object 343 becomes object 347 [Bigfin Bouncer].
+- Turn 11, seq 255: object 300 becomes object 353 [Moonrise Cleric].
+- Turn 12, seq 275: object 231 becomes object 355 [Lunar Convocation].
+- Turn 12, seq 278: object 353 becomes object 356 [Moonrise Cleric].
+- Turn 13, seq 295: object 171 becomes object 360 [Forest].
+- Turn 13, seq 298: object 360 becomes object 361 [Forest].
+- Turn 13, seq 299: object 162 becomes object 362 [Exclusion Mage].
+- Turn 13, seq 305: object 356 becomes object 367 [Moonrise Cleric].
+- Turn 14, seq 328: object 232 becomes object 369 [Swamp].
+- Turn 14, seq 331: object 369 becomes object 370 [Swamp].
+- Turn 14, seq 332: object 281 becomes object 371 [Bloodthirsty Conqueror].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: LIlasSweety plays Temple of Mystery (object 279) from Hand (LIlasSweety) to Battlefield.
+- Turn 2: gian31 plays Plains (object 282) from Hand (gian31) to Battlefield.
+- Turn 3: LIlasSweety plays Forest (object 284) from Hand (LIlasSweety) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 289) from Hand (gian31) to Battlefield.
+- Turn 5: LIlasSweety plays Simic Guildgate (object 294) from Hand (LIlasSweety) to Battlefield.
+- Turn 6: gian31 plays Swamp (object 299) from Hand (gian31) to Battlefield.
+- Turn 7: LIlasSweety plays Island (object 305) from Hand (LIlasSweety) to Battlefield.
+- Turn 8: gian31 plays Godless Shrine (object 313) from Hand (gian31) to Battlefield.
+- Turn 9: LIlasSweety plays Simic Guildgate (object 324) from Hand (LIlasSweety) to Battlefield.
+- Turn 13: LIlasSweety plays Forest (object 361) from Hand (LIlasSweety) to Battlefield.
+- Turn 14: gian31 plays Swamp (object 370) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 14: ordered adjacent records Bloodthirsty Conqueror -> Starscape Cleric; observed repetitions=5; net life: LIlasSweety -5, gian31 +6. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Bloodthirsty Conqueror=5, Starscape Cleric=5.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 14: ordered adjacent records Bloodthirsty Conqueror -> Starscape Cleric; observed repetitions=5 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Starscape Cleric: casts=1; abilities=8 (triggered=8, activated=0) across turns [4, 8, 8, 10, 14, 14, 14, 14, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=8, other=2
+  observed effects: life -1, synthetic event
+- Bloodthirsty Conqueror: casts=1; abilities=5 (triggered=5, activated=0) across turns [14, 14, 14, 14, 14, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=5, other=0
+  observed effects: life +1, life +2
+- Moonrise Cleric: casts=2; abilities=2 (triggered=2, activated=0) across turns [6, 8, 10, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Druid of the Cowl: casts=3 across turns [3, 5, 11]
+- Apothecary Stomper: casts=1; abilities=1 (triggered=1, activated=0) across turns [9, 9]
+  observed effect totals: draws=0, tokens=0, counters=1, returns=0, damage=0, life_changes=0, other=1
+  observed effects: +2 counter(s), P/T +2/+2
+- Bigfin Bouncer: casts=1; abilities=1 (triggered=1, activated=0) across turns [11, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=1, damage=0, life_changes=0, other=0
+  observed effects: return to battlefield
+- Exclusion Mage: casts=1; abilities=1 (triggered=1, activated=0) across turns [13, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=1, damage=0, life_changes=0, other=0
+  observed effects: return to battlefield
+- Makeshift Binding: casts=1; abilities=1 (triggered=1, activated=0) across turns [8, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: exile, life +2
+- Elfsworn Giant: casts=1 across turns [7]
+- Hero's Downfall: casts=1 across turns [10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 6 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> LIlasSweety; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> LIlasSweety; unblocked in this observed snapshot
+  attacker: Moonrise Cleric (gian31) -> LIlasSweety; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> LIlasSweety; unblocked in this observed snapshot
+  attacker: Moonrise Cleric (gian31) -> LIlasSweety; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=LIlasSweety)
+  attacker: Druid of the Cowl (LIlasSweety) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 - DeclareAttack, DeclareBlock (active=LIlasSweety)
+  attacker: Druid of the Cowl (LIlasSweety) -> gian31; unblocked in this observed snapshot
+  attacker: Druid of the Cowl (LIlasSweety) -> gian31; unblocked in this observed snapshot
+  attacker: Druid of the Cowl (LIlasSweety) -> gian31; unblocked in this observed snapshot
+  attacker: Bigfin Bouncer (LIlasSweety) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 14 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Starscape Cleric (gian31) -> LIlasSweety; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 8: Ability of Moonrise Cleric (active=gian31) - Ability of Moonrise Cleric: gian31 gains 1 life.
+- Turn 8: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: LIlasSweety loses 1 life.
+- Turn 10: Ability of Moonrise Cleric (active=gian31) - Ability of Moonrise Cleric: gian31 gains 1 life.
+- Turn 10: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: LIlasSweety loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 2 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: LIlasSweety loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: LIlasSweety loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: LIlasSweety loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: LIlasSweety loses 1 life.
+- Turn 14: Ability of Bloodthirsty Conqueror (active=gian31) - Ability of Bloodthirsty Conqueror: gian31 gains 1 life.
+- Turn 14: Ability of Starscape Cleric (active=gian31) - Ability of Starscape Cleric: LIlasSweety loses 1 life.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 219: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 220: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 221: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 222: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 223: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 224: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 225: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 279: Temple of Mystery | controller=LIlasSweety | owner=LIlasSweety | zone=Battlefield (latest_object_observation)
+- 280: object 280 | controller=LIlasSweety | owner=LIlasSweety | zone=unknown (inferred unknown) (latest_object_observation)
+- 281: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 282: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 284: Forest | controller=LIlasSweety | owner=LIlasSweety | zone=Battlefield (latest_object_observation)
+- 285: Druid of the Cowl | controller=LIlasSweety | owner=LIlasSweety | zone=Battlefield (latest_object_observation)
+- 288: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 289: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 290: Starscape Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 294: Simic Guildgate | controller=LIlasSweety | owner=LIlasSweety | zone=Battlefield (latest_object_observation)
+- 295: Druid of the Cowl | controller=LIlasSweety | owner=LIlasSweety | zone=Battlefield (latest_object_observation)
+- 298: Godless Shrine | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 299: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 300: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 305: Island | controller=LIlasSweety | owner=LIlasSweety | zone=Battlefield (latest_object_observation)
+- 306: Elfsworn Giant | controller=LIlasSweety | owner=LIlasSweety | zone=Battlefield (latest_object_observation)
+- 312: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 313: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 314: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 318: object 318 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 319: Elfsworn Giant | controller=LIlasSweety | owner=LIlasSweety | zone=Exile (latest_object_observation)
+- 320: object 320 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 321: object 321 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 322: object 322 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 324: Simic Guildgate | controller=LIlasSweety | owner=LIlasSweety | zone=Battlefield (latest_object_observation)
+- 325: Apothecary Stomper | controller=LIlasSweety | owner=LIlasSweety | zone=Battlefield (latest_object_observation)
+- 332: object 332 | controller=LIlasSweety | owner=LIlasSweety | zone=unknown (inferred unknown) (latest_object_observation)
+- 334: Marauding Blight-Priest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 335: Hero's Downfall | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 339: Apothecary Stomper | controller=LIlasSweety | owner=LIlasSweety | zone=Graveyard (latest_object_observation)
+- 340: Hero's Downfall | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 341: object 341 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 342: object 342 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 344: Druid of the Cowl | controller=LIlasSweety | owner=LIlasSweety | zone=Battlefield (latest_object_observation)
+- 347: Bigfin Bouncer | controller=LIlasSweety | owner=LIlasSweety | zone=Battlefield (latest_object_observation)
+- 352: Howlsquad Heavy | controller=LIlasSweety | owner=LIlasSweety | zone=unknown (inferred unknown) (latest_object_observation)
+- 353: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 354: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 355: Lunar Convocation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 356: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 361: Forest | controller=LIlasSweety | owner=LIlasSweety | zone=Battlefield (latest_object_observation)
+- 362: Exclusion Mage | controller=LIlasSweety | owner=LIlasSweety | zone=Battlefield (latest_object_observation)
+- 366: Howlsquad Heavy | controller=LIlasSweety | owner=LIlasSweety | zone=unknown (inferred unknown) (latest_object_observation)
+- 367: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 368: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 369: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 370: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 371: Bloodthirsty Conqueror | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 377: object 377 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 378: object 378 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 379: object 379 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 380: object 380 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 381: object 381 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 382: object 382 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 383: object 383 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 384: object 384 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 385: object 385 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 386: object 386 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 387: object 387 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+LIlasSweety: 19 total items
+  zones: Battlefield=13, Exile=1, Graveyard=1, unknown=4
+  objects: Druid of the Cowl x3, Apothecary Stomper x2, Elfsworn Giant x2, Forest x2, Howlsquad Heavy x2, Simic Guildgate x2, Bigfin Bouncer, Exclusion Mage, Island, Temple of Mystery, object 280, object 332
+gian31: 47 total items
+  zones: Battlefield=11, Hand=16, Stack=2, unknown=18
+  objects: Moonrise Cleric x7, Swamp x6, Hero's Downfall x3, Bloodthirsty Conqueror x2, Godless Shrine x2, Makeshift Binding x2, Marauding Blight-Priest x2, Plains x2, Starscape Cleric x2, Lunar Convocation, Phyrexian Arena, object 318
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+LIlasSweety:
+  Battlefield (13): Apothecary Stomper, Bigfin Bouncer, Druid of the Cowl, Druid of the Cowl, Druid of the Cowl, Elfsworn Giant, Exclusion Mage, Forest, Forest, Island, Simic Guildgate, Simic Guildgate, Temple of Mystery
+  Graveyard: 1 card(s)
+gian31:
+  Battlefield (11): Bloodthirsty Conqueror, Godless Shrine, Moonrise Cleric, Moonrise Cleric, Moonrise Cleric, Moonrise Cleric, Plains, Starscape Cleric, Swamp, Swamp, Swamp
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+22 objects have no resolved final zone and are omitted from the known board state.
+LIlasSweety: 4 unknown object(s)
+gian31: 18 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=16, Stack=2
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+LIlasSweety:
+  Battlefield (11): Temple of Mystery, Forest, Druid of the Cowl, Simic Guildgate, Druid of the Cowl, Island, Simic Guildgate, Druid of the Cowl, Bigfin Bouncer, Forest, Exclusion Mage
+  Graveyard (1): Apothecary Stomper
+  Exile (1): Elfsworn Giant
+gian31:
+  Battlefield (8): Plains, Swamp, Starscape Cleric, Swamp, Godless Shrine, Makeshift Binding, Swamp, Bloodthirsty Conqueror
+  Graveyard (1): Hero's Downfall
+Known non-persistent entries (counts only):
+  gian31: Hand=5, Limbo=4, Pending=1, Revealed=1
+  unknown: Library=93, Limbo=5
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: LIlasSweety Battlefield=1
+- Turn 2: LIlasSweety Battlefield=1; gian31 Battlefield=1
+- Turn 3: LIlasSweety Battlefield=3; gian31 Battlefield=1
+- Turn 4: LIlasSweety Battlefield=3; gian31 Battlefield=3
+- Turn 5: LIlasSweety Battlefield=5; gian31 Battlefield=3
+- Turn 6: LIlasSweety Battlefield=5; gian31 Battlefield=5
+- Turn 7: LIlasSweety Battlefield=7; gian31 Battlefield=5
+- Turn 8: LIlasSweety Battlefield=6; LIlasSweety Exile=1; gian31 Battlefield=7
+- Turn 9: LIlasSweety Battlefield=8; LIlasSweety Exile=1; gian31 Battlefield=7
+- Turn 10: LIlasSweety Battlefield=7; LIlasSweety Graveyard=1; LIlasSweety Exile=1; gian31 Battlefield=7; gian31 Graveyard=1
+- Turn 11: LIlasSweety Battlefield=9; LIlasSweety Graveyard=1; LIlasSweety Exile=1; gian31 Battlefield=6; gian31 Graveyard=1
+- Turn 12: LIlasSweety Battlefield=9; LIlasSweety Graveyard=1; LIlasSweety Exile=1; gian31 Battlefield=7; gian31 Graveyard=1
+- Turn 13: LIlasSweety Battlefield=11; LIlasSweety Graveyard=1; LIlasSweety Exile=1; gian31 Battlefield=6; gian31 Graveyard=1
+- Turn 14: LIlasSweety Battlefield=11; LIlasSweety Graveyard=1; LIlasSweety Exile=1; gian31 Battlefield=8; gian31 Graveyard=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 3: Druid of the Cowl resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Starscape Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Druid of the Cowl resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Moonrise Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Elfsworn Giant resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Makeshift Binding resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Apothecary Stomper resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Druid of the Cowl resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Bigfin Bouncer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Moonrise Cleric resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Exclusion Mage resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
