@@ -1,0 +1,717 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: IllusionDistort, gian31
+Seat map: Seat 1=IllusionDistort, Seat 2=gian31
+Turn range (known): 1 - 11
+Unnumbered turn groups retained: 1
+Records: 27
+Action chains: 24
+Winner: IllusionDistort
+Final life: {'IllusionDistort': 17, 'gian31': -9}
+Lethal combat transition: gian31 3 -> -9. Observed unblocked attackers reconcile 12/12 life loss; 0 additional life loss remains unexplained (individual combat assignment unavailable).
+Lethal coverage (normalized): complete; explained=12/12; unexplained=0.
+Match conclusion: Life total reached 0 observed for gian31.
+Last captured action before match-result payload: Turn 11 (Phase_Combat, Step_DeclareAttack; Ability of Inti, Seneschal of the Sun, seq 313).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 34 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 9 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 6, 7, 9, 10, 11] (raw records=9; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 14 explicit Library -> Hand movement(s); named in the draw record=5, resolved through an explicit identity transition=8, unresolved=1.
+Unresolved draw identities (explicit movements retained): Turn 11, seq 297, object 467.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 6).
+  - gian31: 6 observed card(s): Fell [294], Vaan, Street Thief [295], Mountain [296], Laughing Jasper Flint [297], Duress [298], Swamp [300].
+  - unknown: 7 observed card(s): object 168 [168], object 169 [169], object 170 [170], object 171 [171], object 172 [172], object 173 [173], object 174 [174].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: IllusionDistort; observed final life totals: {'IllusionDistort': 17, 'gian31': -9}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 11 (Phase_Combat, Step_DeclareAttack; Ability of Inti, Seneschal of the Sun, seq 313).
+Last captured life snapshot: gian31 3 -> -9 (seq 318).
+Terminal condition observed: gian31 reached -9 life; exact lethal-source coverage is reported separately.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=1, abilities=0; life mutations=1; explicit battlefield entries=Mountain.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 3: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Tyrox, Saurid Tyrant.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Mountain; explicit battlefield exits=Tyrox, Saurid Tyrant.
+- Turn 5: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Viashino Pyromancer.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Laughing Jasper Flint.
+- Turn 7: actions: cards=1, abilities=2; combat snapshots=1; life mutations=1; explicit battlefield entries=Inti, Seneschal of the Sun, Mountain.
+- Turn 8: actions: cards=2, abilities=1; explicit battlefield entries=Yuyan Archers; explicit battlefield exits=Yuyan Archers.
+- Turn 9: actions: cards=2, abilities=4; combat snapshots=1; life mutations=3; explicit battlefield entries=Mountain, Viashino Pyromancer.
+- Turn 10: actions: cards=2, abilities=2; life mutations=1; explicit battlefield entries=Mountain, Vaan, Street Thief.
+- Turn 11: actions: cards=2, abilities=3; combat snapshots=1; life mutations=1; explicit battlefield entries=Mountain, Fugitive Codebreaker, Case of the Crimson Pulse.
+- Turn None: actions: cards=0, abilities=0.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Shock [observed_semantic_effect, seq=14] (active=IllusionDistort, phase=Phase_Main1, controller=IllusionDistort, owner=IllusionDistort, source_object=356)
+      effects: 2 damage; life -2 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Shock: gian31 takes 2 damage (resulting in 2 life lost).
+      explicit effect object references: gian31 [player seat 2] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shock (object 356) Hand (IllusionDistort) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Shock (object 358) Stack -> Graveyard (IllusionDistort) (Resolve; shared object ID)
+      identity continuity: source object 356 -> transfer object 358 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Shock; direct protocol link unavailable): gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Gastal Raider [354] Hand (gian31) -> Library (gian31) (Put; GRE sequence 6).
+      Mountain [355] Hand (IllusionDistort) -> Battlefield (PlayLand; GRE sequence 9).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      IllusionDistort: Battlefield: Mountain [355]; Graveyard: Shock [358]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      At Knifepoint [359] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 28).
+      Swamp [360] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 31).
+      Duress [361] Hand (gian31) -> Stack (CastSpell; GRE sequence 32).
+      Duress [368] Stack -> Graveyard (gian31) (Resolve; GRE sequence 37).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      IllusionDistort: Battlefield: Mountain [355]; Graveyard: Shock [358]
+      gian31: Battlefield: Swamp [360]; Graveyard: Duress [368]
+
+Turn 3
+  - Tyrox, Saurid Tyrant [valid_resolution_no_immediate_mutation, seq=57] (active=IllusionDistort, phase=Phase_Main1, controller=IllusionDistort, owner=IllusionDistort, source_object=371)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tyrox, Saurid Tyrant resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tyrox, Saurid Tyrant (object 371) Hand (IllusionDistort) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tyrox, Saurid Tyrant (object 371) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tyrox, Saurid Tyrant [369] Library (IllusionDistort) -> Hand (IllusionDistort) (Draw; GRE sequence 51).
+      Mountain [370] Hand (IllusionDistort) -> Battlefield (PlayLand; GRE sequence 54).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      IllusionDistort: Battlefield: Mountain [355], Mountain [370], Tyrox, Saurid Tyrant [371]; Graveyard: Shock [358]
+      gian31: Battlefield: Swamp [360]; Graveyard: Duress [368]
+
+Turn 4
+  - Fell [observed_semantic_effect, seq=79] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=376)
+      effects: destroy
+      narrative: Fell destroys Tyrox, Saurid Tyrant.
+      explicit effect object references: Tyrox, Saurid Tyrant [371], Tyrox, Saurid Tyrant [379] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Fell (object 376) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tyrox, Saurid Tyrant (object 379) Battlefield -> Graveyard (IllusionDistort) (Destroy; shared object ID)
+      protocol-linked zone transfer: Fell (object 380) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 376 -> transfer object 380 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [374] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 71).
+      Mountain [375] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 74).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      IllusionDistort: Battlefield: Mountain [355], Mountain [370]; Graveyard: Shock [358], Tyrox, Saurid Tyrant [379]
+      gian31: Battlefield: Mountain [375], Swamp [360]; Graveyard: Duress [368], Fell [380]
+
+Turn 5
+  - Viashino Pyromancer [valid_resolution_no_immediate_mutation, seq=98] (active=IllusionDistort, phase=Phase_Main1, controller=IllusionDistort, owner=IllusionDistort, source_object=382)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Viashino Pyromancer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Viashino Pyromancer (object 382) Hand (IllusionDistort) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Viashino Pyromancer (object 382) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Viashino Pyromancer [observed_semantic_effect, seq=102] (active=IllusionDistort, phase=Phase_Main1, controller=IllusionDistort, owner=IllusionDistort, source_object=382, source_last_explicit_zone=Battlefield)
+      effects: 2 damage; life -2 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Viashino Pyromancer: gian31 takes 2 damage (resulting in 2 life lost).
+      explicit effect object references: gian31 [player seat 2] (role/targeting only where the protocol identifies it)
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Viashino Pyromancer; direct protocol link unavailable): gian31 18 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Burst Lightning [381] Library (IllusionDistort) -> Hand (IllusionDistort) (Draw; GRE sequence 93).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      IllusionDistort: Battlefield: Mountain [355], Mountain [370], Viashino Pyromancer [382]; Graveyard: Shock [358], Tyrox, Saurid Tyrant [379]
+      gian31: Battlefield: Mountain [375], Swamp [360]; Graveyard: Duress [368], Fell [380]
+
+Turn 6
+  - Laughing Jasper Flint [valid_resolution_no_immediate_mutation, seq=122] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=388)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Laughing Jasper Flint resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Laughing Jasper Flint (object 388) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Laughing Jasper Flint (object 388) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tinybones, Bauble Burglar [386] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 116).
+      Mountain [387] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 119).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      IllusionDistort: Battlefield: Mountain [355], Mountain [370], Viashino Pyromancer [382]; Graveyard: Shock [358], Tyrox, Saurid Tyrant [379]
+      gian31: Battlefield: Laughing Jasper Flint [388], Mountain [375], Mountain [387], Swamp [360]; Graveyard: Duress [368], Fell [380]
+
+Turn 7
+  - Inti, Seneschal of the Sun [valid_resolution_no_immediate_mutation, seq=141] (active=IllusionDistort, phase=Phase_Main1, controller=IllusionDistort, owner=IllusionDistort, source_object=393)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Inti, Seneschal of the Sun resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Inti, Seneschal of the Sun (object 393) Hand (IllusionDistort) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Inti, Seneschal of the Sun (object 393) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Inti, Seneschal of the Sun [observed_semantic_effect, seq=155] (active=IllusionDistort, phase=Phase_Combat, step=Step_DeclareAttack, controller=IllusionDistort, owner=IllusionDistort, source_object=393, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Inti, Seneschal of the Sun: Viashino Pyromancer gets +1/+1; 1 counter(s) are added to Viashino Pyromancer [382].
+      explicit effect object references: Viashino Pyromancer [382] (role/targeting only where the protocol identifies it)
+  - Ability of Inti, Seneschal of the Sun [observed_semantic_effect, seq=157] (active=IllusionDistort, phase=Phase_Combat, step=Step_DeclareAttack, controller=IllusionDistort, owner=IllusionDistort, source_object=393, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 155 and 157; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: exile
+      narrative: Ability of Inti, Seneschal of the Sun: exiles Mountain.
+      explicit effect object references: object 178 [178], Mountain [404] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Mountain (object 404) Library (IllusionDistort) -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=IllusionDistort; frames: DeclareAttack):
+      attackers: Viashino Pyromancer [382] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 2; snapshot comparison does not reconcile (exact assignment unavailable).
+      P/T timing: combat snapshot power=2; explicit modifiers in the same observed combat context add 1 power to 1/1 unblocked attackers; post-modifier observed reconstruction=3 (fully reconciled; individual assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -3 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 1 = 3; individual assignment unavailable): gian31 16 -> 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Grab the Prize [392] Library (IllusionDistort) -> Hand (IllusionDistort) (Draw; GRE sequence 136).
+      Fugitive Codebreaker [398] Hand (IllusionDistort) -> Graveyard (IllusionDistort) (Discard; GRE sequence 150).
+      Mountain [405] Exile -> Battlefield (PlayLand; GRE sequence 167).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      IllusionDistort: Battlefield: Inti, Seneschal of the Sun [393], Mountain [355], Mountain [370], Mountain [405], Viashino Pyromancer [382]; Graveyard: Fugitive Codebreaker [398], Shock [358], Tyrox, Saurid Tyrant [379]
+      gian31: Battlefield: Laughing Jasper Flint [388], Mountain [375], Mountain [387], Swamp [360]; Graveyard: Duress [368], Fell [380]
+
+Turn 8
+  - Ability of Laughing Jasper Flint [observed_semantic_effect, seq=175] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=388, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Laughing Jasper Flint: exiles Yuyan Archers.
+      explicit effect object references: object 179 [179], Yuyan Archers [407] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Yuyan Archers (object 407) Library (IllusionDistort) -> Exile (Exile; shared object ID)
+  - Yuyan Archers [valid_resolution_no_immediate_mutation, seq=182] (active=gian31, phase=Phase_Main1, controller=gian31, owner=IllusionDistort, source_object=409)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Yuyan Archers resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Yuyan Archers (object 409) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Yuyan Archers (object 409) Stack -> Battlefield (Resolve; shared object ID)
+  - Burst Lightning [observed_semantic_effect, seq=203] (active=unknown, controller=IllusionDistort, owner=IllusionDistort, source_object=413)
+      chronology reconciliation: parser turn group None conflicts with Turn 8; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: 2 damage
+      narrative: Burst Lightning: Yuyan Archers takes 2 damage.
+      explicit effect object references: Yuyan Archers [409] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Burst Lightning (object 413) Hand (IllusionDistort) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Burst Lightning (object 415) Stack -> Graveyard (IllusionDistort) (Resolve; shared object ID)
+      identity continuity: source object 413 -> transfer object 415 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Yuyan Archers (object 416) Battlefield -> Graveyard (IllusionDistort) (SBA_Damage; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Binding Negotiation [408] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 177).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      IllusionDistort: Battlefield: Inti, Seneschal of the Sun [393], Mountain [355], Mountain [370], Mountain [405], Viashino Pyromancer [382]; Graveyard: Burst Lightning [415], Fugitive Codebreaker [398], Shock [358], Tyrox, Saurid Tyrant [379], Yuyan Archers [416]
+      gian31: Battlefield: Laughing Jasper Flint [388], Mountain [375], Mountain [387], Swamp [360]; Graveyard: Duress [368], Fell [380]
+
+Turn 9
+  - Ability of Inti, Seneschal of the Sun [observed_semantic_effect, seq=223] (active=IllusionDistort, phase=Phase_Combat, step=Step_DeclareAttack, controller=IllusionDistort, owner=IllusionDistort, source_object=393, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Inti, Seneschal of the Sun: Inti, Seneschal of the Sun gets +1/+1; 1 counter(s) are added to Inti, Seneschal of the Sun [393].
+  - Ability of Inti, Seneschal of the Sun [observed_semantic_effect, seq=225] (active=IllusionDistort, phase=Phase_Combat, step=Step_DeclareAttack, controller=IllusionDistort, owner=IllusionDistort, source_object=393, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 223 and 225; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: exile
+      narrative: Ability of Inti, Seneschal of the Sun: exiles Mountain.
+      explicit effect object references: object 181 [181], Mountain [425] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Mountain (object 425) Library (IllusionDistort) -> Exile (Exile; shared object ID)
+  - Ability of Inti, Seneschal of the Sun [observed_semantic_effect, seq=239] (active=IllusionDistort, phase=Phase_Main2, controller=IllusionDistort, owner=IllusionDistort, source_object=393, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 225 and 239; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: exile
+      narrative: Ability of Inti, Seneschal of the Sun: exiles Viashino Pyromancer.
+      explicit effect object references: object 182 [182], Viashino Pyromancer [433] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Viashino Pyromancer (object 433) Library (IllusionDistort) -> Exile (Exile; shared object ID)
+  - Grab the Prize [observed_semantic_effect, seq=241] (active=IllusionDistort, phase=Phase_Main2, controller=IllusionDistort, owner=IllusionDistort, source_object=427)
+      effects: draw; draw; 2 damage; life -2 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Grab the Prize: draw; draw; gian31 takes 2 damage (resulting in 2 life lost).
+      explicit effect object references: object 183 [183], object 184 [184], gian31 [player seat 2], object 434 [434], object 436 [436] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Grab the Prize (object 427) Hand (IllusionDistort) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fugitive Codebreaker (object 434) Library (IllusionDistort) -> Hand (IllusionDistort) (Draw; shared object ID)
+      protocol-linked zone transfer: Case of the Crimson Pulse (object 436) Library (IllusionDistort) -> Hand (IllusionDistort) (Draw; shared object ID)
+      protocol-linked zone transfer: Grab the Prize (object 437) Stack -> Graveyard (IllusionDistort) (Resolve; shared object ID)
+      identity continuity: source object 427 -> transfer object 437 (explicit GRE ObjectIdChanged chain).
+  - Viashino Pyromancer [valid_resolution_no_immediate_mutation, seq=244] (active=IllusionDistort, phase=Phase_Main2, controller=IllusionDistort, owner=IllusionDistort, source_object=438)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Viashino Pyromancer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Viashino Pyromancer (object 438) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Viashino Pyromancer (object 438) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Viashino Pyromancer [observed_semantic_effect, seq=248] (active=IllusionDistort, phase=Phase_Main2, controller=IllusionDistort, owner=IllusionDistort, source_object=438, source_last_explicit_zone=Battlefield)
+      effects: 2 damage; life -2 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Viashino Pyromancer: gian31 takes 2 damage (resulting in 2 life lost).
+      explicit effect object references: gian31 [player seat 2] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=IllusionDistort; frames: DeclareAttack -> DeclareBlock):
+      attackers: Viashino Pyromancer [382] (unblocked, observed P/T 3/2), Inti, Seneschal of the Sun [393] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 6; observed attacker power total: 6; snapshot comparison matches (exact assignment unavailable).
+      P/T timing: combat snapshot power=6; explicit modifiers in the same observed combat context add 1 power to 1/2 unblocked attackers; post-modifier observed reconstruction=7 (unavailable; individual assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -10 (individual changes below; gains and losses may offset)
+    life (combat-correlated: observed unblocked power 6; life seq 230; exact assignment unavailable): gian31 13 -> 7
+    life (semantically attributed to Grab the Prize; direct protocol link unavailable): gian31 7 -> 5
+    life (semantically attributed to Viashino Pyromancer; direct protocol link unavailable): gian31 5 -> 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shock [417] Library (IllusionDistort) -> Hand (IllusionDistort) (Draw; GRE sequence 207).
+      Razorkin Needlehead [420] Hand (IllusionDistort) -> Graveyard (IllusionDistort) (Discard; GRE sequence 218).
+      Mountain [426] Exile -> Battlefield (PlayLand; GRE sequence 235).
+      Shock [430] Hand (IllusionDistort) -> Graveyard (IllusionDistort) (Discard; GRE sequence 237).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      IllusionDistort: Battlefield: Inti, Seneschal of the Sun [393], Mountain [355], Mountain [370], Mountain [405], Mountain [426], Viashino Pyromancer [382], Viashino Pyromancer [438]; Graveyard: Burst Lightning [415], Fugitive Codebreaker [398], Grab the Prize [437], Razorkin Needlehead [420], Shock [358], Shock [430], Tyrox, Saurid Tyrant [379], Yuyan Archers [416]
+      gian31: Battlefield: Laughing Jasper Flint [388], Mountain [375], Mountain [387], Swamp [360]; Graveyard: Duress [368], Fell [380]
+
+Turn 10
+  - Ability of Laughing Jasper Flint [observed_semantic_effect, seq=256] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=388, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Laughing Jasper Flint: exiles Boltwave.
+      explicit effect object references: object 185 [185], Boltwave [443] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Boltwave (object 443) Library (IllusionDistort) -> Exile (Exile; shared object ID)
+  - Vaan, Street Thief [valid_resolution_no_immediate_mutation, seq=264] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=446)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Vaan, Street Thief resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Vaan, Street Thief (object 446) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Vaan, Street Thief (object 446) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Vaan, Street Thief [observed_semantic_effect, seq=267] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=446, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s)
+      narrative: Ability of Vaan, Street Thief: Laughing Jasper Flint gets +1/+1; Vaan, Street Thief gets +1/+1; 1 counter(s) are added to Laughing Jasper Flint [388]; 1 counter(s) are added to Vaan, Street Thief [446].
+      explicit effect object references: Laughing Jasper Flint [388] (role/targeting only where the protocol identifies it)
+  - Boltwave [observed_semantic_effect, seq=269] (active=gian31, phase=Phase_Main1, controller=gian31, owner=IllusionDistort, source_object=450)
+      effects: 3 damage; life -3 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Boltwave: IllusionDistort takes 3 damage (resulting in 3 life lost).
+      explicit effect object references: IllusionDistort [player seat 1] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Boltwave (object 450) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Boltwave (object 453) Stack -> Graveyard (IllusionDistort) (Resolve; shared object ID)
+      identity continuity: source object 450 -> transfer object 453 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: IllusionDistort -3 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Boltwave; direct protocol link unavailable): IllusionDistort 20 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [444] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 258).
+      Mountain [445] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 261).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      IllusionDistort: Battlefield: Inti, Seneschal of the Sun [393], Mountain [355], Mountain [370], Mountain [405], Mountain [426], Viashino Pyromancer [382], Viashino Pyromancer [438]; Graveyard: Boltwave [453], Burst Lightning [415], Fugitive Codebreaker [398], Grab the Prize [437], Razorkin Needlehead [420], Shock [358], Shock [430], Tyrox, Saurid Tyrant [379], Yuyan Archers [416]
+      gian31: Battlefield: Laughing Jasper Flint [388], Mountain [375], Mountain [387], Mountain [445], Swamp [360], Vaan, Street Thief [446]; Graveyard: Duress [368], Fell [380]
+
+Turn 11
+  - Fugitive Codebreaker [valid_resolution_no_immediate_mutation, seq=290] (active=IllusionDistort, phase=Phase_Main1, controller=IllusionDistort, owner=IllusionDistort, source_object=456)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Fugitive Codebreaker resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Fugitive Codebreaker (object 456) Hand (IllusionDistort) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fugitive Codebreaker (object 456) Stack -> Battlefield (Resolve; shared object ID)
+  - Case of the Crimson Pulse [valid_resolution_no_immediate_mutation, seq=295] (active=IllusionDistort, phase=Phase_Main1, controller=IllusionDistort, owner=IllusionDistort, source_object=460)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Case of the Crimson Pulse resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Case of the Crimson Pulse (object 460) Hand (IllusionDistort) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Case of the Crimson Pulse (object 460) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Case of the Crimson Pulse [observed_semantic_effect, seq=297] (active=IllusionDistort, phase=Phase_Main1, controller=IllusionDistort, owner=IllusionDistort, source_object=460, source_last_explicit_zone=Battlefield)
+      effects: draw, draw
+      narrative: Ability of Case of the Crimson Pulse: draw; draw.
+      explicit effect object references: object 187 [187], object 188 [188], object 466 [466], object 467 [467] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Yuyan Archers (object 466) Library (IllusionDistort) -> Hand (IllusionDistort) (Draw; shared object ID)
+      protocol-linked zone transfer: object 467 (object 467) Library (IllusionDistort) -> Hand (IllusionDistort) (Draw; shared object ID)
+  - Ability of Inti, Seneschal of the Sun [observed_semantic_effect, seq=311] (active=IllusionDistort, phase=Phase_Combat, step=Step_DeclareAttack, controller=IllusionDistort, owner=IllusionDistort, source_object=393, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Inti, Seneschal of the Sun: Inti, Seneschal of the Sun gets +1/+1; 1 counter(s) are added to Inti, Seneschal of the Sun [393].
+  - Ability of Inti, Seneschal of the Sun [observed_semantic_effect, seq=313] (active=IllusionDistort, phase=Phase_Combat, step=Step_DeclareAttack, controller=IllusionDistort, owner=IllusionDistort, source_object=393, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 311 and 313; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: exile
+      narrative: Ability of Inti, Seneschal of the Sun: exiles Norin, Swift Survivalist.
+      explicit effect object references: object 189 [189], Norin, Swift Survivalist [475] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Norin, Swift Survivalist (object 475) Library (IllusionDistort) -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=IllusionDistort; frames: DeclareAttack):
+      attackers: Viashino Pyromancer [382] (unblocked, observed P/T 3/2), Inti, Seneschal of the Sun [393] (unblocked, observed P/T 4/4), Viashino Pyromancer [438] (unblocked, observed P/T 2/1), Fugitive Codebreaker [456] (unblocked, observed P/T 3/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 12; observed attacker power total: 12; snapshot comparison matches (exact assignment unavailable).
+      P/T timing: combat snapshot power=12; explicit modifiers in the same observed combat context add 1 power to 1/4 unblocked attackers; post-modifier observed reconstruction=13 (partially correlated; individual assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -12 (individual changes below; gains and losses may offset)
+    life (combat-correlated: observed unblocked power 12; life seq 318; exact assignment unavailable): gian31 3 -> -9
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [454] Library (IllusionDistort) -> Hand (IllusionDistort) (Draw; GRE sequence 284).
+      Mountain [455] Hand (IllusionDistort) -> Battlefield (PlayLand; GRE sequence 287).
+      Yuyan Archers [470] Hand (IllusionDistort) -> Graveyard (IllusionDistort) (Discard; GRE sequence 306).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      IllusionDistort: Battlefield: Case of the Crimson Pulse [460], Fugitive Codebreaker [456], Inti, Seneschal of the Sun [393], Mountain [355], Mountain [370], Mountain [405], Mountain [426], Mountain [455], Viashino Pyromancer [382], Viashino Pyromancer [438]; Graveyard: Boltwave [453], Burst Lightning [415], Fugitive Codebreaker [398], Grab the Prize [437], Razorkin Needlehead [420], Shock [358], Shock [430], Tyrox, Saurid Tyrant [379], Yuyan Archers [416], Yuyan Archers [470]; Exile: Norin, Swift Survivalist [475]
+      gian31: Battlefield: Laughing Jasper Flint [388], Mountain [375], Mountain [387], Mountain [445], Swamp [360], Vaan, Street Thief [446]; Graveyard: Duress [368], Fell [380]
+
+UNNUMBERED / UNRESOLVED TURN GROUP
+  - The captured records do not provide a verified numbered turn for the following events.
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 1, seq 14, Phase_Main1: gian31 20 -> 18. Semantic attribution: Shock; direct protocol link unavailable. Previous captured action: Shock.
+- Turn 5, seq 102, Phase_Main1: gian31 18 -> 16. Semantic attribution: Viashino Pyromancer; direct protocol link unavailable. Previous captured action: Viashino Pyromancer.
+- Turn 9, seq 241, Phase_Main2: gian31 7 -> 5; gian31 5 -> 3. Semantic attribution: Grab the Prize, Viashino Pyromancer; direct protocol link unavailable. Previous captured action: Grab the Prize.
+- Turn 10, seq 269, Phase_Main1: IllusionDistort 20 -> 17. Semantic attribution: Boltwave; direct protocol link unavailable. Previous captured action: Boltwave.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 11: gian31 3 -> -9 (required change 12). Explained by exact same-record evidence: 0/12; semantically attributed: 0/12; unexplained residual: 0/12.
+  Combat-reconciled component: 12/12 (pre-modifier power=12; explicit modifier power=+1; observed post-modifier power=13 (not used to attribute damage when it exceeds the observed loss); unresolved residual=0; individual assignment unavailable).
+  Combat snapshot observed at or before lethal: Turn 11; attackers=Viashino Pyromancer [382], Inti, Seneschal of the Sun [393], Viashino Pyromancer [438], Fugitive Codebreaker [456]; observed snapshot power total=12; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 11, Ability of Inti, Seneschal of the Sun (seq 313).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 6: Gastal Raider [owner=gian31, controller=gian31] moves Hand (gian31) -> Library (gian31) (Put).
+- Turn 1, seq 9: Mountain [owner=IllusionDistort, controller=IllusionDistort] moves Hand (IllusionDistort) -> Battlefield (PlayLand).
+- Turn 1, seq 10: Shock [owner=IllusionDistort, controller=IllusionDistort] moves Hand (IllusionDistort) -> Stack (CastSpell).
+- Turn 1, seq 14: Shock [owner=IllusionDistort, controller=IllusionDistort] moves Stack -> Graveyard (IllusionDistort) (Resolve).
+- Turn 2, seq 28: At Knifepoint [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 31: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 32: Duress [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 37: Duress [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 3, seq 51: Tyrox, Saurid Tyrant [owner/controller metadata unavailable] moves Library (IllusionDistort) -> Hand (IllusionDistort) (Draw).
+- Turn 3, seq 54: Mountain [owner=IllusionDistort, controller=IllusionDistort] moves Hand (IllusionDistort) -> Battlefield (PlayLand).
+- Turn 3, seq 55: Tyrox, Saurid Tyrant [owner=IllusionDistort, controller=IllusionDistort] moves Hand (IllusionDistort) -> Stack (CastSpell).
+- Turn 3, seq 57: Tyrox, Saurid Tyrant [owner=IllusionDistort, controller=IllusionDistort] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 71: Mountain [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 74: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 75: Fell [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 79: Tyrox, Saurid Tyrant [owner=IllusionDistort, controller=IllusionDistort] moves Battlefield -> Graveyard (IllusionDistort) (Destroy).
+- Turn 4, seq 79: Fell [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 5, seq 93: Burst Lightning [owner/controller metadata unavailable] moves Library (IllusionDistort) -> Hand (IllusionDistort) (Draw).
+- Turn 5, seq 96: Viashino Pyromancer [owner=IllusionDistort, controller=IllusionDistort] moves Hand (IllusionDistort) -> Stack (CastSpell).
+- Turn 5, seq 98: Viashino Pyromancer [owner=IllusionDistort, controller=IllusionDistort] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 116: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 119: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 120: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 122: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 136: Grab the Prize [owner/controller metadata unavailable] moves Library (IllusionDistort) -> Hand (IllusionDistort) (Draw).
+- Turn 7, seq 139: Inti, Seneschal of the Sun [owner=IllusionDistort, controller=IllusionDistort] moves Hand (IllusionDistort) -> Stack (CastSpell).
+- Turn 7, seq 141: Inti, Seneschal of the Sun [owner=IllusionDistort, controller=IllusionDistort] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 150: Fugitive Codebreaker [owner=IllusionDistort, controller=IllusionDistort] moves Hand (IllusionDistort) -> Graveyard (IllusionDistort) (Discard).
+- Turn 7, seq 157: Mountain [owner=IllusionDistort, controller=IllusionDistort] moves Library (IllusionDistort) -> Exile (Exile).
+- Turn 7, seq 167: Mountain [owner=IllusionDistort, controller=IllusionDistort] moves Exile -> Battlefield (PlayLand).
+- Turn 8, seq 175: Yuyan Archers [owner=IllusionDistort, controller=gian31] moves Library (IllusionDistort) -> Exile (Exile).
+- Turn 8, seq 177: Binding Negotiation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 180: Yuyan Archers [owner=IllusionDistort, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 8, seq 182: Yuyan Archers [owner=IllusionDistort, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 198: Burst Lightning [owner=IllusionDistort, controller=IllusionDistort] moves Hand (IllusionDistort) -> Stack (CastSpell).
+- Turn 8, seq 203: Burst Lightning [owner=IllusionDistort, controller=IllusionDistort] moves Stack -> Graveyard (IllusionDistort) (Resolve).
+- Turn 8, seq 203: Yuyan Archers [owner=IllusionDistort, controller=IllusionDistort] moves Battlefield -> Graveyard (IllusionDistort) (SBA_Damage).
+- Turn 9, seq 207: Shock [owner/controller metadata unavailable] moves Library (IllusionDistort) -> Hand (IllusionDistort) (Draw).
+- Turn 9, seq 218: Razorkin Needlehead [owner=IllusionDistort, controller=IllusionDistort] moves Hand (IllusionDistort) -> Graveyard (IllusionDistort) (Discard).
+- Turn 9, seq 225: Mountain [owner=IllusionDistort, controller=IllusionDistort] moves Library (IllusionDistort) -> Exile (Exile).
+- Turn 9, seq 235: Mountain [owner=IllusionDistort, controller=IllusionDistort] moves Exile -> Battlefield (PlayLand).
+- Turn 9, seq 236: Grab the Prize [owner=IllusionDistort, controller=IllusionDistort] moves Hand (IllusionDistort) -> Stack (CastSpell).
+- Turn 9, seq 237: Shock [owner=IllusionDistort, controller=IllusionDistort] moves Hand (IllusionDistort) -> Graveyard (IllusionDistort) (Discard).
+- Turn 9, seq 239: Viashino Pyromancer [owner=IllusionDistort, controller=IllusionDistort] moves Library (IllusionDistort) -> Exile (Exile).
+- Turn 9, seq 241: Fugitive Codebreaker [owner/controller metadata unavailable] moves Library (IllusionDistort) -> Hand (IllusionDistort) (Draw).
+- Turn 9, seq 241: Case of the Crimson Pulse [owner/controller metadata unavailable] moves Library (IllusionDistort) -> Hand (IllusionDistort) (Draw).
+- Turn 9, seq 241: Grab the Prize [owner=IllusionDistort, controller=IllusionDistort] moves Stack -> Graveyard (IllusionDistort) (Resolve).
+- Turn 9, seq 242: Viashino Pyromancer [owner=IllusionDistort, controller=IllusionDistort] moves Exile -> Stack (CastSpell).
+- Turn 9, seq 244: Viashino Pyromancer [owner=IllusionDistort, controller=IllusionDistort] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 256: Boltwave [owner=IllusionDistort, controller=gian31] moves Library (IllusionDistort) -> Exile (Exile).
+- Turn 10, seq 258: Mountain [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 261: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 262: Vaan, Street Thief [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 264: Vaan, Street Thief [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 265: Boltwave [owner=IllusionDistort, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 10, seq 269: Boltwave [owner=IllusionDistort, controller=IllusionDistort] moves Stack -> Graveyard (IllusionDistort) (Resolve).
+- Turn 11, seq 284: Mountain [owner/controller metadata unavailable] moves Library (IllusionDistort) -> Hand (IllusionDistort) (Draw).
+- Turn 11, seq 287: Mountain [owner=IllusionDistort, controller=IllusionDistort] moves Hand (IllusionDistort) -> Battlefield (PlayLand).
+- Turn 11, seq 288: Fugitive Codebreaker [owner=IllusionDistort, controller=IllusionDistort] moves Hand (IllusionDistort) -> Stack (CastSpell).
+- Turn 11, seq 290: Fugitive Codebreaker [owner=IllusionDistort, controller=IllusionDistort] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 291: Case of the Crimson Pulse [owner=IllusionDistort, controller=IllusionDistort] moves Hand (IllusionDistort) -> Stack (CastSpell).
+- Turn 11, seq 295: Case of the Crimson Pulse [owner=IllusionDistort, controller=IllusionDistort] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 297: Yuyan Archers [owner/controller metadata unavailable] moves Library (IllusionDistort) -> Hand (IllusionDistort) (Draw).
+- Turn 11, seq 297: object 467 [owner/controller metadata unavailable] moves Library (IllusionDistort) -> Hand (IllusionDistort) (Draw).
+- Turn 11, seq 306: Yuyan Archers [owner=IllusionDistort, controller=IllusionDistort] moves Hand (IllusionDistort) -> Graveyard (IllusionDistort) (Discard).
+- Turn 11, seq 313: Norin, Swift Survivalist [owner=IllusionDistort, controller=IllusionDistort] moves Library (IllusionDistort) -> Exile (Exile).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 6: object 299 becomes object 354 [Gastal Raider].
+- Turn 1, seq 9: object 173 becomes object 355 [Mountain].
+- Turn 1, seq 10: object 171 becomes object 356 [Shock].
+- Turn 1, seq 14: object 356 becomes object 358 [Shock].
+- Turn 2, seq 28: object 301 becomes object 359 [At Knifepoint].
+- Turn 2, seq 31: object 300 becomes object 360 [Swamp].
+- Turn 2, seq 32: object 298 becomes object 361 [Duress].
+- Turn 2, seq 37: object 361 becomes object 368 [Duress].
+- Turn 3, seq 51: object 175 becomes object 369 [Tyrox, Saurid Tyrant].
+- Turn 3, seq 54: object 172 becomes object 370 [Mountain].
+- Turn 3, seq 55: object 369 becomes object 371 [Tyrox, Saurid Tyrant].
+- Turn 4, seq 71: object 302 becomes object 374 [Mountain].
+- Turn 4, seq 74: object 296 becomes object 375 [Mountain].
+- Turn 4, seq 75: object 294 becomes object 376 [Fell].
+- Turn 4, seq 79: object 371 becomes object 379 [Tyrox, Saurid Tyrant].
+- Turn 4, seq 79: object 376 becomes object 380 [Fell].
+- Turn 5, seq 93: object 176 becomes object 381 [Burst Lightning].
+- Turn 5, seq 96: object 168 becomes object 382 [Viashino Pyromancer].
+- Turn 6, seq 116: object 303 becomes object 386 [Tinybones, Bauble Burglar].
+- Turn 6, seq 119: object 374 becomes object 387 [Mountain].
+- Turn 6, seq 120: object 297 becomes object 388 [Laughing Jasper Flint].
+- Turn 7, seq 136: object 177 becomes object 392 [Grab the Prize].
+- Turn 7, seq 139: object 174 becomes object 393 [Inti, Seneschal of the Sun].
+- Turn 7, seq 150: object 169 becomes object 398 [Fugitive Codebreaker].
+- Turn 7, seq 157: object 178 becomes object 404 [Mountain].
+- Turn 7, seq 167: object 404 becomes object 405 [Mountain].
+- Turn 8, seq 175: object 179 becomes object 407 [Yuyan Archers].
+- Turn 8, seq 177: object 304 becomes object 408 [Binding Negotiation].
+- Turn 8, seq 180: object 407 becomes object 409 [Yuyan Archers].
+- Turn 8, seq 198: object 381 becomes object 413 [Burst Lightning].
+- Turn 8, seq 203: object 413 becomes object 415 [Burst Lightning].
+- Turn 8, seq 203: object 409 becomes object 416 [Yuyan Archers].
+- Turn 9, seq 207: object 180 becomes object 417 [Shock].
+- Turn 9, seq 218: object 170 becomes object 420 [Razorkin Needlehead].
+- Turn 9, seq 225: object 181 becomes object 425 [Mountain].
+- Turn 9, seq 235: object 425 becomes object 426 [Mountain].
+- Turn 9, seq 236: object 392 becomes object 427 [Grab the Prize].
+- Turn 9, seq 237: object 417 becomes object 430 [Shock].
+- Turn 9, seq 239: object 182 becomes object 433 [Viashino Pyromancer].
+- Turn 9, seq 241: object 183 becomes object 434 [Fugitive Codebreaker].
+- Turn 9, seq 241: object 184 becomes object 436 [Case of the Crimson Pulse].
+- Turn 9, seq 241: object 427 becomes object 437 [Grab the Prize].
+- Turn 9, seq 242: object 433 becomes object 438 [Viashino Pyromancer].
+- Turn 10, seq 256: object 185 becomes object 443 [Boltwave].
+- Turn 10, seq 258: object 305 becomes object 444 [Mountain].
+- Turn 10, seq 261: object 444 becomes object 445 [Mountain].
+- Turn 10, seq 262: object 295 becomes object 446 [Vaan, Street Thief].
+- Turn 10, seq 265: object 443 becomes object 450 [Boltwave].
+- Turn 10, seq 269: object 450 becomes object 453 [Boltwave].
+- Turn 11, seq 284: object 186 becomes object 454 [Mountain].
+- Turn 11, seq 287: object 454 becomes object 455 [Mountain].
+- Turn 11, seq 288: object 434 becomes object 456 [Fugitive Codebreaker].
+- Turn 11, seq 291: object 436 becomes object 460 [Case of the Crimson Pulse].
+- Turn 11, seq 297: object 187 becomes object 466 [Yuyan Archers].
+- Turn 11, seq 297: object 188 becomes object 467 [object 188].
+- Turn 11, seq 306: object 466 becomes object 470 [Yuyan Archers].
+- Turn 11, seq 313: object 189 becomes object 475 [Norin, Swift Survivalist].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: IllusionDistort plays Mountain (object 355) from Hand (IllusionDistort) to Battlefield.
+- Turn 2: gian31 plays Swamp (object 360) from Hand (gian31) to Battlefield.
+- Turn 3: IllusionDistort plays Mountain (object 370) from Hand (IllusionDistort) to Battlefield.
+- Turn 4: gian31 plays Mountain (object 375) from Hand (gian31) to Battlefield.
+- Turn 6: gian31 plays Mountain (object 387) from Hand (gian31) to Battlefield.
+- Turn 7: IllusionDistort plays Mountain (object 405) from Exile to Battlefield.
+- Turn 9: IllusionDistort plays Mountain (object 426) from Exile to Battlefield.
+- Turn 10: gian31 plays Mountain (object 445) from Hand (gian31) to Battlefield.
+- Turn 11: IllusionDistort plays Mountain (object 455) from Hand (IllusionDistort) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Inti, Seneschal of the Sun: casts=1; abilities=7 (triggered=7, activated=0) across turns [7, 7, 7, 9, 9, 9, 11, 11]
+  observed effect totals: draws=0, tokens=0, counters=3, returns=0, damage=0, life_changes=0, other=7
+  observed effects: +1 counter(s), P/T +1/+1, exile
+- Viashino Pyromancer: casts=2; abilities=2 (triggered=2, activated=0) across turns [5, 5, 9, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=2, life_changes=2, other=1
+  observed effects: 2 damage, life -2, synthetic event
+- Laughing Jasper Flint: casts=1; abilities=2 (triggered=2, activated=0) across turns [6, 8, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: exile
+- Case of the Crimson Pulse: casts=1; abilities=1 (triggered=1, activated=0) across turns [11, 11]
+  observed effect totals: draws=2, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Vaan, Street Thief: casts=1; abilities=1 (triggered=1, activated=0) across turns [10, 10]
+  observed effect totals: draws=0, tokens=0, counters=2, returns=0, damage=0, life_changes=0, other=2
+  observed effects: +1 counter(s), P/T +1/+1
+- Boltwave: casts=1 across turns [10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=1, other=1
+  observed effects: 3 damage, life -3, synthetic event
+- Burst Lightning: casts=1 across turns [8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 2 damage
+- Fell: casts=1 across turns [4]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Fugitive Codebreaker: casts=1 across turns [11]
+- Grab the Prize: casts=1 across turns [9]
+  observed effect totals: draws=2, tokens=0, counters=0, returns=0, damage=1, life_changes=1, other=0
+  observed effects: 2 damage, draw, life -2
+- Shock: casts=1 across turns [1]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=1, other=1
+  observed effects: 2 damage, life -2, synthetic event
+- Tyrox, Saurid Tyrant: casts=1 across turns [3]
+- Yuyan Archers: casts=1 across turns [8]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 7 - DeclareAttack (active=IllusionDistort)
+  attacker: Viashino Pyromancer (IllusionDistort) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=IllusionDistort)
+  attacker: Viashino Pyromancer (IllusionDistort) -> gian31; unblocked in this observed snapshot
+  attacker: Inti, Seneschal of the Sun (IllusionDistort) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack (active=IllusionDistort)
+  attacker: Viashino Pyromancer (IllusionDistort) -> gian31; unblocked in this observed snapshot
+  attacker: Inti, Seneschal of the Sun (IllusionDistort) -> gian31; unblocked in this observed snapshot
+  attacker: Viashino Pyromancer (IllusionDistort) -> gian31; unblocked in this observed snapshot
+  attacker: Fugitive Codebreaker (IllusionDistort) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 7: Ability of Inti, Seneschal of the Sun (active=IllusionDistort) - Ability of Inti, Seneschal of the Sun: Viashino Pyromancer gets +1/+1; 1 counter(s) are added to target.
+- Turn 7: Ability of Inti, Seneschal of the Sun (active=IllusionDistort) - Ability of Inti, Seneschal of the Sun: exile.
+- Turn 9: Ability of Inti, Seneschal of the Sun (active=IllusionDistort) - Ability of Inti, Seneschal of the Sun: Inti, Seneschal of the Sun gets +1/+1; 1 counter(s) are added to target.
+- Turn 9: Ability of Inti, Seneschal of the Sun (active=IllusionDistort) - Ability of Inti, Seneschal of the Sun: exile.
+- Turn 11: Ability of Inti, Seneschal of the Sun (active=IllusionDistort) - Ability of Inti, Seneschal of the Sun: Inti, Seneschal of the Sun gets +1/+1; 1 counter(s) are added to target.
+- Turn 11: Ability of Inti, Seneschal of the Sun (active=IllusionDistort) - Ability of Inti, Seneschal of the Sun: exile.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 168: Viashino Pyromancer | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 169: Fugitive Codebreaker | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 170: Razorkin Needlehead | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 172: Mountain | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 174: Inti, Seneschal of the Sun | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 234: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 235: Gastal Raider | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 236: Goblin Smuggler | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 237: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 238: Goblin Smuggler | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 239: Razortrap Gorge | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 240: At Knifepoint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 294: Fell | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 295: Vaan, Street Thief | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 296: Mountain | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 297: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 298: Duress | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 299: Gastal Raider | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 300: Swamp | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 354: Gastal Raider | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 355: Mountain | controller=IllusionDistort | owner=IllusionDistort | zone=Battlefield (latest_object_observation)
+- 356: Shock | controller=IllusionDistort | owner=IllusionDistort | zone=Stack (latest_object_observation)
+- 358: Shock | controller=IllusionDistort | owner=IllusionDistort | zone=Graveyard (latest_object_observation)
+- 359: At Knifepoint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 360: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 361: Duress | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 363: Viashino Pyromancer | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 364: Fugitive Codebreaker | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 365: Mountain | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 366: Razorkin Needlehead | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 367: Inti, Seneschal of the Sun | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 368: Duress | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 370: Mountain | controller=IllusionDistort | owner=IllusionDistort | zone=Battlefield (latest_object_observation)
+- 371: Tyrox, Saurid Tyrant | controller=IllusionDistort | owner=IllusionDistort | zone=Battlefield (latest_object_observation)
+- 374: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 375: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 376: Fell | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 379: Tyrox, Saurid Tyrant | controller=IllusionDistort | owner=IllusionDistort | zone=Graveyard (latest_object_observation)
+- 380: Fell | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 382: Viashino Pyromancer | controller=IllusionDistort | owner=IllusionDistort | zone=Battlefield (latest_object_observation)
+- 385: object 385 | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 386: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 387: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 388: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 393: Inti, Seneschal of the Sun | controller=IllusionDistort | owner=IllusionDistort | zone=Battlefield (latest_object_observation)
+- 397: object 397 | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 398: Fugitive Codebreaker | controller=IllusionDistort | owner=IllusionDistort | zone=Graveyard (latest_object_observation)
+- 401: object 401 | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 403: object 403 | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 404: Mountain | controller=IllusionDistort | owner=IllusionDistort | zone=Exile (latest_object_observation)
+- 405: Mountain | controller=IllusionDistort | owner=IllusionDistort | zone=Battlefield (latest_object_observation)
+- 406: object 406 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 407: Yuyan Archers | controller=gian31 | owner=IllusionDistort | zone=Exile (latest_object_observation)
+- 408: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 409: Yuyan Archers | controller=gian31 | owner=IllusionDistort | zone=Battlefield (latest_object_observation)
+- 412: object 412 | controller=gian31 | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 413: Burst Lightning | controller=IllusionDistort | owner=IllusionDistort | zone=Stack (latest_object_observation)
+- 415: Burst Lightning | controller=IllusionDistort | owner=IllusionDistort | zone=Graveyard (latest_object_observation)
+- 416: Yuyan Archers | controller=IllusionDistort | owner=IllusionDistort | zone=Battlefield (latest_object_observation)
+- 419: object 419 | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 420: Razorkin Needlehead | controller=IllusionDistort | owner=IllusionDistort | zone=Graveyard (latest_object_observation)
+- 422: object 422 | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 424: object 424 | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 425: Mountain | controller=IllusionDistort | owner=IllusionDistort | zone=Exile (latest_object_observation)
+- 426: Mountain | controller=IllusionDistort | owner=IllusionDistort | zone=Battlefield (latest_object_observation)
+- 427: Grab the Prize | controller=IllusionDistort | owner=IllusionDistort | zone=Stack (latest_object_observation)
+- 430: Shock | controller=IllusionDistort | owner=IllusionDistort | zone=Graveyard (latest_object_observation)
+- 432: object 432 | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 433: Viashino Pyromancer | controller=IllusionDistort | owner=IllusionDistort | zone=Exile (latest_object_observation)
+- 437: Grab the Prize | controller=IllusionDistort | owner=IllusionDistort | zone=Graveyard (latest_object_observation)
+- 438: Viashino Pyromancer | controller=IllusionDistort | owner=IllusionDistort | zone=Battlefield (latest_object_observation)
+- 441: object 441 | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 442: object 442 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 443: Boltwave | controller=gian31 | owner=IllusionDistort | zone=Exile (latest_object_observation)
+- 444: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 445: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 446: Vaan, Street Thief | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 450: Boltwave | controller=gian31 | owner=IllusionDistort | zone=Stack (latest_object_observation)
+- 452: object 452 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 453: Boltwave | controller=IllusionDistort | owner=IllusionDistort | zone=Graveyard (latest_object_observation)
+- 455: Mountain | controller=IllusionDistort | owner=IllusionDistort | zone=Battlefield (latest_object_observation)
+- 456: Fugitive Codebreaker | controller=IllusionDistort | owner=IllusionDistort | zone=Battlefield (latest_object_observation)
+- 460: Case of the Crimson Pulse | controller=IllusionDistort | owner=IllusionDistort | zone=Stack (latest_object_observation)
+- 464: object 464 | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 465: object 465 | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 469: object 469 | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 470: Yuyan Archers | controller=IllusionDistort | owner=IllusionDistort | zone=Graveyard (latest_object_observation)
+- 472: object 472 | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 474: object 474 | controller=IllusionDistort | owner=IllusionDistort | zone=unknown (inferred unknown) (latest_object_observation)
+- 475: Norin, Swift Survivalist | controller=IllusionDistort | owner=IllusionDistort | zone=Exile (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+IllusionDistort: 52 total items
+  zones: Battlefield=11, Exile=4, Graveyard=9, Stack=4, unknown=24
+  objects: Mountain x9, Viashino Pyromancer x5, Fugitive Codebreaker x4, Inti, Seneschal of the Sun x3, Razorkin Needlehead x3, Shock x3, Burst Lightning x2, Grab the Prize x2, Tyrox, Saurid Tyrant x2, Yuyan Archers x2, Boltwave, Case of the Crimson Pulse
+gian31: 38 total items
+  zones: Battlefield=8, Exile=2, Hand=12, Stack=10, unknown=6
+  objects: Mountain x6, Swamp x4, Duress x3, Fell x3, Gastal Raider x3, At Knifepoint x2, Boltwave x2, Goblin Smuggler x2, Laughing Jasper Flint x2, Vaan, Street Thief x2, Yuyan Archers x2, Binding Negotiation
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+IllusionDistort:
+  Battlefield (11): Fugitive Codebreaker, Inti, Seneschal of the Sun, Mountain, Mountain, Mountain, Mountain, Mountain, Tyrox, Saurid Tyrant, Viashino Pyromancer, Viashino Pyromancer, Yuyan Archers
+  Graveyard: 9 card(s)
+gian31:
+  Battlefield (8): Gastal Raider, Laughing Jasper Flint, Mountain, Mountain, Mountain, Swamp, Vaan, Street Thief, Yuyan Archers
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+30 objects have no resolved final zone and are omitted from the known board state.
+IllusionDistort: 24 unknown object(s)
+gian31: 6 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=12, Stack=14
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+IllusionDistort:
+  Battlefield (10): Mountain, Mountain, Viashino Pyromancer, Inti, Seneschal of the Sun, Mountain, Mountain, Viashino Pyromancer, Mountain, Fugitive Codebreaker, Case of the Crimson Pulse
+  Graveyard (10): Shock, Tyrox, Saurid Tyrant, Fugitive Codebreaker, Burst Lightning, Yuyan Archers, Razorkin Needlehead, Shock, Grab the Prize, Boltwave, Yuyan Archers
+  Exile (1): Norin, Swift Survivalist
+gian31:
+  Battlefield (6): Swamp, Mountain, Mountain, Laughing Jasper Flint, Mountain, Vaan, Street Thief
+  Graveyard (2): Duress, Fell
+Known non-persistent entries (counts only):
+  IllusionDistort: Hand=1, Limbo=3
+  gian31: Hand=3, Library=1, Limbo=4
+  unknown: Library=92, Limbo=18
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: IllusionDistort Battlefield=1; IllusionDistort Graveyard=1
+- Turn 2: IllusionDistort Battlefield=1; IllusionDistort Graveyard=1; gian31 Battlefield=1; gian31 Graveyard=1
+- Turn 3: IllusionDistort Battlefield=3; IllusionDistort Graveyard=1; gian31 Battlefield=1; gian31 Graveyard=1
+- Turn 4: IllusionDistort Battlefield=2; IllusionDistort Graveyard=2; gian31 Battlefield=2; gian31 Graveyard=2
+- Turn 5: IllusionDistort Battlefield=3; IllusionDistort Graveyard=2; gian31 Battlefield=2; gian31 Graveyard=2
+- Turn 6: IllusionDistort Battlefield=3; IllusionDistort Graveyard=2; gian31 Battlefield=4; gian31 Graveyard=2
+- Turn 7: IllusionDistort Battlefield=5; IllusionDistort Graveyard=3; gian31 Battlefield=4; gian31 Graveyard=2
+- Turn 8: IllusionDistort Battlefield=5; IllusionDistort Graveyard=5; gian31 Battlefield=4; gian31 Graveyard=2
+- Turn 9: IllusionDistort Battlefield=7; IllusionDistort Graveyard=8; gian31 Battlefield=4; gian31 Graveyard=2
+- Turn 10: IllusionDistort Battlefield=7; IllusionDistort Graveyard=9; gian31 Battlefield=6; gian31 Graveyard=2
+- Turn 11: IllusionDistort Battlefield=10; IllusionDistort Graveyard=10; IllusionDistort Exile=1; gian31 Battlefield=6; gian31 Graveyard=2
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 3: Tyrox, Saurid Tyrant resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Viashino Pyromancer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Laughing Jasper Flint resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Inti, Seneschal of the Sun resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Yuyan Archers resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Viashino Pyromancer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Vaan, Street Thief resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Fugitive Codebreaker resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Case of the Crimson Pulse resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
