@@ -1,0 +1,563 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, rennkonn
+Seat map: Seat 1=gian31, Seat 2=rennkonn
+Turn range (known): 1 - 11
+Unnumbered turn groups retained: 1
+Records: 17
+Action chains: 15
+Winner: gian31
+Final life: {'gian31': 11, 'rennkonn': 16}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 11 (Phase_Main1; Rush of Dread, seq 272).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 24 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 10 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 11] (raw records=10; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 11 explicit Library -> Hand movement(s); named in the draw record=5, resolved through an explicit identity transition=5, unresolved=1.
+Unresolved draw identities (explicit movements retained): Turn 10, seq 224, object 437.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Rush of Dread [159], Bloodletter of Aclazotz [160], Swamp [161], Enduring Tenacity [162], Godless Shrine [163], Scoured Barrens [164], Makeshift Binding [165].
+  - unknown: 7 observed card(s): object 219 [219], object 220 [220], object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 11, 'rennkonn': 16}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 11 (Phase_Main1; Rush of Dread, seq 272).
+Last captured life snapshot: gian31 15 -> 11 (seq 246).
+Tokens on battlefield at their last observation (not confirmed at match end): Bird [359] controller=rennkonn, created Turn 6, last observed Turn 10 seq 242, P/T 2/2; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Bird [372] controller=rennkonn, created Turn 8, last observed Turn 10 seq 242, P/T 2/2; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Bird [442] controller=rennkonn, created Turn 10, last observed Turn 10 seq 231, P/T 2/2; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Royal [455] controller=rennkonn, created Turn 11, last observed Turn 11 seq 270, P/T unavailable; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=1; life mutations=1; explicit battlefield entries=Scoured Barrens.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Botanical Sanctum.
+- Turn 3: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 4: actions: cards=0, abilities=0; explicit battlefield entries=Island.
+- Turn 5: actions: cards=1, abilities=0; explicit battlefield entries=Plains.
+- Turn 6: actions: cards=1, abilities=1; explicit battlefield entries=Forest, Sidequest: Raise a Chocobo.
+- Turn 7: actions: cards=1, abilities=0; life mutations=1; explicit battlefield entries=Godless Shrine, Godless Shrine, Bloodletter of Aclazotz.
+- Turn 8: actions: cards=1, abilities=5; combat snapshots=1; life mutations=1; explicit battlefield entries=Sidequest: Raise a Chocobo, Escape Tunnel, Forest; explicit battlefield exits=Escape Tunnel.
+- Turn 9: actions: cards=1, abilities=0; combat snapshots=1.
+- Turn 10: actions: cards=2, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Sidequest: Raise a Chocobo, Mockingbird.
+- Turn 11: actions: cards=2, abilities=0; explicit battlefield entries=Swamp.
+- Turn None: actions: cards=0, abilities=0.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Ability of Scoured Barrens [observed_semantic_effect, seq=9] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=279, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Scoured Barrens: gian31 gains 1 life.
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Scoured Barrens [279] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Scoured Barrens [279]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Sidequest: Raise a Chocobo [281] Library (rennkonn) -> Hand (rennkonn) (Draw; GRE sequence 23).
+      Botanical Sanctum [282] Hand (rennkonn) -> Battlefield (PlayLand; GRE sequence 26).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Scoured Barrens [279]
+      rennkonn: Battlefield: Botanical Sanctum [282]
+
+Turn 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [283] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 40).
+      Swamp [284] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 43).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Scoured Barrens [279], Swamp [284]
+      rennkonn: Battlefield: Botanical Sanctum [282]
+
+Turn 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Sidequest: Raise a Chocobo [285] Library (rennkonn) -> Hand (rennkonn) (Draw; GRE sequence 57).
+      Island [286] Hand (rennkonn) -> Battlefield (PlayLand; GRE sequence 60).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Scoured Barrens [279], Swamp [284]
+      rennkonn: Battlefield: Botanical Sanctum [282], Island [286]
+
+Turn 5
+  - Dazzling Denial [observed_semantic_effect, seq=84] (active=unknown, controller=rennkonn, owner=rennkonn, source_object=293)
+      chronology reconciliation: parser turn group None conflicts with Turn 5; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: none immediately observed
+      narrative: Observed zone movements: Dazzling Denial, Moonrise Cleric, Dazzling Denial.
+      explicit effect object references: Moonrise Cleric [289], Moonrise Cleric [296] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Dazzling Denial (object 293) Hand (rennkonn) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Moonrise Cleric (object 296) Stack -> Graveyard (gian31) (Countered; shared object ID)
+      protocol-linked zone transfer: Dazzling Denial (object 297) Stack -> Graveyard (rennkonn) (Resolve; shared object ID)
+      identity continuity: source object 293 -> transfer object 297 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Moonrise Cleric [287] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 74).
+      Plains [288] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 77).
+      Moonrise Cleric [289] Hand (gian31) -> Stack (CastSpell; GRE sequence 78).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [288], Scoured Barrens [279], Swamp [284]; Graveyard: Moonrise Cleric [296]
+      rennkonn: Battlefield: Botanical Sanctum [282], Island [286]; Graveyard: Dazzling Denial [297]
+
+Turn 6
+  - Sidequest: Raise a Chocobo [valid_resolution_no_immediate_mutation, seq=110] (active=rennkonn, phase=Phase_Main1, controller=rennkonn, owner=rennkonn, source_object=355)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sidequest: Raise a Chocobo resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sidequest: Raise a Chocobo (object 355) Hand (rennkonn) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sidequest: Raise a Chocobo (object 355) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Sidequest: Raise a Chocobo [observed_semantic_effect, seq=112] (active=rennkonn, phase=Phase_Main1, controller=rennkonn, owner=rennkonn, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Sidequest: Raise a Chocobo: a token is created.
+      explicit effect object references: Bird [359] (role/targeting only where the protocol identifies it)
+      token created: Bird (object 359, controller=rennkonn) 2/2; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 358).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mockingbird [298] Library (rennkonn) -> Hand (rennkonn) (Draw; GRE sequence 98).
+      Bushwhack [299] Hand (rennkonn) -> Stack (CastSpell; GRE sequence 101).
+      Forest [302] Library (rennkonn) -> Hand (rennkonn) (Put; GRE sequence 105).
+      Bushwhack [353] Stack -> Graveyard (rennkonn) (Resolve; GRE sequence 106).
+      Forest [354] Hand (rennkonn) -> Battlefield (PlayLand; GRE sequence 107).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Plains [288], Scoured Barrens [279], Swamp [284]; Graveyard: Moonrise Cleric [296]
+      rennkonn: Battlefield: Botanical Sanctum [282], Forest [354], Island [286], Sidequest: Raise a Chocobo [355]; Graveyard: Bushwhack [353], Dazzling Denial [297]
+
+Turn 7
+  - Bloodletter of Aclazotz [valid_resolution_no_immediate_mutation, seq=135] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=362)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodletter of Aclazotz resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 362) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 362) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodletter of Aclazotz (object 362) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Stroke of Midnight [360] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 126).
+      Godless Shrine [361] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 130).
+      Godless Shrine [361] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 132).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodletter of Aclazotz [362], Godless Shrine [361], Plains [288], Scoured Barrens [279], Swamp [284]; Graveyard: Moonrise Cleric [296]
+      rennkonn: Battlefield: Botanical Sanctum [282], Forest [354], Island [286], Sidequest: Raise a Chocobo [355]; Graveyard: Bushwhack [353], Dazzling Denial [297]
+
+Turn 8
+  - Sidequest: Raise a Chocobo [valid_resolution_no_immediate_mutation, seq=154] (active=rennkonn, phase=Phase_Main1, controller=rennkonn, owner=rennkonn, source_object=368)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sidequest: Raise a Chocobo resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sidequest: Raise a Chocobo (object 368) Hand (rennkonn) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sidequest: Raise a Chocobo (object 368) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Sidequest: Raise a Chocobo [observed_semantic_effect, seq=156] (active=rennkonn, phase=Phase_Main1, controller=rennkonn, owner=rennkonn, source_object=368, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Sidequest: Raise a Chocobo: a token is created.
+      explicit effect object references: Bird [372] (role/targeting only where the protocol identifies it)
+      token created: Bird (object 372, controller=rennkonn) 2/2; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 371).
+  - Ability of Bird [observed_semantic_effect, seq=160] (active=rennkonn, phase=Phase_Main1, controller=rennkonn, owner=rennkonn, source_object=372)
+      effects: P/T +1/+0
+      narrative: Ability of Bird: Bird gets +1/+0.
+  - Ability of Bird [observed_semantic_effect, seq=162] (active=rennkonn, phase=Phase_Main1, controller=rennkonn, owner=rennkonn, source_object=359)
+      effects: P/T +1/+0
+      narrative: Ability of Bird: Bird gets +1/+0.
+  - Ability of Bird [observed_semantic_effect, seq=170] (active=rennkonn, phase=Phase_Main1, controller=rennkonn, owner=rennkonn, source_object=372)
+      effects: P/T +1/+0
+      narrative: Ability of Bird: Bird gets +1/+0.
+  - Ability of Bird [observed_semantic_effect, seq=172] (active=rennkonn, phase=Phase_Main1, controller=rennkonn, owner=rennkonn, source_object=359)
+      effects: P/T +1/+0
+      narrative: Ability of Bird: Bird gets +1/+0.
+  Combat snapshots observed (active=rennkonn; frames: DeclareAttack -> DeclareBlock):
+      attackers: Bird [359] (unblocked, observed P/T 4/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): gian31 19 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Royal Treatment [367] Library (rennkonn) -> Hand (rennkonn) (Draw; GRE sequence 149).
+      Escape Tunnel [373] Hand (rennkonn) -> Battlefield (PlayLand; GRE sequence 157).
+      Escape Tunnel [377] Battlefield -> Graveyard (rennkonn) (Sacrifice; GRE sequence 163).
+        sacrifice observed after Ability of Bird (seq 162); direct causal linkage is unavailable.
+      Forest [378] Library (rennkonn) -> Battlefield (Put; GRE sequence 166).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodletter of Aclazotz [362], Godless Shrine [361], Plains [288], Scoured Barrens [279], Swamp [284]; Graveyard: Moonrise Cleric [296]
+      rennkonn: Battlefield: Botanical Sanctum [282], Forest [354], Forest [378], Island [286], Sidequest: Raise a Chocobo [355], Sidequest: Raise a Chocobo [368]; Graveyard: Bushwhack [353], Dazzling Denial [297], Escape Tunnel [377]
+
+Turn 9
+  - Spell Pierce [observed_semantic_effect, seq=204] (active=unknown, controller=rennkonn, owner=rennkonn, source_object=433)
+      chronology reconciliation: parser turn group None conflicts with Turn 9; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: none immediately observed
+      narrative: Observed zone movements: Spell Pierce, Stroke of Midnight, Spell Pierce.
+      explicit effect object references: Stroke of Midnight [429], Stroke of Midnight [435] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Spell Pierce (object 433) Hand (rennkonn) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Stroke of Midnight (object 435) Stack -> Graveyard (gian31) (Countered; shared object ID)
+      protocol-linked zone transfer: Spell Pierce (object 436) Stack -> Graveyard (rennkonn) (Resolve; shared object ID)
+      identity continuity: source object 433 -> transfer object 436 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Bloodletter of Aclazotz [362] (unblocked, observed P/T 2/4)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat damage assignment: unknown unless explicitly observed
+    additional protocol-observed zone movements not assigned to an action chain:
+      Phyrexian Arena [428] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 193).
+      Stroke of Midnight [429] Hand (gian31) -> Stack (CastSpell; GRE sequence 196).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodletter of Aclazotz [362], Godless Shrine [361], Plains [288], Scoured Barrens [279], Swamp [284]; Graveyard: Moonrise Cleric [296], Stroke of Midnight [435]
+      rennkonn: Battlefield: Botanical Sanctum [282], Forest [354], Forest [378], Island [286], Sidequest: Raise a Chocobo [355], Sidequest: Raise a Chocobo [368]; Graveyard: Bushwhack [353], Dazzling Denial [297], Escape Tunnel [377], Spell Pierce [436]
+
+Turn 10
+  - Sidequest: Raise a Chocobo [valid_resolution_no_immediate_mutation, seq=229] (active=rennkonn, phase=Phase_Main1, controller=rennkonn, owner=rennkonn, source_object=438)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sidequest: Raise a Chocobo resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sidequest: Raise a Chocobo (object 438) Hand (rennkonn) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sidequest: Raise a Chocobo (object 438) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Sidequest: Raise a Chocobo [observed_semantic_effect, seq=231] (active=rennkonn, phase=Phase_Main1, controller=rennkonn, owner=rennkonn, source_object=438, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Sidequest: Raise a Chocobo: a token is created.
+      explicit effect object references: Bird [442] (role/targeting only where the protocol identifies it)
+      token created: Bird (object 442, controller=rennkonn) 2/2; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 441).
+  - Mockingbird [valid_resolution_no_immediate_mutation, seq=235] (active=rennkonn, phase=Phase_Main1, controller=rennkonn, owner=rennkonn, source_object=443)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Mockingbird resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Mockingbird (object 443) Hand (rennkonn) -> Stack (CastSpell; shared object ID)
+  Combat snapshots observed (active=rennkonn; frames: DeclareAttack -> DeclareBlock):
+      attackers: Bird [359] (unblocked, observed P/T 2/2), Bird [372] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): gian31 15 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 437 [437] Library (rennkonn) -> Hand (rennkonn) (Draw; GRE sequence 224).
+      Mockingbird [443] Stack -> Battlefield (Resolve; GRE sequence 236).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodletter of Aclazotz [362], Godless Shrine [361], Plains [288], Scoured Barrens [279], Swamp [284]; Graveyard: Moonrise Cleric [296], Stroke of Midnight [435]
+      rennkonn: Battlefield: Botanical Sanctum [282], Forest [354], Forest [378], Island [286], Mockingbird [443], Sidequest: Raise a Chocobo [355], Sidequest: Raise a Chocobo [368], Sidequest: Raise a Chocobo [438]; Graveyard: Bushwhack [353], Dazzling Denial [297], Escape Tunnel [377], Spell Pierce [436]
+
+Turn 11
+  - Rush of Dread [observed_semantic_effect, seq=272] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=447)
+      effects: life -16
+      narrative: Rush of Dread: rennkonn loses 16 life.
+      protocol-linked zone transfer: Rush of Dread (object 447) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Rush of Dread (object 457) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 447 -> transfer object 457 (explicit GRE ObjectIdChanged chain).
+  - Royal Treatment [observed_semantic_effect, seq=270] (active=unknown, controller=rennkonn, owner=rennkonn, source_object=453)
+      chronology reconciliation: parser turn group None conflicts with Turn 11; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: token creation, attachment_created
+      narrative: Royal Treatment: a token is created; attachment_created.
+      explicit effect object references: Mockingbird [443], Royal [455] (role/targeting only where the protocol identifies it)
+      token created: Royal (object 455, controller=rennkonn); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 453).
+      protocol-linked zone transfer: Royal Treatment (object 453) Hand (rennkonn) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Royal Treatment (object 456) Stack -> Graveyard (rennkonn) (Resolve; shared object ID)
+      identity continuity: source object 453 -> transfer object 456 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [445] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 256).
+      Swamp [446] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 259).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodletter of Aclazotz [362], Godless Shrine [361], Plains [288], Scoured Barrens [279], Swamp [284], Swamp [446]; Graveyard: Moonrise Cleric [296], Rush of Dread [457], Stroke of Midnight [435]
+      rennkonn: Battlefield: Botanical Sanctum [282], Forest [354], Forest [378], Island [286], Mockingbird [443], Sidequest: Raise a Chocobo [355], Sidequest: Raise a Chocobo [368], Sidequest: Raise a Chocobo [438]; Graveyard: Bushwhack [353], Dazzling Denial [297], Escape Tunnel [377], Royal Treatment [456], Spell Pierce [436]
+
+UNNUMBERED / UNRESOLVED TURN GROUP
+  - The captured records do not provide a verified numbered turn for the following events.
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 7, seq 130: gian31 21 -> 19. No source event correlated in captured records.
+- Turn 9, seq 214: rennkonn 20 -> 16. combat-reconciled component 2; unresolved residual 2.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 4 token creations observed; 4 active as last observed; 0 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Bird [359] controller=rennkonn; created Turn 6 (2/2); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 10, object 359 (latest observed P/T 2/2; current zone unconfirmed).
+- Bird [372] controller=rennkonn; created Turn 8 (2/2); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 10, object 372 (latest observed P/T 2/2; current zone unconfirmed).
+- Bird [442] controller=rennkonn; created Turn 10 (2/2); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 10, object 442 (latest observed P/T 2/2; current zone unconfirmed).
+- Royal [455] controller=rennkonn; created Turn 11 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 11, object 455 (latest observed P/T unknown; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Scoured Barrens [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 23: Sidequest: Raise a Chocobo [owner/controller metadata unavailable] moves Library (rennkonn) -> Hand (rennkonn) (Draw).
+- Turn 2, seq 26: Botanical Sanctum [owner=rennkonn, controller=rennkonn] moves Hand (rennkonn) -> Battlefield (PlayLand).
+- Turn 3, seq 40: Plains [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 43: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 57: Sidequest: Raise a Chocobo [owner/controller metadata unavailable] moves Library (rennkonn) -> Hand (rennkonn) (Draw).
+- Turn 4, seq 60: Island [owner=rennkonn, controller=rennkonn] moves Hand (rennkonn) -> Battlefield (PlayLand).
+- Turn 5, seq 74: Moonrise Cleric [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 77: Plains [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 78: Moonrise Cleric [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 80: Dazzling Denial [owner=rennkonn, controller=rennkonn] moves Hand (rennkonn) -> Stack (CastSpell).
+- Turn 5, seq 84: Moonrise Cleric [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Countered).
+- Turn 5, seq 84: Dazzling Denial [owner=rennkonn, controller=rennkonn] moves Stack -> Graveyard (rennkonn) (Resolve).
+- Turn 6, seq 98: Mockingbird [owner/controller metadata unavailable] moves Library (rennkonn) -> Hand (rennkonn) (Draw).
+- Turn 6, seq 101: Bushwhack [owner=rennkonn, controller=rennkonn] moves Hand (rennkonn) -> Stack (CastSpell).
+- Turn 6, seq 105: Forest [owner/controller metadata unavailable] moves Library (rennkonn) -> Hand (rennkonn) (Put).
+- Turn 6, seq 106: Bushwhack [owner=rennkonn, controller=rennkonn] moves Stack -> Graveyard (rennkonn) (Resolve).
+- Turn 6, seq 107: Forest [owner=rennkonn, controller=rennkonn] moves Hand (rennkonn) -> Battlefield (PlayLand).
+- Turn 6, seq 108: Sidequest: Raise a Chocobo [owner=rennkonn, controller=rennkonn] moves Hand (rennkonn) -> Stack (CastSpell).
+- Turn 6, seq 110: Sidequest: Raise a Chocobo [owner=rennkonn, controller=rennkonn] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 126: Stroke of Midnight [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 130: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 131: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 132: Godless Shrine [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 133: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 135: Bloodletter of Aclazotz [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 149: Royal Treatment [owner/controller metadata unavailable] moves Library (rennkonn) -> Hand (rennkonn) (Draw).
+- Turn 8, seq 152: Sidequest: Raise a Chocobo [owner=rennkonn, controller=rennkonn] moves Hand (rennkonn) -> Stack (CastSpell).
+- Turn 8, seq 154: Sidequest: Raise a Chocobo [owner=rennkonn, controller=rennkonn] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 157: Escape Tunnel [owner=rennkonn, controller=rennkonn] moves Hand (rennkonn) -> Battlefield (PlayLand).
+- Turn 8, seq 163: Escape Tunnel [owner=rennkonn, controller=rennkonn] moves Battlefield -> Graveyard (rennkonn) (Sacrifice).
+- Turn 8, seq 166: Forest [owner=rennkonn, controller=rennkonn] moves Library (rennkonn) -> Battlefield (Put).
+- Turn 9, seq 193: Phyrexian Arena [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 196: Stroke of Midnight [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 200: Spell Pierce [owner=rennkonn, controller=rennkonn] moves Hand (rennkonn) -> Stack (CastSpell).
+- Turn 9, seq 204: Stroke of Midnight [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Countered).
+- Turn 9, seq 204: Spell Pierce [owner=rennkonn, controller=rennkonn] moves Stack -> Graveyard (rennkonn) (Resolve).
+- Turn 10, seq 224: object 437 [owner/controller metadata unavailable] moves Library (rennkonn) -> Hand (rennkonn) (Draw).
+- Turn 10, seq 227: Sidequest: Raise a Chocobo [owner=rennkonn, controller=rennkonn] moves Hand (rennkonn) -> Stack (CastSpell).
+- Turn 10, seq 229: Sidequest: Raise a Chocobo [owner=rennkonn, controller=rennkonn] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 232: Mockingbird [owner=rennkonn, controller=rennkonn] moves Hand (rennkonn) -> Stack (CastSpell).
+- Turn 10, seq 236: Mockingbird [owner=rennkonn, controller=rennkonn] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 256: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 259: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 11, seq 260: Rush of Dread [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 266: Royal Treatment [owner=rennkonn, controller=rennkonn] moves Hand (rennkonn) -> Stack (CastSpell).
+- Turn 11, seq 270: Royal Treatment [owner=rennkonn, controller=rennkonn] moves Stack -> Graveyard (rennkonn) (Resolve).
+- Turn 11, seq 272: Rush of Dread [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 164 becomes object 279 [Scoured Barrens].
+- Turn 2, seq 23: object 226 becomes object 281 [Sidequest: Raise a Chocobo].
+- Turn 2, seq 26: object 223 becomes object 282 [Botanical Sanctum].
+- Turn 3, seq 40: object 166 becomes object 283 [Plains].
+- Turn 3, seq 43: object 161 becomes object 284 [Swamp].
+- Turn 4, seq 57: object 227 becomes object 285 [Sidequest: Raise a Chocobo].
+- Turn 4, seq 60: object 221 becomes object 286 [Island].
+- Turn 5, seq 74: object 167 becomes object 287 [Moonrise Cleric].
+- Turn 5, seq 77: object 283 becomes object 288 [Plains].
+- Turn 5, seq 78: object 287 becomes object 289 [Moonrise Cleric].
+- Turn 5, seq 80: object 219 becomes object 293 [Dazzling Denial].
+- Turn 5, seq 84: object 289 becomes object 296 [Moonrise Cleric].
+- Turn 5, seq 84: object 293 becomes object 297 [Dazzling Denial].
+- Turn 6, seq 98: object 228 becomes object 298 [Mockingbird].
+- Turn 6, seq 101: object 224 becomes object 299 [Bushwhack].
+- Turn 6, seq 105: object 252 becomes object 302 [Forest].
+- Turn 6, seq 106: object 299 becomes object 353 [Bushwhack].
+- Turn 6, seq 107: object 302 becomes object 354 [Forest].
+- Turn 6, seq 108: object 285 becomes object 355 [Sidequest: Raise a Chocobo].
+- Turn 7, seq 126: object 168 becomes object 360 [Stroke of Midnight].
+- Turn 7, seq 130: object 163 becomes object 361 [Godless Shrine].
+- Turn 7, seq 131: object 159 becomes object 362 (Rush of Dread -> Bloodletter of Aclazotz).
+- Turn 7, seq 132: object 163 becomes object 361 [Godless Shrine].
+- Turn 7, seq 133: object 160 becomes object 362 [Bloodletter of Aclazotz].
+- Turn 8, seq 149: object 304 becomes object 367 [Royal Treatment].
+- Turn 8, seq 152: object 281 becomes object 368 [Sidequest: Raise a Chocobo].
+- Turn 8, seq 157: object 222 becomes object 373 [Escape Tunnel].
+- Turn 8, seq 163: object 373 becomes object 377 [Escape Tunnel].
+- Turn 8, seq 166: object 345 becomes object 378 [Forest].
+- Turn 9, seq 193: object 169 becomes object 428 [Phyrexian Arena].
+- Turn 9, seq 196: object 360 becomes object 429 [Stroke of Midnight].
+- Turn 9, seq 200: object 220 becomes object 433 [Spell Pierce].
+- Turn 9, seq 204: object 429 becomes object 435 [Stroke of Midnight].
+- Turn 9, seq 204: object 433 becomes object 436 [Spell Pierce].
+- Turn 10, seq 224: object 381 becomes object 437 [object 381].
+- Turn 10, seq 227: object 225 becomes object 438 [Sidequest: Raise a Chocobo].
+- Turn 10, seq 232: object 298 becomes object 443 [Mockingbird].
+- Turn 11, seq 256: object 170 becomes object 445 [Swamp].
+- Turn 11, seq 259: object 445 becomes object 446 [Swamp].
+- Turn 11, seq 260: object 159 becomes object 447 [Rush of Dread].
+- Turn 11, seq 266: object 367 becomes object 453 [Royal Treatment].
+- Turn 11, seq 270: object 453 becomes object 456 [Royal Treatment].
+- Turn 11, seq 272: object 447 becomes object 457 [Rush of Dread].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Scoured Barrens (object 279) from Hand (gian31) to Battlefield.
+- Turn 2: rennkonn plays Botanical Sanctum (object 282) from Hand (rennkonn) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 284) from Hand (gian31) to Battlefield.
+- Turn 4: rennkonn plays Island (object 286) from Hand (rennkonn) to Battlefield.
+- Turn 5: gian31 plays Plains (object 288) from Hand (gian31) to Battlefield.
+- Turn 6: rennkonn plays Forest (object 354) from Hand (rennkonn) to Battlefield.
+- Turn 7: gian31 plays Godless Shrine (object 361) from Hand (gian31) to Battlefield.
+- Turn 7: gian31 plays Godless Shrine (object 361) from Hand (gian31) to Battlefield.
+- Turn 8: rennkonn plays Escape Tunnel (object 373) from Hand (rennkonn) to Battlefield.
+- Turn 11: gian31 plays Swamp (object 446) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 8: ordered adjacent records Bird -> Bird; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Sidequest: Raise a Chocobo: casts=3; abilities=3 (triggered=3, activated=0) across turns [6, 6, 8, 8, 10, 10]
+  observed effect totals: draws=0, tokens=3, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Bird: abilities=4 (triggered=4, activated=0) across turns [8, 8, 8, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=4
+  observed effects: P/T +1/+0
+- Bloodletter of Aclazotz: casts=1 across turns [7]
+- Dazzling Denial: casts=1 across turns [5]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: zone_transfer
+- Mockingbird: casts=1 across turns [10]
+- Royal Treatment: casts=1 across turns [11]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: attachment_created, token creation
+- Rush of Dread: casts=1 across turns [11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=1
+  observed effects: life -16, synthetic event
+- Scoured Barrens: abilities=1 (triggered=1, activated=0) across turns [1]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Spell Pierce: casts=1 across turns [9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: zone_transfer
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 8 - DeclareAttack, DeclareBlock (active=rennkonn)
+  attacker: Bird (rennkonn) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Bloodletter of Aclazotz (gian31) -> rennkonn; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, DeclareBlock (active=rennkonn)
+  attacker: Bird (rennkonn) -> gian31; unblocked in this observed snapshot
+  attacker: Bird (rennkonn) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Rush of Dread | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 160: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 161: Swamp | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 162: Enduring Tenacity | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Godless Shrine | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 164: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 165: Makeshift Binding | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 252: Forest | controller=rennkonn | owner=rennkonn | zone=Stack (latest_object_observation)
+- 279: Scoured Barrens | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 280: object 280 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 282: Botanical Sanctum | controller=rennkonn | owner=rennkonn | zone=Battlefield (latest_object_observation)
+- 283: Plains | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 284: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 286: Island | controller=rennkonn | owner=rennkonn | zone=Battlefield (latest_object_observation)
+- 287: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 288: Plains | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 289: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 293: Dazzling Denial | controller=rennkonn | owner=rennkonn | zone=Stack (latest_object_observation)
+- 296: Moonrise Cleric | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 297: Dazzling Denial | controller=rennkonn | owner=rennkonn | zone=Graveyard (latest_object_observation)
+- 299: Bushwhack | controller=rennkonn | owner=rennkonn | zone=Stack (latest_object_observation)
+- 301: Forest | controller=rennkonn | owner=rennkonn | zone=unknown (inferred unknown) (latest_object_observation)
+- 303: Forest | controller=rennkonn | owner=rennkonn | zone=unknown (inferred unknown) (latest_object_observation)
+- 353: Bushwhack | controller=rennkonn | owner=rennkonn | zone=Graveyard (latest_object_observation)
+- 354: Forest | controller=rennkonn | owner=rennkonn | zone=Battlefield (latest_object_observation)
+- 355: Sidequest: Raise a Chocobo | controller=rennkonn | owner=rennkonn | zone=Stack (latest_object_observation)
+- 358: object 358 | controller=rennkonn | owner=rennkonn | zone=unknown (inferred unknown) (latest_object_observation)
+- 359: Bird | controller=rennkonn | owner=rennkonn | zone=Battlefield (latest_object_observation)
+- 360: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 361: Godless Shrine | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 362: Bloodletter of Aclazotz | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 368: Sidequest: Raise a Chocobo | controller=rennkonn | owner=rennkonn | zone=Stack (latest_object_observation)
+- 371: object 371 | controller=rennkonn | owner=rennkonn | zone=unknown (inferred unknown) (latest_object_observation)
+- 372: Bird | controller=rennkonn | owner=rennkonn | zone=Battlefield (latest_object_observation)
+- 373: Escape Tunnel | controller=rennkonn | owner=rennkonn | zone=Battlefield (latest_object_observation)
+- 374: object 374 | controller=rennkonn | owner=rennkonn | zone=unknown (inferred unknown) (latest_object_observation)
+- 375: object 375 | controller=rennkonn | owner=rennkonn | zone=unknown (inferred unknown) (latest_object_observation)
+- 376: object 376 | controller=rennkonn | owner=rennkonn | zone=unknown (inferred unknown) (latest_object_observation)
+- 377: Escape Tunnel | controller=rennkonn | owner=rennkonn | zone=Graveyard (latest_object_observation)
+- 378: Forest | controller=rennkonn | owner=rennkonn | zone=Battlefield (latest_object_observation)
+- 379: object 379 | controller=rennkonn | owner=rennkonn | zone=unknown (inferred unknown) (latest_object_observation)
+- 380: object 380 | controller=rennkonn | owner=rennkonn | zone=unknown (inferred unknown) (latest_object_observation)
+- 428: Phyrexian Arena | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 429: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 433: Spell Pierce | controller=rennkonn | owner=rennkonn | zone=Stack (latest_object_observation)
+- 435: Stroke of Midnight | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 436: Spell Pierce | controller=rennkonn | owner=rennkonn | zone=Graveyard (latest_object_observation)
+- 438: Sidequest: Raise a Chocobo | controller=rennkonn | owner=rennkonn | zone=Stack (latest_object_observation)
+- 441: object 441 | controller=rennkonn | owner=rennkonn | zone=unknown (inferred unknown) (latest_object_observation)
+- 442: Bird | controller=rennkonn | owner=rennkonn | zone=Battlefield (latest_object_observation)
+- 443: Mockingbird | controller=rennkonn | owner=rennkonn | zone=Battlefield (latest_object_observation)
+- 445: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 446: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 447: Rush of Dread | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 453: Royal Treatment | controller=rennkonn | owner=rennkonn | zone=Stack (latest_object_observation)
+- 455: Royal | controller=rennkonn | owner=rennkonn | zone=Battlefield (latest_object_observation)
+- 456: Royal Treatment | controller=rennkonn | owner=rennkonn | zone=Graveyard (latest_object_observation)
+- 457: Rush of Dread | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 25 total items
+  zones: Battlefield=6, Hand=7, Stack=8, unknown=4
+  objects: Swamp x4, Moonrise Cleric x3, Rush of Dread x3, Stroke of Midnight x3, Bloodletter of Aclazotz x2, Godless Shrine x2, Plains x2, Scoured Barrens x2, Enduring Tenacity, Makeshift Binding, Phyrexian Arena, object 280
+rennkonn: 33 total items
+  zones: Battlefield=10, Graveyard=5, Stack=8, unknown=10
+  objects: Forest x5, Bird x3, Sidequest: Raise a Chocobo x3, Bushwhack x2, Dazzling Denial x2, Escape Tunnel x2, Royal Treatment x2, Spell Pierce x2, Botanical Sanctum, Island, Mockingbird, Royal
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (6): Bloodletter of Aclazotz, Godless Shrine, Plains, Scoured Barrens, Swamp, Swamp
+  Graveyard: 0 card(s)
+rennkonn:
+  Battlefield (10): Bird, Bird, Bird, Botanical Sanctum, Escape Tunnel, Forest, Forest, Island, Mockingbird, Royal
+  Graveyard: 5 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+14 objects have no resolved final zone and are omitted from the known board state.
+gian31: 4 unknown object(s)
+rennkonn: 10 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=7, Stack=16
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+gian31:
+  Battlefield (6): Scoured Barrens, Swamp, Plains, Godless Shrine, Bloodletter of Aclazotz, Swamp
+  Graveyard (3): Moonrise Cleric, Stroke of Midnight, Rush of Dread
+rennkonn:
+  Battlefield (12): Botanical Sanctum, Island, Forest, Sidequest: Raise a Chocobo, Bird, Sidequest: Raise a Chocobo, Bird, Forest, Sidequest: Raise a Chocobo, Bird, Mockingbird, Royal
+  Graveyard (5): Dazzling Denial, Bushwhack, Escape Tunnel, Spell Pierce, Royal Treatment
+Known non-persistent entries (counts only):
+  gian31: Hand=3, Limbo=4, Stack=1
+  rennkonn: Hand=1, Limbo=2
+  unknown: Library=94, Limbo=7
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1
+- Turn 2: gian31 Battlefield=1; rennkonn Battlefield=1
+- Turn 3: gian31 Battlefield=2; rennkonn Battlefield=1
+- Turn 4: gian31 Battlefield=2; rennkonn Battlefield=2
+- Turn 5: gian31 Battlefield=3; gian31 Graveyard=1; rennkonn Battlefield=2; rennkonn Graveyard=1
+- Turn 6: gian31 Battlefield=3; gian31 Graveyard=1; rennkonn Battlefield=4; rennkonn Graveyard=2
+- Turn 7: gian31 Battlefield=5; gian31 Graveyard=1; rennkonn Battlefield=4; rennkonn Graveyard=2
+- Turn 8: gian31 Battlefield=5; gian31 Graveyard=1; rennkonn Battlefield=6; rennkonn Graveyard=3
+- Turn 9: gian31 Battlefield=5; gian31 Graveyard=2; rennkonn Battlefield=6; rennkonn Graveyard=4
+- Turn 10: gian31 Battlefield=5; gian31 Graveyard=2; rennkonn Battlefield=8; rennkonn Graveyard=4
+- Turn 11: gian31 Battlefield=6; gian31 Graveyard=3; rennkonn Battlefield=8; rennkonn Graveyard=5
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 6: Sidequest: Raise a Chocobo resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Bloodletter of Aclazotz resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Sidequest: Raise a Chocobo resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Sidequest: Raise a Chocobo resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Mockingbird resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
