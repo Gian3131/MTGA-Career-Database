@@ -1,0 +1,727 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Barleyyy
+Seat map: Seat 1=gian31, Seat 2=Barleyyy
+Turn range (known): 1 - 13
+Unnumbered turn groups retained: 1
+Records: 23
+Action chains: 23
+Winner: gian31
+Final life: {'gian31': 10, 'Barleyyy': 10}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 13 (Phase_Beginning, Step_Upkeep; Ability of Laughing Jasper Flint, seq 357).
+Later numbered GRE record(s): 4 after action sequence 357 across turn(s) [13]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+POST-ACTION GRE RECORDS - RESULT ORDER UNRESOLVED
+  - Turn 13, seq 359: identity_changed.
+  - Turn 13, seq 359: zone_transfer (Draw).
+  - Turn 13, seq 362: identity_changed.
+  - Turn 13, seq 362: zone_transfer (PlayLand).
+  These records are retained for traceability; their order relative to the match-result payload is not asserted.
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 37 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 13 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] (raw records=13; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 16 explicit Library -> Hand movement(s); named in the draw record=7, resolved through an explicit identity transition=8, unresolved=1.
+Unresolved draw identities (explicit movements retained): Turn 10, seq 238, object 344.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Swamp [159], Mountain [160], Laughing Jasper Flint [161], Binding Negotiation [162], Mountain [163], Thought-Stalker Warlock [164], Reno and Rude [165].
+  - unknown: 7 observed card(s): object 219 [219], object 220 [220], object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 10, 'Barleyyy': 10}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 13 (Phase_Beginning, Step_Upkeep; Ability of Laughing Jasper Flint, seq 357).
+Last captured life snapshot: gian31 15 -> 10 (seq 342).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Momo, Playful Pet.
+- Turn 3: actions: cards=0, abilities=0; explicit battlefield entries=Mountain.
+- Turn 4: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Island, Super Intelligence.
+- Turn 5: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Reno and Rude.
+- Turn 6: actions: cards=2, abilities=2; combat snapshots=1; life mutations=1; explicit battlefield entries=Island, Seam Rip, Skyward Spider; explicit battlefield exits=Reno and Rude.
+- Turn 7: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Laughing Jasper Flint.
+- Turn 8: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Island, Shardmage's Rescue.
+- Turn 9: actions: cards=2, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, Thought-Stalker Warlock, Tinybones, Bauble Burglar.
+- Turn 10: actions: cards=0, abilities=2; combat snapshots=1; life mutations=2; explicit battlefield entries=Lonely Arroyo.
+- Turn 11: actions: cards=4, abilities=1; combat snapshots=1; life mutations=2; explicit battlefield entries=Mountain, Sheltered by Ghosts, Shardmage's Rescue, Sheltered by Ghosts.
+- Turn 12: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Plains, Wraith, Vicious Vigilante.
+- Turn 13: actions: cards=0, abilities=1; explicit battlefield entries=Mountain.
+- Turn None: actions: cards=0, abilities=0.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [279] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [279]
+
+Turn 2
+  - Momo, Playful Pet [valid_resolution_no_immediate_mutation, seq=27] (active=Barleyyy, phase=Phase_Main1, controller=Barleyyy, owner=Barleyyy, source_object=282)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Momo, Playful Pet resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Momo, Playful Pet (object 282) Hand (Barleyyy) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Momo, Playful Pet (object 282) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Wraith, Vicious Vigilante [280] Library (Barleyyy) -> Hand (Barleyyy) (Draw; GRE sequence 21).
+      Plains [281] Hand (Barleyyy) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [279]
+      Barleyyy: Battlefield: Momo, Playful Pet [282], Plains [281]
+
+Turn 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [284] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 41).
+      Mountain [285] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 44).
+      Binding Negotiation [286] Hand (gian31) -> Stack (CastSpell; GRE sequence 45).
+      Wraith, Vicious Vigilante [295] Hand (Barleyyy) -> Graveyard (Barleyyy) (Discard; GRE sequence 50).
+      Binding Negotiation [296] Stack -> Graveyard (gian31) (Resolve; GRE sequence 50).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [285], Swamp [279]; Graveyard: Binding Negotiation [296]
+      Barleyyy: Battlefield: Momo, Playful Pet [282], Plains [281]; Graveyard: Wraith, Vicious Vigilante [295]
+
+Turn 4
+  - Super Intelligence [valid_resolution_no_immediate_mutation, seq=86] (active=Barleyyy, phase=Phase_Main2, controller=Barleyyy, owner=Barleyyy, source_object=299)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Super Intelligence resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Super Intelligence (object 299) Hand (Barleyyy) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Super Intelligence (object 299) Stack -> Battlefield (Resolve; shared object ID)
+      Aura attachment target: unavailable in captured GRE records.
+  Combat snapshots observed (active=Barleyyy; frames: DeclareAttack -> DeclareBlock):
+      attackers: Momo, Playful Pet [282] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Secret Identity [297] Library (Barleyyy) -> Hand (Barleyyy) (Draw; GRE sequence 64).
+      Island [298] Hand (Barleyyy) -> Battlefield (PlayLand; GRE sequence 67).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [285], Swamp [279]; Graveyard: Binding Negotiation [296]
+      Barleyyy: Battlefield: Island [298], Momo, Playful Pet [282], Plains [281], Super Intelligence [299]; Graveyard: Wraith, Vicious Vigilante [295]
+
+Turn 5
+  - Reno and Rude [valid_resolution_no_immediate_mutation, seq=98] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=303)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Reno and Rude resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Reno and Rude (object 303) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Reno and Rude (object 303) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tinybones, Bauble Burglar [301] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 92).
+      Mountain [302] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 95).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [285], Mountain [302], Reno and Rude [303], Swamp [279]; Graveyard: Binding Negotiation [296]
+      Barleyyy: Battlefield: Island [298], Momo, Playful Pet [282], Plains [281], Super Intelligence [299]; Graveyard: Wraith, Vicious Vigilante [295]
+
+Turn 6
+  - Ability of Super Intelligence [observed_semantic_effect, seq=112] (active=Barleyyy, phase=Phase_Beginning, step=Step_Upkeep, controller=Barleyyy, owner=Barleyyy, source_object=299, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Super Intelligence: draw.
+      explicit effect object references: object 228 [228], object 307 [307] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Skyward Spider (object 307) Library (Barleyyy) -> Hand (Barleyyy) (Draw; shared object ID)
+  - Seam Rip [valid_resolution_no_immediate_mutation, seq=120] (active=Barleyyy, phase=Phase_Main1, controller=Barleyyy, owner=Barleyyy, source_object=310)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Seam Rip resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Seam Rip (object 310) Hand (Barleyyy) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Seam Rip (object 310) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Seam Rip [observed_semantic_effect, seq=124] (active=Barleyyy, phase=Phase_Main1, controller=Barleyyy, owner=Barleyyy, source_object=310, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Seam Rip: exiles Reno and Rude.
+      explicit effect object references: Reno and Rude [303], Reno and Rude [313] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Reno and Rude (object 313) Battlefield -> Exile (Exile; shared object ID)
+  - Skyward Spider [valid_resolution_no_immediate_mutation, seq=141] (active=Barleyyy, phase=Phase_Main2, controller=Barleyyy, owner=Barleyyy, source_object=314)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Skyward Spider resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Skyward Spider (object 314) Hand (Barleyyy) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Skyward Spider (object 314) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=Barleyyy; frames: DeclareAttack -> DeclareBlock):
+      attackers: Momo, Playful Pet [282] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Island [308] Library (Barleyyy) -> Hand (Barleyyy) (Draw; GRE sequence 114).
+      Island [309] Hand (Barleyyy) -> Battlefield (PlayLand; GRE sequence 117).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [285], Mountain [302], Swamp [279]; Graveyard: Binding Negotiation [296]; Exile: Reno and Rude [313]
+      Barleyyy: Battlefield: Island [298], Island [309], Momo, Playful Pet [282], Plains [281], Seam Rip [310], Skyward Spider [314], Super Intelligence [299]; Graveyard: Wraith, Vicious Vigilante [295]
+
+Turn 7
+  - Laughing Jasper Flint [valid_resolution_no_immediate_mutation, seq=153] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=319)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Laughing Jasper Flint resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Laughing Jasper Flint (object 319) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Laughing Jasper Flint (object 319) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [317] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 147).
+      Swamp [318] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 150).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Laughing Jasper Flint [319], Mountain [285], Mountain [302], Swamp [279], Swamp [318]; Graveyard: Binding Negotiation [296]; Exile: Reno and Rude [313]
+      Barleyyy: Battlefield: Island [298], Island [309], Momo, Playful Pet [282], Plains [281], Seam Rip [310], Skyward Spider [314], Super Intelligence [299]; Graveyard: Wraith, Vicious Vigilante [295]
+
+Turn 8
+  - Ability of Super Intelligence [observed_semantic_effect, seq=167] (active=Barleyyy, phase=Phase_Beginning, step=Step_Upkeep, controller=Barleyyy, owner=Barleyyy, source_object=299, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Super Intelligence: draw.
+      explicit effect object references: object 230 [230], object 324 [324] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shardmage's Rescue (object 324) Library (Barleyyy) -> Hand (Barleyyy) (Draw; shared object ID)
+  - Shardmage's Rescue [valid_resolution_no_immediate_mutation, seq=177] (active=Barleyyy, phase=Phase_Main1, controller=Barleyyy, owner=Barleyyy, source_object=327)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Shardmage's Rescue resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Shardmage's Rescue (object 327) Hand (Barleyyy) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Shardmage's Rescue (object 327) Stack -> Battlefield (Resolve; shared object ID)
+      Aura attachment target: unavailable in captured GRE records.
+  Combat snapshots observed (active=Barleyyy; frames: DeclareAttack -> DeclareBlock):
+      attackers: Momo, Playful Pet [282] (unblocked, observed P/T 1/1), Skyward Spider [314] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): gian31 18 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Secret Identity [325] Library (Barleyyy) -> Hand (Barleyyy) (Draw; GRE sequence 169).
+      Island [326] Hand (Barleyyy) -> Battlefield (PlayLand; GRE sequence 172).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Laughing Jasper Flint [319], Mountain [285], Mountain [302], Swamp [279], Swamp [318]; Graveyard: Binding Negotiation [296]; Exile: Reno and Rude [313]
+      Barleyyy: Battlefield: Island [298], Island [309], Island [326], Momo, Playful Pet [282], Plains [281], Seam Rip [310], Shardmage's Rescue [327], Skyward Spider [314], Super Intelligence [299]; Graveyard: Wraith, Vicious Vigilante [295]
+
+Turn 9
+  - Ability of Laughing Jasper Flint [observed_semantic_effect, seq=199] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=319, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Laughing Jasper Flint: exiles Secret Identity.
+      explicit effect object references: object 232 [232], Secret Identity [330] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Secret Identity (object 330) Library (Barleyyy) -> Exile (Exile; shared object ID)
+  - Thought-Stalker Warlock [valid_resolution_no_immediate_mutation, seq=207] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=333)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Thought-Stalker Warlock resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Thought-Stalker Warlock (object 333) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Thought-Stalker Warlock (object 333) Stack -> Battlefield (Resolve; shared object ID)
+  - Tinybones, Bauble Burglar [valid_resolution_no_immediate_mutation, seq=215] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=339)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, Bauble Burglar resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 339) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 339) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Laughing Jasper Flint [319] (unblocked, observed P/T 4/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Barleyyy -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): Barleyyy 20 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [331] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 201).
+      Swamp [332] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 204).
+      Secret Identity [338] Hand (Barleyyy) -> Graveyard (Barleyyy) (Discard; GRE sequence 212).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Laughing Jasper Flint [319], Mountain [285], Mountain [302], Swamp [279], Swamp [318], Swamp [332], Thought-Stalker Warlock [333], Tinybones, Bauble Burglar [339]; Graveyard: Binding Negotiation [296]; Exile: Reno and Rude [313]
+      Barleyyy: Battlefield: Island [298], Island [309], Island [326], Momo, Playful Pet [282], Plains [281], Seam Rip [310], Shardmage's Rescue [327], Skyward Spider [314], Super Intelligence [299]; Graveyard: Secret Identity [338], Wraith, Vicious Vigilante [295]; Exile: Secret Identity [330]
+
+Turn 10
+  - Ability of Super Intelligence [observed_semantic_effect, seq=236] (active=Barleyyy, phase=Phase_Beginning, step=Step_Upkeep, controller=Barleyyy, owner=Barleyyy, source_object=299, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Super Intelligence: draw.
+      explicit effect object references: object 233 [233], object 343 [343] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Lonely Arroyo (object 343) Library (Barleyyy) -> Hand (Barleyyy) (Draw; shared object ID)
+  - Ability of Lonely Arroyo [observed_semantic_effect, seq=245] (active=Barleyyy, phase=Phase_Main1, controller=Barleyyy, owner=Barleyyy, source_object=345, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Lonely Arroyo: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 1] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=Barleyyy; frames: DeclareAttack -> DeclareBlock):
+      attackers: Momo, Playful Pet [282] (unblocked, observed P/T 1/1), Skyward Spider [314] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -5 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Lonely Arroyo; direct protocol link unavailable): gian31 14 -> 13
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): gian31 13 -> 9
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 344 [344] Library (Barleyyy) -> Hand (Barleyyy) (Draw; GRE sequence 238).
+      Lonely Arroyo [345] Hand (Barleyyy) -> Battlefield (PlayLand; GRE sequence 241).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Laughing Jasper Flint [319], Mountain [285], Mountain [302], Swamp [279], Swamp [318], Swamp [332], Thought-Stalker Warlock [333], Tinybones, Bauble Burglar [339]; Graveyard: Binding Negotiation [296]; Exile: Reno and Rude [313]
+      Barleyyy: Battlefield: Island [298], Island [309], Island [326], Lonely Arroyo [345], Momo, Playful Pet [282], Plains [281], Seam Rip [310], Shardmage's Rescue [327], Skyward Spider [314], Super Intelligence [299]; Graveyard: Secret Identity [338], Wraith, Vicious Vigilante [295]; Exile: Secret Identity [330]
+
+Turn 11
+  - Ability of Laughing Jasper Flint [observed_semantic_effect, seq=267] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=319, source_last_explicit_zone=Battlefield)
+      effects: exile, exile, exile
+      narrative: Ability of Laughing Jasper Flint: exiles Island, Sheltered by Ghosts, Sheltered by Ghosts; exile; exile.
+      explicit effect object references: object 235 [235], object 236 [236], object 237 [237], Island [348], Sheltered by Ghosts [349], Sheltered by Ghosts [350] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Island (object 348) Library (Barleyyy) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Sheltered by Ghosts (object 349) Library (Barleyyy) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Sheltered by Ghosts (object 350) Library (Barleyyy) -> Exile (Exile; shared object ID)
+  - Sheltered by Ghosts [valid_resolution_no_immediate_mutation, seq=277] (active=gian31, phase=Phase_Main1, controller=gian31, owner=Barleyyy, source_object=353)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sheltered by Ghosts resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sheltered by Ghosts (object 353) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Sheltered by Ghosts (object 353) Stack -> Battlefield (Resolve; shared object ID)
+      Aura attachment target: unavailable in captured GRE records.
+  - Sheltered by Ghosts [valid_resolution_no_immediate_mutation, seq=292] (active=gian31, phase=Phase_Main1, controller=gian31, owner=Barleyyy, source_object=359)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sheltered by Ghosts resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sheltered by Ghosts (object 359) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Sheltered by Ghosts (object 359) Stack -> Battlefield (Resolve; shared object ID)
+      Aura attachment target: unavailable in captured GRE records.
+  - Shardmage's Rescue [valid_resolution_no_immediate_mutation, seq=285] (active=unknown, controller=Barleyyy, owner=Barleyyy, source_object=357)
+      chronology reconciliation: parser turn group None conflicts with Turn 11; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Shardmage's Rescue resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Shardmage's Rescue (object 357) Hand (Barleyyy) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Shardmage's Rescue (object 357) Stack -> Battlefield (Resolve; shared object ID)
+      Aura attachment target: unavailable in captured GRE records.
+  - Secret Identity [valid_resolution_no_immediate_mutation, seq=304] (active=unknown, controller=Barleyyy, owner=Barleyyy, source_object=366)
+      chronology reconciliation: parser turn group None conflicts with Turn 11; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Secret Identity resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Secret Identity (object 366) Hand (Barleyyy) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Secret Identity (object 368) Stack -> Graveyard (Barleyyy) (Resolve; shared object ID)
+      identity continuity: source object 366 -> transfer object 368 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Laughing Jasper Flint [319] (unblocked, observed P/T 6/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 6; observed attacker power total: 6; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Barleyyy -6; gian31 +6 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): gian31 9 -> 15
+    life (combat fully reconciled: snapshot power 6 + observed modifiers 0 = 6; individual assignment unavailable): Barleyyy 16 -> 10
+    additional protocol-observed zone movements not assigned to an action chain:
+      Laughing Jasper Flint [351] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 269).
+      Mountain [352] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 272).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Laughing Jasper Flint [319], Mountain [285], Mountain [302], Mountain [352], Sheltered by Ghosts [353], Sheltered by Ghosts [359], Swamp [279], Swamp [318], Swamp [332], Thought-Stalker Warlock [333], Tinybones, Bauble Burglar [339]; Graveyard: Binding Negotiation [296]; Exile: Reno and Rude [313]
+      Barleyyy: Battlefield: Island [298], Island [309], Island [326], Lonely Arroyo [345], Momo, Playful Pet [282], Plains [281], Seam Rip [310], Shardmage's Rescue [327], Shardmage's Rescue [357], Skyward Spider [314], Super Intelligence [299]; Graveyard: Secret Identity [338], Secret Identity [368], Wraith, Vicious Vigilante [295]; Exile: Island [348], Secret Identity [330]
+
+Turn 12
+  - Ability of Super Intelligence [observed_semantic_effect, seq=327] (active=Barleyyy, phase=Phase_Beginning, step=Step_Upkeep, controller=Barleyyy, owner=Barleyyy, source_object=299, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Super Intelligence: draw.
+      explicit effect object references: object 238 [238], object 370 [370] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Wraith, Vicious Vigilante (object 370) Library (Barleyyy) -> Hand (Barleyyy) (Draw; shared object ID)
+  - Wraith, Vicious Vigilante [valid_resolution_no_immediate_mutation, seq=349] (active=Barleyyy, phase=Phase_Main2, controller=Barleyyy, owner=Barleyyy, source_object=373)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Wraith, Vicious Vigilante resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Wraith, Vicious Vigilante (object 373) Hand (Barleyyy) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Wraith, Vicious Vigilante (object 373) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=Barleyyy; frames: DeclareAttack -> DeclareBlock):
+      attackers: Momo, Playful Pet [282] (unblocked, observed P/T 2/2), Skyward Spider [314] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -5 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 15 -> 10
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [371] Library (Barleyyy) -> Hand (Barleyyy) (Draw; GRE sequence 329).
+      Plains [372] Hand (Barleyyy) -> Battlefield (PlayLand; GRE sequence 332).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Laughing Jasper Flint [319], Mountain [285], Mountain [302], Mountain [352], Sheltered by Ghosts [353], Sheltered by Ghosts [359], Swamp [279], Swamp [318], Swamp [332], Thought-Stalker Warlock [333], Tinybones, Bauble Burglar [339]; Graveyard: Binding Negotiation [296]; Exile: Reno and Rude [313]
+      Barleyyy: Battlefield: Island [298], Island [309], Island [326], Lonely Arroyo [345], Momo, Playful Pet [282], Plains [281], Plains [372], Seam Rip [310], Shardmage's Rescue [327], Shardmage's Rescue [357], Skyward Spider [314], Super Intelligence [299], Wraith, Vicious Vigilante [373]; Graveyard: Secret Identity [338], Secret Identity [368], Wraith, Vicious Vigilante [295]; Exile: Island [348], Secret Identity [330]
+
+Turn 13
+  - Ability of Laughing Jasper Flint [observed_semantic_effect, seq=357] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=319, source_last_explicit_zone=Battlefield)
+      effects: exile, exile, exile
+      narrative: Ability of Laughing Jasper Flint: exiles Optimistic Scavenger, Super Intelligence, Shardmage's Rescue; exile; exile.
+      explicit effect object references: object 240 [240], object 241 [241], object 242 [242], Optimistic Scavenger [378], Shardmage's Rescue [379], Super Intelligence [380] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Optimistic Scavenger (object 378) Library (Barleyyy) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Super Intelligence (object 380) Library (Barleyyy) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Shardmage's Rescue (object 379) Library (Barleyyy) -> Exile (Exile; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [381] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 359).
+      Mountain [382] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 362).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Laughing Jasper Flint [319], Mountain [285], Mountain [302], Mountain [352], Mountain [382], Sheltered by Ghosts [353], Sheltered by Ghosts [359], Swamp [279], Swamp [318], Swamp [332], Thought-Stalker Warlock [333], Tinybones, Bauble Burglar [339]; Graveyard: Binding Negotiation [296]; Exile: Reno and Rude [313]
+      Barleyyy: Battlefield: Island [298], Island [309], Island [326], Lonely Arroyo [345], Momo, Playful Pet [282], Plains [281], Plains [372], Seam Rip [310], Shardmage's Rescue [327], Shardmage's Rescue [357], Skyward Spider [314], Super Intelligence [299], Wraith, Vicious Vigilante [373]; Graveyard: Secret Identity [338], Secret Identity [368], Wraith, Vicious Vigilante [295]; Exile: Island [348], Optimistic Scavenger [378], Secret Identity [330], Shardmage's Rescue [379], Super Intelligence [380]
+
+UNNUMBERED / UNRESOLVED TURN GROUP
+  - The captured records do not provide a verified numbered turn for the following events.
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 10, seq 245, Phase_Main1: gian31 14 -> 13. Semantic attribution: Lonely Arroyo; direct protocol link unavailable. Previous captured action: Lonely Arroyo.
+- Turn 11, seq 317, Phase_Main1: gian31 9 -> 15. Combat declaration observed; exact assignment unavailable. Previous captured action: Sheltered by Ghosts.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Wraith, Vicious Vigilante [owner=Barleyyy, controller=Barleyyy] moves Library (Barleyyy) -> Hand (Barleyyy) (Draw).
+- Turn 2, seq 24: Plains [owner=Barleyyy, controller=Barleyyy] moves Hand (Barleyyy) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Momo, Playful Pet [owner=Barleyyy, controller=Barleyyy] moves Hand (Barleyyy) -> Stack (CastSpell).
+- Turn 2, seq 27: Momo, Playful Pet [owner=Barleyyy, controller=Barleyyy] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 41: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 44: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Binding Negotiation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 50: Wraith, Vicious Vigilante [owner=Barleyyy, controller=Barleyyy] moves Hand (Barleyyy) -> Graveyard (Barleyyy) (Discard).
+- Turn 3, seq 50: Binding Negotiation [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 4, seq 64: Secret Identity [owner/controller metadata unavailable] moves Library (Barleyyy) -> Hand (Barleyyy) (Draw).
+- Turn 4, seq 67: Island [owner=Barleyyy, controller=Barleyyy] moves Hand (Barleyyy) -> Battlefield (PlayLand).
+- Turn 4, seq 82: Super Intelligence [owner=Barleyyy, controller=Barleyyy] moves Hand (Barleyyy) -> Stack (CastSpell).
+- Turn 4, seq 86: Super Intelligence [owner=Barleyyy, controller=Barleyyy] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 92: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 95: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 96: Reno and Rude [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 98: Reno and Rude [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 112: Skyward Spider [owner/controller metadata unavailable] moves Library (Barleyyy) -> Hand (Barleyyy) (Draw).
+- Turn 6, seq 114: Island [owner/controller metadata unavailable] moves Library (Barleyyy) -> Hand (Barleyyy) (Draw).
+- Turn 6, seq 117: Island [owner=Barleyyy, controller=Barleyyy] moves Hand (Barleyyy) -> Battlefield (PlayLand).
+- Turn 6, seq 118: Seam Rip [owner=Barleyyy, controller=Barleyyy] moves Hand (Barleyyy) -> Stack (CastSpell).
+- Turn 6, seq 120: Seam Rip [owner=Barleyyy, controller=Barleyyy] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 124: Reno and Rude [owner=gian31, controller=gian31] moves Battlefield -> Exile (Exile).
+- Turn 6, seq 139: Skyward Spider [owner=Barleyyy, controller=Barleyyy] moves Hand (Barleyyy) -> Stack (CastSpell).
+- Turn 6, seq 141: Skyward Spider [owner=Barleyyy, controller=Barleyyy] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 147: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 150: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 151: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 153: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 167: Shardmage's Rescue [owner/controller metadata unavailable] moves Library (Barleyyy) -> Hand (Barleyyy) (Draw).
+- Turn 8, seq 169: Secret Identity [owner/controller metadata unavailable] moves Library (Barleyyy) -> Hand (Barleyyy) (Draw).
+- Turn 8, seq 172: Island [owner=Barleyyy, controller=Barleyyy] moves Hand (Barleyyy) -> Battlefield (PlayLand).
+- Turn 8, seq 173: Shardmage's Rescue [owner=Barleyyy, controller=Barleyyy] moves Hand (Barleyyy) -> Stack (CastSpell).
+- Turn 8, seq 177: Shardmage's Rescue [owner=Barleyyy, controller=Barleyyy] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 199: Secret Identity [owner=Barleyyy, controller=Barleyyy] moves Library (Barleyyy) -> Exile (Exile).
+- Turn 9, seq 201: Mountain [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 204: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 205: Thought-Stalker Warlock [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 207: Thought-Stalker Warlock [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 212: Secret Identity [owner=Barleyyy, controller=Barleyyy] moves Hand (Barleyyy) -> Graveyard (Barleyyy) (Discard).
+- Turn 9, seq 213: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 215: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 236: Lonely Arroyo [owner/controller metadata unavailable] moves Library (Barleyyy) -> Hand (Barleyyy) (Draw).
+- Turn 10, seq 238: object 344 [owner/controller metadata unavailable] moves Library (Barleyyy) -> Hand (Barleyyy) (Draw).
+- Turn 10, seq 241: Lonely Arroyo [owner=Barleyyy, controller=Barleyyy] moves Hand (Barleyyy) -> Battlefield (PlayLand).
+- Turn 11, seq 267: Island [owner=Barleyyy, controller=Barleyyy] moves Library (Barleyyy) -> Exile (Exile).
+- Turn 11, seq 267: Sheltered by Ghosts [owner=Barleyyy, controller=gian31] moves Library (Barleyyy) -> Exile (Exile).
+- Turn 11, seq 267: Sheltered by Ghosts [owner=Barleyyy, controller=gian31] moves Library (Barleyyy) -> Exile (Exile).
+- Turn 11, seq 269: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 272: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 11, seq 273: Sheltered by Ghosts [owner=Barleyyy, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 11, seq 277: Sheltered by Ghosts [owner=Barleyyy, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 281: Shardmage's Rescue [owner=Barleyyy, controller=Barleyyy] moves Hand (Barleyyy) -> Stack (CastSpell).
+- Turn 11, seq 285: Shardmage's Rescue [owner=Barleyyy, controller=Barleyyy] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 288: Sheltered by Ghosts [owner=Barleyyy, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 11, seq 292: Sheltered by Ghosts [owner=Barleyyy, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 299: Secret Identity [owner=Barleyyy, controller=Barleyyy] moves Hand (Barleyyy) -> Stack (CastSpell).
+- Turn 11, seq 304: Secret Identity [owner=Barleyyy, controller=Barleyyy] moves Stack -> Graveyard (Barleyyy) (Resolve).
+- Turn 12, seq 327: Wraith, Vicious Vigilante [owner/controller metadata unavailable] moves Library (Barleyyy) -> Hand (Barleyyy) (Draw).
+- Turn 12, seq 329: Plains [owner/controller metadata unavailable] moves Library (Barleyyy) -> Hand (Barleyyy) (Draw).
+- Turn 12, seq 332: Plains [owner=Barleyyy, controller=Barleyyy] moves Hand (Barleyyy) -> Battlefield (PlayLand).
+- Turn 12, seq 347: Wraith, Vicious Vigilante [owner=Barleyyy, controller=Barleyyy] moves Hand (Barleyyy) -> Stack (CastSpell).
+- Turn 12, seq 349: Wraith, Vicious Vigilante [owner=Barleyyy, controller=Barleyyy] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 357: Optimistic Scavenger [owner=Barleyyy, controller=Barleyyy] moves Library (Barleyyy) -> Exile (Exile).
+- Turn 13, seq 357: Super Intelligence [owner=Barleyyy, controller=Barleyyy] moves Library (Barleyyy) -> Exile (Exile).
+- Turn 13, seq 357: Shardmage's Rescue [owner=Barleyyy, controller=Barleyyy] moves Library (Barleyyy) -> Exile (Exile).
+- Turn 13, seq 359: Mountain [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 362: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 159 becomes object 279 [Swamp].
+- Turn 2, seq 21: object 226 becomes object 280 [Wraith, Vicious Vigilante].
+- Turn 2, seq 24: object 221 becomes object 281 [Plains].
+- Turn 2, seq 25: object 223 becomes object 282 [Momo, Playful Pet].
+- Turn 3, seq 41: object 166 becomes object 284 [Swamp].
+- Turn 3, seq 44: object 160 becomes object 285 [Mountain].
+- Turn 3, seq 45: object 162 becomes object 286 [Binding Negotiation].
+- Turn 3, seq 50: object 280 becomes object 295 [Wraith, Vicious Vigilante].
+- Turn 3, seq 50: object 286 becomes object 296 [Binding Negotiation].
+- Turn 4, seq 64: object 227 becomes object 297 [Secret Identity].
+- Turn 4, seq 67: object 222 becomes object 298 [Island].
+- Turn 4, seq 82: object 220 becomes object 299 [Super Intelligence].
+- Turn 5, seq 92: object 167 becomes object 301 [Tinybones, Bauble Burglar].
+- Turn 5, seq 95: object 163 becomes object 302 [Mountain].
+- Turn 5, seq 96: object 165 becomes object 303 [Reno and Rude].
+- Turn 6, seq 112: object 228 becomes object 307 [Skyward Spider].
+- Turn 6, seq 114: object 229 becomes object 308 [Island].
+- Turn 6, seq 117: object 224 becomes object 309 [Island].
+- Turn 6, seq 118: object 225 becomes object 310 [Seam Rip].
+- Turn 6, seq 124: object 303 becomes object 313 [Reno and Rude].
+- Turn 6, seq 139: object 307 becomes object 314 [Skyward Spider].
+- Turn 7, seq 147: object 168 becomes object 317 [Swamp].
+- Turn 7, seq 150: object 284 becomes object 318 [Swamp].
+- Turn 7, seq 151: object 161 becomes object 319 [Laughing Jasper Flint].
+- Turn 8, seq 167: object 230 becomes object 324 [Shardmage's Rescue].
+- Turn 8, seq 169: object 231 becomes object 325 [Secret Identity].
+- Turn 8, seq 172: object 308 becomes object 326 [Island].
+- Turn 8, seq 173: object 219 becomes object 327 [Shardmage's Rescue].
+- Turn 9, seq 199: object 232 becomes object 330 [Secret Identity].
+- Turn 9, seq 201: object 169 becomes object 331 [Mountain].
+- Turn 9, seq 204: object 317 becomes object 332 [Swamp].
+- Turn 9, seq 205: object 164 becomes object 333 [Thought-Stalker Warlock].
+- Turn 9, seq 212: object 325 becomes object 338 [Secret Identity].
+- Turn 9, seq 213: object 301 becomes object 339 [Tinybones, Bauble Burglar].
+- Turn 10, seq 236: object 233 becomes object 343 [Lonely Arroyo].
+- Turn 10, seq 238: object 234 becomes object 344 [object 234].
+- Turn 10, seq 241: object 343 becomes object 345 [Lonely Arroyo].
+- Turn 11, seq 267: object 235 becomes object 348 [Island].
+- Turn 11, seq 267: object 236 becomes object 349 [Sheltered by Ghosts].
+- Turn 11, seq 267: object 237 becomes object 350 [Sheltered by Ghosts].
+- Turn 11, seq 269: object 170 becomes object 351 [Laughing Jasper Flint].
+- Turn 11, seq 272: object 331 becomes object 352 [Mountain].
+- Turn 11, seq 273: object 350 becomes object 353 [Sheltered by Ghosts].
+- Turn 11, seq 281: object 324 becomes object 357 [Shardmage's Rescue].
+- Turn 11, seq 288: object 349 becomes object 359 [Sheltered by Ghosts].
+- Turn 11, seq 299: object 297 becomes object 366 [Secret Identity].
+- Turn 11, seq 304: object 366 becomes object 368 [Secret Identity].
+- Turn 12, seq 327: object 238 becomes object 370 [Wraith, Vicious Vigilante].
+- Turn 12, seq 329: object 239 becomes object 371 [Plains].
+- Turn 12, seq 332: object 371 becomes object 372 [Plains].
+- Turn 12, seq 347: object 370 becomes object 373 [Wraith, Vicious Vigilante].
+- Turn 13, seq 357: object 240 becomes object 378 [Optimistic Scavenger].
+- Turn 13, seq 357: object 242 becomes object 380 [Super Intelligence].
+- Turn 13, seq 357: object 241 becomes object 379 [Shardmage's Rescue].
+- Turn 13, seq 359: object 171 becomes object 381 [Mountain].
+- Turn 13, seq 362: object 381 becomes object 382 [Mountain].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Swamp (object 279) from Hand (gian31) to Battlefield.
+- Turn 2: Barleyyy plays Plains (object 281) from Hand (Barleyyy) to Battlefield.
+- Turn 3: gian31 plays Mountain (object 285) from Hand (gian31) to Battlefield.
+- Turn 4: Barleyyy plays Island (object 298) from Hand (Barleyyy) to Battlefield.
+- Turn 5: gian31 plays Mountain (object 302) from Hand (gian31) to Battlefield.
+- Turn 6: Barleyyy plays Island (object 309) from Hand (Barleyyy) to Battlefield.
+- Turn 7: gian31 plays Swamp (object 318) from Hand (gian31) to Battlefield.
+- Turn 8: Barleyyy plays Island (object 326) from Hand (Barleyyy) to Battlefield.
+- Turn 9: gian31 plays Swamp (object 332) from Hand (gian31) to Battlefield.
+- Turn 10: Barleyyy plays Lonely Arroyo (object 345) from Hand (Barleyyy) to Battlefield.
+- Turn 11: gian31 plays Mountain (object 352) from Hand (gian31) to Battlefield.
+- Turn 12: Barleyyy plays Plains (object 372) from Hand (Barleyyy) to Battlefield.
+- Turn 13: gian31 plays Mountain (object 382) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Super Intelligence: casts=1; abilities=4 (triggered=4, activated=0) across turns [4, 6, 8, 10, 12]
+  observed effect totals: draws=4, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Laughing Jasper Flint: casts=1; abilities=3 (triggered=3, activated=0) across turns [7, 9, 11, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=7
+  observed effects: exile
+- Seam Rip: casts=1; abilities=1 (triggered=1, activated=0) across turns [6, 6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: exile
+- Shardmage's Rescue: casts=2 across turns [8, 11]
+- Sheltered by Ghosts: casts=2 across turns [11, 11]
+- Lonely Arroyo: abilities=1 (triggered=1, activated=0) across turns [10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=1, other=1
+  observed effects: 1 damage, life -1, synthetic event
+- Momo, Playful Pet: casts=1 across turns [2]
+- Reno and Rude: casts=1 across turns [5]
+- Secret Identity: casts=1 across turns [11]
+- Skyward Spider: casts=1 across turns [6]
+- Thought-Stalker Warlock: casts=1 across turns [9]
+- Tinybones, Bauble Burglar: casts=1 across turns [9]
+- Wraith, Vicious Vigilante: casts=1 across turns [12]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 4 - DeclareAttack, DeclareBlock (active=Barleyyy)
+  attacker: Momo, Playful Pet (Barleyyy) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 6 - DeclareAttack, DeclareBlock (active=Barleyyy)
+  attacker: Momo, Playful Pet (Barleyyy) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=Barleyyy)
+  attacker: Momo, Playful Pet (Barleyyy) -> gian31; unblocked in this observed snapshot
+  attacker: Skyward Spider (Barleyyy) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack (active=gian31)
+  attacker: Laughing Jasper Flint (gian31) -> Barleyyy; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, DeclareBlock (active=Barleyyy)
+  attacker: Momo, Playful Pet (Barleyyy) -> gian31; unblocked in this observed snapshot
+  attacker: Skyward Spider (Barleyyy) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack (active=gian31)
+  attacker: Laughing Jasper Flint (gian31) -> Barleyyy; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack, DeclareBlock (active=Barleyyy)
+  attacker: Momo, Playful Pet (Barleyyy) -> gian31; unblocked in this observed snapshot
+  attacker: Skyward Spider (Barleyyy) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 160: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 161: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Thought-Stalker Warlock | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Reno and Rude | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 219: Shardmage's Rescue | controller=Barleyyy | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 220: Super Intelligence | controller=Barleyyy | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 222: Island | controller=Barleyyy | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 224: Island | controller=Barleyyy | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 225: Seam Rip | controller=Barleyyy | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 279: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 280: Wraith, Vicious Vigilante | controller=Barleyyy | owner=Barleyyy | zone=Hand (latest_object_observation)
+- 281: Plains | controller=Barleyyy | owner=Barleyyy | zone=Battlefield (latest_object_observation)
+- 282: Momo, Playful Pet | controller=Barleyyy | owner=Barleyyy | zone=Battlefield (latest_object_observation)
+- 284: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 285: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 286: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 289: Super Intelligence | controller=Barleyyy | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 290: Island | controller=Barleyyy | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 291: Wraith, Vicious Vigilante | controller=Barleyyy | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 292: Seam Rip | controller=Barleyyy | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 293: Island | controller=Barleyyy | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 294: Shardmage's Rescue | controller=Barleyyy | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 295: Wraith, Vicious Vigilante | controller=Barleyyy | owner=Barleyyy | zone=Graveyard (latest_object_observation)
+- 296: Binding Negotiation | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 298: Island | controller=Barleyyy | owner=Barleyyy | zone=Battlefield (latest_object_observation)
+- 299: Super Intelligence | controller=Barleyyy | owner=Barleyyy | zone=Stack (latest_object_observation)
+- 301: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 302: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 303: Reno and Rude | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 306: object 306 | controller=Barleyyy | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 309: Island | controller=Barleyyy | owner=Barleyyy | zone=Battlefield (latest_object_observation)
+- 310: Seam Rip | controller=Barleyyy | owner=Barleyyy | zone=Stack (latest_object_observation)
+- 312: object 312 | controller=Barleyyy | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 313: Reno and Rude | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 314: Skyward Spider | controller=Barleyyy | owner=Barleyyy | zone=Battlefield (latest_object_observation)
+- 317: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 318: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 319: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 323: object 323 | controller=Barleyyy | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 326: Island | controller=Barleyyy | owner=Barleyyy | zone=Battlefield (latest_object_observation)
+- 327: Shardmage's Rescue | controller=Barleyyy | owner=Barleyyy | zone=Stack (latest_object_observation)
+- 329: object 329 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 330: Secret Identity | controller=Barleyyy | owner=Barleyyy | zone=Exile (latest_object_observation)
+- 331: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 332: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 333: Thought-Stalker Warlock | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 337: object 337 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 338: Secret Identity | controller=Barleyyy | owner=Barleyyy | zone=Graveyard (latest_object_observation)
+- 339: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 342: object 342 | controller=Barleyyy | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 345: Lonely Arroyo | controller=Barleyyy | owner=Barleyyy | zone=Battlefield (latest_object_observation)
+- 346: object 346 | controller=Barleyyy | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 347: object 347 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 348: Island | controller=Barleyyy | owner=Barleyyy | zone=Exile (latest_object_observation)
+- 349: Sheltered by Ghosts | controller=gian31 | owner=Barleyyy | zone=Exile (latest_object_observation)
+- 350: Sheltered by Ghosts | controller=gian31 | owner=Barleyyy | zone=Hand (latest_object_observation)
+- 351: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 352: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 353: Sheltered by Ghosts | controller=gian31 | owner=Barleyyy | zone=Stack (latest_object_observation)
+- 356: object 356 | controller=gian31 | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 357: Shardmage's Rescue | controller=Barleyyy | owner=Barleyyy | zone=Stack (latest_object_observation)
+- 359: Sheltered by Ghosts | controller=gian31 | owner=Barleyyy | zone=Battlefield (latest_object_observation)
+- 362: object 362 | controller=gian31 | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 363: object 363 | controller=Barleyyy | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 366: Secret Identity | controller=Barleyyy | owner=Barleyyy | zone=Stack (latest_object_observation)
+- 368: Secret Identity | controller=Barleyyy | owner=Barleyyy | zone=Graveyard (latest_object_observation)
+- 369: object 369 | controller=Barleyyy | owner=Barleyyy | zone=unknown (inferred unknown) (latest_object_observation)
+- 372: Plains | controller=Barleyyy | owner=Barleyyy | zone=Battlefield (latest_object_observation)
+- 373: Wraith, Vicious Vigilante | controller=Barleyyy | owner=Barleyyy | zone=Battlefield (latest_object_observation)
+- 377: object 377 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 378: Optimistic Scavenger | controller=Barleyyy | owner=Barleyyy | zone=Exile (latest_object_observation)
+- 379: Shardmage's Rescue | controller=Barleyyy | owner=Barleyyy | zone=Exile (latest_object_observation)
+- 380: Super Intelligence | controller=Barleyyy | owner=Barleyyy | zone=Exile (latest_object_observation)
+- 381: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 382: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Barleyyy: 41 total items
+  zones: Battlefield=9, Exile=5, Graveyard=3, Hand=1, Stack=5, unknown=18
+  objects: Island x8, Shardmage's Rescue x5, Secret Identity x4, Super Intelligence x4, Wraith, Vicious Vigilante x4, Seam Rip x3, Plains x2, Lonely Arroyo, Momo, Playful Pet, Optimistic Scavenger, Skyward Spider, object 306
+gian31: 37 total items
+  zones: Battlefield=12, Exile=2, Hand=14, Stack=2, unknown=7
+  objects: Mountain x8, Swamp x6, Sheltered by Ghosts x4, Binding Negotiation x3, Laughing Jasper Flint x3, Reno and Rude x3, Thought-Stalker Warlock x2, Tinybones, Bauble Burglar x2, object 329, object 337, object 347, object 356
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (12): Laughing Jasper Flint, Mountain, Mountain, Mountain, Mountain, Reno and Rude, Sheltered by Ghosts, Swamp, Swamp, Swamp, Thought-Stalker Warlock, Tinybones, Bauble Burglar
+  Graveyard: 0 card(s)
+Barleyyy:
+  Battlefield (9): Island, Island, Island, Lonely Arroyo, Momo, Playful Pet, Plains, Plains, Skyward Spider, Wraith, Vicious Vigilante
+  Graveyard: 3 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+25 objects have no resolved final zone and are omitted from the known board state.
+Barleyyy: 18 unknown object(s)
+gian31: 7 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=15, Stack=7
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Barleyyy:
+  Battlefield (13): Plains, Momo, Playful Pet, Island, Super Intelligence, Island, Seam Rip, Skyward Spider, Island, Shardmage's Rescue, Lonely Arroyo, Shardmage's Rescue, Plains, Wraith, Vicious Vigilante
+  Graveyard (3): Wraith, Vicious Vigilante, Secret Identity, Secret Identity
+  Exile (5): Secret Identity, Island, Optimistic Scavenger, Shardmage's Rescue, Super Intelligence
+gian31:
+  Battlefield (12): Swamp, Mountain, Mountain, Swamp, Laughing Jasper Flint, Swamp, Thought-Stalker Warlock, Tinybones, Bauble Burglar, Mountain, Sheltered by Ghosts, Sheltered by Ghosts, Mountain
+  Graveyard (1): Binding Negotiation
+  Exile (1): Reno and Rude
+Known non-persistent entries (counts only):
+  Barleyyy: Hand=1, Limbo=1
+  gian31: Hand=1, Limbo=4
+  unknown: Library=83, Limbo=14
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1
+- Turn 2: Barleyyy Battlefield=2; gian31 Battlefield=1
+- Turn 3: Barleyyy Battlefield=2; Barleyyy Graveyard=1; gian31 Battlefield=2; gian31 Graveyard=1
+- Turn 4: Barleyyy Battlefield=4; Barleyyy Graveyard=1; gian31 Battlefield=2; gian31 Graveyard=1
+- Turn 5: Barleyyy Battlefield=4; Barleyyy Graveyard=1; gian31 Battlefield=4; gian31 Graveyard=1
+- Turn 6: Barleyyy Battlefield=7; Barleyyy Graveyard=1; gian31 Battlefield=3; gian31 Graveyard=1; gian31 Exile=1
+- Turn 7: Barleyyy Battlefield=7; Barleyyy Graveyard=1; gian31 Battlefield=5; gian31 Graveyard=1; gian31 Exile=1
+- Turn 8: Barleyyy Battlefield=9; Barleyyy Graveyard=1; gian31 Battlefield=5; gian31 Graveyard=1; gian31 Exile=1
+- Turn 9: Barleyyy Battlefield=9; Barleyyy Graveyard=2; Barleyyy Exile=1; gian31 Battlefield=8; gian31 Graveyard=1; gian31 Exile=1
+- Turn 10: Barleyyy Battlefield=10; Barleyyy Graveyard=2; Barleyyy Exile=1; gian31 Battlefield=8; gian31 Graveyard=1; gian31 Exile=1
+- Turn 11: Barleyyy Battlefield=11; Barleyyy Graveyard=3; Barleyyy Exile=2; gian31 Battlefield=11; gian31 Graveyard=1; gian31 Exile=1
+- Turn 12: Barleyyy Battlefield=13; Barleyyy Graveyard=3; Barleyyy Exile=2; gian31 Battlefield=11; gian31 Graveyard=1; gian31 Exile=1
+- Turn 13: Barleyyy Battlefield=13; Barleyyy Graveyard=3; Barleyyy Exile=5; gian31 Battlefield=12; gian31 Graveyard=1; gian31 Exile=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Momo, Playful Pet resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Super Intelligence resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Reno and Rude resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Seam Rip resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Skyward Spider resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Laughing Jasper Flint resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Shardmage's Rescue resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Thought-Stalker Warlock resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Tinybones, Bauble Burglar resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Sheltered by Ghosts resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Sheltered by Ghosts resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Shardmage's Rescue resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Secret Identity resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Wraith, Vicious Vigilante resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
