@@ -1,0 +1,775 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: bustafa, gian31
+Seat map: Seat 1=bustafa, Seat 2=gian31
+Turn range (known): 1 - 14
+Records: 23
+Action chains: 22
+Winner: gian31
+Final life: {'bustafa': 6, 'gian31': 20}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 14 (Phase_Main1; Ark of Hunger, seq 357).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 42 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 12 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13] (raw records=12; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 17 explicit Library -> Hand movement(s); named in the draw record=12, resolved through an explicit identity transition=4, unresolved=1.
+Unresolved draw identities (explicit movements retained): Turn 14, seq 352, object 429.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Swamp [220], Swamp [221], Laughing Jasper Flint [222], Binding Negotiation [223], Gonti, Night Minister [224], Cruelclaw's Heist [225], Swamp [226].
+  - unknown: 7 observed card(s): object 160 [160], object 161 [161], object 162 [162], object 163 [163], object 164 [164], object 165 [165], object 166 [166].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'bustafa': 6, 'gian31': 20}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 14 (Phase_Main1; Ark of Hunger, seq 357).
+Last captured life snapshot: bustafa 14 -> 6 (seq 337).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Mountain.
+- Turn 3: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 4: actions: cards=0, abilities=0; life mutations=1; explicit battlefield entries=Plains.
+- Turn 5: actions: cards=0, abilities=0; explicit battlefield entries=Mountain.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Spirit Mascot.
+- Turn 7: actions: cards=2, abilities=0; explicit battlefield entries=Swamp, Laughing Jasper Flint, Tinybones, the Pickpocket.
+- Turn 8: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Daredevil, Man Without Fear.
+- Turn 9: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp; explicit battlefield exits=Daredevil, Man Without Fear, Tinybones, the Pickpocket, Spirit Mascot.
+- Turn 10: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Rubble Rouser.
+- Turn 11: actions: cards=2, abilities=3; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, Gonti, Night Minister; explicit battlefield exits=Rubble Rouser.
+- Turn 12: actions: cards=1, abilities=1; explicit battlefield entries=Practiced Scrollsmith.
+- Turn 13: actions: cards=2, abilities=6; combat snapshots=1; life mutations=1; explicit battlefield entries=Plains, Photon, Living Light, Daredevil, Man Without Fear; explicit battlefield exits=Treasure, Treasure, Treasure, Practiced Scrollsmith.
+- Turn 14: actions: cards=1, abilities=0; explicit battlefield entries=Ark of Hunger.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [280] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [280]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Panther Pounce [281] Library (bustafa) -> Hand (bustafa) (Draw; GRE sequence 21).
+      Mountain [282] Hand (bustafa) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [280]
+      bustafa: Battlefield: Mountain [282]
+
+Turn 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [283] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 38).
+      Swamp [284] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 41).
+      Binding Negotiation [285] Hand (gian31) -> Stack (CastSpell; GRE sequence 42).
+      Ark of Hunger [295] Hand (bustafa) -> Graveyard (bustafa) (Discard; GRE sequence 47).
+      Binding Negotiation [296] Stack -> Graveyard (gian31) (Resolve; GRE sequence 47).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [280], Swamp [284]; Graveyard: Binding Negotiation [296]
+      bustafa: Battlefield: Mountain [282]; Graveyard: Ark of Hunger [295]
+
+Turn 4
+    net observed life change this turn: bustafa +2 (individual changes below; gains and losses may offset)
+    life: bustafa 20 -> 22
+    additional protocol-observed zone movements not assigned to an action chain:
+      Fields of Strife [297] Library (bustafa) -> Hand (bustafa) (Draw; GRE sequence 61).
+      Plains [298] Hand (bustafa) -> Battlefield (PlayLand; GRE sequence 64).
+      Pursue the Past [299] Hand (bustafa) -> Stack (CastSpell; GRE sequence 65).
+      Fields of Strife [302] Hand (bustafa) -> Graveyard (bustafa) (Discard; GRE sequence 68).
+      Plains [303] Library (bustafa) -> Hand (bustafa) (Draw; GRE sequence 68).
+      Spirit Mascot [304] Library (bustafa) -> Hand (bustafa) (Draw; GRE sequence 68).
+      Pursue the Past [305] Stack -> Graveyard (bustafa) (Resolve; GRE sequence 68).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [280], Swamp [284]; Graveyard: Binding Negotiation [296]
+      bustafa: Battlefield: Mountain [282], Plains [298]; Graveyard: Ark of Hunger [295], Fields of Strife [302], Pursue the Past [305]
+
+Turn 5
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [306] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 82).
+      Mountain [307] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 85).
+      Cruelclaw's Heist [308] Hand (gian31) -> Stack (CastSpell; GRE sequence 86).
+      Plains [311] Library (bustafa) -> Hand (bustafa) (Draw; GRE sequence 91).
+      Monica Rambeau [315] Hand (bustafa) -> Exile (Exile; GRE sequence 93).
+      Cruelclaw's Heist [317] Stack -> Graveyard (gian31) (Resolve; GRE sequence 93).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [307], Swamp [280], Swamp [284]; Graveyard: Binding Negotiation [296], Cruelclaw's Heist [317]; Exile: Monica Rambeau [315]
+      bustafa: Battlefield: Mountain [282], Plains [298]; Graveyard: Ark of Hunger [295], Fields of Strife [302], Pursue the Past [305]
+
+Turn 6
+  - Spirit Mascot [valid_resolution_no_immediate_mutation, seq=113] (active=bustafa, phase=Phase_Main1, controller=bustafa, owner=bustafa, source_object=320)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Spirit Mascot resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Spirit Mascot (object 320) Hand (bustafa) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Spirit Mascot (object 320) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Thor, God of Thunder [318] Library (bustafa) -> Hand (bustafa) (Draw; GRE sequence 107).
+      Plains [319] Hand (bustafa) -> Battlefield (PlayLand; GRE sequence 110).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [307], Swamp [280], Swamp [284]; Graveyard: Binding Negotiation [296], Cruelclaw's Heist [317]; Exile: Monica Rambeau [315]
+      bustafa: Battlefield: Mountain [282], Plains [298], Plains [319], Spirit Mascot [320]; Graveyard: Ark of Hunger [295], Fields of Strife [302], Pursue the Past [305]
+
+Turn 7
+  - Laughing Jasper Flint [valid_resolution_no_immediate_mutation, seq=133] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=325)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Laughing Jasper Flint resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Laughing Jasper Flint (object 325) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Laughing Jasper Flint (object 325) Stack -> Battlefield (Resolve; shared object ID)
+  - Tinybones, the Pickpocket [valid_resolution_no_immediate_mutation, seq=136] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=329)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, the Pickpocket resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 329) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 329) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tinybones, the Pickpocket [323] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 127).
+      Swamp [324] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 130).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Laughing Jasper Flint [325], Mountain [307], Swamp [280], Swamp [284], Swamp [324], Tinybones, the Pickpocket [329]; Graveyard: Binding Negotiation [296], Cruelclaw's Heist [317]; Exile: Monica Rambeau [315]
+      bustafa: Battlefield: Mountain [282], Plains [298], Plains [319], Spirit Mascot [320]; Graveyard: Ark of Hunger [295], Fields of Strife [302], Pursue the Past [305]
+
+Turn 8
+  - Daredevil, Man Without Fear [valid_resolution_no_immediate_mutation, seq=156] (active=bustafa, phase=Phase_Main1, controller=bustafa, owner=bustafa, source_object=333)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Daredevil, Man Without Fear resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Daredevil, Man Without Fear (object 333) Hand (bustafa) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Daredevil, Man Without Fear (object 333) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Fields of Strife [331] Library (bustafa) -> Hand (bustafa) (Draw; GRE sequence 150).
+      Plains [332] Hand (bustafa) -> Battlefield (PlayLand; GRE sequence 153).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Laughing Jasper Flint [325], Mountain [307], Swamp [280], Swamp [284], Swamp [324], Tinybones, the Pickpocket [329]; Graveyard: Binding Negotiation [296], Cruelclaw's Heist [317]; Exile: Monica Rambeau [315]
+      bustafa: Battlefield: Daredevil, Man Without Fear [333], Mountain [282], Plains [298], Plains [319], Plains [332], Spirit Mascot [320]; Graveyard: Ark of Hunger [295], Fields of Strife [302], Pursue the Past [305]
+
+Turn 9
+  - Ability of Laughing Jasper Flint [observed_semantic_effect, seq=173] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=325, source_last_explicit_zone=Battlefield)
+      effects: exile, exile
+      narrative: Ability of Laughing Jasper Flint: exiles Mountain, Ajani's Response; exile.
+      explicit effect object references: object 174 [174], object 175 [175], Ajani's Response [339], Mountain [340] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Mountain (object 340) Library (bustafa) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Ajani's Response (object 339) Library (bustafa) -> Exile (Exile; shared object ID)
+  - Ajani's Response [observed_semantic_effect, seq=183] (active=gian31, phase=Phase_Main1, controller=gian31, owner=bustafa, source_object=343)
+      effects: destroy
+      narrative: Ajani's Response destroys Daredevil, Man Without Fear.
+      explicit effect object references: Daredevil, Man Without Fear [333], Daredevil, Man Without Fear [349] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Ajani's Response (object 343) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Daredevil, Man Without Fear (object 349) Battlefield -> Graveyard (bustafa) (Destroy; shared object ID)
+      protocol-linked zone transfer: Ajani's Response (object 350) Stack -> Graveyard (bustafa) (Resolve; shared object ID)
+      identity continuity: source object 343 -> transfer object 350 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Laughing Jasper Flint [325] (unblocked, observed P/T 4/3), Tinybones, the Pickpocket [329] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-result zone change: Tinybones, the Pickpocket [352] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: bustafa -4 (individual changes below; gains and losses may offset)
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): bustafa 22 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [341] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 175).
+      Swamp [342] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 178).
+      Tinybones, the Pickpocket [352] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 195).
+      Spirit Mascot [351] Battlefield -> Graveyard (bustafa) (SBA_Deathtouch; GRE sequence 195).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Laughing Jasper Flint [325], Mountain [307], Swamp [280], Swamp [284], Swamp [324], Swamp [342]; Graveyard: Binding Negotiation [296], Cruelclaw's Heist [317], Tinybones, the Pickpocket [352]; Exile: Monica Rambeau [315]
+      bustafa: Battlefield: Mountain [282], Plains [298], Plains [319], Plains [332]; Graveyard: Ajani's Response [350], Ark of Hunger [295], Daredevil, Man Without Fear [349], Fields of Strife [302], Pursue the Past [305], Spirit Mascot [351]; Exile: Mountain [340]
+
+Turn 10
+  - Rubble Rouser [valid_resolution_no_immediate_mutation, seq=211] (active=bustafa, phase=Phase_Main1, controller=bustafa, owner=bustafa, source_object=355)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Rubble Rouser resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Rubble Rouser (object 355) Hand (bustafa) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Rubble Rouser (object 355) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Rubble Rouser [353] Library (bustafa) -> Hand (bustafa) (Draw; GRE sequence 205).
+      Plains [354] Hand (bustafa) -> Battlefield (PlayLand; GRE sequence 208).
+      Fields of Strife [360] Hand (bustafa) -> Graveyard (bustafa) (Discard; GRE sequence 214).
+      Spirit Mascot [361] Library (bustafa) -> Hand (bustafa) (Draw; GRE sequence 214).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Laughing Jasper Flint [325], Mountain [307], Swamp [280], Swamp [284], Swamp [324], Swamp [342]; Graveyard: Binding Negotiation [296], Cruelclaw's Heist [317], Tinybones, the Pickpocket [352]; Exile: Monica Rambeau [315]
+      bustafa: Battlefield: Mountain [282], Plains [298], Plains [319], Plains [332], Plains [354], Rubble Rouser [355]; Graveyard: Ajani's Response [350], Ark of Hunger [295], Daredevil, Man Without Fear [349], Fields of Strife [302], Fields of Strife [360], Pursue the Past [305], Spirit Mascot [351]; Exile: Mountain [340]
+
+Turn 11
+  - Ability of Laughing Jasper Flint [observed_semantic_effect, seq=230] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=325, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Laughing Jasper Flint: exiles Repel Calamity.
+      explicit effect object references: object 178 [178], Repel Calamity [363] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Repel Calamity (object 363) Library (bustafa) -> Exile (Exile; shared object ID)
+  - Gonti, Night Minister [valid_resolution_no_immediate_mutation, seq=238] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=366)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Gonti, Night Minister resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Gonti, Night Minister (object 366) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gonti, Night Minister (object 366) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=243] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=366, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Gonti, Night Minister: a token is created.
+      explicit effect object references: Treasure [375] (role/targeting only where the protocol identifies it)
+      token created: Treasure (object 375, controller=gian31); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 374).
+  - Repel Calamity [observed_semantic_effect, seq=245] (active=gian31, phase=Phase_Main1, controller=gian31, owner=bustafa, source_object=371)
+      effects: destroy
+      narrative: Repel Calamity destroys Rubble Rouser.
+      explicit effect object references: Rubble Rouser [355], Rubble Rouser [376] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Repel Calamity (object 371) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Rubble Rouser (object 376) Battlefield -> Graveyard (bustafa) (Destroy; shared object ID)
+      protocol-linked zone transfer: Repel Calamity (object 377) Stack -> Graveyard (bustafa) (Resolve; shared object ID)
+      identity continuity: source object 371 -> transfer object 377 (explicit GRE ObjectIdChanged chain).
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=257] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=366, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Gonti, Night Minister: exiles Plains.
+      explicit effect object references: Plains [179], Plains [379] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Plains (object 379) Library (bustafa) -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Laughing Jasper Flint [325] (unblocked, observed P/T 4/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: bustafa -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): bustafa 18 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Laughing Jasper Flint [364] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 232).
+      Swamp [365] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 235).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Gonti, Night Minister [366], Laughing Jasper Flint [325], Mountain [307], Swamp [280], Swamp [284], Swamp [324], Swamp [342], Swamp [365]; Graveyard: Binding Negotiation [296], Cruelclaw's Heist [317], Tinybones, the Pickpocket [352]; Exile: Monica Rambeau [315], Plains [379]
+      bustafa: Battlefield: Mountain [282], Plains [298], Plains [319], Plains [332], Plains [354]; Graveyard: Ajani's Response [350], Ark of Hunger [295], Daredevil, Man Without Fear [349], Fields of Strife [302], Fields of Strife [360], Pursue the Past [305], Repel Calamity [377], Rubble Rouser [376], Spirit Mascot [351]; Exile: Mountain [340]
+
+Turn 12
+  - Practiced Scrollsmith [valid_resolution_no_immediate_mutation, seq=272] (active=bustafa, phase=Phase_Main1, controller=bustafa, owner=bustafa, source_object=382)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Practiced Scrollsmith resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Practiced Scrollsmith (object 382) Hand (bustafa) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Practiced Scrollsmith (object 382) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Practiced Scrollsmith [observed_semantic_effect, seq=276] (active=bustafa, phase=Phase_Main1, controller=bustafa, owner=bustafa, source_object=382, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Practiced Scrollsmith: exiles Ark of Hunger.
+      explicit effect object references: Ark of Hunger [295], Ark of Hunger [387] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Ark of Hunger (object 387) Graveyard (bustafa) -> Exile (Exile; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Practiced Scrollsmith [381] Library (bustafa) -> Hand (bustafa) (Draw; GRE sequence 267).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Gonti, Night Minister [366], Laughing Jasper Flint [325], Mountain [307], Swamp [280], Swamp [284], Swamp [324], Swamp [342], Swamp [365]; Graveyard: Binding Negotiation [296], Cruelclaw's Heist [317], Tinybones, the Pickpocket [352]; Exile: Monica Rambeau [315], Plains [379]
+      bustafa: Battlefield: Mountain [282], Plains [298], Plains [319], Plains [332], Plains [354], Practiced Scrollsmith [382]; Graveyard: Ajani's Response [350], Daredevil, Man Without Fear [349], Fields of Strife [302], Fields of Strife [360], Pursue the Past [305], Repel Calamity [377], Rubble Rouser [376], Spirit Mascot [351]; Exile: Ark of Hunger [387], Mountain [340]
+
+Turn 13
+  - Ability of Laughing Jasper Flint [observed_semantic_effect, seq=292] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=325, source_last_explicit_zone=Battlefield)
+      effects: exile, exile
+      narrative: Ability of Laughing Jasper Flint: exiles Mountain, Daredevil, Man Without Fear; exile.
+      explicit effect object references: object 181 [181], object 182 [182], Daredevil, Man Without Fear [389], Mountain [390] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Mountain (object 390) Library (bustafa) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Daredevil, Man Without Fear (object 389) Library (bustafa) -> Exile (Exile; shared object ID)
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=300] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=366, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Gonti, Night Minister: a token is created.
+      explicit effect object references: Treasure [401] (role/targeting only where the protocol identifies it)
+      token created: Treasure (object 401, controller=gian31); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 400).
+  - Photon, Living Light [valid_resolution_no_immediate_mutation, seq=302] (active=gian31, phase=Phase_Main1, controller=gian31, owner=bustafa, source_object=393)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Photon, Living Light resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Photon, Living Light (object 393) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Photon, Living Light (object 393) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=306] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=366, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Gonti, Night Minister: a token is created.
+      explicit effect object references: Treasure [410] (role/targeting only where the protocol identifies it)
+      token created: Treasure (object 410, controller=gian31); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 409).
+  - Daredevil, Man Without Fear [valid_resolution_no_immediate_mutation, seq=308] (active=gian31, phase=Phase_Main1, controller=gian31, owner=bustafa, source_object=402)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Daredevil, Man Without Fear resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Daredevil, Man Without Fear (object 402) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Daredevil, Man Without Fear (object 402) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Photon, Living Light [observed_semantic_effect, seq=317] (active=gian31, phase=Phase_Main1, controller=gian31, owner=bustafa, source_object=393, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s), +1 counter(s)
+      narrative: Ability of Photon, Living Light: Laughing Jasper Flint gets +1/+1; Gonti, Night Minister gets +1/+1; Daredevil, Man Without Fear gets +1/+1; 1 counter(s) are added to Laughing Jasper Flint [325]; 1 counter(s) are added to Gonti, Night Minister [366]; 1 counter(s) are added to Daredevil, Man Without Fear [402].
+      explicit effect object references: Laughing Jasper Flint [325], Gonti, Night Minister [366], Daredevil, Man Without Fear [402] (role/targeting only where the protocol identifies it)
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=340] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=366, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Gonti, Night Minister: exiles White Widow, Free Agent.
+      explicit effect object references: White Widow, Free Agent [183], White Widow, Free Agent [425] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: White Widow, Free Agent (object 425) Library (bustafa) -> Exile (Exile; shared object ID)
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=342] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=366, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 340 and 342; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: exile
+      narrative: Ability of Gonti, Night Minister: exiles Stone Docent.
+      explicit effect object references: Stone Docent [184], Stone Docent [427] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Stone Docent (object 427) Library (bustafa) -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock -> CombatDamage):
+      attackers: Laughing Jasper Flint [325] (blocked, observed P/T 5/4), Gonti, Night Minister [366] (unblocked, observed P/T 4/5), Daredevil, Man Without Fear [402] (unblocked, observed P/T 4/5)
+      blockers: Practiced Scrollsmith [382]
+      combat-correlated defending-player life loss: 8; observed attacker power total: 13; snapshot comparison does not reconcile (exact assignment unavailable).
+      combat-result zone change: Practiced Scrollsmith [424] Battlefield -> Graveyard (bustafa) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: bustafa -8 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 8 + observed modifiers 0 = 8; individual assignment unavailable): bustafa 14 -> 6
+    additional protocol-observed zone movements not assigned to an action chain:
+      Duress [391] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 294).
+      Plains [392] Exile -> Battlefield (PlayLand; GRE sequence 297).
+      Treasure [406] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 304).
+        sacrifice observed after Photon, Living Light (seq 302); direct causal linkage is unavailable.
+      Treasure [408] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 304).
+        sacrifice observed after Photon, Living Light (seq 302); direct causal linkage is unavailable.
+      Duress [411] Hand (gian31) -> Stack (CastSpell; GRE sequence 309).
+      Treasure [413] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 312).
+        sacrifice observed after Daredevil, Man Without Fear (seq 308); direct causal linkage is unavailable.
+      Panther Pounce [418] Hand (bustafa) -> Graveyard (bustafa) (Discard; GRE sequence 320).
+      Duress [419] Stack -> Graveyard (gian31) (Resolve; GRE sequence 320).
+      Practiced Scrollsmith [424] Battlefield -> Graveyard (bustafa) (SBA_Damage; GRE sequence 337).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Daredevil, Man Without Fear [402], Gonti, Night Minister [366], Laughing Jasper Flint [325], Mountain [307], Photon, Living Light [393], Plains [392], Swamp [280], Swamp [284], Swamp [324], Swamp [342], Swamp [365]; Graveyard: Binding Negotiation [296], Cruelclaw's Heist [317], Duress [419], Tinybones, the Pickpocket [352], Treasure [406], Treasure [408], Treasure [413]
+      bustafa: Battlefield: Mountain [282], Plains [298], Plains [319], Plains [332], Plains [354]; Graveyard: Ajani's Response [350], Daredevil, Man Without Fear [349], Fields of Strife [302], Fields of Strife [360], Panther Pounce [418], Practiced Scrollsmith [424], Pursue the Past [305], Repel Calamity [377], Rubble Rouser [376], Spirit Mascot [351]; Exile: Ark of Hunger [387], Mountain [340], Mountain [390], Stone Docent [427], White Widow, Free Agent [425]
+
+Turn 14
+  - Ark of Hunger [valid_resolution_no_immediate_mutation, seq=357] (active=bustafa, phase=Phase_Main1, controller=bustafa, owner=bustafa, source_object=430)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ark of Hunger resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ark of Hunger (object 430) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Ark of Hunger (object 430) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 429 [429] Library (bustafa) -> Hand (bustafa) (Draw; GRE sequence 352).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Daredevil, Man Without Fear [402], Gonti, Night Minister [366], Laughing Jasper Flint [325], Mountain [307], Photon, Living Light [393], Plains [392], Swamp [280], Swamp [284], Swamp [324], Swamp [342], Swamp [365]; Graveyard: Binding Negotiation [296], Cruelclaw's Heist [317], Duress [419], Tinybones, the Pickpocket [352], Treasure [406], Treasure [408], Treasure [413]
+      bustafa: Battlefield: Ark of Hunger [430], Mountain [282], Plains [298], Plains [319], Plains [332], Plains [354]; Graveyard: Ajani's Response [350], Daredevil, Man Without Fear [349], Fields of Strife [302], Fields of Strife [360], Panther Pounce [418], Practiced Scrollsmith [424], Pursue the Past [305], Repel Calamity [377], Rubble Rouser [376], Spirit Mascot [351]; Exile: Mountain [340], Mountain [390], Stone Docent [427], White Widow, Free Agent [425]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 4, seq 67: bustafa 20 -> 22. No source event correlated in captured records.
+- Turn 9, seq 195, Phase_Main1: bustafa 22 -> 18. Combat declaration observed; exact assignment unavailable. Previous captured action: Ajani's Response.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 3 token creations observed; 0 active as last observed; 3 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Treasure [375] controller=gian31; created Turn 11 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 13 via Battlefield -> Graveyard (gian31) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+- Treasure [401] controller=gian31; created Turn 13 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 13 via Battlefield -> Graveyard (gian31) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+- Treasure [410] controller=gian31; created Turn 13 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 13 via Battlefield -> Graveyard (gian31) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Panther Pounce [owner=bustafa, controller=bustafa] moves Library (bustafa) -> Hand (bustafa) (Draw).
+- Turn 2, seq 24: Mountain [owner=bustafa, controller=bustafa] moves Hand (bustafa) -> Battlefield (PlayLand).
+- Turn 3, seq 38: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 41: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 42: Binding Negotiation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 47: Ark of Hunger [owner=bustafa, controller=bustafa] moves Hand (bustafa) -> Graveyard (bustafa) (Discard).
+- Turn 3, seq 47: Binding Negotiation [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 4, seq 61: Fields of Strife [owner/controller metadata unavailable] moves Library (bustafa) -> Hand (bustafa) (Draw).
+- Turn 4, seq 64: Plains [owner=bustafa, controller=bustafa] moves Hand (bustafa) -> Battlefield (PlayLand).
+- Turn 4, seq 65: Pursue the Past [owner=bustafa, controller=bustafa] moves Hand (bustafa) -> Stack (CastSpell).
+- Turn 4, seq 68: Fields of Strife [owner=bustafa, controller=bustafa] moves Hand (bustafa) -> Graveyard (bustafa) (Discard).
+- Turn 4, seq 68: Plains [owner=bustafa, controller=bustafa] moves Library (bustafa) -> Hand (bustafa) (Draw).
+- Turn 4, seq 68: Spirit Mascot [owner=bustafa, controller=bustafa] moves Library (bustafa) -> Hand (bustafa) (Draw).
+- Turn 4, seq 68: Pursue the Past [owner=bustafa, controller=bustafa] moves Stack -> Graveyard (bustafa) (Resolve).
+- Turn 5, seq 82: Mountain [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 85: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 86: Cruelclaw's Heist [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 91: Plains [owner=bustafa, controller=bustafa] moves Library (bustafa) -> Hand (bustafa) (Draw).
+- Turn 5, seq 93: Monica Rambeau [owner=bustafa, controller=gian31] moves Hand (bustafa) -> Exile (Exile).
+- Turn 5, seq 93: Cruelclaw's Heist [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 6, seq 107: Thor, God of Thunder [owner=bustafa, controller=bustafa] moves Library (bustafa) -> Hand (bustafa) (Draw).
+- Turn 6, seq 110: Plains [owner=bustafa, controller=bustafa] moves Hand (bustafa) -> Battlefield (PlayLand).
+- Turn 6, seq 111: Spirit Mascot [owner=bustafa, controller=bustafa] moves Hand (bustafa) -> Stack (CastSpell).
+- Turn 6, seq 113: Spirit Mascot [owner=bustafa, controller=bustafa] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 127: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 130: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 131: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 133: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 134: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 136: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 150: Fields of Strife [owner/controller metadata unavailable] moves Library (bustafa) -> Hand (bustafa) (Draw).
+- Turn 8, seq 153: Plains [owner=bustafa, controller=bustafa] moves Hand (bustafa) -> Battlefield (PlayLand).
+- Turn 8, seq 154: Daredevil, Man Without Fear [owner=bustafa, controller=bustafa] moves Hand (bustafa) -> Stack (CastSpell).
+- Turn 8, seq 156: Daredevil, Man Without Fear [owner=bustafa, controller=bustafa] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 173: Mountain [owner=bustafa, controller=bustafa] moves Library (bustafa) -> Exile (Exile).
+- Turn 9, seq 173: Ajani's Response [owner=bustafa, controller=gian31] moves Library (bustafa) -> Exile (Exile).
+- Turn 9, seq 175: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 178: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 179: Ajani's Response [owner=bustafa, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 9, seq 183: Daredevil, Man Without Fear [owner=bustafa, controller=bustafa] moves Battlefield -> Graveyard (bustafa) (Destroy).
+- Turn 9, seq 183: Ajani's Response [owner=bustafa, controller=bustafa] moves Stack -> Graveyard (bustafa) (Resolve).
+- Turn 9, seq 195: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 9, seq 195: Spirit Mascot [owner=bustafa, controller=bustafa] moves Battlefield -> Graveyard (bustafa) (SBA_Deathtouch).
+- Turn 10, seq 205: Rubble Rouser [owner/controller metadata unavailable] moves Library (bustafa) -> Hand (bustafa) (Draw).
+- Turn 10, seq 208: Plains [owner=bustafa, controller=bustafa] moves Hand (bustafa) -> Battlefield (PlayLand).
+- Turn 10, seq 209: Rubble Rouser [owner=bustafa, controller=bustafa] moves Hand (bustafa) -> Stack (CastSpell).
+- Turn 10, seq 211: Rubble Rouser [owner=bustafa, controller=bustafa] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 214: Fields of Strife [owner=bustafa, controller=bustafa] moves Hand (bustafa) -> Graveyard (bustafa) (Discard).
+- Turn 10, seq 214: Spirit Mascot [owner=bustafa, controller=bustafa] moves Library (bustafa) -> Hand (bustafa) (Draw).
+- Turn 11, seq 230: Repel Calamity [owner=bustafa, controller=gian31] moves Library (bustafa) -> Exile (Exile).
+- Turn 11, seq 232: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 235: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 11, seq 236: Gonti, Night Minister [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 238: Gonti, Night Minister [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 239: Repel Calamity [owner=bustafa, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 11, seq 245: Rubble Rouser [owner=bustafa, controller=bustafa] moves Battlefield -> Graveyard (bustafa) (Destroy).
+- Turn 11, seq 245: Repel Calamity [owner=bustafa, controller=bustafa] moves Stack -> Graveyard (bustafa) (Resolve).
+- Turn 11, seq 257: Plains [owner=bustafa, controller=gian31] moves Library (bustafa) -> Exile (Exile).
+- Turn 12, seq 267: Practiced Scrollsmith [owner/controller metadata unavailable] moves Library (bustafa) -> Hand (bustafa) (Draw).
+- Turn 12, seq 270: Practiced Scrollsmith [owner=bustafa, controller=bustafa] moves Hand (bustafa) -> Stack (CastSpell).
+- Turn 12, seq 272: Practiced Scrollsmith [owner=bustafa, controller=bustafa] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 276: Ark of Hunger [owner=bustafa, controller=bustafa] moves Graveyard (bustafa) -> Exile (Exile).
+- Turn 13, seq 292: Mountain [owner=bustafa, controller=bustafa] moves Library (bustafa) -> Exile (Exile).
+- Turn 13, seq 292: Daredevil, Man Without Fear [owner=bustafa, controller=gian31] moves Library (bustafa) -> Exile (Exile).
+- Turn 13, seq 294: Duress [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 297: Plains [owner=bustafa, controller=gian31] moves Exile -> Battlefield (PlayLand).
+- Turn 13, seq 298: Photon, Living Light [owner=bustafa, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 13, seq 302: Photon, Living Light [owner=bustafa, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 303: Daredevil, Man Without Fear [owner=bustafa, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 13, seq 304: Treasure [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 13, seq 304: Treasure [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 13, seq 308: Daredevil, Man Without Fear [owner=bustafa, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 309: Duress [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 13, seq 312: Treasure [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 13, seq 320: Panther Pounce [owner=bustafa, controller=bustafa] moves Hand (bustafa) -> Graveyard (bustafa) (Discard).
+- Turn 13, seq 320: Duress [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 13, seq 337: Practiced Scrollsmith [owner=bustafa, controller=bustafa] moves Battlefield -> Graveyard (bustafa) (SBA_Damage).
+- Turn 13, seq 340: White Widow, Free Agent [owner=bustafa, controller=bustafa] moves Library (bustafa) -> Exile (Exile).
+- Turn 13, seq 342: Stone Docent [owner=bustafa, controller=bustafa] moves Library (bustafa) -> Exile (Exile).
+- Turn 14, seq 352: object 429 [owner/controller metadata unavailable] moves Library (bustafa) -> Hand (bustafa) (Draw).
+- Turn 14, seq 355: Ark of Hunger [owner=bustafa, controller=bustafa] moves Exile -> Stack (CastSpell).
+- Turn 14, seq 357: Ark of Hunger [owner=bustafa, controller=bustafa] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 221 becomes object 280 [Swamp].
+- Turn 2, seq 21: object 167 becomes object 281 [Panther Pounce].
+- Turn 2, seq 24: object 164 becomes object 282 [Mountain].
+- Turn 3, seq 38: object 227 becomes object 283 [Swamp].
+- Turn 3, seq 41: object 220 becomes object 284 [Swamp].
+- Turn 3, seq 42: object 223 becomes object 285 [Binding Negotiation].
+- Turn 3, seq 47: object 160 becomes object 295 [Ark of Hunger].
+- Turn 3, seq 47: object 285 becomes object 296 [Binding Negotiation].
+- Turn 4, seq 61: object 168 becomes object 297 [Fields of Strife].
+- Turn 4, seq 64: object 161 becomes object 298 [Plains].
+- Turn 4, seq 65: object 166 becomes object 299 [Pursue the Past].
+- Turn 4, seq 68: object 297 becomes object 302 [Fields of Strife].
+- Turn 4, seq 68: object 169 becomes object 303 [Plains].
+- Turn 4, seq 68: object 170 becomes object 304 [Spirit Mascot].
+- Turn 4, seq 68: object 299 becomes object 305 [Pursue the Past].
+- Turn 5, seq 82: object 228 becomes object 306 [Mountain].
+- Turn 5, seq 85: object 306 becomes object 307 [Mountain].
+- Turn 5, seq 86: object 225 becomes object 308 [Cruelclaw's Heist].
+- Turn 5, seq 91: object 171 becomes object 311 [Plains].
+- Turn 5, seq 93: object 162 becomes object 315 [Monica Rambeau].
+- Turn 5, seq 93: object 308 becomes object 317 [Cruelclaw's Heist].
+- Turn 6, seq 107: object 172 becomes object 318 [Thor, God of Thunder].
+- Turn 6, seq 110: object 311 becomes object 319 [Plains].
+- Turn 6, seq 111: object 304 becomes object 320 [Spirit Mascot].
+- Turn 7, seq 127: object 229 becomes object 323 [Tinybones, the Pickpocket].
+- Turn 7, seq 130: object 226 becomes object 324 [Swamp].
+- Turn 7, seq 131: object 222 becomes object 325 [Laughing Jasper Flint].
+- Turn 7, seq 134: object 323 becomes object 329 [Tinybones, the Pickpocket].
+- Turn 8, seq 150: object 173 becomes object 331 [Fields of Strife].
+- Turn 8, seq 153: object 303 becomes object 332 [Plains].
+- Turn 8, seq 154: object 163 becomes object 333 [Daredevil, Man Without Fear].
+- Turn 9, seq 173: object 175 becomes object 340 [Mountain].
+- Turn 9, seq 173: object 174 becomes object 339 [Ajani's Response].
+- Turn 9, seq 175: object 230 becomes object 341 [Swamp].
+- Turn 9, seq 178: object 341 becomes object 342 [Swamp].
+- Turn 9, seq 179: object 339 becomes object 343 [Ajani's Response].
+- Turn 9, seq 183: object 333 becomes object 349 [Daredevil, Man Without Fear].
+- Turn 9, seq 183: object 343 becomes object 350 [Ajani's Response].
+- Turn 9, seq 195: object 329 becomes object 352 [Tinybones, the Pickpocket].
+- Turn 9, seq 195: object 320 becomes object 351 [Spirit Mascot].
+- Turn 10, seq 205: object 176 becomes object 353 [Rubble Rouser].
+- Turn 10, seq 208: object 165 becomes object 354 [Plains].
+- Turn 10, seq 209: object 353 becomes object 355 [Rubble Rouser].
+- Turn 10, seq 214: object 331 becomes object 360 [Fields of Strife].
+- Turn 10, seq 214: object 177 becomes object 361 [Spirit Mascot].
+- Turn 11, seq 230: object 178 becomes object 363 [Repel Calamity].
+- Turn 11, seq 232: object 231 becomes object 364 [Laughing Jasper Flint].
+- Turn 11, seq 235: object 283 becomes object 365 [Swamp].
+- Turn 11, seq 236: object 224 becomes object 366 [Gonti, Night Minister].
+- Turn 11, seq 239: object 363 becomes object 371 [Repel Calamity].
+- Turn 11, seq 245: object 355 becomes object 376 [Rubble Rouser].
+- Turn 11, seq 245: object 371 becomes object 377 [Repel Calamity].
+- Turn 11, seq 257: object 179 becomes object 379 [Plains].
+- Turn 12, seq 267: object 180 becomes object 381 [Practiced Scrollsmith].
+- Turn 12, seq 270: object 381 becomes object 382 [Practiced Scrollsmith].
+- Turn 12, seq 276: object 295 becomes object 387 [Ark of Hunger].
+- Turn 13, seq 292: object 182 becomes object 390 [Mountain].
+- Turn 13, seq 292: object 181 becomes object 389 [Daredevil, Man Without Fear].
+- Turn 13, seq 294: object 232 becomes object 391 [Duress].
+- Turn 13, seq 297: object 379 becomes object 392 [Plains].
+- Turn 13, seq 298: object 315 becomes object 393 (Monica Rambeau -> Photon, Living Light).
+- Turn 13, seq 303: object 389 becomes object 402 [Daredevil, Man Without Fear].
+- Turn 13, seq 304: object 375 becomes object 406 [Treasure].
+- Turn 13, seq 304: object 401 becomes object 408 [Treasure].
+- Turn 13, seq 309: object 391 becomes object 411 [Duress].
+- Turn 13, seq 312: object 410 becomes object 413 [Treasure].
+- Turn 13, seq 320: object 281 becomes object 418 [Panther Pounce].
+- Turn 13, seq 320: object 411 becomes object 419 [Duress].
+- Turn 13, seq 337: object 382 becomes object 424 [Practiced Scrollsmith].
+- Turn 13, seq 340: object 183 becomes object 425 [White Widow, Free Agent].
+- Turn 13, seq 342: object 184 becomes object 427 [Stone Docent].
+- Turn 14, seq 352: object 185 becomes object 429 [object 185].
+- Turn 14, seq 355: object 387 becomes object 430 [Ark of Hunger].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Swamp (object 280) from Hand (gian31) to Battlefield.
+- Turn 2: bustafa plays Mountain (object 282) from Hand (bustafa) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 284) from Hand (gian31) to Battlefield.
+- Turn 4: bustafa plays Plains (object 298) from Hand (bustafa) to Battlefield.
+- Turn 5: gian31 plays Mountain (object 307) from Hand (gian31) to Battlefield.
+- Turn 6: bustafa plays Plains (object 319) from Hand (bustafa) to Battlefield.
+- Turn 7: gian31 plays Swamp (object 324) from Hand (gian31) to Battlefield.
+- Turn 8: bustafa plays Plains (object 332) from Hand (bustafa) to Battlefield.
+- Turn 9: gian31 plays Swamp (object 342) from Hand (gian31) to Battlefield.
+- Turn 10: bustafa plays Plains (object 354) from Hand (bustafa) to Battlefield.
+- Turn 11: gian31 plays Swamp (object 365) from Hand (gian31) to Battlefield.
+- Turn 13: gian31 plays Plains (object 392) from Exile to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Gonti, Night Minister: casts=1; abilities=6 (triggered=6, activated=0) across turns [11, 11, 11, 13, 13, 13, 13]
+  observed effect totals: draws=0, tokens=3, counters=0, returns=0, damage=0, life_changes=0, other=3
+  observed effects: exile, token creation
+- Laughing Jasper Flint: casts=1; abilities=3 (triggered=3, activated=0) across turns [7, 9, 11, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=5
+  observed effects: exile
+- Daredevil, Man Without Fear: casts=2 across turns [8, 13]
+- Photon, Living Light: casts=1; abilities=1 (triggered=1, activated=0) across turns [13, 13]
+  observed effect totals: draws=0, tokens=0, counters=3, returns=0, damage=0, life_changes=0, other=3
+  observed effects: +1 counter(s), P/T +1/+1
+- Practiced Scrollsmith: casts=1; abilities=1 (triggered=1, activated=0) across turns [12, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: exile
+- Ajani's Response: casts=1 across turns [9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Ark of Hunger: casts=1 across turns [14]
+- Repel Calamity: casts=1 across turns [11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Rubble Rouser: casts=1 across turns [10]
+- Spirit Mascot: casts=1 across turns [6]
+- Tinybones, the Pickpocket: casts=1 across turns [7]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 9 - DeclareAttack (active=gian31)
+  attacker: Laughing Jasper Flint (gian31) -> bustafa; unblocked in this observed snapshot
+  attacker: Tinybones, the Pickpocket (gian31) -> bustafa; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Laughing Jasper Flint (gian31) -> bustafa; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 - DeclareAttack, DeclareBlock, CombatDamage (active=gian31)
+  attacker: Laughing Jasper Flint (gian31) -> bustafa; blocked by Practiced Scrollsmith
+  attacker: Gonti, Night Minister (gian31) -> bustafa; unblocked in this observed snapshot
+  attacker: Daredevil, Man Without Fear (gian31) -> bustafa; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 11: Ability of Gonti, Night Minister (active=gian31) - Ability of Gonti, Night Minister: exile.
+- Turn 13: Ability of Gonti, Night Minister (active=gian31) - Ability of Gonti, Night Minister: exile.
+- Turn 13: Ability of Gonti, Night Minister (active=gian31) - Ability of Gonti, Night Minister: exile.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 83: Photon, Living Light | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 160: Ark of Hunger | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 161: Plains | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 162: Monica Rambeau | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 163: Daredevil, Man Without Fear | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 165: Plains | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 166: Pursue the Past | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 179: Plains | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 183: White Widow, Free Agent | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 184: Stone Docent | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 220: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 221: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 222: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 223: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 224: Gonti, Night Minister | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 225: Cruelclaw's Heist | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 226: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 233: Mountain | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 280: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 281: Panther Pounce | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 282: Mountain | controller=bustafa | owner=bustafa | zone=Battlefield (latest_object_observation)
+- 283: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 284: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 285: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 288: Ark of Hunger | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 289: Plains | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 290: Daredevil, Man Without Fear | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 291: Monica Rambeau | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 292: Plains | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 293: Panther Pounce | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 294: Pursue the Past | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 295: Ark of Hunger | controller=bustafa | owner=bustafa | zone=Graveyard (latest_object_observation)
+- 296: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 298: Plains | controller=bustafa | owner=bustafa | zone=Battlefield (latest_object_observation)
+- 299: Pursue the Past | controller=bustafa | owner=bustafa | zone=Stack (latest_object_observation)
+- 302: Fields of Strife | controller=bustafa | owner=bustafa | zone=Graveyard (latest_object_observation)
+- 303: Plains | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 304: Spirit Mascot | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 305: Pursue the Past | controller=bustafa | owner=bustafa | zone=Graveyard (latest_object_observation)
+- 306: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 307: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 308: Cruelclaw's Heist | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 311: Plains | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 312: Plains | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 313: Spirit Mascot | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 314: Plains | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 315: Monica Rambeau | controller=gian31 | owner=bustafa | zone=Exile (latest_object_observation)
+- 316: Photon, Living Light | controller=bustafa | owner=bustafa | zone=Exile (latest_object_observation)
+- 317: Cruelclaw's Heist | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 318: Thor, God of Thunder | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 319: Plains | controller=bustafa | owner=bustafa | zone=Battlefield (latest_object_observation)
+- 320: Spirit Mascot | controller=bustafa | owner=bustafa | zone=Battlefield (latest_object_observation)
+- 323: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 324: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 325: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 329: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 332: Plains | controller=bustafa | owner=bustafa | zone=Battlefield (latest_object_observation)
+- 333: Daredevil, Man Without Fear | controller=bustafa | owner=bustafa | zone=Battlefield (latest_object_observation)
+- 338: object 338 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 339: Ajani's Response | controller=gian31 | owner=bustafa | zone=Exile (latest_object_observation)
+- 340: Mountain | controller=bustafa | owner=bustafa | zone=Exile (latest_object_observation)
+- 341: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 342: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 343: Ajani's Response | controller=gian31 | owner=bustafa | zone=Stack (latest_object_observation)
+- 349: Daredevil, Man Without Fear | controller=bustafa | owner=bustafa | zone=Graveyard (latest_object_observation)
+- 350: Ajani's Response | controller=bustafa | owner=bustafa | zone=Graveyard (latest_object_observation)
+- 351: Spirit Mascot | controller=bustafa | owner=bustafa | zone=Battlefield (latest_object_observation)
+- 352: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 354: Plains | controller=bustafa | owner=bustafa | zone=Battlefield (latest_object_observation)
+- 355: Rubble Rouser | controller=bustafa | owner=bustafa | zone=Battlefield (latest_object_observation)
+- 359: object 359 | controller=bustafa | owner=bustafa | zone=unknown (inferred unknown) (latest_object_observation)
+- 360: Fields of Strife | controller=bustafa | owner=bustafa | zone=Graveyard (latest_object_observation)
+- 361: Spirit Mascot | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 362: object 362 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 363: Repel Calamity | controller=gian31 | owner=bustafa | zone=Exile (latest_object_observation)
+- 364: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 365: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 366: Gonti, Night Minister | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 371: Repel Calamity | controller=gian31 | owner=bustafa | zone=Stack (latest_object_observation)
+- 374: object 374 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 375: Treasure | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 376: Rubble Rouser | controller=bustafa | owner=bustafa | zone=Graveyard (latest_object_observation)
+- 377: Repel Calamity | controller=bustafa | owner=bustafa | zone=Graveyard (latest_object_observation)
+- 378: object 378 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 379: Plains | controller=gian31 | owner=bustafa | zone=Exile (latest_object_observation)
+- 382: Practiced Scrollsmith | controller=bustafa | owner=bustafa | zone=Battlefield (latest_object_observation)
+- 386: object 386 | controller=bustafa | owner=bustafa | zone=unknown (inferred unknown) (latest_object_observation)
+- 387: Ark of Hunger | controller=bustafa | owner=bustafa | zone=Exile (latest_object_observation)
+- 388: object 388 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 389: Daredevil, Man Without Fear | controller=gian31 | owner=bustafa | zone=Exile (latest_object_observation)
+- 390: Mountain | controller=bustafa | owner=bustafa | zone=Exile (latest_object_observation)
+- 391: Duress | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 392: Plains | controller=gian31 | owner=bustafa | zone=Battlefield (latest_object_observation)
+- 393: Photon, Living Light | controller=gian31 | owner=bustafa | zone=Battlefield (latest_object_observation)
+- 394: Photon, Living Light | controller=gian31 | owner=bustafa | zone=Battlefield (latest_object_observation)
+- 400: object 400 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 401: Treasure | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 402: Daredevil, Man Without Fear | controller=gian31 | owner=bustafa | zone=Battlefield (latest_object_observation)
+- 409: object 409 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 410: Treasure | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 411: Duress | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 414: object 414 | controller=gian31 | owner=bustafa | zone=unknown (inferred unknown) (latest_object_observation)
+- 415: object 415 | controller=gian31 | owner=bustafa | zone=unknown (inferred unknown) (latest_object_observation)
+- 416: Spirit Mascot | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 417: Thor, God of Thunder | controller=bustafa | owner=bustafa | zone=Hand (latest_object_observation)
+- 418: Panther Pounce | controller=bustafa | owner=bustafa | zone=Graveyard (latest_object_observation)
+- 419: Duress | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 421: object 421 | controller=gian31 | owner=bustafa | zone=unknown (inferred unknown) (latest_object_observation)
+- 422: object 422 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 423: object 423 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 424: Practiced Scrollsmith | controller=bustafa | owner=bustafa | zone=Battlefield (latest_object_observation)
+- 425: White Widow, Free Agent | controller=bustafa | owner=bustafa | zone=Exile (latest_object_observation)
+- 427: Stone Docent | controller=bustafa | owner=bustafa | zone=Exile (latest_object_observation)
+- 430: Ark of Hunger | controller=bustafa | owner=bustafa | zone=Stack (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+bustafa: 58 total items
+  zones: Battlefield=11, Exile=6, Graveyard=9, Hand=28, Stack=2, unknown=2
+  objects: Plains x13, Spirit Mascot x6, Ark of Hunger x5, Daredevil, Man Without Fear x4, Pursue the Past x4, Mountain x3, Panther Pounce x3, Fields of Strife x2, Monica Rambeau x2, Photon, Living Light x2, Practiced Scrollsmith x2, Rubble Rouser x2
+gian31: 56 total items
+  zones: Battlefield=17, Exile=5, Hand=16, Stack=5, unknown=13
+  objects: Swamp x10, Binding Negotiation x3, Cruelclaw's Heist x3, Duress x3, Laughing Jasper Flint x3, Mountain x3, Tinybones, the Pickpocket x3, Treasure x3, Ajani's Response x2, Daredevil, Man Without Fear x2, Gonti, Night Minister x2, Photon, Living Light x2
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+bustafa:
+  Battlefield (11): Daredevil, Man Without Fear, Mountain, Plains, Plains, Plains, Plains, Practiced Scrollsmith, Practiced Scrollsmith, Rubble Rouser, Spirit Mascot, Spirit Mascot
+  Graveyard: 9 card(s)
+gian31:
+  Battlefield (17): Binding Negotiation, Cruelclaw's Heist, Daredevil, Man Without Fear, Duress, Gonti, Night Minister, Laughing Jasper Flint, Mountain, Photon, Living Light, Photon, Living Light, Plains, Swamp, Swamp, Swamp, Swamp, Swamp, Tinybones, the Pickpocket, Tinybones, the Pickpocket
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+15 objects have no resolved final zone and are omitted from the known board state.
+bustafa: 2 unknown object(s)
+gian31: 13 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=44, Stack=7
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+bustafa:
+  Battlefield (5): Mountain, Plains, Plains, Plains, Plains
+  Graveyard (10): Fields of Strife, Pursue the Past, Daredevil, Man Without Fear, Ajani's Response, Spirit Mascot, Fields of Strife, Rubble Rouser, Repel Calamity, Panther Pounce, Practiced Scrollsmith
+  Exile (4): Mountain, Mountain, White Widow, Free Agent, Stone Docent
+gian31:
+  Battlefield (12): Swamp, Swamp, Mountain, Swamp, Laughing Jasper Flint, Swamp, Swamp, Gonti, Night Minister, Plains, Photon, Living Light, Photon, Living Light, Daredevil, Man Without Fear
+  Graveyard (4): Binding Negotiation, Cruelclaw's Heist, Tinybones, the Pickpocket, Duress
+Known non-persistent entries (counts only):
+  bustafa: Hand=3, Limbo=6, Revealed=2, Stack=1
+  gian31: Hand=1, Library=1, Limbo=8
+  unknown: Library=80, Limbo=6
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1
+- Turn 2: bustafa Battlefield=1; gian31 Battlefield=1
+- Turn 3: bustafa Battlefield=1; bustafa Graveyard=1; gian31 Battlefield=2; gian31 Graveyard=1
+- Turn 4: bustafa Battlefield=2; bustafa Graveyard=3; gian31 Battlefield=2; gian31 Graveyard=1
+- Turn 5: bustafa Battlefield=2; bustafa Graveyard=3; gian31 Battlefield=3; gian31 Graveyard=2; gian31 Exile=1
+- Turn 6: bustafa Battlefield=4; bustafa Graveyard=3; gian31 Battlefield=3; gian31 Graveyard=2; gian31 Exile=1
+- Turn 7: bustafa Battlefield=4; bustafa Graveyard=3; gian31 Battlefield=6; gian31 Graveyard=2; gian31 Exile=1
+- Turn 8: bustafa Battlefield=6; bustafa Graveyard=3; gian31 Battlefield=6; gian31 Graveyard=2; gian31 Exile=1
+- Turn 9: bustafa Battlefield=4; bustafa Graveyard=6; bustafa Exile=1; gian31 Battlefield=6; gian31 Graveyard=3; gian31 Exile=1
+- Turn 10: bustafa Battlefield=6; bustafa Graveyard=7; bustafa Exile=1; gian31 Battlefield=6; gian31 Graveyard=3; gian31 Exile=1
+- Turn 11: bustafa Battlefield=5; bustafa Graveyard=9; bustafa Exile=1; gian31 Battlefield=8; gian31 Graveyard=3; gian31 Exile=2
+- Turn 12: bustafa Battlefield=6; bustafa Graveyard=8; bustafa Exile=2; gian31 Battlefield=8; gian31 Graveyard=3; gian31 Exile=2
+- Turn 13: bustafa Battlefield=5; bustafa Graveyard=10; bustafa Exile=5; gian31 Battlefield=11; gian31 Graveyard=7
+- Turn 14: bustafa Battlefield=6; bustafa Graveyard=10; bustafa Exile=4; gian31 Battlefield=11; gian31 Graveyard=7
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 6: Spirit Mascot resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Laughing Jasper Flint resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Tinybones, the Pickpocket resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Daredevil, Man Without Fear resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Rubble Rouser resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Gonti, Night Minister resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Practiced Scrollsmith resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Photon, Living Light resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Daredevil, Man Without Fear resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Ark of Hunger resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
