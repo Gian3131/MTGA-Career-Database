@@ -1,0 +1,552 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, FuFuFrog
+Seat map: Seat 1=gian31, Seat 2=FuFuFrog
+Turn range (known): 1 - 10
+Records: 24
+Action chains: 19
+Winner: gian31
+Final life: {'gian31': 20, 'FuFuFrog': 18}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 10 (Phase_Main1; Polliwallop, seq 252).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 30 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 10 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] (raw records=10; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 13 explicit Library -> Hand movement(s); named in the draw record=5, resolved through an explicit identity transition=4, unresolved=4.
+Unresolved draw identities (explicit movements retained): Turn 3, seq 49, object 290; Turn 7, seq 126, object 307; Turn 7, seq 140, object 321; Turn 9, seq 224, object 349.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Ragged Playmate [159], Tinybones, the Pickpocket [160], Tinybones, the Pickpocket [161], Swamp [162], Laughing Jasper Flint [163], Mountain [164], Ragged Playmate [165].
+  - unknown: 7 observed card(s): object 219 [219], object 220 [220], object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 20, 'FuFuFrog': 18}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 10 (Phase_Main1; Polliwallop, seq 252).
+Last captured life snapshot: FuFuFrog 17 -> 18 (seq 214).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Island.
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Tinybones, the Pickpocket.
+- Turn 3: actions: cards=1, abilities=1; explicit battlefield entries=Forest, Pond Prophet.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Ragged Playmate.
+- Turn 5: actions: cards=1, abilities=0; explicit battlefield entries=Forest, Dour Port-Mage.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Laughing Jasper Flint.
+- Turn 7: actions: cards=1, abilities=3; explicit battlefield entries=Island, Dour Port-Mage; explicit battlefield exits=Pond Prophet.
+- Turn 8: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Mountain, Mockingbird.
+- Turn 9: actions: cards=4, abilities=6; life mutations=2; explicit battlefield entries=Forest, Valley Mightcaller, Sunshower Druid, Sunshower Druid, Pond Prophet.
+- Turn 10: actions: cards=1, abilities=1; explicit battlefield entries=Swamp; explicit battlefield exits=Valley Mightcaller.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Island [279] Hand (FuFuFrog) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      FuFuFrog: Battlefield: Island [279]
+
+Turn 2
+  - Tinybones, the Pickpocket [valid_resolution_no_immediate_mutation, seq=27] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, the Pickpocket resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 282) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 282) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Gonti, Night Minister [280] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 21).
+      Swamp [281] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      FuFuFrog: Battlefield: Island [279]
+      gian31: Battlefield: Swamp [281], Tinybones, the Pickpocket [282]
+
+Turn 3
+  - Pond Prophet [valid_resolution_no_immediate_mutation, seq=47] (active=FuFuFrog, phase=Phase_Main1, controller=FuFuFrog, owner=FuFuFrog, source_object=286)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Pond Prophet resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Pond Prophet (object 286) Hand (FuFuFrog) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Pond Prophet (object 286) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Pond Prophet [observed_semantic_effect, seq=49] (active=FuFuFrog, phase=Phase_Main1, controller=FuFuFrog, owner=FuFuFrog, source_object=286, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Pond Prophet: draw.
+      explicit effect object references: object 227 [227], object 290 [290] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 290 (object 290) Library (FuFuFrog) -> Hand (FuFuFrog) (Draw; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Island [284] Library (FuFuFrog) -> Hand (FuFuFrog) (Draw; GRE sequence 41).
+      Forest [285] Hand (FuFuFrog) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      FuFuFrog: Battlefield: Forest [285], Island [279], Pond Prophet [286]
+      gian31: Battlefield: Swamp [281], Tinybones, the Pickpocket [282]
+
+Turn 4
+  - Ragged Playmate [valid_resolution_no_immediate_mutation, seq=69] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=293)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ragged Playmate resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ragged Playmate (object 293) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ragged Playmate (object 293) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Cruelclaw's Heist [291] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 63).
+      Mountain [292] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 66).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      FuFuFrog: Battlefield: Forest [285], Island [279], Pond Prophet [286]
+      gian31: Battlefield: Mountain [292], Ragged Playmate [293], Swamp [281], Tinybones, the Pickpocket [282]
+
+Turn 5
+  - Dour Port-Mage [valid_resolution_no_immediate_mutation, seq=90] (active=FuFuFrog, phase=Phase_Main1, controller=FuFuFrog, owner=FuFuFrog, source_object=298)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Dour Port-Mage resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Dour Port-Mage (object 298) Hand (FuFuFrog) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Dour Port-Mage (object 298) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Dour Port-Mage [296] Library (FuFuFrog) -> Hand (FuFuFrog) (Draw; GRE sequence 84).
+      Forest [297] Hand (FuFuFrog) -> Battlefield (PlayLand; GRE sequence 87).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      FuFuFrog: Battlefield: Dour Port-Mage [298], Forest [285], Forest [297], Island [279], Pond Prophet [286]
+      gian31: Battlefield: Mountain [292], Ragged Playmate [293], Swamp [281], Tinybones, the Pickpocket [282]
+
+Turn 6
+  - Laughing Jasper Flint [valid_resolution_no_immediate_mutation, seq=111] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=303)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Laughing Jasper Flint resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Laughing Jasper Flint (object 303) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Laughing Jasper Flint (object 303) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [301] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 105).
+      Mountain [302] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 108).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      FuFuFrog: Battlefield: Dour Port-Mage [298], Forest [285], Forest [297], Island [279], Pond Prophet [286]
+      gian31: Battlefield: Laughing Jasper Flint [303], Mountain [292], Mountain [302], Ragged Playmate [293], Swamp [281], Tinybones, the Pickpocket [282]
+
+Turn 7
+  - Dour Port-Mage [valid_resolution_no_immediate_mutation, seq=132] (active=FuFuFrog, phase=Phase_Main1, controller=FuFuFrog, owner=FuFuFrog, source_object=309)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Dour Port-Mage resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Dour Port-Mage (object 309) Hand (FuFuFrog) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Dour Port-Mage (object 309) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Dour Port-Mage [observed_semantic_effect, seq=137] (active=FuFuFrog, phase=Phase_Main1, controller=FuFuFrog, owner=FuFuFrog, source_object=298, source_last_explicit_zone=Battlefield)
+      effects: return to battlefield
+      narrative: Ability of Dour Port-Mage: a card/permanent returns.
+      explicit effect object references: Pond Prophet [286], object 315 [315] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Pond Prophet (object 315) Battlefield -> Hand (FuFuFrog) (Return; shared object ID)
+  - Ability of Dour Port-Mage [observed_semantic_effect, seq=140] (active=FuFuFrog, phase=Phase_Main1, controller=FuFuFrog, owner=FuFuFrog, source_object=309, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Dour Port-Mage: draw.
+      explicit effect object references: object 230 [230], object 321 [321] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 321 (object 321) Library (FuFuFrog) -> Hand (FuFuFrog) (Draw; shared object ID)
+  - Ability of Dour Port-Mage [observed_semantic_effect, seq=142] (active=FuFuFrog, phase=Phase_Main1, controller=FuFuFrog, owner=FuFuFrog, source_object=298, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Dour Port-Mage: draw.
+      explicit effect object references: object 231 [231], object 322 [322] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Forest (object 322) Library (FuFuFrog) -> Hand (FuFuFrog) (Draw; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 307 [307] Library (FuFuFrog) -> Hand (FuFuFrog) (Draw; GRE sequence 126).
+      Island [308] Hand (FuFuFrog) -> Battlefield (PlayLand; GRE sequence 129).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      FuFuFrog: Battlefield: Dour Port-Mage [298], Dour Port-Mage [309], Forest [285], Forest [297], Island [279], Island [308]
+      gian31: Battlefield: Laughing Jasper Flint [303], Mountain [292], Mountain [302], Ragged Playmate [293], Swamp [281], Tinybones, the Pickpocket [282]
+
+Turn 8
+  - Ability of Laughing Jasper Flint [observed_semantic_effect, seq=158] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=303, source_last_explicit_zone=Battlefield)
+      effects: exile, exile
+      narrative: Ability of Laughing Jasper Flint: exiles Island, Mockingbird; exile.
+      explicit effect object references: object 232 [232], object 233 [233], Mockingbird [324], Island [325] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Island (object 325) Library (FuFuFrog) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Mockingbird (object 324) Library (FuFuFrog) -> Exile (Exile; shared object ID)
+  - Mockingbird [valid_resolution_no_immediate_mutation, seq=168] (active=gian31, phase=Phase_Main1, controller=gian31, owner=FuFuFrog, source_object=328)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Mockingbird resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Mockingbird (object 328) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Laughing Jasper Flint [303] (unblocked, observed P/T 4/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: FuFuFrog -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): FuFuFrog 20 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [326] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 160).
+      Mountain [327] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 163).
+      Mockingbird [328] Stack -> Battlefield (Resolve; GRE sequence 169).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      FuFuFrog: Battlefield: Dour Port-Mage [298], Dour Port-Mage [309], Forest [285], Forest [297], Island [279], Island [308]; Exile: Island [325]
+      gian31: Battlefield: Laughing Jasper Flint [303], Mockingbird [328], Mountain [292], Mountain [302], Mountain [327], Ragged Playmate [293], Swamp [281], Tinybones, the Pickpocket [282]
+
+Turn 9
+  - Valley Mightcaller [valid_resolution_no_immediate_mutation, seq=196] (active=FuFuFrog, phase=Phase_Main1, controller=FuFuFrog, owner=FuFuFrog, source_object=334)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Valley Mightcaller resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Valley Mightcaller (object 334) Hand (FuFuFrog) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Valley Mightcaller (object 334) Stack -> Battlefield (Resolve; shared object ID)
+  - Sunshower Druid [valid_resolution_no_immediate_mutation, seq=199] (active=FuFuFrog, phase=Phase_Main1, controller=FuFuFrog, owner=FuFuFrog, source_object=336)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sunshower Druid resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sunshower Druid (object 336) Hand (FuFuFrog) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sunshower Druid (object 336) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Sunshower Druid [observed_semantic_effect, seq=204] (active=FuFuFrog, phase=Phase_Main1, controller=FuFuFrog, owner=FuFuFrog, source_object=336, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Sunshower Druid: Valley Mightcaller gets +1/+1; FuFuFrog gains 1 life; 1 counter(s) are added to Valley Mightcaller [334].
+      explicit effect object references: Valley Mightcaller [334] (role/targeting only where the protocol identifies it)
+  - Ability of Valley Mightcaller [observed_semantic_effect, seq=206] (active=FuFuFrog, phase=Phase_Main1, controller=FuFuFrog, owner=FuFuFrog, source_object=334, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Valley Mightcaller: Valley Mightcaller gets +1/+1; 1 counter(s) are added to Valley Mightcaller [334].
+  - Sunshower Druid [valid_resolution_no_immediate_mutation, seq=209] (active=FuFuFrog, phase=Phase_Main1, controller=FuFuFrog, owner=FuFuFrog, source_object=340)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sunshower Druid resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sunshower Druid (object 340) Hand (FuFuFrog) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sunshower Druid (object 340) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Sunshower Druid [observed_semantic_effect, seq=214] (active=FuFuFrog, phase=Phase_Main1, controller=FuFuFrog, owner=FuFuFrog, source_object=340, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Sunshower Druid: Valley Mightcaller gets +1/+1; FuFuFrog gains 1 life; 1 counter(s) are added to Valley Mightcaller [334].
+      explicit effect object references: Valley Mightcaller [334] (role/targeting only where the protocol identifies it)
+  - Ability of Valley Mightcaller [observed_semantic_effect, seq=216] (active=FuFuFrog, phase=Phase_Main1, controller=FuFuFrog, owner=FuFuFrog, source_object=334, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Valley Mightcaller: Valley Mightcaller gets +1/+1; 1 counter(s) are added to Valley Mightcaller [334].
+  - Pond Prophet [valid_resolution_no_immediate_mutation, seq=219] (active=FuFuFrog, phase=Phase_Main1, controller=FuFuFrog, owner=FuFuFrog, source_object=344)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Pond Prophet resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Pond Prophet (object 344) Hand (FuFuFrog) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Pond Prophet (object 344) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Valley Mightcaller [observed_semantic_effect, seq=222] (active=FuFuFrog, phase=Phase_Main1, controller=FuFuFrog, owner=FuFuFrog, source_object=334, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Valley Mightcaller: Valley Mightcaller gets +1/+1; 1 counter(s) are added to Valley Mightcaller [334].
+  - Ability of Pond Prophet [observed_semantic_effect, seq=224] (active=FuFuFrog, phase=Phase_Main1, controller=FuFuFrog, owner=FuFuFrog, source_object=344, source_last_explicit_zone=Battlefield)
+      effects: draw
+      narrative: Ability of Pond Prophet: draw.
+      explicit effect object references: object 235 [235], object 349 [349] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 349 (object 349) Library (FuFuFrog) -> Hand (FuFuFrog) (Draw; shared object ID)
+    net observed life change this turn: FuFuFrog +2 (individual changes below; gains and losses may offset)
+    life: FuFuFrog 16 -> 17
+    life: FuFuFrog 17 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Valley Mightcaller [332] Library (FuFuFrog) -> Hand (FuFuFrog) (Draw; GRE sequence 190).
+      Forest [333] Hand (FuFuFrog) -> Battlefield (PlayLand; GRE sequence 193).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      FuFuFrog: Battlefield: Dour Port-Mage [298], Dour Port-Mage [309], Forest [285], Forest [297], Forest [333], Island [279], Island [308], Pond Prophet [344], Sunshower Druid [336], Sunshower Druid [340], Valley Mightcaller [334]; Exile: Island [325]
+      gian31: Battlefield: Laughing Jasper Flint [303], Mockingbird [328], Mountain [292], Mountain [302], Mountain [327], Ragged Playmate [293], Swamp [281], Tinybones, the Pickpocket [282]
+
+Turn 10
+  - Ability of Laughing Jasper Flint [observed_semantic_effect, seq=241] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=303, source_last_explicit_zone=Battlefield)
+      effects: exile, exile, exile
+      narrative: Ability of Laughing Jasper Flint: exiles Three Tree Scribe, Clement, the Worrywort, Polliwallop; exile; exile.
+      explicit effect object references: object 236 [236], object 237 [237], object 238 [238], Clement, the Worrywort [351], Three Tree Scribe [352], Polliwallop [353] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Three Tree Scribe (object 352) Library (FuFuFrog) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Clement, the Worrywort (object 351) Library (FuFuFrog) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Polliwallop (object 353) Library (FuFuFrog) -> Exile (Exile; shared object ID)
+  - Polliwallop [observed_semantic_effect, seq=252] (active=gian31, phase=Phase_Main1, controller=gian31, owner=FuFuFrog, source_object=356)
+      effects: 8 damage
+      narrative: Polliwallop: Valley Mightcaller takes 8 damage.
+      explicit effect object references: Valley Mightcaller [334] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Polliwallop (object 356) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Polliwallop (object 361) Stack -> Graveyard (FuFuFrog) (Resolve; shared object ID)
+      identity continuity: source object 356 -> transfer object 361 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Valley Mightcaller (object 362) Battlefield -> Graveyard (FuFuFrog) (SBA_Damage; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [354] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 243).
+      Swamp [355] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 246).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      FuFuFrog: Battlefield: Dour Port-Mage [298], Dour Port-Mage [309], Forest [285], Forest [297], Forest [333], Island [279], Island [308], Pond Prophet [344], Sunshower Druid [336], Sunshower Druid [340]; Exile: Clement, the Worrywort [351], Island [325], Three Tree Scribe [352]; Graveyard: Polliwallop [361], Valley Mightcaller [362]
+      gian31: Battlefield: Laughing Jasper Flint [303], Mockingbird [328], Mountain [292], Mountain [302], Mountain [327], Ragged Playmate [293], Swamp [281], Swamp [355], Tinybones, the Pickpocket [282]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- No life mutation without an exact same-record source was observed.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Island [owner=FuFuFrog, controller=FuFuFrog] moves Hand (FuFuFrog) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Gonti, Night Minister [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 24: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 27: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 41: Island [owner/controller metadata unavailable] moves Library (FuFuFrog) -> Hand (FuFuFrog) (Draw).
+- Turn 3, seq 44: Forest [owner=FuFuFrog, controller=FuFuFrog] moves Hand (FuFuFrog) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Pond Prophet [owner=FuFuFrog, controller=FuFuFrog] moves Hand (FuFuFrog) -> Stack (CastSpell).
+- Turn 3, seq 47: Pond Prophet [owner=FuFuFrog, controller=FuFuFrog] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 49: object 290 [owner/controller metadata unavailable] moves Library (FuFuFrog) -> Hand (FuFuFrog) (Draw).
+- Turn 4, seq 63: Cruelclaw's Heist [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 66: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 67: Ragged Playmate [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 69: Ragged Playmate [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 84: Dour Port-Mage [owner/controller metadata unavailable] moves Library (FuFuFrog) -> Hand (FuFuFrog) (Draw).
+- Turn 5, seq 87: Forest [owner=FuFuFrog, controller=FuFuFrog] moves Hand (FuFuFrog) -> Battlefield (PlayLand).
+- Turn 5, seq 88: Dour Port-Mage [owner=FuFuFrog, controller=FuFuFrog] moves Hand (FuFuFrog) -> Stack (CastSpell).
+- Turn 5, seq 90: Dour Port-Mage [owner=FuFuFrog, controller=FuFuFrog] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 105: Mountain [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 108: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 109: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 111: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 126: object 307 [owner/controller metadata unavailable] moves Library (FuFuFrog) -> Hand (FuFuFrog) (Draw).
+- Turn 7, seq 129: Island [owner=FuFuFrog, controller=FuFuFrog] moves Hand (FuFuFrog) -> Battlefield (PlayLand).
+- Turn 7, seq 130: Dour Port-Mage [owner=FuFuFrog, controller=FuFuFrog] moves Hand (FuFuFrog) -> Stack (CastSpell).
+- Turn 7, seq 132: Dour Port-Mage [owner=FuFuFrog, controller=FuFuFrog] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 137: Pond Prophet [owner/controller metadata unavailable] moves Battlefield -> Hand (FuFuFrog) (Return).
+- Turn 7, seq 140: object 321 [owner/controller metadata unavailable] moves Library (FuFuFrog) -> Hand (FuFuFrog) (Draw).
+- Turn 7, seq 142: Forest [owner/controller metadata unavailable] moves Library (FuFuFrog) -> Hand (FuFuFrog) (Draw).
+- Turn 8, seq 158: Island [owner=FuFuFrog, controller=FuFuFrog] moves Library (FuFuFrog) -> Exile (Exile).
+- Turn 8, seq 158: Mockingbird [owner=FuFuFrog, controller=gian31] moves Library (FuFuFrog) -> Exile (Exile).
+- Turn 8, seq 160: Mountain [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 163: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 164: Mockingbird [owner=FuFuFrog, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 8, seq 169: Mockingbird [owner=FuFuFrog, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 190: Valley Mightcaller [owner/controller metadata unavailable] moves Library (FuFuFrog) -> Hand (FuFuFrog) (Draw).
+- Turn 9, seq 193: Forest [owner=FuFuFrog, controller=FuFuFrog] moves Hand (FuFuFrog) -> Battlefield (PlayLand).
+- Turn 9, seq 194: Valley Mightcaller [owner=FuFuFrog, controller=FuFuFrog] moves Hand (FuFuFrog) -> Stack (CastSpell).
+- Turn 9, seq 196: Valley Mightcaller [owner=FuFuFrog, controller=FuFuFrog] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 197: Sunshower Druid [owner=FuFuFrog, controller=FuFuFrog] moves Hand (FuFuFrog) -> Stack (CastSpell).
+- Turn 9, seq 199: Sunshower Druid [owner=FuFuFrog, controller=FuFuFrog] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 207: Sunshower Druid [owner=FuFuFrog, controller=FuFuFrog] moves Hand (FuFuFrog) -> Stack (CastSpell).
+- Turn 9, seq 209: Sunshower Druid [owner=FuFuFrog, controller=FuFuFrog] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 217: Pond Prophet [owner=FuFuFrog, controller=FuFuFrog] moves Hand (FuFuFrog) -> Stack (CastSpell).
+- Turn 9, seq 219: Pond Prophet [owner=FuFuFrog, controller=FuFuFrog] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 224: object 349 [owner/controller metadata unavailable] moves Library (FuFuFrog) -> Hand (FuFuFrog) (Draw).
+- Turn 10, seq 241: Three Tree Scribe [owner=FuFuFrog, controller=FuFuFrog] moves Library (FuFuFrog) -> Exile (Exile).
+- Turn 10, seq 241: Clement, the Worrywort [owner=FuFuFrog, controller=FuFuFrog] moves Library (FuFuFrog) -> Exile (Exile).
+- Turn 10, seq 241: Polliwallop [owner=FuFuFrog, controller=gian31] moves Library (FuFuFrog) -> Exile (Exile).
+- Turn 10, seq 243: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 246: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 247: Polliwallop [owner=FuFuFrog, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 10, seq 252: Polliwallop [owner=FuFuFrog, controller=FuFuFrog] moves Stack -> Graveyard (FuFuFrog) (Resolve).
+- Turn 10, seq 252: Valley Mightcaller [owner=FuFuFrog, controller=FuFuFrog] moves Battlefield -> Graveyard (FuFuFrog) (SBA_Damage).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 223 becomes object 279 [Island].
+- Turn 2, seq 21: object 166 becomes object 280 [Gonti, Night Minister].
+- Turn 2, seq 24: object 162 becomes object 281 [Swamp].
+- Turn 2, seq 25: object 160 becomes object 282 [Tinybones, the Pickpocket].
+- Turn 3, seq 41: object 226 becomes object 284 [Island].
+- Turn 3, seq 44: object 219 becomes object 285 [Forest].
+- Turn 3, seq 45: object 222 becomes object 286 [Pond Prophet].
+- Turn 3, seq 49: object 227 becomes object 290 [object 227].
+- Turn 4, seq 63: object 167 becomes object 291 [Cruelclaw's Heist].
+- Turn 4, seq 66: object 164 becomes object 292 [Mountain].
+- Turn 4, seq 67: object 165 becomes object 293 [Ragged Playmate].
+- Turn 5, seq 84: object 228 becomes object 296 [Dour Port-Mage].
+- Turn 5, seq 87: object 221 becomes object 297 [Forest].
+- Turn 5, seq 88: object 296 becomes object 298 [Dour Port-Mage].
+- Turn 6, seq 105: object 168 becomes object 301 [Mountain].
+- Turn 6, seq 108: object 301 becomes object 302 [Mountain].
+- Turn 6, seq 109: object 163 becomes object 303 [Laughing Jasper Flint].
+- Turn 7, seq 126: object 229 becomes object 307 [object 229].
+- Turn 7, seq 129: object 284 becomes object 308 [Island].
+- Turn 7, seq 130: object 225 becomes object 309 [Dour Port-Mage].
+- Turn 7, seq 137: object 286 becomes object 315 [Pond Prophet].
+- Turn 7, seq 140: object 230 becomes object 321 [object 230].
+- Turn 7, seq 142: object 231 becomes object 322 [Forest].
+- Turn 8, seq 158: object 233 becomes object 325 [Island].
+- Turn 8, seq 158: object 232 becomes object 324 [Mockingbird].
+- Turn 8, seq 160: object 169 becomes object 326 [Mountain].
+- Turn 8, seq 163: object 326 becomes object 327 [Mountain].
+- Turn 8, seq 164: object 324 becomes object 328 [Mockingbird].
+- Turn 9, seq 190: object 234 becomes object 332 [Valley Mightcaller].
+- Turn 9, seq 193: object 322 becomes object 333 [Forest].
+- Turn 9, seq 194: object 332 becomes object 334 [Valley Mightcaller].
+- Turn 9, seq 197: object 220 becomes object 336 [Sunshower Druid].
+- Turn 9, seq 207: object 224 becomes object 340 [Sunshower Druid].
+- Turn 9, seq 217: object 315 becomes object 344 [Pond Prophet].
+- Turn 9, seq 224: object 235 becomes object 349 [object 235].
+- Turn 10, seq 241: object 237 becomes object 352 [Three Tree Scribe].
+- Turn 10, seq 241: object 236 becomes object 351 [Clement, the Worrywort].
+- Turn 10, seq 241: object 238 becomes object 353 [Polliwallop].
+- Turn 10, seq 243: object 170 becomes object 354 [Swamp].
+- Turn 10, seq 246: object 354 becomes object 355 [Swamp].
+- Turn 10, seq 247: object 353 becomes object 356 [Polliwallop].
+- Turn 10, seq 252: object 356 becomes object 361 [Polliwallop].
+- Turn 10, seq 252: object 334 becomes object 362 [Valley Mightcaller].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: FuFuFrog plays Island (object 279) from Hand (FuFuFrog) to Battlefield.
+- Turn 2: gian31 plays Swamp (object 281) from Hand (gian31) to Battlefield.
+- Turn 3: FuFuFrog plays Forest (object 285) from Hand (FuFuFrog) to Battlefield.
+- Turn 4: gian31 plays Mountain (object 292) from Hand (gian31) to Battlefield.
+- Turn 5: FuFuFrog plays Forest (object 297) from Hand (FuFuFrog) to Battlefield.
+- Turn 6: gian31 plays Mountain (object 302) from Hand (gian31) to Battlefield.
+- Turn 7: FuFuFrog plays Island (object 308) from Hand (FuFuFrog) to Battlefield.
+- Turn 8: gian31 plays Mountain (object 327) from Hand (gian31) to Battlefield.
+- Turn 9: FuFuFrog plays Forest (object 333) from Hand (FuFuFrog) to Battlefield.
+- Turn 10: gian31 plays Swamp (object 355) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 9: ordered adjacent records Sunshower Druid -> Valley Mightcaller; observed repetitions=2; net life: Valley Mightcaller gets +1/+1; FuFuFrog +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Sunshower Druid=2, Valley Mightcaller=3.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Dour Port-Mage: casts=2; abilities=3 (triggered=3, activated=0) across turns [5, 7, 7, 7, 7]
+  observed effect totals: draws=2, tokens=0, counters=0, returns=1, damage=0, life_changes=0, other=0
+  observed effects: draw, return to battlefield
+- Pond Prophet: casts=2; abilities=2 (triggered=2, activated=0) across turns [3, 3, 9, 9]
+  observed effect totals: draws=2, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Sunshower Druid: casts=2; abilities=2 (triggered=2, activated=0) across turns [9, 9, 9, 9]
+  observed effect totals: draws=0, tokens=0, counters=2, returns=0, damage=0, life_changes=2, other=2
+  observed effects: +1 counter(s), P/T +1/+1, life +1
+- Valley Mightcaller: casts=1; abilities=3 (triggered=3, activated=0) across turns [9, 9, 9, 9]
+  observed effect totals: draws=0, tokens=0, counters=3, returns=0, damage=0, life_changes=0, other=3
+  observed effects: +1 counter(s), P/T +1/+1
+- Laughing Jasper Flint: casts=1; abilities=2 (triggered=2, activated=0) across turns [6, 8, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=5
+  observed effects: exile
+- Mockingbird: casts=1 across turns [8]
+- Polliwallop: casts=1 across turns [10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 8 damage
+- Ragged Playmate: casts=1 across turns [4]
+- Tinybones, the Pickpocket: casts=1 across turns [2]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 8 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Laughing Jasper Flint (gian31) -> FuFuFrog; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Ragged Playmate | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 160: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 161: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Ragged Playmate | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 279: Island | controller=FuFuFrog | owner=FuFuFrog | zone=Battlefield (latest_object_observation)
+- 280: Gonti, Night Minister | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 281: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 282: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 285: Forest | controller=FuFuFrog | owner=FuFuFrog | zone=Battlefield (latest_object_observation)
+- 286: Pond Prophet | controller=FuFuFrog | owner=FuFuFrog | zone=Battlefield (latest_object_observation)
+- 289: Gumdrop Poisoner | controller=FuFuFrog | owner=FuFuFrog | zone=unknown (inferred unknown) (latest_object_observation)
+- 291: Cruelclaw's Heist | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 292: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 293: Ragged Playmate | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 297: Forest | controller=FuFuFrog | owner=FuFuFrog | zone=Battlefield (latest_object_observation)
+- 298: Dour Port-Mage | controller=FuFuFrog | owner=FuFuFrog | zone=Battlefield (latest_object_observation)
+- 301: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 302: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 303: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 308: Island | controller=FuFuFrog | owner=FuFuFrog | zone=Battlefield (latest_object_observation)
+- 309: Dour Port-Mage | controller=FuFuFrog | owner=FuFuFrog | zone=Battlefield (latest_object_observation)
+- 312: object 312 | controller=FuFuFrog | owner=FuFuFrog | zone=unknown (inferred unknown) (latest_object_observation)
+- 318: object 318 | controller=FuFuFrog | owner=FuFuFrog | zone=unknown (inferred unknown) (latest_object_observation)
+- 319: object 319 | controller=FuFuFrog | owner=FuFuFrog | zone=unknown (inferred unknown) (latest_object_observation)
+- 320: Pond Prophet | controller=FuFuFrog | owner=FuFuFrog | zone=unknown (inferred unknown) (latest_object_observation)
+- 323: object 323 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 324: Mockingbird | controller=gian31 | owner=FuFuFrog | zone=Exile (latest_object_observation)
+- 325: Island | controller=FuFuFrog | owner=FuFuFrog | zone=Exile (latest_object_observation)
+- 326: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 327: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 328: Mockingbird | controller=gian31 | owner=FuFuFrog | zone=Battlefield (latest_object_observation)
+- 333: Forest | controller=FuFuFrog | owner=FuFuFrog | zone=Battlefield (latest_object_observation)
+- 334: Valley Mightcaller | controller=FuFuFrog | owner=FuFuFrog | zone=Battlefield (latest_object_observation)
+- 336: Sunshower Druid | controller=FuFuFrog | owner=FuFuFrog | zone=Battlefield (latest_object_observation)
+- 338: object 338 | controller=FuFuFrog | owner=FuFuFrog | zone=unknown (inferred unknown) (latest_object_observation)
+- 339: object 339 | controller=FuFuFrog | owner=FuFuFrog | zone=unknown (inferred unknown) (latest_object_observation)
+- 340: Sunshower Druid | controller=FuFuFrog | owner=FuFuFrog | zone=Battlefield (latest_object_observation)
+- 342: object 342 | controller=FuFuFrog | owner=FuFuFrog | zone=unknown (inferred unknown) (latest_object_observation)
+- 343: object 343 | controller=FuFuFrog | owner=FuFuFrog | zone=unknown (inferred unknown) (latest_object_observation)
+- 344: Pond Prophet | controller=FuFuFrog | owner=FuFuFrog | zone=Battlefield (latest_object_observation)
+- 347: object 347 | controller=FuFuFrog | owner=FuFuFrog | zone=unknown (inferred unknown) (latest_object_observation)
+- 348: Gumdrop Poisoner | controller=FuFuFrog | owner=FuFuFrog | zone=unknown (inferred unknown) (latest_object_observation)
+- 350: object 350 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 351: Clement, the Worrywort | controller=FuFuFrog | owner=FuFuFrog | zone=Exile (latest_object_observation)
+- 352: Three Tree Scribe | controller=FuFuFrog | owner=FuFuFrog | zone=Exile (latest_object_observation)
+- 353: Polliwallop | controller=gian31 | owner=FuFuFrog | zone=Exile (latest_object_observation)
+- 354: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 355: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 356: Polliwallop | controller=gian31 | owner=FuFuFrog | zone=Stack (latest_object_observation)
+- 361: Polliwallop | controller=FuFuFrog | owner=FuFuFrog | zone=Battlefield (latest_object_observation)
+- 362: Valley Mightcaller | controller=FuFuFrog | owner=FuFuFrog | zone=Battlefield (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+FuFuFrog: 28 total items
+  zones: Battlefield=14, Exile=3, unknown=11
+  objects: Forest x3, Island x3, Pond Prophet x3, Dour Port-Mage x2, Gumdrop Poisoner x2, Sunshower Druid x2, Valley Mightcaller x2, Clement, the Worrywort, Polliwallop, Three Tree Scribe, object 312, object 318
+gian31: 26 total items
+  zones: Battlefield=9, Exile=2, Hand=12, Stack=1, unknown=2
+  objects: Mountain x6, Swamp x4, Ragged Playmate x3, Tinybones, the Pickpocket x3, Laughing Jasper Flint x2, Mockingbird x2, Polliwallop x2, Cruelclaw's Heist, Gonti, Night Minister, object 323, object 350
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (9): Laughing Jasper Flint, Mockingbird, Mountain, Mountain, Mountain, Ragged Playmate, Swamp, Swamp, Tinybones, the Pickpocket
+  Graveyard: 0 card(s)
+FuFuFrog:
+  Battlefield (14): Dour Port-Mage, Dour Port-Mage, Forest, Forest, Forest, Island, Island, Polliwallop, Pond Prophet, Pond Prophet, Sunshower Druid, Sunshower Druid, Valley Mightcaller, Valley Mightcaller
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+13 objects have no resolved final zone and are omitted from the known board state.
+FuFuFrog: 11 unknown object(s)
+gian31: 2 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=12, Stack=1
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+FuFuFrog:
+  Battlefield (10): Island, Forest, Forest, Dour Port-Mage, Island, Dour Port-Mage, Forest, Sunshower Druid, Sunshower Druid, Pond Prophet
+  Graveyard (2): Polliwallop, Valley Mightcaller
+  Exile (3): Island, Clement, the Worrywort, Three Tree Scribe
+gian31:
+  Battlefield (9): Swamp, Tinybones, the Pickpocket, Mountain, Ragged Playmate, Mountain, Laughing Jasper Flint, Mountain, Mockingbird, Swamp
+Known non-persistent entries (counts only):
+  FuFuFrog: Hand=4, Limbo=1
+  gian31: Hand=4, Limbo=4, Stack=1
+  unknown: Library=88, Limbo=14
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: FuFuFrog Battlefield=1
+- Turn 2: FuFuFrog Battlefield=1; gian31 Battlefield=2
+- Turn 3: FuFuFrog Battlefield=3; gian31 Battlefield=2
+- Turn 4: FuFuFrog Battlefield=3; gian31 Battlefield=4
+- Turn 5: FuFuFrog Battlefield=5; gian31 Battlefield=4
+- Turn 6: FuFuFrog Battlefield=5; gian31 Battlefield=6
+- Turn 7: FuFuFrog Battlefield=6; gian31 Battlefield=6
+- Turn 8: FuFuFrog Battlefield=6; FuFuFrog Exile=1; gian31 Battlefield=8
+- Turn 9: FuFuFrog Battlefield=11; FuFuFrog Exile=1; gian31 Battlefield=8
+- Turn 10: FuFuFrog Battlefield=10; FuFuFrog Graveyard=2; FuFuFrog Exile=3; gian31 Battlefield=9
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Tinybones, the Pickpocket resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Pond Prophet resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Ragged Playmate resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Dour Port-Mage resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Laughing Jasper Flint resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Dour Port-Mage resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Mockingbird resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Valley Mightcaller resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Sunshower Druid resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Sunshower Druid resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Pond Prophet resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
