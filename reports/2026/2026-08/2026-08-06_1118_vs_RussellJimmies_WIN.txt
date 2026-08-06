@@ -1,0 +1,677 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: RussellJimmies, gian31
+Seat map: Seat 1=RussellJimmies, Seat 2=gian31
+Turn range (known): 1 - 12
+Records: 19
+Action chains: 19
+Winner: gian31
+Final life: {'RussellJimmies': 12, 'gian31': 11}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 12 (Phase_Main1; Fell, seq 313).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 33 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 11 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12] (raw records=11; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 13 explicit Library -> Hand movement(s); named in the draw record=9, resolved through an explicit identity transition=4, unresolved=0.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Laughing Jasper Flint [219], Cruelclaw's Heist [220], Swamp [221], Swamp [222], Vaan, Street Thief [223], Mountain [224], Vaan, Street Thief [225].
+  - unknown: 7 observed card(s): object 159 [159], object 160 [160], object 161 [161], object 162 [162], object 163 [163], object 164 [164], object 165 [165].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'RussellJimmies': 12, 'gian31': 11}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 12 (Phase_Main1; Fell, seq 313).
+Last captured life snapshot: RussellJimmies 20 -> 12 (seq 271).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=1, abilities=0; explicit battlefield entries=Forest, Llanowar Elves.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 3: actions: cards=1, abilities=0; explicit battlefield entries=Forest, Forest, Llanowar Elves.
+- Turn 4: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 5: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Forest, Reputable Merchant.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Summon: Fenrir, Mountain.
+- Turn 7: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Forest, Seedship Agrarian.
+- Turn 8: actions: cards=1, abilities=2; explicit battlefield entries=Mountain, Laughing Jasper Flint.
+- Turn 9: actions: cards=0, abilities=3; combat snapshots=1; life mutations=1; explicit battlefield entries=Forest, Forest; explicit battlefield exits=Lander.
+- Turn 10: actions: cards=1, abilities=3; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, Prismabasher; explicit battlefield exits=Summon: Fenrir.
+- Turn 11: actions: cards=0, abilities=1; explicit battlefield entries=Forest.
+- Turn 12: actions: cards=1, abilities=1; explicit battlefield entries=Swamp; explicit battlefield exits=Seedship Agrarian.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Llanowar Elves [valid_resolution_no_immediate_mutation, seq=10] (active=RussellJimmies, phase=Phase_Main1, controller=RussellJimmies, owner=RussellJimmies, source_object=280)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Llanowar Elves resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Llanowar Elves (object 280) Hand (RussellJimmies) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Llanowar Elves (object 280) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [279] Hand (RussellJimmies) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      RussellJimmies: Battlefield: Forest [279], Llanowar Elves [280]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [282] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 24).
+      Swamp [283] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 27).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      RussellJimmies: Battlefield: Forest [279], Llanowar Elves [280]
+      gian31: Battlefield: Swamp [283]
+
+Turn 3
+  - Llanowar Elves [valid_resolution_no_immediate_mutation, seq=52] (active=RussellJimmies, phase=Phase_Main1, controller=RussellJimmies, owner=RussellJimmies, source_object=342)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Llanowar Elves resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Llanowar Elves (object 342) Hand (RussellJimmies) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Llanowar Elves (object 342) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [284] Library (RussellJimmies) -> Hand (RussellJimmies) (Draw; GRE sequence 41).
+      Forest [285] Hand (RussellJimmies) -> Battlefield (PlayLand; GRE sequence 44).
+      Shared Roots [286] Hand (RussellJimmies) -> Stack (CastSpell; GRE sequence 45).
+      Forest [289] Library (RussellJimmies) -> Battlefield (Put; GRE sequence 48).
+      Shared Roots [341] Stack -> Graveyard (RussellJimmies) (Resolve; GRE sequence 49).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      RussellJimmies: Battlefield: Forest [279], Forest [285], Forest [289], Llanowar Elves [280], Llanowar Elves [342]; Graveyard: Shared Roots [341]
+      gian31: Battlefield: Swamp [283]
+
+Turn 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [344] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 66).
+      Swamp [345] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 69).
+      Cruelclaw's Heist [346] Hand (gian31) -> Stack (CastSpell; GRE sequence 70).
+      Forest [349] Library (RussellJimmies) -> Hand (RussellJimmies) (Draw; GRE sequence 75).
+      Summon: Fenrir [354] Hand (RussellJimmies) -> Exile (Exile; GRE sequence 77).
+      Cruelclaw's Heist [355] Stack -> Graveyard (gian31) (Resolve; GRE sequence 77).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      RussellJimmies: Battlefield: Forest [279], Forest [285], Forest [289], Llanowar Elves [280], Llanowar Elves [342]; Graveyard: Shared Roots [341]
+      gian31: Battlefield: Swamp [283], Swamp [345]; Exile: Summon: Fenrir [354]; Graveyard: Cruelclaw's Heist [355]
+
+Turn 5
+  - Reputable Merchant [valid_resolution_no_immediate_mutation, seq=98] (active=RussellJimmies, phase=Phase_Main1, controller=RussellJimmies, owner=RussellJimmies, source_object=358)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Reputable Merchant resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Reputable Merchant (object 358) Hand (RussellJimmies) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Reputable Merchant (object 358) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Reputable Merchant [observed_semantic_effect, seq=102] (active=RussellJimmies, phase=Phase_Main1, controller=RussellJimmies, owner=RussellJimmies, source_object=358, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Reputable Merchant: Reputable Merchant gets +1/+1; 1 counter(s) are added to Reputable Merchant [358].
+  Combat snapshots observed (active=RussellJimmies; frames: DeclareAttack -> DeclareBlock):
+      attackers: Llanowar Elves [342] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Reputable Merchant [356] Library (RussellJimmies) -> Hand (RussellJimmies) (Draw; GRE sequence 91).
+      Forest [357] Hand (RussellJimmies) -> Battlefield (PlayLand; GRE sequence 94).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      RussellJimmies: Battlefield: Forest [279], Forest [285], Forest [289], Forest [357], Llanowar Elves [280], Llanowar Elves [342], Reputable Merchant [358]; Graveyard: Shared Roots [341]
+      gian31: Battlefield: Swamp [283], Swamp [345]; Exile: Summon: Fenrir [354]; Graveyard: Cruelclaw's Heist [355]
+
+Turn 6
+  - Summon: Fenrir [valid_resolution_no_immediate_mutation, seq=128] (active=gian31, phase=Phase_Main1, controller=gian31, owner=RussellJimmies, source_object=367)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Summon: Fenrir resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Summon: Fenrir (object 367) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Summon: Fenrir (object 367) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [365] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 122).
+      Swamp [366] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 125).
+      Mountain [372] Library (gian31) -> Battlefield (Put; GRE sequence 131).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      RussellJimmies: Battlefield: Forest [279], Forest [285], Forest [289], Forest [357], Llanowar Elves [280], Llanowar Elves [342], Reputable Merchant [358]; Graveyard: Shared Roots [341]
+      gian31: Battlefield: Mountain [372], Summon: Fenrir [367], Swamp [283], Swamp [345], Swamp [366]; Graveyard: Cruelclaw's Heist [355]
+
+Turn 7
+  - Seedship Agrarian [valid_resolution_no_immediate_mutation, seq=152] (active=RussellJimmies, phase=Phase_Main1, controller=RussellJimmies, owner=RussellJimmies, source_object=424)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Seedship Agrarian resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Seedship Agrarian (object 424) Hand (RussellJimmies) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Seedship Agrarian (object 424) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=RussellJimmies; frames: DeclareAttack):
+      attackers: Reputable Merchant [358] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -3 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 19 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Seedship Agrarian [422] Library (RussellJimmies) -> Hand (RussellJimmies) (Draw; GRE sequence 146).
+      Forest [423] Hand (RussellJimmies) -> Battlefield (PlayLand; GRE sequence 149).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      RussellJimmies: Battlefield: Forest [279], Forest [285], Forest [289], Forest [357], Forest [423], Llanowar Elves [280], Llanowar Elves [342], Reputable Merchant [358], Seedship Agrarian [424]; Graveyard: Shared Roots [341]
+      gian31: Battlefield: Mountain [372], Summon: Fenrir [367], Swamp [283], Swamp [345], Swamp [366]; Graveyard: Cruelclaw's Heist [355]
+
+Turn 8
+  - Ability of Summon: Fenrir [valid_resolution_no_immediate_mutation, seq=177] (active=gian31, phase=Phase_Main1, controller=gian31, owner=RussellJimmies, source_object=367, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Summon: Fenrir resolves with no immediate observed mutation.
+  - Ability of Summon: Fenrir [valid_resolution_no_immediate_mutation, seq=187] (active=gian31, phase=Phase_Main1, controller=gian31, owner=RussellJimmies, source_object=367, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 177 and 187; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Summon: Fenrir resolves with no immediate observed mutation.
+  - Laughing Jasper Flint [valid_resolution_no_immediate_mutation, seq=189] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=438)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Laughing Jasper Flint resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Laughing Jasper Flint (object 438) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Laughing Jasper Flint (object 438) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Binding Negotiation [429] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 173).
+      Mountain [432] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 178).
+      Binding Negotiation [433] Hand (gian31) -> Stack (CastSpell; GRE sequence 179).
+      Vibrance [436] Hand (RussellJimmies) -> Graveyard (RussellJimmies) (Discard; GRE sequence 184).
+      Binding Negotiation [437] Stack -> Graveyard (gian31) (Resolve; GRE sequence 184).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      RussellJimmies: Battlefield: Forest [279], Forest [285], Forest [289], Forest [357], Forest [423], Llanowar Elves [280], Llanowar Elves [342], Reputable Merchant [358], Seedship Agrarian [424]; Graveyard: Shared Roots [341], Vibrance [436]
+      gian31: Battlefield: Laughing Jasper Flint [438], Mountain [372], Mountain [432], Summon: Fenrir [367], Swamp [283], Swamp [345], Swamp [366]; Graveyard: Binding Negotiation [437], Cruelclaw's Heist [355]
+
+Turn 9
+  - Ability of Seedship Agrarian [observed_semantic_effect, seq=213] (active=RussellJimmies, phase=Phase_Main1, controller=RussellJimmies, owner=RussellJimmies, source_object=424, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Seedship Agrarian: Seedship Agrarian gets +1/+1; 1 counter(s) are added to Seedship Agrarian [424].
+  - Ability of Seedship Agrarian [observed_semantic_effect, seq=221] (active=RussellJimmies, phase=Phase_Combat, step=Step_DeclareAttack, controller=RussellJimmies, owner=RussellJimmies, source_object=424, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 213 and 221; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: token creation
+      narrative: Ability of Seedship Agrarian: a token is created.
+      explicit effect object references: Lander [497] (role/targeting only where the protocol identifies it)
+      token created: Lander (object 497, controller=RussellJimmies); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 496).
+  - Ability of Seedship Agrarian [observed_semantic_effect, seq=228] (active=RussellJimmies, phase=Phase_Combat, step=Step_DeclareAttack, controller=RussellJimmies, owner=RussellJimmies, source_object=424, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 221 and 228; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Seedship Agrarian: Seedship Agrarian gets +1/+1; 1 counter(s) are added to Seedship Agrarian [424].
+  Combat snapshots observed (active=RussellJimmies; frames: DeclareAttack):
+      attackers: Seedship Agrarian [424] (unblocked, observed P/T 4/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 4; snapshot comparison does not reconcile (exact assignment unavailable).
+      P/T timing: combat snapshot power=4; explicit modifiers in the same observed combat context add 1 power to 1/1 unblocked attackers; post-modifier observed reconstruction=5 (fully reconciled; individual assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -5 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 1 = 5; individual assignment unavailable): gian31 16 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shared Roots [443] Library (RussellJimmies) -> Hand (RussellJimmies) (Draw; GRE sequence 204).
+      Shared Roots [444] Hand (RussellJimmies) -> Stack (CastSpell; GRE sequence 207).
+      Forest [447] Library (RussellJimmies) -> Battlefield (Put; GRE sequence 210).
+      Shared Roots [495] Stack -> Graveyard (RussellJimmies) (Resolve; GRE sequence 211).
+      Lander [501] Battlefield -> Graveyard (RussellJimmies) (Sacrifice; GRE sequence 222).
+        sacrifice observed after Ability of Seedship Agrarian (seq 221); direct causal linkage is unavailable.
+      Forest [502] Library (RussellJimmies) -> Battlefield (Put; GRE sequence 225).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      RussellJimmies: Battlefield: Forest [279], Forest [285], Forest [289], Forest [357], Forest [423], Forest [447], Forest [502], Llanowar Elves [280], Llanowar Elves [342], Reputable Merchant [358], Seedship Agrarian [424]; Graveyard: Lander [501], Shared Roots [341], Shared Roots [495], Vibrance [436]
+      gian31: Battlefield: Laughing Jasper Flint [438], Mountain [372], Mountain [432], Summon: Fenrir [367], Swamp [283], Swamp [345], Swamp [366]; Graveyard: Binding Negotiation [437], Cruelclaw's Heist [355]
+
+Turn 10
+  - Ability of Laughing Jasper Flint [observed_semantic_effect, seq=245] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=438, source_last_explicit_zone=Battlefield)
+      effects: exile, exile
+      narrative: Ability of Laughing Jasper Flint: exiles Prismabasher, Tam, Mindful First-Year; exile.
+      explicit effect object references: object 504 [504], object 505 [505], Prismabasher [550], Tam, Mindful First-Year [551] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Prismabasher (object 550) Library (RussellJimmies) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Tam, Mindful First-Year (object 551) Library (RussellJimmies) -> Exile (Exile; shared object ID)
+  - Ability of Summon: Fenrir [observed_semantic_effect, seq=251] (active=gian31, phase=Phase_Main1, controller=gian31, owner=RussellJimmies, source_object=367, source_last_explicit_zone=Battlefield, source_successor=555 observed Battlefield -> Graveyard (RussellJimmies) (Sacrifice))
+      effects: draw
+      narrative: Ability of Summon: Fenrir: draw.
+      explicit effect object references: object 375 [375], Ragged Playmate [554] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Ragged Playmate (object 554) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Prismabasher [valid_resolution_no_immediate_mutation, seq=255] (active=gian31, phase=Phase_Main1, controller=gian31, owner=RussellJimmies, source_object=557)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Prismabasher resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Prismabasher (object 557) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Prismabasher (object 557) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Prismabasher [observed_semantic_effect, seq=260] (active=gian31, phase=Phase_Main1, controller=gian31, owner=RussellJimmies, source_object=557, source_last_explicit_zone=Battlefield)
+      effects: P/T +3/+3, P/T +3/+3
+      narrative: Ability of Prismabasher: Laughing Jasper Flint gets +3/+3; Prismabasher gets +3/+3.
+      explicit effect object references: Laughing Jasper Flint [438] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Laughing Jasper Flint [438] (unblocked, observed P/T 8/7)
+      blockers: none identified
+      combat-correlated defending-player life loss: 8; observed attacker power total: 8; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: RussellJimmies -8 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 8 + observed modifiers 0 = 8; individual assignment unavailable): RussellJimmies 20 -> 12
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [552] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 247).
+      Summon: Fenrir [555] Battlefield -> Graveyard (RussellJimmies) (Sacrifice; GRE sequence 251).
+        sacrifice observed after Ability of Summon: Fenrir (seq 251); direct causal linkage is unavailable.
+      Swamp [556] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 252).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      RussellJimmies: Battlefield: Forest [279], Forest [285], Forest [289], Forest [357], Forest [423], Forest [447], Forest [502], Llanowar Elves [280], Llanowar Elves [342], Reputable Merchant [358], Seedship Agrarian [424]; Graveyard: Lander [501], Shared Roots [341], Shared Roots [495], Summon: Fenrir [555], Vibrance [436]; Exile: Tam, Mindful First-Year [551]
+      gian31: Battlefield: Laughing Jasper Flint [438], Mountain [372], Mountain [432], Prismabasher [557], Swamp [283], Swamp [345], Swamp [366], Swamp [556]; Graveyard: Binding Negotiation [437], Cruelclaw's Heist [355]
+
+Turn 11
+  - Ability of Seedship Agrarian [observed_semantic_effect, seq=286] (active=RussellJimmies, phase=Phase_Main1, controller=RussellJimmies, owner=RussellJimmies, source_object=424, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Seedship Agrarian: Seedship Agrarian gets +1/+1; 1 counter(s) are added to Seedship Agrarian [424].
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [565] Library (RussellJimmies) -> Hand (RussellJimmies) (Draw; GRE sequence 281).
+      Forest [566] Hand (RussellJimmies) -> Battlefield (PlayLand; GRE sequence 284).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      RussellJimmies: Battlefield: Forest [279], Forest [285], Forest [289], Forest [357], Forest [423], Forest [447], Forest [502], Forest [566], Llanowar Elves [280], Llanowar Elves [342], Reputable Merchant [358], Seedship Agrarian [424]; Graveyard: Lander [501], Shared Roots [341], Shared Roots [495], Summon: Fenrir [555], Vibrance [436]; Exile: Tam, Mindful First-Year [551]
+      gian31: Battlefield: Laughing Jasper Flint [438], Mountain [372], Mountain [432], Prismabasher [557], Swamp [283], Swamp [345], Swamp [366], Swamp [556]; Graveyard: Binding Negotiation [437], Cruelclaw's Heist [355]
+
+Turn 12
+  - Ability of Laughing Jasper Flint [observed_semantic_effect, seq=303] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=438, source_last_explicit_zone=Battlefield)
+      effects: exile, exile
+      narrative: Ability of Laughing Jasper Flint: exiles Shimmerwilds Growth, Vizier of the Menagerie; exile.
+      explicit effect object references: object 507 [507], object 508 [508], Vizier of the Menagerie [569], Shimmerwilds Growth [570] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shimmerwilds Growth (object 570) Library (RussellJimmies) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Vizier of the Menagerie (object 569) Library (RussellJimmies) -> Exile (Exile; shared object ID)
+  - Fell [observed_semantic_effect, seq=313] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=573)
+      effects: destroy
+      narrative: Fell destroys Seedship Agrarian.
+      explicit effect object references: Seedship Agrarian [424], Seedship Agrarian [576] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Fell (object 573) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Seedship Agrarian (object 576) Battlefield -> Graveyard (RussellJimmies) (Destroy; shared object ID)
+      protocol-linked zone transfer: Fell (object 577) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 573 -> transfer object 577 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Fell [571] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 305).
+      Swamp [572] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 308).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      RussellJimmies: Battlefield: Forest [279], Forest [285], Forest [289], Forest [357], Forest [423], Forest [447], Forest [502], Forest [566], Llanowar Elves [280], Llanowar Elves [342], Reputable Merchant [358]; Graveyard: Lander [501], Seedship Agrarian [576], Shared Roots [341], Shared Roots [495], Summon: Fenrir [555], Vibrance [436]; Exile: Shimmerwilds Growth [570], Tam, Mindful First-Year [551], Vizier of the Menagerie [569]
+      gian31: Battlefield: Laughing Jasper Flint [438], Mountain [372], Mountain [432], Prismabasher [557], Swamp [283], Swamp [345], Swamp [366], Swamp [556], Swamp [572]; Graveyard: Binding Negotiation [437], Cruelclaw's Heist [355], Fell [577]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- No life mutation without an exact same-record source was observed.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 1 token creations observed; 0 active as last observed; 1 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Lander [497] controller=RussellJimmies; created Turn 9 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 9 via Battlefield -> Graveyard (RussellJimmies) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Forest [owner=RussellJimmies, controller=RussellJimmies] moves Hand (RussellJimmies) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Llanowar Elves [owner=RussellJimmies, controller=RussellJimmies] moves Hand (RussellJimmies) -> Stack (CastSpell).
+- Turn 1, seq 10: Llanowar Elves [owner=RussellJimmies, controller=RussellJimmies] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 24: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 27: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 41: Forest [owner=RussellJimmies, controller=RussellJimmies] moves Library (RussellJimmies) -> Hand (RussellJimmies) (Draw).
+- Turn 3, seq 44: Forest [owner=RussellJimmies, controller=RussellJimmies] moves Hand (RussellJimmies) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Shared Roots [owner=RussellJimmies, controller=RussellJimmies] moves Hand (RussellJimmies) -> Stack (CastSpell).
+- Turn 3, seq 48: Forest [owner=RussellJimmies, controller=RussellJimmies] moves Library (RussellJimmies) -> Battlefield (Put).
+- Turn 3, seq 49: Shared Roots [owner=RussellJimmies, controller=RussellJimmies] moves Stack -> Graveyard (RussellJimmies) (Resolve).
+- Turn 3, seq 50: Llanowar Elves [owner=RussellJimmies, controller=RussellJimmies] moves Hand (RussellJimmies) -> Stack (CastSpell).
+- Turn 3, seq 52: Llanowar Elves [owner=RussellJimmies, controller=RussellJimmies] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 66: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 69: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 70: Cruelclaw's Heist [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 75: Forest [owner=RussellJimmies, controller=RussellJimmies] moves Library (RussellJimmies) -> Hand (RussellJimmies) (Draw).
+- Turn 4, seq 77: Summon: Fenrir [owner=RussellJimmies, controller=gian31] moves Hand (RussellJimmies) -> Exile (Exile).
+- Turn 4, seq 77: Cruelclaw's Heist [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 5, seq 91: Reputable Merchant [owner/controller metadata unavailable] moves Library (RussellJimmies) -> Hand (RussellJimmies) (Draw).
+- Turn 5, seq 94: Forest [owner=RussellJimmies, controller=RussellJimmies] moves Hand (RussellJimmies) -> Battlefield (PlayLand).
+- Turn 5, seq 95: Reputable Merchant [owner=RussellJimmies, controller=RussellJimmies] moves Hand (RussellJimmies) -> Stack (CastSpell).
+- Turn 5, seq 98: Reputable Merchant [owner=RussellJimmies, controller=RussellJimmies] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 122: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 125: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 126: Summon: Fenrir [owner=RussellJimmies, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 6, seq 128: Summon: Fenrir [owner=RussellJimmies, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 131: Mountain [owner=gian31, controller=gian31] moves Library (gian31) -> Battlefield (Put).
+- Turn 7, seq 146: Seedship Agrarian [owner/controller metadata unavailable] moves Library (RussellJimmies) -> Hand (RussellJimmies) (Draw).
+- Turn 7, seq 149: Forest [owner=RussellJimmies, controller=RussellJimmies] moves Hand (RussellJimmies) -> Battlefield (PlayLand).
+- Turn 7, seq 150: Seedship Agrarian [owner=RussellJimmies, controller=RussellJimmies] moves Hand (RussellJimmies) -> Stack (CastSpell).
+- Turn 7, seq 152: Seedship Agrarian [owner=RussellJimmies, controller=RussellJimmies] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 173: Binding Negotiation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 178: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 179: Binding Negotiation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 184: Vibrance [owner=RussellJimmies, controller=RussellJimmies] moves Hand (RussellJimmies) -> Graveyard (RussellJimmies) (Discard).
+- Turn 8, seq 184: Binding Negotiation [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 8, seq 185: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 189: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 204: Shared Roots [owner/controller metadata unavailable] moves Library (RussellJimmies) -> Hand (RussellJimmies) (Draw).
+- Turn 9, seq 207: Shared Roots [owner=RussellJimmies, controller=RussellJimmies] moves Hand (RussellJimmies) -> Stack (CastSpell).
+- Turn 9, seq 210: Forest [owner=RussellJimmies, controller=RussellJimmies] moves Library (RussellJimmies) -> Battlefield (Put).
+- Turn 9, seq 211: Shared Roots [owner=RussellJimmies, controller=RussellJimmies] moves Stack -> Graveyard (RussellJimmies) (Resolve).
+- Turn 9, seq 222: Lander [owner/controller metadata unavailable] moves Battlefield -> Graveyard (RussellJimmies) (Sacrifice).
+- Turn 9, seq 225: Forest [owner=RussellJimmies, controller=RussellJimmies] moves Library (RussellJimmies) -> Battlefield (Put).
+- Turn 10, seq 245: Prismabasher [owner=RussellJimmies, controller=gian31] moves Library (RussellJimmies) -> Exile (Exile).
+- Turn 10, seq 245: Tam, Mindful First-Year [owner=RussellJimmies, controller=RussellJimmies] moves Library (RussellJimmies) -> Exile (Exile).
+- Turn 10, seq 247: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 251: Ragged Playmate [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 251: Summon: Fenrir [owner=RussellJimmies, controller=RussellJimmies] moves Battlefield -> Graveyard (RussellJimmies) (Sacrifice).
+- Turn 10, seq 252: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 253: Prismabasher [owner=RussellJimmies, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 10, seq 255: Prismabasher [owner=RussellJimmies, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 281: Forest [owner/controller metadata unavailable] moves Library (RussellJimmies) -> Hand (RussellJimmies) (Draw).
+- Turn 11, seq 284: Forest [owner=RussellJimmies, controller=RussellJimmies] moves Hand (RussellJimmies) -> Battlefield (PlayLand).
+- Turn 12, seq 303: Shimmerwilds Growth [owner=RussellJimmies, controller=RussellJimmies] moves Library (RussellJimmies) -> Exile (Exile).
+- Turn 12, seq 303: Vizier of the Menagerie [owner=RussellJimmies, controller=RussellJimmies] moves Library (RussellJimmies) -> Exile (Exile).
+- Turn 12, seq 305: Fell [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 308: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 309: Fell [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 313: Seedship Agrarian [owner=RussellJimmies, controller=RussellJimmies] moves Battlefield -> Graveyard (RussellJimmies) (Destroy).
+- Turn 12, seq 313: Fell [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 160 becomes object 279 [Forest].
+- Turn 1, seq 8: object 163 becomes object 280 [Llanowar Elves].
+- Turn 2, seq 24: object 226 becomes object 282 [Swamp].
+- Turn 2, seq 27: object 221 becomes object 283 [Swamp].
+- Turn 3, seq 41: object 166 becomes object 284 [Forest].
+- Turn 3, seq 44: object 164 becomes object 285 [Forest].
+- Turn 3, seq 45: object 161 becomes object 286 [Shared Roots].
+- Turn 3, seq 48: object 213 becomes object 289 [Forest].
+- Turn 3, seq 49: object 286 becomes object 341 [Shared Roots].
+- Turn 3, seq 50: object 159 becomes object 342 [Llanowar Elves].
+- Turn 4, seq 66: object 227 becomes object 344 [Swamp].
+- Turn 4, seq 69: object 282 becomes object 345 [Swamp].
+- Turn 4, seq 70: object 220 becomes object 346 [Cruelclaw's Heist].
+- Turn 4, seq 75: object 290 becomes object 349 [Forest].
+- Turn 4, seq 77: object 165 becomes object 354 [Summon: Fenrir].
+- Turn 4, seq 77: object 346 becomes object 355 [Cruelclaw's Heist].
+- Turn 5, seq 91: object 291 becomes object 356 [Reputable Merchant].
+- Turn 5, seq 94: object 349 becomes object 357 [Forest].
+- Turn 5, seq 95: object 356 becomes object 358 [Reputable Merchant].
+- Turn 6, seq 122: object 228 becomes object 365 [Swamp].
+- Turn 6, seq 125: object 344 becomes object 366 [Swamp].
+- Turn 6, seq 126: object 354 becomes object 367 [Summon: Fenrir].
+- Turn 6, seq 131: object 265 becomes object 372 [Mountain].
+- Turn 7, seq 146: object 292 becomes object 422 [Seedship Agrarian].
+- Turn 7, seq 149: object 284 becomes object 423 [Forest].
+- Turn 7, seq 150: object 422 becomes object 424 [Seedship Agrarian].
+- Turn 8, seq 173: object 373 becomes object 429 [Binding Negotiation].
+- Turn 8, seq 178: object 224 becomes object 432 [Mountain].
+- Turn 8, seq 179: object 429 becomes object 433 [Binding Negotiation].
+- Turn 8, seq 184: object 162 becomes object 436 [Vibrance].
+- Turn 8, seq 184: object 433 becomes object 437 [Binding Negotiation].
+- Turn 8, seq 185: object 219 becomes object 438 [Laughing Jasper Flint].
+- Turn 9, seq 204: object 293 becomes object 443 [Shared Roots].
+- Turn 9, seq 207: object 443 becomes object 444 [Shared Roots].
+- Turn 9, seq 210: object 302 becomes object 447 [Forest].
+- Turn 9, seq 211: object 444 becomes object 495 [Shared Roots].
+- Turn 9, seq 222: object 497 becomes object 501 [Lander].
+- Turn 9, seq 225: object 492 becomes object 502 [Forest].
+- Turn 10, seq 245: object 504 becomes object 550 [Prismabasher].
+- Turn 10, seq 245: object 505 becomes object 551 [Tam, Mindful First-Year].
+- Turn 10, seq 247: object 374 becomes object 552 [Swamp].
+- Turn 10, seq 251: object 375 becomes object 554 [Ragged Playmate].
+- Turn 10, seq 251: object 367 becomes object 555 [Summon: Fenrir].
+- Turn 10, seq 252: object 552 becomes object 556 [Swamp].
+- Turn 10, seq 253: object 550 becomes object 557 [Prismabasher].
+- Turn 11, seq 281: object 506 becomes object 565 [Forest].
+- Turn 11, seq 284: object 565 becomes object 566 [Forest].
+- Turn 12, seq 303: object 508 becomes object 570 [Shimmerwilds Growth].
+- Turn 12, seq 303: object 507 becomes object 569 [Vizier of the Menagerie].
+- Turn 12, seq 305: object 376 becomes object 571 [Fell].
+- Turn 12, seq 308: object 365 becomes object 572 [Swamp].
+- Turn 12, seq 309: object 571 becomes object 573 [Fell].
+- Turn 12, seq 313: object 424 becomes object 576 [Seedship Agrarian].
+- Turn 12, seq 313: object 573 becomes object 577 [Fell].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: RussellJimmies plays Forest (object 279) from Hand (RussellJimmies) to Battlefield.
+- Turn 2: gian31 plays Swamp (object 283) from Hand (gian31) to Battlefield.
+- Turn 3: RussellJimmies plays Forest (object 285) from Hand (RussellJimmies) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 345) from Hand (gian31) to Battlefield.
+- Turn 5: RussellJimmies plays Forest (object 357) from Hand (RussellJimmies) to Battlefield.
+- Turn 6: gian31 plays Swamp (object 366) from Hand (gian31) to Battlefield.
+- Turn 7: RussellJimmies plays Forest (object 423) from Hand (RussellJimmies) to Battlefield.
+- Turn 8: gian31 plays Mountain (object 432) from Hand (gian31) to Battlefield.
+- Turn 10: gian31 plays Swamp (object 556) from Hand (gian31) to Battlefield.
+- Turn 11: RussellJimmies plays Forest (object 566) from Hand (RussellJimmies) to Battlefield.
+- Turn 12: gian31 plays Swamp (object 572) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Seedship Agrarian: casts=1; abilities=4 (triggered=4, activated=0) across turns [7, 9, 9, 9, 11]
+  observed effect totals: draws=0, tokens=1, counters=3, returns=0, damage=0, life_changes=0, other=3
+  observed effects: +1 counter(s), P/T +1/+1, token creation
+- Summon: Fenrir: casts=1; abilities=3 (triggered=3, activated=0) across turns [6, 8, 8, 10]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Laughing Jasper Flint: casts=1; abilities=2 (triggered=2, activated=0) across turns [8, 10, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=4
+  observed effects: exile
+- Llanowar Elves: casts=2 across turns [1, 3]
+- Prismabasher: casts=1; abilities=1 (triggered=1, activated=0) across turns [10, 10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: P/T +3/+3
+- Reputable Merchant: casts=1; abilities=1 (triggered=1, activated=0) across turns [5, 5]
+  observed effect totals: draws=0, tokens=0, counters=1, returns=0, damage=0, life_changes=0, other=1
+  observed effects: +1 counter(s), P/T +1/+1
+- Fell: casts=1 across turns [12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 - DeclareAttack, DeclareBlock (active=RussellJimmies)
+  attacker: Llanowar Elves (RussellJimmies) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack (active=RussellJimmies)
+  attacker: Reputable Merchant (RussellJimmies) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack (active=RussellJimmies)
+  attacker: Seedship Agrarian (RussellJimmies) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack (active=gian31)
+  attacker: Laughing Jasper Flint (gian31) -> RussellJimmies; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 9: Ability of Seedship Agrarian (active=RussellJimmies) - Ability of Seedship Agrarian: a token is created.
+- Turn 9: Ability of Seedship Agrarian (active=RussellJimmies) - Ability of Seedship Agrarian: Seedship Agrarian gets +1/+1; 1 counter(s) are added to target.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 162: Vibrance | controller=RussellJimmies | owner=RussellJimmies | zone=Hand (latest_object_observation)
+- 165: Summon: Fenrir | controller=RussellJimmies | owner=RussellJimmies | zone=Hand (latest_object_observation)
+- 219: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 220: Cruelclaw's Heist | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 221: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 222: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 223: Vaan, Street Thief | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 224: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 225: Vaan, Street Thief | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 229: Cruelclaw's Heist | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 230: Gastal Raider | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 231: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 232: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 233: Fell | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 234: Swamp | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 235: Thought-Stalker Warlock | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 236: Fell | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 237: Binding Negotiation | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 238: Ragged Playmate | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 239: Duress | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 240: Mountain | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 241: Fell | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 242: Fell | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 243: Mountain | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 244: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 245: Mountain | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 246: Ragged Playmate | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 247: Swamp | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 248: Mountain | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 249: Gastal Raider | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 250: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 251: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 252: Gonti, Night Minister | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 253: Swamp | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 254: Swamp | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 255: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 256: Mountain | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 257: Swamp | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 258: Duress | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 259: Swamp | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 260: At Knifepoint | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 261: Thought-Stalker Warlock | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 262: Swamp | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 263: Swamp | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 264: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 265: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 266: Mountain | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 267: Binding Negotiation | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 268: Forsaken Miner | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 269: Binding Negotiation | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 270: Mountain | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 271: At Knifepoint | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 272: Forsaken Miner | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 273: Binding Negotiation | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 274: Swamp | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 275: Ragged Playmate | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 276: Mountain | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 277: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 278: Gonti, Night Minister | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 279: Forest | controller=RussellJimmies | owner=RussellJimmies | zone=Battlefield (latest_object_observation)
+- 280: Llanowar Elves | controller=RussellJimmies | owner=RussellJimmies | zone=Battlefield (latest_object_observation)
+- 282: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 283: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 284: Forest | controller=RussellJimmies | owner=RussellJimmies | zone=Hand (latest_object_observation)
+- 285: Forest | controller=RussellJimmies | owner=RussellJimmies | zone=Battlefield (latest_object_observation)
+- 286: Shared Roots | controller=RussellJimmies | owner=RussellJimmies | zone=Stack (latest_object_observation)
+- 289: Forest | controller=RussellJimmies | owner=RussellJimmies | zone=Battlefield (latest_object_observation)
+- 341: Shared Roots | controller=RussellJimmies | owner=RussellJimmies | zone=Graveyard (latest_object_observation)
+- 342: Llanowar Elves | controller=RussellJimmies | owner=RussellJimmies | zone=Battlefield (latest_object_observation)
+- 344: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 345: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 346: Cruelclaw's Heist | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 349: Forest | controller=RussellJimmies | owner=RussellJimmies | zone=Hand (latest_object_observation)
+- 350: Forest | controller=RussellJimmies | owner=RussellJimmies | zone=Hand (latest_object_observation)
+- 351: Forest | controller=RussellJimmies | owner=RussellJimmies | zone=Hand (latest_object_observation)
+- 352: Summon: Fenrir | controller=RussellJimmies | owner=RussellJimmies | zone=Hand (latest_object_observation)
+- 353: Vibrance | controller=RussellJimmies | owner=RussellJimmies | zone=Hand (latest_object_observation)
+- 354: Summon: Fenrir | controller=gian31 | owner=RussellJimmies | zone=Exile (latest_object_observation)
+- 355: Cruelclaw's Heist | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 357: Forest | controller=RussellJimmies | owner=RussellJimmies | zone=Battlefield (latest_object_observation)
+- 358: Reputable Merchant | controller=RussellJimmies | owner=RussellJimmies | zone=Battlefield (latest_object_observation)
+- 364: object 364 | controller=RussellJimmies | owner=RussellJimmies | zone=unknown (inferred unknown) (latest_object_observation)
+- 365: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 366: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 367: Summon: Fenrir | controller=gian31 | owner=RussellJimmies | zone=Battlefield (latest_object_observation)
+- 371: object 371 | controller=gian31 | owner=RussellJimmies | zone=unknown (inferred unknown) (latest_object_observation)
+- 372: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 423: Forest | controller=RussellJimmies | owner=RussellJimmies | zone=Battlefield (latest_object_observation)
+- 424: Seedship Agrarian | controller=RussellJimmies | owner=RussellJimmies | zone=Battlefield (latest_object_observation)
+- 429: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 430: object 430 | controller=gian31 | owner=RussellJimmies | zone=unknown (inferred unknown) (latest_object_observation)
+- 431: object 431 | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 432: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 433: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 436: Vibrance | controller=RussellJimmies | owner=RussellJimmies | zone=Graveyard (latest_object_observation)
+- 437: Binding Negotiation | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 438: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 442: object 442 | controller=gian31 | owner=RussellJimmies | zone=unknown (inferred unknown) (latest_object_observation)
+- 444: Shared Roots | controller=RussellJimmies | owner=RussellJimmies | zone=Stack (latest_object_observation)
+- 447: Forest | controller=RussellJimmies | owner=RussellJimmies | zone=Battlefield (latest_object_observation)
+- 448: Ureni of the Unwritten | controller=RussellJimmies | owner=RussellJimmies | zone=unknown (inferred unknown) (latest_object_observation)
+- 495: Shared Roots | controller=RussellJimmies | owner=RussellJimmies | zone=Graveyard (latest_object_observation)
+- 496: object 496 | controller=RussellJimmies | owner=RussellJimmies | zone=unknown (inferred unknown) (latest_object_observation)
+- 497: Lander | controller=RussellJimmies | owner=RussellJimmies | zone=Hand (latest_object_observation)
+- 498: object 498 | controller=RussellJimmies | owner=RussellJimmies | zone=unknown (inferred unknown) (latest_object_observation)
+- 502: Forest | controller=RussellJimmies | owner=RussellJimmies | zone=Battlefield (latest_object_observation)
+- 503: Ureni of the Unwritten | controller=RussellJimmies | owner=RussellJimmies | zone=unknown (inferred unknown) (latest_object_observation)
+- 549: object 549 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 550: Prismabasher | controller=gian31 | owner=RussellJimmies | zone=Exile (latest_object_observation)
+- 551: Tam, Mindful First-Year | controller=RussellJimmies | owner=RussellJimmies | zone=Exile (latest_object_observation)
+- 552: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 553: object 553 | controller=gian31 | owner=RussellJimmies | zone=unknown (inferred unknown) (latest_object_observation)
+- 554: Ragged Playmate | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 555: Summon: Fenrir | controller=RussellJimmies | owner=RussellJimmies | zone=Graveyard (latest_object_observation)
+- 556: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 557: Prismabasher | controller=gian31 | owner=RussellJimmies | zone=Battlefield (latest_object_observation)
+- 564: object 564 | controller=gian31 | owner=RussellJimmies | zone=unknown (inferred unknown) (latest_object_observation)
+- 566: Forest | controller=RussellJimmies | owner=RussellJimmies | zone=Battlefield (latest_object_observation)
+- 567: Ureni of the Unwritten | controller=RussellJimmies | owner=RussellJimmies | zone=unknown (inferred unknown) (latest_object_observation)
+- 568: object 568 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 569: Vizier of the Menagerie | controller=RussellJimmies | owner=RussellJimmies | zone=Exile (latest_object_observation)
+- 570: Shimmerwilds Growth | controller=RussellJimmies | owner=RussellJimmies | zone=Exile (latest_object_observation)
+- 571: Fell | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 572: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 573: Fell | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 576: Seedship Agrarian | controller=RussellJimmies | owner=RussellJimmies | zone=Graveyard (latest_object_observation)
+- 577: Fell | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+RussellJimmies: 37 total items
+  zones: Battlefield=12, Exile=3, Graveyard=5, Hand=9, Stack=2, unknown=6
+  objects: Forest x12, Shared Roots x4, Summon: Fenrir x3, Ureni of the Unwritten x3, Vibrance x3, Llanowar Elves x2, Seedship Agrarian x2, Lander, Reputable Merchant, Shimmerwilds Growth, Tam, Mindful First-Year, Vizier of the Menagerie
+gian31: 90 total items
+  zones: Battlefield=10, Exile=2, Hand=16, Stack=3, unknown=59
+  objects: Swamp x20, Mountain x12, Binding Negotiation x7, Fell x7, Laughing Jasper Flint x5, Cruelclaw's Heist x4, Ragged Playmate x4, Tinybones, Bauble Burglar x3, At Knifepoint x2, Duress x2, Forsaken Miner x2, Gastal Raider x2
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+RussellJimmies:
+  Battlefield (12): Forest, Forest, Forest, Forest, Forest, Forest, Forest, Forest, Llanowar Elves, Llanowar Elves, Reputable Merchant, Seedship Agrarian
+  Graveyard: 5 card(s)
+gian31:
+  Battlefield (10): Laughing Jasper Flint, Mountain, Mountain, Prismabasher, Summon: Fenrir, Swamp, Swamp, Swamp, Swamp, Swamp
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+65 objects have no resolved final zone and are omitted from the known board state.
+RussellJimmies: 6 unknown object(s)
+gian31: 59 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=25, Stack=5
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+RussellJimmies:
+  Battlefield (11): Forest, Llanowar Elves, Forest, Forest, Llanowar Elves, Forest, Reputable Merchant, Forest, Forest, Forest, Forest
+  Graveyard (5): Shared Roots, Vibrance, Shared Roots, Summon: Fenrir, Seedship Agrarian
+  Exile (3): Tam, Mindful First-Year, Vizier of the Menagerie, Shimmerwilds Growth
+gian31:
+  Battlefield (9): Swamp, Swamp, Swamp, Mountain, Mountain, Laughing Jasper Flint, Swamp, Prismabasher, Swamp
+  Graveyard (3): Cruelclaw's Heist, Binding Negotiation, Fell
+Known non-persistent entries (counts only):
+  RussellJimmies: Limbo=1
+  gian31: Hand=4, Limbo=5, Stack=1
+  unknown: Library=85, Limbo=9
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: RussellJimmies Battlefield=2
+- Turn 2: RussellJimmies Battlefield=2; gian31 Battlefield=1
+- Turn 3: RussellJimmies Battlefield=5; RussellJimmies Graveyard=1; gian31 Battlefield=1
+- Turn 4: RussellJimmies Battlefield=5; RussellJimmies Graveyard=1; gian31 Battlefield=2; gian31 Graveyard=1; gian31 Exile=1
+- Turn 5: RussellJimmies Battlefield=7; RussellJimmies Graveyard=1; gian31 Battlefield=2; gian31 Graveyard=1; gian31 Exile=1
+- Turn 6: RussellJimmies Battlefield=7; RussellJimmies Graveyard=1; gian31 Battlefield=5; gian31 Graveyard=1
+- Turn 7: RussellJimmies Battlefield=9; RussellJimmies Graveyard=1; gian31 Battlefield=5; gian31 Graveyard=1
+- Turn 8: RussellJimmies Battlefield=9; RussellJimmies Graveyard=2; gian31 Battlefield=7; gian31 Graveyard=2
+- Turn 9: RussellJimmies Battlefield=11; RussellJimmies Graveyard=4; gian31 Battlefield=7; gian31 Graveyard=2
+- Turn 10: RussellJimmies Battlefield=11; RussellJimmies Graveyard=5; RussellJimmies Exile=1; gian31 Battlefield=8; gian31 Graveyard=2
+- Turn 11: RussellJimmies Battlefield=12; RussellJimmies Graveyard=5; RussellJimmies Exile=1; gian31 Battlefield=8; gian31 Graveyard=2
+- Turn 12: RussellJimmies Battlefield=11; RussellJimmies Graveyard=6; RussellJimmies Exile=3; gian31 Battlefield=9; gian31 Graveyard=3
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Llanowar Elves resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Llanowar Elves resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Reputable Merchant resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Summon: Fenrir resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Seedship Agrarian resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Laughing Jasper Flint resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Prismabasher resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
