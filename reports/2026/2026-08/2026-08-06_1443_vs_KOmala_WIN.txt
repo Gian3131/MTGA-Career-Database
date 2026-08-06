@@ -1,0 +1,755 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, KOmala
+Seat map: Seat 1=gian31, Seat 2=KOmala
+Turn range (known): 1 - 13
+Unnumbered turn groups retained: 1
+Records: 25
+Action chains: 22
+Winner: gian31
+Final life: {'gian31': 8, 'KOmala': 31}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 13 (Phase_Main1; Ability of Tinybones, Bauble Burglar, seq 386).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 30 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+WARNING: 1 player-zone assignment conflict(s) were observed. The ledger groups affected objects by explicit zone-transfer provenance; controller/owner metadata remains separately traceable.
+Land-drop coverage: 10 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 11] (raw records=10; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 12 explicit Library -> Hand movement(s); named in the draw record=7, resolved through an explicit identity transition=5, unresolved=0.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Swamp [163], Swamp [164], Forsaken Miner [165], Binding Negotiation [166], At Knifepoint [167], Gonti, Night Minister [168], Mountain [169].
+  - unknown: 7 observed card(s): object 223 [223], object 224 [224], object 225 [225], object 226 [226], object 227 [227], object 228 [228], object 229 [229].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 8, 'KOmala': 31}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 13 (Phase_Main1; Ability of Tinybones, Bauble Burglar, seq 386).
+Last captured life snapshot: gian31 10 -> 8; KOmala 29 -> 31 (seq 361).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Forsaken Miner.
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Political Triumph.
+- Turn 3: actions: cards=0, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Mountain.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Swiftblade Vindicator.
+- Turn 5: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, At Knifepoint.
+- Turn 6: actions: cards=1, abilities=1; combat snapshots=1; life mutations=4; explicit battlefield entries=Plains, Sheltered by Ghosts; explicit battlefield exits=At Knifepoint.
+- Turn 7: actions: cards=2, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, Tinybones, the Pickpocket, Vaan, Street Thief; explicit battlefield exits=Forsaken Miner.
+- Turn 8: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Sidequest: Catch a Fish.
+- Turn 9: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Gonti, Night Minister.
+- Turn 10: actions: cards=2, abilities=0; combat snapshots=1; life mutations=4; explicit battlefield entries=Political Triumph.
+- Turn 11: actions: cards=3, abilities=6; combat snapshots=1; life mutations=2; explicit battlefield entries=Forsaken Miner, Photon, Living Light, Mountain, Seam Rip; explicit battlefield exits=Gonti, Night Minister, Treasure, Political Triumph.
+- Turn 12: actions: cards=1, abilities=0; combat snapshots=1; life mutations=4; explicit battlefield entries=Skyward Spider.
+- Turn 13: actions: cards=2, abilities=1; explicit battlefield entries=Tinybones, Bauble Burglar, Thought-Stalker Warlock.
+- Turn None: actions: cards=0, abilities=0.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Forsaken Miner [valid_resolution_no_immediate_mutation, seq=10] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=284)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Forsaken Miner resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Forsaken Miner (object 284) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Forsaken Miner (object 284) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [283] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forsaken Miner [284], Swamp [283]
+
+Turn 2
+  - Political Triumph [valid_resolution_no_immediate_mutation, seq=30] (active=KOmala, phase=Phase_Main1, controller=KOmala, owner=KOmala, source_object=288)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Political Triumph resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Political Triumph (object 288) Hand (KOmala) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Political Triumph (object 288) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [286] Library (KOmala) -> Hand (KOmala) (Draw; GRE sequence 24).
+      Plains [287] Hand (KOmala) -> Battlefield (PlayLand; GRE sequence 27).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forsaken Miner [284], Swamp [283]
+      KOmala: Battlefield: Plains [287], Political Triumph [288]
+
+Turn 3
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Forsaken Miner [284] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: KOmala -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): KOmala 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [290] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 44).
+      Mountain [291] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 47).
+      Binding Negotiation [292] Hand (gian31) -> Stack (CastSpell; GRE sequence 48).
+      Monica Rambeau [301] Hand (KOmala) -> Graveyard (KOmala) (Discard; GRE sequence 53).
+      Binding Negotiation [303] Stack -> Graveyard (gian31) (Resolve; GRE sequence 53).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forsaken Miner [284], Mountain [291], Swamp [283]; Graveyard: Binding Negotiation [303]
+      KOmala: Battlefield: Plains [287], Political Triumph [288]; Graveyard: Monica Rambeau [301]
+
+Turn 4
+  - Swiftblade Vindicator [valid_resolution_no_immediate_mutation, seq=79] (active=KOmala, phase=Phase_Main1, controller=KOmala, owner=KOmala, source_object=306)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Swiftblade Vindicator resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Swiftblade Vindicator (object 306) Hand (KOmala) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Swiftblade Vindicator (object 306) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swiftblade Vindicator [304] Library (KOmala) -> Hand (KOmala) (Draw; GRE sequence 73).
+      Mountain [305] Hand (KOmala) -> Battlefield (PlayLand; GRE sequence 76).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forsaken Miner [284], Mountain [291], Swamp [283]; Graveyard: Binding Negotiation [303]
+      KOmala: Battlefield: Mountain [305], Plains [287], Political Triumph [288], Swiftblade Vindicator [306]; Graveyard: Monica Rambeau [301]
+
+Turn 5
+  - At Knifepoint [valid_resolution_no_immediate_mutation, seq=102] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=312)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: At Knifepoint resolves with no immediate observed mutation.
+      protocol-linked zone transfer: At Knifepoint (object 312) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: At Knifepoint (object 312) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Forsaken Miner [284] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: KOmala -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): KOmala 18 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tinybones, the Pickpocket [310] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 96).
+      Swamp [311] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 99).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: At Knifepoint [312], Forsaken Miner [284], Mountain [291], Swamp [283], Swamp [311]; Graveyard: Binding Negotiation [303]
+      KOmala: Battlefield: Mountain [305], Plains [287], Political Triumph [288], Swiftblade Vindicator [306]; Graveyard: Monica Rambeau [301]
+
+Turn 6
+  - Sheltered by Ghosts [valid_resolution_no_immediate_mutation, seq=133] (active=KOmala, phase=Phase_Main1, controller=KOmala, owner=KOmala, source_object=318)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sheltered by Ghosts resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sheltered by Ghosts (object 318) Hand (KOmala) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sheltered by Ghosts (object 318) Stack -> Battlefield (Resolve; shared object ID)
+      Aura attachment target: unavailable in captured GRE records.
+  - Ability of Sheltered by Ghosts [observed_semantic_effect, seq=137] (active=KOmala, phase=Phase_Main1, controller=KOmala, owner=KOmala, source_object=318, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Sheltered by Ghosts: exiles At Knifepoint.
+      explicit effect object references: At Knifepoint [312], At Knifepoint [322] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: At Knifepoint (object 322) Battlefield -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=KOmala; frames: DeclareAttack -> DeclareBlock):
+      attackers: Swiftblade Vindicator [306] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 2; snapshot comparison does not reconcile (exact assignment unavailable).
+      numerical observation: defending-player life loss is 2x the observed snapshot power; an exact modifying source was not protocol-linked.
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: KOmala +4; gian31 -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 20 -> 18
+    life (gain observed during combat phase; exact source unavailable): KOmala 16 -> 18
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 18 -> 16
+    life (gain observed during combat phase; exact source unavailable): KOmala 18 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Skyward Spider [316] Library (KOmala) -> Hand (KOmala) (Draw; GRE sequence 125).
+      Plains [317] Hand (KOmala) -> Battlefield (PlayLand; GRE sequence 128).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forsaken Miner [284], Mountain [291], Swamp [283], Swamp [311]; Graveyard: Binding Negotiation [303]; Exile: At Knifepoint [322]
+      KOmala: Battlefield: Mountain [305], Plains [287], Plains [317], Political Triumph [288], Sheltered by Ghosts [318], Swiftblade Vindicator [306]; Graveyard: Monica Rambeau [301]
+
+Turn 7
+  - Tinybones, the Pickpocket [valid_resolution_no_immediate_mutation, seq=167] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=325)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, the Pickpocket resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 325) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 325) Stack -> Battlefield (Resolve; shared object ID)
+  - Vaan, Street Thief [valid_resolution_no_immediate_mutation, seq=170] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=327)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Vaan, Street Thief resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Vaan, Street Thief (object 327) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Vaan, Street Thief (object 327) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Forsaken Miner [284] (blocked, observed P/T 2/2)
+      blockers: Swiftblade Vindicator [306]
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat-result zone change: Forsaken Miner [331] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: KOmala +2 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): KOmala 20 -> 22
+    additional protocol-observed zone movements not assigned to an action chain:
+      Vaan, Street Thief [323] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 161).
+      Swamp [324] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 164).
+      Forsaken Miner [331] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 182).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [291], Swamp [283], Swamp [311], Swamp [324], Tinybones, the Pickpocket [325], Vaan, Street Thief [327]; Graveyard: Binding Negotiation [303], Forsaken Miner [331]; Exile: At Knifepoint [322]
+      KOmala: Battlefield: Mountain [305], Plains [287], Plains [317], Political Triumph [288], Sheltered by Ghosts [318], Swiftblade Vindicator [306]; Graveyard: Monica Rambeau [301]
+
+Turn 8
+  - Sidequest: Catch a Fish [valid_resolution_no_immediate_mutation, seq=200] (active=KOmala, phase=Phase_Main1, controller=KOmala, owner=KOmala, source_object=334)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sidequest: Catch a Fish resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sidequest: Catch a Fish (object 334) Hand (KOmala) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sidequest: Catch a Fish (object 334) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Sidequest: Catch a Fish [332] Library (KOmala) -> Hand (KOmala) (Draw; GRE sequence 194).
+      Mountain [333] Hand (KOmala) -> Battlefield (PlayLand; GRE sequence 197).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [291], Swamp [283], Swamp [311], Swamp [324], Tinybones, the Pickpocket [325], Vaan, Street Thief [327]; Graveyard: Binding Negotiation [303], Forsaken Miner [331]; Exile: At Knifepoint [322]
+      KOmala: Battlefield: Mountain [305], Mountain [333], Plains [287], Plains [317], Political Triumph [288], Sheltered by Ghosts [318], Sidequest: Catch a Fish [334], Swiftblade Vindicator [306]; Graveyard: Monica Rambeau [301]
+
+Turn 9
+  - Gonti, Night Minister [valid_resolution_no_immediate_mutation, seq=223] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=340)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Gonti, Night Minister resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Gonti, Night Minister (object 340) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gonti, Night Minister (object 340) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [338] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 217).
+      Swamp [339] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 220).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Gonti, Night Minister [340], Mountain [291], Swamp [283], Swamp [311], Swamp [324], Swamp [339], Tinybones, the Pickpocket [325], Vaan, Street Thief [327]; Graveyard: Binding Negotiation [303], Forsaken Miner [331]; Exile: At Knifepoint [322]
+      KOmala: Battlefield: Mountain [305], Mountain [333], Plains [287], Plains [317], Political Triumph [288], Sheltered by Ghosts [318], Sidequest: Catch a Fish [334], Swiftblade Vindicator [306]; Graveyard: Monica Rambeau [301]
+
+Turn 10
+  - Political Triumph [valid_resolution_no_immediate_mutation, seq=246] (active=KOmala, phase=Phase_Main1, controller=KOmala, owner=KOmala, source_object=347)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Political Triumph resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Political Triumph (object 347) Hand (KOmala) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Political Triumph (object 347) Stack -> Battlefield (Resolve; shared object ID)
+  - Political Triumph [valid_resolution_no_immediate_mutation, seq=247] (active=KOmala, phase=Phase_Main1, controller=KOmala, owner=KOmala, source_object=347)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Political Triumph resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Political Triumph (object 347) Hand (KOmala) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Political Triumph (object 347) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=KOmala; frames: DeclareAttack -> DeclareBlock):
+      attackers: Swiftblade Vindicator [306] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 2; snapshot comparison does not reconcile (exact assignment unavailable).
+      numerical observation: defending-player life loss is 2x the observed snapshot power; an exact modifying source was not protocol-linked.
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: KOmala +4; gian31 -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 16 -> 14
+    life (gain observed during combat phase; exact source unavailable): KOmala 22 -> 24
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 14 -> 12
+    life (gain observed during combat phase; exact source unavailable): KOmala 24 -> 26
+    additional protocol-observed zone movements not assigned to an action chain:
+      Political Triumph [346] Library (KOmala) -> Hand (KOmala) (Draw; GRE sequence 241).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Gonti, Night Minister [340], Mountain [291], Swamp [283], Swamp [311], Swamp [324], Swamp [339], Tinybones, the Pickpocket [325], Vaan, Street Thief [327]; Graveyard: Binding Negotiation [303], Forsaken Miner [331]; Exile: At Knifepoint [322]
+      KOmala: Battlefield: Mountain [305], Mountain [333], Plains [287], Plains [317], Political Triumph [288], Political Triumph [347], Sheltered by Ghosts [318], Sidequest: Catch a Fish [334], Swiftblade Vindicator [306]; Graveyard: Monica Rambeau [301]
+
+Turn 11
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=299] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=340, source_last_explicit_zone=Battlefield, source_successor=359 observed Battlefield -> Graveyard (gian31) (SBA_Damage))
+      effects: exile
+      narrative: Ability of Gonti, Night Minister: exiles Mountain.
+      explicit effect object references: Mountain [235], Mountain [363] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Mountain (object 363) Library (KOmala) -> Exile (Exile; shared object ID)
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=301] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=340, source_last_explicit_zone=Battlefield, source_successor=359 observed Battlefield -> Graveyard (gian31) (SBA_Damage))
+      diagnostic: distinct consecutive ability records observed at seq 299 and 301; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: exile
+      narrative: Ability of Gonti, Night Minister: exiles Seam Rip.
+      explicit effect object references: Seam Rip [236], Seam Rip [365] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Seam Rip (object 365) Library (KOmala) -> Exile (Exile; shared object ID)
+  - Ability of Vaan, Street Thief [observed_semantic_effect, seq=310] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=327, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s), +1 counter(s)
+      narrative: Ability of Vaan, Street Thief: Tinybones, the Pickpocket gets +1/+1; Vaan, Street Thief gets +1/+1; Forsaken Miner gets +1/+1; 1 counter(s) are added to Tinybones, the Pickpocket [325]; 1 counter(s) are added to Vaan, Street Thief [327]; 1 counter(s) are added to Forsaken Miner [362].
+      explicit effect object references: Tinybones, the Pickpocket [325], Forsaken Miner [362] (role/targeting only where the protocol identifies it)
+  - Photon, Living Light [valid_resolution_no_immediate_mutation, seq=312] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=KOmala, source_object=369)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Photon, Living Light resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Photon, Living Light (object 369) Graveyard (KOmala) -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Graveyard (KOmala); enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Photon, Living Light (object 369) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Photon, Living Light [observed_semantic_effect, seq=323] (active=gian31, phase=Phase_Main2, controller=gian31, owner=KOmala, source_object=369, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s), +1 counter(s)
+      narrative: Ability of Photon, Living Light: Tinybones, the Pickpocket gets +1/+1; Vaan, Street Thief gets +1/+1; Forsaken Miner gets +1/+1; 1 counter(s) are added to Tinybones, the Pickpocket [325]; 1 counter(s) are added to Vaan, Street Thief [327]; 1 counter(s) are added to Forsaken Miner [362].
+      explicit effect object references: Tinybones, the Pickpocket [325], Vaan, Street Thief [327], Forsaken Miner [362] (role/targeting only where the protocol identifies it)
+  - Ability of Vaan, Street Thief [observed_semantic_effect, seq=325] (active=gian31, phase=Phase_Main2, controller=gian31, owner=gian31, source_object=327, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s), +1 counter(s)
+      narrative: Ability of Vaan, Street Thief: Tinybones, the Pickpocket gets +1/+1; Vaan, Street Thief gets +1/+1; Forsaken Miner gets +1/+1; 1 counter(s) are added to Tinybones, the Pickpocket [325]; 1 counter(s) are added to Vaan, Street Thief [327]; 1 counter(s) are added to Forsaken Miner [362].
+      explicit effect object references: Tinybones, the Pickpocket [325], Forsaken Miner [362] (role/targeting only where the protocol identifies it)
+  - Seam Rip [valid_resolution_no_immediate_mutation, seq=327] (active=gian31, phase=Phase_Main2, controller=gian31, owner=KOmala, source_object=379)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Seam Rip resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Seam Rip (object 379) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Seam Rip (object 379) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Seam Rip [observed_semantic_effect, seq=331] (active=gian31, phase=Phase_Main2, controller=gian31, owner=KOmala, source_object=379, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Seam Rip: exiles Political Triumph.
+      explicit effect object references: Political Triumph [288], Political Triumph [385] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Political Triumph (object 385) Battlefield -> Exile (Exile; shared object ID)
+  - Boros Charm [valid_resolution_no_immediate_mutation, seq=287] (active=unknown, controller=KOmala, owner=KOmala, source_object=350)
+      chronology reconciliation: parser turn group None conflicts with Turn 11; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Boros Charm resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Boros Charm (object 350) Hand (KOmala) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Boros Charm (object 353) Stack -> Graveyard (KOmala) (Resolve; shared object ID)
+      identity continuity: source object 350 -> transfer object 353 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock -> CombatDamage):
+      attackers: Tinybones, the Pickpocket [325] (unblocked, observed P/T 2/2), Vaan, Street Thief [327] (unblocked, observed P/T 3/3), Gonti, Night Minister [340] (blocked, observed P/T 3/4)
+      blockers: Swiftblade Vindicator [306]
+      combat-result zone change: Gonti, Night Minister [359] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: KOmala +1 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): KOmala 26 -> 28
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): KOmala 28 -> 27
+    additional protocol-observed zone movements not assigned to an action chain:
+      Thought-Stalker Warlock [349] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 270).
+      Gonti, Night Minister [359] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 291).
+      Forsaken Miner [362] Graveyard (gian31) -> Battlefield (Return; GRE sequence 297).
+      Plains [367] Library (KOmala) -> Exile (Exile; GRE sequence 303).
+      Treasure [376] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 308).
+        sacrifice observed after Ability of Gonti, Night Minister (seq 301); direct causal linkage is unavailable.
+      Mountain [378] Exile -> Battlefield (PlayLand; GRE sequence 317).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forsaken Miner [362], Mountain [291], Mountain [378], Photon, Living Light [369], Seam Rip [379], Swamp [283], Swamp [311], Swamp [324], Swamp [339], Tinybones, the Pickpocket [325], Vaan, Street Thief [327]; Graveyard: Binding Negotiation [303], Gonti, Night Minister [359], Treasure [376]; Exile: At Knifepoint [322]
+      KOmala: Battlefield: Mountain [305], Mountain [333], Plains [287], Plains [317], Political Triumph [347], Sheltered by Ghosts [318], Sidequest: Catch a Fish [334], Swiftblade Vindicator [306]; Graveyard: Boros Charm [353]; Exile: Plains [367], Political Triumph [385]
+
+Turn 12
+  - Skyward Spider [valid_resolution_no_immediate_mutation, seq=345] (active=KOmala, phase=Phase_Main1, controller=KOmala, owner=KOmala, source_object=388)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Skyward Spider resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Skyward Spider (object 388) Hand (KOmala) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Skyward Spider (object 388) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=KOmala; frames: DeclareAttack):
+      attackers: Swiftblade Vindicator [306] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 2; snapshot comparison does not reconcile (exact assignment unavailable).
+      numerical observation: defending-player life loss is 2x the observed snapshot power; an exact modifying source was not protocol-linked.
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: KOmala +4; gian31 -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 12 -> 10
+    life (gain observed during combat phase; exact source unavailable): KOmala 27 -> 29
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 10 -> 8
+    life (gain observed during combat phase; exact source unavailable): KOmala 29 -> 31
+    additional protocol-observed zone movements not assigned to an action chain:
+      Shardmage's Rescue [387] Library (KOmala) -> Hand (KOmala) (Draw; GRE sequence 340).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forsaken Miner [362], Mountain [291], Mountain [378], Photon, Living Light [369], Seam Rip [379], Swamp [283], Swamp [311], Swamp [324], Swamp [339], Tinybones, the Pickpocket [325], Vaan, Street Thief [327]; Graveyard: Binding Negotiation [303], Gonti, Night Minister [359], Treasure [376]; Exile: At Knifepoint [322]
+      KOmala: Battlefield: Mountain [305], Mountain [333], Plains [287], Plains [317], Political Triumph [347], Sheltered by Ghosts [318], Sidequest: Catch a Fish [334], Skyward Spider [388], Swiftblade Vindicator [306]; Graveyard: Boros Charm [353]; Exile: Plains [367], Political Triumph [385]
+
+Turn 13
+  - Tinybones, Bauble Burglar [valid_resolution_no_immediate_mutation, seq=376] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=393)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, Bauble Burglar resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 393) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 393) Stack -> Battlefield (Resolve; shared object ID)
+  - Thought-Stalker Warlock [valid_resolution_no_immediate_mutation, seq=379] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=396)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Thought-Stalker Warlock resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Thought-Stalker Warlock (object 396) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Thought-Stalker Warlock (object 396) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Tinybones, Bauble Burglar [observed_semantic_effect, seq=386] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=393, source_last_explicit_zone=Battlefield)
+      effects: exile, +1 counter(s)
+      narrative: Ability of Tinybones, Bauble Burglar: exiles Shardmage's Rescue; 1 counter(s) are added to Shardmage's Rescue [403].
+      explicit effect object references: Shardmage's Rescue [401], Shardmage's Rescue [403] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shardmage's Rescue (object 403) Graveyard (KOmala) -> Exile (Exile; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tinybones, Bauble Burglar [392] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 371).
+      Shardmage's Rescue [401] Hand (KOmala) -> Graveyard (KOmala) (Discard; GRE sequence 384).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forsaken Miner [362], Mountain [291], Mountain [378], Photon, Living Light [369], Seam Rip [379], Swamp [283], Swamp [311], Swamp [324], Swamp [339], Thought-Stalker Warlock [396], Tinybones, Bauble Burglar [393], Tinybones, the Pickpocket [325], Vaan, Street Thief [327]; Graveyard: Binding Negotiation [303], Gonti, Night Minister [359], Treasure [376]; Exile: At Knifepoint [322]
+      KOmala: Battlefield: Mountain [305], Mountain [333], Plains [287], Plains [317], Political Triumph [347], Sheltered by Ghosts [318], Sidequest: Catch a Fish [334], Skyward Spider [388], Swiftblade Vindicator [306]; Graveyard: Boros Charm [353]; Exile: Plains [367], Political Triumph [385], Shardmage's Rescue [403]
+
+UNNUMBERED / UNRESOLVED TURN GROUP
+  - The captured records do not provide a verified numbered turn for the following events.
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 6, seq 149, Phase_Main1: KOmala 16 -> 18; KOmala 18 -> 20. Combat declaration observed; exact assignment unavailable. Previous captured action: Sheltered by Ghosts.
+- Turn 7, seq 182, Phase_Main1: KOmala 20 -> 22. Combat declaration observed; exact assignment unavailable. Previous captured action: Vaan, Street Thief.
+- Turn 10, seq 258, Phase_Main1: KOmala 22 -> 24; KOmala 24 -> 26. Combat declaration observed; exact assignment unavailable. Previous captured action: Political Triumph.
+- Turn 11, seq 289: KOmala 26 -> 28; KOmala 28 -> 27. Combat declaration observed; exact assignment unavailable.
+- Turn 12, seq 359, Phase_Main1: KOmala 27 -> 29; KOmala 29 -> 31. Combat declaration observed; exact assignment unavailable. Previous captured action: Skyward Spider.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Forsaken Miner [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 1, seq 10: Forsaken Miner [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 24: Plains [owner=KOmala, controller=KOmala] moves Library (KOmala) -> Hand (KOmala) (Draw).
+- Turn 2, seq 27: Plains [owner=KOmala, controller=KOmala] moves Hand (KOmala) -> Battlefield (PlayLand).
+- Turn 2, seq 28: Political Triumph [owner=KOmala, controller=KOmala] moves Hand (KOmala) -> Stack (CastSpell).
+- Turn 2, seq 30: Political Triumph [owner=KOmala, controller=KOmala] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 44: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 47: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 48: Binding Negotiation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 53: Monica Rambeau [owner=KOmala, controller=gian31] moves Hand (KOmala) -> Graveyard (KOmala) (Discard).
+- Turn 3, seq 53: Binding Negotiation [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 4, seq 73: Swiftblade Vindicator [owner/controller metadata unavailable] moves Library (KOmala) -> Hand (KOmala) (Draw).
+- Turn 4, seq 76: Mountain [owner=KOmala, controller=KOmala] moves Hand (KOmala) -> Battlefield (PlayLand).
+- Turn 4, seq 77: Swiftblade Vindicator [owner=KOmala, controller=KOmala] moves Hand (KOmala) -> Stack (CastSpell).
+- Turn 4, seq 79: Swiftblade Vindicator [owner=KOmala, controller=KOmala] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 96: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 99: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 100: At Knifepoint [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 102: At Knifepoint [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 125: Skyward Spider [owner/controller metadata unavailable] moves Library (KOmala) -> Hand (KOmala) (Draw).
+- Turn 6, seq 128: Plains [owner=KOmala, controller=KOmala] moves Hand (KOmala) -> Battlefield (PlayLand).
+- Turn 6, seq 129: Sheltered by Ghosts [owner=KOmala, controller=KOmala] moves Hand (KOmala) -> Stack (CastSpell).
+- Turn 6, seq 133: Sheltered by Ghosts [owner=KOmala, controller=KOmala] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 137: At Knifepoint [owner=gian31, controller=gian31] moves Battlefield -> Exile (Exile).
+- Turn 7, seq 161: Vaan, Street Thief [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 164: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 165: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 167: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 168: Vaan, Street Thief [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 170: Vaan, Street Thief [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 182: Forsaken Miner [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 8, seq 194: Sidequest: Catch a Fish [owner/controller metadata unavailable] moves Library (KOmala) -> Hand (KOmala) (Draw).
+- Turn 8, seq 197: Mountain [owner=KOmala, controller=KOmala] moves Hand (KOmala) -> Battlefield (PlayLand).
+- Turn 8, seq 198: Sidequest: Catch a Fish [owner=KOmala, controller=KOmala] moves Hand (KOmala) -> Stack (CastSpell).
+- Turn 8, seq 200: Sidequest: Catch a Fish [owner=KOmala, controller=KOmala] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 217: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 220: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 221: Gonti, Night Minister [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 223: Gonti, Night Minister [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 241: Political Triumph [owner/controller metadata unavailable] moves Library (KOmala) -> Hand (KOmala) (Draw).
+- Turn 10, seq 244: Political Triumph [owner=KOmala, controller=KOmala] moves Hand (KOmala) -> Stack (CastSpell).
+- Turn 10, seq 246: Political Triumph [owner=KOmala, controller=KOmala] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 270: Thought-Stalker Warlock [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 284: Boros Charm [owner=KOmala, controller=KOmala] moves Hand (KOmala) -> Stack (CastSpell).
+- Turn 11, seq 287: Boros Charm [owner=KOmala, controller=KOmala] moves Stack -> Graveyard (KOmala) (Resolve).
+- Turn 11, seq 291: Gonti, Night Minister [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 11, seq 297: Forsaken Miner [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Battlefield (Return).
+- Turn 11, seq 299: Mountain [owner=KOmala, controller=gian31] moves Library (KOmala) -> Exile (Exile).
+- Turn 11, seq 301: Seam Rip [owner=KOmala, controller=gian31] moves Library (KOmala) -> Exile (Exile).
+- Turn 11, seq 303: Plains [owner=KOmala, controller=KOmala] moves Library (KOmala) -> Exile (Exile).
+- Turn 11, seq 307: Photon, Living Light [owner=KOmala, controller=gian31] moves Graveyard (KOmala) -> Stack (CastSpell).
+- Turn 11, seq 308: Treasure [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 11, seq 312: Photon, Living Light [owner=KOmala, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 317: Mountain [owner=KOmala, controller=gian31] moves Exile -> Battlefield (PlayLand).
+- Turn 11, seq 318: Seam Rip [owner=KOmala, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 11, seq 327: Seam Rip [owner=KOmala, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 331: Political Triumph [owner=KOmala, controller=KOmala] moves Battlefield -> Exile (Exile).
+- Turn 12, seq 340: Shardmage's Rescue [owner/controller metadata unavailable] moves Library (KOmala) -> Hand (KOmala) (Draw).
+- Turn 12, seq 343: Skyward Spider [owner=KOmala, controller=KOmala] moves Hand (KOmala) -> Stack (CastSpell).
+- Turn 12, seq 345: Skyward Spider [owner=KOmala, controller=KOmala] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 371: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 374: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 13, seq 376: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 377: Thought-Stalker Warlock [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 13, seq 379: Thought-Stalker Warlock [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 384: Shardmage's Rescue [owner=KOmala, controller=KOmala] moves Hand (KOmala) -> Graveyard (KOmala) (Discard).
+- Turn 13, seq 386: Shardmage's Rescue [owner=KOmala, controller=KOmala] moves Graveyard (KOmala) -> Exile (Exile).
+Equivalent transfer duplicates retained as diagnostics (rendered once above):
+- Turn 10: Political Triumph [347] Stack -> Battlefield (Resolve); sequences 246, 247.
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 163 becomes object 283 [Swamp].
+- Turn 1, seq 8: object 165 becomes object 284 [Forsaken Miner].
+- Turn 2, seq 24: object 230 becomes object 286 [Plains].
+- Turn 2, seq 27: object 224 becomes object 287 [Plains].
+- Turn 2, seq 28: object 226 becomes object 288 [Political Triumph].
+- Turn 3, seq 44: object 170 becomes object 290 [Swamp].
+- Turn 3, seq 47: object 169 becomes object 291 [Mountain].
+- Turn 3, seq 48: object 166 becomes object 292 [Binding Negotiation].
+- Turn 3, seq 53: object 229 becomes object 301 [Monica Rambeau].
+- Turn 3, seq 53: object 292 becomes object 303 [Binding Negotiation].
+- Turn 4, seq 73: object 231 becomes object 304 [Swiftblade Vindicator].
+- Turn 4, seq 76: object 223 becomes object 305 [Mountain].
+- Turn 4, seq 77: object 304 becomes object 306 [Swiftblade Vindicator].
+- Turn 5, seq 96: object 171 becomes object 310 [Tinybones, the Pickpocket].
+- Turn 5, seq 99: object 290 becomes object 311 [Swamp].
+- Turn 5, seq 100: object 167 becomes object 312 [At Knifepoint].
+- Turn 6, seq 125: object 232 becomes object 316 [Skyward Spider].
+- Turn 6, seq 128: object 286 becomes object 317 [Plains].
+- Turn 6, seq 129: object 228 becomes object 318 [Sheltered by Ghosts].
+- Turn 6, seq 137: object 312 becomes object 322 [At Knifepoint].
+- Turn 7, seq 161: object 172 becomes object 323 [Vaan, Street Thief].
+- Turn 7, seq 164: object 164 becomes object 324 [Swamp].
+- Turn 7, seq 165: object 310 becomes object 325 [Tinybones, the Pickpocket].
+- Turn 7, seq 168: object 323 becomes object 327 [Vaan, Street Thief].
+- Turn 7, seq 182: object 284 becomes object 331 [Forsaken Miner].
+- Turn 8, seq 194: object 233 becomes object 332 [Sidequest: Catch a Fish].
+- Turn 8, seq 197: object 227 becomes object 333 [Mountain].
+- Turn 8, seq 198: object 332 becomes object 334 [Sidequest: Catch a Fish].
+- Turn 9, seq 217: object 173 becomes object 338 [Swamp].
+- Turn 9, seq 220: object 338 becomes object 339 [Swamp].
+- Turn 9, seq 221: object 168 becomes object 340 [Gonti, Night Minister].
+- Turn 10, seq 241: object 234 becomes object 346 [Political Triumph].
+- Turn 10, seq 244: object 346 becomes object 347 [Political Triumph].
+- Turn 11, seq 270: object 174 becomes object 349 [Thought-Stalker Warlock].
+- Turn 11, seq 284: object 225 becomes object 350 [Boros Charm].
+- Turn 11, seq 287: object 350 becomes object 353 [Boros Charm].
+- Turn 11, seq 291: object 340 becomes object 359 [Gonti, Night Minister].
+- Turn 11, seq 297: object 331 becomes object 362 [Forsaken Miner].
+- Turn 11, seq 299: object 235 becomes object 363 [Mountain].
+- Turn 11, seq 301: object 236 becomes object 365 [Seam Rip].
+- Turn 11, seq 303: object 237 becomes object 367 [Plains].
+- Turn 11, seq 307: object 301 becomes object 369 (Monica Rambeau -> Photon, Living Light).
+- Turn 11, seq 308: object 368 becomes object 376 [Treasure].
+- Turn 11, seq 317: object 363 becomes object 378 [Mountain].
+- Turn 11, seq 318: object 365 becomes object 379 [Seam Rip].
+- Turn 11, seq 331: object 288 becomes object 385 [Political Triumph].
+- Turn 12, seq 340: object 238 becomes object 387 [Shardmage's Rescue].
+- Turn 12, seq 343: object 316 becomes object 388 [Skyward Spider].
+- Turn 13, seq 371: object 175 becomes object 392 [Tinybones, Bauble Burglar].
+- Turn 13, seq 374: object 392 becomes object 393 [Tinybones, Bauble Burglar].
+- Turn 13, seq 377: object 349 becomes object 396 [Thought-Stalker Warlock].
+- Turn 13, seq 384: object 387 becomes object 401 [Shardmage's Rescue].
+- Turn 13, seq 386: object 401 becomes object 403 [Shardmage's Rescue].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Swamp (object 283) from Hand (gian31) to Battlefield.
+- Turn 2: KOmala plays Plains (object 287) from Hand (KOmala) to Battlefield.
+- Turn 3: gian31 plays Mountain (object 291) from Hand (gian31) to Battlefield.
+- Turn 4: KOmala plays Mountain (object 305) from Hand (KOmala) to Battlefield.
+- Turn 5: gian31 plays Swamp (object 311) from Hand (gian31) to Battlefield.
+- Turn 6: KOmala plays Plains (object 317) from Hand (KOmala) to Battlefield.
+- Turn 7: gian31 plays Swamp (object 324) from Hand (gian31) to Battlefield.
+- Turn 8: KOmala plays Mountain (object 333) from Hand (KOmala) to Battlefield.
+- Turn 9: gian31 plays Swamp (object 339) from Hand (gian31) to Battlefield.
+- Turn 11: gian31 plays Mountain (object 378) from Exile to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Gonti, Night Minister: casts=1; abilities=2 (triggered=2, activated=0) across turns [9, 11, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: exile
+- Political Triumph: casts=3 across turns [2, 10, 10]
+- Vaan, Street Thief: casts=1; abilities=2 (triggered=2, activated=0) across turns [7, 11, 11]
+  observed effect totals: draws=0, tokens=0, counters=6, returns=0, damage=0, life_changes=0, other=6
+  observed effects: +1 counter(s), P/T +1/+1
+- Photon, Living Light: casts=1; abilities=1 (triggered=1, activated=0) across turns [11, 11]
+  observed effect totals: draws=0, tokens=0, counters=3, returns=0, damage=0, life_changes=0, other=3
+  observed effects: +1 counter(s), P/T +1/+1
+- Seam Rip: casts=1; abilities=1 (triggered=1, activated=0) across turns [11, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: exile
+- Sheltered by Ghosts: casts=1; abilities=1 (triggered=1, activated=0) across turns [6, 6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: exile
+- Tinybones, Bauble Burglar: casts=1; abilities=1 (triggered=1, activated=0) across turns [13, 13]
+  observed effect totals: draws=0, tokens=0, counters=1, returns=0, damage=0, life_changes=0, other=1
+  observed effects: +1 counter(s), exile
+- At Knifepoint: casts=1 across turns [5]
+- Boros Charm: casts=1 across turns [11]
+- Forsaken Miner: casts=1 across turns [1]
+- Sidequest: Catch a Fish: casts=1 across turns [8]
+- Skyward Spider: casts=1 across turns [12]
+- Swiftblade Vindicator: casts=1 across turns [4]
+- Thought-Stalker Warlock: casts=1 across turns [13]
+- Tinybones, the Pickpocket: casts=1 across turns [7]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 3 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Forsaken Miner (gian31) -> KOmala; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 5 - DeclareAttack (active=gian31)
+  attacker: Forsaken Miner (gian31) -> KOmala; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 6 - DeclareAttack, DeclareBlock (active=KOmala)
+  attacker: Swiftblade Vindicator (KOmala) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Forsaken Miner (gian31) -> KOmala; blocked by Swiftblade Vindicator
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, DeclareBlock (active=KOmala)
+  attacker: Swiftblade Vindicator (KOmala) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock, CombatDamage (active=gian31)
+  attacker: Tinybones, the Pickpocket (gian31) -> KOmala; unblocked in this observed snapshot
+  attacker: Vaan, Street Thief (gian31) -> KOmala; unblocked in this observed snapshot
+  attacker: Gonti, Night Minister (gian31) -> KOmala; blocked by Swiftblade Vindicator
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack (active=KOmala)
+  attacker: Swiftblade Vindicator (KOmala) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 11: Ability of Gonti, Night Minister (active=gian31) - Ability of Gonti, Night Minister: exile.
+- Turn 11: Ability of Gonti, Night Minister (active=gian31) - Ability of Gonti, Night Minister: exile.
+- Turn 11: Ability of Vaan, Street Thief (active=gian31) - Ability of Vaan, Street Thief: Tinybones, the Pickpocket gets +1/+1; Vaan, Street Thief gets +1/+1; Forsaken Miner gets +1/+1; 1 counter(s) are added to target; 1 counter(s) are added to target; 1 counter(s) are added to target.
+- Turn 11: Photon, Living Light (active=gian31) - Photon, Living Light resolves with no immediate observed mutation.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 152: Photon, Living Light | controller=KOmala | owner=KOmala | zone=Hand (latest_object_observation)
+- 163: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Forsaken Miner | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 166: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 167: At Knifepoint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 168: Gonti, Night Minister | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 169: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 223: Mountain | controller=KOmala | owner=KOmala | zone=Hand (latest_object_observation)
+- 225: Boros Charm | controller=KOmala | owner=KOmala | zone=Hand (latest_object_observation)
+- 227: Mountain | controller=KOmala | owner=KOmala | zone=Hand (latest_object_observation)
+- 228: Sheltered by Ghosts | controller=KOmala | owner=KOmala | zone=Hand (latest_object_observation)
+- 229: Monica Rambeau | controller=KOmala | owner=KOmala | zone=Hand (latest_object_observation)
+- 235: Mountain | controller=KOmala | owner=KOmala | zone=Hand (latest_object_observation)
+- 236: Seam Rip | controller=KOmala | owner=KOmala | zone=Hand (latest_object_observation)
+- 283: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 284: Forsaken Miner | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 286: Plains | controller=KOmala | owner=KOmala | zone=Hand (latest_object_observation)
+- 287: Plains | controller=KOmala | owner=KOmala | zone=Battlefield (latest_object_observation)
+- 288: Political Triumph | controller=KOmala | owner=KOmala | zone=Stack (latest_object_observation)
+- 290: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 291: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 292: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 295: Mountain | controller=KOmala | owner=KOmala | zone=Hand (latest_object_observation)
+- 296: Boros Charm | controller=KOmala | owner=KOmala | zone=Hand (latest_object_observation)
+- 297: Mountain | controller=KOmala | owner=KOmala | zone=Hand (latest_object_observation)
+- 298: Plains | controller=KOmala | owner=KOmala | zone=Hand (latest_object_observation)
+- 299: Sheltered by Ghosts | controller=KOmala | owner=KOmala | zone=Hand (latest_object_observation)
+- 300: Monica Rambeau | controller=KOmala | owner=KOmala | zone=Hand (latest_object_observation)
+- 301: Monica Rambeau | controller=gian31 | owner=KOmala | zone=Graveyard (latest_object_observation)
+- 302: Photon, Living Light | controller=KOmala | owner=KOmala | zone=unknown (inferred unknown) (latest_object_observation)
+- 303: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 305: Mountain | controller=KOmala | owner=KOmala | zone=Battlefield (latest_object_observation)
+- 306: Swiftblade Vindicator | controller=KOmala | owner=KOmala | zone=Battlefield (latest_object_observation)
+- 309: object 309 | controller=KOmala | owner=KOmala | zone=unknown (inferred unknown) (latest_object_observation)
+- 310: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 311: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 312: At Knifepoint | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 317: Plains | controller=KOmala | owner=KOmala | zone=Battlefield (latest_object_observation)
+- 318: Sheltered by Ghosts | controller=KOmala | owner=KOmala | zone=Stack (latest_object_observation)
+- 321: object 321 | controller=KOmala | owner=KOmala | zone=unknown (inferred unknown) (latest_object_observation)
+- 322: At Knifepoint | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 323: Vaan, Street Thief | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 324: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 325: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 327: Vaan, Street Thief | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 331: Forsaken Miner | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 333: Mountain | controller=KOmala | owner=KOmala | zone=Battlefield (latest_object_observation)
+- 334: Sidequest: Catch a Fish | controller=KOmala | owner=KOmala | zone=Stack (latest_object_observation)
+- 338: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 339: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 340: Gonti, Night Minister | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 345: object 345 | controller=KOmala | owner=KOmala | zone=unknown (inferred unknown) (latest_object_observation)
+- 347: Political Triumph | controller=KOmala | owner=KOmala | zone=Stack (latest_object_observation)
+- 349: Thought-Stalker Warlock | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 350: Boros Charm | controller=KOmala | owner=KOmala | zone=Stack (latest_object_observation)
+- 353: Boros Charm | controller=KOmala | owner=KOmala | zone=unknown (inferred unknown) (latest_object_observation)
+- 354: object 354 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 355: object 355 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 356: object 356 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 358: object 358 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 359: Gonti, Night Minister | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 360: object 360 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 362: Forsaken Miner | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 363: Mountain | controller=gian31 | owner=KOmala | zone=Exile (latest_object_observation)
+- 365: Seam Rip | controller=gian31 | owner=KOmala | zone=Exile (latest_object_observation)
+- 367: Plains | controller=KOmala | owner=KOmala | zone=Exile (latest_object_observation)
+- 368: Treasure | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 369: Photon, Living Light | controller=gian31 | owner=KOmala | zone=Battlefield (latest_object_observation)
+- 370: Photon, Living Light | controller=gian31 | owner=KOmala | zone=Battlefield (latest_object_observation)
+- 377: object 377 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 378: Mountain | controller=gian31 | owner=KOmala | zone=Battlefield (latest_object_observation)
+- 379: Seam Rip | controller=gian31 | owner=KOmala | zone=Stack (latest_object_observation)
+- 381: object 381 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 382: object 382 | controller=gian31 | owner=KOmala | zone=unknown (inferred unknown) (latest_object_observation)
+- 383: object 383 | controller=gian31 | owner=KOmala | zone=unknown (inferred unknown) (latest_object_observation)
+- 384: object 384 | controller=gian31 | owner=KOmala | zone=unknown (inferred unknown) (latest_object_observation)
+- 385: Political Triumph | controller=KOmala | owner=KOmala | zone=Exile (latest_object_observation)
+- 386: object 386 | controller=KOmala | owner=KOmala | zone=unknown (inferred unknown) (latest_object_observation)
+- 388: Skyward Spider | controller=KOmala | owner=KOmala | zone=Battlefield (latest_object_observation)
+- 391: object 391 | controller=KOmala | owner=KOmala | zone=unknown (inferred unknown) (latest_object_observation)
+- 392: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 393: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 396: Thought-Stalker Warlock | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 400: object 400 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 401: Shardmage's Rescue | controller=KOmala | owner=KOmala | zone=Graveyard (latest_object_observation)
+- 402: object 402 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 403: Shardmage's Rescue | controller=KOmala | owner=KOmala | zone=Exile (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+KOmala: 37 total items
+  zones: Battlefield=6, Exile=3, Graveyard=1, Hand=15, Stack=5, unknown=7
+  objects: Mountain x7, Plains x5, Boros Charm x4, Political Triumph x3, Sheltered by Ghosts x3, Monica Rambeau x2, Photon, Living Light x2, Shardmage's Rescue x2, Seam Rip, Sidequest: Catch a Fish, Skyward Spider, Swiftblade Vindicator
+gian31: 51 total items
+  zones: Battlefield=18, Exile=3, Graveyard=1, Hand=14, Stack=3, unknown=12
+  objects: Swamp x8, Forsaken Miner x4, Mountain x4, At Knifepoint x3, Binding Negotiation x3, Gonti, Night Minister x3, Photon, Living Light x2, Seam Rip x2, Thought-Stalker Warlock x2, Tinybones, Bauble Burglar x2, Tinybones, the Pickpocket x2, Vaan, Street Thief x2
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (18): Binding Negotiation, Forsaken Miner, Forsaken Miner, Forsaken Miner, Gonti, Night Minister, Gonti, Night Minister, Mountain, Mountain, Photon, Living Light, Photon, Living Light, Swamp, Swamp, Swamp, Swamp, Thought-Stalker Warlock, Tinybones, Bauble Burglar, Tinybones, the Pickpocket, Vaan, Street Thief
+  Graveyard: 1 card(s)
+KOmala:
+  Battlefield (6): Mountain, Mountain, Plains, Plains, Skyward Spider, Swiftblade Vindicator
+  Graveyard: 1 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+19 objects have no resolved final zone and are omitted from the known board state.
+KOmala: 7 unknown object(s)
+gian31: 12 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=29, Stack=8
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Player-zone assignment has explicit transfer conflicts in this match. Where a safe Hand -> Stack -> Battlefield or PlayLand provenance exists, that zone holder is used; other controller assignments remain protocol-observed rather than fully reconciled.
+KOmala:
+  Battlefield (9): Plains, Mountain, Swiftblade Vindicator, Plains, Sheltered by Ghosts, Mountain, Sidequest: Catch a Fish, Political Triumph, Skyward Spider
+  Graveyard (1): Boros Charm
+  Exile (3): Plains, Political Triumph, Shardmage's Rescue
+gian31:
+  Battlefield (14): Swamp, Mountain, Swamp, Swamp, Tinybones, the Pickpocket, Vaan, Street Thief, Swamp, Forsaken Miner, Photon, Living Light, Photon, Living Light, Mountain, Seam Rip, Tinybones, Bauble Burglar, Thought-Stalker Warlock
+  Graveyard (2): Binding Negotiation, Gonti, Night Minister
+  Exile (1): At Knifepoint
+Known non-persistent entries (counts only):
+  KOmala: Limbo=5
+  gian31: Hand=1, Limbo=7
+  unknown: Hand=1, Library=91, Limbo=6
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=2
+- Turn 2: KOmala Battlefield=2; gian31 Battlefield=2
+- Turn 3: KOmala Battlefield=2; KOmala Graveyard=1; gian31 Battlefield=3; gian31 Graveyard=1
+- Turn 4: KOmala Battlefield=4; KOmala Graveyard=1; gian31 Battlefield=3; gian31 Graveyard=1
+- Turn 5: KOmala Battlefield=4; KOmala Graveyard=1; gian31 Battlefield=5; gian31 Graveyard=1
+- Turn 6: KOmala Battlefield=6; KOmala Graveyard=1; gian31 Battlefield=4; gian31 Graveyard=1; gian31 Exile=1
+- Turn 7: KOmala Battlefield=6; KOmala Graveyard=1; gian31 Battlefield=6; gian31 Graveyard=2; gian31 Exile=1
+- Turn 8: KOmala Battlefield=8; KOmala Graveyard=1; gian31 Battlefield=6; gian31 Graveyard=2; gian31 Exile=1
+- Turn 9: KOmala Battlefield=8; KOmala Graveyard=1; gian31 Battlefield=8; gian31 Graveyard=2; gian31 Exile=1
+- Turn 10: KOmala Battlefield=9; KOmala Graveyard=1; gian31 Battlefield=8; gian31 Graveyard=2; gian31 Exile=1
+- Turn 11: KOmala Battlefield=8; KOmala Graveyard=1; KOmala Exile=2; gian31 Battlefield=11; gian31 Graveyard=3; gian31 Exile=1
+- Turn 12: KOmala Battlefield=9; KOmala Graveyard=1; KOmala Exile=2; gian31 Battlefield=11; gian31 Graveyard=3; gian31 Exile=1
+- Turn 13: KOmala Battlefield=9; KOmala Graveyard=1; KOmala Exile=3; gian31 Battlefield=13; gian31 Graveyard=3; gian31 Exile=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Forsaken Miner resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 2: Political Triumph resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Swiftblade Vindicator resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: At Knifepoint resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Sheltered by Ghosts resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Tinybones, the Pickpocket resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Vaan, Street Thief resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Sidequest: Catch a Fish resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Gonti, Night Minister resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Political Triumph resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Political Triumph resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Photon, Living Light resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Seam Rip resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Boros Charm resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Skyward Spider resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Tinybones, Bauble Burglar resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Thought-Stalker Warlock resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
