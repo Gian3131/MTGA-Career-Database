@@ -1,0 +1,561 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, grimnir
+Seat map: Seat 1=gian31, Seat 2=grimnir
+Turn range (known): 1 - 10
+Records: 14
+Action chains: 13
+Winner: gian31
+Final life: {'gian31': 20, 'grimnir': 11}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 10 (Phase_Main1; Ability of Death to Our Enemies, seq 250).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 25 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+WARNING: 1 player-zone assignment conflict(s) were observed. The ledger groups affected objects by explicit zone-transfer provenance; controller/owner metadata remains separately traceable.
+Land-drop coverage: 10 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] (raw records=10; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 12 explicit Library -> Hand movement(s); named in the draw record=8, resolved through an explicit identity transition=4, unresolved=0.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Swamp [164], Swamp [165], Tinybones, the Pickpocket [166], Mountain [167], Tinybones, Bauble Burglar [168], Bitter Triumph [169], Fell [170].
+  - unknown: 7 observed card(s): object 224 [224], object 225 [225], object 226 [226], object 227 [227], object 228 [228], object 229 [229], object 230 [230].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 20, 'grimnir': 11}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 10 (Phase_Main1; Ability of Death to Our Enemies, seq 250).
+Last captured life snapshot: grimnir 15 -> 11 (seq 207).
+Tokens on battlefield at their last observation (not confirmed at match end): Treasure [361] controller=gian31, created Turn 9, last observed Turn 9 seq 220, P/T unavailable; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Treasure [371] controller=grimnir, created Turn 10, last observed Turn 10 seq 244, P/T unavailable; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Treasure [379] controller=grimnir, created Turn 10, last observed Turn 10 seq 250, P/T unavailable; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Tinybones, the Pickpocket.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Riverpyre Verge.
+- Turn 3: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Mountain, Tinybones, Bauble Burglar.
+- Turn 4: actions: cards=1, abilities=0; life mutations=1; explicit battlefield entries=Steam Vents; explicit battlefield exits=Tinybones, Bauble Burglar.
+- Turn 5: actions: cards=0, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Stormcarved Coast, Death to Our Enemies.
+- Turn 7: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, Gonti, Night Minister.
+- Turn 8: actions: cards=0, abilities=1; explicit battlefield entries=Riverpyre Verge.
+- Turn 9: actions: cards=1, abilities=3; combat snapshots=1; life mutations=1; explicit battlefield entries=Island, Jace Reawakened.
+- Turn 10: actions: cards=1, abilities=2; explicit battlefield entries=Spirebluff Canal; explicit battlefield exits=Treasure.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Tinybones, the Pickpocket [valid_resolution_no_immediate_mutation, seq=10] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=290)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, the Pickpocket resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 290) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 290) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [289] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [289], Tinybones, the Pickpocket [290]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Jace Reawakened [292] Library (grimnir) -> Hand (grimnir) (Draw; GRE sequence 24).
+      Riverpyre Verge [293] Hand (grimnir) -> Battlefield (PlayLand; GRE sequence 27).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [289], Tinybones, the Pickpocket [290]
+      grimnir: Battlefield: Riverpyre Verge [293]
+
+Turn 3
+  - Tinybones, Bauble Burglar [valid_resolution_no_immediate_mutation, seq=47] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=296)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, Bauble Burglar resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 296) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 296) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Tinybones, the Pickpocket [290] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: grimnir -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): grimnir 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [294] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 41).
+      Mountain [295] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [295], Swamp [289], Tinybones, Bauble Burglar [296], Tinybones, the Pickpocket [290]
+      grimnir: Battlefield: Riverpyre Verge [293]
+
+Turn 4
+  - Iroh's Demonstration [observed_semantic_effect, seq=77] (active=grimnir, phase=Phase_Main1, controller=grimnir, owner=grimnir, source_object=302)
+      effects: 4 damage
+      narrative: Iroh's Demonstration: Tinybones, Bauble Burglar takes 4 damage.
+      explicit effect object references: Tinybones, Bauble Burglar [296] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Iroh's Demonstration (object 302) Hand (grimnir) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Iroh's Demonstration (object 305) Stack -> Graveyard (grimnir) (Resolve; shared object ID)
+      identity continuity: source object 302 -> transfer object 305 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 306) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+    net observed life change this turn: grimnir -2 (individual changes below; gains and losses may offset)
+    life: grimnir 19 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Riverpyre Verge [300] Library (grimnir) -> Hand (grimnir) (Draw; GRE sequence 67).
+      Steam Vents [301] Hand (grimnir) -> Battlefield (PlayLand; GRE sequence 71).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [295], Swamp [289], Tinybones, the Pickpocket [290]; Graveyard: Tinybones, Bauble Burglar [306]
+      grimnir: Battlefield: Riverpyre Verge [293], Steam Vents [301]; Graveyard: Iroh's Demonstration [305]
+
+Turn 5
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Tinybones, the Pickpocket [290] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: grimnir -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): grimnir 17 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [307] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 91).
+      Swamp [308] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 94).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [295], Swamp [289], Swamp [308], Tinybones, the Pickpocket [290]; Graveyard: Tinybones, Bauble Burglar [306]
+      grimnir: Battlefield: Riverpyre Verge [293], Steam Vents [301]; Graveyard: Iroh's Demonstration [305]
+
+Turn 6
+  - Death to Our Enemies [valid_resolution_no_immediate_mutation, seq=120] (active=grimnir, phase=Phase_Main1, controller=grimnir, owner=grimnir, source_object=312)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Death to Our Enemies resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Death to Our Enemies (object 312) Hand (grimnir) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Death to Our Enemies (object 312) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Stormcarved Coast [310] Library (grimnir) -> Hand (grimnir) (Draw; GRE sequence 114).
+      Stormcarved Coast [311] Hand (grimnir) -> Battlefield (PlayLand; GRE sequence 117).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [295], Swamp [289], Swamp [308], Tinybones, the Pickpocket [290]; Graveyard: Tinybones, Bauble Burglar [306]
+      grimnir: Battlefield: Death to Our Enemies [312], Riverpyre Verge [293], Steam Vents [301], Stormcarved Coast [311]; Graveyard: Iroh's Demonstration [305]
+
+Turn 7
+  - Gonti, Night Minister [valid_resolution_no_immediate_mutation, seq=140] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=318)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Gonti, Night Minister resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Gonti, Night Minister (object 318) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gonti, Night Minister (object 318) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=153] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=318, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Gonti, Night Minister: exiles Island.
+      explicit effect object references: Island [234], Island [325] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Island (object 325) Library (grimnir) -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Tinybones, the Pickpocket [290] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: grimnir -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): grimnir 16 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Gonti, Night Minister [316] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 134).
+      Swamp [317] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 137).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Gonti, Night Minister [318], Mountain [295], Swamp [289], Swamp [308], Swamp [317], Tinybones, the Pickpocket [290]; Graveyard: Tinybones, Bauble Burglar [306]; Exile: Island [325]
+      grimnir: Battlefield: Death to Our Enemies [312], Riverpyre Verge [293], Steam Vents [301], Stormcarved Coast [311]; Graveyard: Iroh's Demonstration [305]
+
+Turn 8
+  - Ability of Death to Our Enemies [observed_semantic_effect, seq=169] (active=grimnir, phase=Phase_Main1, controller=grimnir, owner=grimnir, source_object=312, source_last_explicit_zone=Battlefield)
+      effects: token creation, +1 counter(s)
+      narrative: Ability of Death to Our Enemies: a token is created; 1 counter(s) are added to Death to Our Enemies [312].
+      explicit effect object references: Treasure [334] (role/targeting only where the protocol identifies it)
+      token created: Treasure (object 334, controller=grimnir); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 333).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Stock Up [327] Library (grimnir) -> Hand (grimnir) (Draw; GRE sequence 163).
+      Riverpyre Verge [328] Hand (grimnir) -> Battlefield (PlayLand; GRE sequence 166).
+      Stock Up [329] Hand (grimnir) -> Stack (CastSpell; GRE sequence 167).
+      Combustion Technique [335] Library (grimnir) -> Hand (grimnir) (Put; GRE sequence 172).
+      Spirebluff Canal [336] Library (grimnir) -> Hand (grimnir) (Put; GRE sequence 172).
+      Stock Up [337] Stack -> Graveyard (grimnir) (Resolve; GRE sequence 173).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Gonti, Night Minister [318], Mountain [295], Swamp [289], Swamp [308], Swamp [317], Tinybones, the Pickpocket [290]; Graveyard: Tinybones, Bauble Burglar [306]; Exile: Island [325]
+      grimnir: Battlefield: Death to Our Enemies [312], Riverpyre Verge [293], Riverpyre Verge [328], Steam Vents [301], Stormcarved Coast [311]; Graveyard: Iroh's Demonstration [305], Stock Up [337]
+
+Turn 9
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=212] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=318, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Gonti, Night Minister: exiles Ovika, Enigma Goliath.
+      explicit effect object references: Ovika, Enigma Goliath [241], Ovika, Enigma Goliath [353] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Ovika, Enigma Goliath (object 353) Library (grimnir) -> Exile (Exile; shared object ID)
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=214] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=318, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 212 and 214; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: exile
+      narrative: Ability of Gonti, Night Minister: exiles Zuko's Exile.
+      explicit effect object references: Zuko's Exile [242], Zuko's Exile [355] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Zuko's Exile (object 355) Library (grimnir) -> Exile (Exile; shared object ID)
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=220] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=318, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 214 and 220; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: token creation
+      narrative: Ability of Gonti, Night Minister: a token is created.
+      explicit effect object references: Treasure [361] (role/targeting only where the protocol identifies it)
+      token created: Treasure (object 361, controller=gian31); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 360).
+  - Jace Reawakened [valid_resolution_no_immediate_mutation, seq=222] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=grimnir, source_object=357)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Jace Reawakened resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Jace Reawakened (object 357) Graveyard (grimnir) -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Graveyard (grimnir); enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Jace Reawakened (object 357) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Tinybones, the Pickpocket [290] (unblocked, observed P/T 1/1), Gonti, Night Minister [318] (unblocked, observed P/T 3/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: grimnir -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): grimnir 15 -> 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Duress [338] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 187).
+      Island [339] Exile -> Battlefield (PlayLand; GRE sequence 190).
+      Duress [340] Hand (gian31) -> Stack (CastSpell; GRE sequence 191).
+      Jace Reawakened [348] Hand (grimnir) -> Graveyard (grimnir) (Discard; GRE sequence 196).
+      Duress [349] Stack -> Graveyard (gian31) (Resolve; GRE sequence 196).
+      Mountain [363] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 229).
+      Swamp [364] Hand (gian31) -> Graveyard (gian31) (Discard; GRE sequence 230).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Gonti, Night Minister [318], Island [339], Jace Reawakened [357], Mountain [295], Swamp [289], Swamp [308], Swamp [317], Tinybones, the Pickpocket [290]; Graveyard: Duress [349], Swamp [364], Tinybones, Bauble Burglar [306]
+      grimnir: Battlefield: Death to Our Enemies [312], Riverpyre Verge [293], Riverpyre Verge [328], Steam Vents [301], Stormcarved Coast [311]; Graveyard: Iroh's Demonstration [305], Stock Up [337]; Exile: Ovika, Enigma Goliath [353], Zuko's Exile [355]
+
+Turn 10
+  - Ability of Death to Our Enemies [observed_semantic_effect, seq=244] (active=grimnir, phase=Phase_Main1, controller=grimnir, owner=grimnir, source_object=312, source_last_explicit_zone=Battlefield)
+      effects: token creation, +1 counter(s)
+      narrative: Ability of Death to Our Enemies: a token is created; 1 counter(s) are added to Death to Our Enemies [312].
+      explicit effect object references: Treasure [371] (role/targeting only where the protocol identifies it)
+      token created: Treasure (object 371, controller=grimnir); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 370).
+  - Combustion Technique [observed_semantic_effect, seq=246] (active=grimnir, phase=Phase_Main1, controller=grimnir, owner=grimnir, source_object=367)
+      effects: 3 damage
+      narrative: Combustion Technique: Gonti, Night Minister takes 3 damage.
+      explicit effect object references: Gonti, Night Minister [318] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Combustion Technique (object 367) Hand (grimnir) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Combustion Technique (object 372) Stack -> Graveyard (grimnir) (Resolve; shared object ID)
+      identity continuity: source object 367 -> transfer object 372 (explicit GRE ObjectIdChanged chain).
+  - Ability of Death to Our Enemies [observed_semantic_effect, seq=250] (active=grimnir, phase=Phase_Main1, controller=grimnir, owner=grimnir, source_object=312, source_last_explicit_zone=Battlefield)
+      effects: token creation, +1 counter(s)
+      narrative: Ability of Death to Our Enemies: a token is created; 1 counter(s) are added to Death to Our Enemies [312].
+      explicit effect object references: Treasure [379] (role/targeting only where the protocol identifies it)
+      token created: Treasure (object 379, controller=grimnir); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 378).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Stock Up [365] Library (grimnir) -> Hand (grimnir) (Draw; GRE sequence 236).
+      Spirebluff Canal [366] Hand (grimnir) -> Battlefield (PlayLand; GRE sequence 239).
+      Stock Up [373] Hand (grimnir) -> Stack (CastSpell; GRE sequence 247).
+      Treasure [377] Battlefield -> Graveyard (grimnir) (Sacrifice; GRE sequence 248).
+        sacrifice observed after Combustion Technique (seq 246); direct causal linkage is unavailable.
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Gonti, Night Minister [318], Island [339], Jace Reawakened [357], Mountain [295], Swamp [289], Swamp [308], Swamp [317], Tinybones, the Pickpocket [290]; Graveyard: Duress [349], Swamp [364], Tinybones, Bauble Burglar [306]
+      grimnir: Battlefield: Death to Our Enemies [312], Riverpyre Verge [293], Riverpyre Verge [328], Spirebluff Canal [366], Steam Vents [301], Stormcarved Coast [311]; Graveyard: Combustion Technique [372], Iroh's Demonstration [305], Stock Up [337], Treasure [377]; Exile: Ovika, Enigma Goliath [353], Zuko's Exile [355]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 4, seq 71: grimnir 19 -> 17. No source event correlated in captured records.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 4 token creations observed; 3 active as last observed; 1 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Treasure [334] controller=grimnir; created Turn 8 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 10 via Battlefield -> Graveyard (grimnir) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+- Treasure [361] controller=gian31; created Turn 9 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 9, object 361 (latest observed P/T unknown; current zone unconfirmed).
+- Treasure [371] controller=grimnir; created Turn 10 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 10, object 371 (latest observed P/T unknown; current zone unconfirmed).
+- Treasure [379] controller=grimnir; created Turn 10 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 10, object 379 (latest observed P/T unknown; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 1, seq 10: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 24: Jace Reawakened [owner=grimnir, controller=grimnir] moves Library (grimnir) -> Hand (grimnir) (Draw).
+- Turn 2, seq 27: Riverpyre Verge [owner=grimnir, controller=grimnir] moves Hand (grimnir) -> Battlefield (PlayLand).
+- Turn 3, seq 41: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 44: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 47: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 67: Riverpyre Verge [owner/controller metadata unavailable] moves Library (grimnir) -> Hand (grimnir) (Draw).
+- Turn 4, seq 71: Steam Vents [owner=grimnir, controller=grimnir] moves Hand (grimnir) -> Battlefield (PlayLand).
+- Turn 4, seq 72: Iroh's Demonstration [owner=grimnir, controller=grimnir] moves Hand (grimnir) -> Stack (CastSpell).
+- Turn 4, seq 77: Iroh's Demonstration [owner=grimnir, controller=grimnir] moves Stack -> Graveyard (grimnir) (Resolve).
+- Turn 4, seq 77: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 5, seq 91: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 94: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 114: Stormcarved Coast [owner/controller metadata unavailable] moves Library (grimnir) -> Hand (grimnir) (Draw).
+- Turn 6, seq 117: Stormcarved Coast [owner=grimnir, controller=grimnir] moves Hand (grimnir) -> Battlefield (PlayLand).
+- Turn 6, seq 118: Death to Our Enemies [owner=grimnir, controller=grimnir] moves Hand (grimnir) -> Stack (CastSpell).
+- Turn 6, seq 120: Death to Our Enemies [owner=grimnir, controller=grimnir] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 134: Gonti, Night Minister [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 137: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 138: Gonti, Night Minister [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 140: Gonti, Night Minister [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 153: Island [owner=grimnir, controller=gian31] moves Library (grimnir) -> Exile (Exile).
+- Turn 8, seq 163: Stock Up [owner/controller metadata unavailable] moves Library (grimnir) -> Hand (grimnir) (Draw).
+- Turn 8, seq 166: Riverpyre Verge [owner=grimnir, controller=grimnir] moves Hand (grimnir) -> Battlefield (PlayLand).
+- Turn 8, seq 167: Stock Up [owner=grimnir, controller=grimnir] moves Hand (grimnir) -> Stack (CastSpell).
+- Turn 8, seq 172: Combustion Technique [owner=grimnir, controller=grimnir] moves Library (grimnir) -> Hand (grimnir) (Put).
+- Turn 8, seq 172: Spirebluff Canal [owner=grimnir, controller=grimnir] moves Library (grimnir) -> Hand (grimnir) (Put).
+- Turn 8, seq 173: Stock Up [owner=grimnir, controller=grimnir] moves Stack -> Graveyard (grimnir) (Resolve).
+- Turn 9, seq 187: Duress [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 190: Island [owner=grimnir, controller=gian31] moves Exile -> Battlefield (PlayLand).
+- Turn 9, seq 191: Duress [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 196: Jace Reawakened [owner=grimnir, controller=gian31] moves Hand (grimnir) -> Graveyard (grimnir) (Discard).
+- Turn 9, seq 196: Duress [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 9, seq 212: Ovika, Enigma Goliath [owner=grimnir, controller=grimnir] moves Library (grimnir) -> Exile (Exile).
+- Turn 9, seq 214: Zuko's Exile [owner=grimnir, controller=grimnir] moves Library (grimnir) -> Exile (Exile).
+- Turn 9, seq 217: Jace Reawakened [owner=grimnir, controller=gian31] moves Graveyard (grimnir) -> Stack (CastSpell).
+- Turn 9, seq 222: Jace Reawakened [owner=grimnir, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 229: Mountain [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 230: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Graveyard (gian31) (Discard).
+- Turn 10, seq 236: Stock Up [owner/controller metadata unavailable] moves Library (grimnir) -> Hand (grimnir) (Draw).
+- Turn 10, seq 239: Spirebluff Canal [owner=grimnir, controller=grimnir] moves Hand (grimnir) -> Battlefield (PlayLand).
+- Turn 10, seq 240: Combustion Technique [owner=grimnir, controller=grimnir] moves Hand (grimnir) -> Stack (CastSpell).
+- Turn 10, seq 246: Combustion Technique [owner=grimnir, controller=grimnir] moves Stack -> Graveyard (grimnir) (Resolve).
+- Turn 10, seq 247: Stock Up [owner=grimnir, controller=grimnir] moves Hand (grimnir) -> Stack (CastSpell).
+- Turn 10, seq 248: Treasure [owner/controller metadata unavailable] moves Battlefield -> Graveyard (grimnir) (Sacrifice).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 164 becomes object 289 [Swamp].
+- Turn 1, seq 8: object 166 becomes object 290 [Tinybones, the Pickpocket].
+- Turn 2, seq 24: object 231 becomes object 292 [Jace Reawakened].
+- Turn 2, seq 27: object 227 becomes object 293 [Riverpyre Verge].
+- Turn 3, seq 41: object 171 becomes object 294 [Swamp].
+- Turn 3, seq 44: object 167 becomes object 295 [Mountain].
+- Turn 3, seq 45: object 168 becomes object 296 [Tinybones, Bauble Burglar].
+- Turn 4, seq 67: object 232 becomes object 300 [Riverpyre Verge].
+- Turn 4, seq 71: object 224 becomes object 301 [Steam Vents].
+- Turn 4, seq 72: object 230 becomes object 302 [Iroh's Demonstration].
+- Turn 4, seq 77: object 302 becomes object 305 [Iroh's Demonstration].
+- Turn 4, seq 77: object 296 becomes object 306 [Tinybones, Bauble Burglar].
+- Turn 5, seq 91: object 172 becomes object 307 [Swamp].
+- Turn 5, seq 94: object 294 becomes object 308 [Swamp].
+- Turn 6, seq 114: object 233 becomes object 310 [Stormcarved Coast].
+- Turn 6, seq 117: object 310 becomes object 311 [Stormcarved Coast].
+- Turn 6, seq 118: object 225 becomes object 312 [Death to Our Enemies].
+- Turn 7, seq 134: object 173 becomes object 316 [Gonti, Night Minister].
+- Turn 7, seq 137: object 307 becomes object 317 [Swamp].
+- Turn 7, seq 138: object 316 becomes object 318 [Gonti, Night Minister].
+- Turn 7, seq 153: object 234 becomes object 325 [Island].
+- Turn 8, seq 163: object 235 becomes object 327 [Stock Up].
+- Turn 8, seq 166: object 300 becomes object 328 [Riverpyre Verge].
+- Turn 8, seq 167: object 327 becomes object 329 [Stock Up].
+- Turn 8, seq 172: object 239 becomes object 335 [Combustion Technique].
+- Turn 8, seq 172: object 240 becomes object 336 [Spirebluff Canal].
+- Turn 8, seq 173: object 329 becomes object 337 [Stock Up].
+- Turn 9, seq 187: object 174 becomes object 338 [Duress].
+- Turn 9, seq 190: object 325 becomes object 339 [Island].
+- Turn 9, seq 191: object 338 becomes object 340 [Duress].
+- Turn 9, seq 196: object 292 becomes object 348 [Jace Reawakened].
+- Turn 9, seq 196: object 340 becomes object 349 [Duress].
+- Turn 9, seq 212: object 241 becomes object 353 [Ovika, Enigma Goliath].
+- Turn 9, seq 214: object 242 becomes object 355 [Zuko's Exile].
+- Turn 9, seq 217: object 348 becomes object 357 [Jace Reawakened].
+- Turn 9, seq 229: object 175 becomes object 363 [Mountain].
+- Turn 9, seq 230: object 165 becomes object 364 [Swamp].
+- Turn 10, seq 236: object 243 becomes object 365 [Stock Up].
+- Turn 10, seq 239: object 336 becomes object 366 [Spirebluff Canal].
+- Turn 10, seq 240: object 335 becomes object 367 [Combustion Technique].
+- Turn 10, seq 246: object 367 becomes object 372 [Combustion Technique].
+- Turn 10, seq 247: object 365 becomes object 373 [Stock Up].
+- Turn 10, seq 248: object 334 becomes object 377 [Treasure].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Swamp (object 289) from Hand (gian31) to Battlefield.
+- Turn 2: grimnir plays Riverpyre Verge (object 293) from Hand (grimnir) to Battlefield.
+- Turn 3: gian31 plays Mountain (object 295) from Hand (gian31) to Battlefield.
+- Turn 4: grimnir plays Steam Vents (object 301) from Hand (grimnir) to Battlefield.
+- Turn 5: gian31 plays Swamp (object 308) from Hand (gian31) to Battlefield.
+- Turn 6: grimnir plays Stormcarved Coast (object 311) from Hand (grimnir) to Battlefield.
+- Turn 7: gian31 plays Swamp (object 317) from Hand (gian31) to Battlefield.
+- Turn 8: grimnir plays Riverpyre Verge (object 328) from Hand (grimnir) to Battlefield.
+- Turn 9: gian31 plays Island (object 339) from Exile to Battlefield.
+- Turn 10: grimnir plays Spirebluff Canal (object 366) from Hand (grimnir) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Gonti, Night Minister: casts=1; abilities=4 (triggered=4, activated=0) across turns [7, 7, 9, 9, 9]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=3
+  observed effects: exile, token creation
+- Death to Our Enemies: casts=1; abilities=3 (triggered=3, activated=0) across turns [6, 8, 10, 10]
+  observed effect totals: draws=0, tokens=3, counters=3, returns=0, damage=0, life_changes=0, other=0
+  observed effects: +1 counter(s), token creation
+- Combustion Technique: casts=1 across turns [10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 3 damage
+- Iroh's Demonstration: casts=1 across turns [4]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 4 damage
+- Jace Reawakened: casts=1 across turns [9]
+- Tinybones, Bauble Burglar: casts=1 across turns [3]
+- Tinybones, the Pickpocket: casts=1 across turns [1]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 3 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Tinybones, the Pickpocket (gian31) -> grimnir; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 5 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Tinybones, the Pickpocket (gian31) -> grimnir; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Tinybones, the Pickpocket (gian31) -> grimnir; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Tinybones, the Pickpocket (gian31) -> grimnir; unblocked in this observed snapshot
+  attacker: Gonti, Night Minister (gian31) -> grimnir; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 7: Ability of Gonti, Night Minister (active=gian31) - Ability of Gonti, Night Minister: exile.
+- Turn 9: Ability of Gonti, Night Minister (active=gian31) - Ability of Gonti, Night Minister: exile.
+- Turn 9: Ability of Gonti, Night Minister (active=gian31) - Ability of Gonti, Night Minister: exile.
+- Turn 9: Ability of Gonti, Night Minister (active=gian31) - Ability of Gonti, Night Minister: a token is created.
+- Turn 9: Jace Reawakened (active=gian31) - Jace Reawakened resolves with no immediate observed mutation.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 164: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 166: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 167: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 168: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 169: Bitter Triumph | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 170: Fell | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 226: Zuko's Exile | controller=grimnir | owner=grimnir | zone=Battlefield (latest_object_observation)
+- 228: Stormcarved Coast | controller=grimnir | owner=grimnir | zone=Battlefield (latest_object_observation)
+- 229: Ovika, Enigma Goliath | controller=grimnir | owner=grimnir | zone=Battlefield (latest_object_observation)
+- 234: Island | controller=grimnir | owner=grimnir | zone=Hand (latest_object_observation)
+- 241: Ovika, Enigma Goliath | controller=grimnir | owner=grimnir | zone=Hand (latest_object_observation)
+- 242: Zuko's Exile | controller=grimnir | owner=grimnir | zone=Hand (latest_object_observation)
+- 289: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 290: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 292: Jace Reawakened | controller=grimnir | owner=grimnir | zone=Hand (latest_object_observation)
+- 293: Riverpyre Verge | controller=grimnir | owner=grimnir | zone=Battlefield (latest_object_observation)
+- 294: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 295: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 296: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 301: Steam Vents | controller=grimnir | owner=grimnir | zone=Battlefield (latest_object_observation)
+- 302: Iroh's Demonstration | controller=grimnir | owner=grimnir | zone=Stack (latest_object_observation)
+- 305: Iroh's Demonstration | controller=grimnir | owner=grimnir | zone=unknown (inferred unknown) (latest_object_observation)
+- 306: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 307: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 308: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 311: Stormcarved Coast | controller=grimnir | owner=grimnir | zone=Battlefield (latest_object_observation)
+- 312: Death to Our Enemies | controller=grimnir | owner=grimnir | zone=Stack (latest_object_observation)
+- 316: Gonti, Night Minister | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 317: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 318: Gonti, Night Minister | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 323: object 323 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 324: object 324 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 325: Island | controller=gian31 | owner=grimnir | zone=Exile (latest_object_observation)
+- 328: Riverpyre Verge | controller=grimnir | owner=grimnir | zone=Battlefield (latest_object_observation)
+- 329: Stock Up | controller=grimnir | owner=grimnir | zone=Stack (latest_object_observation)
+- 333: object 333 | controller=grimnir | owner=grimnir | zone=Stack (latest_object_observation)
+- 334: Treasure | controller=grimnir | owner=grimnir | zone=Hand (latest_object_observation)
+- 335: Combustion Technique | controller=grimnir | owner=grimnir | zone=Battlefield (latest_object_observation)
+- 336: Spirebluff Canal | controller=grimnir | owner=grimnir | zone=Battlefield (latest_object_observation)
+- 337: Stock Up | controller=grimnir | owner=grimnir | zone=unknown (inferred unknown) (latest_object_observation)
+- 338: Duress | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 339: Island | controller=gian31 | owner=grimnir | zone=Battlefield (latest_object_observation)
+- 340: Duress | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 342: Spirebluff Canal | controller=grimnir | owner=grimnir | zone=Battlefield (latest_object_observation)
+- 343: Combustion Technique | controller=grimnir | owner=grimnir | zone=Battlefield (latest_object_observation)
+- 344: Jace Reawakened | controller=grimnir | owner=grimnir | zone=Battlefield (latest_object_observation)
+- 345: Stormcarved Coast | controller=grimnir | owner=grimnir | zone=Battlefield (latest_object_observation)
+- 346: Ovika, Enigma Goliath | controller=grimnir | owner=grimnir | zone=Battlefield (latest_object_observation)
+- 347: Zuko's Exile | controller=grimnir | owner=grimnir | zone=Battlefield (latest_object_observation)
+- 348: Jace Reawakened | controller=gian31 | owner=grimnir | zone=Graveyard (latest_object_observation)
+- 349: Duress | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 350: object 350 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 351: object 351 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 352: object 352 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 353: Ovika, Enigma Goliath | controller=grimnir | owner=grimnir | zone=Exile (latest_object_observation)
+- 355: Zuko's Exile | controller=grimnir | owner=grimnir | zone=Exile (latest_object_observation)
+- 357: Jace Reawakened | controller=gian31 | owner=grimnir | zone=Stack (latest_object_observation)
+- 360: object 360 | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 361: Treasure | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 362: object 362 | controller=gian31 | owner=grimnir | zone=Stack (latest_object_observation)
+- 363: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 364: Swamp | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 366: Spirebluff Canal | controller=grimnir | owner=grimnir | zone=Battlefield (latest_object_observation)
+- 367: Combustion Technique | controller=grimnir | owner=grimnir | zone=Stack (latest_object_observation)
+- 370: object 370 | controller=grimnir | owner=grimnir | zone=Stack (latest_object_observation)
+- 371: Treasure | controller=grimnir | owner=grimnir | zone=Battlefield (latest_object_observation)
+- 372: Combustion Technique | controller=grimnir | owner=grimnir | zone=unknown (inferred unknown) (latest_object_observation)
+- 373: Stock Up | controller=grimnir | owner=grimnir | zone=Stack (latest_object_observation)
+- 378: object 378 | controller=grimnir | owner=grimnir | zone=Stack (latest_object_observation)
+- 379: Treasure | controller=grimnir | owner=grimnir | zone=Battlefield (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 35 total items
+  zones: Battlefield=11, Exile=1, Graveyard=2, Hand=12, Stack=8, unknown=1
+  objects: Swamp x8, Duress x3, Mountain x3, Tinybones, Bauble Burglar x3, Gonti, Night Minister x2, Island x2, Jace Reawakened x2, Tinybones, the Pickpocket x2, Bitter Triumph, Fell, Treasure, object 323
+grimnir: 36 total items
+  zones: Battlefield=18, Exile=2, Hand=5, Stack=8, unknown=3
+  objects: Combustion Technique x4, Ovika, Enigma Goliath x4, Zuko's Exile x4, Spirebluff Canal x3, Stock Up x3, Stormcarved Coast x3, Treasure x3, Iroh's Demonstration x2, Jace Reawakened x2, Riverpyre Verge x2, Death to Our Enemies, Island
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (11): Duress, Gonti, Night Minister, Island, Mountain, Swamp, Swamp, Swamp, Tinybones, Bauble Burglar, Tinybones, Bauble Burglar, Tinybones, the Pickpocket, Treasure
+  Graveyard: 2 card(s)
+grimnir:
+  Battlefield (18): Combustion Technique, Combustion Technique, Jace Reawakened, Ovika, Enigma Goliath, Ovika, Enigma Goliath, Riverpyre Verge, Riverpyre Verge, Spirebluff Canal, Spirebluff Canal, Spirebluff Canal, Steam Vents, Stormcarved Coast, Stormcarved Coast, Stormcarved Coast, Treasure, Treasure, Zuko's Exile, Zuko's Exile
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+4 objects have no resolved final zone and are omitted from the known board state.
+gian31: 1 unknown object(s)
+grimnir: 3 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=17, Stack=16
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Player-zone assignment has explicit transfer conflicts in this match. Where a safe Hand -> Stack -> Battlefield or PlayLand provenance exists, that zone holder is used; other controller assignments remain protocol-observed rather than fully reconciled.
+gian31:
+  Battlefield (9): Swamp, Tinybones, the Pickpocket, Mountain, Swamp, Swamp, Gonti, Night Minister, Island, Jace Reawakened, Treasure
+  Graveyard (3): Tinybones, Bauble Burglar, Duress, Swamp
+grimnir:
+  Battlefield (8): Riverpyre Verge, Steam Vents, Stormcarved Coast, Death to Our Enemies, Riverpyre Verge, Spirebluff Canal, Treasure, Treasure
+  Graveyard (3): Iroh's Demonstration, Stock Up, Combustion Technique
+  Exile (2): Ovika, Enigma Goliath, Zuko's Exile
+Known non-persistent entries (counts only):
+  gian31: Hand=3, Limbo=5
+  grimnir: Limbo=6, Revealed=3, Stack=1
+  unknown: Hand=3, Library=96, Limbo=11
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=2
+- Turn 2: gian31 Battlefield=2; grimnir Battlefield=1
+- Turn 3: gian31 Battlefield=4; grimnir Battlefield=1
+- Turn 4: gian31 Battlefield=3; gian31 Graveyard=1; grimnir Battlefield=2; grimnir Graveyard=1
+- Turn 5: gian31 Battlefield=4; gian31 Graveyard=1; grimnir Battlefield=2; grimnir Graveyard=1
+- Turn 6: gian31 Battlefield=4; gian31 Graveyard=1; grimnir Battlefield=4; grimnir Graveyard=1
+- Turn 7: gian31 Battlefield=6; gian31 Graveyard=1; gian31 Exile=1; grimnir Battlefield=4; grimnir Graveyard=1
+- Turn 8: gian31 Battlefield=6; gian31 Graveyard=1; gian31 Exile=1; grimnir Battlefield=5; grimnir Graveyard=2
+- Turn 9: gian31 Battlefield=8; gian31 Graveyard=3; grimnir Battlefield=5; grimnir Graveyard=2; grimnir Exile=2
+- Turn 10: gian31 Battlefield=8; gian31 Graveyard=3; grimnir Battlefield=6; grimnir Graveyard=4; grimnir Exile=2
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Tinybones, the Pickpocket resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Tinybones, Bauble Burglar resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Death to Our Enemies resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Gonti, Night Minister resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Jace Reawakened resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
