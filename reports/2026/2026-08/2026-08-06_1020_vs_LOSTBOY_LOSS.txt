@@ -1,0 +1,818 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, LOSTBOY
+Seat map: Seat 1=gian31, Seat 2=LOSTBOY
+Turn range (known): 1 - 14
+Records: 41
+Action chains: 27
+Winner: LOSTBOY
+Final life: {'gian31': 6, 'LOSTBOY': 38}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 14 (Phase_Beginning, Step_Upkeep; Ability of Laughing Jasper Flint, seq 391).
+Later numbered GRE record(s): 4 after action sequence 391 across turn(s) [14]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+POST-ACTION GRE RECORDS - RESULT ORDER UNRESOLVED
+  - Turn 14, seq 393: identity_changed.
+  - Turn 14, seq 393: zone_transfer (Draw).
+  - Turn 14, seq 396: identity_changed.
+  - Turn 14, seq 396: zone_transfer (PlayLand).
+  These records are retained for traceability; their order relative to the match-result payload is not asserted.
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 34 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 12 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14] (raw records=13; equivalent duplicates=1). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 14 explicit Library -> Hand movement(s); named in the draw record=9, resolved through an explicit identity transition=5, unresolved=0.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Gonti, Night Minister [212], Mountain [213], Cruelclaw's Heist [214], Swamp [215], Mountain [216], Laughing Jasper Flint [217], Cruelclaw's Heist [218].
+  - unknown: 7 observed card(s): object 272 [272], object 273 [273], object 274 [274], object 275 [275], object 276 [276], object 277 [277], object 278 [278].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: LOSTBOY; observed final life totals: {'gian31': 6, 'LOSTBOY': 38}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 14 (Phase_Beginning, Step_Upkeep; Ability of Laughing Jasper Flint, seq 391).
+Last captured life snapshot: LOSTBOY 37 -> 38 (seq 381).
+Tokens on battlefield at their last observation (not confirmed at match end): Mutant [430] controller=LOSTBOY, created Turn 7, last observed Turn 9 seq 216, P/T 3/3; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Hinterland Sanctifier.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 3: actions: cards=1, abilities=2; life mutations=1; explicit battlefield entries=Plains, Ajani's Pridemate.
+- Turn 4: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 5: actions: cards=1, abilities=2; combat snapshots=1; life mutations=2; explicit battlefield entries=Plains, Healer's Hawk.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Crystal Barricade.
+- Turn 7: actions: cards=1, abilities=7; combat snapshots=1; life mutations=4; explicit battlefield entries=Plains, Mighty Mutanimals.
+- Turn 8: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Laughing Jasper Flint.
+- Turn 9: actions: cards=1, abilities=1; combat snapshots=1; life mutations=2; explicit battlefield entries=Plains.
+- Turn 10: actions: cards=1, abilities=1; explicit battlefield entries=Swamp, Treasure Dredger.
+- Turn 11: actions: cards=1, abilities=4; combat snapshots=1; life mutations=3; explicit battlefield entries=Wanderbrine Preacher.
+- Turn 12: actions: cards=2, abilities=2; explicit battlefield entries=Mountain, Stasis Snare; explicit battlefield exits=Healer's Hawk, Ajani's Pridemate.
+- Turn 13: actions: cards=2, abilities=8; combat snapshots=1; life mutations=3; explicit battlefield entries=Ajani's Pridemate, Wanderbrine Preacher; explicit battlefield exits=Wanderbrine Preacher.
+- Turn 14: actions: cards=0, abilities=1; explicit battlefield entries=Mountain.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=10] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=386)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 386) Hand (LOSTBOY) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 386) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [385] Hand (LOSTBOY) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LOSTBOY: Battlefield: Hinterland Sanctifier [386], Plains [385]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [388] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 24).
+      Swamp [389] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 27).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LOSTBOY: Battlefield: Hinterland Sanctifier [386], Plains [385]
+      gian31: Battlefield: Swamp [389]
+
+Turn 3
+  - Ajani's Pridemate [valid_resolution_no_immediate_mutation, seq=47] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=392)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ajani's Pridemate resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ajani's Pridemate (object 392) Hand (LOSTBOY) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ajani's Pridemate (object 392) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=49] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=386, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: LOSTBOY gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=51] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=392, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [392].
+    net observed life change this turn: LOSTBOY +1 (individual changes below; gains and losses may offset)
+    life: LOSTBOY 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [390] Library (LOSTBOY) -> Hand (LOSTBOY) (Draw; GRE sequence 41).
+      Plains [391] Hand (LOSTBOY) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LOSTBOY: Battlefield: Ajani's Pridemate [392], Hinterland Sanctifier [386], Plains [385], Plains [391]
+      gian31: Battlefield: Swamp [389]
+
+Turn 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [397] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 66).
+      Swamp [398] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 69).
+      Cruelclaw's Heist [399] Hand (gian31) -> Stack (CastSpell; GRE sequence 70).
+      Healer's Hawk [402] Library (LOSTBOY) -> Hand (LOSTBOY) (Draw; GRE sequence 75).
+      Crystal Barricade [408] Hand (LOSTBOY) -> Exile (Exile; GRE sequence 77).
+      Cruelclaw's Heist [409] Stack -> Graveyard (gian31) (Resolve; GRE sequence 77).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LOSTBOY: Battlefield: Ajani's Pridemate [392], Hinterland Sanctifier [386], Plains [385], Plains [391]
+      gian31: Battlefield: Swamp [389], Swamp [398]; Exile: Crystal Barricade [408]; Graveyard: Cruelclaw's Heist [409]
+
+Turn 5
+  - Healer's Hawk [valid_resolution_no_immediate_mutation, seq=97] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=412)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Healer's Hawk resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Healer's Hawk (object 412) Hand (LOSTBOY) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Healer's Hawk (object 412) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=99] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=386, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: LOSTBOY gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=101] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=392, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [392].
+  Combat snapshots observed (active=LOSTBOY; frames: DeclareAttack -> DeclareBlock):
+      attackers: Hinterland Sanctifier [386] (unblocked, observed P/T 1/2), Ajani's Pridemate [392] (unblocked, observed P/T 4/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: LOSTBOY +1; gian31 -5 (individual changes below; gains and losses may offset)
+    life: LOSTBOY 21 -> 22
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 20 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Call a Surprise Witness [410] Library (LOSTBOY) -> Hand (LOSTBOY) (Draw; GRE sequence 91).
+      Plains [411] Hand (LOSTBOY) -> Battlefield (PlayLand; GRE sequence 94).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LOSTBOY: Battlefield: Ajani's Pridemate [392], Healer's Hawk [412], Hinterland Sanctifier [386], Plains [385], Plains [391], Plains [411]
+      gian31: Battlefield: Swamp [389], Swamp [398]; Exile: Crystal Barricade [408]; Graveyard: Cruelclaw's Heist [409]
+
+Turn 6
+  - Crystal Barricade [valid_resolution_no_immediate_mutation, seq=128] (active=gian31, phase=Phase_Main1, controller=gian31, owner=LOSTBOY, source_object=418)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Crystal Barricade resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Crystal Barricade (object 418) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Crystal Barricade (object 418) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [416] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 122).
+      Mountain [417] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 125).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LOSTBOY: Battlefield: Ajani's Pridemate [392], Healer's Hawk [412], Hinterland Sanctifier [386], Plains [385], Plains [391], Plains [411]
+      gian31: Battlefield: Crystal Barricade [418], Mountain [417], Swamp [389], Swamp [398]; Graveyard: Cruelclaw's Heist [409]
+
+Turn 7
+  - Mighty Mutanimals [valid_resolution_no_immediate_mutation, seq=148] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=423)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Mighty Mutanimals resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Mighty Mutanimals (object 423) Hand (LOSTBOY) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Mighty Mutanimals (object 423) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Mighty Mutanimals [observed_semantic_effect, seq=151] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Mighty Mutanimals: a token is created.
+      explicit effect object references: Mutant [430] (role/targeting only where the protocol identifies it)
+      token created: Mutant (object 430, controller=LOSTBOY) 3/3; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 429).
+  - Ability of Mighty Mutanimals [observed_semantic_effect, seq=156] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=423, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 151 and 156; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Mighty Mutanimals: Healer's Hawk gets +1/+1; 1 counter(s) are added to Healer's Hawk [412].
+      explicit effect object references: Healer's Hawk [412] (role/targeting only where the protocol identifies it)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=158] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=386, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: LOSTBOY gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=160] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=392, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [392].
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=162] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=386, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: LOSTBOY gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=164] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=392, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [392].
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=176] (active=LOSTBOY, phase=Phase_Combat, step=Step_CombatDamage, controller=LOSTBOY, owner=LOSTBOY, source_object=392, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 164 and 176; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [392].
+  Combat snapshots observed (active=LOSTBOY; frames: DeclareAttack -> DeclareBlock):
+      attackers: Healer's Hawk [412] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: LOSTBOY +4; gian31 -2 (individual changes below; gains and losses may offset)
+    life: LOSTBOY 22 -> 23
+    life: LOSTBOY 23 -> 24
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 15 -> 13
+    life (gain observed during combat phase; exact source unavailable): LOSTBOY 24 -> 26
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [421] Library (LOSTBOY) -> Hand (LOSTBOY) (Draw; GRE sequence 142).
+      Plains [422] Hand (LOSTBOY) -> Battlefield (PlayLand; GRE sequence 145).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LOSTBOY: Battlefield: Ajani's Pridemate [392], Healer's Hawk [412], Hinterland Sanctifier [386], Mighty Mutanimals [423], Plains [385], Plains [391], Plains [411], Plains [422]
+      gian31: Battlefield: Crystal Barricade [418], Mountain [417], Swamp [389], Swamp [398]; Graveyard: Cruelclaw's Heist [409]
+
+Turn 8
+  - Laughing Jasper Flint [valid_resolution_no_immediate_mutation, seq=192] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=438)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Laughing Jasper Flint resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Laughing Jasper Flint (object 438) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Laughing Jasper Flint (object 438) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [436] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 186).
+      Swamp [437] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 189).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LOSTBOY: Battlefield: Ajani's Pridemate [392], Healer's Hawk [412], Hinterland Sanctifier [386], Mighty Mutanimals [423], Plains [385], Plains [391], Plains [411], Plains [422]
+      gian31: Battlefield: Crystal Barricade [418], Laughing Jasper Flint [438], Mountain [417], Swamp [389], Swamp [398], Swamp [437]; Graveyard: Cruelclaw's Heist [409]
+
+Turn 9
+  - Requisition Raid [observed_semantic_effect, seq=216] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=444)
+      effects: P/T +1/+1, P/T +1/+1, P/T +1/+1, P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s), +1 counter(s), +1 counter(s), +1 counter(s)
+      narrative: Requisition Raid: Mutant gets +1/+1; Hinterland Sanctifier gets +1/+1; Healer's Hawk gets +1/+1; Ajani's Pridemate gets +1/+1; Mighty Mutanimals gets +1/+1; 1 counter(s) are added to Mutant [430]; 1 counter(s) are added to Hinterland Sanctifier [386]; 1 counter(s) are added to Healer's Hawk [412]; 1 counter(s) are added to Ajani's Pridemate [392]; 1 counter(s) are added to Mighty Mutanimals [423].
+      explicit effect object references: Hinterland Sanctifier [386], Ajani's Pridemate [392], Healer's Hawk [412], Mighty Mutanimals [423], Mutant [430] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Requisition Raid (object 444) Hand (LOSTBOY) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Requisition Raid (object 447) Stack -> Graveyard (LOSTBOY) (Resolve; shared object ID)
+      identity continuity: source object 444 -> transfer object 447 (explicit GRE ObjectIdChanged chain).
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=228] (active=LOSTBOY, phase=Phase_Combat, step=Step_CombatDamage, controller=LOSTBOY, owner=LOSTBOY, source_object=392, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [392].
+  Combat snapshots observed (active=LOSTBOY; frames: DeclareAttack -> DeclareBlock):
+      attackers: Healer's Hawk [412] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: LOSTBOY +3; gian31 -3 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 13 -> 10
+    life (gain observed during combat phase; exact source unavailable): LOSTBOY 26 -> 29
+    additional protocol-observed zone movements not assigned to an action chain:
+      Requisition Raid [442] Library (LOSTBOY) -> Hand (LOSTBOY) (Draw; GRE sequence 206).
+      Plains [443] Hand (LOSTBOY) -> Battlefield (PlayLand; GRE sequence 209).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LOSTBOY: Battlefield: Ajani's Pridemate [392], Healer's Hawk [412], Hinterland Sanctifier [386], Mighty Mutanimals [423], Plains [385], Plains [391], Plains [411], Plains [422], Plains [443]; Graveyard: Requisition Raid [447]
+      gian31: Battlefield: Crystal Barricade [418], Laughing Jasper Flint [438], Mountain [417], Swamp [389], Swamp [398], Swamp [437]; Graveyard: Cruelclaw's Heist [409]
+
+Turn 10
+  - Ability of Laughing Jasper Flint [observed_semantic_effect, seq=240] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=438, source_last_explicit_zone=Battlefield)
+      effects: exile, exile
+      narrative: Ability of Laughing Jasper Flint: exiles Plains, Winnowing; exile.
+      explicit effect object references: object 284 [284], object 285 [285], Plains [450], Winnowing [451] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Plains (object 450) Library (LOSTBOY) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Winnowing (object 451) Library (LOSTBOY) -> Exile (Exile; shared object ID)
+  - Treasure Dredger [valid_resolution_no_immediate_mutation, seq=248] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=454)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Treasure Dredger resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Treasure Dredger (object 454) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Treasure Dredger (object 454) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Treasure Dredger [452] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 242).
+      Swamp [453] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 245).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LOSTBOY: Battlefield: Ajani's Pridemate [392], Healer's Hawk [412], Hinterland Sanctifier [386], Mighty Mutanimals [423], Plains [385], Plains [391], Plains [411], Plains [422], Plains [443]; Graveyard: Requisition Raid [447]; Exile: Plains [450], Winnowing [451]
+      gian31: Battlefield: Crystal Barricade [418], Laughing Jasper Flint [438], Mountain [417], Swamp [389], Swamp [398], Swamp [437], Swamp [453], Treasure Dredger [454]; Graveyard: Cruelclaw's Heist [409]
+
+Turn 11
+  - Wanderbrine Preacher [valid_resolution_no_immediate_mutation, seq=268] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=458)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Wanderbrine Preacher resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Wanderbrine Preacher (object 458) Hand (LOSTBOY) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Wanderbrine Preacher (object 458) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Mighty Mutanimals [observed_semantic_effect, seq=273] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Mighty Mutanimals: Healer's Hawk gets +1/+1; 1 counter(s) are added to Healer's Hawk [412].
+      explicit effect object references: Healer's Hawk [412] (role/targeting only where the protocol identifies it)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=275] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=386, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: LOSTBOY gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=277] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=392, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [392].
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=289] (active=LOSTBOY, phase=Phase_Combat, step=Step_CombatDamage, controller=LOSTBOY, owner=LOSTBOY, source_object=392, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 277 and 289; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [392].
+  Combat snapshots observed (active=LOSTBOY; frames: DeclareAttack -> DeclareBlock):
+      attackers: Healer's Hawk [412] (unblocked, observed P/T 4/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: LOSTBOY +5; gian31 -4 (individual changes below; gains and losses may offset)
+    life: LOSTBOY 29 -> 30
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): gian31 10 -> 6
+    life (gain observed during combat phase; exact source unavailable): LOSTBOY 30 -> 34
+    additional protocol-observed zone movements not assigned to an action chain:
+      Wanderbrine Preacher [457] Library (LOSTBOY) -> Hand (LOSTBOY) (Draw; GRE sequence 263).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LOSTBOY: Battlefield: Ajani's Pridemate [392], Healer's Hawk [412], Hinterland Sanctifier [386], Mighty Mutanimals [423], Plains [385], Plains [391], Plains [411], Plains [422], Plains [443], Wanderbrine Preacher [458]; Graveyard: Requisition Raid [447]; Exile: Plains [450], Winnowing [451]
+      gian31: Battlefield: Crystal Barricade [418], Laughing Jasper Flint [438], Mountain [417], Swamp [389], Swamp [398], Swamp [437], Swamp [453], Treasure Dredger [454]; Graveyard: Cruelclaw's Heist [409]
+
+Turn 12
+  - Ability of Laughing Jasper Flint [observed_semantic_effect, seq=301] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=438, source_last_explicit_zone=Battlefield)
+      effects: exile, exile, exile
+      narrative: Ability of Laughing Jasper Flint: exiles Plains, Stasis Snare, Call a Surprise Witness; exile; exile.
+      explicit effect object references: object 287 [287], object 288 [288], object 289 [289], Call a Surprise Witness [466], Stasis Snare [467], Plains [468] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Plains (object 468) Library (LOSTBOY) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Stasis Snare (object 467) Library (LOSTBOY) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Call a Surprise Witness (object 466) Library (LOSTBOY) -> Exile (Exile; shared object ID)
+  - Stasis Snare [valid_resolution_no_immediate_mutation, seq=309] (active=gian31, phase=Phase_Main1, controller=gian31, owner=LOSTBOY, source_object=471)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Stasis Snare resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Stasis Snare (object 471) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Stasis Snare (object 471) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Stasis Snare [observed_semantic_effect, seq=313] (active=gian31, phase=Phase_Main1, controller=gian31, owner=LOSTBOY, source_object=471, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Stasis Snare: exiles Healer's Hawk.
+      explicit effect object references: Healer's Hawk [412], Healer's Hawk [476] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Healer's Hawk (object 476) Battlefield -> Exile (Exile; shared object ID)
+  - Fell [observed_semantic_effect, seq=318] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=477)
+      effects: destroy
+      narrative: Fell destroys Ajani's Pridemate.
+      explicit effect object references: Ajani's Pridemate [392], Ajani's Pridemate [480] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Fell (object 477) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ajani's Pridemate (object 480) Battlefield -> Graveyard (LOSTBOY) (Destroy; shared object ID)
+      protocol-linked zone transfer: Fell (object 481) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 477 -> transfer object 481 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Fell [469] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 303).
+      Mountain [470] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 306).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LOSTBOY: Battlefield: Hinterland Sanctifier [386], Mighty Mutanimals [423], Plains [385], Plains [391], Plains [411], Plains [422], Plains [443], Wanderbrine Preacher [458]; Graveyard: Ajani's Pridemate [480], Requisition Raid [447]; Exile: Call a Surprise Witness [466], Healer's Hawk [476], Plains [450], Plains [468], Winnowing [451]
+      gian31: Battlefield: Crystal Barricade [418], Laughing Jasper Flint [438], Mountain [417], Mountain [470], Stasis Snare [471], Swamp [389], Swamp [398], Swamp [437], Swamp [453], Treasure Dredger [454]; Graveyard: Cruelclaw's Heist [409], Fell [481]
+
+Turn 13
+  - Call a Surprise Witness [observed_semantic_effect, seq=340] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=483)
+      effects: return to battlefield, +1 counter(s)
+      narrative: Call a Surprise Witness: a card/permanent returns; 1 counter(s) are added to Ajani's Pridemate [486].
+      explicit effect object references: Ajani's Pridemate [480], Ajani's Pridemate [486] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Call a Surprise Witness (object 483) Hand (LOSTBOY) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ajani's Pridemate (object 486) Graveyard (LOSTBOY) -> Battlefield (Return; shared object ID)
+      protocol-linked zone transfer: Call a Surprise Witness (object 489) Stack -> Graveyard (LOSTBOY) (Resolve; shared object ID)
+      identity continuity: source object 483 -> transfer object 489 (explicit GRE ObjectIdChanged chain).
+  - Ability of Mighty Mutanimals [observed_semantic_effect, seq=345] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Mighty Mutanimals: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [486].
+      explicit effect object references: Ajani's Pridemate [486] (role/targeting only where the protocol identifies it)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=347] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=386, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: LOSTBOY gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=349] (active=LOSTBOY, phase=Phase_Main1, controller=LOSTBOY, owner=LOSTBOY, source_object=486, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [486].
+  - Ability of Wanderbrine Preacher [observed_semantic_effect, seq=357] (active=LOSTBOY, phase=Phase_Combat, step=Step_DeclareAttack, controller=LOSTBOY, owner=LOSTBOY, source_object=458, source_last_explicit_zone=Battlefield)
+      effects: life +2
+      narrative: Ability of Wanderbrine Preacher: LOSTBOY gains 2 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=359] (active=LOSTBOY, phase=Phase_Combat, step=Step_DeclareAttack, controller=LOSTBOY, owner=LOSTBOY, source_object=486, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [486].
+  - Call a Surprise Witness [observed_semantic_effect, seq=374] (active=LOSTBOY, phase=Phase_Main2, controller=LOSTBOY, owner=LOSTBOY, source_object=494)
+      effects: return to battlefield, +1 counter(s)
+      narrative: Call a Surprise Witness: a card/permanent returns; 1 counter(s) are added to Wanderbrine Preacher [497].
+      explicit effect object references: Wanderbrine Preacher [493], Wanderbrine Preacher [497] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Call a Surprise Witness (object 494) Hand (LOSTBOY) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Wanderbrine Preacher (object 497) Graveyard (LOSTBOY) -> Battlefield (Return; shared object ID)
+      protocol-linked zone transfer: Call a Surprise Witness (object 500) Stack -> Graveyard (LOSTBOY) (Resolve; shared object ID)
+      identity continuity: source object 494 -> transfer object 500 (explicit GRE ObjectIdChanged chain).
+  - Ability of Mighty Mutanimals [observed_semantic_effect, seq=379] (active=LOSTBOY, phase=Phase_Main2, controller=LOSTBOY, owner=LOSTBOY, source_object=423, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Mighty Mutanimals: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [486].
+      explicit effect object references: Ajani's Pridemate [486] (role/targeting only where the protocol identifies it)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=381] (active=LOSTBOY, phase=Phase_Main2, controller=LOSTBOY, owner=LOSTBOY, source_object=386, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: LOSTBOY gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=383] (active=LOSTBOY, phase=Phase_Main2, controller=LOSTBOY, owner=LOSTBOY, source_object=486, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [486].
+  Combat snapshots observed (active=LOSTBOY; frames: DeclareAttack -> CombatDamage):
+      attackers: Wanderbrine Preacher [458] (unblocked, observed P/T 2/2)
+      blockers: Laughing Jasper Flint [438]
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat-result zone change: Wanderbrine Preacher [493] Battlefield -> Graveyard (LOSTBOY) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: LOSTBOY +4 (individual changes below; gains and losses may offset)
+    life: LOSTBOY 34 -> 35
+    life: LOSTBOY 35 -> 37
+    life: LOSTBOY 37 -> 38
+    additional protocol-observed zone movements not assigned to an action chain:
+      Call a Surprise Witness [482] Library (LOSTBOY) -> Hand (LOSTBOY) (Draw; GRE sequence 333).
+      Wanderbrine Preacher [493] Battlefield -> Graveyard (LOSTBOY) (SBA_Damage; GRE sequence 365).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LOSTBOY: Battlefield: Ajani's Pridemate [486], Hinterland Sanctifier [386], Mighty Mutanimals [423], Plains [385], Plains [391], Plains [411], Plains [422], Plains [443], Wanderbrine Preacher [497]; Graveyard: Call a Surprise Witness [489], Call a Surprise Witness [500], Requisition Raid [447]; Exile: Call a Surprise Witness [466], Healer's Hawk [476], Plains [450], Plains [468], Winnowing [451]
+      gian31: Battlefield: Crystal Barricade [418], Laughing Jasper Flint [438], Mountain [417], Mountain [470], Stasis Snare [471], Swamp [389], Swamp [398], Swamp [437], Swamp [453], Treasure Dredger [454]; Graveyard: Cruelclaw's Heist [409], Fell [481]
+
+Turn 14
+  - Ability of Laughing Jasper Flint [observed_semantic_effect, seq=391] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=438, source_last_explicit_zone=Battlefield)
+      effects: exile, exile, exile
+      narrative: Ability of Laughing Jasper Flint: exiles Plains, Plains, Leader's Talent; exile; exile.
+      explicit effect object references: object 291 [291], object 292 [292], object 293 [293], Plains [503], Leader's Talent [504], Plains [505] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Plains (object 505) Library (LOSTBOY) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Plains (object 503) Library (LOSTBOY) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Leader's Talent (object 504) Library (LOSTBOY) -> Exile (Exile; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tinybones, Bauble Burglar [506] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 393).
+      Mountain [507] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 396).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      LOSTBOY: Battlefield: Ajani's Pridemate [486], Hinterland Sanctifier [386], Mighty Mutanimals [423], Plains [385], Plains [391], Plains [411], Plains [422], Plains [443], Wanderbrine Preacher [497]; Graveyard: Call a Surprise Witness [489], Call a Surprise Witness [500], Requisition Raid [447]; Exile: Call a Surprise Witness [466], Healer's Hawk [476], Leader's Talent [504], Plains [450], Plains [468], Plains [503], Plains [505], Winnowing [451]
+      gian31: Battlefield: Crystal Barricade [418], Laughing Jasper Flint [438], Mountain [417], Mountain [470], Mountain [507], Stasis Snare [471], Swamp [389], Swamp [398], Swamp [437], Swamp [453], Treasure Dredger [454]; Graveyard: Cruelclaw's Heist [409], Fell [481]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 7, seq 174, Phase_Main1: LOSTBOY 24 -> 26. Combat declaration observed; exact assignment unavailable. Previous captured action: Ajani's Pridemate.
+- Turn 9, seq 226, Phase_Main1: LOSTBOY 26 -> 29. Combat declaration observed; exact assignment unavailable. Previous captured action: Requisition Raid.
+- Turn 11, seq 287, Phase_Main1: LOSTBOY 30 -> 34. Combat declaration observed; exact assignment unavailable. Previous captured action: Ajani's Pridemate.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 1 token creations observed; 1 active as last observed; 0 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Mutant [430] controller=LOSTBOY; created Turn 7 (3/3); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 9, object 430 (latest observed P/T 3/3; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Plains [owner=LOSTBOY, controller=LOSTBOY] moves Hand (LOSTBOY) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Hinterland Sanctifier [owner=LOSTBOY, controller=LOSTBOY] moves Hand (LOSTBOY) -> Stack (CastSpell).
+- Turn 1, seq 10: Hinterland Sanctifier [owner=LOSTBOY, controller=LOSTBOY] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 24: Mountain [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 27: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 41: Plains [owner=LOSTBOY, controller=LOSTBOY] moves Library (LOSTBOY) -> Hand (LOSTBOY) (Draw).
+- Turn 3, seq 44: Plains [owner=LOSTBOY, controller=LOSTBOY] moves Hand (LOSTBOY) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Ajani's Pridemate [owner=LOSTBOY, controller=LOSTBOY] moves Hand (LOSTBOY) -> Stack (CastSpell).
+- Turn 3, seq 47: Ajani's Pridemate [owner=LOSTBOY, controller=LOSTBOY] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 66: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 69: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 70: Cruelclaw's Heist [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 75: Healer's Hawk [owner=LOSTBOY, controller=LOSTBOY] moves Library (LOSTBOY) -> Hand (LOSTBOY) (Draw).
+- Turn 4, seq 77: Crystal Barricade [owner=LOSTBOY, controller=gian31] moves Hand (LOSTBOY) -> Exile (Exile).
+- Turn 4, seq 77: Cruelclaw's Heist [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 5, seq 91: Call a Surprise Witness [owner/controller metadata unavailable] moves Library (LOSTBOY) -> Hand (LOSTBOY) (Draw).
+- Turn 5, seq 94: Plains [owner=LOSTBOY, controller=LOSTBOY] moves Hand (LOSTBOY) -> Battlefield (PlayLand).
+- Turn 5, seq 95: Healer's Hawk [owner=LOSTBOY, controller=LOSTBOY] moves Hand (LOSTBOY) -> Stack (CastSpell).
+- Turn 5, seq 97: Healer's Hawk [owner=LOSTBOY, controller=LOSTBOY] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 122: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 125: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 126: Crystal Barricade [owner=LOSTBOY, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 6, seq 128: Crystal Barricade [owner=LOSTBOY, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 142: Plains [owner/controller metadata unavailable] moves Library (LOSTBOY) -> Hand (LOSTBOY) (Draw).
+- Turn 7, seq 145: Plains [owner=LOSTBOY, controller=LOSTBOY] moves Hand (LOSTBOY) -> Battlefield (PlayLand).
+- Turn 7, seq 146: Mighty Mutanimals [owner=LOSTBOY, controller=LOSTBOY] moves Hand (LOSTBOY) -> Stack (CastSpell).
+- Turn 7, seq 148: Mighty Mutanimals [owner=LOSTBOY, controller=LOSTBOY] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 186: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 189: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 190: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 192: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 206: Requisition Raid [owner/controller metadata unavailable] moves Library (LOSTBOY) -> Hand (LOSTBOY) (Draw).
+- Turn 9, seq 209: Plains [owner=LOSTBOY, controller=LOSTBOY] moves Hand (LOSTBOY) -> Battlefield (PlayLand).
+- Turn 9, seq 211: Requisition Raid [owner=LOSTBOY, controller=LOSTBOY] moves Hand (LOSTBOY) -> Stack (CastSpell).
+- Turn 9, seq 216: Requisition Raid [owner=LOSTBOY, controller=LOSTBOY] moves Stack -> Graveyard (LOSTBOY) (Resolve).
+- Turn 10, seq 240: Plains [owner=LOSTBOY, controller=LOSTBOY] moves Library (LOSTBOY) -> Exile (Exile).
+- Turn 10, seq 240: Winnowing [owner=LOSTBOY, controller=LOSTBOY] moves Library (LOSTBOY) -> Exile (Exile).
+- Turn 10, seq 242: Treasure Dredger [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 245: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 246: Treasure Dredger [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 248: Treasure Dredger [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 263: Wanderbrine Preacher [owner/controller metadata unavailable] moves Library (LOSTBOY) -> Hand (LOSTBOY) (Draw).
+- Turn 11, seq 266: Wanderbrine Preacher [owner=LOSTBOY, controller=LOSTBOY] moves Hand (LOSTBOY) -> Stack (CastSpell).
+- Turn 11, seq 268: Wanderbrine Preacher [owner=LOSTBOY, controller=LOSTBOY] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 301: Plains [owner=LOSTBOY, controller=LOSTBOY] moves Library (LOSTBOY) -> Exile (Exile).
+- Turn 12, seq 301: Stasis Snare [owner=LOSTBOY, controller=gian31] moves Library (LOSTBOY) -> Exile (Exile).
+- Turn 12, seq 301: Call a Surprise Witness [owner=LOSTBOY, controller=LOSTBOY] moves Library (LOSTBOY) -> Exile (Exile).
+- Turn 12, seq 303: Fell [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 306: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 307: Stasis Snare [owner=LOSTBOY, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 12, seq 309: Stasis Snare [owner=LOSTBOY, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 313: Healer's Hawk [owner=LOSTBOY, controller=LOSTBOY] moves Battlefield -> Exile (Exile).
+- Turn 12, seq 314: Fell [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 318: Ajani's Pridemate [owner=LOSTBOY, controller=LOSTBOY] moves Battlefield -> Graveyard (LOSTBOY) (Destroy).
+- Turn 12, seq 318: Fell [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 13, seq 333: Call a Surprise Witness [owner/controller metadata unavailable] moves Library (LOSTBOY) -> Hand (LOSTBOY) (Draw).
+- Turn 13, seq 336: Call a Surprise Witness [owner=LOSTBOY, controller=LOSTBOY] moves Hand (LOSTBOY) -> Stack (CastSpell).
+- Turn 13, seq 340: Ajani's Pridemate [owner=LOSTBOY, controller=LOSTBOY] moves Graveyard (LOSTBOY) -> Battlefield (Return).
+- Turn 13, seq 340: Call a Surprise Witness [owner=LOSTBOY, controller=LOSTBOY] moves Stack -> Graveyard (LOSTBOY) (Resolve).
+- Turn 13, seq 365: Wanderbrine Preacher [owner=LOSTBOY, controller=LOSTBOY] moves Battlefield -> Graveyard (LOSTBOY) (SBA_Damage).
+- Turn 13, seq 370: Call a Surprise Witness [owner=LOSTBOY, controller=LOSTBOY] moves Hand (LOSTBOY) -> Stack (CastSpell).
+- Turn 13, seq 374: Wanderbrine Preacher [owner=LOSTBOY, controller=LOSTBOY] moves Graveyard (LOSTBOY) -> Battlefield (Return).
+- Turn 13, seq 374: Call a Surprise Witness [owner=LOSTBOY, controller=LOSTBOY] moves Stack -> Graveyard (LOSTBOY) (Resolve).
+- Turn 14, seq 391: Plains [owner=LOSTBOY, controller=LOSTBOY] moves Library (LOSTBOY) -> Exile (Exile).
+- Turn 14, seq 391: Plains [owner=LOSTBOY, controller=LOSTBOY] moves Library (LOSTBOY) -> Exile (Exile).
+- Turn 14, seq 391: Leader's Talent [owner=LOSTBOY, controller=LOSTBOY] moves Library (LOSTBOY) -> Exile (Exile).
+- Turn 14, seq 393: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 396: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+Equivalent transfer duplicates retained as diagnostics (rendered once above):
+- Turn 9: Plains [443] Hand (LOSTBOY) -> Battlefield (PlayLand); sequences 209, 210.
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 275 becomes object 385 [Plains].
+- Turn 1, seq 8: object 272 becomes object 386 [Hinterland Sanctifier].
+- Turn 2, seq 24: object 219 becomes object 388 [Mountain].
+- Turn 2, seq 27: object 215 becomes object 389 [Swamp].
+- Turn 3, seq 41: object 279 becomes object 390 [Plains].
+- Turn 3, seq 44: object 274 becomes object 391 [Plains].
+- Turn 3, seq 45: object 273 becomes object 392 [Ajani's Pridemate].
+- Turn 4, seq 66: object 220 becomes object 397 [Swamp].
+- Turn 4, seq 69: object 397 becomes object 398 [Swamp].
+- Turn 4, seq 70: object 214 becomes object 399 [Cruelclaw's Heist].
+- Turn 4, seq 75: object 280 becomes object 402 [Healer's Hawk].
+- Turn 4, seq 77: object 278 becomes object 408 [Crystal Barricade].
+- Turn 4, seq 77: object 399 becomes object 409 [Cruelclaw's Heist].
+- Turn 5, seq 91: object 281 becomes object 410 [Call a Surprise Witness].
+- Turn 5, seq 94: object 276 becomes object 411 [Plains].
+- Turn 5, seq 95: object 402 becomes object 412 [Healer's Hawk].
+- Turn 6, seq 122: object 221 becomes object 416 [Swamp].
+- Turn 6, seq 125: object 388 becomes object 417 [Mountain].
+- Turn 6, seq 126: object 408 becomes object 418 [Crystal Barricade].
+- Turn 7, seq 142: object 282 becomes object 421 [Plains].
+- Turn 7, seq 145: object 421 becomes object 422 [Plains].
+- Turn 7, seq 146: object 277 becomes object 423 [Mighty Mutanimals].
+- Turn 8, seq 186: object 222 becomes object 436 [Swamp].
+- Turn 8, seq 189: object 416 becomes object 437 [Swamp].
+- Turn 8, seq 190: object 217 becomes object 438 [Laughing Jasper Flint].
+- Turn 9, seq 206: object 283 becomes object 442 [Requisition Raid].
+- Turn 9, seq 209: object 390 becomes object 443 [Plains].
+- Turn 9, seq 210: object 390 becomes object 443 [Plains].
+- Turn 9, seq 211: object 442 becomes object 444 [Requisition Raid].
+- Turn 9, seq 216: object 444 becomes object 447 [Requisition Raid].
+- Turn 10, seq 240: object 284 becomes object 450 [Plains].
+- Turn 10, seq 240: object 285 becomes object 451 [Winnowing].
+- Turn 10, seq 242: object 223 becomes object 452 [Treasure Dredger].
+- Turn 10, seq 245: object 436 becomes object 453 [Swamp].
+- Turn 10, seq 246: object 452 becomes object 454 [Treasure Dredger].
+- Turn 11, seq 263: object 286 becomes object 457 [Wanderbrine Preacher].
+- Turn 11, seq 266: object 457 becomes object 458 [Wanderbrine Preacher].
+- Turn 12, seq 301: object 289 becomes object 468 [Plains].
+- Turn 12, seq 301: object 288 becomes object 467 [Stasis Snare].
+- Turn 12, seq 301: object 287 becomes object 466 [Call a Surprise Witness].
+- Turn 12, seq 303: object 224 becomes object 469 [Fell].
+- Turn 12, seq 306: object 213 becomes object 470 [Mountain].
+- Turn 12, seq 307: object 467 becomes object 471 [Stasis Snare].
+- Turn 12, seq 313: object 412 becomes object 476 [Healer's Hawk].
+- Turn 12, seq 314: object 469 becomes object 477 [Fell].
+- Turn 12, seq 318: object 392 becomes object 480 [Ajani's Pridemate].
+- Turn 12, seq 318: object 477 becomes object 481 [Fell].
+- Turn 13, seq 333: object 290 becomes object 482 [Call a Surprise Witness].
+- Turn 13, seq 336: object 482 becomes object 483 [Call a Surprise Witness].
+- Turn 13, seq 340: object 480 becomes object 486 [Ajani's Pridemate].
+- Turn 13, seq 340: object 483 becomes object 489 [Call a Surprise Witness].
+- Turn 13, seq 365: object 458 becomes object 493 [Wanderbrine Preacher].
+- Turn 13, seq 370: object 410 becomes object 494 [Call a Surprise Witness].
+- Turn 13, seq 374: object 493 becomes object 497 [Wanderbrine Preacher].
+- Turn 13, seq 374: object 494 becomes object 500 [Call a Surprise Witness].
+- Turn 14, seq 391: object 293 becomes object 505 [Plains].
+- Turn 14, seq 391: object 291 becomes object 503 [Plains].
+- Turn 14, seq 391: object 292 becomes object 504 [Leader's Talent].
+- Turn 14, seq 393: object 225 becomes object 506 [Tinybones, Bauble Burglar].
+- Turn 14, seq 396: object 216 becomes object 507 [Mountain].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: LOSTBOY plays Plains (object 385) from Hand (LOSTBOY) to Battlefield.
+- Turn 2: gian31 plays Swamp (object 389) from Hand (gian31) to Battlefield.
+- Turn 3: LOSTBOY plays Plains (object 391) from Hand (LOSTBOY) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 398) from Hand (gian31) to Battlefield.
+- Turn 5: LOSTBOY plays Plains (object 411) from Hand (LOSTBOY) to Battlefield.
+- Turn 6: gian31 plays Mountain (object 417) from Hand (gian31) to Battlefield.
+- Turn 7: LOSTBOY plays Plains (object 422) from Hand (LOSTBOY) to Battlefield.
+- Turn 8: gian31 plays Swamp (object 437) from Hand (gian31) to Battlefield.
+- Turn 9: LOSTBOY plays Plains (object 443) from Hand (LOSTBOY) to Battlefield.
+- Turn 10: gian31 plays Swamp (object 453) from Hand (gian31) to Battlefield.
+- Turn 12: gian31 plays Mountain (object 470) from Hand (gian31) to Battlefield.
+- Turn 14: gian31 plays Mountain (object 507) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 7: ordered adjacent records Hinterland Sanctifier -> Ajani's Pridemate; observed repetitions=2; net life: LOSTBOY +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Ajani's Pridemate=3, Hinterland Sanctifier=2.
+  Individual ability records remain in the timeline.
+- Turn 13: ordered adjacent records Mighty Mutanimals -> Hinterland Sanctifier; observed repetitions=2; net life: LOSTBOY +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Hinterland Sanctifier=2, Mighty Mutanimals=2.
+  Individual ability records remain in the timeline.
+- Turn 13: ordered adjacent records Hinterland Sanctifier -> Ajani's Pridemate; observed repetitions=2; net life: LOSTBOY +2. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Ajani's Pridemate=3, Hinterland Sanctifier=2.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 7: ordered adjacent records Hinterland Sanctifier -> Ajani's Pridemate; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Ajani's Pridemate: casts=1; abilities=11 (triggered=11, activated=0) across turns [3, 3, 5, 7, 7, 7, 9, 11, 11, 13, 13, 13]
+  observed effect totals: draws=0, tokens=0, counters=11, returns=0, damage=0, life_changes=0, other=11
+  observed effects: +1 counter(s), P/T +1/+1
+- Hinterland Sanctifier: casts=1; abilities=7 (triggered=7, activated=0) across turns [1, 3, 5, 7, 7, 11, 13, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=7, other=0
+  observed effects: life +1
+- Mighty Mutanimals: casts=1; abilities=5 (triggered=5, activated=0) across turns [7, 7, 7, 11, 13, 13]
+  observed effect totals: draws=0, tokens=1, counters=4, returns=0, damage=0, life_changes=0, other=4
+  observed effects: +1 counter(s), P/T +1/+1, token creation
+- Laughing Jasper Flint: casts=1; abilities=3 (triggered=3, activated=0) across turns [8, 10, 12, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=8
+  observed effects: exile
+- Call a Surprise Witness: casts=2 across turns [13, 13]
+  observed effect totals: draws=0, tokens=0, counters=2, returns=2, damage=0, life_changes=0, other=0
+  observed effects: +1 counter(s), return to battlefield
+- Stasis Snare: casts=1; abilities=1 (triggered=1, activated=0) across turns [12, 12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: exile
+- Wanderbrine Preacher: casts=1; abilities=1 (triggered=1, activated=0) across turns [11, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +2
+- Crystal Barricade: casts=1 across turns [6]
+- Fell: casts=1 across turns [12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Healer's Hawk: casts=1 across turns [5]
+- Requisition Raid: casts=1 across turns [9]
+  observed effect totals: draws=0, tokens=0, counters=5, returns=0, damage=0, life_changes=0, other=5
+  observed effects: +1 counter(s), P/T +1/+1
+- Treasure Dredger: casts=1 across turns [10]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 5 - DeclareAttack, DeclareBlock (active=LOSTBOY)
+  attacker: Hinterland Sanctifier (LOSTBOY) -> gian31; unblocked in this observed snapshot
+  attacker: Ajani's Pridemate (LOSTBOY) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=LOSTBOY)
+  attacker: Healer's Hawk (LOSTBOY) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=LOSTBOY)
+  attacker: Healer's Hawk (LOSTBOY) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=LOSTBOY)
+  attacker: Healer's Hawk (LOSTBOY) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 - DeclareAttack, CombatDamage (active=LOSTBOY)
+  attacker: Wanderbrine Preacher (LOSTBOY) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 7: Ability of Ajani's Pridemate (active=LOSTBOY) - Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to target.
+- Turn 9: Ability of Ajani's Pridemate (active=LOSTBOY) - Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to target.
+- Turn 11: Ability of Ajani's Pridemate (active=LOSTBOY) - Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to target.
+- Turn 13: Ability of Wanderbrine Preacher (active=LOSTBOY) - Ability of Wanderbrine Preacher: LOSTBOY gains 2 life.
+- Turn 13: Ability of Ajani's Pridemate (active=LOSTBOY) - Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to target.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 212: Gonti, Night Minister | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 213: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 214: Cruelclaw's Heist | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 215: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 216: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 217: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 218: Cruelclaw's Heist | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 276: Plains | controller=LOSTBOY | owner=LOSTBOY | zone=Hand (latest_object_observation)
+- 277: Mighty Mutanimals | controller=LOSTBOY | owner=LOSTBOY | zone=Hand (latest_object_observation)
+- 278: Crystal Barricade | controller=LOSTBOY | owner=LOSTBOY | zone=Hand (latest_object_observation)
+- 385: Plains | controller=LOSTBOY | owner=LOSTBOY | zone=Battlefield (latest_object_observation)
+- 386: Hinterland Sanctifier | controller=LOSTBOY | owner=LOSTBOY | zone=Battlefield (latest_object_observation)
+- 388: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 389: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 390: Plains | controller=LOSTBOY | owner=LOSTBOY | zone=Hand (latest_object_observation)
+- 391: Plains | controller=LOSTBOY | owner=LOSTBOY | zone=Battlefield (latest_object_observation)
+- 392: Ajani's Pridemate | controller=LOSTBOY | owner=LOSTBOY | zone=Battlefield (latest_object_observation)
+- 395: object 395 | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 396: Deal Gone Bad | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 397: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 398: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 399: Cruelclaw's Heist | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 402: Healer's Hawk | controller=LOSTBOY | owner=LOSTBOY | zone=Hand (latest_object_observation)
+- 403: Healer's Hawk | controller=LOSTBOY | owner=LOSTBOY | zone=Hand (latest_object_observation)
+- 404: Plains | controller=LOSTBOY | owner=LOSTBOY | zone=Hand (latest_object_observation)
+- 405: Mighty Mutanimals | controller=LOSTBOY | owner=LOSTBOY | zone=Hand (latest_object_observation)
+- 406: Crystal Barricade | controller=LOSTBOY | owner=LOSTBOY | zone=Hand (latest_object_observation)
+- 407: Plains | controller=LOSTBOY | owner=LOSTBOY | zone=Hand (latest_object_observation)
+- 408: Crystal Barricade | controller=gian31 | owner=LOSTBOY | zone=Exile (latest_object_observation)
+- 409: Cruelclaw's Heist | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 411: Plains | controller=LOSTBOY | owner=LOSTBOY | zone=Battlefield (latest_object_observation)
+- 412: Healer's Hawk | controller=LOSTBOY | owner=LOSTBOY | zone=Battlefield (latest_object_observation)
+- 414: object 414 | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 415: Deal Gone Bad | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 416: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 417: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 418: Crystal Barricade | controller=gian31 | owner=LOSTBOY | zone=Battlefield (latest_object_observation)
+- 422: Plains | controller=LOSTBOY | owner=LOSTBOY | zone=Battlefield (latest_object_observation)
+- 423: Mighty Mutanimals | controller=LOSTBOY | owner=LOSTBOY | zone=Battlefield (latest_object_observation)
+- 428: object 428 | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 429: object 429 | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 430: Mutant | controller=LOSTBOY | owner=LOSTBOY | zone=Battlefield (latest_object_observation)
+- 431: object 431 | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 432: object 432 | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 433: Deal Gone Bad | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 434: Deal Gone Bad | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 435: Deal Gone Bad | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 436: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 437: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 438: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 443: Plains | controller=LOSTBOY | owner=LOSTBOY | zone=Battlefield (latest_object_observation)
+- 444: Requisition Raid | controller=LOSTBOY | owner=LOSTBOY | zone=Stack (latest_object_observation)
+- 447: Requisition Raid | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 448: Deal Gone Bad | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 449: object 449 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 450: Plains | controller=LOSTBOY | owner=LOSTBOY | zone=Exile (latest_object_observation)
+- 451: Winnowing | controller=LOSTBOY | owner=LOSTBOY | zone=Exile (latest_object_observation)
+- 452: Treasure Dredger | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 453: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 454: Treasure Dredger | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 458: Wanderbrine Preacher | controller=LOSTBOY | owner=LOSTBOY | zone=Battlefield (latest_object_observation)
+- 461: object 461 | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 462: object 462 | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 463: Deal Gone Bad | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 464: Deal Gone Bad | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 465: object 465 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 466: Call a Surprise Witness | controller=LOSTBOY | owner=LOSTBOY | zone=Exile (latest_object_observation)
+- 467: Stasis Snare | controller=gian31 | owner=LOSTBOY | zone=Exile (latest_object_observation)
+- 468: Plains | controller=LOSTBOY | owner=LOSTBOY | zone=Exile (latest_object_observation)
+- 469: Fell | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 470: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 471: Stasis Snare | controller=gian31 | owner=LOSTBOY | zone=Stack (latest_object_observation)
+- 475: object 475 | controller=gian31 | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 476: Healer's Hawk | controller=LOSTBOY | owner=LOSTBOY | zone=Exile (latest_object_observation)
+- 477: Fell | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 480: Ajani's Pridemate | controller=LOSTBOY | owner=LOSTBOY | zone=Graveyard (latest_object_observation)
+- 481: Fell | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 483: Call a Surprise Witness | controller=LOSTBOY | owner=LOSTBOY | zone=Stack (latest_object_observation)
+- 486: Ajani's Pridemate | controller=LOSTBOY | owner=LOSTBOY | zone=Battlefield (latest_object_observation)
+- 487: object 487 | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 488: object 488 | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 489: Call a Surprise Witness | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 490: Deal Gone Bad | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 491: object 491 | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 492: Deal Gone Bad | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 493: Wanderbrine Preacher | controller=LOSTBOY | owner=LOSTBOY | zone=Battlefield (latest_object_observation)
+- 494: Call a Surprise Witness | controller=LOSTBOY | owner=LOSTBOY | zone=Hand (latest_object_observation)
+- 497: Wanderbrine Preacher | controller=LOSTBOY | owner=LOSTBOY | zone=Battlefield (latest_object_observation)
+- 498: object 498 | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 499: object 499 | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 500: Call a Surprise Witness | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 501: Deal Gone Bad | controller=LOSTBOY | owner=LOSTBOY | zone=unknown (inferred unknown) (latest_object_observation)
+- 502: object 502 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 503: Plains | controller=LOSTBOY | owner=LOSTBOY | zone=Exile (latest_object_observation)
+- 504: Leader's Talent | controller=LOSTBOY | owner=LOSTBOY | zone=Exile (latest_object_observation)
+- 505: Plains | controller=LOSTBOY | owner=LOSTBOY | zone=Exile (latest_object_observation)
+- 506: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 507: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+LOSTBOY: 63 total items
+  zones: Battlefield=14, Exile=8, Graveyard=1, Hand=11, Stack=2, unknown=27
+  objects: Plains x13, Deal Gone Bad x11, Call a Surprise Witness x5, Healer's Hawk x4, Ajani's Pridemate x3, Mighty Mutanimals x3, Wanderbrine Preacher x3, Crystal Barricade x2, Requisition Raid x2, Hinterland Sanctifier, Leader's Talent, Mutant
+gian31: 35 total items
+  zones: Battlefield=10, Exile=2, Hand=14, Stack=3, unknown=6
+  objects: Swamp x8, Mountain x6, Cruelclaw's Heist x4, Fell x3, Crystal Barricade x2, Laughing Jasper Flint x2, Stasis Snare x2, Treasure Dredger x2, Gonti, Night Minister, Tinybones, Bauble Burglar, object 449, object 465
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (10): Crystal Barricade, Laughing Jasper Flint, Mountain, Mountain, Mountain, Swamp, Swamp, Swamp, Swamp, Treasure Dredger
+  Graveyard: 0 card(s)
+LOSTBOY:
+  Battlefield (14): Ajani's Pridemate, Ajani's Pridemate, Healer's Hawk, Hinterland Sanctifier, Mighty Mutanimals, Mutant, Plains, Plains, Plains, Plains, Plains, Wanderbrine Preacher, Wanderbrine Preacher, Wanderbrine Preacher
+  Graveyard: 1 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+33 objects have no resolved final zone and are omitted from the known board state.
+LOSTBOY: 27 unknown object(s)
+gian31: 6 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=25, Stack=5
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+LOSTBOY:
+  Battlefield (10): Plains, Hinterland Sanctifier, Plains, Plains, Plains, Mighty Mutanimals, Mutant, Plains, Ajani's Pridemate, Wanderbrine Preacher
+  Graveyard (3): Requisition Raid, Call a Surprise Witness, Call a Surprise Witness
+  Exile (8): Plains, Winnowing, Call a Surprise Witness, Plains, Healer's Hawk, Plains, Leader's Talent, Plains
+gian31:
+  Battlefield (11): Swamp, Swamp, Mountain, Crystal Barricade, Swamp, Laughing Jasper Flint, Swamp, Treasure Dredger, Mountain, Stasis Snare, Mountain
+  Graveyard (2): Cruelclaw's Heist, Fell
+Known non-persistent entries (counts only):
+  LOSTBOY: Limbo=7
+  gian31: Hand=3, Limbo=5
+  unknown: Hand=1, Library=137, Limbo=10
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: LOSTBOY Battlefield=2
+- Turn 2: LOSTBOY Battlefield=2; gian31 Battlefield=1
+- Turn 3: LOSTBOY Battlefield=4; gian31 Battlefield=1
+- Turn 4: LOSTBOY Battlefield=4; gian31 Battlefield=2; gian31 Graveyard=1; gian31 Exile=1
+- Turn 5: LOSTBOY Battlefield=6; gian31 Battlefield=2; gian31 Graveyard=1; gian31 Exile=1
+- Turn 6: LOSTBOY Battlefield=6; gian31 Battlefield=4; gian31 Graveyard=1
+- Turn 7: LOSTBOY Battlefield=8; gian31 Battlefield=4; gian31 Graveyard=1
+- Turn 8: LOSTBOY Battlefield=8; gian31 Battlefield=6; gian31 Graveyard=1
+- Turn 9: LOSTBOY Battlefield=9; LOSTBOY Graveyard=1; gian31 Battlefield=6; gian31 Graveyard=1
+- Turn 10: LOSTBOY Battlefield=9; LOSTBOY Graveyard=1; LOSTBOY Exile=2; gian31 Battlefield=8; gian31 Graveyard=1
+- Turn 11: LOSTBOY Battlefield=10; LOSTBOY Graveyard=1; LOSTBOY Exile=2; gian31 Battlefield=8; gian31 Graveyard=1
+- Turn 12: LOSTBOY Battlefield=8; LOSTBOY Graveyard=2; LOSTBOY Exile=5; gian31 Battlefield=10; gian31 Graveyard=2
+- Turn 13: LOSTBOY Battlefield=9; LOSTBOY Graveyard=3; LOSTBOY Exile=5; gian31 Battlefield=10; gian31 Graveyard=2
+- Turn 14: LOSTBOY Battlefield=9; LOSTBOY Graveyard=3; LOSTBOY Exile=8; gian31 Battlefield=11; gian31 Graveyard=2
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Ajani's Pridemate resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Healer's Hawk resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Crystal Barricade resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Mighty Mutanimals resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Laughing Jasper Flint resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Treasure Dredger resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Wanderbrine Preacher resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Stasis Snare resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
