@@ -1,0 +1,821 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, greko7110
+Seat map: Seat 1=gian31, Seat 2=greko7110
+Turn range (known): 1 - 17
+Records: 37
+Action chains: 29
+Winner: gian31
+Final life: {'gian31': 4, 'greko7110': 18}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 17 (Phase_Main1; Ability of Tinybones, Bauble Burglar, seq 462).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 32 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 10 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 7, 11, 12, 13, 15, 17] (raw records=10; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 16 explicit Library -> Hand movement(s); named in the draw record=11, resolved through an explicit identity transition=5, unresolved=0.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Duress [163], Binding Negotiation [164], Reno and Rude [165], Forsaken Miner [166], Swamp [167], Swamp [168], Binding Negotiation [169].
+  - unknown: 7 observed card(s): object 223 [223], object 224 [224], object 225 [225], object 226 [226], object 227 [227], object 228 [228], object 229 [229].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 4, 'greko7110': 18}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 17 (Phase_Main1; Ability of Tinybones, Bauble Burglar, seq 462).
+Last captured life snapshot: gian31 7 -> 4 (seq 320).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Forest, Sazh's Chocobo.
+- Turn 3: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Tinybones, Bauble Burglar.
+- Turn 4: actions: cards=1, abilities=4; explicit battlefield entries=Sazh's Chocobo, Evolving Wilds, Forest; explicit battlefield exits=Evolving Wilds.
+- Turn 5: actions: cards=0, abilities=1.
+- Turn 6: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Tifa Lockhart.
+- Turn 7: actions: cards=1, abilities=1; explicit battlefield entries=Swamp, Forsaken Miner.
+- Turn 8: actions: cards=0, abilities=0; combat snapshots=1; life mutations=1.
+- Turn 9: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Thought-Stalker Warlock.
+- Turn 10: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1.
+- Turn 11: actions: cards=1, abilities=1; explicit battlefield entries=Mossborn Hydra, Swamp.
+- Turn 12: actions: cards=1, abilities=3; combat snapshots=1; life mutations=1; explicit battlefield entries=Forest, Mossborn Hydra; explicit battlefield exits=Thought-Stalker Warlock.
+- Turn 13: actions: cards=1, abilities=2; explicit battlefield entries=Swamp, Ouroboroid.
+- Turn 14: actions: cards=1, abilities=5; combat snapshots=1; explicit battlefield entries=Earthbender Ascension, Forest; explicit battlefield exits=Sazh's Chocobo, Ouroboroid.
+- Turn 15: actions: cards=2, abilities=2; explicit battlefield entries=Mountain, Ouroboroid, Reno and Rude.
+- Turn 16: actions: cards=1, abilities=1; explicit battlefield entries=Ouroboroid.
+- Turn 17: actions: cards=0, abilities=2; explicit battlefield entries=Swamp.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [287] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+      Duress [288] Hand (gian31) -> Stack (CastSpell; GRE sequence 8).
+      Innkeeper's Talent [297] Hand (greko7110) -> Graveyard (greko7110) (Discard; GRE sequence 13).
+      Duress [298] Stack -> Graveyard (gian31) (Resolve; GRE sequence 13).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [287]; Graveyard: Duress [298]
+      greko7110: Graveyard: Innkeeper's Talent [297]
+
+Turn 2
+  - Sazh's Chocobo [valid_resolution_no_immediate_mutation, seq=33] (active=greko7110, phase=Phase_Main1, controller=greko7110, owner=greko7110, source_object=301)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sazh's Chocobo resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sazh's Chocobo (object 301) Hand (greko7110) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sazh's Chocobo (object 301) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tifa Lockhart [299] Library (greko7110) -> Hand (greko7110) (Draw; GRE sequence 27).
+      Forest [300] Hand (greko7110) -> Battlefield (PlayLand; GRE sequence 30).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [287]; Graveyard: Duress [298]
+      greko7110: Graveyard: Innkeeper's Talent [297]; Battlefield: Forest [300], Sazh's Chocobo [301]
+
+Turn 3
+  - Tinybones, Bauble Burglar [valid_resolution_no_immediate_mutation, seq=53] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=305)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, Bauble Burglar resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 305) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 305) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tinybones, Bauble Burglar [303] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 47).
+      Swamp [304] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 50).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [287], Swamp [304], Tinybones, Bauble Burglar [305]; Graveyard: Duress [298]
+      greko7110: Graveyard: Innkeeper's Talent [297]; Battlefield: Forest [300], Sazh's Chocobo [301]
+
+Turn 4
+  - Sazh's Chocobo [valid_resolution_no_immediate_mutation, seq=72] (active=greko7110, phase=Phase_Main1, controller=greko7110, owner=greko7110, source_object=309)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sazh's Chocobo resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sazh's Chocobo (object 309) Hand (greko7110) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sazh's Chocobo (object 309) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Sazh's Chocobo [observed_semantic_effect, seq=76] (active=greko7110, phase=Phase_Main1, controller=greko7110, owner=greko7110, source_object=309, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Sazh's Chocobo: Sazh's Chocobo gets +1/+1; 1 counter(s) are added to Sazh's Chocobo [309].
+  - Ability of Sazh's Chocobo [observed_semantic_effect, seq=78] (active=greko7110, phase=Phase_Main1, controller=greko7110, owner=greko7110, source_object=301, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Sazh's Chocobo: Sazh's Chocobo gets +1/+1; 1 counter(s) are added to Sazh's Chocobo [301].
+  - Ability of Sazh's Chocobo [observed_semantic_effect, seq=86] (active=greko7110, phase=Phase_Main1, controller=greko7110, owner=greko7110, source_object=309, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Sazh's Chocobo: Sazh's Chocobo gets +1/+1; 1 counter(s) are added to Sazh's Chocobo [309].
+  - Ability of Sazh's Chocobo [observed_semantic_effect, seq=88] (active=greko7110, phase=Phase_Main1, controller=greko7110, owner=greko7110, source_object=301, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Sazh's Chocobo: Sazh's Chocobo gets +1/+1; 1 counter(s) are added to Sazh's Chocobo [301].
+    additional protocol-observed zone movements not assigned to an action chain:
+      Sazh's Chocobo [308] Library (greko7110) -> Hand (greko7110) (Draw; GRE sequence 67).
+      Evolving Wilds [311] Hand (greko7110) -> Battlefield (PlayLand; GRE sequence 73).
+      Evolving Wilds [315] Battlefield -> Graveyard (greko7110) (Sacrifice; GRE sequence 79).
+        sacrifice observed after Ability of Sazh's Chocobo (seq 78); direct causal linkage is unavailable.
+      Forest [316] Library (greko7110) -> Battlefield (Put; GRE sequence 82).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [287], Swamp [304], Tinybones, Bauble Burglar [305]; Graveyard: Duress [298]
+      greko7110: Graveyard: Evolving Wilds [315], Innkeeper's Talent [297]; Battlefield: Forest [300], Forest [316], Sazh's Chocobo [301], Sazh's Chocobo [309]
+
+Turn 5
+  - Ability of Tinybones, Bauble Burglar [observed_semantic_effect, seq=113] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=305, source_last_explicit_zone=Battlefield)
+      effects: exile, +1 counter(s)
+      narrative: Ability of Tinybones, Bauble Burglar: exiles Ouroboroid; 1 counter(s) are added to Ouroboroid [381].
+      explicit effect object references: Ouroboroid [378], Ouroboroid [381] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Ouroboroid (object 381) Graveyard (greko7110) -> Exile (Exile; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Laughing Jasper Flint [373] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 103).
+      Binding Negotiation [374] Hand (gian31) -> Stack (CastSpell; GRE sequence 106).
+      Ouroboroid [378] Hand (greko7110) -> Graveyard (greko7110) (Discard; GRE sequence 111).
+      Binding Negotiation [380] Stack -> Graveyard (gian31) (Resolve; GRE sequence 111).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [287], Swamp [304], Tinybones, Bauble Burglar [305]; Graveyard: Binding Negotiation [380], Duress [298]; Exile: Ouroboroid [381]
+      greko7110: Graveyard: Evolving Wilds [315], Innkeeper's Talent [297]; Battlefield: Forest [300], Forest [316], Sazh's Chocobo [301], Sazh's Chocobo [309]
+
+Turn 6
+  - Tifa Lockhart [valid_resolution_no_immediate_mutation, seq=133] (active=greko7110, phase=Phase_Main1, controller=greko7110, owner=greko7110, source_object=383)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tifa Lockhart resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tifa Lockhart (object 383) Hand (greko7110) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tifa Lockhart (object 383) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=greko7110; frames: DeclareAttack -> CombatDamage):
+      attackers: Sazh's Chocobo [301] (blocked, observed P/T 2/3), Sazh's Chocobo [309] (unblocked, observed P/T 2/3)
+      blockers: Tinybones, Bauble Burglar [305]
+      combat-correlated defending-player life loss: 2; observed attacker power total: 4; snapshot comparison does not reconcile (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Ouroboroid [382] Library (greko7110) -> Hand (greko7110) (Draw; GRE sequence 128).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [287], Swamp [304], Tinybones, Bauble Burglar [305]; Graveyard: Binding Negotiation [380], Duress [298]; Exile: Ouroboroid [381]
+      greko7110: Graveyard: Evolving Wilds [315], Innkeeper's Talent [297]; Battlefield: Forest [300], Forest [316], Sazh's Chocobo [301], Sazh's Chocobo [309], Tifa Lockhart [383]
+
+Turn 7
+  - Ability of Tinybones, Bauble Burglar [observed_semantic_effect, seq=166] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=305, source_last_explicit_zone=Battlefield)
+      effects: exile, +1 counter(s)
+      narrative: Ability of Tinybones, Bauble Burglar: exiles Ouroboroid; 1 counter(s) are added to Ouroboroid [395].
+      explicit effect object references: Ouroboroid [392], Ouroboroid [395] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Ouroboroid (object 395) Graveyard (greko7110) -> Exile (Exile; shared object ID)
+  - Forsaken Miner [valid_resolution_no_immediate_mutation, seq=169] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=396)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Forsaken Miner resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Forsaken Miner (object 396) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Forsaken Miner (object 396) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [386] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 155).
+      Swamp [387] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 158).
+      Binding Negotiation [388] Hand (gian31) -> Stack (CastSpell; GRE sequence 159).
+      Ouroboroid [392] Hand (greko7110) -> Graveyard (greko7110) (Discard; GRE sequence 164).
+      Binding Negotiation [394] Stack -> Graveyard (gian31) (Resolve; GRE sequence 164).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forsaken Miner [396], Swamp [287], Swamp [304], Swamp [387], Tinybones, Bauble Burglar [305]; Graveyard: Binding Negotiation [380], Binding Negotiation [394], Duress [298]; Exile: Ouroboroid [381], Ouroboroid [395]
+      greko7110: Graveyard: Evolving Wilds [315], Innkeeper's Talent [297]; Battlefield: Forest [300], Forest [316], Sazh's Chocobo [301], Sazh's Chocobo [309], Tifa Lockhart [383]
+
+Turn 8
+  Combat snapshots observed (active=greko7110; frames: DeclareAttack -> DeclareBlock):
+      attackers: Sazh's Chocobo [301] (unblocked, observed P/T 2/3), Sazh's Chocobo [309] (unblocked, observed P/T 2/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): gian31 18 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Overprotect [398] Library (greko7110) -> Hand (greko7110) (Draw; GRE sequence 184).
+
+Turn 9
+  - Thought-Stalker Warlock [valid_resolution_no_immediate_mutation, seq=229] (active=gian31, phase=Phase_Main2, controller=gian31, owner=gian31, source_object=400)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Thought-Stalker Warlock resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Thought-Stalker Warlock (object 400) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Thought-Stalker Warlock (object 400) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Tinybones, Bauble Burglar [observed_semantic_effect, seq=236] (active=gian31, phase=Phase_Main2, controller=gian31, owner=gian31, source_object=305, source_last_explicit_zone=Battlefield)
+      effects: exile, +1 counter(s)
+      narrative: Ability of Tinybones, Bauble Burglar: exiles Mossborn Hydra; 1 counter(s) are added to Mossborn Hydra [408].
+      explicit effect object references: Mossborn Hydra [406], Mossborn Hydra [408] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Mossborn Hydra (object 408) Graveyard (greko7110) -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Forsaken Miner [396] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: greko7110 -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): greko7110 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Thought-Stalker Warlock [399] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 208).
+      Mossborn Hydra [406] Hand (greko7110) -> Graveyard (greko7110) (Discard; GRE sequence 234).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forsaken Miner [396], Swamp [287], Swamp [304], Swamp [387], Thought-Stalker Warlock [400], Tinybones, Bauble Burglar [305]; Graveyard: Binding Negotiation [380], Binding Negotiation [394], Duress [298]; Exile: Mossborn Hydra [408], Ouroboroid [381], Ouroboroid [395]
+      greko7110: Graveyard: Evolving Wilds [315], Innkeeper's Talent [297]; Battlefield: Forest [300], Forest [316], Sazh's Chocobo [301], Sazh's Chocobo [309], Tifa Lockhart [383]
+
+Turn 10
+  - Overprotect [observed_semantic_effect, seq=259] (active=greko7110, phase=Phase_Combat, step=Step_DeclareBlock, controller=greko7110, owner=greko7110, source_object=410)
+      effects: P/T +3/+3
+      narrative: Overprotect: Sazh's Chocobo gets +3/+3.
+      explicit effect object references: Sazh's Chocobo [301] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Overprotect (object 410) Hand (greko7110) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Overprotect (object 413) Stack -> Graveyard (greko7110) (Resolve; shared object ID)
+      identity continuity: source object 410 -> transfer object 413 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=greko7110; frames: DeclareAttack -> DeclareBlock):
+      attackers: Sazh's Chocobo [301] (unblocked, observed P/T 5/6), Sazh's Chocobo [309] (unblocked, observed P/T 2/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 7; observed attacker power total: 7; snapshot comparison matches (exact assignment unavailable).
+      P/T timing: combat snapshot power=7; explicit modifiers in the same observed combat context add 3 power to 1/2 unblocked attackers; post-modifier observed reconstruction=10 (partially correlated; individual assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -7 (individual changes below; gains and losses may offset)
+    life (combat-correlated: observed unblocked power 7; life seq 261; exact assignment unavailable): gian31 14 -> 7
+    additional protocol-observed zone movements not assigned to an action chain:
+      Earthbender Ascension [409] Library (greko7110) -> Hand (greko7110) (Draw; GRE sequence 242).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forsaken Miner [396], Swamp [287], Swamp [304], Swamp [387], Thought-Stalker Warlock [400], Tinybones, Bauble Burglar [305]; Graveyard: Binding Negotiation [380], Binding Negotiation [394], Duress [298]; Exile: Mossborn Hydra [408], Ouroboroid [381], Ouroboroid [395]
+      greko7110: Graveyard: Evolving Wilds [315], Innkeeper's Talent [297], Overprotect [413]; Battlefield: Forest [300], Forest [316], Sazh's Chocobo [301], Sazh's Chocobo [309], Tifa Lockhart [383]
+
+Turn 11
+  - Mossborn Hydra [valid_resolution_no_immediate_mutation, seq=276] (active=gian31, phase=Phase_Main1, controller=gian31, owner=greko7110, source_object=415)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Mossborn Hydra resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Mossborn Hydra (object 415) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Mossborn Hydra (object 415) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Mossborn Hydra [observed_semantic_effect, seq=279] (active=gian31, phase=Phase_Main1, controller=gian31, owner=greko7110, source_object=415, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Mossborn Hydra: Mossborn Hydra gets +1/+1; 1 counter(s) are added to Mossborn Hydra [415].
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [414] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 271).
+      Swamp [419] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 277).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forsaken Miner [396], Mossborn Hydra [415], Swamp [287], Swamp [304], Swamp [387], Swamp [419], Thought-Stalker Warlock [400], Tinybones, Bauble Burglar [305]; Graveyard: Binding Negotiation [380], Binding Negotiation [394], Duress [298]; Exile: Ouroboroid [381], Ouroboroid [395]
+      greko7110: Graveyard: Evolving Wilds [315], Innkeeper's Talent [297], Overprotect [413]; Battlefield: Forest [300], Forest [316], Sazh's Chocobo [301], Sazh's Chocobo [309], Tifa Lockhart [383]
+
+Turn 12
+  - Ability of Sazh's Chocobo [observed_semantic_effect, seq=300] (active=greko7110, phase=Phase_Main1, controller=greko7110, owner=greko7110, source_object=309, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Sazh's Chocobo: Sazh's Chocobo gets +1/+1; 1 counter(s) are added to Sazh's Chocobo [309].
+  - Ability of Sazh's Chocobo [observed_semantic_effect, seq=302] (active=greko7110, phase=Phase_Main1, controller=greko7110, owner=greko7110, source_object=301, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Sazh's Chocobo: Sazh's Chocobo gets +1/+1; 1 counter(s) are added to Sazh's Chocobo [301].
+  - Ability of Tifa Lockhart [observed_semantic_effect, seq=304] (active=greko7110, phase=Phase_Main1, controller=greko7110, owner=greko7110, source_object=383, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+0
+      narrative: Ability of Tifa Lockhart: Tifa Lockhart gets +1/+0.
+  - Mossborn Hydra [valid_resolution_no_immediate_mutation, seq=307] (active=greko7110, phase=Phase_Main1, controller=greko7110, owner=greko7110, source_object=426)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Mossborn Hydra resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Mossborn Hydra (object 426) Hand (greko7110) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Mossborn Hydra (object 426) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=greko7110; frames: DeclareAttack -> CombatDamage):
+      attackers: Sazh's Chocobo [301] (blocked, observed P/T 3/4), Sazh's Chocobo [309] (unblocked, observed P/T 3/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 6; snapshot comparison does not reconcile (exact assignment unavailable).
+      combat-result zone change: Thought-Stalker Warlock [430] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -3 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): gian31 7 -> 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [421] Library (greko7110) -> Hand (greko7110) (Draw; GRE sequence 294).
+      Forest [422] Hand (greko7110) -> Battlefield (PlayLand; GRE sequence 297).
+      Thought-Stalker Warlock [430] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 320).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forsaken Miner [396], Mossborn Hydra [415], Swamp [287], Swamp [304], Swamp [387], Swamp [419], Tinybones, Bauble Burglar [305]; Graveyard: Binding Negotiation [380], Binding Negotiation [394], Duress [298], Thought-Stalker Warlock [430]; Exile: Ouroboroid [381], Ouroboroid [395]
+      greko7110: Graveyard: Evolving Wilds [315], Innkeeper's Talent [297], Overprotect [413]; Battlefield: Forest [300], Forest [316], Forest [422], Mossborn Hydra [426], Sazh's Chocobo [301], Sazh's Chocobo [309], Tifa Lockhart [383]
+
+Turn 13
+  - Ability of Mossborn Hydra [observed_semantic_effect, seq=335] (active=gian31, phase=Phase_Main1, controller=gian31, owner=greko7110, source_object=415, source_last_explicit_zone=Battlefield)
+      effects: one +2/+2 counter; observed P/T change +2/+2 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Mossborn Hydra: Mossborn Hydra gets +2/+2; 2 counter(s) are added to Mossborn Hydra [415].
+  - Ouroboroid [valid_resolution_no_immediate_mutation, seq=338] (active=gian31, phase=Phase_Main1, controller=gian31, owner=greko7110, source_object=434)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ouroboroid resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ouroboroid (object 434) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Ouroboroid (object 434) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Ouroboroid [observed_semantic_effect, seq=342] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=greko7110, source_object=434, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, P/T +1/+1, P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s), +1 counter(s), +1 counter(s)
+      narrative: Ability of Ouroboroid: Tinybones, Bauble Burglar gets +1/+1; Forsaken Miner gets +1/+1; Mossborn Hydra gets +1/+1; Ouroboroid gets +1/+1; 1 counter(s) are added to Tinybones, Bauble Burglar [305]; 1 counter(s) are added to Forsaken Miner [396]; 1 counter(s) are added to Mossborn Hydra [415]; 1 counter(s) are added to Ouroboroid [434].
+      explicit effect object references: Tinybones, Bauble Burglar [305], Forsaken Miner [396], Mossborn Hydra [415] (role/targeting only where the protocol identifies it)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [431] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 330).
+      Swamp [432] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 333).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forsaken Miner [396], Mossborn Hydra [415], Ouroboroid [434], Swamp [287], Swamp [304], Swamp [387], Swamp [419], Swamp [432], Tinybones, Bauble Burglar [305]; Graveyard: Binding Negotiation [380], Binding Negotiation [394], Duress [298], Thought-Stalker Warlock [430]; Exile: Ouroboroid [395]
+      greko7110: Graveyard: Evolving Wilds [315], Innkeeper's Talent [297], Overprotect [413]; Battlefield: Forest [300], Forest [316], Forest [422], Mossborn Hydra [426], Sazh's Chocobo [301], Sazh's Chocobo [309], Tifa Lockhart [383]
+
+Turn 14
+  - Earthbender Ascension [valid_resolution_no_immediate_mutation, seq=360] (active=greko7110, phase=Phase_Main1, controller=greko7110, owner=greko7110, source_object=441)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Earthbender Ascension resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Earthbender Ascension (object 441) Hand (greko7110) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Earthbender Ascension (object 441) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Sazh's Chocobo [observed_semantic_effect, seq=369] (active=greko7110, phase=Phase_Main1, controller=greko7110, owner=greko7110, source_object=309, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Sazh's Chocobo: Sazh's Chocobo gets +1/+1; 1 counter(s) are added to Sazh's Chocobo [309].
+  - Ability of Sazh's Chocobo [observed_semantic_effect, seq=371] (active=greko7110, phase=Phase_Main1, controller=greko7110, owner=greko7110, source_object=301, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Sazh's Chocobo: Sazh's Chocobo gets +1/+1; 1 counter(s) are added to Sazh's Chocobo [301].
+  - Ability of Earthbender Ascension [observed_semantic_effect, seq=373] (active=greko7110, phase=Phase_Main1, controller=greko7110, owner=greko7110, source_object=441, source_last_explicit_zone=Battlefield)
+      effects: +1 counter(s)
+      narrative: Ability of Earthbender Ascension: 1 counter(s) are added to Earthbender Ascension [441].
+  - Ability of Mossborn Hydra [observed_semantic_effect, seq=375] (active=greko7110, phase=Phase_Main1, controller=greko7110, owner=greko7110, source_object=426, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Mossborn Hydra: Mossborn Hydra gets +1/+1; 1 counter(s) are added to Mossborn Hydra [426].
+  - Ability of Tifa Lockhart [observed_semantic_effect, seq=377] (active=greko7110, phase=Phase_Main1, controller=greko7110, owner=greko7110, source_object=383, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+0
+      narrative: Ability of Tifa Lockhart: Tifa Lockhart gets +1/+0.
+  Combat snapshots observed (active=greko7110; frames: DeclareAttack -> CombatDamage):
+      attackers: Sazh's Chocobo [301] (unblocked, observed P/T 4/5), Sazh's Chocobo [309] (blocked, observed P/T 4/5)
+      blockers: Mossborn Hydra [415]
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat-result zone change: Sazh's Chocobo [501] Battlefield -> Graveyard (greko7110) (SBA_Damage).
+      combat-result zone change: Ouroboroid [502] Battlefield -> Graveyard (greko7110) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    additional protocol-observed zone movements not assigned to an action chain:
+      Vivien Reid [440] Library (greko7110) -> Hand (greko7110) (Draw; GRE sequence 355).
+      Forest [446] Library (greko7110) -> Battlefield (Put; GRE sequence 365).
+      Sazh's Chocobo [501] Battlefield -> Graveyard (greko7110) (SBA_Damage; GRE sequence 391).
+      Ouroboroid [502] Battlefield -> Graveyard (greko7110) (SBA_Damage; GRE sequence 391).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forsaken Miner [396], Mossborn Hydra [415], Swamp [287], Swamp [304], Swamp [387], Swamp [419], Swamp [432], Tinybones, Bauble Burglar [305]; Graveyard: Binding Negotiation [380], Binding Negotiation [394], Duress [298], Thought-Stalker Warlock [430]; Exile: Ouroboroid [395]
+      greko7110: Graveyard: Evolving Wilds [315], Innkeeper's Talent [297], Ouroboroid [502], Overprotect [413], Sazh's Chocobo [501]; Battlefield: Earthbender Ascension [441], Forest [300], Forest [316], Forest [422], Forest [446], Mossborn Hydra [426], Sazh's Chocobo [309], Tifa Lockhart [383]
+
+Turn 15
+  - Ability of Mossborn Hydra [observed_semantic_effect, seq=406] (active=gian31, phase=Phase_Main1, controller=gian31, owner=greko7110, source_object=415, source_last_explicit_zone=Battlefield)
+      effects: one +5/+5 counter; observed P/T change +5/+5 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Mossborn Hydra: Mossborn Hydra gets +5/+5; 5 counter(s) are added to Mossborn Hydra [415].
+  - Ouroboroid [valid_resolution_no_immediate_mutation, seq=409] (active=gian31, phase=Phase_Main1, controller=gian31, owner=greko7110, source_object=506)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ouroboroid resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ouroboroid (object 506) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Ouroboroid (object 506) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Ouroboroid [observed_semantic_effect, seq=413] (active=gian31, phase=Phase_Combat, step=Step_BeginCombat, controller=gian31, owner=greko7110, source_object=506, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, P/T +1/+1, P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s), +1 counter(s), +1 counter(s)
+      narrative: Ability of Ouroboroid: Tinybones, Bauble Burglar gets +1/+1; Forsaken Miner gets +1/+1; Mossborn Hydra gets +1/+1; Ouroboroid gets +1/+1; 1 counter(s) are added to Tinybones, Bauble Burglar [305]; 1 counter(s) are added to Forsaken Miner [396]; 1 counter(s) are added to Mossborn Hydra [415]; 1 counter(s) are added to Ouroboroid [506].
+      explicit effect object references: Tinybones, Bauble Burglar [305], Forsaken Miner [396], Mossborn Hydra [415] (role/targeting only where the protocol identifies it)
+  - Reno and Rude [valid_resolution_no_immediate_mutation, seq=423] (active=gian31, phase=Phase_Main2, controller=gian31, owner=gian31, source_object=512)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Reno and Rude resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Reno and Rude (object 512) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Reno and Rude (object 512) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [503] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 401).
+      Mountain [504] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 404).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forsaken Miner [396], Mossborn Hydra [415], Mountain [504], Ouroboroid [506], Reno and Rude [512], Swamp [287], Swamp [304], Swamp [387], Swamp [419], Swamp [432], Tinybones, Bauble Burglar [305]; Graveyard: Binding Negotiation [380], Binding Negotiation [394], Duress [298], Thought-Stalker Warlock [430]
+      greko7110: Graveyard: Evolving Wilds [315], Innkeeper's Talent [297], Ouroboroid [502], Overprotect [413], Sazh's Chocobo [501]; Battlefield: Earthbender Ascension [441], Forest [300], Forest [316], Forest [422], Forest [446], Mossborn Hydra [426], Sazh's Chocobo [309], Tifa Lockhart [383]
+
+Turn 16
+  - Ouroboroid [valid_resolution_no_immediate_mutation, seq=434] (active=greko7110, phase=Phase_Main1, controller=greko7110, owner=greko7110, source_object=516)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ouroboroid resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ouroboroid (object 516) Hand (greko7110) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ouroboroid (object 516) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Ouroboroid [observed_semantic_effect, seq=438] (active=greko7110, phase=Phase_Combat, step=Step_BeginCombat, controller=greko7110, owner=greko7110, source_object=516, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, P/T +1/+1, P/T +1/+1, P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s), +1 counter(s), +1 counter(s), +1 counter(s)
+      narrative: Ability of Ouroboroid: Forest gets +1/+1; Sazh's Chocobo gets +1/+1; Tifa Lockhart gets +1/+1; Mossborn Hydra gets +1/+1; Ouroboroid gets +1/+1; 1 counter(s) are added to Forest [300]; 1 counter(s) are added to Sazh's Chocobo [309]; 1 counter(s) are added to Tifa Lockhart [383]; 1 counter(s) are added to Mossborn Hydra [426]; 1 counter(s) are added to Ouroboroid [516].
+      explicit effect object references: Forest [300], Sazh's Chocobo [309], Tifa Lockhart [383], Mossborn Hydra [426] (role/targeting only where the protocol identifies it)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Ouroboroid [515] Library (greko7110) -> Hand (greko7110) (Draw; GRE sequence 429).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forsaken Miner [396], Mossborn Hydra [415], Mountain [504], Ouroboroid [506], Reno and Rude [512], Swamp [287], Swamp [304], Swamp [387], Swamp [419], Swamp [432], Tinybones, Bauble Burglar [305]; Graveyard: Binding Negotiation [380], Binding Negotiation [394], Duress [298], Thought-Stalker Warlock [430]
+      greko7110: Graveyard: Evolving Wilds [315], Innkeeper's Talent [297], Ouroboroid [502], Overprotect [413], Sazh's Chocobo [501]; Battlefield: Earthbender Ascension [441], Forest [300], Forest [316], Forest [422], Forest [446], Mossborn Hydra [426], Ouroboroid [516], Sazh's Chocobo [309], Tifa Lockhart [383]
+
+Turn 17
+  - Ability of Mossborn Hydra [observed_semantic_effect, seq=456] (active=gian31, phase=Phase_Main1, controller=gian31, owner=greko7110, source_object=415, source_last_explicit_zone=Battlefield)
+      effects: one +11/+11 counter; observed P/T change +11/+11 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Mossborn Hydra: Mossborn Hydra gets +11/+11; 11 counter(s) are added to Mossborn Hydra [415].
+  - Ability of Tinybones, Bauble Burglar [observed_semantic_effect, seq=462] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=305, source_last_explicit_zone=Battlefield)
+      effects: exile, +1 counter(s)
+      narrative: Ability of Tinybones, Bauble Burglar: exiles Vivien Reid; 1 counter(s) are added to Vivien Reid [532].
+      explicit effect object references: Vivien Reid [530], Vivien Reid [532] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Vivien Reid (object 532) Graveyard (greko7110) -> Exile (Exile; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [522] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 451).
+      Swamp [523] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 454).
+      Vivien Reid [530] Hand (greko7110) -> Graveyard (greko7110) (Discard; GRE sequence 460).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forsaken Miner [396], Mossborn Hydra [415], Mountain [504], Ouroboroid [506], Reno and Rude [512], Swamp [287], Swamp [304], Swamp [387], Swamp [419], Swamp [432], Swamp [523], Tinybones, Bauble Burglar [305]; Graveyard: Binding Negotiation [380], Binding Negotiation [394], Duress [298], Thought-Stalker Warlock [430]
+      greko7110: Graveyard: Evolving Wilds [315], Innkeeper's Talent [297], Ouroboroid [502], Overprotect [413], Sazh's Chocobo [501]; Battlefield: Earthbender Ascension [441], Forest [300], Forest [316], Forest [422], Forest [446], Mossborn Hydra [426], Ouroboroid [516], Sazh's Chocobo [309], Tifa Lockhart [383]; Exile: Vivien Reid [532]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- No life mutation without an exact same-record source was observed.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Duress [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 1, seq 13: Innkeeper's Talent [owner=greko7110, controller=greko7110] moves Hand (greko7110) -> Graveyard (greko7110) (Discard).
+- Turn 1, seq 13: Duress [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 2, seq 27: Tifa Lockhart [owner=greko7110, controller=greko7110] moves Library (greko7110) -> Hand (greko7110) (Draw).
+- Turn 2, seq 30: Forest [owner=greko7110, controller=greko7110] moves Hand (greko7110) -> Battlefield (PlayLand).
+- Turn 2, seq 31: Sazh's Chocobo [owner=greko7110, controller=greko7110] moves Hand (greko7110) -> Stack (CastSpell).
+- Turn 2, seq 33: Sazh's Chocobo [owner=greko7110, controller=greko7110] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 47: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 50: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 51: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 53: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 67: Sazh's Chocobo [owner/controller metadata unavailable] moves Library (greko7110) -> Hand (greko7110) (Draw).
+- Turn 4, seq 70: Sazh's Chocobo [owner=greko7110, controller=greko7110] moves Hand (greko7110) -> Stack (CastSpell).
+- Turn 4, seq 72: Sazh's Chocobo [owner=greko7110, controller=greko7110] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 73: Evolving Wilds [owner=greko7110, controller=greko7110] moves Hand (greko7110) -> Battlefield (PlayLand).
+- Turn 4, seq 79: Evolving Wilds [owner=greko7110, controller=greko7110] moves Battlefield -> Graveyard (greko7110) (Sacrifice).
+- Turn 4, seq 82: Forest [owner=greko7110, controller=greko7110] moves Library (greko7110) -> Battlefield (Put).
+- Turn 5, seq 103: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 106: Binding Negotiation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 111: Ouroboroid [owner=greko7110, controller=greko7110] moves Hand (greko7110) -> Graveyard (greko7110) (Discard).
+- Turn 5, seq 111: Binding Negotiation [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 5, seq 113: Ouroboroid [owner=greko7110, controller=gian31] moves Graveyard (greko7110) -> Exile (Exile).
+- Turn 6, seq 128: Ouroboroid [owner=greko7110, controller=greko7110] moves Library (greko7110) -> Hand (greko7110) (Draw).
+- Turn 6, seq 131: Tifa Lockhart [owner=greko7110, controller=greko7110] moves Hand (greko7110) -> Stack (CastSpell).
+- Turn 6, seq 133: Tifa Lockhart [owner=greko7110, controller=greko7110] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 155: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 158: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 159: Binding Negotiation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 164: Ouroboroid [owner=greko7110, controller=greko7110] moves Hand (greko7110) -> Graveyard (greko7110) (Discard).
+- Turn 7, seq 164: Binding Negotiation [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 7, seq 166: Ouroboroid [owner=greko7110, controller=gian31] moves Graveyard (greko7110) -> Exile (Exile).
+- Turn 7, seq 167: Forsaken Miner [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 169: Forsaken Miner [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 184: Overprotect [owner=greko7110, controller=greko7110] moves Library (greko7110) -> Hand (greko7110) (Draw).
+- Turn 9, seq 208: Thought-Stalker Warlock [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 227: Thought-Stalker Warlock [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 229: Thought-Stalker Warlock [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 234: Mossborn Hydra [owner=greko7110, controller=greko7110] moves Hand (greko7110) -> Graveyard (greko7110) (Discard).
+- Turn 9, seq 236: Mossborn Hydra [owner=greko7110, controller=gian31] moves Graveyard (greko7110) -> Exile (Exile).
+- Turn 10, seq 242: Earthbender Ascension [owner/controller metadata unavailable] moves Library (greko7110) -> Hand (greko7110) (Draw).
+- Turn 10, seq 255: Overprotect [owner=greko7110, controller=greko7110] moves Hand (greko7110) -> Stack (CastSpell).
+- Turn 10, seq 259: Overprotect [owner=greko7110, controller=greko7110] moves Stack -> Graveyard (greko7110) (Resolve).
+- Turn 11, seq 271: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 274: Mossborn Hydra [owner=greko7110, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 11, seq 276: Mossborn Hydra [owner=greko7110, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 277: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 294: Forest [owner/controller metadata unavailable] moves Library (greko7110) -> Hand (greko7110) (Draw).
+- Turn 12, seq 297: Forest [owner=greko7110, controller=greko7110] moves Hand (greko7110) -> Battlefield (PlayLand).
+- Turn 12, seq 305: Mossborn Hydra [owner=greko7110, controller=greko7110] moves Hand (greko7110) -> Stack (CastSpell).
+- Turn 12, seq 307: Mossborn Hydra [owner=greko7110, controller=greko7110] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 320: Thought-Stalker Warlock [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 13, seq 330: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 333: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 13, seq 336: Ouroboroid [owner=greko7110, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 13, seq 338: Ouroboroid [owner=greko7110, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 355: Vivien Reid [owner/controller metadata unavailable] moves Library (greko7110) -> Hand (greko7110) (Draw).
+- Turn 14, seq 358: Earthbender Ascension [owner=greko7110, controller=greko7110] moves Hand (greko7110) -> Stack (CastSpell).
+- Turn 14, seq 360: Earthbender Ascension [owner=greko7110, controller=greko7110] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 365: Forest [owner=greko7110, controller=greko7110] moves Library (greko7110) -> Battlefield (Put).
+- Turn 14, seq 391: Sazh's Chocobo [owner=greko7110, controller=greko7110] moves Battlefield -> Graveyard (greko7110) (SBA_Damage).
+- Turn 14, seq 391: Ouroboroid [owner=greko7110, controller=greko7110] moves Battlefield -> Graveyard (greko7110) (SBA_Damage).
+- Turn 15, seq 401: Mountain [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 15, seq 404: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 15, seq 407: Ouroboroid [owner=greko7110, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 15, seq 409: Ouroboroid [owner=greko7110, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 15, seq 421: Reno and Rude [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 15, seq 423: Reno and Rude [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 16, seq 429: Ouroboroid [owner/controller metadata unavailable] moves Library (greko7110) -> Hand (greko7110) (Draw).
+- Turn 16, seq 432: Ouroboroid [owner=greko7110, controller=greko7110] moves Hand (greko7110) -> Stack (CastSpell).
+- Turn 16, seq 434: Ouroboroid [owner=greko7110, controller=greko7110] moves Stack -> Battlefield (Resolve).
+- Turn 17, seq 451: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 17, seq 454: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 17, seq 460: Vivien Reid [owner=greko7110, controller=greko7110] moves Hand (greko7110) -> Graveyard (greko7110) (Discard).
+- Turn 17, seq 462: Vivien Reid [owner=greko7110, controller=greko7110] moves Graveyard (greko7110) -> Exile (Exile).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 167 becomes object 287 [Swamp].
+- Turn 1, seq 8: object 163 becomes object 288 [Duress].
+- Turn 1, seq 13: object 223 becomes object 297 [Innkeeper's Talent].
+- Turn 1, seq 13: object 288 becomes object 298 [Duress].
+- Turn 2, seq 27: object 230 becomes object 299 [Tifa Lockhart].
+- Turn 2, seq 30: object 224 becomes object 300 [Forest].
+- Turn 2, seq 31: object 229 becomes object 301 [Sazh's Chocobo].
+- Turn 3, seq 47: object 170 becomes object 303 [Tinybones, Bauble Burglar].
+- Turn 3, seq 50: object 168 becomes object 304 [Swamp].
+- Turn 3, seq 51: object 303 becomes object 305 [Tinybones, Bauble Burglar].
+- Turn 4, seq 67: object 231 becomes object 308 [Sazh's Chocobo].
+- Turn 4, seq 70: object 308 becomes object 309 [Sazh's Chocobo].
+- Turn 4, seq 73: object 226 becomes object 311 [Evolving Wilds].
+- Turn 4, seq 79: object 311 becomes object 315 [Evolving Wilds].
+- Turn 4, seq 82: object 281 becomes object 316 [Forest].
+- Turn 5, seq 103: object 171 becomes object 373 [Laughing Jasper Flint].
+- Turn 5, seq 106: object 169 becomes object 374 [Binding Negotiation].
+- Turn 5, seq 111: object 228 becomes object 378 [Ouroboroid].
+- Turn 5, seq 111: object 374 becomes object 380 [Binding Negotiation].
+- Turn 5, seq 113: object 378 becomes object 381 [Ouroboroid].
+- Turn 6, seq 128: object 319 becomes object 382 [Ouroboroid].
+- Turn 6, seq 131: object 299 becomes object 383 [Tifa Lockhart].
+- Turn 7, seq 155: object 172 becomes object 386 [Swamp].
+- Turn 7, seq 158: object 386 becomes object 387 [Swamp].
+- Turn 7, seq 159: object 164 becomes object 388 [Binding Negotiation].
+- Turn 7, seq 164: object 382 becomes object 392 [Ouroboroid].
+- Turn 7, seq 164: object 388 becomes object 394 [Binding Negotiation].
+- Turn 7, seq 166: object 392 becomes object 395 [Ouroboroid].
+- Turn 7, seq 167: object 166 becomes object 396 [Forsaken Miner].
+- Turn 8, seq 184: object 320 becomes object 398 [Overprotect].
+- Turn 9, seq 208: object 173 becomes object 399 [Thought-Stalker Warlock].
+- Turn 9, seq 227: object 399 becomes object 400 [Thought-Stalker Warlock].
+- Turn 9, seq 234: object 227 becomes object 406 [Mossborn Hydra].
+- Turn 9, seq 236: object 406 becomes object 408 [Mossborn Hydra].
+- Turn 10, seq 242: object 321 becomes object 409 [Earthbender Ascension].
+- Turn 10, seq 255: object 398 becomes object 410 [Overprotect].
+- Turn 10, seq 259: object 410 becomes object 413 [Overprotect].
+- Turn 11, seq 271: object 174 becomes object 414 [Swamp].
+- Turn 11, seq 274: object 408 becomes object 415 [Mossborn Hydra].
+- Turn 11, seq 277: object 414 becomes object 419 [Swamp].
+- Turn 12, seq 294: object 322 becomes object 421 [Forest].
+- Turn 12, seq 297: object 421 becomes object 422 [Forest].
+- Turn 12, seq 305: object 225 becomes object 426 [Mossborn Hydra].
+- Turn 12, seq 320: object 400 becomes object 430 [Thought-Stalker Warlock].
+- Turn 13, seq 330: object 175 becomes object 431 [Swamp].
+- Turn 13, seq 333: object 431 becomes object 432 [Swamp].
+- Turn 13, seq 336: object 381 becomes object 434 [Ouroboroid].
+- Turn 14, seq 355: object 323 becomes object 440 [Vivien Reid].
+- Turn 14, seq 358: object 409 becomes object 441 [Earthbender Ascension].
+- Turn 14, seq 365: object 367 becomes object 446 [Forest].
+- Turn 14, seq 391: object 301 becomes object 501 [Sazh's Chocobo].
+- Turn 14, seq 391: object 434 becomes object 502 [Ouroboroid].
+- Turn 15, seq 401: object 176 becomes object 503 [Mountain].
+- Turn 15, seq 404: object 503 becomes object 504 [Mountain].
+- Turn 15, seq 407: object 395 becomes object 506 [Ouroboroid].
+- Turn 15, seq 421: object 165 becomes object 512 [Reno and Rude].
+- Turn 16, seq 429: object 452 becomes object 515 [Ouroboroid].
+- Turn 16, seq 432: object 515 becomes object 516 [Ouroboroid].
+- Turn 17, seq 451: object 177 becomes object 522 [Swamp].
+- Turn 17, seq 454: object 522 becomes object 523 [Swamp].
+- Turn 17, seq 460: object 440 becomes object 530 [Vivien Reid].
+- Turn 17, seq 462: object 530 becomes object 532 [Vivien Reid].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Swamp (object 287) from Hand (gian31) to Battlefield.
+- Turn 2: greko7110 plays Forest (object 300) from Hand (greko7110) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 304) from Hand (gian31) to Battlefield.
+- Turn 4: greko7110 plays Evolving Wilds (object 311) from Hand (greko7110) to Battlefield.
+- Turn 7: gian31 plays Swamp (object 387) from Hand (gian31) to Battlefield.
+- Turn 11: gian31 plays Swamp (object 419) from Hand (gian31) to Battlefield.
+- Turn 12: greko7110 plays Forest (object 422) from Hand (greko7110) to Battlefield.
+- Turn 13: gian31 plays Swamp (object 432) from Hand (gian31) to Battlefield.
+- Turn 15: gian31 plays Mountain (object 504) from Hand (gian31) to Battlefield.
+- Turn 17: gian31 plays Swamp (object 523) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 4: ordered adjacent records Sazh's Chocobo -> Sazh's Chocobo; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Sazh's Chocobo: casts=2; abilities=8 (triggered=8, activated=0) across turns [2, 4, 4, 4, 4, 4, 12, 12, 14, 14]
+  observed effect totals: draws=0, tokens=0, counters=8, returns=0, damage=0, life_changes=0, other=8
+  observed effects: +1 counter(s), P/T +1/+1
+- Mossborn Hydra: casts=2; abilities=5 (triggered=5, activated=0) across turns [11, 11, 12, 13, 14, 15, 17]
+  observed effect totals: draws=0, tokens=0, counters=5, returns=0, damage=0, life_changes=0, other=5
+  observed effects: +1 counter(s), +11 counter(s), +2 counter(s), +5 counter(s), P/T +1/+1, P/T +11/+11, P/T +2/+2, P/T +5/+5
+- Ouroboroid: casts=3; abilities=3 (triggered=3, activated=0) across turns [13, 13, 15, 15, 16, 16]
+  observed effect totals: draws=0, tokens=0, counters=13, returns=0, damage=0, life_changes=0, other=13
+  observed effects: +1 counter(s), P/T +1/+1
+- Tinybones, Bauble Burglar: casts=1; abilities=4 (triggered=4, activated=0) across turns [3, 5, 7, 9, 17]
+  observed effect totals: draws=0, tokens=0, counters=4, returns=0, damage=0, life_changes=0, other=4
+  observed effects: +1 counter(s), exile
+- Tifa Lockhart: casts=1; abilities=2 (triggered=2, activated=0) across turns [6, 12, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: P/T +1/+0
+- Earthbender Ascension: casts=1; abilities=1 (triggered=1, activated=0) across turns [14, 14]
+  observed effect totals: draws=0, tokens=0, counters=1, returns=0, damage=0, life_changes=0, other=0
+  observed effects: +1 counter(s)
+- Forsaken Miner: casts=1 across turns [7]
+- Overprotect: casts=1 across turns [10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: P/T +3/+3
+- Reno and Rude: casts=1 across turns [15]
+- Thought-Stalker Warlock: casts=1 across turns [9]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 6 - DeclareAttack, CombatDamage (active=greko7110)
+  attacker: Sazh's Chocobo (greko7110) -> gian31; blocked by Tinybones, Bauble Burglar
+  attacker: Sazh's Chocobo (greko7110) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=greko7110)
+  attacker: Sazh's Chocobo (greko7110) -> gian31; unblocked in this observed snapshot
+  attacker: Sazh's Chocobo (greko7110) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack (active=gian31)
+  attacker: Forsaken Miner (gian31) -> greko7110; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, DeclareBlock (active=greko7110)
+  attacker: Sazh's Chocobo (greko7110) -> gian31; unblocked in this observed snapshot
+  attacker: Sazh's Chocobo (greko7110) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack, CombatDamage (active=greko7110)
+  attacker: Sazh's Chocobo (greko7110) -> gian31; blocked by unknown blocker
+  attacker: Sazh's Chocobo (greko7110) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 14 - DeclareAttack, CombatDamage (active=greko7110)
+  attacker: Sazh's Chocobo (greko7110) -> gian31; unblocked in this observed snapshot
+  attacker: Sazh's Chocobo (greko7110) -> gian31; blocked by unknown blocker
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 10: Overprotect (active=greko7110) - Overprotect: Sazh's Chocobo gets +3/+3.
+- Turn 13: Ability of Ouroboroid (active=gian31) - Ability of Ouroboroid: Tinybones, Bauble Burglar gets +1/+1; Forsaken Miner gets +1/+1; Mossborn Hydra gets +1/+1; Ouroboroid gets +1/+1; 1 counter(s) are added to target; 1 counter(s) are added to target; 1 counter(s) are added to target; 1 counter(s) are added to target.
+- Turn 15: Ability of Ouroboroid (active=gian31) - Ability of Ouroboroid: Tinybones, Bauble Burglar gets +1/+1; Forsaken Miner gets +1/+1; Mossborn Hydra gets +1/+1; Ouroboroid gets +1/+1; 1 counter(s) are added to target; 1 counter(s) are added to target; 1 counter(s) are added to target; 1 counter(s) are added to target.
+- Turn 16: Ability of Ouroboroid (active=greko7110) - Ability of Ouroboroid: Forest gets +1/+1; Sazh's Chocobo gets +1/+1; Tifa Lockhart gets +1/+1; Mossborn Hydra gets +1/+1; Ouroboroid gets +1/+1; 1 counter(s) are added to target; 1 counter(s) are added to target; 1 counter(s) are added to target; 1 counter(s) are added to target; 1 counter(s) are added to target.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 163: Duress | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Reno and Rude | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 166: Forsaken Miner | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 167: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 168: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 169: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 223: Innkeeper's Talent | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 224: Forest | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 225: Mossborn Hydra | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 226: Evolving Wilds | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 227: Mossborn Hydra | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 228: Ouroboroid | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 229: Sazh's Chocobo | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 287: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 288: Duress | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 290: Forest | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 291: Mossborn Hydra | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 292: Evolving Wilds | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 293: Mossborn Hydra | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 294: Ouroboroid | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 295: Sazh's Chocobo | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 296: Innkeeper's Talent | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 297: Innkeeper's Talent | controller=greko7110 | owner=greko7110 | zone=Graveyard (latest_object_observation)
+- 298: Duress | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 299: Tifa Lockhart | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 300: Forest | controller=greko7110 | owner=greko7110 | zone=Battlefield (latest_object_observation)
+- 301: Sazh's Chocobo | controller=greko7110 | owner=greko7110 | zone=Battlefield (latest_object_observation)
+- 303: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 304: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 305: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 309: Sazh's Chocobo | controller=greko7110 | owner=greko7110 | zone=Battlefield (latest_object_observation)
+- 311: Evolving Wilds | controller=greko7110 | owner=greko7110 | zone=Battlefield (latest_object_observation)
+- 312: Ureni of the Unwritten | controller=greko7110 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 313: Ureni of the Unwritten | controller=greko7110 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 314: object 314 | controller=greko7110 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 315: Evolving Wilds | controller=greko7110 | owner=greko7110 | zone=Graveyard (latest_object_observation)
+- 316: Forest | controller=greko7110 | owner=greko7110 | zone=Battlefield (latest_object_observation)
+- 317: Ureni of the Unwritten | controller=greko7110 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 318: Ureni of the Unwritten | controller=greko7110 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 373: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 374: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 377: Tifa Lockhart | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 378: Ouroboroid | controller=greko7110 | owner=greko7110 | zone=Graveyard (latest_object_observation)
+- 379: object 379 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 380: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 381: Ouroboroid | controller=gian31 | owner=greko7110 | zone=Exile (latest_object_observation)
+- 382: Ouroboroid | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 383: Tifa Lockhart | controller=greko7110 | owner=greko7110 | zone=Battlefield (latest_object_observation)
+- 386: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 387: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 388: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 391: Ouroboroid | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 392: Ouroboroid | controller=greko7110 | owner=greko7110 | zone=Graveyard (latest_object_observation)
+- 393: object 393 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 394: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 395: Ouroboroid | controller=gian31 | owner=greko7110 | zone=Exile (latest_object_observation)
+- 396: Forsaken Miner | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 398: Overprotect | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 399: Thought-Stalker Warlock | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 400: Thought-Stalker Warlock | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 404: object 404 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 405: Overprotect | controller=greko7110 | owner=greko7110 | zone=Hand (latest_object_observation)
+- 406: Mossborn Hydra | controller=greko7110 | owner=greko7110 | zone=Graveyard (latest_object_observation)
+- 407: object 407 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 408: Mossborn Hydra | controller=gian31 | owner=greko7110 | zone=Exile (latest_object_observation)
+- 410: Overprotect | controller=greko7110 | owner=greko7110 | zone=Stack (latest_object_observation)
+- 413: Overprotect | controller=greko7110 | owner=greko7110 | zone=Graveyard (latest_object_observation)
+- 414: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 415: Mossborn Hydra | controller=gian31 | owner=greko7110 | zone=Battlefield (latest_object_observation)
+- 419: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 420: object 420 | controller=gian31 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 422: Forest | controller=greko7110 | owner=greko7110 | zone=Battlefield (latest_object_observation)
+- 423: Ureni of the Unwritten | controller=greko7110 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 424: Ureni of the Unwritten | controller=greko7110 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 425: object 425 | controller=greko7110 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 426: Mossborn Hydra | controller=greko7110 | owner=greko7110 | zone=Battlefield (latest_object_observation)
+- 430: Thought-Stalker Warlock | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 431: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 432: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 433: object 433 | controller=gian31 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 434: Ouroboroid | controller=gian31 | owner=greko7110 | zone=Battlefield (latest_object_observation)
+- 439: object 439 | controller=gian31 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 441: Earthbender Ascension | controller=greko7110 | owner=greko7110 | zone=Stack (latest_object_observation)
+- 445: object 445 | controller=greko7110 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 446: Forest | controller=greko7110 | owner=greko7110 | zone=Battlefield (latest_object_observation)
+- 447: object 447 | controller=greko7110 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 448: Ureni of the Unwritten | controller=greko7110 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 449: Ureni of the Unwritten | controller=greko7110 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 450: object 450 | controller=greko7110 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 451: object 451 | controller=greko7110 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 501: Sazh's Chocobo | controller=greko7110 | owner=greko7110 | zone=Battlefield (latest_object_observation)
+- 502: Ouroboroid | controller=greko7110 | owner=greko7110 | zone=Battlefield (latest_object_observation)
+- 503: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 504: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 505: object 505 | controller=gian31 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 506: Ouroboroid | controller=gian31 | owner=greko7110 | zone=Battlefield (latest_object_observation)
+- 511: object 511 | controller=gian31 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 512: Reno and Rude | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 516: Ouroboroid | controller=greko7110 | owner=greko7110 | zone=Battlefield (latest_object_observation)
+- 521: object 521 | controller=greko7110 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 522: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 523: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 524: object 524 | controller=gian31 | owner=greko7110 | zone=unknown (inferred unknown) (latest_object_observation)
+- 525: object 525 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 530: Vivien Reid | controller=greko7110 | owner=greko7110 | zone=Graveyard (latest_object_observation)
+- 531: object 531 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 532: Vivien Reid | controller=greko7110 | owner=greko7110 | zone=Exile (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 51 total items
+  zones: Battlefield=18, Exile=3, Hand=15, Stack=3, unknown=12
+  objects: Swamp x12, Binding Negotiation x6, Ouroboroid x4, Duress x3, Thought-Stalker Warlock x3, Forsaken Miner x2, Mossborn Hydra x2, Mountain x2, Reno and Rude x2, Tinybones, Bauble Burglar x2, Laughing Jasper Flint, object 379
+greko7110: 57 total items
+  zones: Battlefield=12, Exile=1, Graveyard=7, Hand=20, Stack=2, unknown=15
+  objects: Ouroboroid x8, Ureni of the Unwritten x8, Forest x6, Mossborn Hydra x6, Sazh's Chocobo x5, Evolving Wilds x4, Overprotect x4, Innkeeper's Talent x3, Tifa Lockhart x3, Vivien Reid x2, Earthbender Ascension, object 314
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (18): Binding Negotiation, Binding Negotiation, Duress, Forsaken Miner, Mossborn Hydra, Mountain, Ouroboroid, Ouroboroid, Reno and Rude, Swamp, Swamp, Swamp, Swamp, Swamp, Swamp, Thought-Stalker Warlock, Thought-Stalker Warlock, Tinybones, Bauble Burglar
+  Graveyard: 0 card(s)
+greko7110:
+  Battlefield (12): Evolving Wilds, Forest, Forest, Forest, Forest, Mossborn Hydra, Ouroboroid, Ouroboroid, Sazh's Chocobo, Sazh's Chocobo, Sazh's Chocobo, Tifa Lockhart
+  Graveyard: 7 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+27 objects have no resolved final zone and are omitted from the known board state.
+gian31: 12 unknown object(s)
+greko7110: 15 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=35, Stack=5
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+gian31:
+  Battlefield (12): Swamp, Swamp, Tinybones, Bauble Burglar, Swamp, Forsaken Miner, Mossborn Hydra, Swamp, Swamp, Mountain, Ouroboroid, Reno and Rude, Swamp
+  Graveyard (4): Duress, Binding Negotiation, Binding Negotiation, Thought-Stalker Warlock
+greko7110:
+  Battlefield (9): Forest, Sazh's Chocobo, Forest, Tifa Lockhart, Forest, Mossborn Hydra, Earthbender Ascension, Forest, Ouroboroid
+  Graveyard (5): Innkeeper's Talent, Evolving Wilds, Overprotect, Sazh's Chocobo, Ouroboroid
+  Exile (1): Vivien Reid
+Known non-persistent entries (counts only):
+  gian31: Hand=1, Limbo=4
+  greko7110: Limbo=1
+  unknown: Library=92, Limbo=5
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1; gian31 Graveyard=1; greko7110 Graveyard=1
+- Turn 2: gian31 Battlefield=1; gian31 Graveyard=1; greko7110 Battlefield=2; greko7110 Graveyard=1
+- Turn 3: gian31 Battlefield=3; gian31 Graveyard=1; greko7110 Battlefield=2; greko7110 Graveyard=1
+- Turn 4: gian31 Battlefield=3; gian31 Graveyard=1; greko7110 Battlefield=4; greko7110 Graveyard=2
+- Turn 5: gian31 Battlefield=3; gian31 Graveyard=2; gian31 Exile=1; greko7110 Battlefield=4; greko7110 Graveyard=2
+- Turn 6: gian31 Battlefield=3; gian31 Graveyard=2; gian31 Exile=1; greko7110 Battlefield=5; greko7110 Graveyard=2
+- Turn 7: gian31 Battlefield=5; gian31 Graveyard=3; gian31 Exile=2; greko7110 Battlefield=5; greko7110 Graveyard=2
+- Turn 8: gian31 Battlefield=5; gian31 Graveyard=3; gian31 Exile=2; greko7110 Battlefield=5; greko7110 Graveyard=2
+- Turn 9: gian31 Battlefield=6; gian31 Graveyard=3; gian31 Exile=3; greko7110 Battlefield=5; greko7110 Graveyard=2
+- Turn 10: gian31 Battlefield=6; gian31 Graveyard=3; gian31 Exile=3; greko7110 Battlefield=5; greko7110 Graveyard=3
+- Turn 11: gian31 Battlefield=8; gian31 Graveyard=3; gian31 Exile=2; greko7110 Battlefield=5; greko7110 Graveyard=3
+- Turn 12: gian31 Battlefield=7; gian31 Graveyard=4; gian31 Exile=2; greko7110 Battlefield=7; greko7110 Graveyard=3
+- Turn 13: gian31 Battlefield=9; gian31 Graveyard=4; gian31 Exile=1; greko7110 Battlefield=7; greko7110 Graveyard=3
+- Turn 14: gian31 Battlefield=8; gian31 Graveyard=4; gian31 Exile=1; greko7110 Battlefield=8; greko7110 Graveyard=5
+- Turn 15: gian31 Battlefield=11; gian31 Graveyard=4; greko7110 Battlefield=8; greko7110 Graveyard=5
+- Turn 16: gian31 Battlefield=11; gian31 Graveyard=4; greko7110 Battlefield=9; greko7110 Graveyard=5
+- Turn 17: gian31 Battlefield=12; gian31 Graveyard=4; greko7110 Battlefield=9; greko7110 Graveyard=5; greko7110 Exile=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Sazh's Chocobo resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Tinybones, Bauble Burglar resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Sazh's Chocobo resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Tifa Lockhart resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Forsaken Miner resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Thought-Stalker Warlock resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Mossborn Hydra resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Mossborn Hydra resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Ouroboroid resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Earthbender Ascension resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: Ouroboroid resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 15: Reno and Rude resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 16: Ouroboroid resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
