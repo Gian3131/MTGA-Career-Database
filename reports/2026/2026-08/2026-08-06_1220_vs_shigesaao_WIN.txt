@@ -1,0 +1,464 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: shigesaao, gian31
+Seat map: Seat 1=shigesaao, Seat 2=gian31
+Turn range (known): 1 - 12
+Records: 5
+Action chains: 5
+Winner: gian31
+Final life: {'shigesaao': 9, 'gian31': 20}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 12 (Phase_Main1; Tinybones, Bauble Burglar, seq 267).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 23 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 8 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 9, 10] (raw records=8; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 11 explicit Library -> Hand movement(s); named in the draw record=8, resolved through an explicit identity transition=3, unresolved=0.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Tinybones, the Pickpocket [219], Swamp [220], Mountain [221], Mountain [222], Forsaken Miner [223], Swamp [224], Tinybones, the Pickpocket [225].
+  - unknown: 7 observed card(s): object 159 [159], object 160 [160], object 161 [161], object 162 [162], object 163 [163], object 164 [164], object 165 [165].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'shigesaao': 9, 'gian31': 20}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 12 (Phase_Main1; Tinybones, Bauble Burglar, seq 267).
+Last captured life snapshot: shigesaao 12 -> 9 (seq 230).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Forsaken Miner.
+- Turn 3: actions: cards=0, abilities=0; explicit battlefield entries=Wastewood Verge.
+- Turn 4: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, Tinybones, the Pickpocket.
+- Turn 5: actions: cards=0, abilities=0; explicit battlefield entries=Deathcap Glade.
+- Turn 6: actions: cards=0, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Mountain.
+- Turn 7: actions: cards=1, abilities=1; explicit battlefield entries=Bandit's Talent.
+- Turn 8: actions: cards=0, abilities=0; combat snapshots=1; life mutations=1.
+- Turn 9: actions: cards=0, abilities=0; explicit battlefield entries=Restless Cottage.
+- Turn 10: actions: cards=0, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Mountain.
+- Turn 11: actions: cards=0, abilities=0.
+- Turn 12: actions: cards=1, abilities=0; explicit battlefield entries=Tinybones, Bauble Burglar.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [279] Hand (shigesaao) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      shigesaao: Battlefield: Swamp [279]
+
+Turn 2
+  - Forsaken Miner [valid_resolution_no_immediate_mutation, seq=27] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Forsaken Miner resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Forsaken Miner (object 282) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Forsaken Miner (object 282) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Duress [280] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 21).
+      Swamp [281] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      shigesaao: Battlefield: Swamp [279]
+      gian31: Battlefield: Forsaken Miner [282], Swamp [281]
+
+Turn 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Deathcap Glade [284] Library (shigesaao) -> Hand (shigesaao) (Draw; GRE sequence 41).
+      Wastewood Verge [285] Hand (shigesaao) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      shigesaao: Battlefield: Swamp [279], Wastewood Verge [285]
+      gian31: Battlefield: Forsaken Miner [282], Swamp [281]
+
+Turn 4
+  - Tinybones, the Pickpocket [valid_resolution_no_immediate_mutation, seq=64] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, the Pickpocket resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 288) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 288) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Forsaken Miner [282] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: shigesaao -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): shigesaao 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Binding Negotiation [286] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 58).
+      Swamp [287] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 61).
+      Duress [290] Hand (gian31) -> Stack (CastSpell; GRE sequence 65).
+      Deadly Cover-Up [298] Hand (shigesaao) -> Graveyard (shigesaao) (Discard; GRE sequence 70).
+      Duress [299] Stack -> Graveyard (gian31) (Resolve; GRE sequence 70).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      shigesaao: Battlefield: Swamp [279], Wastewood Verge [285]; Graveyard: Deadly Cover-Up [298]
+      gian31: Battlefield: Forsaken Miner [282], Swamp [281], Swamp [287], Tinybones, the Pickpocket [288]; Graveyard: Duress [299]
+
+Turn 5
+    additional protocol-observed zone movements not assigned to an action chain:
+      The Rise of Sozin [300] Library (shigesaao) -> Hand (shigesaao) (Draw; GRE sequence 90).
+      Deathcap Glade [301] Hand (shigesaao) -> Battlefield (PlayLand; GRE sequence 93).
+      Pitiless Carnage [306] Hand (shigesaao) -> Exile (Exile; GRE sequence 94).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      shigesaao: Battlefield: Deathcap Glade [301], Swamp [279], Wastewood Verge [285]; Graveyard: Deadly Cover-Up [298]; Exile: Pitiless Carnage [306]
+      gian31: Battlefield: Forsaken Miner [282], Swamp [281], Swamp [287], Tinybones, the Pickpocket [288]; Graveyard: Duress [299]
+
+Turn 6
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Forsaken Miner [282] (unblocked, observed P/T 2/2), Tinybones, the Pickpocket [288] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: shigesaao -3 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): shigesaao 18 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      At Knifepoint [307] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 108).
+      Mountain [308] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 111).
+      Binding Negotiation [309] Hand (gian31) -> Stack (CastSpell; GRE sequence 112).
+      The Rise of Sozin [313] Hand (shigesaao) -> Graveyard (shigesaao) (Discard; GRE sequence 117).
+      Binding Negotiation [314] Stack -> Graveyard (gian31) (Resolve; GRE sequence 117).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      shigesaao: Battlefield: Deathcap Glade [301], Swamp [279], Wastewood Verge [285]; Graveyard: Deadly Cover-Up [298], The Rise of Sozin [313]; Exile: Pitiless Carnage [306]
+      gian31: Battlefield: Forsaken Miner [282], Mountain [308], Swamp [281], Swamp [287], Tinybones, the Pickpocket [288]; Graveyard: Binding Negotiation [314], Duress [299]
+
+Turn 7
+  - Bandit's Talent [valid_resolution_no_immediate_mutation, seq=147] (active=shigesaao, phase=Phase_Main1, controller=shigesaao, owner=shigesaao, source_object=317)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bandit's Talent resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bandit's Talent (object 317) Hand (shigesaao) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bandit's Talent (object 317) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Bandit's Talent [valid_resolution_no_immediate_mutation, seq=153] (active=shigesaao, phase=Phase_Main1, controller=shigesaao, owner=shigesaao, source_object=317, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Bandit's Talent resolves with no immediate observed mutation.
+    additional protocol-observed zone movements not assigned to an action chain:
+      Bandit's Talent [316] Library (shigesaao) -> Hand (shigesaao) (Draw; GRE sequence 142).
+      Tinybones, the Pickpocket [321] Hand (gian31) -> Graveyard (gian31) (Discard; GRE sequence 150).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      shigesaao: Battlefield: Bandit's Talent [317], Deathcap Glade [301], Swamp [279], Wastewood Verge [285]; Graveyard: Deadly Cover-Up [298], The Rise of Sozin [313]; Exile: Pitiless Carnage [306]
+      gian31: Battlefield: Forsaken Miner [282], Mountain [308], Swamp [281], Swamp [287], Tinybones, the Pickpocket [288]; Graveyard: Binding Negotiation [314], Duress [299], Tinybones, the Pickpocket [321]
+
+Turn 8
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Forsaken Miner [282] (unblocked, observed P/T 2/2), Tinybones, the Pickpocket [288] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: shigesaao -3 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): shigesaao 15 -> 12
+    additional protocol-observed zone movements not assigned to an action chain:
+      Binding Negotiation [324] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 167).
+      Binding Negotiation [325] Hand (gian31) -> Stack (CastSpell; GRE sequence 170).
+      Archenemy's Charm [328] Hand (shigesaao) -> Graveyard (shigesaao) (Discard; GRE sequence 175).
+      Binding Negotiation [329] Stack -> Graveyard (gian31) (Resolve; GRE sequence 175).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      shigesaao: Battlefield: Bandit's Talent [317], Deathcap Glade [301], Swamp [279], Wastewood Verge [285]; Graveyard: Archenemy's Charm [328], Deadly Cover-Up [298], The Rise of Sozin [313]; Exile: Pitiless Carnage [306]
+      gian31: Battlefield: Forsaken Miner [282], Mountain [308], Swamp [281], Swamp [287], Tinybones, the Pickpocket [288]; Graveyard: Binding Negotiation [314], Binding Negotiation [329], Duress [299], Tinybones, the Pickpocket [321]
+
+Turn 9
+    additional protocol-observed zone movements not assigned to an action chain:
+      Restless Cottage [331] Library (shigesaao) -> Hand (shigesaao) (Draw; GRE sequence 200).
+      Restless Cottage [332] Hand (shigesaao) -> Battlefield (PlayLand; GRE sequence 203).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      shigesaao: Battlefield: Bandit's Talent [317], Deathcap Glade [301], Restless Cottage [332], Swamp [279], Wastewood Verge [285]; Graveyard: Archenemy's Charm [328], Deadly Cover-Up [298], The Rise of Sozin [313]; Exile: Pitiless Carnage [306]
+      gian31: Battlefield: Forsaken Miner [282], Mountain [308], Swamp [281], Swamp [287], Tinybones, the Pickpocket [288]; Graveyard: Binding Negotiation [314], Binding Negotiation [329], Duress [299], Tinybones, the Pickpocket [321]
+
+Turn 10
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Forsaken Miner [282] (unblocked, observed P/T 2/2), Tinybones, the Pickpocket [288] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: shigesaao -3 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): shigesaao 12 -> 9
+    additional protocol-observed zone movements not assigned to an action chain:
+      Fell [333] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 217).
+      Mountain [334] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 220).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      shigesaao: Battlefield: Bandit's Talent [317], Deathcap Glade [301], Restless Cottage [332], Swamp [279], Wastewood Verge [285]; Graveyard: Archenemy's Charm [328], Deadly Cover-Up [298], The Rise of Sozin [313]; Exile: Pitiless Carnage [306]
+      gian31: Battlefield: Forsaken Miner [282], Mountain [308], Mountain [334], Swamp [281], Swamp [287], Tinybones, the Pickpocket [288]; Graveyard: Binding Negotiation [314], Binding Negotiation [329], Duress [299], Tinybones, the Pickpocket [321]
+
+Turn 11
+    additional protocol-observed zone movements not assigned to an action chain:
+      Pitiless Carnage [336] Library (shigesaao) -> Hand (shigesaao) (Draw; GRE sequence 245).
+      Pitiless Carnage [341] Hand (shigesaao) -> Exile (Exile; GRE sequence 248).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      shigesaao: Battlefield: Bandit's Talent [317], Deathcap Glade [301], Restless Cottage [332], Swamp [279], Wastewood Verge [285]; Graveyard: Archenemy's Charm [328], Deadly Cover-Up [298], The Rise of Sozin [313]; Exile: Pitiless Carnage [306], Pitiless Carnage [341]
+      gian31: Battlefield: Forsaken Miner [282], Mountain [308], Mountain [334], Swamp [281], Swamp [287], Tinybones, the Pickpocket [288]; Graveyard: Binding Negotiation [314], Binding Negotiation [329], Duress [299], Tinybones, the Pickpocket [321]
+
+Turn 12
+  - Tinybones, Bauble Burglar [valid_resolution_no_immediate_mutation, seq=267] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=343)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, Bauble Burglar resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 343) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 343) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tinybones, Bauble Burglar [342] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 262).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      shigesaao: Battlefield: Bandit's Talent [317], Deathcap Glade [301], Restless Cottage [332], Swamp [279], Wastewood Verge [285]; Graveyard: Archenemy's Charm [328], Deadly Cover-Up [298], The Rise of Sozin [313]; Exile: Pitiless Carnage [306], Pitiless Carnage [341]
+      gian31: Battlefield: Forsaken Miner [282], Mountain [308], Mountain [334], Swamp [281], Swamp [287], Tinybones, Bauble Burglar [343], Tinybones, the Pickpocket [288]; Graveyard: Binding Negotiation [314], Binding Negotiation [329], Duress [299], Tinybones, the Pickpocket [321]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- No life mutation without an exact same-record source was observed.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Swamp [owner=shigesaao, controller=shigesaao] moves Hand (shigesaao) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Duress [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 24: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Forsaken Miner [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 27: Forsaken Miner [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 41: Deathcap Glade [owner=shigesaao, controller=shigesaao] moves Library (shigesaao) -> Hand (shigesaao) (Draw).
+- Turn 3, seq 44: Wastewood Verge [owner=shigesaao, controller=shigesaao] moves Hand (shigesaao) -> Battlefield (PlayLand).
+- Turn 4, seq 58: Binding Negotiation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 61: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 62: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 64: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 65: Duress [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 70: Deadly Cover-Up [owner=shigesaao, controller=shigesaao] moves Hand (shigesaao) -> Graveyard (shigesaao) (Discard).
+- Turn 4, seq 70: Duress [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 5, seq 90: The Rise of Sozin [owner=shigesaao, controller=shigesaao] moves Library (shigesaao) -> Hand (shigesaao) (Draw).
+- Turn 5, seq 93: Deathcap Glade [owner=shigesaao, controller=shigesaao] moves Hand (shigesaao) -> Battlefield (PlayLand).
+- Turn 5, seq 94: Pitiless Carnage [owner=shigesaao, controller=shigesaao] moves Hand (shigesaao) -> Exile (Exile).
+- Turn 6, seq 108: At Knifepoint [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 111: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 112: Binding Negotiation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 117: The Rise of Sozin [owner=shigesaao, controller=shigesaao] moves Hand (shigesaao) -> Graveyard (shigesaao) (Discard).
+- Turn 6, seq 117: Binding Negotiation [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 7, seq 142: Bandit's Talent [owner/controller metadata unavailable] moves Library (shigesaao) -> Hand (shigesaao) (Draw).
+- Turn 7, seq 145: Bandit's Talent [owner=shigesaao, controller=shigesaao] moves Hand (shigesaao) -> Stack (CastSpell).
+- Turn 7, seq 147: Bandit's Talent [owner=shigesaao, controller=shigesaao] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 150: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Hand (gian31) -> Graveyard (gian31) (Discard).
+- Turn 8, seq 167: Binding Negotiation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 170: Binding Negotiation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 175: Archenemy's Charm [owner=shigesaao, controller=shigesaao] moves Hand (shigesaao) -> Graveyard (shigesaao) (Discard).
+- Turn 8, seq 175: Binding Negotiation [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 9, seq 200: Restless Cottage [owner/controller metadata unavailable] moves Library (shigesaao) -> Hand (shigesaao) (Draw).
+- Turn 9, seq 203: Restless Cottage [owner=shigesaao, controller=shigesaao] moves Hand (shigesaao) -> Battlefield (PlayLand).
+- Turn 10, seq 217: Fell [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 220: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 11, seq 245: Pitiless Carnage [owner/controller metadata unavailable] moves Library (shigesaao) -> Hand (shigesaao) (Draw).
+- Turn 11, seq 248: Pitiless Carnage [owner=shigesaao, controller=shigesaao] moves Hand (shigesaao) -> Exile (Exile).
+- Turn 12, seq 262: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 265: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 267: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 165 becomes object 279 [Swamp].
+- Turn 2, seq 21: object 226 becomes object 280 [Duress].
+- Turn 2, seq 24: object 224 becomes object 281 [Swamp].
+- Turn 2, seq 25: object 223 becomes object 282 [Forsaken Miner].
+- Turn 3, seq 41: object 166 becomes object 284 [Deathcap Glade].
+- Turn 3, seq 44: object 163 becomes object 285 [Wastewood Verge].
+- Turn 4, seq 58: object 227 becomes object 286 [Binding Negotiation].
+- Turn 4, seq 61: object 220 becomes object 287 [Swamp].
+- Turn 4, seq 62: object 225 becomes object 288 [Tinybones, the Pickpocket].
+- Turn 4, seq 65: object 280 becomes object 290 [Duress].
+- Turn 4, seq 70: object 161 becomes object 298 [Deadly Cover-Up].
+- Turn 4, seq 70: object 290 becomes object 299 [Duress].
+- Turn 5, seq 90: object 167 becomes object 300 [The Rise of Sozin].
+- Turn 5, seq 93: object 284 becomes object 301 [Deathcap Glade].
+- Turn 5, seq 94: object 164 becomes object 306 [Pitiless Carnage].
+- Turn 6, seq 108: object 228 becomes object 307 [At Knifepoint].
+- Turn 6, seq 111: object 221 becomes object 308 [Mountain].
+- Turn 6, seq 112: object 286 becomes object 309 [Binding Negotiation].
+- Turn 6, seq 117: object 300 becomes object 313 [The Rise of Sozin].
+- Turn 6, seq 117: object 309 becomes object 314 [Binding Negotiation].
+- Turn 7, seq 142: object 168 becomes object 316 [Bandit's Talent].
+- Turn 7, seq 145: object 316 becomes object 317 [Bandit's Talent].
+- Turn 7, seq 150: object 219 becomes object 321 [Tinybones, the Pickpocket].
+- Turn 8, seq 167: object 229 becomes object 324 [Binding Negotiation].
+- Turn 8, seq 170: object 324 becomes object 325 [Binding Negotiation].
+- Turn 8, seq 175: object 160 becomes object 328 [Archenemy's Charm].
+- Turn 8, seq 175: object 325 becomes object 329 [Binding Negotiation].
+- Turn 9, seq 200: object 169 becomes object 331 [Restless Cottage].
+- Turn 9, seq 203: object 331 becomes object 332 [Restless Cottage].
+- Turn 10, seq 217: object 230 becomes object 333 [Fell].
+- Turn 10, seq 220: object 222 becomes object 334 [Mountain].
+- Turn 11, seq 245: object 170 becomes object 336 [Pitiless Carnage].
+- Turn 11, seq 248: object 336 becomes object 341 [Pitiless Carnage].
+- Turn 12, seq 262: object 231 becomes object 342 [Tinybones, Bauble Burglar].
+- Turn 12, seq 265: object 342 becomes object 343 [Tinybones, Bauble Burglar].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: shigesaao plays Swamp (object 279) from Hand (shigesaao) to Battlefield.
+- Turn 2: gian31 plays Swamp (object 281) from Hand (gian31) to Battlefield.
+- Turn 3: shigesaao plays Wastewood Verge (object 285) from Hand (shigesaao) to Battlefield.
+- Turn 4: gian31 plays Swamp (object 287) from Hand (gian31) to Battlefield.
+- Turn 5: shigesaao plays Deathcap Glade (object 301) from Hand (shigesaao) to Battlefield.
+- Turn 6: gian31 plays Mountain (object 308) from Hand (gian31) to Battlefield.
+- Turn 9: shigesaao plays Restless Cottage (object 332) from Hand (shigesaao) to Battlefield.
+- Turn 10: gian31 plays Mountain (object 334) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Bandit's Talent: casts=1; abilities=1 (triggered=1, activated=0) across turns [7, 7]
+- Forsaken Miner: casts=1 across turns [2]
+- Tinybones, Bauble Burglar: casts=1 across turns [12]
+- Tinybones, the Pickpocket: casts=1 across turns [4]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 4 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Forsaken Miner (gian31) -> shigesaao; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 6 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Forsaken Miner (gian31) -> shigesaao; unblocked in this observed snapshot
+  attacker: Tinybones, the Pickpocket (gian31) -> shigesaao; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Forsaken Miner (gian31) -> shigesaao; unblocked in this observed snapshot
+  attacker: Tinybones, the Pickpocket (gian31) -> shigesaao; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Forsaken Miner (gian31) -> shigesaao; unblocked in this observed snapshot
+  attacker: Tinybones, the Pickpocket (gian31) -> shigesaao; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Cathartic Parting | controller=shigesaao | owner=shigesaao | zone=Hand (latest_object_observation)
+- 160: Archenemy's Charm | controller=shigesaao | owner=shigesaao | zone=Hand (latest_object_observation)
+- 161: Deadly Cover-Up | controller=shigesaao | owner=shigesaao | zone=Hand (latest_object_observation)
+- 162: Cathartic Parting | controller=shigesaao | owner=shigesaao | zone=Hand (latest_object_observation)
+- 164: Pitiless Carnage | controller=shigesaao | owner=shigesaao | zone=Hand (latest_object_observation)
+- 219: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 220: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 221: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 222: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 223: Forsaken Miner | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 224: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 225: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 279: Swamp | controller=shigesaao | owner=shigesaao | zone=Battlefield (latest_object_observation)
+- 280: Duress | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 281: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 282: Forsaken Miner | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 284: Deathcap Glade | controller=shigesaao | owner=shigesaao | zone=Hand (latest_object_observation)
+- 285: Wastewood Verge | controller=shigesaao | owner=shigesaao | zone=Battlefield (latest_object_observation)
+- 286: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 287: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 288: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 290: Duress | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 292: Deadly Cover-Up | controller=shigesaao | owner=shigesaao | zone=Hand (latest_object_observation)
+- 293: Archenemy's Charm | controller=shigesaao | owner=shigesaao | zone=Hand (latest_object_observation)
+- 294: Cathartic Parting | controller=shigesaao | owner=shigesaao | zone=Hand (latest_object_observation)
+- 295: Deathcap Glade | controller=shigesaao | owner=shigesaao | zone=Hand (latest_object_observation)
+- 296: Pitiless Carnage | controller=shigesaao | owner=shigesaao | zone=Hand (latest_object_observation)
+- 297: Cathartic Parting | controller=shigesaao | owner=shigesaao | zone=Hand (latest_object_observation)
+- 298: Deadly Cover-Up | controller=shigesaao | owner=shigesaao | zone=Graveyard (latest_object_observation)
+- 299: Duress | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 300: The Rise of Sozin | controller=shigesaao | owner=shigesaao | zone=Hand (latest_object_observation)
+- 301: Deathcap Glade | controller=shigesaao | owner=shigesaao | zone=Battlefield (latest_object_observation)
+- 306: Pitiless Carnage | controller=shigesaao | owner=shigesaao | zone=Exile (latest_object_observation)
+- 307: At Knifepoint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 308: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 309: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 312: The Rise of Sozin | controller=shigesaao | owner=shigesaao | zone=Hand (latest_object_observation)
+- 313: The Rise of Sozin | controller=shigesaao | owner=shigesaao | zone=Graveyard (latest_object_observation)
+- 314: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 315: object 315 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 317: Bandit's Talent | controller=shigesaao | owner=shigesaao | zone=Stack (latest_object_observation)
+- 320: object 320 | controller=shigesaao | owner=shigesaao | zone=unknown (inferred unknown) (latest_object_observation)
+- 321: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 322: object 322 | controller=shigesaao | owner=shigesaao | zone=unknown (inferred unknown) (latest_object_observation)
+- 324: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 325: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 328: Archenemy's Charm | controller=shigesaao | owner=shigesaao | zone=Graveyard (latest_object_observation)
+- 329: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 330: object 330 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 332: Restless Cottage | controller=shigesaao | owner=shigesaao | zone=Battlefield (latest_object_observation)
+- 333: Fell | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 334: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 335: object 335 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 341: Pitiless Carnage | controller=shigesaao | owner=shigesaao | zone=Exile (latest_object_observation)
+- 342: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 343: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 30 total items
+  zones: Battlefield=7, Graveyard=4, Hand=13, Stack=3, unknown=3
+  objects: Binding Negotiation x6, Mountain x4, Swamp x4, Tinybones, the Pickpocket x4, Duress x3, Forsaken Miner x2, Tinybones, Bauble Burglar x2, At Knifepoint, Fell, object 315, object 330, object 335
+shigesaao: 26 total items
+  zones: Battlefield=4, Exile=2, Graveyard=3, Hand=14, Stack=1, unknown=2
+  objects: Cathartic Parting x4, Pitiless Carnage x4, Archenemy's Charm x3, Deadly Cover-Up x3, Deathcap Glade x3, The Rise of Sozin x3, Bandit's Talent, Restless Cottage, Swamp, Wastewood Verge, object 320, object 322
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+shigesaao:
+  Battlefield (4): Deathcap Glade, Restless Cottage, Swamp, Wastewood Verge
+  Graveyard: 3 card(s)
+gian31:
+  Battlefield (7): Forsaken Miner, Mountain, Mountain, Swamp, Swamp, Tinybones, Bauble Burglar, Tinybones, the Pickpocket
+  Graveyard: 4 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+5 objects have no resolved final zone and are omitted from the known board state.
+gian31: 3 unknown object(s)
+shigesaao: 2 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=27, Stack=4
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+gian31:
+  Battlefield (6): Swamp, Forsaken Miner, Swamp, Tinybones, the Pickpocket, Mountain, Mountain
+  Graveyard (4): Duress, Binding Negotiation, Tinybones, the Pickpocket, Binding Negotiation
+shigesaao:
+  Battlefield (5): Swamp, Wastewood Verge, Deathcap Glade, Bandit's Talent, Restless Cottage
+  Graveyard (3): Deadly Cover-Up, The Rise of Sozin, Archenemy's Charm
+  Exile (2): Pitiless Carnage, Pitiless Carnage
+Known non-persistent entries (counts only):
+  gian31: Hand=2, Limbo=2, Stack=1
+  shigesaao: Revealed=2
+  unknown: Hand=2, Library=95, Limbo=4
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: shigesaao Battlefield=1
+- Turn 2: gian31 Battlefield=2; shigesaao Battlefield=1
+- Turn 3: gian31 Battlefield=2; shigesaao Battlefield=2
+- Turn 4: gian31 Battlefield=4; gian31 Graveyard=1; shigesaao Battlefield=2; shigesaao Graveyard=1
+- Turn 5: gian31 Battlefield=4; gian31 Graveyard=1; shigesaao Battlefield=3; shigesaao Graveyard=1; shigesaao Exile=1
+- Turn 6: gian31 Battlefield=5; gian31 Graveyard=2; shigesaao Battlefield=3; shigesaao Graveyard=2; shigesaao Exile=1
+- Turn 7: gian31 Battlefield=5; gian31 Graveyard=3; shigesaao Battlefield=4; shigesaao Graveyard=2; shigesaao Exile=1
+- Turn 8: gian31 Battlefield=5; gian31 Graveyard=4; shigesaao Battlefield=4; shigesaao Graveyard=3; shigesaao Exile=1
+- Turn 9: gian31 Battlefield=5; gian31 Graveyard=4; shigesaao Battlefield=5; shigesaao Graveyard=3; shigesaao Exile=1
+- Turn 10: gian31 Battlefield=6; gian31 Graveyard=4; shigesaao Battlefield=5; shigesaao Graveyard=3; shigesaao Exile=1
+- Turn 11: gian31 Battlefield=6; gian31 Graveyard=4; shigesaao Battlefield=5; shigesaao Graveyard=3; shigesaao Exile=2
+- Turn 12: gian31 Battlefield=7; gian31 Graveyard=4; shigesaao Battlefield=5; shigesaao Graveyard=3; shigesaao Exile=2
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Forsaken Miner resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Tinybones, the Pickpocket resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Bandit's Talent resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Tinybones, Bauble Burglar resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
