@@ -1,0 +1,752 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Alexandre
+Seat map: Seat 1=gian31, Seat 2=Alexandre
+Turn range (known): 1 - 13
+Records: 24
+Action chains: 21
+Winner: gian31
+Final life: {'gian31': 20, 'Alexandre': 8}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 13 (Phase_Main2; Vibranium Energy Daggers, seq 372).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 36 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 11 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13] (raw records=11; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 12 explicit Library -> Hand movement(s); named in the draw record=6, resolved through an explicit identity transition=4, unresolved=2.
+Unresolved draw identities (explicit movements retained): Turn 6, seq 123, object 329; Turn 8, seq 182, object 347.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Mountain [170], Tinybones, the Pickpocket [171], Swamp [172], Tinybones, Bauble Burglar [173], Swamp [174], Mountain [175], Binding Negotiation [176].
+  - unknown: 7 observed card(s): object 230 [230], object 231 [231], object 232 [232], object 233 [233], object 234 [234], object 235 [235], object 236 [236].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 20, 'Alexandre': 8}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 13 (Phase_Main2; Vibranium Energy Daggers, seq 372).
+Last captured life snapshot: Alexandre 17 -> 8 (seq 341).
+Tokens on battlefield at their last observation (not confirmed at match end): Treasure [435] controller=gian31, created Turn 13, last observed Turn 13 seq 370, P/T unavailable; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Tinybones, the Pickpocket.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 3: actions: cards=0, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp.
+- Turn 4: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 5: actions: cards=1, abilities=0; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, Tinybones, Bauble Burglar.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Ral Zarek, Guest Lecturer.
+- Turn 7: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Mountain, Gonti, Night Minister.
+- Turn 8: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Marauding Blight-Priest.
+- Turn 9: actions: cards=1, abilities=1; combat snapshots=1; explicit battlefield entries=Mountain, Bloodthirsty Conqueror.
+- Turn 10: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Bloodthirsty Conqueror.
+- Turn 11: actions: cards=2, abilities=0; combat snapshots=1; explicit battlefield entries=Laughing Jasper Flint; explicit battlefield exits=Bloodthirsty Conqueror, Ral Zarek, Guest Lecturer.
+- Turn 12: actions: cards=1, abilities=0; explicit battlefield exits=Bloodthirsty Conqueror.
+- Turn 13: actions: cards=4, abilities=8; combat snapshots=1; life mutations=1; explicit battlefield entries=Ragged Playmate, Swamp, Unstoppable Slasher, Vibranium Energy Daggers; explicit battlefield exits=Marauding Blight-Priest, Treasure, Treasure, Treasure.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Tinybones, the Pickpocket [valid_resolution_no_immediate_mutation, seq=10] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=302)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, the Pickpocket resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 302) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 302) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [301] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [301], Tinybones, the Pickpocket [302]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [304] Library (Alexandre) -> Hand (Alexandre) (Draw; GRE sequence 24).
+      Swamp [305] Hand (Alexandre) -> Battlefield (PlayLand; GRE sequence 27).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [301], Tinybones, the Pickpocket [302]
+      Alexandre: Battlefield: Swamp [305]
+
+Turn 3
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Tinybones, the Pickpocket [302] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Alexandre -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Alexandre 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tinybones, Bauble Burglar [306] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 41).
+      Swamp [307] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 44).
+      Binding Negotiation [308] Hand (gian31) -> Stack (CastSpell; GRE sequence 45).
+      Bloodthirsty Conqueror [318] Hand (Alexandre) -> Graveyard (Alexandre) (Discard; GRE sequence 50).
+      Binding Negotiation [319] Stack -> Graveyard (gian31) (Resolve; GRE sequence 50).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [301], Swamp [307], Tinybones, the Pickpocket [302]; Graveyard: Binding Negotiation [319]
+      Alexandre: Battlefield: Swamp [305]; Graveyard: Bloodthirsty Conqueror [318]
+
+Turn 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [321] Library (Alexandre) -> Hand (Alexandre) (Draw; GRE sequence 75).
+      Swamp [322] Hand (Alexandre) -> Battlefield (PlayLand; GRE sequence 78).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [301], Swamp [307], Tinybones, the Pickpocket [302]; Graveyard: Binding Negotiation [319]
+      Alexandre: Battlefield: Swamp [305], Swamp [322]; Graveyard: Bloodthirsty Conqueror [318]
+
+Turn 5
+  - Tinybones, Bauble Burglar [valid_resolution_no_immediate_mutation, seq=98] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=325)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, Bauble Burglar resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 325) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 325) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Tinybones, the Pickpocket [302] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Alexandre -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Alexandre 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [323] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 92).
+      Swamp [324] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 95).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [301], Swamp [307], Swamp [324], Tinybones, Bauble Burglar [325], Tinybones, the Pickpocket [302]; Graveyard: Binding Negotiation [319]
+      Alexandre: Battlefield: Swamp [305], Swamp [322]; Graveyard: Bloodthirsty Conqueror [318]
+
+Turn 6
+  - Ral Zarek, Guest Lecturer [valid_resolution_no_immediate_mutation, seq=129] (active=Alexandre, phase=Phase_Main1, controller=Alexandre, owner=Alexandre, source_object=331)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ral Zarek, Guest Lecturer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ral Zarek, Guest Lecturer (object 331) Hand (Alexandre) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ral Zarek, Guest Lecturer (object 331) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 329 [329] Library (Alexandre) -> Hand (Alexandre) (Draw; GRE sequence 123).
+      Swamp [330] Hand (Alexandre) -> Battlefield (PlayLand; GRE sequence 126).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [301], Swamp [307], Swamp [324], Tinybones, Bauble Burglar [325], Tinybones, the Pickpocket [302]; Graveyard: Binding Negotiation [319]
+      Alexandre: Battlefield: Ral Zarek, Guest Lecturer [331], Swamp [305], Swamp [322], Swamp [330]; Graveyard: Bloodthirsty Conqueror [318]
+
+Turn 7
+  - Gonti, Night Minister [valid_resolution_no_immediate_mutation, seq=153] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=338)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Gonti, Night Minister resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Gonti, Night Minister (object 338) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gonti, Night Minister (object 338) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=169] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=338, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Gonti, Night Minister: exiles Bloodthirsty Conqueror.
+      explicit effect object references: Bloodthirsty Conqueror [241], Bloodthirsty Conqueror [345] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 345) Library (Alexandre) -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Tinybones, the Pickpocket [302] (unblocked, observed P/T 1/1), Tinybones, Bauble Burglar [325] (unblocked, observed P/T 1/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 2; snapshot comparison does not reconcile (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Alexandre -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Alexandre 18 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Gonti, Night Minister [336] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 147).
+      Mountain [337] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 150).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Gonti, Night Minister [338], Mountain [337], Swamp [301], Swamp [307], Swamp [324], Tinybones, Bauble Burglar [325], Tinybones, the Pickpocket [302]; Graveyard: Binding Negotiation [319]; Exile: Bloodthirsty Conqueror [345]
+      Alexandre: Battlefield: Ral Zarek, Guest Lecturer [331], Swamp [305], Swamp [322], Swamp [330]; Graveyard: Bloodthirsty Conqueror [318]
+
+Turn 8
+  - Marauding Blight-Priest [valid_resolution_no_immediate_mutation, seq=188] (active=Alexandre, phase=Phase_Main1, controller=Alexandre, owner=Alexandre, source_object=349)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Marauding Blight-Priest resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 349) Hand (Alexandre) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Marauding Blight-Priest (object 349) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 347 [347] Library (Alexandre) -> Hand (Alexandre) (Draw; GRE sequence 182).
+      Swamp [348] Hand (Alexandre) -> Battlefield (PlayLand; GRE sequence 185).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Gonti, Night Minister [338], Mountain [337], Swamp [301], Swamp [307], Swamp [324], Tinybones, Bauble Burglar [325], Tinybones, the Pickpocket [302]; Graveyard: Binding Negotiation [319]; Exile: Bloodthirsty Conqueror [345]
+      Alexandre: Battlefield: Marauding Blight-Priest [349], Ral Zarek, Guest Lecturer [331], Swamp [305], Swamp [322], Swamp [330], Swamp [348]; Graveyard: Bloodthirsty Conqueror [318]
+
+Turn 9
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=212] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=338, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Gonti, Night Minister: a token is created.
+      explicit effect object references: Treasure [363] (role/targeting only where the protocol identifies it)
+      token created: Treasure (object 363, controller=gian31); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 362).
+  - Bloodthirsty Conqueror [valid_resolution_no_immediate_mutation, seq=214] (active=gian31, phase=Phase_Main1, controller=gian31, owner=Alexandre, source_object=356)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bloodthirsty Conqueror resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 356) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 356) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Gonti, Night Minister [338] (unblocked, observed P/T 3/4)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat damage assignment: unknown unless explicitly observed
+    additional protocol-observed zone movements not assigned to an action chain:
+      Fell [354] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 206).
+      Mountain [355] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 209).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodthirsty Conqueror [356], Gonti, Night Minister [338], Mountain [337], Mountain [355], Swamp [301], Swamp [307], Swamp [324], Tinybones, Bauble Burglar [325], Tinybones, the Pickpocket [302]; Graveyard: Binding Negotiation [319]
+      Alexandre: Battlefield: Marauding Blight-Priest [349], Ral Zarek, Guest Lecturer [331], Swamp [305], Swamp [322], Swamp [330], Swamp [348]; Graveyard: Bloodthirsty Conqueror [318]
+
+Turn 10
+  - Zombify [observed_semantic_effect, seq=243] (active=Alexandre, phase=Phase_Main1, controller=Alexandre, owner=Alexandre, source_object=366)
+      effects: return to battlefield
+      narrative: Zombify: a card/permanent returns.
+      explicit effect object references: Bloodthirsty Conqueror [318], Bloodthirsty Conqueror [371] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Zombify (object 366) Hand (Alexandre) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 371) Graveyard (Alexandre) -> Battlefield (Return; shared object ID)
+      protocol-linked zone transfer: Zombify (object 372) Stack -> Graveyard (Alexandre) (Resolve; shared object ID)
+      identity continuity: source object 366 -> transfer object 372 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Zombify [364] Library (Alexandre) -> Hand (Alexandre) (Draw; GRE sequence 235).
+      Swamp [365] Hand (Alexandre) -> Battlefield (PlayLand; GRE sequence 238).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodthirsty Conqueror [356], Gonti, Night Minister [338], Mountain [337], Mountain [355], Swamp [301], Swamp [307], Swamp [324], Tinybones, Bauble Burglar [325], Tinybones, the Pickpocket [302]; Graveyard: Binding Negotiation [319]
+      Alexandre: Battlefield: Bloodthirsty Conqueror [371], Marauding Blight-Priest [349], Ral Zarek, Guest Lecturer [331], Swamp [305], Swamp [322], Swamp [330], Swamp [348], Swamp [365]; Graveyard: Zombify [372]
+
+Turn 11
+  - Fell [observed_semantic_effect, seq=269] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=375)
+      effects: destroy
+      narrative: Fell destroys Bloodthirsty Conqueror.
+      explicit effect object references: Bloodthirsty Conqueror [371], Bloodthirsty Conqueror [378] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Fell (object 375) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 378) Battlefield -> Graveyard (Alexandre) (Destroy; shared object ID)
+      protocol-linked zone transfer: Fell (object 379) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 375 -> transfer object 379 (explicit GRE ObjectIdChanged chain).
+  - Laughing Jasper Flint [valid_resolution_no_immediate_mutation, seq=272] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=380)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Laughing Jasper Flint resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Laughing Jasper Flint (object 380) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Laughing Jasper Flint (object 380) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Gonti, Night Minister [338] (unblocked, observed P/T 3/4)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat damage assignment: unknown unless explicitly observed
+    additional protocol-observed zone movements not assigned to an action chain:
+      Laughing Jasper Flint [374] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 262).
+      Ral Zarek, Guest Lecturer [384] Battlefield -> Graveyard (Alexandre) (SBA_ZeroLoyalty; GRE sequence 283).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Bloodthirsty Conqueror [356], Gonti, Night Minister [338], Laughing Jasper Flint [380], Mountain [337], Mountain [355], Swamp [301], Swamp [307], Swamp [324], Tinybones, Bauble Burglar [325], Tinybones, the Pickpocket [302]; Graveyard: Binding Negotiation [319], Fell [379]
+      Alexandre: Battlefield: Marauding Blight-Priest [349], Swamp [305], Swamp [322], Swamp [330], Swamp [348], Swamp [365]; Graveyard: Bloodthirsty Conqueror [378], Ral Zarek, Guest Lecturer [384], Zombify [372]
+
+Turn 12
+  - Hero's Downfall [observed_semantic_effect, seq=300] (active=Alexandre, phase=Phase_Main1, controller=Alexandre, owner=Alexandre, source_object=386)
+      effects: destroy
+      narrative: Hero's Downfall destroys Bloodthirsty Conqueror.
+      explicit effect object references: Bloodthirsty Conqueror [356], Bloodthirsty Conqueror [390] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hero's Downfall (object 386) Hand (Alexandre) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bloodthirsty Conqueror (object 390) Battlefield -> Graveyard (Alexandre) (Destroy; shared object ID)
+      protocol-linked zone transfer: Hero's Downfall (object 391) Stack -> Graveyard (Alexandre) (Resolve; shared object ID)
+      identity continuity: source object 386 -> transfer object 391 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hero's Downfall [385] Library (Alexandre) -> Hand (Alexandre) (Draw; GRE sequence 293).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Gonti, Night Minister [338], Laughing Jasper Flint [380], Mountain [337], Mountain [355], Swamp [301], Swamp [307], Swamp [324], Tinybones, Bauble Burglar [325], Tinybones, the Pickpocket [302]; Graveyard: Binding Negotiation [319], Fell [379]
+      Alexandre: Battlefield: Marauding Blight-Priest [349], Swamp [305], Swamp [322], Swamp [330], Swamp [348], Swamp [365]; Graveyard: Bloodthirsty Conqueror [378], Bloodthirsty Conqueror [390], Hero's Downfall [391], Ral Zarek, Guest Lecturer [384], Zombify [372]
+
+Turn 13
+  - Ability of Laughing Jasper Flint [observed_semantic_effect, seq=317] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=380, source_last_explicit_zone=Battlefield)
+      effects: exile, exile, exile, exile
+      narrative: Ability of Laughing Jasper Flint: exiles Hero's Downfall, Emeritus of Woe, Vibranium Energy Daggers, Vibranium Energy Daggers; exile; exile; exile.
+      explicit effect object references: object 244 [244], object 245 [245], object 246 [246], object 247 [247], Emeritus of Woe [393], Vibranium Energy Daggers [394], Vibranium Energy Daggers [395], Hero's Downfall [396] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hero's Downfall (object 396) Library (Alexandre) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Emeritus of Woe (object 393) Library (Alexandre) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Vibranium Energy Daggers (object 394) Library (Alexandre) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Vibranium Energy Daggers (object 395) Library (Alexandre) -> Exile (Exile; shared object ID)
+  - Ragged Playmate [valid_resolution_no_immediate_mutation, seq=324] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=398)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ragged Playmate resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ragged Playmate (object 398) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ragged Playmate (object 398) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=329] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=338, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Gonti, Night Minister: a token is created.
+      explicit effect object references: Treasure [406] (role/targeting only where the protocol identifies it)
+      token created: Treasure (object 406, controller=gian31); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 405).
+  - Hero's Downfall [observed_semantic_effect, seq=331] (active=gian31, phase=Phase_Main1, controller=gian31, owner=Alexandre, source_object=401)
+      effects: destroy
+      narrative: Hero's Downfall destroys Marauding Blight-Priest.
+      explicit effect object references: Marauding Blight-Priest [349], Marauding Blight-Priest [407] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hero's Downfall (object 401) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Marauding Blight-Priest (object 407) Battlefield -> Graveyard (Alexandre) (Destroy; shared object ID)
+      protocol-linked zone transfer: Hero's Downfall (object 408) Stack -> Graveyard (Alexandre) (Resolve; shared object ID)
+      identity continuity: source object 401 -> transfer object 408 (explicit GRE ObjectIdChanged chain).
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=346] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=338, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Gonti, Night Minister: exiles Unstoppable Slasher.
+      explicit effect object references: Unstoppable Slasher [248], Unstoppable Slasher [414] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Unstoppable Slasher (object 414) Library (Alexandre) -> Exile (Exile; shared object ID)
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=348] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=338, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 346 and 348; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: exile
+      narrative: Ability of Gonti, Night Minister: exiles Swamp.
+      explicit effect object references: Swamp [249], Swamp [416] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Swamp (object 416) Library (Alexandre) -> Exile (Exile; shared object ID)
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=350] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=338, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 348 and 350; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: exile
+      narrative: Ability of Gonti, Night Minister: exiles Visage of Dread.
+      explicit effect object references: Visage of Dread [250], Visage of Dread [418] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Visage of Dread (object 418) Library (Alexandre) -> Exile (Exile; shared object ID)
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=352] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=338, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 350 and 352; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: exile
+      narrative: Ability of Gonti, Night Minister: exiles Emeritus of Woe.
+      explicit effect object references: Emeritus of Woe [251], Emeritus of Woe [420] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Emeritus of Woe (object 420) Library (Alexandre) -> Exile (Exile; shared object ID)
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=364] (active=gian31, phase=Phase_Main2, controller=gian31, owner=gian31, source_object=338, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 352 and 364; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: token creation
+      narrative: Ability of Gonti, Night Minister: a token is created.
+      explicit effect object references: Treasure [430] (role/targeting only where the protocol identifies it)
+      token created: Treasure (object 430, controller=gian31); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 429).
+  - Unstoppable Slasher [valid_resolution_no_immediate_mutation, seq=366] (active=gian31, phase=Phase_Main2, controller=gian31, owner=Alexandre, source_object=423)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Unstoppable Slasher resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Unstoppable Slasher (object 423) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Unstoppable Slasher (object 423) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Gonti, Night Minister [observed_semantic_effect, seq=370] (active=gian31, phase=Phase_Main2, controller=gian31, owner=gian31, source_object=338, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of Gonti, Night Minister: a token is created.
+      explicit effect object references: Treasure [435] (role/targeting only where the protocol identifies it)
+      token created: Treasure (object 435, controller=gian31); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 434).
+  - Vibranium Energy Daggers [valid_resolution_no_immediate_mutation, seq=372] (active=gian31, phase=Phase_Main2, controller=gian31, owner=Alexandre, source_object=431)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Vibranium Energy Daggers resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Vibranium Energy Daggers (object 431) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Vibranium Energy Daggers (object 431) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Tinybones, the Pickpocket [302] (unblocked, observed P/T 1/1), Tinybones, Bauble Burglar [325] (unblocked, observed P/T 1/3), Gonti, Night Minister [338] (unblocked, observed P/T 3/4), Laughing Jasper Flint [380] (unblocked, observed P/T 4/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 9; observed attacker power total: 9; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Alexandre -9 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 9 + observed modifiers 0 = 9; individual assignment unavailable): Alexandre 17 -> 8
+    additional protocol-observed zone movements not assigned to an action chain:
+      Ragged Playmate [397] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 319).
+      Swamp [422] Exile -> Battlefield (PlayLand; GRE sequence 360).
+      Treasure [426] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 362).
+        sacrifice observed after Ability of Gonti, Night Minister (seq 352); direct causal linkage is unavailable.
+      Treasure [428] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 362).
+        sacrifice observed after Ability of Gonti, Night Minister (seq 352); direct causal linkage is unavailable.
+      Treasure [433] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 368).
+        sacrifice observed after Unstoppable Slasher (seq 366); direct causal linkage is unavailable.
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Gonti, Night Minister [338], Laughing Jasper Flint [380], Mountain [337], Mountain [355], Ragged Playmate [398], Swamp [301], Swamp [307], Swamp [324], Swamp [422], Tinybones, Bauble Burglar [325], Tinybones, the Pickpocket [302], Unstoppable Slasher [423], Vibranium Energy Daggers [431]; Graveyard: Binding Negotiation [319], Fell [379], Treasure [426], Treasure [428], Treasure [433]
+      Alexandre: Battlefield: Swamp [305], Swamp [322], Swamp [330], Swamp [348], Swamp [365]; Graveyard: Bloodthirsty Conqueror [378], Bloodthirsty Conqueror [390], Hero's Downfall [391], Hero's Downfall [408], Marauding Blight-Priest [407], Ral Zarek, Guest Lecturer [384], Zombify [372]; Exile: Emeritus of Woe [393], Emeritus of Woe [420], Vibranium Energy Daggers [394], Visage of Dread [418]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- No life mutation without an exact same-record source was observed.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 4 token creations observed; 1 active as last observed; 3 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Treasure [363] controller=gian31; created Turn 9 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 13 via Battlefield -> Graveyard (gian31) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+- Treasure [406] controller=gian31; created Turn 13 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 13 via Battlefield -> Graveyard (gian31) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+- Treasure [430] controller=gian31; created Turn 13 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 13 via Battlefield -> Graveyard (gian31) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+- Treasure [435] controller=gian31; created Turn 13 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 13, object 435 (latest observed P/T unknown; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 1, seq 10: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 24: Swamp [owner/controller metadata unavailable] moves Library (Alexandre) -> Hand (Alexandre) (Draw).
+- Turn 2, seq 27: Swamp [owner=Alexandre, controller=Alexandre] moves Hand (Alexandre) -> Battlefield (PlayLand).
+- Turn 3, seq 41: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 44: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Binding Negotiation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 50: Bloodthirsty Conqueror [owner=Alexandre, controller=Alexandre] moves Hand (Alexandre) -> Graveyard (Alexandre) (Discard).
+- Turn 3, seq 50: Binding Negotiation [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 4, seq 75: Swamp [owner/controller metadata unavailable] moves Library (Alexandre) -> Hand (Alexandre) (Draw).
+- Turn 4, seq 78: Swamp [owner=Alexandre, controller=Alexandre] moves Hand (Alexandre) -> Battlefield (PlayLand).
+- Turn 5, seq 92: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 95: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 96: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 98: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 123: object 329 [owner/controller metadata unavailable] moves Library (Alexandre) -> Hand (Alexandre) (Draw).
+- Turn 6, seq 126: Swamp [owner=Alexandre, controller=Alexandre] moves Hand (Alexandre) -> Battlefield (PlayLand).
+- Turn 6, seq 127: Ral Zarek, Guest Lecturer [owner=Alexandre, controller=Alexandre] moves Hand (Alexandre) -> Stack (CastSpell).
+- Turn 6, seq 129: Ral Zarek, Guest Lecturer [owner=Alexandre, controller=Alexandre] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 147: Gonti, Night Minister [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 150: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 151: Gonti, Night Minister [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 153: Gonti, Night Minister [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 169: Bloodthirsty Conqueror [owner=Alexandre, controller=gian31] moves Library (Alexandre) -> Exile (Exile).
+- Turn 8, seq 182: object 347 [owner/controller metadata unavailable] moves Library (Alexandre) -> Hand (Alexandre) (Draw).
+- Turn 8, seq 185: Swamp [owner=Alexandre, controller=Alexandre] moves Hand (Alexandre) -> Battlefield (PlayLand).
+- Turn 8, seq 186: Marauding Blight-Priest [owner=Alexandre, controller=Alexandre] moves Hand (Alexandre) -> Stack (CastSpell).
+- Turn 8, seq 188: Marauding Blight-Priest [owner=Alexandre, controller=Alexandre] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 206: Fell [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 209: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 210: Bloodthirsty Conqueror [owner=Alexandre, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 9, seq 214: Bloodthirsty Conqueror [owner=Alexandre, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 235: Zombify [owner/controller metadata unavailable] moves Library (Alexandre) -> Hand (Alexandre) (Draw).
+- Turn 10, seq 238: Swamp [owner=Alexandre, controller=Alexandre] moves Hand (Alexandre) -> Battlefield (PlayLand).
+- Turn 10, seq 239: Zombify [owner=Alexandre, controller=Alexandre] moves Hand (Alexandre) -> Stack (CastSpell).
+- Turn 10, seq 243: Bloodthirsty Conqueror [owner=Alexandre, controller=Alexandre] moves Graveyard (Alexandre) -> Battlefield (Return).
+- Turn 10, seq 243: Zombify [owner=Alexandre, controller=Alexandre] moves Stack -> Graveyard (Alexandre) (Resolve).
+- Turn 11, seq 262: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 265: Fell [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 269: Bloodthirsty Conqueror [owner=Alexandre, controller=Alexandre] moves Battlefield -> Graveyard (Alexandre) (Destroy).
+- Turn 11, seq 269: Fell [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 11, seq 270: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 11, seq 272: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 283: Ral Zarek, Guest Lecturer [owner=Alexandre, controller=Alexandre] moves Battlefield -> Graveyard (Alexandre) (SBA_ZeroLoyalty).
+- Turn 12, seq 293: Hero's Downfall [owner/controller metadata unavailable] moves Library (Alexandre) -> Hand (Alexandre) (Draw).
+- Turn 12, seq 296: Hero's Downfall [owner=Alexandre, controller=Alexandre] moves Hand (Alexandre) -> Stack (CastSpell).
+- Turn 12, seq 300: Bloodthirsty Conqueror [owner=Alexandre, controller=Alexandre] moves Battlefield -> Graveyard (Alexandre) (Destroy).
+- Turn 12, seq 300: Hero's Downfall [owner=Alexandre, controller=Alexandre] moves Stack -> Graveyard (Alexandre) (Resolve).
+- Turn 13, seq 317: Hero's Downfall [owner=Alexandre, controller=gian31] moves Library (Alexandre) -> Exile (Exile).
+- Turn 13, seq 317: Emeritus of Woe [owner=Alexandre, controller=Alexandre] moves Library (Alexandre) -> Exile (Exile).
+- Turn 13, seq 317: Vibranium Energy Daggers [owner=Alexandre, controller=Alexandre] moves Library (Alexandre) -> Exile (Exile).
+- Turn 13, seq 317: Vibranium Energy Daggers [owner=Alexandre, controller=gian31] moves Library (Alexandre) -> Exile (Exile).
+- Turn 13, seq 319: Ragged Playmate [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 322: Ragged Playmate [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 13, seq 324: Ragged Playmate [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 325: Hero's Downfall [owner=Alexandre, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 13, seq 331: Marauding Blight-Priest [owner=Alexandre, controller=Alexandre] moves Battlefield -> Graveyard (Alexandre) (Destroy).
+- Turn 13, seq 331: Hero's Downfall [owner=Alexandre, controller=Alexandre] moves Stack -> Graveyard (Alexandre) (Resolve).
+- Turn 13, seq 346: Unstoppable Slasher [owner=Alexandre, controller=gian31] moves Library (Alexandre) -> Exile (Exile).
+- Turn 13, seq 348: Swamp [owner=Alexandre, controller=gian31] moves Library (Alexandre) -> Exile (Exile).
+- Turn 13, seq 350: Visage of Dread [owner=Alexandre, controller=Alexandre] moves Library (Alexandre) -> Exile (Exile).
+- Turn 13, seq 352: Emeritus of Woe [owner=Alexandre, controller=Alexandre] moves Library (Alexandre) -> Exile (Exile).
+- Turn 13, seq 360: Swamp [owner=Alexandre, controller=gian31] moves Exile -> Battlefield (PlayLand).
+- Turn 13, seq 361: Unstoppable Slasher [owner=Alexandre, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 13, seq 362: Treasure [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 13, seq 362: Treasure [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 13, seq 366: Unstoppable Slasher [owner=Alexandre, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 367: Vibranium Energy Daggers [owner=Alexandre, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 13, seq 368: Treasure [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 13, seq 372: Vibranium Energy Daggers [owner=Alexandre, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 172 becomes object 301 [Swamp].
+- Turn 1, seq 8: object 171 becomes object 302 [Tinybones, the Pickpocket].
+- Turn 2, seq 24: object 237 becomes object 304 [Swamp].
+- Turn 2, seq 27: object 304 becomes object 305 [Swamp].
+- Turn 3, seq 41: object 177 becomes object 306 [Tinybones, Bauble Burglar].
+- Turn 3, seq 44: object 174 becomes object 307 [Swamp].
+- Turn 3, seq 45: object 176 becomes object 308 [Binding Negotiation].
+- Turn 3, seq 50: object 233 becomes object 318 [Bloodthirsty Conqueror].
+- Turn 3, seq 50: object 308 becomes object 319 [Binding Negotiation].
+- Turn 4, seq 75: object 238 becomes object 321 [Swamp].
+- Turn 4, seq 78: object 321 becomes object 322 [Swamp].
+- Turn 5, seq 92: object 178 becomes object 323 [Swamp].
+- Turn 5, seq 95: object 323 becomes object 324 [Swamp].
+- Turn 5, seq 96: object 306 becomes object 325 [Tinybones, Bauble Burglar].
+- Turn 6, seq 123: object 239 becomes object 329 [object 239].
+- Turn 6, seq 126: object 230 becomes object 330 [Swamp].
+- Turn 6, seq 127: object 232 becomes object 331 [Ral Zarek, Guest Lecturer].
+- Turn 7, seq 147: object 179 becomes object 336 [Gonti, Night Minister].
+- Turn 7, seq 150: object 175 becomes object 337 [Mountain].
+- Turn 7, seq 151: object 336 becomes object 338 [Gonti, Night Minister].
+- Turn 7, seq 169: object 241 becomes object 345 [Bloodthirsty Conqueror].
+- Turn 8, seq 182: object 240 becomes object 347 [object 240].
+- Turn 8, seq 185: object 235 becomes object 348 [Swamp].
+- Turn 8, seq 186: object 234 becomes object 349 [Marauding Blight-Priest].
+- Turn 9, seq 206: object 180 becomes object 354 [Fell].
+- Turn 9, seq 209: object 170 becomes object 355 [Mountain].
+- Turn 9, seq 210: object 345 becomes object 356 [Bloodthirsty Conqueror].
+- Turn 10, seq 235: object 243 becomes object 364 [Zombify].
+- Turn 10, seq 238: object 231 becomes object 365 [Swamp].
+- Turn 10, seq 239: object 364 becomes object 366 [Zombify].
+- Turn 10, seq 243: object 318 becomes object 371 [Bloodthirsty Conqueror].
+- Turn 10, seq 243: object 366 becomes object 372 [Zombify].
+- Turn 11, seq 262: object 181 becomes object 374 [Laughing Jasper Flint].
+- Turn 11, seq 265: object 354 becomes object 375 [Fell].
+- Turn 11, seq 269: object 371 becomes object 378 [Bloodthirsty Conqueror].
+- Turn 11, seq 269: object 375 becomes object 379 [Fell].
+- Turn 11, seq 270: object 374 becomes object 380 [Laughing Jasper Flint].
+- Turn 11, seq 283: object 331 becomes object 384 [Ral Zarek, Guest Lecturer].
+- Turn 12, seq 293: object 242 becomes object 385 [Hero's Downfall].
+- Turn 12, seq 296: object 385 becomes object 386 [Hero's Downfall].
+- Turn 12, seq 300: object 356 becomes object 390 [Bloodthirsty Conqueror].
+- Turn 12, seq 300: object 386 becomes object 391 [Hero's Downfall].
+- Turn 13, seq 317: object 247 becomes object 396 [Hero's Downfall].
+- Turn 13, seq 317: object 244 becomes object 393 [Emeritus of Woe].
+- Turn 13, seq 317: object 245 becomes object 394 [Vibranium Energy Daggers].
+- Turn 13, seq 317: object 246 becomes object 395 [Vibranium Energy Daggers].
+- Turn 13, seq 319: object 182 becomes object 397 [Ragged Playmate].
+- Turn 13, seq 322: object 397 becomes object 398 [Ragged Playmate].
+- Turn 13, seq 325: object 396 becomes object 401 [Hero's Downfall].
+- Turn 13, seq 331: object 349 becomes object 407 [Marauding Blight-Priest].
+- Turn 13, seq 331: object 401 becomes object 408 [Hero's Downfall].
+- Turn 13, seq 346: object 248 becomes object 414 [Unstoppable Slasher].
+- Turn 13, seq 348: object 249 becomes object 416 [Swamp].
+- Turn 13, seq 350: object 250 becomes object 418 [Visage of Dread].
+- Turn 13, seq 352: object 251 becomes object 420 [Emeritus of Woe].
+- Turn 13, seq 360: object 416 becomes object 422 [Swamp].
+- Turn 13, seq 361: object 414 becomes object 423 [Unstoppable Slasher].
+- Turn 13, seq 362: object 363 becomes object 426 [Treasure].
+- Turn 13, seq 362: object 406 becomes object 428 [Treasure].
+- Turn 13, seq 367: object 395 becomes object 431 [Vibranium Energy Daggers].
+- Turn 13, seq 368: object 430 becomes object 433 [Treasure].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Swamp (object 301) from Hand (gian31) to Battlefield.
+- Turn 2: Alexandre plays Swamp (object 305) from Hand (Alexandre) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 307) from Hand (gian31) to Battlefield.
+- Turn 4: Alexandre plays Swamp (object 322) from Hand (Alexandre) to Battlefield.
+- Turn 5: gian31 plays Swamp (object 324) from Hand (gian31) to Battlefield.
+- Turn 6: Alexandre plays Swamp (object 330) from Hand (Alexandre) to Battlefield.
+- Turn 7: gian31 plays Mountain (object 337) from Hand (gian31) to Battlefield.
+- Turn 8: Alexandre plays Swamp (object 348) from Hand (Alexandre) to Battlefield.
+- Turn 9: gian31 plays Mountain (object 355) from Hand (gian31) to Battlefield.
+- Turn 10: Alexandre plays Swamp (object 365) from Hand (Alexandre) to Battlefield.
+- Turn 13: gian31 plays Swamp (object 422) from Exile to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 13: ordered adjacent records Gonti, Night Minister -> Gonti, Night Minister; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Gonti, Night Minister: casts=1; abilities=9 (triggered=9, activated=0) across turns [7, 7, 9, 13, 13, 13, 13, 13, 13, 13]
+  observed effect totals: draws=0, tokens=4, counters=0, returns=0, damage=0, life_changes=0, other=5
+  observed effects: exile, token creation
+- Hero's Downfall: casts=2 across turns [12, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: destroy
+- Laughing Jasper Flint: casts=1; abilities=1 (triggered=1, activated=0) across turns [11, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=4
+  observed effects: exile
+- Bloodthirsty Conqueror: casts=1 across turns [9]
+- Fell: casts=1 across turns [11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Marauding Blight-Priest: casts=1 across turns [8]
+- Ragged Playmate: casts=1 across turns [13]
+- Ral Zarek, Guest Lecturer: casts=1 across turns [6]
+- Tinybones, Bauble Burglar: casts=1 across turns [5]
+- Tinybones, the Pickpocket: casts=1 across turns [1]
+- Unstoppable Slasher: casts=1 across turns [13]
+- Vibranium Energy Daggers: casts=1 across turns [13]
+- Zombify: casts=1 across turns [10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=1, damage=0, life_changes=0, other=0
+  observed effects: return to battlefield
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 3 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Tinybones, the Pickpocket (gian31) -> Alexandre; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 5 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Tinybones, the Pickpocket (gian31) -> Alexandre; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Tinybones, the Pickpocket (gian31) -> Alexandre; unblocked in this observed snapshot
+  attacker: Tinybones, Bauble Burglar (gian31) -> seat 331; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack (active=gian31)
+  attacker: Gonti, Night Minister (gian31) -> seat 331; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack (active=gian31)
+  attacker: Gonti, Night Minister (gian31) -> seat 331; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Tinybones, the Pickpocket (gian31) -> Alexandre; unblocked in this observed snapshot
+  attacker: Tinybones, Bauble Burglar (gian31) -> Alexandre; unblocked in this observed snapshot
+  attacker: Gonti, Night Minister (gian31) -> Alexandre; unblocked in this observed snapshot
+  attacker: Laughing Jasper Flint (gian31) -> Alexandre; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 7: Ability of Gonti, Night Minister (active=gian31) - Ability of Gonti, Night Minister: exile.
+- Turn 13: Ability of Gonti, Night Minister (active=gian31) - Ability of Gonti, Night Minister: exile.
+- Turn 13: Ability of Gonti, Night Minister (active=gian31) - Ability of Gonti, Night Minister: exile.
+- Turn 13: Ability of Gonti, Night Minister (active=gian31) - Ability of Gonti, Night Minister: exile.
+- Turn 13: Ability of Gonti, Night Minister (active=gian31) - Ability of Gonti, Night Minister: exile.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 170: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 171: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 172: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 173: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 174: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 175: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 176: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 230: Swamp | controller=Alexandre | owner=Alexandre | zone=unknown (inferred unknown) (latest_object_observation)
+- 231: Swamp | controller=Alexandre | owner=Alexandre | zone=unknown (inferred unknown) (latest_object_observation)
+- 232: Ral Zarek, Guest Lecturer | controller=Alexandre | owner=Alexandre | zone=unknown (inferred unknown) (latest_object_observation)
+- 233: Bloodthirsty Conqueror | controller=Alexandre | owner=Alexandre | zone=Hand (latest_object_observation)
+- 234: Marauding Blight-Priest | controller=Alexandre | owner=Alexandre | zone=unknown (inferred unknown) (latest_object_observation)
+- 235: Swamp | controller=Alexandre | owner=Alexandre | zone=unknown (inferred unknown) (latest_object_observation)
+- 236: Ugin, Eye of the Storms | controller=Alexandre | owner=Alexandre | zone=unknown (inferred unknown) (latest_object_observation)
+- 241: Bloodthirsty Conqueror | controller=Alexandre | owner=Alexandre | zone=Hand (latest_object_observation)
+- 248: Unstoppable Slasher | controller=Alexandre | owner=Alexandre | zone=Hand (latest_object_observation)
+- 249: Swamp | controller=Alexandre | owner=Alexandre | zone=Hand (latest_object_observation)
+- 250: Visage of Dread | controller=Alexandre | owner=Alexandre | zone=Hand (latest_object_observation)
+- 251: Emeritus of Woe | controller=Alexandre | owner=Alexandre | zone=Hand (latest_object_observation)
+- 301: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 302: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 305: Swamp | controller=Alexandre | owner=Alexandre | zone=Battlefield (latest_object_observation)
+- 306: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 307: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 308: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 311: Bloodthirsty Conqueror | controller=Alexandre | owner=Alexandre | zone=unknown (inferred unknown) (latest_object_observation)
+- 312: Ral Zarek, Guest Lecturer | controller=Alexandre | owner=Alexandre | zone=unknown (inferred unknown) (latest_object_observation)
+- 313: Marauding Blight-Priest | controller=Alexandre | owner=Alexandre | zone=unknown (inferred unknown) (latest_object_observation)
+- 314: Swamp | controller=Alexandre | owner=Alexandre | zone=unknown (inferred unknown) (latest_object_observation)
+- 315: Swamp | controller=Alexandre | owner=Alexandre | zone=unknown (inferred unknown) (latest_object_observation)
+- 316: Ugin, Eye of the Storms | controller=Alexandre | owner=Alexandre | zone=unknown (inferred unknown) (latest_object_observation)
+- 317: Swamp | controller=Alexandre | owner=Alexandre | zone=unknown (inferred unknown) (latest_object_observation)
+- 318: Bloodthirsty Conqueror | controller=Alexandre | owner=Alexandre | zone=Graveyard (latest_object_observation)
+- 319: Binding Negotiation | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 320: object 320 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 322: Swamp | controller=Alexandre | owner=Alexandre | zone=Battlefield (latest_object_observation)
+- 323: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 324: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 325: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 328: object 328 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 330: Swamp | controller=Alexandre | owner=Alexandre | zone=Battlefield (latest_object_observation)
+- 331: Ral Zarek, Guest Lecturer | controller=Alexandre | owner=Alexandre | zone=Stack (latest_object_observation)
+- 335: object 335 | controller=Alexandre | owner=Alexandre | zone=unknown (inferred unknown) (latest_object_observation)
+- 336: Gonti, Night Minister | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 337: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 338: Gonti, Night Minister | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 343: object 343 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 344: object 344 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 345: Bloodthirsty Conqueror | controller=gian31 | owner=Alexandre | zone=Exile (latest_object_observation)
+- 348: Swamp | controller=Alexandre | owner=Alexandre | zone=Battlefield (latest_object_observation)
+- 349: Marauding Blight-Priest | controller=Alexandre | owner=Alexandre | zone=Battlefield (latest_object_observation)
+- 353: object 353 | controller=Alexandre | owner=Alexandre | zone=unknown (inferred unknown) (latest_object_observation)
+- 354: Fell | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 355: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 356: Bloodthirsty Conqueror | controller=gian31 | owner=Alexandre | zone=Battlefield (latest_object_observation)
+- 362: object 362 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 363: Treasure | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 365: Swamp | controller=Alexandre | owner=Alexandre | zone=Battlefield (latest_object_observation)
+- 366: Zombify | controller=Alexandre | owner=Alexandre | zone=Stack (latest_object_observation)
+- 371: Bloodthirsty Conqueror | controller=Alexandre | owner=Alexandre | zone=Battlefield (latest_object_observation)
+- 372: Zombify | controller=Alexandre | owner=Alexandre | zone=Graveyard (latest_object_observation)
+- 373: object 373 | controller=Alexandre | owner=Alexandre | zone=unknown (inferred unknown) (latest_object_observation)
+- 374: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 375: Fell | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 378: Bloodthirsty Conqueror | controller=Alexandre | owner=Alexandre | zone=Graveyard (latest_object_observation)
+- 379: Fell | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 380: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 384: Ral Zarek, Guest Lecturer | controller=Alexandre | owner=Alexandre | zone=Graveyard (latest_object_observation)
+- 386: Hero's Downfall | controller=Alexandre | owner=Alexandre | zone=Stack (latest_object_observation)
+- 390: Bloodthirsty Conqueror | controller=Alexandre | owner=Alexandre | zone=Graveyard (latest_object_observation)
+- 391: Hero's Downfall | controller=Alexandre | owner=Alexandre | zone=Graveyard (latest_object_observation)
+- 392: object 392 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 393: Emeritus of Woe | controller=Alexandre | owner=Alexandre | zone=Exile (latest_object_observation)
+- 394: Vibranium Energy Daggers | controller=Alexandre | owner=Alexandre | zone=Exile (latest_object_observation)
+- 395: Vibranium Energy Daggers | controller=gian31 | owner=Alexandre | zone=Hand (latest_object_observation)
+- 396: Hero's Downfall | controller=gian31 | owner=Alexandre | zone=Exile (latest_object_observation)
+- 397: Ragged Playmate | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 398: Ragged Playmate | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 401: Hero's Downfall | controller=gian31 | owner=Alexandre | zone=Stack (latest_object_observation)
+- 405: object 405 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 406: Treasure | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 407: Marauding Blight-Priest | controller=Alexandre | owner=Alexandre | zone=Graveyard (latest_object_observation)
+- 408: Hero's Downfall | controller=Alexandre | owner=Alexandre | zone=Graveyard (latest_object_observation)
+- 409: object 409 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 410: object 410 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 411: object 411 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 412: object 412 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 413: object 413 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 414: Unstoppable Slasher | controller=gian31 | owner=Alexandre | zone=Exile (latest_object_observation)
+- 416: Swamp | controller=gian31 | owner=Alexandre | zone=Exile (latest_object_observation)
+- 418: Visage of Dread | controller=Alexandre | owner=Alexandre | zone=Exile (latest_object_observation)
+- 420: Emeritus of Woe | controller=Alexandre | owner=Alexandre | zone=Exile (latest_object_observation)
+- 422: Swamp | controller=gian31 | owner=Alexandre | zone=Battlefield (latest_object_observation)
+- 423: Unstoppable Slasher | controller=gian31 | owner=Alexandre | zone=Battlefield (latest_object_observation)
+- 429: object 429 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 430: Treasure | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 431: Vibranium Energy Daggers | controller=gian31 | owner=Alexandre | zone=Stack (latest_object_observation)
+- 434: object 434 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 435: Treasure | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Alexandre: 44 total items
+  zones: Battlefield=7, Exile=4, Graveyard=8, Hand=6, Stack=3, unknown=16
+  objects: Swamp x12, Bloodthirsty Conqueror x7, Marauding Blight-Priest x4, Ral Zarek, Guest Lecturer x4, Emeritus of Woe x3, Hero's Downfall x3, Ugin, Eye of the Storms x2, Visage of Dread x2, Zombify x2, Unstoppable Slasher, Vibranium Energy Daggers, object 335
+gian31: 55 total items
+  zones: Battlefield=14, Exile=4, Hand=16, Stack=4, unknown=17
+  objects: Swamp x8, Mountain x4, Treasure x4, Binding Negotiation x3, Fell x3, Tinybones, Bauble Burglar x3, Bloodthirsty Conqueror x2, Gonti, Night Minister x2, Hero's Downfall x2, Laughing Jasper Flint x2, Ragged Playmate x2, Tinybones, the Pickpocket x2
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (14): Bloodthirsty Conqueror, Gonti, Night Minister, Laughing Jasper Flint, Mountain, Mountain, Ragged Playmate, Swamp, Swamp, Swamp, Swamp, Tinybones, Bauble Burglar, Tinybones, the Pickpocket, Treasure, Unstoppable Slasher
+  Graveyard: 0 card(s)
+Alexandre:
+  Battlefield (7): Bloodthirsty Conqueror, Marauding Blight-Priest, Swamp, Swamp, Swamp, Swamp, Swamp
+  Graveyard: 8 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+33 objects have no resolved final zone and are omitted from the known board state.
+Alexandre: 16 unknown object(s)
+gian31: 17 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=22, Stack=7
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Alexandre:
+  Battlefield (5): Swamp, Swamp, Swamp, Swamp, Swamp
+  Graveyard (7): Zombify, Bloodthirsty Conqueror, Ral Zarek, Guest Lecturer, Bloodthirsty Conqueror, Hero's Downfall, Marauding Blight-Priest, Hero's Downfall
+  Exile (4): Emeritus of Woe, Vibranium Energy Daggers, Visage of Dread, Emeritus of Woe
+gian31:
+  Battlefield (13): Swamp, Tinybones, the Pickpocket, Swamp, Swamp, Tinybones, Bauble Burglar, Mountain, Gonti, Night Minister, Mountain, Laughing Jasper Flint, Ragged Playmate, Swamp, Unstoppable Slasher, Treasure
+  Graveyard (2): Binding Negotiation, Fell
+Known non-persistent entries (counts only):
+  Alexandre: Hand=2, Limbo=8, Revealed=1
+  gian31: Hand=1, Limbo=13, Stack=1
+  unknown: Hand=1, Library=96, Limbo=8
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=2
+- Turn 2: Alexandre Battlefield=1; gian31 Battlefield=2
+- Turn 3: Alexandre Battlefield=1; Alexandre Graveyard=1; gian31 Battlefield=3; gian31 Graveyard=1
+- Turn 4: Alexandre Battlefield=2; Alexandre Graveyard=1; gian31 Battlefield=3; gian31 Graveyard=1
+- Turn 5: Alexandre Battlefield=2; Alexandre Graveyard=1; gian31 Battlefield=5; gian31 Graveyard=1
+- Turn 6: Alexandre Battlefield=4; Alexandre Graveyard=1; gian31 Battlefield=5; gian31 Graveyard=1
+- Turn 7: Alexandre Battlefield=4; Alexandre Graveyard=1; gian31 Battlefield=7; gian31 Graveyard=1; gian31 Exile=1
+- Turn 8: Alexandre Battlefield=6; Alexandre Graveyard=1; gian31 Battlefield=7; gian31 Graveyard=1; gian31 Exile=1
+- Turn 9: Alexandre Battlefield=6; Alexandre Graveyard=1; gian31 Battlefield=9; gian31 Graveyard=1
+- Turn 10: Alexandre Battlefield=8; Alexandre Graveyard=1; gian31 Battlefield=9; gian31 Graveyard=1
+- Turn 11: Alexandre Battlefield=6; Alexandre Graveyard=3; gian31 Battlefield=10; gian31 Graveyard=2
+- Turn 12: Alexandre Battlefield=6; Alexandre Graveyard=5; gian31 Battlefield=9; gian31 Graveyard=2
+- Turn 13: Alexandre Battlefield=5; Alexandre Graveyard=7; Alexandre Exile=4; gian31 Battlefield=13; gian31 Graveyard=5
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Tinybones, the Pickpocket resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Tinybones, Bauble Burglar resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Ral Zarek, Guest Lecturer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Gonti, Night Minister resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Marauding Blight-Priest resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Bloodthirsty Conqueror resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Laughing Jasper Flint resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Ragged Playmate resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Unstoppable Slasher resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Vibranium Energy Daggers resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
