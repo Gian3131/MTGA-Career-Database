@@ -1,0 +1,728 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: NothingUpMySleeve, gian31
+Seat map: Seat 1=NothingUpMySleeve, Seat 2=gian31
+Turn range (known): 1 - 13
+Unnumbered turn groups retained: 1
+Records: 20
+Action chains: 20
+Winner: gian31
+Final life: {'NothingUpMySleeve': 7, 'gian31': 21}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 13 (Phase_Main1; Fell, seq 324).
+Later numbered GRE record(s): 4 after action sequence 324 across turn(s) [13]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+POST-ACTION GRE RECORDS - RESULT ORDER UNRESOLVED
+  - Turn 13, seq 330: tapped_changed.
+  - Turn 13, seq 330: tapped_changed.
+  - Turn 13, seq 336: identity_changed.
+  - Turn 13, seq 336: zone_transfer (Exile).
+  These records are retained for traceability; their order relative to the match-result payload is not asserted.
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 37 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 12 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13] (raw records=12; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 17 explicit Library -> Hand movement(s); named in the draw record=11, resolved through an explicit identity transition=6, unresolved=0.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Swamp [219], Burst Lightning [220], Swamp [221], Mountain [222], Requiting Hex [223], Fell [224], Mountain [225].
+  - unknown: 7 observed card(s): object 159 [159], object 160 [160], object 161 [161], object 162 [162], object 163 [163], object 164 [164], object 165 [165].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'NothingUpMySleeve': 7, 'gian31': 21}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 13 (Phase_Main1; Fell, seq 324).
+Last captured life snapshot: NothingUpMySleeve 14 -> 7 (seq 334).
+Tokens on battlefield at their last observation (not confirmed at match end): Treasure [374] controller=NothingUpMySleeve, created Turn 11, last observed Turn 11 seq 274, P/T unavailable; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Temple of Deceit.
+- Turn 3: actions: cards=0, abilities=0; explicit battlefield entries=Mountain.
+- Turn 4: actions: cards=0, abilities=0; explicit battlefield entries=Dimir Guildgate.
+- Turn 5: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Vaan, Street Thief.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Island, Gleaming Barrier.
+- Turn 7: actions: cards=4, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, Brineborn Cutthroat, Tinybones, Bauble Burglar; explicit battlefield exits=Gleaming Barrier, Treasure, Brineborn Cutthroat.
+- Turn 8: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 9: actions: cards=0, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp.
+- Turn 10: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Gleaming Barrier.
+- Turn 11: actions: cards=2, abilities=3; combat snapshots=1; life mutations=1; explicit battlefield entries=Arcanis the Omnipotent; explicit battlefield exits=Treasure, Treasure, Gleaming Barrier.
+- Turn 12: actions: cards=1, abilities=2; life mutations=1; explicit battlefield entries=Dismal Backwater, Dreadwing Scavenger.
+- Turn 13: actions: cards=1, abilities=2; combat snapshots=1; life mutations=2; explicit battlefield entries=Dismal Backwater; explicit battlefield exits=Dreadwing Scavenger.
+- Turn None: actions: cards=0, abilities=0.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [279] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [279]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Gleaming Barrier [280] Library (NothingUpMySleeve) -> Hand (NothingUpMySleeve) (Draw; GRE sequence 21).
+      Temple of Deceit [281] Hand (NothingUpMySleeve) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [279]
+      NothingUpMySleeve: Battlefield: Temple of Deceit [281]
+
+Turn 3
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [283] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 41).
+      Mountain [284] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [284], Swamp [279]
+      NothingUpMySleeve: Battlefield: Temple of Deceit [281]
+
+Turn 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Zombify [285] Library (NothingUpMySleeve) -> Hand (NothingUpMySleeve) (Draw; GRE sequence 58).
+      Dimir Guildgate [286] Hand (NothingUpMySleeve) -> Battlefield (PlayLand; GRE sequence 61).
+      Opt [287] Hand (NothingUpMySleeve) -> Stack (CastSpell; GRE sequence 62).
+      Island [289] Library (NothingUpMySleeve) -> Hand (NothingUpMySleeve) (Draw; GRE sequence 65).
+      Opt [290] Stack -> Graveyard (NothingUpMySleeve) (Resolve; GRE sequence 65).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [284], Swamp [279]
+      NothingUpMySleeve: Battlefield: Dimir Guildgate [286], Temple of Deceit [281]; Graveyard: Opt [290]
+
+Turn 5
+  - Vaan, Street Thief [valid_resolution_no_immediate_mutation, seq=85] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=293)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Vaan, Street Thief resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Vaan, Street Thief (object 293) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Vaan, Street Thief (object 293) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Vaan, Street Thief [291] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 79).
+      Mountain [292] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 82).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [284], Mountain [292], Swamp [279], Vaan, Street Thief [293]
+      NothingUpMySleeve: Battlefield: Dimir Guildgate [286], Temple of Deceit [281]; Graveyard: Opt [290]
+
+Turn 6
+  - Gleaming Barrier [valid_resolution_no_immediate_mutation, seq=105] (active=NothingUpMySleeve, phase=Phase_Main1, controller=NothingUpMySleeve, owner=NothingUpMySleeve, source_object=299)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Gleaming Barrier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Gleaming Barrier (object 299) Hand (NothingUpMySleeve) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gleaming Barrier (object 299) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Brineborn Cutthroat [297] Library (NothingUpMySleeve) -> Hand (NothingUpMySleeve) (Draw; GRE sequence 99).
+      Island [298] Hand (NothingUpMySleeve) -> Battlefield (PlayLand; GRE sequence 102).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [284], Mountain [292], Swamp [279], Vaan, Street Thief [293]
+      NothingUpMySleeve: Battlefield: Dimir Guildgate [286], Gleaming Barrier [299], Island [298], Temple of Deceit [281]; Graveyard: Opt [290]
+
+Turn 7
+  - Requiting Hex [observed_semantic_effect, seq=128] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=304)
+      effects: destroy
+      narrative: Requiting Hex destroys Gleaming Barrier.
+      explicit effect object references: Gleaming Barrier [299], Gleaming Barrier [306] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Requiting Hex (object 304) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gleaming Barrier (object 306) Battlefield -> Graveyard (NothingUpMySleeve) (Destroy; shared object ID)
+      protocol-linked zone transfer: Requiting Hex (object 308) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 304 -> transfer object 308 (explicit GRE ObjectIdChanged chain).
+  - Ability of Gleaming Barrier [observed_semantic_effect, seq=130] (active=gian31, phase=Phase_Main1, controller=NothingUpMySleeve, owner=NothingUpMySleeve, source_object=299, source_last_explicit_zone=Battlefield, source_successor=306 observed Battlefield -> Graveyard (NothingUpMySleeve) (Destroy))
+      effects: token creation
+      narrative: Ability of Gleaming Barrier: a token is created.
+      explicit effect object references: Treasure [309] (role/targeting only where the protocol identifies it)
+      token created: Treasure (object 309, controller=NothingUpMySleeve); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 307).
+  - Burst Lightning [observed_semantic_effect, seq=147] (active=gian31, phase=Phase_Combat, step=Step_DeclareAttack, controller=gian31, owner=gian31, source_object=314)
+      effects: 2 damage
+      narrative: Burst Lightning: Brineborn Cutthroat takes 2 damage.
+      explicit effect object references: Brineborn Cutthroat [310] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Burst Lightning (object 314) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Burst Lightning (object 316) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 314 -> transfer object 316 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Brineborn Cutthroat (object 317) Battlefield -> Graveyard (NothingUpMySleeve) (SBA_Damage; shared object ID)
+  - Tinybones, Bauble Burglar [valid_resolution_no_immediate_mutation, seq=163] (active=gian31, phase=Phase_Main2, controller=gian31, owner=gian31, source_object=324)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, Bauble Burglar resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 324) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 324) Stack -> Battlefield (Resolve; shared object ID)
+  - Brineborn Cutthroat [valid_resolution_no_immediate_mutation, seq=137] (active=unknown, controller=NothingUpMySleeve, owner=NothingUpMySleeve, source_object=310)
+      chronology reconciliation: parser turn group None conflicts with Turn 7; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Brineborn Cutthroat resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Brineborn Cutthroat (object 310) Hand (NothingUpMySleeve) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Brineborn Cutthroat (object 310) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Vaan, Street Thief [293] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat-result zone change: Brineborn Cutthroat [317] Battlefield -> Graveyard (NothingUpMySleeve) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: NothingUpMySleeve -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): NothingUpMySleeve 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tinybones, Bauble Burglar [302] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 119).
+      Swamp [303] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 122).
+      Treasure [313] Battlefield -> Graveyard (NothingUpMySleeve) (Sacrifice; GRE sequence 135).
+        sacrifice observed after Ability of Gleaming Barrier (seq 130); direct causal linkage is unavailable.
+      Swamp [320] Library (NothingUpMySleeve) -> Exile (Exile; GRE sequence 153).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [284], Mountain [292], Swamp [279], Swamp [303], Tinybones, Bauble Burglar [324], Vaan, Street Thief [293]; Graveyard: Burst Lightning [316], Requiting Hex [308]
+      NothingUpMySleeve: Battlefield: Dimir Guildgate [286], Island [298], Temple of Deceit [281]; Graveyard: Brineborn Cutthroat [317], Gleaming Barrier [306], Opt [290], Treasure [313]; Exile: Swamp [320]
+
+Turn 8
+    additional protocol-observed zone movements not assigned to an action chain:
+      Essence Scatter [325] Library (NothingUpMySleeve) -> Hand (NothingUpMySleeve) (Draw; GRE sequence 169).
+      Swamp [326] Hand (NothingUpMySleeve) -> Battlefield (PlayLand; GRE sequence 172).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [284], Mountain [292], Swamp [279], Swamp [303], Tinybones, Bauble Burglar [324], Vaan, Street Thief [293]; Graveyard: Burst Lightning [316], Requiting Hex [308]
+      NothingUpMySleeve: Battlefield: Dimir Guildgate [286], Island [298], Swamp [326], Temple of Deceit [281]; Graveyard: Brineborn Cutthroat [317], Gleaming Barrier [306], Opt [290], Treasure [313]; Exile: Swamp [320]
+
+Turn 9
+  - Ability of Tinybones, Bauble Burglar [observed_semantic_effect, seq=197] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=324, source_last_explicit_zone=Battlefield)
+      effects: exile, +1 counter(s)
+      narrative: Ability of Tinybones, Bauble Burglar: exiles Arcanis the Omnipotent; 1 counter(s) are added to Arcanis the Omnipotent [340].
+      explicit effect object references: Arcanis the Omnipotent [337], Arcanis the Omnipotent [340] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Arcanis the Omnipotent (object 340) Graveyard (NothingUpMySleeve) -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Vaan, Street Thief [293] (unblocked, observed P/T 2/2), Tinybones, Bauble Burglar [324] (unblocked, observed P/T 1/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 3; observed attacker power total: 3; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: NothingUpMySleeve -3 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 3 + observed modifiers 0 = 3; individual assignment unavailable): NothingUpMySleeve 18 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Binding Negotiation [327] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 186).
+      Swamp [328] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 189).
+      Binding Negotiation [329] Hand (gian31) -> Stack (CastSpell; GRE sequence 190).
+      Arcanis the Omnipotent [337] Hand (NothingUpMySleeve) -> Graveyard (NothingUpMySleeve) (Discard; GRE sequence 195).
+      Binding Negotiation [339] Stack -> Graveyard (gian31) (Resolve; GRE sequence 195).
+      Arbiter of Woe [343] Library (NothingUpMySleeve) -> Exile (Exile; GRE sequence 209).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [284], Mountain [292], Swamp [279], Swamp [303], Swamp [328], Tinybones, Bauble Burglar [324], Vaan, Street Thief [293]; Graveyard: Binding Negotiation [339], Burst Lightning [316], Requiting Hex [308]; Exile: Arcanis the Omnipotent [340]
+      NothingUpMySleeve: Battlefield: Dimir Guildgate [286], Island [298], Swamp [326], Temple of Deceit [281]; Graveyard: Brineborn Cutthroat [317], Gleaming Barrier [306], Opt [290], Treasure [313]; Exile: Arbiter of Woe [343], Swamp [320]
+
+Turn 10
+  - Zombify [observed_semantic_effect, seq=228] (active=NothingUpMySleeve, phase=Phase_Main1, controller=NothingUpMySleeve, owner=NothingUpMySleeve, source_object=347)
+      effects: return to battlefield
+      narrative: Zombify: a card/permanent returns.
+      explicit effect object references: Gleaming Barrier [306], Gleaming Barrier [352] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Zombify (object 347) Hand (NothingUpMySleeve) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gleaming Barrier (object 352) Graveyard (NothingUpMySleeve) -> Battlefield (Return; shared object ID)
+      protocol-linked zone transfer: Zombify (object 353) Stack -> Graveyard (NothingUpMySleeve) (Resolve; shared object ID)
+      identity continuity: source object 347 -> transfer object 353 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [345] Library (NothingUpMySleeve) -> Hand (NothingUpMySleeve) (Draw; GRE sequence 220).
+      Swamp [346] Hand (NothingUpMySleeve) -> Battlefield (PlayLand; GRE sequence 223).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Mountain [284], Mountain [292], Swamp [279], Swamp [303], Swamp [328], Tinybones, Bauble Burglar [324], Vaan, Street Thief [293]; Graveyard: Binding Negotiation [339], Burst Lightning [316], Requiting Hex [308]; Exile: Arcanis the Omnipotent [340]
+      NothingUpMySleeve: Battlefield: Dimir Guildgate [286], Gleaming Barrier [352], Island [298], Swamp [326], Swamp [346], Temple of Deceit [281]; Graveyard: Brineborn Cutthroat [317], Opt [290], Treasure [313], Zombify [353]; Exile: Arbiter of Woe [343], Swamp [320]
+
+Turn 11
+  - Ability of Vaan, Street Thief [observed_semantic_effect, seq=248] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s)
+      narrative: Ability of Vaan, Street Thief: Vaan, Street Thief gets +1/+1; Tinybones, Bauble Burglar gets +1/+1; 1 counter(s) are added to Vaan, Street Thief [293]; 1 counter(s) are added to Tinybones, Bauble Burglar [324].
+      explicit effect object references: Tinybones, Bauble Burglar [324] (role/targeting only where the protocol identifies it)
+  - Arcanis the Omnipotent [valid_resolution_no_immediate_mutation, seq=250] (active=gian31, phase=Phase_Main1, controller=gian31, owner=NothingUpMySleeve, source_object=355)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Arcanis the Omnipotent resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Arcanis the Omnipotent (object 355) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Arcanis the Omnipotent (object 355) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Vaan, Street Thief [observed_semantic_effect, seq=270] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: P/T +1/+1, P/T +1/+1, +1 counter(s), +1 counter(s)
+      narrative: Ability of Vaan, Street Thief: Vaan, Street Thief gets +1/+1; Tinybones, Bauble Burglar gets +1/+1; 1 counter(s) are added to Vaan, Street Thief [293]; 1 counter(s) are added to Tinybones, Bauble Burglar [324].
+      explicit effect object references: Tinybones, Bauble Burglar [324] (role/targeting only where the protocol identifies it)
+  - Stab [observed_semantic_effect, seq=272] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=NothingUpMySleeve, source_object=367)
+      effects: P/T -2/-2
+      narrative: Stab: Gleaming Barrier gets -2/-2.
+      explicit effect object references: Gleaming Barrier [352] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Stab (object 367) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Stab (object 371) Stack -> Graveyard (NothingUpMySleeve) (Resolve; shared object ID)
+      identity continuity: source object 367 -> transfer object 371 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Gleaming Barrier (object 372) Battlefield -> Graveyard (NothingUpMySleeve) (SBA_Damage; shared object ID)
+  - Ability of Gleaming Barrier [observed_semantic_effect, seq=274] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=NothingUpMySleeve, owner=NothingUpMySleeve, source_object=352, source_last_explicit_zone=Battlefield, source_successor=372 observed Battlefield -> Graveyard (NothingUpMySleeve) (SBA_Damage))
+      effects: token creation
+      narrative: Ability of Gleaming Barrier: a token is created.
+      explicit effect object references: Treasure [374] (role/targeting only where the protocol identifies it)
+      token created: Treasure (object 374, controller=NothingUpMySleeve); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 373).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> CombatDamage):
+      attackers: Vaan, Street Thief [293] (blocked, observed P/T 4/4), Tinybones, Bauble Burglar [324] (unblocked, observed P/T 3/5)
+      blockers: Gleaming Barrier [352]
+      combat-result zone change: Gleaming Barrier [372] Battlefield -> Graveyard (NothingUpMySleeve) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: NothingUpMySleeve -2 (individual changes below; gains and losses may offset)
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): NothingUpMySleeve 15 -> 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Laughing Jasper Flint [354] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 242).
+      Treasure [362] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 246).
+      Stab [366] Library (NothingUpMySleeve) -> Exile (Exile; GRE sequence 264).
+      Treasure [369] Battlefield -> Graveyard (gian31) (Sacrifice; GRE sequence 268).
+        sacrifice observed after Arcanis the Omnipotent (seq 250); direct causal linkage is unavailable.
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Arcanis the Omnipotent [355], Mountain [284], Mountain [292], Swamp [279], Swamp [303], Swamp [328], Tinybones, Bauble Burglar [324], Vaan, Street Thief [293]; Graveyard: Binding Negotiation [339], Burst Lightning [316], Requiting Hex [308], Treasure [362], Treasure [369]
+      NothingUpMySleeve: Battlefield: Dimir Guildgate [286], Island [298], Swamp [326], Swamp [346], Temple of Deceit [281]; Graveyard: Brineborn Cutthroat [317], Gleaming Barrier [372], Opt [290], Stab [371], Treasure [313], Zombify [353]; Exile: Arbiter of Woe [343], Swamp [320]
+
+Turn 12
+  - Ability of Dismal Backwater [observed_semantic_effect, seq=289] (active=NothingUpMySleeve, phase=Phase_Main1, controller=NothingUpMySleeve, owner=NothingUpMySleeve, source_object=376, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Dismal Backwater: NothingUpMySleeve gains 1 life.
+  - Dreadwing Scavenger [valid_resolution_no_immediate_mutation, seq=292] (active=NothingUpMySleeve, phase=Phase_Main1, controller=NothingUpMySleeve, owner=NothingUpMySleeve, source_object=378)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Dreadwing Scavenger resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Dreadwing Scavenger (object 378) Hand (NothingUpMySleeve) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Dreadwing Scavenger (object 378) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Tinybones, Bauble Burglar [observed_semantic_effect, seq=297] (active=NothingUpMySleeve, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=324, source_last_explicit_zone=Battlefield)
+      effects: exile, +1 counter(s)
+      narrative: Ability of Tinybones, Bauble Burglar: exiles Dismal Backwater; 1 counter(s) are added to Dismal Backwater [386].
+      explicit effect object references: Dismal Backwater [384], Dismal Backwater [386] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Dismal Backwater (object 386) Graveyard (NothingUpMySleeve) -> Exile (Exile; shared object ID)
+    net observed life change this turn: NothingUpMySleeve +1 (individual changes below; gains and losses may offset)
+    life: NothingUpMySleeve 13 -> 14
+    additional protocol-observed zone movements not assigned to an action chain:
+      Dreadwing Scavenger [375] Library (NothingUpMySleeve) -> Hand (NothingUpMySleeve) (Draw; GRE sequence 284).
+      Dismal Backwater [376] Hand (NothingUpMySleeve) -> Battlefield (PlayLand; GRE sequence 287).
+      Dismal Backwater [383] Library (NothingUpMySleeve) -> Hand (NothingUpMySleeve) (Draw; GRE sequence 294).
+      Dismal Backwater [384] Hand (NothingUpMySleeve) -> Graveyard (NothingUpMySleeve) (Discard; GRE sequence 295).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Arcanis the Omnipotent [355], Mountain [284], Mountain [292], Swamp [279], Swamp [303], Swamp [328], Tinybones, Bauble Burglar [324], Vaan, Street Thief [293]; Graveyard: Binding Negotiation [339], Burst Lightning [316], Requiting Hex [308], Treasure [362], Treasure [369]; Exile: Dismal Backwater [386]
+      NothingUpMySleeve: Battlefield: Dimir Guildgate [286], Dismal Backwater [376], Dreadwing Scavenger [378], Island [298], Swamp [326], Swamp [346], Temple of Deceit [281]; Graveyard: Brineborn Cutthroat [317], Gleaming Barrier [372], Opt [290], Stab [371], Treasure [313], Zombify [353]; Exile: Arbiter of Woe [343], Swamp [320]
+
+Turn 13
+  - Ability of Dismal Backwater [observed_semantic_effect, seq=316] (active=gian31, phase=Phase_Main1, controller=gian31, owner=NothingUpMySleeve, source_object=388, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Dismal Backwater: gian31 gains 1 life.
+  - Ability of Arcanis the Omnipotent [observed_semantic_effect, seq=319] (active=gian31, phase=Phase_Main1, controller=gian31, owner=NothingUpMySleeve, source_object=355, source_last_explicit_zone=Battlefield)
+      effects: draw, draw, draw
+      narrative: Ability of Arcanis the Omnipotent: draw; draw; draw.
+      explicit effect object references: object 232 [232], object 233 [233], object 234 [234], Tinybones, Bauble Burglar [391], Bitter Triumph [392], Swamp [393] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Tinybones, Bauble Burglar (object 391) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+      protocol-linked zone transfer: Bitter Triumph (object 392) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+      protocol-linked zone transfer: Swamp (object 393) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Fell [observed_semantic_effect, seq=324] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=394)
+      effects: destroy
+      narrative: Fell destroys Dreadwing Scavenger.
+      explicit effect object references: Dreadwing Scavenger [378], Dreadwing Scavenger [397] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Fell (object 394) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Dreadwing Scavenger (object 397) Battlefield -> Graveyard (NothingUpMySleeve) (Destroy; shared object ID)
+      protocol-linked zone transfer: Fell (object 398) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 394 -> transfer object 398 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Vaan, Street Thief [293] (unblocked, observed P/T 4/4), Tinybones, Bauble Burglar [324] (unblocked, observed P/T 3/5)
+      blockers: none identified
+      combat-correlated defending-player life loss: 7; observed attacker power total: 7; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: NothingUpMySleeve -7; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life (combat fully reconciled: snapshot power 7 + observed modifiers 0 = 7; individual assignment unavailable): NothingUpMySleeve 14 -> 7
+    additional protocol-observed zone movements not assigned to an action chain:
+      Gonti, Night Minister [387] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 311).
+      Dismal Backwater [388] Exile -> Battlefield (PlayLand; GRE sequence 314).
+      Dimir Guildgate [401] Library (NothingUpMySleeve) -> Exile (Exile; GRE sequence 336).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Arcanis the Omnipotent [355], Dismal Backwater [388], Mountain [284], Mountain [292], Swamp [279], Swamp [303], Swamp [328], Tinybones, Bauble Burglar [324], Vaan, Street Thief [293]; Graveyard: Binding Negotiation [339], Burst Lightning [316], Fell [398], Requiting Hex [308], Treasure [362], Treasure [369]
+      NothingUpMySleeve: Battlefield: Dimir Guildgate [286], Dismal Backwater [376], Island [298], Swamp [326], Swamp [346], Temple of Deceit [281]; Graveyard: Brineborn Cutthroat [317], Dreadwing Scavenger [397], Gleaming Barrier [372], Opt [290], Stab [371], Treasure [313], Zombify [353]; Exile: Arbiter of Woe [343], Dimir Guildgate [401], Swamp [320]
+
+UNNUMBERED / UNRESOLVED TURN GROUP
+  - The captured records do not provide a verified numbered turn for the following events.
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 11, seq 262, Phase_Main1: NothingUpMySleeve 15 -> 13. Combat declaration observed; exact assignment unavailable. Previous captured action: Arcanis the Omnipotent.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 2 token creations observed; 1 active as last observed; 1 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Treasure [309] controller=NothingUpMySleeve; created Turn 7 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 7 via Battlefield -> Graveyard (NothingUpMySleeve) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+- Treasure [374] controller=NothingUpMySleeve; created Turn 11 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 11, object 374 (latest observed P/T unknown; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Gleaming Barrier [owner/controller metadata unavailable] moves Library (NothingUpMySleeve) -> Hand (NothingUpMySleeve) (Draw).
+- Turn 2, seq 24: Temple of Deceit [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Hand (NothingUpMySleeve) -> Battlefield (PlayLand).
+- Turn 3, seq 41: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 44: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 58: Zombify [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Library (NothingUpMySleeve) -> Hand (NothingUpMySleeve) (Draw).
+- Turn 4, seq 61: Dimir Guildgate [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Hand (NothingUpMySleeve) -> Battlefield (PlayLand).
+- Turn 4, seq 62: Opt [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Hand (NothingUpMySleeve) -> Stack (CastSpell).
+- Turn 4, seq 65: Island [owner/controller metadata unavailable] moves Library (NothingUpMySleeve) -> Hand (NothingUpMySleeve) (Draw).
+- Turn 4, seq 65: Opt [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Stack -> Graveyard (NothingUpMySleeve) (Resolve).
+- Turn 5, seq 79: Vaan, Street Thief [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 82: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 83: Vaan, Street Thief [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 85: Vaan, Street Thief [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 99: Brineborn Cutthroat [owner/controller metadata unavailable] moves Library (NothingUpMySleeve) -> Hand (NothingUpMySleeve) (Draw).
+- Turn 6, seq 102: Island [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Hand (NothingUpMySleeve) -> Battlefield (PlayLand).
+- Turn 6, seq 103: Gleaming Barrier [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Hand (NothingUpMySleeve) -> Stack (CastSpell).
+- Turn 6, seq 105: Gleaming Barrier [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 119: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 122: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 7, seq 123: Requiting Hex [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 128: Gleaming Barrier [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Battlefield -> Graveyard (NothingUpMySleeve) (Destroy).
+- Turn 7, seq 128: Requiting Hex [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 7, seq 134: Brineborn Cutthroat [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Hand (NothingUpMySleeve) -> Stack (CastSpell).
+- Turn 7, seq 135: Treasure [owner/controller metadata unavailable] moves Battlefield -> Graveyard (NothingUpMySleeve) (Sacrifice).
+- Turn 7, seq 137: Brineborn Cutthroat [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 142: Burst Lightning [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 147: Burst Lightning [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 7, seq 147: Brineborn Cutthroat [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Battlefield -> Graveyard (NothingUpMySleeve) (SBA_Damage).
+- Turn 7, seq 153: Swamp [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Library (NothingUpMySleeve) -> Exile (Exile).
+- Turn 7, seq 161: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 163: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 169: Essence Scatter [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Library (NothingUpMySleeve) -> Hand (NothingUpMySleeve) (Draw).
+- Turn 8, seq 172: Swamp [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Hand (NothingUpMySleeve) -> Battlefield (PlayLand).
+- Turn 9, seq 186: Binding Negotiation [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 189: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 9, seq 190: Binding Negotiation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 9, seq 195: Arcanis the Omnipotent [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Hand (NothingUpMySleeve) -> Graveyard (NothingUpMySleeve) (Discard).
+- Turn 9, seq 195: Binding Negotiation [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 9, seq 197: Arcanis the Omnipotent [owner=NothingUpMySleeve, controller=gian31] moves Graveyard (NothingUpMySleeve) -> Exile (Exile).
+- Turn 9, seq 209: Arbiter of Woe [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Library (NothingUpMySleeve) -> Exile (Exile).
+- Turn 10, seq 220: Swamp [owner/controller metadata unavailable] moves Library (NothingUpMySleeve) -> Hand (NothingUpMySleeve) (Draw).
+- Turn 10, seq 223: Swamp [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Hand (NothingUpMySleeve) -> Battlefield (PlayLand).
+- Turn 10, seq 224: Zombify [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Hand (NothingUpMySleeve) -> Stack (CastSpell).
+- Turn 10, seq 228: Gleaming Barrier [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Graveyard (NothingUpMySleeve) -> Battlefield (Return).
+- Turn 10, seq 228: Zombify [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Stack -> Graveyard (NothingUpMySleeve) (Resolve).
+- Turn 11, seq 242: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 11, seq 245: Arcanis the Omnipotent [owner=NothingUpMySleeve, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 11, seq 246: Treasure [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 11, seq 250: Arcanis the Omnipotent [owner=NothingUpMySleeve, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 264: Stab [owner=NothingUpMySleeve, controller=gian31] moves Library (NothingUpMySleeve) -> Exile (Exile).
+- Turn 11, seq 265: Stab [owner=NothingUpMySleeve, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 11, seq 268: Treasure [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (Sacrifice).
+- Turn 11, seq 272: Stab [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Stack -> Graveyard (NothingUpMySleeve) (Resolve).
+- Turn 11, seq 272: Gleaming Barrier [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Battlefield -> Graveyard (NothingUpMySleeve) (SBA_Damage).
+- Turn 12, seq 284: Dreadwing Scavenger [owner/controller metadata unavailable] moves Library (NothingUpMySleeve) -> Hand (NothingUpMySleeve) (Draw).
+- Turn 12, seq 287: Dismal Backwater [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Hand (NothingUpMySleeve) -> Battlefield (PlayLand).
+- Turn 12, seq 290: Dreadwing Scavenger [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Hand (NothingUpMySleeve) -> Stack (CastSpell).
+- Turn 12, seq 292: Dreadwing Scavenger [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 294: Dismal Backwater [owner/controller metadata unavailable] moves Library (NothingUpMySleeve) -> Hand (NothingUpMySleeve) (Draw).
+- Turn 12, seq 295: Dismal Backwater [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Hand (NothingUpMySleeve) -> Graveyard (NothingUpMySleeve) (Discard).
+- Turn 12, seq 297: Dismal Backwater [owner=NothingUpMySleeve, controller=gian31] moves Graveyard (NothingUpMySleeve) -> Exile (Exile).
+- Turn 13, seq 311: Gonti, Night Minister [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 314: Dismal Backwater [owner=NothingUpMySleeve, controller=gian31] moves Exile -> Battlefield (PlayLand).
+- Turn 13, seq 319: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 319: Bitter Triumph [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 319: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 13, seq 320: Fell [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 13, seq 324: Dreadwing Scavenger [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Battlefield -> Graveyard (NothingUpMySleeve) (Destroy).
+- Turn 13, seq 324: Fell [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 13, seq 336: Dimir Guildgate [owner=NothingUpMySleeve, controller=NothingUpMySleeve] moves Library (NothingUpMySleeve) -> Exile (Exile).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 219 becomes object 279 [Swamp].
+- Turn 2, seq 21: object 166 becomes object 280 [Gleaming Barrier].
+- Turn 2, seq 24: object 159 becomes object 281 [Temple of Deceit].
+- Turn 3, seq 41: object 226 becomes object 283 [Swamp].
+- Turn 3, seq 44: object 222 becomes object 284 [Mountain].
+- Turn 4, seq 58: object 168 becomes object 285 [Zombify].
+- Turn 4, seq 61: object 164 becomes object 286 [Dimir Guildgate].
+- Turn 4, seq 62: object 163 becomes object 287 [Opt].
+- Turn 4, seq 65: object 170 becomes object 289 [Island].
+- Turn 4, seq 65: object 287 becomes object 290 [Opt].
+- Turn 5, seq 79: object 227 becomes object 291 [Vaan, Street Thief].
+- Turn 5, seq 82: object 225 becomes object 292 [Mountain].
+- Turn 5, seq 83: object 291 becomes object 293 [Vaan, Street Thief].
+- Turn 6, seq 99: object 171 becomes object 297 [Brineborn Cutthroat].
+- Turn 6, seq 102: object 289 becomes object 298 [Island].
+- Turn 6, seq 103: object 280 becomes object 299 [Gleaming Barrier].
+- Turn 7, seq 119: object 228 becomes object 302 [Tinybones, Bauble Burglar].
+- Turn 7, seq 122: object 283 becomes object 303 [Swamp].
+- Turn 7, seq 123: object 223 becomes object 304 [Requiting Hex].
+- Turn 7, seq 128: object 299 becomes object 306 [Gleaming Barrier].
+- Turn 7, seq 128: object 304 becomes object 308 [Requiting Hex].
+- Turn 7, seq 134: object 297 becomes object 310 [Brineborn Cutthroat].
+- Turn 7, seq 135: object 309 becomes object 313 [Treasure].
+- Turn 7, seq 142: object 220 becomes object 314 [Burst Lightning].
+- Turn 7, seq 147: object 314 becomes object 316 [Burst Lightning].
+- Turn 7, seq 147: object 310 becomes object 317 [Brineborn Cutthroat].
+- Turn 7, seq 153: object 172 becomes object 320 [Swamp].
+- Turn 7, seq 161: object 302 becomes object 324 [Tinybones, Bauble Burglar].
+- Turn 8, seq 169: object 173 becomes object 325 [Essence Scatter].
+- Turn 8, seq 172: object 161 becomes object 326 [Swamp].
+- Turn 9, seq 186: object 229 becomes object 327 [Binding Negotiation].
+- Turn 9, seq 189: object 221 becomes object 328 [Swamp].
+- Turn 9, seq 190: object 327 becomes object 329 [Binding Negotiation].
+- Turn 9, seq 195: object 162 becomes object 337 [Arcanis the Omnipotent].
+- Turn 9, seq 195: object 329 becomes object 339 [Binding Negotiation].
+- Turn 9, seq 197: object 337 becomes object 340 [Arcanis the Omnipotent].
+- Turn 9, seq 209: object 174 becomes object 343 [Arbiter of Woe].
+- Turn 10, seq 220: object 175 becomes object 345 [Swamp].
+- Turn 10, seq 223: object 345 becomes object 346 [Swamp].
+- Turn 10, seq 224: object 285 becomes object 347 [Zombify].
+- Turn 10, seq 228: object 306 becomes object 352 [Gleaming Barrier].
+- Turn 10, seq 228: object 347 becomes object 353 [Zombify].
+- Turn 11, seq 242: object 230 becomes object 354 [Laughing Jasper Flint].
+- Turn 11, seq 245: object 340 becomes object 355 [Arcanis the Omnipotent].
+- Turn 11, seq 246: object 321 becomes object 362 [Treasure].
+- Turn 11, seq 264: object 176 becomes object 366 [Stab].
+- Turn 11, seq 265: object 366 becomes object 367 [Stab].
+- Turn 11, seq 268: object 344 becomes object 369 [Treasure].
+- Turn 11, seq 272: object 367 becomes object 371 [Stab].
+- Turn 11, seq 272: object 352 becomes object 372 [Gleaming Barrier].
+- Turn 12, seq 284: object 177 becomes object 375 [Dreadwing Scavenger].
+- Turn 12, seq 287: object 165 becomes object 376 [Dismal Backwater].
+- Turn 12, seq 290: object 375 becomes object 378 [Dreadwing Scavenger].
+- Turn 12, seq 294: object 178 becomes object 383 [Dismal Backwater].
+- Turn 12, seq 295: object 383 becomes object 384 [Dismal Backwater].
+- Turn 12, seq 297: object 384 becomes object 386 [Dismal Backwater].
+- Turn 13, seq 311: object 231 becomes object 387 [Gonti, Night Minister].
+- Turn 13, seq 314: object 386 becomes object 388 [Dismal Backwater].
+- Turn 13, seq 319: object 232 becomes object 391 [Tinybones, Bauble Burglar].
+- Turn 13, seq 319: object 233 becomes object 392 [Bitter Triumph].
+- Turn 13, seq 319: object 234 becomes object 393 [Swamp].
+- Turn 13, seq 320: object 224 becomes object 394 [Fell].
+- Turn 13, seq 324: object 378 becomes object 397 [Dreadwing Scavenger].
+- Turn 13, seq 324: object 394 becomes object 398 [Fell].
+- Turn 13, seq 336: object 179 becomes object 401 [Dimir Guildgate].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Swamp (object 279) from Hand (gian31) to Battlefield.
+- Turn 2: NothingUpMySleeve plays Temple of Deceit (object 281) from Hand (NothingUpMySleeve) to Battlefield.
+- Turn 3: gian31 plays Mountain (object 284) from Hand (gian31) to Battlefield.
+- Turn 4: NothingUpMySleeve plays Dimir Guildgate (object 286) from Hand (NothingUpMySleeve) to Battlefield.
+- Turn 5: gian31 plays Mountain (object 292) from Hand (gian31) to Battlefield.
+- Turn 6: NothingUpMySleeve plays Island (object 298) from Hand (NothingUpMySleeve) to Battlefield.
+- Turn 7: gian31 plays Swamp (object 303) from Hand (gian31) to Battlefield.
+- Turn 8: NothingUpMySleeve plays Swamp (object 326) from Hand (NothingUpMySleeve) to Battlefield.
+- Turn 9: gian31 plays Swamp (object 328) from Hand (gian31) to Battlefield.
+- Turn 10: NothingUpMySleeve plays Swamp (object 346) from Hand (NothingUpMySleeve) to Battlefield.
+- Turn 12: NothingUpMySleeve plays Dismal Backwater (object 376) from Hand (NothingUpMySleeve) to Battlefield.
+- Turn 13: gian31 plays Dismal Backwater (object 388) from Exile to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Gleaming Barrier: casts=1; abilities=2 (triggered=2, activated=0) across turns [6, 7, 11]
+  observed effect totals: draws=0, tokens=2, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Tinybones, Bauble Burglar: casts=1; abilities=2 (triggered=2, activated=0) across turns [7, 9, 12]
+  observed effect totals: draws=0, tokens=0, counters=2, returns=0, damage=0, life_changes=0, other=2
+  observed effects: +1 counter(s), exile
+- Vaan, Street Thief: casts=1; abilities=2 (triggered=2, activated=0) across turns [5, 11, 11]
+  observed effect totals: draws=0, tokens=0, counters=4, returns=0, damage=0, life_changes=0, other=4
+  observed effects: +1 counter(s), P/T +1/+1
+- Arcanis the Omnipotent: casts=1; abilities=1 (triggered=1, activated=0) across turns [11, 13]
+  observed effect totals: draws=3, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Dismal Backwater: abilities=2 (triggered=2, activated=0) across turns [12, 13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Brineborn Cutthroat: casts=1 across turns [7]
+- Burst Lightning: casts=1 across turns [7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 2 damage
+- Dreadwing Scavenger: casts=1 across turns [12]
+- Fell: casts=1 across turns [13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Requiting Hex: casts=1 across turns [7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Stab: casts=1 across turns [11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: P/T -2/-2
+- Zombify: casts=1 across turns [10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=1, damage=0, life_changes=0, other=0
+  observed effects: return to battlefield
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 7 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Vaan, Street Thief (gian31) -> NothingUpMySleeve; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Vaan, Street Thief (gian31) -> NothingUpMySleeve; unblocked in this observed snapshot
+  attacker: Tinybones, Bauble Burglar (gian31) -> NothingUpMySleeve; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, CombatDamage (active=gian31)
+  attacker: Vaan, Street Thief (gian31) -> NothingUpMySleeve; blocked by Gleaming Barrier
+  attacker: Tinybones, Bauble Burglar (gian31) -> NothingUpMySleeve; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Vaan, Street Thief (gian31) -> NothingUpMySleeve; unblocked in this observed snapshot
+  attacker: Tinybones, Bauble Burglar (gian31) -> NothingUpMySleeve; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 7: Burst Lightning (active=gian31) - Burst Lightning: Brineborn Cutthroat takes 2 damage.
+- Turn 11: Ability of Vaan, Street Thief (active=gian31) - Ability of Vaan, Street Thief: Vaan, Street Thief gets +1/+1; Tinybones, Bauble Burglar gets +1/+1; 1 counter(s) are added to target; 1 counter(s) are added to target.
+- Turn 11: Stab (active=gian31) - Stab: Gleaming Barrier gets -2/-2.
+- Turn 11: Ability of Gleaming Barrier (active=gian31 controller=NothingUpMySleeve) - Ability of Gleaming Barrier: a token is created.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 160: Zombify | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Hand (latest_object_observation)
+- 162: Arcanis the Omnipotent | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Stack (latest_object_observation)
+- 165: Dismal Backwater | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Hand (latest_object_observation)
+- 219: Swamp | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 220: Burst Lightning | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 221: Swamp | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 222: Mountain | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 223: Requiting Hex | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 224: Fell | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 225: Mountain | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 279: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 281: Temple of Deceit | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Battlefield (latest_object_observation)
+- 282: object 282 | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=unknown (inferred unknown) (latest_object_observation)
+- 283: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 284: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 285: Zombify | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Hand (latest_object_observation)
+- 286: Dimir Guildgate | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Battlefield (latest_object_observation)
+- 287: Opt | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Stack (latest_object_observation)
+- 290: Opt | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Battlefield (latest_object_observation)
+- 291: Vaan, Street Thief | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 292: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 293: Vaan, Street Thief | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 298: Island | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Battlefield (latest_object_observation)
+- 299: Gleaming Barrier | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Battlefield (latest_object_observation)
+- 302: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 303: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 304: Requiting Hex | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 306: Gleaming Barrier | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Graveyard (latest_object_observation)
+- 307: object 307 | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=unknown (inferred unknown) (latest_object_observation)
+- 308: Requiting Hex | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 309: Treasure | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Stack (latest_object_observation)
+- 310: Brineborn Cutthroat | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Battlefield (latest_object_observation)
+- 314: Burst Lightning | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 316: Burst Lightning | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 317: Brineborn Cutthroat | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Battlefield (latest_object_observation)
+- 319: object 319 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 320: Swamp | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Exile (latest_object_observation)
+- 321: Treasure | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 322: object 322 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 323: object 323 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 324: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 325: Essence Scatter | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Hand (latest_object_observation)
+- 326: Swamp | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Battlefield (latest_object_observation)
+- 327: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 328: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 329: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 332: Arcanis the Omnipotent | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Hand (latest_object_observation)
+- 333: Dismal Backwater | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Hand (latest_object_observation)
+- 334: Essence Scatter | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Hand (latest_object_observation)
+- 335: Zombify | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Hand (latest_object_observation)
+- 336: Zombify | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Hand (latest_object_observation)
+- 337: Arcanis the Omnipotent | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Graveyard (latest_object_observation)
+- 338: object 338 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 339: Binding Negotiation | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 340: Arcanis the Omnipotent | controller=gian31 | owner=NothingUpMySleeve | zone=Exile (latest_object_observation)
+- 342: object 342 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 343: Arbiter of Woe | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Exile (latest_object_observation)
+- 344: Treasure | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 346: Swamp | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Battlefield (latest_object_observation)
+- 347: Zombify | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Stack (latest_object_observation)
+- 352: Gleaming Barrier | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Battlefield (latest_object_observation)
+- 353: Zombify | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Battlefield (latest_object_observation)
+- 354: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 355: Arcanis the Omnipotent | controller=gian31 | owner=NothingUpMySleeve | zone=Battlefield (latest_object_observation)
+- 363: object 363 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 365: object 365 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 366: Stab | controller=gian31 | owner=NothingUpMySleeve | zone=Exile (latest_object_observation)
+- 367: Stab | controller=gian31 | owner=NothingUpMySleeve | zone=Stack (latest_object_observation)
+- 370: object 370 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 371: Stab | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Battlefield (latest_object_observation)
+- 372: Gleaming Barrier | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Battlefield (latest_object_observation)
+- 373: object 373 | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=unknown (inferred unknown) (latest_object_observation)
+- 374: Treasure | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Battlefield (latest_object_observation)
+- 376: Dismal Backwater | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Battlefield (latest_object_observation)
+- 377: object 377 | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=unknown (inferred unknown) (latest_object_observation)
+- 378: Dreadwing Scavenger | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Battlefield (latest_object_observation)
+- 382: object 382 | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=unknown (inferred unknown) (latest_object_observation)
+- 384: Dismal Backwater | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Graveyard (latest_object_observation)
+- 385: object 385 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 386: Dismal Backwater | controller=gian31 | owner=NothingUpMySleeve | zone=Exile (latest_object_observation)
+- 387: Gonti, Night Minister | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 388: Dismal Backwater | controller=gian31 | owner=NothingUpMySleeve | zone=Battlefield (latest_object_observation)
+- 389: object 389 | controller=gian31 | owner=NothingUpMySleeve | zone=unknown (inferred unknown) (latest_object_observation)
+- 390: object 390 | controller=gian31 | owner=NothingUpMySleeve | zone=unknown (inferred unknown) (latest_object_observation)
+- 391: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 392: Bitter Triumph | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 393: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 394: Fell | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 397: Dreadwing Scavenger | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Graveyard (latest_object_observation)
+- 398: Fell | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 400: object 400 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 401: Dimir Guildgate | controller=NothingUpMySleeve | owner=NothingUpMySleeve | zone=Exile (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+NothingUpMySleeve: 41 total items
+  zones: Battlefield=16, Exile=3, Graveyard=4, Hand=9, Stack=4, unknown=5
+  objects: Zombify x6, Dismal Backwater x4, Gleaming Barrier x4, Arcanis the Omnipotent x3, Swamp x3, Brineborn Cutthroat x2, Dimir Guildgate x2, Dreadwing Scavenger x2, Essence Scatter x2, Opt x2, Treasure x2, Arbiter of Woe
+gian31: 51 total items
+  zones: Battlefield=9, Exile=3, Hand=9, Stack=14, unknown=16
+  objects: Swamp x7, Mountain x4, Binding Negotiation x3, Burst Lightning x3, Fell x3, Requiting Hex x3, Tinybones, Bauble Burglar x3, Arcanis the Omnipotent x2, Dismal Backwater x2, Stab x2, Treasure x2, Vaan, Street Thief x2
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+NothingUpMySleeve:
+  Battlefield (16): Brineborn Cutthroat, Brineborn Cutthroat, Dimir Guildgate, Dismal Backwater, Dreadwing Scavenger, Gleaming Barrier, Gleaming Barrier, Gleaming Barrier, Island, Opt, Stab, Swamp, Swamp, Temple of Deceit, Treasure, Zombify
+  Graveyard: 4 card(s)
+gian31:
+  Battlefield (9): Arcanis the Omnipotent, Dismal Backwater, Mountain, Mountain, Swamp, Swamp, Swamp, Tinybones, Bauble Burglar, Vaan, Street Thief
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+21 objects have no resolved final zone and are omitted from the known board state.
+NothingUpMySleeve: 5 unknown object(s)
+gian31: 16 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=18, Stack=18
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+NothingUpMySleeve:
+  Battlefield (7): Temple of Deceit, Dimir Guildgate, Island, Swamp, Swamp, Treasure, Dismal Backwater
+  Graveyard (6): Opt, Brineborn Cutthroat, Zombify, Stab, Gleaming Barrier, Dreadwing Scavenger
+  Exile (3): Swamp, Arbiter of Woe, Dimir Guildgate
+gian31:
+  Battlefield (9): Swamp, Mountain, Mountain, Vaan, Street Thief, Swamp, Tinybones, Bauble Burglar, Swamp, Arcanis the Omnipotent, Dismal Backwater
+  Graveyard (4): Requiting Hex, Burst Lightning, Binding Negotiation, Fell
+Known non-persistent entries (counts only):
+  NothingUpMySleeve: Hand=1, Limbo=3, Revealed=2
+  gian31: Hand=5, Limbo=8, Stack=1
+  unknown: Hand=1, Library=85, Limbo=12
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=1
+- Turn 2: NothingUpMySleeve Battlefield=1; gian31 Battlefield=1
+- Turn 3: NothingUpMySleeve Battlefield=1; gian31 Battlefield=2
+- Turn 4: NothingUpMySleeve Battlefield=2; NothingUpMySleeve Graveyard=1; gian31 Battlefield=2
+- Turn 5: NothingUpMySleeve Battlefield=2; NothingUpMySleeve Graveyard=1; gian31 Battlefield=4
+- Turn 6: NothingUpMySleeve Battlefield=4; NothingUpMySleeve Graveyard=1; gian31 Battlefield=4
+- Turn 7: NothingUpMySleeve Battlefield=3; NothingUpMySleeve Graveyard=4; NothingUpMySleeve Exile=1; gian31 Battlefield=6; gian31 Graveyard=2
+- Turn 8: NothingUpMySleeve Battlefield=4; NothingUpMySleeve Graveyard=4; NothingUpMySleeve Exile=1; gian31 Battlefield=6; gian31 Graveyard=2
+- Turn 9: NothingUpMySleeve Battlefield=4; NothingUpMySleeve Graveyard=4; NothingUpMySleeve Exile=2; gian31 Battlefield=7; gian31 Graveyard=3; gian31 Exile=1
+- Turn 10: NothingUpMySleeve Battlefield=6; NothingUpMySleeve Graveyard=4; NothingUpMySleeve Exile=2; gian31 Battlefield=7; gian31 Graveyard=3; gian31 Exile=1
+- Turn 11: NothingUpMySleeve Battlefield=5; NothingUpMySleeve Graveyard=6; NothingUpMySleeve Exile=2; gian31 Battlefield=8; gian31 Graveyard=5
+- Turn 12: NothingUpMySleeve Battlefield=7; NothingUpMySleeve Graveyard=6; NothingUpMySleeve Exile=2; gian31 Battlefield=8; gian31 Graveyard=5; gian31 Exile=1
+- Turn 13: NothingUpMySleeve Battlefield=6; NothingUpMySleeve Graveyard=7; NothingUpMySleeve Exile=3; gian31 Battlefield=9; gian31 Graveyard=6
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 5: Vaan, Street Thief resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Gleaming Barrier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Tinybones, Bauble Burglar resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Brineborn Cutthroat resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Arcanis the Omnipotent resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Dreadwing Scavenger resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
