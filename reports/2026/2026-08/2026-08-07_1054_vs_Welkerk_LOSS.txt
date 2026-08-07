@@ -1,0 +1,569 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Welkerk
+Seat map: Seat 1=gian31, Seat 2=Welkerk
+Turn range (known): 1 - 9
+Records: 19
+Action chains: 17
+Winner: Welkerk
+Final life: {'gian31': -2, 'Welkerk': 20}
+Lethal combat transition: gian31 3 -> -2. Observed unblocked attackers reconcile 5/5 life loss; 0 additional life loss remains unexplained (individual combat assignment unavailable).
+Lethal coverage (normalized): complete; explained=5/5; unexplained=0.
+Match conclusion: Life total reached 0 observed for gian31.
+Last captured action before match-result payload: Turn 9 (Phase_Combat, Step_DeclareAttack; Dreadmaw's Ire, seq 250).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 24 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 9 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9] (raw records=9; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 9 explicit Library -> Hand movement(s); named in the draw record=5, resolved through an explicit identity transition=4, unresolved=0.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Binding Negotiation [159], Swamp [160], Swamp [161], Ragged Playmate [162], Binding Negotiation [163], Laughing Jasper Flint [164], Mountain [165].
+  - unknown: 7 observed card(s): object 219 [219], object 220 [220], object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: Welkerk; observed final life totals: {'gian31': -2, 'Welkerk': 20}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 9 (Phase_Combat, Step_DeclareAttack; Dreadmaw's Ire, seq 250).
+Last captured life snapshot: gian31 3 -> -2 (seq 255).
+Terminal condition observed: gian31 reached -2 life; exact lethal-source coverage is reported separately.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Hired Claw.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 3: actions: cards=1, abilities=1; combat snapshots=1; life mutations=2; explicit battlefield entries=Mountain, Kavaron Harrier.
+- Turn 4: actions: cards=0, abilities=0; explicit battlefield entries=Mountain.
+- Turn 5: actions: cards=2, abilities=3; combat snapshots=1; life mutations=2; explicit battlefield entries=Emberheart Challenger, Demonic Ruckus, Mountain.
+- Turn 6: actions: cards=2, abilities=1; explicit battlefield entries=Mountain, Ragged Playmate; explicit battlefield exits=Emberheart Challenger, Demonic Ruckus.
+- Turn 7: actions: cards=1, abilities=2; combat snapshots=1; life mutations=2; explicit battlefield entries=Mountain; explicit battlefield exits=Ragged Playmate, Robot.
+- Turn 8: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Laughing Jasper Flint.
+- Turn 9: actions: cards=2, abilities=2; combat snapshots=1; life mutations=2; explicit battlefield entries=Mountain, Cosmic Cube.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Hired Claw [valid_resolution_no_immediate_mutation, seq=10] (active=Welkerk, phase=Phase_Main1, controller=Welkerk, owner=Welkerk, source_object=280)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hired Claw resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hired Claw (object 280) Hand (Welkerk) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hired Claw (object 280) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [279] Hand (Welkerk) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Welkerk: Battlefield: Hired Claw [280], Mountain [279]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [282] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 24).
+      Swamp [283] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 27).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Welkerk: Battlefield: Hired Claw [280], Mountain [279]
+      gian31: Battlefield: Swamp [283]
+
+Turn 3
+  - Kavaron Harrier [valid_resolution_no_immediate_mutation, seq=48] (active=Welkerk, phase=Phase_Main1, controller=Welkerk, owner=Welkerk, source_object=289)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Kavaron Harrier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Kavaron Harrier (object 289) Hand (Welkerk) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Kavaron Harrier (object 289) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hired Claw [observed_semantic_effect, seq=58] (active=Welkerk, phase=Phase_Combat, step=Step_DeclareAttack, controller=Welkerk, owner=Welkerk, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Hired Claw: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 1] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=Welkerk; frames: DeclareAttack -> DeclareBlock):
+      attackers: Hired Claw [280] (unblocked, observed P/T 1/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 1; snapshot comparison does not reconcile (exact assignment unavailable).
+      numerical observation: defending-player life loss is 2x the observed snapshot power; an exact modifying source was not protocol-linked.
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 20 -> 19
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): gian31 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Vision of Love [284] Library (Welkerk) -> Hand (Welkerk) (Draw; GRE sequence 41).
+      Mountain [285] Hand (Welkerk) -> Battlefield (PlayLand; GRE sequence 44).
+      Demonic Ruckus [288] Hand (Welkerk) -> Exile (Exile; GRE sequence 45).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Welkerk: Battlefield: Hired Claw [280], Kavaron Harrier [289], Mountain [279], Mountain [285]; Exile: Demonic Ruckus [288]
+      gian31: Battlefield: Swamp [283]
+
+Turn 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [293] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 72).
+      Mountain [294] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 75).
+      Binding Negotiation [295] Hand (gian31) -> Stack (CastSpell; GRE sequence 76).
+      Burst Lightning [301] Hand (Welkerk) -> Graveyard (Welkerk) (Discard; GRE sequence 81).
+      Binding Negotiation [302] Stack -> Graveyard (gian31) (Resolve; GRE sequence 81).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Welkerk: Battlefield: Hired Claw [280], Kavaron Harrier [289], Mountain [279], Mountain [285]; Exile: Demonic Ruckus [288]; Graveyard: Burst Lightning [301]
+      gian31: Battlefield: Mountain [294], Swamp [283]; Graveyard: Binding Negotiation [302]
+
+Turn 5
+  - Emberheart Challenger [valid_resolution_no_immediate_mutation, seq=100] (active=Welkerk, phase=Phase_Main1, controller=Welkerk, owner=Welkerk, source_object=304)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Emberheart Challenger resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Emberheart Challenger (object 304) Hand (Welkerk) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Emberheart Challenger (object 304) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Emberheart Challenger [observed_semantic_effect, seq=108] (active=Welkerk, phase=Phase_Main1, controller=Welkerk, owner=Welkerk, source_object=304, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Emberheart Challenger: exiles Mountain.
+      explicit effect object references: object 228 [228], Mountain [310] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Mountain (object 310) Library (Welkerk) -> Exile (Exile; shared object ID)
+  - Demonic Ruckus [valid_resolution_no_immediate_mutation, seq=110] (active=Welkerk, phase=Phase_Main1, controller=Welkerk, owner=Welkerk, source_object=307)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Demonic Ruckus resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Demonic Ruckus (object 307) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Demonic Ruckus (object 307) Stack -> Battlefield (Resolve; shared object ID)
+      Aura attachment target: unavailable in captured GRE records.
+  - Ability of Kavaron Harrier [valid_resolution_no_immediate_mutation, seq=122] (active=Welkerk, phase=Phase_Combat, step=Step_DeclareAttack, controller=Welkerk, owner=Welkerk, source_object=289, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Kavaron Harrier resolves with no immediate observed mutation.
+  - Ability of Hired Claw [observed_semantic_effect, seq=124] (active=Welkerk, phase=Phase_Combat, step=Step_DeclareAttack, controller=Welkerk, owner=Welkerk, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Hired Claw: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 1] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=Welkerk; frames: DeclareAttack -> DeclareBlock):
+      attackers: Hired Claw [280] (unblocked, observed P/T 1/2), Kavaron Harrier [289] (unblocked, observed P/T 2/1), Emberheart Challenger [304] (unblocked, observed P/T 4/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 7; observed attacker power total: 7; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -8 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Hired Claw; direct protocol link unavailable): gian31 18 -> 17
+    life (combat fully reconciled: snapshot power 7 + observed modifiers 0 = 7; individual assignment unavailable): gian31 17 -> 10
+    additional protocol-observed zone movements not assigned to an action chain:
+      Emberheart Challenger [303] Library (Welkerk) -> Hand (Welkerk) (Draw; GRE sequence 95).
+      Mountain [311] Exile -> Battlefield (PlayLand; GRE sequence 111).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Welkerk: Battlefield: Demonic Ruckus [307], Emberheart Challenger [304], Hired Claw [280], Kavaron Harrier [289], Mountain [279], Mountain [285], Mountain [311]; Graveyard: Burst Lightning [301]
+      gian31: Battlefield: Mountain [294], Swamp [283]; Graveyard: Binding Negotiation [302]
+
+Turn 6
+  - Requiting Hex [observed_semantic_effect, seq=147] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=317)
+      effects: destroy
+      narrative: Requiting Hex destroys Emberheart Challenger.
+      explicit effect object references: Emberheart Challenger [304], Emberheart Challenger [319] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Requiting Hex (object 317) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Emberheart Challenger (object 319) Battlefield -> Graveyard (Welkerk) (Destroy; shared object ID)
+      protocol-linked zone transfer: Requiting Hex (object 320) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 317 -> transfer object 320 (explicit GRE ObjectIdChanged chain).
+  - Ability of Demonic Ruckus [observed_semantic_effect, seq=149] (active=gian31, phase=Phase_Main1, controller=Welkerk, owner=Welkerk, source_object=307, source_last_explicit_zone=Battlefield, source_successor=321 observed Battlefield -> Graveyard (Welkerk) (SBA_UnattachedAura))
+      effects: draw
+      narrative: Ability of Demonic Ruckus: draw.
+      explicit effect object references: object 229 [229], object 323 [323] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Mountain (object 323) Library (Welkerk) -> Hand (Welkerk) (Draw; shared object ID)
+  - Ragged Playmate [valid_resolution_no_immediate_mutation, seq=152] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=324)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ragged Playmate resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ragged Playmate (object 324) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ragged Playmate (object 324) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Requiting Hex [315] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 138).
+      Mountain [316] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 141).
+      Demonic Ruckus [321] Battlefield -> Graveyard (Welkerk) (SBA_UnattachedAura; GRE sequence 147).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Welkerk: Battlefield: Hired Claw [280], Kavaron Harrier [289], Mountain [279], Mountain [285], Mountain [311]; Graveyard: Burst Lightning [301], Demonic Ruckus [321], Emberheart Challenger [319]
+      gian31: Battlefield: Mountain [294], Mountain [316], Ragged Playmate [324], Swamp [283]; Graveyard: Binding Negotiation [302], Requiting Hex [320]
+
+Turn 7
+  - Lightning Strike [observed_semantic_effect, seq=174] (active=Welkerk, phase=Phase_Main1, controller=Welkerk, owner=Welkerk, source_object=329)
+      effects: 3 damage
+      narrative: Lightning Strike: Ragged Playmate takes 3 damage.
+      explicit effect object references: Ragged Playmate [324] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Lightning Strike (object 329) Hand (Welkerk) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Lightning Strike (object 332) Stack -> Graveyard (Welkerk) (Resolve; shared object ID)
+      identity continuity: source object 329 -> transfer object 332 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Ragged Playmate (object 333) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+  - Ability of Hired Claw [observed_semantic_effect, seq=188] (active=Welkerk, phase=Phase_Combat, step=Step_DeclareAttack, controller=Welkerk, owner=Welkerk, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Hired Claw: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 1] (role/targeting only where the protocol identifies it)
+  - Ability of Kavaron Harrier [observed_semantic_effect, seq=196] (active=Welkerk, phase=Phase_Combat, step=Step_EndCombat, controller=Welkerk, owner=Welkerk, source_object=289, source_last_explicit_zone=Battlefield)
+      effects: sacrifice
+      narrative: Ability of Kavaron Harrier sacrifices Robot.
+      explicit effect object references: Robot [339], object 342 [342] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Robot (object 342) Battlefield -> Graveyard (Welkerk) (Sacrifice; shared object ID)
+  Combat snapshots observed (active=Welkerk; frames: DeclareAttack -> DeclareBlock):
+      attackers: Hired Claw [280] (unblocked, observed P/T 1/2), Kavaron Harrier [289] (unblocked, observed P/T 2/1), Robot [339] (unblocked, observed P/T 2/2)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -6 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Hired Claw; direct protocol link unavailable): gian31 10 -> 9
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 9 -> 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Lightning Strike [327] Library (Welkerk) -> Hand (Welkerk) (Draw; GRE sequence 166).
+      Mountain [328] Hand (Welkerk) -> Battlefield (PlayLand; GRE sequence 169).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Welkerk: Battlefield: Hired Claw [280], Kavaron Harrier [289], Mountain [279], Mountain [285], Mountain [311], Mountain [328]; Graveyard: Burst Lightning [301], Demonic Ruckus [321], Emberheart Challenger [319], Lightning Strike [332], Robot [342]
+      gian31: Battlefield: Mountain [294], Mountain [316], Swamp [283]; Graveyard: Binding Negotiation [302], Ragged Playmate [333], Requiting Hex [320]
+
+Turn 8
+  - Laughing Jasper Flint [valid_resolution_no_immediate_mutation, seq=210] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=345)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Laughing Jasper Flint resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Laughing Jasper Flint (object 345) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Laughing Jasper Flint (object 345) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Fell [343] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 204).
+      Mountain [344] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 207).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Welkerk: Battlefield: Hired Claw [280], Kavaron Harrier [289], Mountain [279], Mountain [285], Mountain [311], Mountain [328]; Graveyard: Burst Lightning [301], Demonic Ruckus [321], Emberheart Challenger [319], Lightning Strike [332], Robot [342]
+      gian31: Battlefield: Laughing Jasper Flint [345], Mountain [294], Mountain [316], Mountain [344], Swamp [283]; Graveyard: Binding Negotiation [302], Ragged Playmate [333], Requiting Hex [320]
+
+Turn 9
+  - Cosmic Cube [valid_resolution_no_immediate_mutation, seq=230] (active=Welkerk, phase=Phase_Main1, controller=Welkerk, owner=Welkerk, source_object=351)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Cosmic Cube resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Cosmic Cube (object 351) Hand (Welkerk) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Cosmic Cube (object 351) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Kavaron Harrier [valid_resolution_no_immediate_mutation, seq=241] (active=Welkerk, phase=Phase_Combat, step=Step_DeclareAttack, controller=Welkerk, owner=Welkerk, source_object=289, source_last_explicit_zone=Battlefield)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ability of Kavaron Harrier resolves with no immediate observed mutation.
+  - Ability of Hired Claw [observed_semantic_effect, seq=243] (active=Welkerk, phase=Phase_Combat, step=Step_DeclareAttack, controller=Welkerk, owner=Welkerk, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Hired Claw: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 1] (role/targeting only where the protocol identifies it)
+  - Dreadmaw's Ire [observed_semantic_effect, seq=250] (active=Welkerk, phase=Phase_Combat, step=Step_DeclareAttack, controller=Welkerk, owner=Welkerk, source_object=362)
+      effects: P/T +2/+2
+      narrative: Dreadmaw's Ire: Hired Claw gets +2/+2.
+      explicit effect object references: Hired Claw [280] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Dreadmaw's Ire (object 362) Library (Welkerk) -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Library (Welkerk); enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Dreadmaw's Ire (object 368) Stack -> Graveyard (Welkerk) (Resolve; shared object ID)
+      identity continuity: source object 362 -> transfer object 368 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=Welkerk; frames: DeclareAttack):
+      attackers: Hired Claw [280] (unblocked, observed P/T 3/4), Kavaron Harrier [289] (unblocked, observed P/T 2/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      P/T timing: combat snapshot power=5; explicit modifiers in the same observed combat context add 2 power to 1/2 unblocked attackers; post-modifier observed reconstruction=7 (partially correlated; individual assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -6 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Hired Claw; direct protocol link unavailable): gian31 4 -> 3
+    life (combat-correlated: observed unblocked power 5; life seq 255; exact assignment unavailable): gian31 3 -> -2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [349] Library (Welkerk) -> Hand (Welkerk) (Draw; GRE sequence 224).
+      Mountain [350] Hand (Welkerk) -> Battlefield (PlayLand; GRE sequence 227).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Welkerk: Battlefield: Cosmic Cube [351], Hired Claw [280], Kavaron Harrier [289], Mountain [279], Mountain [285], Mountain [311], Mountain [328], Mountain [350]; Graveyard: Burst Lightning [301], Demonic Ruckus [321], Dreadmaw's Ire [368], Emberheart Challenger [319], Lightning Strike [332], Robot [342]
+      gian31: Battlefield: Laughing Jasper Flint [345], Mountain [294], Mountain [316], Mountain [344], Swamp [283]; Graveyard: Binding Negotiation [302], Ragged Playmate [333], Requiting Hex [320]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 5, seq 124, Phase_Combat: gian31 18 -> 17. Semantic attribution: Hired Claw; direct protocol link unavailable. Previous captured action: Hired Claw.
+- Turn 7, seq 188, Phase_Combat: gian31 10 -> 9. Semantic attribution: Hired Claw; direct protocol link unavailable. Previous captured action: Hired Claw.
+- Turn 9, seq 243, Phase_Combat: gian31 4 -> 3. Semantic attribution: Hired Claw; direct protocol link unavailable. Previous captured action: Hired Claw.
+LETHAL COVERAGE
+------------------------------------------------------------
+- Turn 9: gian31 3 -> -2 (required change 5). Explained by exact same-record evidence: 0/5; semantically attributed: 0/5; unexplained residual: 0/5.
+  Combat-reconciled component: 5/5 (pre-modifier power=5; explicit modifier power=+2; observed post-modifier power=7 (not used to attribute damage when it exceeds the observed loss); unresolved residual=0; individual assignment unavailable).
+  Combat snapshot observed at or before lethal: Turn 9; attackers=Hired Claw [280], Kavaron Harrier [289]; observed snapshot power total=5; exact combat damage assignment unavailable.
+  Last captured action at or before lethal: Turn 9, Dreadmaw's Ire (seq 250).
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Mountain [owner=Welkerk, controller=Welkerk] moves Hand (Welkerk) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Hired Claw [owner=Welkerk, controller=Welkerk] moves Hand (Welkerk) -> Stack (CastSpell).
+- Turn 1, seq 10: Hired Claw [owner=Welkerk, controller=Welkerk] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 24: Mountain [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 27: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 41: Vision of Love [owner=Welkerk, controller=Welkerk] moves Library (Welkerk) -> Hand (Welkerk) (Draw).
+- Turn 3, seq 44: Mountain [owner=Welkerk, controller=Welkerk] moves Hand (Welkerk) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Demonic Ruckus [owner=Welkerk, controller=Welkerk] moves Hand (Welkerk) -> Exile (Exile).
+- Turn 3, seq 46: Kavaron Harrier [owner=Welkerk, controller=Welkerk] moves Hand (Welkerk) -> Stack (CastSpell).
+- Turn 3, seq 48: Kavaron Harrier [owner=Welkerk, controller=Welkerk] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 72: Mountain [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 75: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 76: Binding Negotiation [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 81: Burst Lightning [owner=Welkerk, controller=Welkerk] moves Hand (Welkerk) -> Graveyard (Welkerk) (Discard).
+- Turn 4, seq 81: Binding Negotiation [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 5, seq 95: Emberheart Challenger [owner/controller metadata unavailable] moves Library (Welkerk) -> Hand (Welkerk) (Draw).
+- Turn 5, seq 98: Emberheart Challenger [owner=Welkerk, controller=Welkerk] moves Hand (Welkerk) -> Stack (CastSpell).
+- Turn 5, seq 100: Emberheart Challenger [owner=Welkerk, controller=Welkerk] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 101: Demonic Ruckus [owner=Welkerk, controller=Welkerk] moves Exile -> Stack (CastSpell).
+- Turn 5, seq 108: Mountain [owner=Welkerk, controller=Welkerk] moves Library (Welkerk) -> Exile (Exile).
+- Turn 5, seq 110: Demonic Ruckus [owner=Welkerk, controller=Welkerk] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 111: Mountain [owner=Welkerk, controller=Welkerk] moves Exile -> Battlefield (PlayLand).
+- Turn 6, seq 138: Requiting Hex [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 141: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 142: Requiting Hex [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 147: Emberheart Challenger [owner=Welkerk, controller=Welkerk] moves Battlefield -> Graveyard (Welkerk) (Destroy).
+- Turn 6, seq 147: Requiting Hex [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 6, seq 147: Demonic Ruckus [owner=Welkerk, controller=Welkerk] moves Battlefield -> Graveyard (Welkerk) (SBA_UnattachedAura).
+- Turn 6, seq 149: Mountain [owner/controller metadata unavailable] moves Library (Welkerk) -> Hand (Welkerk) (Draw).
+- Turn 6, seq 150: Ragged Playmate [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 152: Ragged Playmate [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 166: Lightning Strike [owner/controller metadata unavailable] moves Library (Welkerk) -> Hand (Welkerk) (Draw).
+- Turn 7, seq 169: Mountain [owner=Welkerk, controller=Welkerk] moves Hand (Welkerk) -> Battlefield (PlayLand).
+- Turn 7, seq 170: Lightning Strike [owner=Welkerk, controller=Welkerk] moves Hand (Welkerk) -> Stack (CastSpell).
+- Turn 7, seq 174: Lightning Strike [owner=Welkerk, controller=Welkerk] moves Stack -> Graveyard (Welkerk) (Resolve).
+- Turn 7, seq 174: Ragged Playmate [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 7, seq 196: Robot [owner/controller metadata unavailable] moves Battlefield -> Graveyard (Welkerk) (Sacrifice).
+- Turn 8, seq 204: Fell [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 207: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 208: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 210: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 224: Mountain [owner/controller metadata unavailable] moves Library (Welkerk) -> Hand (Welkerk) (Draw).
+- Turn 9, seq 227: Mountain [owner=Welkerk, controller=Welkerk] moves Hand (Welkerk) -> Battlefield (PlayLand).
+- Turn 9, seq 228: Cosmic Cube [owner=Welkerk, controller=Welkerk] moves Hand (Welkerk) -> Stack (CastSpell).
+- Turn 9, seq 230: Cosmic Cube [owner=Welkerk, controller=Welkerk] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 246: Dreadmaw's Ire [owner=Welkerk, controller=Welkerk] moves Library (Welkerk) -> Stack (CastSpell).
+- Turn 9, seq 250: Dreadmaw's Ire [owner=Welkerk, controller=Welkerk] moves Stack -> Graveyard (Welkerk) (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 220 becomes object 279 [Mountain].
+- Turn 1, seq 8: object 225 becomes object 280 [Hired Claw].
+- Turn 2, seq 24: object 166 becomes object 282 [Mountain].
+- Turn 2, seq 27: object 160 becomes object 283 [Swamp].
+- Turn 3, seq 41: object 226 becomes object 284 [Vision of Love].
+- Turn 3, seq 44: object 224 becomes object 285 [Mountain].
+- Turn 3, seq 45: object 223 becomes object 288 [Demonic Ruckus].
+- Turn 3, seq 46: object 221 becomes object 289 [Kavaron Harrier].
+- Turn 4, seq 72: object 167 becomes object 293 [Mountain].
+- Turn 4, seq 75: object 165 becomes object 294 [Mountain].
+- Turn 4, seq 76: object 159 becomes object 295 [Binding Negotiation].
+- Turn 4, seq 81: object 222 becomes object 301 [Burst Lightning].
+- Turn 4, seq 81: object 295 becomes object 302 [Binding Negotiation].
+- Turn 5, seq 95: object 227 becomes object 303 [Emberheart Challenger].
+- Turn 5, seq 98: object 303 becomes object 304 [Emberheart Challenger].
+- Turn 5, seq 101: object 288 becomes object 307 [Demonic Ruckus].
+- Turn 5, seq 108: object 228 becomes object 310 [Mountain].
+- Turn 5, seq 111: object 310 becomes object 311 [Mountain].
+- Turn 6, seq 138: object 168 becomes object 315 [Requiting Hex].
+- Turn 6, seq 141: object 282 becomes object 316 [Mountain].
+- Turn 6, seq 142: object 315 becomes object 317 [Requiting Hex].
+- Turn 6, seq 147: object 304 becomes object 319 [Emberheart Challenger].
+- Turn 6, seq 147: object 317 becomes object 320 [Requiting Hex].
+- Turn 6, seq 147: object 307 becomes object 321 [Demonic Ruckus].
+- Turn 6, seq 149: object 229 becomes object 323 [Mountain].
+- Turn 6, seq 150: object 162 becomes object 324 [Ragged Playmate].
+- Turn 7, seq 166: object 230 becomes object 327 [Lightning Strike].
+- Turn 7, seq 169: object 323 becomes object 328 [Mountain].
+- Turn 7, seq 170: object 327 becomes object 329 [Lightning Strike].
+- Turn 7, seq 174: object 329 becomes object 332 [Lightning Strike].
+- Turn 7, seq 174: object 324 becomes object 333 [Ragged Playmate].
+- Turn 7, seq 196: object 339 becomes object 342 [Robot].
+- Turn 8, seq 204: object 169 becomes object 343 [Fell].
+- Turn 8, seq 207: object 293 becomes object 344 [Mountain].
+- Turn 8, seq 208: object 164 becomes object 345 [Laughing Jasper Flint].
+- Turn 9, seq 224: object 231 becomes object 349 [Mountain].
+- Turn 9, seq 227: object 349 becomes object 350 [Mountain].
+- Turn 9, seq 228: object 219 becomes object 351 [Cosmic Cube].
+- Turn 9, seq 246: object 236 becomes object 362 [Dreadmaw's Ire].
+- Turn 9, seq 250: object 362 becomes object 368 [Dreadmaw's Ire].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: Welkerk plays Mountain (object 279) from Hand (Welkerk) to Battlefield.
+- Turn 2: gian31 plays Swamp (object 283) from Hand (gian31) to Battlefield.
+- Turn 3: Welkerk plays Mountain (object 285) from Hand (Welkerk) to Battlefield.
+- Turn 4: gian31 plays Mountain (object 294) from Hand (gian31) to Battlefield.
+- Turn 5: Welkerk plays Mountain (object 311) from Exile to Battlefield.
+- Turn 6: gian31 plays Mountain (object 316) from Hand (gian31) to Battlefield.
+- Turn 7: Welkerk plays Mountain (object 328) from Hand (Welkerk) to Battlefield.
+- Turn 8: gian31 plays Mountain (object 344) from Hand (gian31) to Battlefield.
+- Turn 9: Welkerk plays Mountain (object 350) from Hand (Welkerk) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Hired Claw: casts=1; abilities=4 (triggered=4, activated=0) across turns [1, 3, 5, 7, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=4, life_changes=4, other=4
+  observed effects: 1 damage, life -1, synthetic event
+- Kavaron Harrier: casts=1; abilities=3 (triggered=3, activated=0) across turns [3, 5, 7, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: sacrifice
+- Demonic Ruckus: casts=1; abilities=1 (triggered=1, activated=0) across turns [5, 6]
+  observed effect totals: draws=1, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Emberheart Challenger: casts=1; abilities=1 (triggered=1, activated=0) across turns [5, 5]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: exile
+- Cosmic Cube: casts=1 across turns [9]
+- Dreadmaw's Ire: casts=1 across turns [9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: P/T +2/+2
+- Laughing Jasper Flint: casts=1 across turns [8]
+- Lightning Strike: casts=1 across turns [7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 3 damage
+- Ragged Playmate: casts=1 across turns [6]
+- Requiting Hex: casts=1 across turns [6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 3 - DeclareAttack, DeclareBlock (active=Welkerk)
+  attacker: Hired Claw (Welkerk) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 5 - DeclareAttack, DeclareBlock (active=Welkerk)
+  attacker: Hired Claw (Welkerk) -> gian31; unblocked in this observed snapshot
+  attacker: Kavaron Harrier (Welkerk) -> gian31; unblocked in this observed snapshot
+  attacker: Emberheart Challenger (Welkerk) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=Welkerk)
+  attacker: Hired Claw (Welkerk) -> gian31; unblocked in this observed snapshot
+  attacker: Kavaron Harrier (Welkerk) -> gian31; unblocked in this observed snapshot
+  attacker: Robot (Welkerk) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack (active=Welkerk)
+  attacker: Hired Claw (Welkerk) -> gian31; unblocked in this observed snapshot
+  attacker: Kavaron Harrier (Welkerk) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 3: Ability of Hired Claw (active=Welkerk) - Ability of Hired Claw: gian31 takes 1 damage; gian31 loses 1 life.
+- Turn 5: Ability of Kavaron Harrier (active=Welkerk) - Ability of Kavaron Harrier resolves with no immediate observed mutation.
+- Turn 5: Ability of Hired Claw (active=Welkerk) - Ability of Hired Claw: gian31 takes 1 damage; gian31 loses 1 life.
+- Turn 7: Ability of Hired Claw (active=Welkerk) - Ability of Hired Claw: gian31 takes 1 damage; gian31 loses 1 life.
+- Turn 7: Ability of Kavaron Harrier (active=Welkerk) - Ability of Kavaron Harrier: sacrifice.
+- Turn 9: Ability of Kavaron Harrier (active=Welkerk) - Ability of Kavaron Harrier resolves with no immediate observed mutation.
+- Turn 9: Ability of Hired Claw (active=Welkerk) - Ability of Hired Claw: gian31 takes 1 damage; gian31 loses 1 life.
+- Turn 9: Dreadmaw's Ire (active=Welkerk) - Dreadmaw's Ire: Hired Claw gets +2/+2.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 160: Swamp | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 161: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Ragged Playmate | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 163: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 165: Mountain | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 219: Cosmic Cube | controller=Welkerk | owner=Welkerk | zone=Hand (latest_object_observation)
+- 222: Burst Lightning | controller=Welkerk | owner=Welkerk | zone=Stack (latest_object_observation)
+- 279: Mountain | controller=Welkerk | owner=Welkerk | zone=Battlefield (latest_object_observation)
+- 280: Hired Claw | controller=Welkerk | owner=Welkerk | zone=Battlefield (latest_object_observation)
+- 282: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 283: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 284: Vision of Love | controller=Welkerk | owner=Welkerk | zone=Hand (latest_object_observation)
+- 285: Mountain | controller=Welkerk | owner=Welkerk | zone=Battlefield (latest_object_observation)
+- 288: Demonic Ruckus | controller=Welkerk | owner=Welkerk | zone=Exile (latest_object_observation)
+- 289: Kavaron Harrier | controller=Welkerk | owner=Welkerk | zone=Battlefield (latest_object_observation)
+- 292: object 292 | controller=Welkerk | owner=Welkerk | zone=unknown (inferred unknown) (latest_object_observation)
+- 293: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 294: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 295: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 298: Burst Lightning | controller=Welkerk | owner=Welkerk | zone=Hand (latest_object_observation)
+- 299: Vision of Love | controller=Welkerk | owner=Welkerk | zone=Hand (latest_object_observation)
+- 300: Cosmic Cube | controller=Welkerk | owner=Welkerk | zone=Hand (latest_object_observation)
+- 301: Burst Lightning | controller=Welkerk | owner=Welkerk | zone=Graveyard (latest_object_observation)
+- 302: Binding Negotiation | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 304: Emberheart Challenger | controller=Welkerk | owner=Welkerk | zone=Battlefield (latest_object_observation)
+- 307: Demonic Ruckus | controller=Welkerk | owner=Welkerk | zone=Stack (latest_object_observation)
+- 308: object 308 | controller=Welkerk | owner=Welkerk | zone=unknown (inferred unknown) (latest_object_observation)
+- 309: object 309 | controller=Welkerk | owner=Welkerk | zone=unknown (inferred unknown) (latest_object_observation)
+- 310: Mountain | controller=Welkerk | owner=Welkerk | zone=Exile (latest_object_observation)
+- 311: Mountain | controller=Welkerk | owner=Welkerk | zone=Battlefield (latest_object_observation)
+- 313: object 313 | controller=Welkerk | owner=Welkerk | zone=unknown (inferred unknown) (latest_object_observation)
+- 314: object 314 | controller=Welkerk | owner=Welkerk | zone=unknown (inferred unknown) (latest_object_observation)
+- 315: Requiting Hex | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 316: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 317: Requiting Hex | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 319: Emberheart Challenger | controller=Welkerk | owner=Welkerk | zone=Graveyard (latest_object_observation)
+- 320: Requiting Hex | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 321: Demonic Ruckus | controller=Welkerk | owner=Welkerk | zone=Graveyard (latest_object_observation)
+- 322: Garruk's Gorehorn | controller=Welkerk | owner=Welkerk | zone=unknown (inferred unknown) (latest_object_observation)
+- 324: Ragged Playmate | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 328: Mountain | controller=Welkerk | owner=Welkerk | zone=Battlefield (latest_object_observation)
+- 329: Lightning Strike | controller=Welkerk | owner=Welkerk | zone=Stack (latest_object_observation)
+- 332: Lightning Strike | controller=Welkerk | owner=Welkerk | zone=Graveyard (latest_object_observation)
+- 333: Ragged Playmate | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 335: object 335 | controller=Welkerk | owner=Welkerk | zone=unknown (inferred unknown) (latest_object_observation)
+- 336: object 336 | controller=Welkerk | owner=Welkerk | zone=unknown (inferred unknown) (latest_object_observation)
+- 339: Robot | controller=Welkerk | owner=Welkerk | zone=Stack (latest_object_observation)
+- 340: object 340 | controller=Welkerk | owner=Welkerk | zone=Stack (latest_object_observation)
+- 341: object 341 | controller=Welkerk | owner=Welkerk | zone=unknown (inferred unknown) (latest_object_observation)
+- 343: Fell | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 344: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 345: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 350: Mountain | controller=Welkerk | owner=Welkerk | zone=Battlefield (latest_object_observation)
+- 351: Cosmic Cube | controller=Welkerk | owner=Welkerk | zone=Stack (latest_object_observation)
+- 358: object 358 | controller=Welkerk | owner=Welkerk | zone=unknown (inferred unknown) (latest_object_observation)
+- 360: object 360 | controller=Welkerk | owner=Welkerk | zone=unknown (inferred unknown) (latest_object_observation)
+- 361: object 361 | controller=Welkerk | owner=Welkerk | zone=unknown (inferred unknown) (latest_object_observation)
+- 362: Dreadmaw's Ire | controller=Welkerk | owner=Welkerk | zone=Stack (latest_object_observation)
+- 368: Dreadmaw's Ire | controller=Welkerk | owner=Welkerk | zone=Graveyard (latest_object_observation)
+- 369: object 369 | controller=Welkerk | owner=Welkerk | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Welkerk: 40 total items
+  zones: Battlefield=8, Exile=2, Graveyard=5, Hand=5, Stack=7, unknown=13
+  objects: Mountain x6, Burst Lightning x3, Cosmic Cube x3, Demonic Ruckus x3, Dreadmaw's Ire x2, Emberheart Challenger x2, Lightning Strike x2, Vision of Love x2, Garruk's Gorehorn, Hired Claw, Kavaron Harrier, Robot
+gian31: 22 total items
+  zones: Battlefield=9, Hand=6, Stack=7
+  objects: Mountain x6, Binding Negotiation x4, Ragged Playmate x3, Requiting Hex x3, Swamp x3, Laughing Jasper Flint x2, Fell
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (9): Binding Negotiation, Laughing Jasper Flint, Mountain, Mountain, Mountain, Ragged Playmate, Ragged Playmate, Requiting Hex, Swamp
+  Graveyard: 0 card(s)
+Welkerk:
+  Battlefield (8): Emberheart Challenger, Hired Claw, Kavaron Harrier, Mountain, Mountain, Mountain, Mountain, Mountain
+  Graveyard: 5 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+13 objects have no resolved final zone and are omitted from the known board state.
+Welkerk: 13 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=11, Stack=14
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Welkerk:
+  Battlefield (8): Mountain, Hired Claw, Mountain, Kavaron Harrier, Mountain, Mountain, Mountain, Cosmic Cube
+  Graveyard (5): Burst Lightning, Emberheart Challenger, Demonic Ruckus, Lightning Strike, Dreadmaw's Ire
+gian31:
+  Battlefield (5): Swamp, Mountain, Mountain, Mountain, Laughing Jasper Flint
+  Graveyard (3): Binding Negotiation, Requiting Hex, Ragged Playmate
+Known non-persistent entries (counts only):
+  Welkerk: Hand=1, Limbo=4, Pending=1, Revealed=1, Stack=1
+  gian31: Hand=3, Limbo=3
+  unknown: Library=95, Limbo=8
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: Welkerk Battlefield=2
+- Turn 2: Welkerk Battlefield=2; gian31 Battlefield=1
+- Turn 3: Welkerk Battlefield=4; Welkerk Exile=1; gian31 Battlefield=1
+- Turn 4: Welkerk Battlefield=4; Welkerk Graveyard=1; Welkerk Exile=1; gian31 Battlefield=2; gian31 Graveyard=1
+- Turn 5: Welkerk Battlefield=7; Welkerk Graveyard=1; gian31 Battlefield=2; gian31 Graveyard=1
+- Turn 6: Welkerk Battlefield=5; Welkerk Graveyard=3; gian31 Battlefield=4; gian31 Graveyard=2
+- Turn 7: Welkerk Battlefield=6; Welkerk Graveyard=5; gian31 Battlefield=3; gian31 Graveyard=3
+- Turn 8: Welkerk Battlefield=6; Welkerk Graveyard=5; gian31 Battlefield=5; gian31 Graveyard=3
+- Turn 9: Welkerk Battlefield=8; Welkerk Graveyard=6; gian31 Battlefield=5; gian31 Graveyard=3
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Hired Claw resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Kavaron Harrier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Emberheart Challenger resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Demonic Ruckus resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Ragged Playmate resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Laughing Jasper Flint resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Cosmic Cube resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
