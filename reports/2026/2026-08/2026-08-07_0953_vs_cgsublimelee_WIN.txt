@@ -1,0 +1,874 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, cgsublimelee
+Seat map: Seat 1=gian31, Seat 2=cgsublimelee
+Turn range (known): 1 - 14
+Unnumbered turn groups retained: 1
+Records: 42
+Action chains: 29
+Winner: gian31
+Final life: {'gian31': 18, 'cgsublimelee': 30}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 14 (Phase_Beginning, Step_Upkeep; Ability of Laughing Jasper Flint, seq 414).
+Later numbered GRE record(s): 4 after action sequence 414 across turn(s) [14]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+POST-ACTION GRE RECORDS - RESULT ORDER UNRESOLVED
+  - Turn 14, seq 416: identity_changed.
+  - Turn 14, seq 416: zone_transfer (Draw).
+  - Turn 14, seq 419: identity_changed.
+  - Turn 14, seq 419: zone_transfer (PlayLand).
+  These records are retained for traceability; their order relative to the match-result payload is not asserted.
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 43 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+WARNING: 1 player-zone assignment conflict(s) were observed. The ledger groups affected objects by explicit zone-transfer provenance; controller/owner metadata remains separately traceable.
+Land-drop coverage: 13 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14] (raw records=13; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 19 explicit Library -> Hand movement(s); named in the draw record=9, resolved through an explicit identity transition=8, unresolved=2.
+Unresolved draw identities (explicit movements retained): Turn 13, seq 386, object 405; Turn 13, seq 386, object 406.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Swamp [159], Tinybones, the Pickpocket [160], Swamp [161], Mountain [162], At Knifepoint [163], Gonti, Night Minister [164], Laughing Jasper Flint [165].
+  - unknown: 7 observed card(s): object 219 [219], object 220 [220], object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 18, 'cgsublimelee': 30}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 14 (Phase_Beginning, Step_Upkeep; Ability of Laughing Jasper Flint, seq 414).
+Last captured life snapshot: cgsublimelee 28 -> 30 (seq 386).
+Tokens on battlefield at their last observation (not confirmed at match end): Human Soldier [361] controller=cgsublimelee, created Turn 11, last observed Turn 11 seq 293, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed); Mercenary [410] controller=gian31, created Turn 14, last observed Turn 14 seq 412, P/T 1/1; explicit GRE AnnotationType_TokenCreated (current zone unconfirmed).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Hinterland Sanctifier.
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Tinybones, the Pickpocket.
+- Turn 3: actions: cards=0, abilities=1; life mutations=1; explicit battlefield entries=Dismal Backwater.
+- Turn 4: actions: cards=0, abilities=0; explicit battlefield entries=Mountain.
+- Turn 5: actions: cards=1, abilities=2; life mutations=1; explicit battlefield entries=Plains, Ajani's Pridemate.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, At Knifepoint.
+- Turn 7: actions: cards=1, abilities=2; combat snapshots=1; life mutations=2; explicit battlefield entries=Island, Sun-Blessed Healer.
+- Turn 8: actions: cards=2, abilities=1; combat snapshots=1; explicit battlefield entries=Mountain; explicit battlefield exits=Sun-Blessed Healer.
+- Turn 9: actions: cards=0, abilities=2; combat snapshots=1; life mutations=1; explicit battlefield entries=Dismal Backwater; explicit battlefield exits=Mercenary.
+- Turn 10: actions: cards=3, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, Laughing Jasper Flint, Sun-Blessed Healer.
+- Turn 11: actions: cards=2, abilities=9; combat snapshots=1; life mutations=4; explicit battlefield entries=Cosmogrand Zenith, Sun-Blessed Healer; explicit battlefield exits=Mercenary.
+- Turn 12: actions: cards=2, abilities=3; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, Cloudblazer; explicit battlefield exits=Hinterland Sanctifier, Human Soldier.
+- Turn 13: actions: cards=1, abilities=4; combat snapshots=1; life mutations=2; explicit battlefield entries=Tranquil Cove, Cloudblazer; explicit battlefield exits=Mercenary.
+- Turn 14: actions: cards=0, abilities=2; explicit battlefield entries=Swamp.
+- Turn None: actions: cards=0, abilities=0.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Hinterland Sanctifier [valid_resolution_no_immediate_mutation, seq=10] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=280)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hinterland Sanctifier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hinterland Sanctifier (object 280) Hand (cgsublimelee) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 280) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [279] Hand (cgsublimelee) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cgsublimelee: Battlefield: Hinterland Sanctifier [280], Plains [279]
+
+Turn 2
+  - Tinybones, the Pickpocket [valid_resolution_no_immediate_mutation, seq=30] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=284)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, the Pickpocket resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 284) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 284) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [282] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 24).
+      Swamp [283] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 27).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cgsublimelee: Battlefield: Hinterland Sanctifier [280], Plains [279]
+      gian31: Battlefield: Swamp [283], Tinybones, the Pickpocket [284]
+
+Turn 3
+  - Ability of Dismal Backwater [observed_semantic_effect, seq=49] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=287, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Dismal Backwater: cgsublimelee gains 1 life.
+    net observed life change this turn: cgsublimelee +1 (individual changes below; gains and losses may offset)
+    life: cgsublimelee 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Ajani's Pridemate [286] Library (cgsublimelee) -> Hand (cgsublimelee) (Draw; GRE sequence 44).
+      Dismal Backwater [287] Hand (cgsublimelee) -> Battlefield (PlayLand; GRE sequence 47).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cgsublimelee: Battlefield: Dismal Backwater [287], Hinterland Sanctifier [280], Plains [279]
+      gian31: Battlefield: Swamp [283], Tinybones, the Pickpocket [284]
+
+Turn 4
+    additional protocol-observed zone movements not assigned to an action chain:
+      Fell [289] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 64).
+      Mountain [290] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 67).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cgsublimelee: Battlefield: Dismal Backwater [287], Hinterland Sanctifier [280], Plains [279]
+      gian31: Battlefield: Mountain [290], Swamp [283], Tinybones, the Pickpocket [284]
+
+Turn 5
+  - Ajani's Pridemate [valid_resolution_no_immediate_mutation, seq=88] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=293)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ajani's Pridemate resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ajani's Pridemate (object 293) Hand (cgsublimelee) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ajani's Pridemate (object 293) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=90] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: cgsublimelee gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=92] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [293].
+    net observed life change this turn: cgsublimelee +1 (individual changes below; gains and losses may offset)
+    life: cgsublimelee 21 -> 22
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [291] Library (cgsublimelee) -> Hand (cgsublimelee) (Draw; GRE sequence 82).
+      Plains [292] Hand (cgsublimelee) -> Battlefield (PlayLand; GRE sequence 85).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cgsublimelee: Battlefield: Ajani's Pridemate [293], Dismal Backwater [287], Hinterland Sanctifier [280], Plains [279], Plains [292]
+      gian31: Battlefield: Mountain [290], Swamp [283], Tinybones, the Pickpocket [284]
+
+Turn 6
+  - At Knifepoint [valid_resolution_no_immediate_mutation, seq=113] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=300)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: At Knifepoint resolves with no immediate observed mutation.
+      protocol-linked zone transfer: At Knifepoint (object 300) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: At Knifepoint (object 300) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [298] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 107).
+      Mountain [299] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 110).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cgsublimelee: Battlefield: Ajani's Pridemate [293], Dismal Backwater [287], Hinterland Sanctifier [280], Plains [279], Plains [292]
+      gian31: Battlefield: At Knifepoint [300], Mountain [290], Mountain [299], Swamp [283], Tinybones, the Pickpocket [284]
+
+Turn 7
+  - Sun-Blessed Healer [valid_resolution_no_immediate_mutation, seq=150] (active=cgsublimelee, phase=Phase_Main2, controller=cgsublimelee, owner=cgsublimelee, source_object=306)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sun-Blessed Healer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sun-Blessed Healer (object 306) Hand (cgsublimelee) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sun-Blessed Healer (object 306) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=152] (active=cgsublimelee, phase=Phase_Main2, controller=cgsublimelee, owner=cgsublimelee, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: cgsublimelee gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=154] (active=cgsublimelee, phase=Phase_Main2, controller=cgsublimelee, owner=cgsublimelee, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [293].
+  Combat snapshots observed (active=cgsublimelee; frames: DeclareAttack -> DeclareBlock):
+      attackers: Hinterland Sanctifier [280] (unblocked, observed P/T 1/2), Ajani's Pridemate [293] (unblocked, observed P/T 3/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: cgsublimelee +1; gian31 -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): gian31 20 -> 16
+    life: cgsublimelee 22 -> 23
+    additional protocol-observed zone movements not assigned to an action chain:
+      Island [304] Library (cgsublimelee) -> Hand (cgsublimelee) (Draw; GRE sequence 128).
+      Island [305] Hand (cgsublimelee) -> Battlefield (PlayLand; GRE sequence 131).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cgsublimelee: Battlefield: Ajani's Pridemate [293], Dismal Backwater [287], Hinterland Sanctifier [280], Island [305], Plains [279], Plains [292], Sun-Blessed Healer [306]
+      gian31: Battlefield: At Knifepoint [300], Mountain [290], Mountain [299], Swamp [283], Tinybones, the Pickpocket [284]
+
+Turn 8
+  - Ability of At Knifepoint [observed_semantic_effect, seq=175] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=300, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of At Knifepoint: a token is created.
+      explicit effect object references: Mercenary [321] (role/targeting only where the protocol identifies it)
+      token created: Mercenary (object 321, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 316).
+  - Fell [valid_resolution_no_immediate_mutation, seq=177] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=313)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Fell resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Fell (object 313) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fell (object 322) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 313 -> transfer object 322 (explicit GRE ObjectIdChanged chain).
+  - Valorous Stance [valid_resolution_no_immediate_mutation, seq=173] (active=unknown, controller=cgsublimelee, owner=cgsublimelee, source_object=317)
+      chronology reconciliation: parser turn group None conflicts with Turn 8; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Valorous Stance resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Valorous Stance (object 317) Hand (cgsublimelee) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Valorous Stance (object 320) Stack -> Graveyard (cgsublimelee) (Resolve; shared object ID)
+      identity continuity: source object 317 -> transfer object 320 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Tinybones, the Pickpocket [284] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat-result zone change: Sun-Blessed Healer [323] Battlefield -> Graveyard (cgsublimelee) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [311] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 160).
+      Mountain [312] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 163).
+      Sun-Blessed Healer [323] Battlefield -> Graveyard (cgsublimelee) (SBA_Damage; GRE sequence 189).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cgsublimelee: Battlefield: Ajani's Pridemate [293], Dismal Backwater [287], Hinterland Sanctifier [280], Island [305], Plains [279], Plains [292]; Graveyard: Sun-Blessed Healer [323], Valorous Stance [320]
+      gian31: Battlefield: At Knifepoint [300], Mountain [290], Mountain [299], Mountain [312], Swamp [283], Tinybones, the Pickpocket [284]; Graveyard: Fell [322]
+
+Turn 9
+  - Ability of Dismal Backwater [observed_semantic_effect, seq=206] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=325, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Dismal Backwater: cgsublimelee gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=208] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [293].
+  Combat snapshots observed (active=cgsublimelee; frames: DeclareAttack -> DeclareBlock -> CombatDamage):
+      attackers: Ajani's Pridemate [293] (blocked, observed P/T 5/5)
+      blockers: Mercenary [321]
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat-result zone change: Mercenary [328] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: cgsublimelee +1 (individual changes below; gains and losses may offset)
+    life: cgsublimelee 23 -> 24
+    additional protocol-observed zone movements not assigned to an action chain:
+      Dismal Backwater [324] Library (cgsublimelee) -> Hand (cgsublimelee) (Draw; GRE sequence 201).
+      Dismal Backwater [325] Hand (cgsublimelee) -> Battlefield (PlayLand; GRE sequence 204).
+      Mercenary [328] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 222).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cgsublimelee: Battlefield: Ajani's Pridemate [293], Dismal Backwater [287], Dismal Backwater [325], Hinterland Sanctifier [280], Island [305], Plains [279], Plains [292]; Graveyard: Sun-Blessed Healer [323], Valorous Stance [320]
+      gian31: Battlefield: At Knifepoint [300], Mountain [290], Mountain [299], Mountain [312], Swamp [283], Tinybones, the Pickpocket [284]; Graveyard: Fell [322], Mercenary [328]
+
+Turn 10
+  - Laughing Jasper Flint [valid_resolution_no_immediate_mutation, seq=238] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=331)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Laughing Jasper Flint resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Laughing Jasper Flint (object 331) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Laughing Jasper Flint (object 331) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of At Knifepoint [observed_semantic_effect, seq=260] (active=gian31, phase=Phase_Combat, step=Step_FirstStrikeDamage, controller=gian31, owner=gian31, source_object=300, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of At Knifepoint: a token is created.
+      explicit effect object references: Mercenary [344] (role/targeting only where the protocol identifies it)
+      token created: Mercenary (object 344, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 343).
+  - Sun-Blessed Healer [valid_resolution_no_immediate_mutation, seq=267] (active=gian31, phase=Phase_Combat, step=Step_FirstStrikeDamage, controller=gian31, owner=cgsublimelee, source_object=345)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sun-Blessed Healer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sun-Blessed Healer (object 345) Graveyard (cgsublimelee) -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Graveyard (cgsublimelee); enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Sun-Blessed Healer (object 345) Stack -> Battlefield (Resolve; shared object ID)
+  - Quick Study [observed_semantic_effect, seq=251] (active=unknown, controller=cgsublimelee, owner=cgsublimelee, source_object=338)
+      chronology reconciliation: parser turn group None conflicts with Turn 10; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: draw, draw
+      narrative: Quick Study: draw; draw.
+      explicit effect object references: object 230 [230], object 231 [231], object 339 [339], object 340 [340] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Quick Study (object 338) Hand (cgsublimelee) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Cosmogrand Zenith (object 339) Library (cgsublimelee) -> Hand (cgsublimelee) (Draw; shared object ID)
+      protocol-linked zone transfer: Cloudblazer (object 340) Library (cgsublimelee) -> Hand (cgsublimelee) (Draw; shared object ID)
+      protocol-linked zone transfer: Quick Study (object 341) Stack -> Graveyard (cgsublimelee) (Resolve; shared object ID)
+      identity continuity: source object 338 -> transfer object 341 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Tinybones, the Pickpocket [284] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: cgsublimelee -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): cgsublimelee 24 -> 23
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [329] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 232).
+      Swamp [330] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 235).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cgsublimelee: Battlefield: Ajani's Pridemate [293], Dismal Backwater [287], Dismal Backwater [325], Hinterland Sanctifier [280], Island [305], Plains [279], Plains [292]; Graveyard: Quick Study [341], Valorous Stance [320]
+      gian31: Battlefield: At Knifepoint [300], Laughing Jasper Flint [331], Mountain [290], Mountain [299], Mountain [312], Sun-Blessed Healer [345], Swamp [283], Swamp [330], Tinybones, the Pickpocket [284]; Graveyard: Fell [322], Mercenary [328]
+
+Turn 11
+  - Cosmogrand Zenith [valid_resolution_no_immediate_mutation, seq=284] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=349)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Cosmogrand Zenith resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Cosmogrand Zenith (object 349) Hand (cgsublimelee) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Cosmogrand Zenith (object 349) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=286] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: cgsublimelee gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=288] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [293].
+  - Ability of Cosmogrand Zenith [observed_semantic_effect, seq=293] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=349, source_last_explicit_zone=Battlefield)
+      effects: token creation, token creation
+      narrative: Ability of Cosmogrand Zenith: a token is created; a token is created.
+      explicit effect object references: Human Soldier [360], Human Soldier [361] (role/targeting only where the protocol identifies it)
+      token created: Human Soldier (object 360, controller=cgsublimelee) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 358).
+      token created: Human Soldier (object 361, controller=cgsublimelee) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 358).
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=296] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: cgsublimelee gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=298] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [293].
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=300] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: cgsublimelee gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=302] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [293].
+  - Sun-Blessed Healer [valid_resolution_no_immediate_mutation, seq=304] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=355)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sun-Blessed Healer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sun-Blessed Healer (object 355) Hand (cgsublimelee) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sun-Blessed Healer (object 355) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Hinterland Sanctifier [observed_semantic_effect, seq=306] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Hinterland Sanctifier: cgsublimelee gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=308] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [293].
+  Combat snapshots observed (active=cgsublimelee; frames: DeclareAttack -> CombatDamage):
+      attackers: Ajani's Pridemate [293] (blocked, observed P/T 9/9)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat-result zone change: Mercenary [368] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: cgsublimelee +4 (individual changes below; gains and losses may offset)
+    life: cgsublimelee 23 -> 24
+    life: cgsublimelee 24 -> 25
+    life: cgsublimelee 25 -> 26
+    life: cgsublimelee 26 -> 27
+    additional protocol-observed zone movements not assigned to an action chain:
+      Sun-Blessed Healer [348] Library (cgsublimelee) -> Hand (cgsublimelee) (Draw; GRE sequence 279).
+      Mercenary [368] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 320).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cgsublimelee: Battlefield: Ajani's Pridemate [293], Cosmogrand Zenith [349], Dismal Backwater [287], Dismal Backwater [325], Hinterland Sanctifier [280], Island [305], Plains [279], Plains [292], Sun-Blessed Healer [355]; Graveyard: Quick Study [341], Valorous Stance [320]
+      gian31: Battlefield: At Knifepoint [300], Laughing Jasper Flint [331], Mountain [290], Mountain [299], Mountain [312], Sun-Blessed Healer [345], Swamp [283], Swamp [330], Tinybones, the Pickpocket [284]; Graveyard: Fell [322], Mercenary [328], Mercenary [368]
+
+Turn 12
+  - Ability of At Knifepoint [observed_semantic_effect, seq=332] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=300, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of At Knifepoint: a token is created.
+      explicit effect object references: Mercenary [371] (role/targeting only where the protocol identifies it)
+      token created: Mercenary (object 371, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 370).
+  - Ability of Laughing Jasper Flint [observed_semantic_effect, seq=334] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=331, source_last_explicit_zone=Battlefield)
+      effects: exile, exile, exile, exile
+      narrative: Ability of Laughing Jasper Flint: exiles Swamp, Swamp, Cloudblazer, Plains; exile; exile; exile.
+      explicit effect object references: object 233 [233], object 234 [234], object 235 [235], object 236 [236], Cloudblazer [372], Swamp [373], Plains [374], Swamp [375] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Swamp (object 373) Library (cgsublimelee) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Swamp (object 375) Library (cgsublimelee) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Cloudblazer (object 372) Library (cgsublimelee) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Plains (object 374) Library (cgsublimelee) -> Exile (Exile; shared object ID)
+  - Cloudblazer [valid_resolution_no_immediate_mutation, seq=342] (active=gian31, phase=Phase_Main1, controller=gian31, owner=cgsublimelee, source_object=378)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Cloudblazer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Cloudblazer (object 378) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Cloudblazer (object 378) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Cloudblazer [observed_semantic_effect, seq=344] (active=gian31, phase=Phase_Main1, controller=gian31, owner=cgsublimelee, source_object=378, source_last_explicit_zone=Battlefield)
+      effects: draw, draw, life +2
+      narrative: Ability of Cloudblazer: draw; draw; gian31 gains 2 life.
+      explicit effect object references: object 172 [172], object 173 [173], Swamp [385], Requiting Hex [386] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Swamp (object 385) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+      protocol-linked zone transfer: Requiting Hex (object 386) Library (gian31) -> Hand (gian31) (Draw; shared object ID)
+  - Requiting Hex [observed_semantic_effect, seq=350] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=387)
+      effects: destroy
+      narrative: Requiting Hex destroys Hinterland Sanctifier.
+      explicit effect object references: Hinterland Sanctifier [280], Hinterland Sanctifier [390] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Requiting Hex (object 387) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hinterland Sanctifier (object 390) Battlefield -> Graveyard (cgsublimelee) (Destroy; shared object ID)
+      protocol-linked zone transfer: Requiting Hex (object 391) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 387 -> transfer object 391 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Tinybones, the Pickpocket [284] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat-result zone change: Human Soldier [392] Battlefield -> Graveyard (cgsublimelee) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 +2 (individual changes below; gains and losses may offset)
+    life: gian31 16 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tinybones, Bauble Burglar [376] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 336).
+      Swamp [377] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 339).
+      Human Soldier [392] Battlefield -> Graveyard (cgsublimelee) (SBA_Damage; GRE sequence 362).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cgsublimelee: Battlefield: Ajani's Pridemate [293], Cosmogrand Zenith [349], Dismal Backwater [287], Dismal Backwater [325], Island [305], Plains [279], Plains [292], Sun-Blessed Healer [355]; Graveyard: Hinterland Sanctifier [390], Human Soldier [392], Quick Study [341], Valorous Stance [320]; Exile: Plains [374], Swamp [373], Swamp [375]
+      gian31: Battlefield: At Knifepoint [300], Cloudblazer [378], Laughing Jasper Flint [331], Mountain [290], Mountain [299], Mountain [312], Sun-Blessed Healer [345], Swamp [283], Swamp [330], Swamp [377], Tinybones, the Pickpocket [284]; Graveyard: Fell [322], Mercenary [328], Mercenary [368], Requiting Hex [391]
+
+Turn 13
+  - Ability of Tranquil Cove [observed_semantic_effect, seq=379] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=394, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Tranquil Cove: cgsublimelee gains 1 life.
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=381] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [293].
+  - Cloudblazer [valid_resolution_no_immediate_mutation, seq=384] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=397)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Cloudblazer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Cloudblazer (object 397) Hand (cgsublimelee) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Cloudblazer (object 397) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Cloudblazer [observed_semantic_effect, seq=386] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=397, source_last_explicit_zone=Battlefield)
+      effects: draw, draw, life +2
+      narrative: Ability of Cloudblazer: draw; draw; cgsublimelee gains 2 life.
+      explicit effect object references: object 238 [238], object 239 [239], object 405 [405], object 406 [406] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: object 405 (object 405) Library (cgsublimelee) -> Hand (cgsublimelee) (Draw; shared object ID)
+      protocol-linked zone transfer: object 406 (object 406) Library (cgsublimelee) -> Hand (cgsublimelee) (Draw; shared object ID)
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=388] (active=cgsublimelee, phase=Phase_Main1, controller=cgsublimelee, owner=cgsublimelee, source_object=293, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [293].
+  Combat snapshots observed (active=cgsublimelee; frames: DeclareAttack -> CombatDamage):
+      attackers: Ajani's Pridemate [293] (blocked, observed P/T 11/11)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat-result zone change: Mercenary [407] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: cgsublimelee +3 (individual changes below; gains and losses may offset)
+    life: cgsublimelee 27 -> 28
+    life: cgsublimelee 28 -> 30
+    additional protocol-observed zone movements not assigned to an action chain:
+      Tranquil Cove [393] Library (cgsublimelee) -> Hand (cgsublimelee) (Draw; GRE sequence 374).
+      Tranquil Cove [394] Hand (cgsublimelee) -> Battlefield (PlayLand; GRE sequence 377).
+      Mercenary [407] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 400).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cgsublimelee: Battlefield: Ajani's Pridemate [293], Cloudblazer [397], Cosmogrand Zenith [349], Dismal Backwater [287], Dismal Backwater [325], Island [305], Plains [279], Plains [292], Sun-Blessed Healer [355], Tranquil Cove [394]; Graveyard: Hinterland Sanctifier [390], Human Soldier [392], Quick Study [341], Valorous Stance [320]; Exile: Plains [374], Swamp [373], Swamp [375]
+      gian31: Battlefield: At Knifepoint [300], Cloudblazer [378], Laughing Jasper Flint [331], Mountain [290], Mountain [299], Mountain [312], Sun-Blessed Healer [345], Swamp [283], Swamp [330], Swamp [377], Tinybones, the Pickpocket [284]; Graveyard: Fell [322], Mercenary [328], Mercenary [368], Mercenary [407], Requiting Hex [391]
+
+Turn 14
+  - Ability of At Knifepoint [observed_semantic_effect, seq=412] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=300, source_last_explicit_zone=Battlefield)
+      effects: token creation
+      narrative: Ability of At Knifepoint: a token is created.
+      explicit effect object references: Mercenary [410] (role/targeting only where the protocol identifies it)
+      token created: Mercenary (object 410, controller=gian31) 1/1; evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 409).
+  - Ability of Laughing Jasper Flint [observed_semantic_effect, seq=414] (active=gian31, phase=Phase_Beginning, step=Step_Upkeep, controller=gian31, owner=gian31, source_object=331, source_last_explicit_zone=Battlefield)
+      effects: exile, exile, exile, exile, exile
+      narrative: Ability of Laughing Jasper Flint: exiles Cosmogrand Zenith, Healer's Hawk, Plains, Mortify, The Mind Stone; exile; exile; exile; exile.
+      explicit effect object references: object 240 [240], object 241 [241], object 242 [242], object 243 [243], object 244 [244], Healer's Hawk [411], Mortify [412], The Mind Stone [413], Cosmogrand Zenith [414], Plains [415] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Cosmogrand Zenith (object 414) Library (cgsublimelee) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Healer's Hawk (object 411) Library (cgsublimelee) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Plains (object 415) Library (cgsublimelee) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Mortify (object 412) Library (cgsublimelee) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: The Mind Stone (object 413) Library (cgsublimelee) -> Exile (Exile; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Laughing Jasper Flint [416] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 416).
+      Swamp [417] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 419).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      cgsublimelee: Battlefield: Ajani's Pridemate [293], Cloudblazer [397], Cosmogrand Zenith [349], Dismal Backwater [287], Dismal Backwater [325], Island [305], Plains [279], Plains [292], Sun-Blessed Healer [355], Tranquil Cove [394]; Graveyard: Hinterland Sanctifier [390], Human Soldier [392], Quick Study [341], Valorous Stance [320]; Exile: Cosmogrand Zenith [414], Healer's Hawk [411], Mortify [412], Plains [374], Plains [415], Swamp [373], Swamp [375], The Mind Stone [413]
+      gian31: Battlefield: At Knifepoint [300], Cloudblazer [378], Laughing Jasper Flint [331], Mountain [290], Mountain [299], Mountain [312], Sun-Blessed Healer [345], Swamp [283], Swamp [330], Swamp [377], Swamp [417], Tinybones, the Pickpocket [284]; Graveyard: Fell [322], Mercenary [328], Mercenary [368], Mercenary [407], Requiting Hex [391]
+
+UNNUMBERED / UNRESOLVED TURN GROUP
+  - The captured records do not provide a verified numbered turn for the following events.
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- No life mutation without an exact same-record source was observed.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 6 token creations observed; 2 active as last observed; 4 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Mercenary [321] controller=gian31; created Turn 8 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 9 via Battlefield -> Graveyard (gian31) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Mercenary [344] controller=gian31; created Turn 10 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 11 via Battlefield -> Graveyard (gian31) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Human Soldier [360] controller=cgsublimelee; created Turn 11 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 12 via Battlefield -> Graveyard (cgsublimelee) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Human Soldier [361] controller=cgsublimelee; created Turn 11 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 11, object 361 (latest observed P/T 1/1; current zone unconfirmed).
+- Mercenary [371] controller=gian31; created Turn 12 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 13 via Battlefield -> Graveyard (gian31) (SBA_Damage); ceases to exist after that observed move (token rules consequence).
+- Mercenary [410] controller=gian31; created Turn 14 (1/1); creation evidence=explicit GRE AnnotationType_TokenCreated; active as last observed at Turn 14, object 410 (latest observed P/T 1/1; current zone unconfirmed).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Plains [owner=cgsublimelee, controller=cgsublimelee] moves Hand (cgsublimelee) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Hinterland Sanctifier [owner=cgsublimelee, controller=cgsublimelee] moves Hand (cgsublimelee) -> Stack (CastSpell).
+- Turn 1, seq 10: Hinterland Sanctifier [owner=cgsublimelee, controller=cgsublimelee] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 24: Mountain [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 27: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 28: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 30: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 44: Ajani's Pridemate [owner/controller metadata unavailable] moves Library (cgsublimelee) -> Hand (cgsublimelee) (Draw).
+- Turn 3, seq 47: Dismal Backwater [owner=cgsublimelee, controller=cgsublimelee] moves Hand (cgsublimelee) -> Battlefield (PlayLand).
+- Turn 4, seq 64: Fell [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 67: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 82: Plains [owner/controller metadata unavailable] moves Library (cgsublimelee) -> Hand (cgsublimelee) (Draw).
+- Turn 5, seq 85: Plains [owner=cgsublimelee, controller=cgsublimelee] moves Hand (cgsublimelee) -> Battlefield (PlayLand).
+- Turn 5, seq 86: Ajani's Pridemate [owner=cgsublimelee, controller=cgsublimelee] moves Hand (cgsublimelee) -> Stack (CastSpell).
+- Turn 5, seq 88: Ajani's Pridemate [owner=cgsublimelee, controller=cgsublimelee] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 107: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 110: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 111: At Knifepoint [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 113: At Knifepoint [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 128: Island [owner/controller metadata unavailable] moves Library (cgsublimelee) -> Hand (cgsublimelee) (Draw).
+- Turn 7, seq 131: Island [owner=cgsublimelee, controller=cgsublimelee] moves Hand (cgsublimelee) -> Battlefield (PlayLand).
+- Turn 7, seq 147: Sun-Blessed Healer [owner=cgsublimelee, controller=cgsublimelee] moves Hand (cgsublimelee) -> Stack (CastSpell).
+- Turn 7, seq 150: Sun-Blessed Healer [owner=cgsublimelee, controller=cgsublimelee] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 160: Mountain [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 163: Mountain [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 164: Fell [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 168: Valorous Stance [owner=cgsublimelee, controller=cgsublimelee] moves Hand (cgsublimelee) -> Stack (CastSpell).
+- Turn 8, seq 173: Valorous Stance [owner=cgsublimelee, controller=cgsublimelee] moves Stack -> Graveyard (cgsublimelee) (Resolve).
+- Turn 8, seq 177: Fell [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 8, seq 189: Sun-Blessed Healer [owner=cgsublimelee, controller=gian31] moves Battlefield -> Graveyard (cgsublimelee) (SBA_Damage).
+- Turn 9, seq 201: Dismal Backwater [owner/controller metadata unavailable] moves Library (cgsublimelee) -> Hand (cgsublimelee) (Draw).
+- Turn 9, seq 204: Dismal Backwater [owner=cgsublimelee, controller=cgsublimelee] moves Hand (cgsublimelee) -> Battlefield (PlayLand).
+- Turn 9, seq 222: Mercenary [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 10, seq 232: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 235: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 236: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 238: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 249: Quick Study [owner=cgsublimelee, controller=cgsublimelee] moves Hand (cgsublimelee) -> Stack (CastSpell).
+- Turn 10, seq 251: Cosmogrand Zenith [owner/controller metadata unavailable] moves Library (cgsublimelee) -> Hand (cgsublimelee) (Draw).
+- Turn 10, seq 251: Cloudblazer [owner/controller metadata unavailable] moves Library (cgsublimelee) -> Hand (cgsublimelee) (Draw).
+- Turn 10, seq 251: Quick Study [owner=cgsublimelee, controller=cgsublimelee] moves Stack -> Graveyard (cgsublimelee) (Resolve).
+- Turn 10, seq 263: Sun-Blessed Healer [owner=cgsublimelee, controller=gian31] moves Graveyard (cgsublimelee) -> Stack (CastSpell).
+- Turn 10, seq 267: Sun-Blessed Healer [owner=cgsublimelee, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 279: Sun-Blessed Healer [owner/controller metadata unavailable] moves Library (cgsublimelee) -> Hand (cgsublimelee) (Draw).
+- Turn 11, seq 282: Cosmogrand Zenith [owner=cgsublimelee, controller=cgsublimelee] moves Hand (cgsublimelee) -> Stack (CastSpell).
+- Turn 11, seq 284: Cosmogrand Zenith [owner=cgsublimelee, controller=cgsublimelee] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 289: Sun-Blessed Healer [owner=cgsublimelee, controller=cgsublimelee] moves Hand (cgsublimelee) -> Stack (CastSpell).
+- Turn 11, seq 304: Sun-Blessed Healer [owner=cgsublimelee, controller=cgsublimelee] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 320: Mercenary [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 12, seq 334: Swamp [owner=cgsublimelee, controller=cgsublimelee] moves Library (cgsublimelee) -> Exile (Exile).
+- Turn 12, seq 334: Swamp [owner=cgsublimelee, controller=cgsublimelee] moves Library (cgsublimelee) -> Exile (Exile).
+- Turn 12, seq 334: Cloudblazer [owner=cgsublimelee, controller=gian31] moves Library (cgsublimelee) -> Exile (Exile).
+- Turn 12, seq 334: Plains [owner=cgsublimelee, controller=cgsublimelee] moves Library (cgsublimelee) -> Exile (Exile).
+- Turn 12, seq 336: Tinybones, Bauble Burglar [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 339: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 340: Cloudblazer [owner=cgsublimelee, controller=gian31] moves Exile -> Stack (CastSpell).
+- Turn 12, seq 342: Cloudblazer [owner=cgsublimelee, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 344: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 344: Requiting Hex [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 345: Requiting Hex [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 350: Hinterland Sanctifier [owner=cgsublimelee, controller=cgsublimelee] moves Battlefield -> Graveyard (cgsublimelee) (Destroy).
+- Turn 12, seq 350: Requiting Hex [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 12, seq 362: Human Soldier [owner/controller metadata unavailable] moves Battlefield -> Graveyard (cgsublimelee) (SBA_Damage).
+- Turn 13, seq 374: Tranquil Cove [owner/controller metadata unavailable] moves Library (cgsublimelee) -> Hand (cgsublimelee) (Draw).
+- Turn 13, seq 377: Tranquil Cove [owner=cgsublimelee, controller=cgsublimelee] moves Hand (cgsublimelee) -> Battlefield (PlayLand).
+- Turn 13, seq 382: Cloudblazer [owner=cgsublimelee, controller=cgsublimelee] moves Hand (cgsublimelee) -> Stack (CastSpell).
+- Turn 13, seq 384: Cloudblazer [owner=cgsublimelee, controller=cgsublimelee] moves Stack -> Battlefield (Resolve).
+- Turn 13, seq 386: object 405 [owner/controller metadata unavailable] moves Library (cgsublimelee) -> Hand (cgsublimelee) (Draw).
+- Turn 13, seq 386: object 406 [owner/controller metadata unavailable] moves Library (cgsublimelee) -> Hand (cgsublimelee) (Draw).
+- Turn 13, seq 400: Mercenary [owner/controller metadata unavailable] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 14, seq 414: Cosmogrand Zenith [owner=cgsublimelee, controller=cgsublimelee] moves Library (cgsublimelee) -> Exile (Exile).
+- Turn 14, seq 414: Healer's Hawk [owner=cgsublimelee, controller=cgsublimelee] moves Library (cgsublimelee) -> Exile (Exile).
+- Turn 14, seq 414: Plains [owner=cgsublimelee, controller=cgsublimelee] moves Library (cgsublimelee) -> Exile (Exile).
+- Turn 14, seq 414: Mortify [owner=cgsublimelee, controller=cgsublimelee] moves Library (cgsublimelee) -> Exile (Exile).
+- Turn 14, seq 414: The Mind Stone [owner=cgsublimelee, controller=cgsublimelee] moves Library (cgsublimelee) -> Exile (Exile).
+- Turn 14, seq 416: Laughing Jasper Flint [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 419: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 221 becomes object 279 [Plains].
+- Turn 1, seq 8: object 219 becomes object 280 [Hinterland Sanctifier].
+- Turn 2, seq 24: object 166 becomes object 282 [Mountain].
+- Turn 2, seq 27: object 159 becomes object 283 [Swamp].
+- Turn 2, seq 28: object 160 becomes object 284 [Tinybones, the Pickpocket].
+- Turn 3, seq 44: object 226 becomes object 286 [Ajani's Pridemate].
+- Turn 3, seq 47: object 225 becomes object 287 [Dismal Backwater].
+- Turn 4, seq 64: object 167 becomes object 289 [Fell].
+- Turn 4, seq 67: object 162 becomes object 290 [Mountain].
+- Turn 5, seq 82: object 227 becomes object 291 [Plains].
+- Turn 5, seq 85: object 291 becomes object 292 [Plains].
+- Turn 5, seq 86: object 286 becomes object 293 [Ajani's Pridemate].
+- Turn 6, seq 107: object 168 becomes object 298 [Swamp].
+- Turn 6, seq 110: object 282 becomes object 299 [Mountain].
+- Turn 6, seq 111: object 163 becomes object 300 [At Knifepoint].
+- Turn 7, seq 128: object 228 becomes object 304 [Island].
+- Turn 7, seq 131: object 304 becomes object 305 [Island].
+- Turn 7, seq 147: object 220 becomes object 306 [Sun-Blessed Healer].
+- Turn 8, seq 160: object 169 becomes object 311 [Mountain].
+- Turn 8, seq 163: object 311 becomes object 312 [Mountain].
+- Turn 8, seq 164: object 289 becomes object 313 [Fell].
+- Turn 8, seq 168: object 224 becomes object 317 [Valorous Stance].
+- Turn 8, seq 173: object 317 becomes object 320 [Valorous Stance].
+- Turn 8, seq 177: object 313 becomes object 322 [Fell].
+- Turn 8, seq 189: object 306 becomes object 323 [Sun-Blessed Healer].
+- Turn 9, seq 201: object 229 becomes object 324 [Dismal Backwater].
+- Turn 9, seq 204: object 324 becomes object 325 [Dismal Backwater].
+- Turn 9, seq 222: object 321 becomes object 328 [Mercenary].
+- Turn 10, seq 232: object 170 becomes object 329 [Swamp].
+- Turn 10, seq 235: object 298 becomes object 330 [Swamp].
+- Turn 10, seq 236: object 165 becomes object 331 [Laughing Jasper Flint].
+- Turn 10, seq 249: object 223 becomes object 338 [Quick Study].
+- Turn 10, seq 251: object 230 becomes object 339 [Cosmogrand Zenith].
+- Turn 10, seq 251: object 231 becomes object 340 [Cloudblazer].
+- Turn 10, seq 251: object 338 becomes object 341 [Quick Study].
+- Turn 10, seq 263: object 323 becomes object 345 [Sun-Blessed Healer].
+- Turn 11, seq 279: object 232 becomes object 348 [Sun-Blessed Healer].
+- Turn 11, seq 282: object 339 becomes object 349 [Cosmogrand Zenith].
+- Turn 11, seq 289: object 348 becomes object 355 [Sun-Blessed Healer].
+- Turn 11, seq 320: object 344 becomes object 368 [Mercenary].
+- Turn 12, seq 334: object 234 becomes object 373 [Swamp].
+- Turn 12, seq 334: object 236 becomes object 375 [Swamp].
+- Turn 12, seq 334: object 233 becomes object 372 [Cloudblazer].
+- Turn 12, seq 334: object 235 becomes object 374 [Plains].
+- Turn 12, seq 336: object 171 becomes object 376 [Tinybones, Bauble Burglar].
+- Turn 12, seq 339: object 329 becomes object 377 [Swamp].
+- Turn 12, seq 340: object 372 becomes object 378 [Cloudblazer].
+- Turn 12, seq 344: object 172 becomes object 385 [Swamp].
+- Turn 12, seq 344: object 173 becomes object 386 [Requiting Hex].
+- Turn 12, seq 345: object 386 becomes object 387 [Requiting Hex].
+- Turn 12, seq 350: object 280 becomes object 390 [Hinterland Sanctifier].
+- Turn 12, seq 350: object 387 becomes object 391 [Requiting Hex].
+- Turn 12, seq 362: object 360 becomes object 392 [Human Soldier].
+- Turn 13, seq 374: object 237 becomes object 393 [Tranquil Cove].
+- Turn 13, seq 377: object 393 becomes object 394 [Tranquil Cove].
+- Turn 13, seq 382: object 340 becomes object 397 [Cloudblazer].
+- Turn 13, seq 386: object 238 becomes object 405 [object 238].
+- Turn 13, seq 386: object 239 becomes object 406 [object 239].
+- Turn 13, seq 400: object 371 becomes object 407 [Mercenary].
+- Turn 14, seq 414: object 243 becomes object 414 [Cosmogrand Zenith].
+- Turn 14, seq 414: object 240 becomes object 411 [Healer's Hawk].
+- Turn 14, seq 414: object 244 becomes object 415 [Plains].
+- Turn 14, seq 414: object 241 becomes object 412 [Mortify].
+- Turn 14, seq 414: object 242 becomes object 413 [The Mind Stone].
+- Turn 14, seq 416: object 174 becomes object 416 [Laughing Jasper Flint].
+- Turn 14, seq 419: object 385 becomes object 417 [Swamp].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: cgsublimelee plays Plains (object 279) from Hand (cgsublimelee) to Battlefield.
+- Turn 2: gian31 plays Swamp (object 283) from Hand (gian31) to Battlefield.
+- Turn 3: cgsublimelee plays Dismal Backwater (object 287) from Hand (cgsublimelee) to Battlefield.
+- Turn 4: gian31 plays Mountain (object 290) from Hand (gian31) to Battlefield.
+- Turn 5: cgsublimelee plays Plains (object 292) from Hand (cgsublimelee) to Battlefield.
+- Turn 6: gian31 plays Mountain (object 299) from Hand (gian31) to Battlefield.
+- Turn 7: cgsublimelee plays Island (object 305) from Hand (cgsublimelee) to Battlefield.
+- Turn 8: gian31 plays Mountain (object 312) from Hand (gian31) to Battlefield.
+- Turn 9: cgsublimelee plays Dismal Backwater (object 325) from Hand (cgsublimelee) to Battlefield.
+- Turn 10: gian31 plays Swamp (object 330) from Hand (gian31) to Battlefield.
+- Turn 12: gian31 plays Swamp (object 377) from Hand (gian31) to Battlefield.
+- Turn 13: cgsublimelee plays Tranquil Cove (object 394) from Hand (cgsublimelee) to Battlefield.
+- Turn 14: gian31 plays Swamp (object 417) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- Turn 11: ordered adjacent records Hinterland Sanctifier -> Ajani's Pridemate; observed repetitions=4; net life: cgsublimelee +4. This is record order only; no causal link between the listed abilities is asserted.
+  Same-turn ability records (including records outside the summarized chain): Ajani's Pridemate=4, Hinterland Sanctifier=4.
+  Individual ability records remain in the timeline.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- Turn 11: ordered adjacent records Hinterland Sanctifier -> Ajani's Pridemate; observed repetitions=2 (pattern length 2; temporal order only, not asserted causality).
+  Raw ability events remain available in the turn timeline.
+
+CARD USAGE
+------------------------------------------------------------
+- Ajani's Pridemate: casts=1; abilities=9 (triggered=9, activated=0) across turns [5, 5, 7, 9, 11, 11, 11, 11, 13, 13]
+  observed effect totals: draws=0, tokens=0, counters=9, returns=0, damage=0, life_changes=0, other=9
+  observed effects: +1 counter(s), P/T +1/+1
+- Hinterland Sanctifier: casts=1; abilities=6 (triggered=6, activated=0) across turns [1, 5, 7, 11, 11, 11, 11]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=6, other=0
+  observed effects: life +1
+- At Knifepoint: casts=1; abilities=4 (triggered=4, activated=0) across turns [6, 8, 10, 12, 14]
+  observed effect totals: draws=0, tokens=4, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Cloudblazer: casts=2; abilities=2 (triggered=2, activated=0) across turns [12, 12, 13, 13]
+  observed effect totals: draws=4, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: draw, life +2
+- Laughing Jasper Flint: casts=1; abilities=2 (triggered=2, activated=0) across turns [10, 12, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=9
+  observed effects: exile
+- Sun-Blessed Healer: casts=3 across turns [7, 10, 11]
+- Cosmogrand Zenith: casts=1; abilities=1 (triggered=1, activated=0) across turns [11, 11]
+  observed effect totals: draws=0, tokens=2, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Dismal Backwater: abilities=2 (triggered=2, activated=0) across turns [3, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Fell: casts=1 across turns [8]
+- Quick Study: casts=1 across turns [10]
+  observed effect totals: draws=2, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: draw
+- Requiting Hex: casts=1 across turns [12]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+- Tinybones, the Pickpocket: casts=1 across turns [2]
+- Tranquil Cove: abilities=1 (triggered=1, activated=0) across turns [13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Valorous Stance: casts=1 across turns [8]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 7 - DeclareAttack, DeclareBlock (active=cgsublimelee)
+  attacker: Hinterland Sanctifier (cgsublimelee) -> gian31; unblocked in this observed snapshot
+  attacker: Ajani's Pridemate (cgsublimelee) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack (active=gian31)
+  attacker: Tinybones, the Pickpocket (gian31) -> cgsublimelee; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock, CombatDamage (active=cgsublimelee)
+  attacker: Ajani's Pridemate (cgsublimelee) -> gian31; blocked by Mercenary
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack (active=gian31)
+  attacker: Tinybones, the Pickpocket (gian31) -> cgsublimelee; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, CombatDamage (active=cgsublimelee)
+  attacker: Ajani's Pridemate (cgsublimelee) -> gian31; blocked by unknown blocker
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack (active=gian31)
+  attacker: Tinybones, the Pickpocket (gian31) -> cgsublimelee; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 - DeclareAttack, CombatDamage (active=cgsublimelee)
+  attacker: Ajani's Pridemate (cgsublimelee) -> gian31; blocked by unknown blocker
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 10: Ability of At Knifepoint (active=gian31) - Ability of At Knifepoint: a token is created.
+- Turn 10: Sun-Blessed Healer (active=gian31) - Sun-Blessed Healer resolves with no immediate observed mutation.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 160: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 161: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: At Knifepoint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Gonti, Night Minister | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 279: Plains | controller=cgsublimelee | owner=cgsublimelee | zone=Battlefield (latest_object_observation)
+- 280: Hinterland Sanctifier | controller=cgsublimelee | owner=cgsublimelee | zone=Battlefield (latest_object_observation)
+- 282: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 283: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 284: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 287: Dismal Backwater | controller=cgsublimelee | owner=cgsublimelee | zone=Battlefield (latest_object_observation)
+- 288: object 288 | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 289: Fell | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 290: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 292: Plains | controller=cgsublimelee | owner=cgsublimelee | zone=Battlefield (latest_object_observation)
+- 293: Ajani's Pridemate | controller=cgsublimelee | owner=cgsublimelee | zone=Battlefield (latest_object_observation)
+- 296: object 296 | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 297: Deal Gone Bad | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 298: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 299: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 300: At Knifepoint | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 305: Island | controller=cgsublimelee | owner=cgsublimelee | zone=Battlefield (latest_object_observation)
+- 306: Sun-Blessed Healer | controller=cgsublimelee | owner=cgsublimelee | zone=Battlefield (latest_object_observation)
+- 309: object 309 | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 310: Deal Gone Bad | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 311: Mountain | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 312: Mountain | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 313: Fell | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 316: object 316 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 317: Valorous Stance | controller=cgsublimelee | owner=cgsublimelee | zone=Stack (latest_object_observation)
+- 320: Valorous Stance | controller=cgsublimelee | owner=cgsublimelee | zone=Graveyard (latest_object_observation)
+- 321: Mercenary | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 322: Fell | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 323: Sun-Blessed Healer | controller=gian31 | owner=cgsublimelee | zone=Battlefield (latest_object_observation)
+- 325: Dismal Backwater | controller=cgsublimelee | owner=cgsublimelee | zone=Battlefield (latest_object_observation)
+- 326: object 326 | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 327: Deal Gone Bad | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 329: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 330: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 331: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 335: object 335 | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 336: object 336 | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 337: object 337 | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 338: Quick Study | controller=cgsublimelee | owner=cgsublimelee | zone=Stack (latest_object_observation)
+- 341: Quick Study | controller=cgsublimelee | owner=cgsublimelee | zone=Graveyard (latest_object_observation)
+- 342: object 342 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 343: object 343 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 344: Mercenary | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 345: Sun-Blessed Healer | controller=gian31 | owner=cgsublimelee | zone=Battlefield (latest_object_observation)
+- 349: Cosmogrand Zenith | controller=cgsublimelee | owner=cgsublimelee | zone=Battlefield (latest_object_observation)
+- 353: object 353 | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 354: Deal Gone Bad | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 355: Sun-Blessed Healer | controller=cgsublimelee | owner=cgsublimelee | zone=Battlefield (latest_object_observation)
+- 358: object 358 | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 360: Human Soldier | controller=cgsublimelee | owner=cgsublimelee | zone=Hand (latest_object_observation)
+- 361: Human Soldier | controller=cgsublimelee | owner=cgsublimelee | zone=Battlefield (latest_object_observation)
+- 362: object 362 | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 363: object 363 | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 364: Deal Gone Bad | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 365: Deal Gone Bad | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 366: object 366 | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 367: Deal Gone Bad | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 369: object 369 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 370: object 370 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 371: Mercenary | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 372: Cloudblazer | controller=gian31 | owner=cgsublimelee | zone=Exile (latest_object_observation)
+- 373: Swamp | controller=cgsublimelee | owner=cgsublimelee | zone=Exile (latest_object_observation)
+- 374: Plains | controller=cgsublimelee | owner=cgsublimelee | zone=Exile (latest_object_observation)
+- 375: Swamp | controller=cgsublimelee | owner=cgsublimelee | zone=Exile (latest_object_observation)
+- 376: Tinybones, Bauble Burglar | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 377: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 378: Cloudblazer | controller=gian31 | owner=cgsublimelee | zone=Battlefield (latest_object_observation)
+- 384: object 384 | controller=gian31 | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 385: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 386: Requiting Hex | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 387: Requiting Hex | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 390: Hinterland Sanctifier | controller=cgsublimelee | owner=cgsublimelee | zone=Graveyard (latest_object_observation)
+- 391: Requiting Hex | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 394: Tranquil Cove | controller=cgsublimelee | owner=cgsublimelee | zone=Battlefield (latest_object_observation)
+- 395: object 395 | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 396: Deal Gone Bad | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 397: Cloudblazer | controller=cgsublimelee | owner=cgsublimelee | zone=Battlefield (latest_object_observation)
+- 403: object 403 | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 404: Deal Gone Bad | controller=cgsublimelee | owner=cgsublimelee | zone=unknown (inferred unknown) (latest_object_observation)
+- 408: object 408 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 409: object 409 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 410: Mercenary | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 411: Healer's Hawk | controller=cgsublimelee | owner=cgsublimelee | zone=Exile (latest_object_observation)
+- 412: Mortify | controller=cgsublimelee | owner=cgsublimelee | zone=Exile (latest_object_observation)
+- 413: The Mind Stone | controller=cgsublimelee | owner=cgsublimelee | zone=Exile (latest_object_observation)
+- 414: Cosmogrand Zenith | controller=cgsublimelee | owner=cgsublimelee | zone=Exile (latest_object_observation)
+- 415: Plains | controller=cgsublimelee | owner=cgsublimelee | zone=Exile (latest_object_observation)
+- 416: Laughing Jasper Flint | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 417: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+cgsublimelee: 50 total items
+  zones: Battlefield=13, Exile=8, Graveyard=3, Hand=1, Stack=2, unknown=23
+  objects: Deal Gone Bad x9, Plains x4, Cosmogrand Zenith x2, Dismal Backwater x2, Hinterland Sanctifier x2, Human Soldier x2, Quick Study x2, Sun-Blessed Healer x2, Swamp x2, Valorous Stance x2, Ajani's Pridemate, Cloudblazer
+gian31: 46 total items
+  zones: Battlefield=13, Exile=1, Hand=19, Stack=3, unknown=10
+  objects: Swamp x9, Mountain x6, Mercenary x4, Fell x3, Laughing Jasper Flint x3, Requiting Hex x3, At Knifepoint x2, Cloudblazer x2, Sun-Blessed Healer x2, Tinybones, the Pickpocket x2, Gonti, Night Minister, Tinybones, Bauble Burglar
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (13): Cloudblazer, Laughing Jasper Flint, Mercenary, Mountain, Mountain, Mountain, Sun-Blessed Healer, Sun-Blessed Healer, Swamp, Swamp, Swamp, Swamp, Tinybones, the Pickpocket
+  Graveyard: 0 card(s)
+cgsublimelee:
+  Battlefield (13): Ajani's Pridemate, Cloudblazer, Cosmogrand Zenith, Dismal Backwater, Dismal Backwater, Hinterland Sanctifier, Human Soldier, Island, Plains, Plains, Sun-Blessed Healer, Sun-Blessed Healer, Tranquil Cove
+  Graveyard: 3 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+33 objects have no resolved final zone and are omitted from the known board state.
+cgsublimelee: 23 unknown object(s)
+gian31: 10 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=20, Stack=5
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Player-zone assignment has explicit transfer conflicts in this match. Where a safe Hand -> Stack -> Battlefield or PlayLand provenance exists, that zone holder is used; other controller assignments remain protocol-observed rather than fully reconciled.
+cgsublimelee:
+  Battlefield (11): Plains, Dismal Backwater, Plains, Ajani's Pridemate, Island, Dismal Backwater, Cosmogrand Zenith, Sun-Blessed Healer, Human Soldier, Tranquil Cove, Cloudblazer
+  Graveyard (3): Valorous Stance, Quick Study, Hinterland Sanctifier
+  Exile (8): Swamp, Plains, Swamp, Healer's Hawk, Mortify, The Mind Stone, Cosmogrand Zenith, Plains
+gian31:
+  Battlefield (13): Swamp, Tinybones, the Pickpocket, Mountain, Mountain, At Knifepoint, Mountain, Swamp, Laughing Jasper Flint, Sun-Blessed Healer, Swamp, Cloudblazer, Mercenary, Swamp
+  Graveyard (2): Fell, Requiting Hex
+Known non-persistent entries (counts only):
+  cgsublimelee: Hand=2, Limbo=2
+  gian31: Hand=4, Limbo=6
+  unknown: Hand=1, Library=78, Limbo=18
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: cgsublimelee Battlefield=2
+- Turn 2: cgsublimelee Battlefield=2; gian31 Battlefield=2
+- Turn 3: cgsublimelee Battlefield=3; gian31 Battlefield=2
+- Turn 4: cgsublimelee Battlefield=3; gian31 Battlefield=3
+- Turn 5: cgsublimelee Battlefield=5; gian31 Battlefield=3
+- Turn 6: cgsublimelee Battlefield=5; gian31 Battlefield=5
+- Turn 7: cgsublimelee Battlefield=7; gian31 Battlefield=5
+- Turn 8: cgsublimelee Battlefield=6; cgsublimelee Graveyard=2; gian31 Battlefield=6; gian31 Graveyard=1
+- Turn 9: cgsublimelee Battlefield=7; cgsublimelee Graveyard=2; gian31 Battlefield=6; gian31 Graveyard=2
+- Turn 10: cgsublimelee Battlefield=7; cgsublimelee Graveyard=2; gian31 Battlefield=9; gian31 Graveyard=2
+- Turn 11: cgsublimelee Battlefield=9; cgsublimelee Graveyard=2; gian31 Battlefield=9; gian31 Graveyard=3
+- Turn 12: cgsublimelee Battlefield=8; cgsublimelee Graveyard=4; cgsublimelee Exile=3; gian31 Battlefield=11; gian31 Graveyard=4
+- Turn 13: cgsublimelee Battlefield=10; cgsublimelee Graveyard=4; cgsublimelee Exile=3; gian31 Battlefield=11; gian31 Graveyard=5
+- Turn 14: cgsublimelee Battlefield=10; cgsublimelee Graveyard=4; cgsublimelee Exile=8; gian31 Battlefield=12; gian31 Graveyard=5
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Hinterland Sanctifier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 2: Tinybones, the Pickpocket resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Ajani's Pridemate resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: At Knifepoint resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Sun-Blessed Healer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Fell resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Valorous Stance resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Laughing Jasper Flint resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Sun-Blessed Healer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Cosmogrand Zenith resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Sun-Blessed Healer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Cloudblazer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Cloudblazer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
