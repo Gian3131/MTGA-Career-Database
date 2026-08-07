@@ -1,0 +1,153 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, marcelomb
+Seat map: Seat 1=gian31, Seat 2=marcelomb
+Turn range (known): 1 - 2
+Records: 1
+Action chains: 1
+Winner: gian31
+Final life: {'gian31': 20, 'marcelomb': 20}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 1 (Phase_Main1; Tinybones, the Pickpocket, seq 10).
+Later numbered GRE record(s): 2 after action sequence 10 across turn(s) [2]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+POST-ACTION GRE RECORDS - RESULT ORDER UNRESOLVED
+  - Turn 2, seq 24: identity_changed.
+  - Turn 2, seq 24: zone_transfer (Draw).
+  These records are retained for traceability; their order relative to the match-result payload is not asserted.
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 3 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 1 distinct explicit PlayLand movement(s) across turns [1] (raw records=1; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 1 explicit Library -> Hand movement(s); named in the draw record=0, resolved through an explicit identity transition=0, unresolved=1.
+Unresolved draw identities (explicit movements retained): Turn 2, seq 24, object 290.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Burst Lightning [167], Swamp [168], Swamp [169], Mountain [170], Bitter Triumph [171], Tinybones, the Pickpocket [172], Swamp [173].
+  - unknown: 7 observed card(s): object 227 [227], object 228 [228], object 229 [229], object 230 [230], object 231 [231], object 232 [232], object 233 [233].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 20, 'marcelomb': 20}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 1 (Phase_Main1; Tinybones, the Pickpocket, seq 10).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Tinybones, the Pickpocket.
+- Turn 2: actions: cards=0, abilities=0.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Tinybones, the Pickpocket [valid_resolution_no_immediate_mutation, seq=10] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=288)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tinybones, the Pickpocket resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 288) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tinybones, the Pickpocket (object 288) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [287] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Swamp [287], Tinybones, the Pickpocket [288]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 290 [290] Library (marcelomb) -> Hand (marcelomb) (Draw; GRE sequence 24).
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- No life mutation without an exact same-record source was observed.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 1, seq 10: Tinybones, the Pickpocket [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 24: object 290 [owner/controller metadata unavailable] moves Library (marcelomb) -> Hand (marcelomb) (Draw).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 169 becomes object 287 [Swamp].
+- Turn 1, seq 8: object 172 becomes object 288 [Tinybones, the Pickpocket].
+- Turn 2, seq 24: object 234 becomes object 290 [object 234].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Swamp (object 287) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Tinybones, the Pickpocket: casts=1 across turns [1]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+- No explicit attacker/blocker state was available in the captured GRE snapshots.
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- No combat-phase events were detected in this reconstruction.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 167: Burst Lightning | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 168: Swamp | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 169: Swamp | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 170: Mountain | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 171: Bitter Triumph | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 172: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 173: Swamp | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 287: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 288: Tinybones, the Pickpocket | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 9 total items
+  zones: Battlefield=2, unknown=7
+  objects: Swamp x4, Tinybones, the Pickpocket x2, Bitter Triumph, Burst Lightning, Mountain
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (2): Swamp, Tinybones, the Pickpocket
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+7 objects have no resolved final zone and are omitted from the known board state.
+gian31: 7 unknown object(s)
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+gian31:
+  Battlefield (1): Swamp
+Known non-persistent entries (counts only):
+  gian31: Hand=5, Limbo=2, Stack=1
+  marcelomb: Hand=1
+  unknown: Hand=7, Library=105, Limbo=1
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=2
+- Turn 2: gian31 Battlefield=2
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Tinybones, the Pickpocket resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
