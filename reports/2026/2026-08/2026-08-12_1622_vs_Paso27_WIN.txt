@@ -1,0 +1,501 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Paso27
+Seat map: Seat 1=gian31, Seat 2=Paso27
+Turn range (known): 1 - 10
+Records: 16
+Action chains: 14
+Winner: gian31
+Final life: {'gian31': 21, 'Paso27': 6}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 10 (Phase_Combat, Step_CombatDamage; Ability of Fynn, the Fangbearer, seq 239).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 20 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 11 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] (raw records=11; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 9 explicit Library -> Hand movement(s); named in the draw record=5, resolved through an explicit identity transition=3, unresolved=1.
+Unresolved draw identities (explicit movements retained): Turn 7, seq 138, object 306.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Axebane Ferox [159], Swamp [160], The Serpent Society [161], Virulent Emissary [162], Forest [163], Fynn, the Fangbearer [164], Virulent Silencer [165].
+  - unknown: 7 observed card(s): object 219 [219], object 220 [220], object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 21, 'Paso27': 6}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 10 (Phase_Combat, Step_CombatDamage; Ability of Fynn, the Fangbearer, seq 239).
+Last captured life snapshot: Paso27 16 -> 6 (seq 234).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Mountain.
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Forest, Virulent Emissary.
+- Turn 3: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Slumbering Cerberus.
+- Turn 4: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Forest, Forest, Fynn, the Fangbearer; explicit battlefield exits=Virulent Emissary, Slumbering Cerberus.
+- Turn 5: actions: cards=0, abilities=0; explicit battlefield entries=Rakdos Guildgate.
+- Turn 6: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, The Serpent Society.
+- Turn 7: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Bloodfell Caves, Infestation Sage.
+- Turn 8: actions: cards=1, abilities=2; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, Vraska, the Silencer.
+- Turn 9: actions: cards=2, abilities=0; explicit battlefield entries=Mountain, Diregraf Ghoul, Perforating Artist.
+- Turn 10: actions: cards=1, abilities=2; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, Axebane Ferox.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [279] Hand (Paso27) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Paso27: Battlefield: Mountain [279]
+
+Turn 2
+  - Virulent Emissary [valid_resolution_no_immediate_mutation, seq=27] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Virulent Emissary resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Virulent Emissary (object 282) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Virulent Emissary (object 282) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [280] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 21).
+      Forest [281] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Paso27: Battlefield: Mountain [279]
+      gian31: Battlefield: Forest [281], Virulent Emissary [282]
+
+Turn 3
+  - Slumbering Cerberus [valid_resolution_no_immediate_mutation, seq=47] (active=Paso27, phase=Phase_Main1, controller=Paso27, owner=Paso27, source_object=286)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Slumbering Cerberus resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Slumbering Cerberus (object 286) Hand (Paso27) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Slumbering Cerberus (object 286) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Perforating Artist [284] Library (Paso27) -> Hand (Paso27) (Draw; GRE sequence 41).
+      Mountain [285] Hand (Paso27) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Paso27: Battlefield: Mountain [279], Mountain [285], Slumbering Cerberus [286]
+      gian31: Battlefield: Forest [281], Virulent Emissary [282]
+
+Turn 4
+  - Fynn, the Fangbearer [valid_resolution_no_immediate_mutation, seq=69] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=291)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Fynn, the Fangbearer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 291) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 291) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 291) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Virulent Emissary [observed_semantic_effect, seq=71] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=282, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Virulent Emissary: gian31 gains 1 life.
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Virulent Emissary [282] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat-result zone change: Virulent Emissary [295] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hard-Hitting Question [289] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 61).
+      Forest [290] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 64).
+      Forest [290] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 66).
+      Virulent Emissary [295] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 83).
+      Slumbering Cerberus [296] Battlefield -> Graveyard (Paso27) (SBA_Deathtouch; GRE sequence 83).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Paso27: Battlefield: Mountain [279], Mountain [285]; Graveyard: Slumbering Cerberus [296]
+      gian31: Battlefield: Forest [281], Forest [290], Fynn, the Fangbearer [291]; Graveyard: Virulent Emissary [295]
+
+Turn 5
+    additional protocol-observed zone movements not assigned to an action chain:
+      Rakdos Guildgate [297] Library (Paso27) -> Hand (Paso27) (Draw; GRE sequence 93).
+      Rakdos Guildgate [298] Hand (Paso27) -> Battlefield (PlayLand; GRE sequence 96).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Paso27: Battlefield: Mountain [279], Mountain [285], Rakdos Guildgate [298]; Graveyard: Slumbering Cerberus [296]
+      gian31: Battlefield: Forest [281], Forest [290], Fynn, the Fangbearer [291]; Graveyard: Virulent Emissary [295]
+
+Turn 6
+  - The Serpent Society [valid_resolution_no_immediate_mutation, seq=116] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=301)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: The Serpent Society resolves with no immediate observed mutation.
+      protocol-linked zone transfer: The Serpent Society (object 301) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: The Serpent Society (object 301) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Fynn, the Fangbearer [observed_semantic_effect, seq=128] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=291, source_last_explicit_zone=Battlefield)
+      effects: +2 counter(s)
+      narrative: Ability of Fynn, the Fangbearer: 2 counter(s) are added to Paso27 (player seat 2).
+      explicit effect object references: Paso27 [player seat 2] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Fynn, the Fangbearer [291] (unblocked, observed P/T 1/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Paso27 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Paso27 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [299] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 110).
+      Swamp [300] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 113).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Paso27: Battlefield: Mountain [279], Mountain [285], Rakdos Guildgate [298]; Graveyard: Slumbering Cerberus [296]
+      gian31: Battlefield: Forest [281], Forest [290], Fynn, the Fangbearer [291], Swamp [300], The Serpent Society [301]; Graveyard: Virulent Emissary [295]
+
+Turn 7
+  - Ability of Bloodfell Caves [observed_semantic_effect, seq=143] (active=Paso27, phase=Phase_Main1, controller=Paso27, owner=Paso27, source_object=307, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Bloodfell Caves: Paso27 gains 1 life.
+  - Infestation Sage [valid_resolution_no_immediate_mutation, seq=146] (active=Paso27, phase=Phase_Main1, controller=Paso27, owner=Paso27, source_object=309)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Infestation Sage resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Infestation Sage (object 309) Hand (Paso27) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Infestation Sage (object 309) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: Paso27 +1 (individual changes below; gains and losses may offset)
+    life: Paso27 19 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 306 [306] Library (Paso27) -> Hand (Paso27) (Draw; GRE sequence 138).
+      Bloodfell Caves [307] Hand (Paso27) -> Battlefield (PlayLand; GRE sequence 141).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Paso27: Battlefield: Bloodfell Caves [307], Infestation Sage [309], Mountain [279], Mountain [285], Rakdos Guildgate [298]; Graveyard: Slumbering Cerberus [296]
+      gian31: Battlefield: Forest [281], Forest [290], Fynn, the Fangbearer [291], Swamp [300], The Serpent Society [301]; Graveyard: Virulent Emissary [295]
+
+Turn 8
+  - Vraska, the Silencer [valid_resolution_no_immediate_mutation, seq=166] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=313)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Vraska, the Silencer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Vraska, the Silencer (object 313) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Vraska, the Silencer (object 313) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Fynn, the Fangbearer [observed_semantic_effect, seq=180] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=291, source_last_explicit_zone=Battlefield)
+      effects: +2 counter(s)
+      narrative: Ability of Fynn, the Fangbearer: 2 counter(s) are added to Paso27 (player seat 2).
+      explicit effect object references: Paso27 [player seat 2] (role/targeting only where the protocol identifies it)
+  - Ability of Fynn, the Fangbearer [observed_semantic_effect, seq=182] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=291, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 180 and 182; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: +2 counter(s)
+      narrative: Ability of Fynn, the Fangbearer: 2 counter(s) are added to Paso27 (player seat 2).
+      explicit effect object references: Paso27 [player seat 2] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Fynn, the Fangbearer [291] (unblocked, observed P/T 1/3), The Serpent Society [301] (unblocked, observed P/T 3/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 4; observed attacker power total: 4; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Paso27 -4 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 4 + observed modifiers 0 = 4; individual assignment unavailable): Paso27 20 -> 16
+    additional protocol-observed zone movements not assigned to an action chain:
+      Vraska, the Silencer [311] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 160).
+      Swamp [312] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 163).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Paso27: Battlefield: Bloodfell Caves [307], Infestation Sage [309], Mountain [279], Mountain [285], Rakdos Guildgate [298]; Graveyard: Slumbering Cerberus [296]
+      gian31: Battlefield: Forest [281], Forest [290], Fynn, the Fangbearer [291], Swamp [300], Swamp [312], The Serpent Society [301], Vraska, the Silencer [313]; Graveyard: Virulent Emissary [295]
+
+Turn 9
+  - Diregraf Ghoul [valid_resolution_no_immediate_mutation, seq=198] (active=Paso27, phase=Phase_Main1, controller=Paso27, owner=Paso27, source_object=321)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Diregraf Ghoul resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Diregraf Ghoul (object 321) Hand (Paso27) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Diregraf Ghoul (object 321) Stack -> Battlefield (Resolve; shared object ID)
+  - Perforating Artist [valid_resolution_no_immediate_mutation, seq=201] (active=Paso27, phase=Phase_Main1, controller=Paso27, owner=Paso27, source_object=323)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Perforating Artist resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Perforating Artist (object 323) Hand (Paso27) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Perforating Artist (object 323) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [319] Library (Paso27) -> Hand (Paso27) (Draw; GRE sequence 192).
+      Mountain [320] Hand (Paso27) -> Battlefield (PlayLand; GRE sequence 195).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Paso27: Battlefield: Bloodfell Caves [307], Diregraf Ghoul [321], Infestation Sage [309], Mountain [279], Mountain [285], Mountain [320], Perforating Artist [323], Rakdos Guildgate [298]; Graveyard: Slumbering Cerberus [296]
+      gian31: Battlefield: Forest [281], Forest [290], Fynn, the Fangbearer [291], Swamp [300], Swamp [312], The Serpent Society [301], Vraska, the Silencer [313]; Graveyard: Virulent Emissary [295]
+
+Turn 10
+  - Axebane Ferox [valid_resolution_no_immediate_mutation, seq=222] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=329)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Axebane Ferox resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Axebane Ferox (object 329) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Axebane Ferox (object 329) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Fynn, the Fangbearer [observed_semantic_effect, seq=237] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=291, source_last_explicit_zone=Battlefield)
+      effects: +2 counter(s)
+      narrative: Ability of Fynn, the Fangbearer: 2 counter(s) are added to Paso27 (player seat 2).
+      explicit effect object references: Paso27 [player seat 2] (role/targeting only where the protocol identifies it)
+  - Ability of Fynn, the Fangbearer [observed_semantic_effect, seq=239] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=291, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 237 and 239; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: +2 counter(s)
+      narrative: Ability of Fynn, the Fangbearer: 2 counter(s) are added to Paso27 (player seat 2).
+      explicit effect object references: Paso27 [player seat 2] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: The Serpent Society [301] (unblocked, observed P/T 3/4), Vraska, the Silencer [313] (unblocked, observed P/T 3/3), Axebane Ferox [329] (unblocked, observed P/T 4/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 10; observed attacker power total: 10; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Paso27 -10 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 10 + observed modifiers 0 = 10; individual assignment unavailable): Paso27 16 -> 6
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [327] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 216).
+      Swamp [328] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 219).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      Paso27: Battlefield: Bloodfell Caves [307], Diregraf Ghoul [321], Infestation Sage [309], Mountain [279], Mountain [285], Mountain [320], Perforating Artist [323], Rakdos Guildgate [298]; Graveyard: Slumbering Cerberus [296]
+      gian31: Battlefield: Axebane Ferox [329], Forest [281], Forest [290], Fynn, the Fangbearer [291], Swamp [300], Swamp [312], Swamp [328], The Serpent Society [301], Vraska, the Silencer [313]; Graveyard: Virulent Emissary [295]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- No life mutation without an exact same-record source was observed.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Mountain [owner=Paso27, controller=Paso27] moves Hand (Paso27) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Forest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 24: Forest [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Virulent Emissary [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 27: Virulent Emissary [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 41: Perforating Artist [owner/controller metadata unavailable] moves Library (Paso27) -> Hand (Paso27) (Draw).
+- Turn 3, seq 44: Mountain [owner=Paso27, controller=Paso27] moves Hand (Paso27) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Slumbering Cerberus [owner=Paso27, controller=Paso27] moves Hand (Paso27) -> Stack (CastSpell).
+- Turn 3, seq 47: Slumbering Cerberus [owner=Paso27, controller=Paso27] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 61: Hard-Hitting Question [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 64: Forest [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 65: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 66: Forest [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 67: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 69: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 83: Virulent Emissary [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 4, seq 83: Slumbering Cerberus [owner=Paso27, controller=Paso27] moves Battlefield -> Graveyard (Paso27) (SBA_Deathtouch).
+- Turn 5, seq 93: Rakdos Guildgate [owner/controller metadata unavailable] moves Library (Paso27) -> Hand (Paso27) (Draw).
+- Turn 5, seq 96: Rakdos Guildgate [owner=Paso27, controller=Paso27] moves Hand (Paso27) -> Battlefield (PlayLand).
+- Turn 6, seq 110: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 113: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 114: The Serpent Society [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 116: The Serpent Society [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 138: object 306 [owner/controller metadata unavailable] moves Library (Paso27) -> Hand (Paso27) (Draw).
+- Turn 7, seq 141: Bloodfell Caves [owner=Paso27, controller=Paso27] moves Hand (Paso27) -> Battlefield (PlayLand).
+- Turn 7, seq 144: Infestation Sage [owner=Paso27, controller=Paso27] moves Hand (Paso27) -> Stack (CastSpell).
+- Turn 7, seq 146: Infestation Sage [owner=Paso27, controller=Paso27] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 160: Vraska, the Silencer [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 163: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 164: Vraska, the Silencer [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 166: Vraska, the Silencer [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 192: Mountain [owner/controller metadata unavailable] moves Library (Paso27) -> Hand (Paso27) (Draw).
+- Turn 9, seq 195: Mountain [owner=Paso27, controller=Paso27] moves Hand (Paso27) -> Battlefield (PlayLand).
+- Turn 9, seq 196: Diregraf Ghoul [owner=Paso27, controller=Paso27] moves Hand (Paso27) -> Stack (CastSpell).
+- Turn 9, seq 198: Diregraf Ghoul [owner=Paso27, controller=Paso27] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 199: Perforating Artist [owner=Paso27, controller=Paso27] moves Hand (Paso27) -> Stack (CastSpell).
+- Turn 9, seq 201: Perforating Artist [owner=Paso27, controller=Paso27] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 216: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 219: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 220: Axebane Ferox [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 222: Axebane Ferox [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 224 becomes object 279 [Mountain].
+- Turn 2, seq 21: object 166 becomes object 280 [Forest].
+- Turn 2, seq 24: object 163 becomes object 281 [Forest].
+- Turn 2, seq 25: object 162 becomes object 282 [Virulent Emissary].
+- Turn 3, seq 41: object 226 becomes object 284 [Perforating Artist].
+- Turn 3, seq 44: object 225 becomes object 285 [Mountain].
+- Turn 3, seq 45: object 222 becomes object 286 [Slumbering Cerberus].
+- Turn 4, seq 61: object 167 becomes object 289 [Hard-Hitting Question].
+- Turn 4, seq 64: object 280 becomes object 290 [Forest].
+- Turn 4, seq 65: object 289 becomes object 291 (Hard-Hitting Question -> Fynn, the Fangbearer).
+- Turn 4, seq 66: object 280 becomes object 290 [Forest].
+- Turn 4, seq 67: object 164 becomes object 291 [Fynn, the Fangbearer].
+- Turn 4, seq 83: object 282 becomes object 295 [Virulent Emissary].
+- Turn 4, seq 83: object 286 becomes object 296 [Slumbering Cerberus].
+- Turn 5, seq 93: object 227 becomes object 297 [Rakdos Guildgate].
+- Turn 5, seq 96: object 297 becomes object 298 [Rakdos Guildgate].
+- Turn 6, seq 110: object 168 becomes object 299 [Swamp].
+- Turn 6, seq 113: object 299 becomes object 300 [Swamp].
+- Turn 6, seq 114: object 161 becomes object 301 [The Serpent Society].
+- Turn 7, seq 138: object 228 becomes object 306 [object 228].
+- Turn 7, seq 141: object 220 becomes object 307 [Bloodfell Caves].
+- Turn 7, seq 144: object 223 becomes object 309 [Infestation Sage].
+- Turn 8, seq 160: object 169 becomes object 311 [Vraska, the Silencer].
+- Turn 8, seq 163: object 160 becomes object 312 [Swamp].
+- Turn 8, seq 164: object 311 becomes object 313 [Vraska, the Silencer].
+- Turn 9, seq 192: object 229 becomes object 319 [Mountain].
+- Turn 9, seq 195: object 319 becomes object 320 [Mountain].
+- Turn 9, seq 196: object 219 becomes object 321 [Diregraf Ghoul].
+- Turn 9, seq 199: object 284 becomes object 323 [Perforating Artist].
+- Turn 10, seq 216: object 170 becomes object 327 [Swamp].
+- Turn 10, seq 219: object 327 becomes object 328 [Swamp].
+- Turn 10, seq 220: object 159 becomes object 329 [Axebane Ferox].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: Paso27 plays Mountain (object 279) from Hand (Paso27) to Battlefield.
+- Turn 2: gian31 plays Forest (object 281) from Hand (gian31) to Battlefield.
+- Turn 3: Paso27 plays Mountain (object 285) from Hand (Paso27) to Battlefield.
+- Turn 4: gian31 plays Forest (object 290) from Hand (gian31) to Battlefield.
+- Turn 4: gian31 plays Forest (object 290) from Hand (gian31) to Battlefield.
+- Turn 5: Paso27 plays Rakdos Guildgate (object 298) from Hand (Paso27) to Battlefield.
+- Turn 6: gian31 plays Swamp (object 300) from Hand (gian31) to Battlefield.
+- Turn 7: Paso27 plays Bloodfell Caves (object 307) from Hand (Paso27) to Battlefield.
+- Turn 8: gian31 plays Swamp (object 312) from Hand (gian31) to Battlefield.
+- Turn 9: Paso27 plays Mountain (object 320) from Hand (Paso27) to Battlefield.
+- Turn 10: gian31 plays Swamp (object 328) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Fynn, the Fangbearer: casts=1; abilities=5 (triggered=5, activated=0) across turns [4, 6, 8, 8, 10, 10]
+  observed effect totals: draws=0, tokens=0, counters=5, returns=0, damage=0, life_changes=0, other=0
+  observed effects: +2 counter(s)
+- Virulent Emissary: casts=1; abilities=1 (triggered=1, activated=0) across turns [2, 4]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Axebane Ferox: casts=1 across turns [10]
+- Bloodfell Caves: abilities=1 (triggered=1, activated=0) across turns [7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Diregraf Ghoul: casts=1 across turns [9]
+- Infestation Sage: casts=1 across turns [7]
+- Perforating Artist: casts=1 across turns [9]
+- Slumbering Cerberus: casts=1 across turns [3]
+- The Serpent Society: casts=1 across turns [6]
+- Vraska, the Silencer: casts=1 across turns [8]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 4 - DeclareAttack (active=gian31)
+  attacker: Virulent Emissary (gian31) -> Paso27; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 6 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Fynn, the Fangbearer (gian31) -> Paso27; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack (active=gian31)
+  attacker: Fynn, the Fangbearer (gian31) -> Paso27; unblocked in this observed snapshot
+  attacker: The Serpent Society (gian31) -> Paso27; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack (active=gian31)
+  attacker: The Serpent Society (gian31) -> Paso27; unblocked in this observed snapshot
+  attacker: Vraska, the Silencer (gian31) -> Paso27; unblocked in this observed snapshot
+  attacker: Axebane Ferox (gian31) -> Paso27; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 6: Ability of Fynn, the Fangbearer (active=gian31) - Ability of Fynn, the Fangbearer: 2 counter(s) are added to target.
+- Turn 8: Ability of Fynn, the Fangbearer (active=gian31) - Ability of Fynn, the Fangbearer: 2 counter(s) are added to target.
+- Turn 8: Ability of Fynn, the Fangbearer (active=gian31) - Ability of Fynn, the Fangbearer: 2 counter(s) are added to target.
+- Turn 10: Ability of Fynn, the Fangbearer (active=gian31) - Ability of Fynn, the Fangbearer: 2 counter(s) are added to target.
+- Turn 10: Ability of Fynn, the Fangbearer (active=gian31) - Ability of Fynn, the Fangbearer: 2 counter(s) are added to target.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Axebane Ferox | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 160: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 161: The Serpent Society | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Virulent Emissary | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Forest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Virulent Silencer | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 279: Mountain | controller=Paso27 | owner=Paso27 | zone=Battlefield (latest_object_observation)
+- 280: Forest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 281: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 282: Virulent Emissary | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 285: Mountain | controller=Paso27 | owner=Paso27 | zone=Battlefield (latest_object_observation)
+- 286: Slumbering Cerberus | controller=Paso27 | owner=Paso27 | zone=Battlefield (latest_object_observation)
+- 289: Hard-Hitting Question | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 290: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 291: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 294: object 294 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 295: Virulent Emissary | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 296: Slumbering Cerberus | controller=Paso27 | owner=Paso27 | zone=Battlefield (latest_object_observation)
+- 298: Rakdos Guildgate | controller=Paso27 | owner=Paso27 | zone=Battlefield (latest_object_observation)
+- 299: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 300: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 301: The Serpent Society | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 305: object 305 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 307: Bloodfell Caves | controller=Paso27 | owner=Paso27 | zone=Battlefield (latest_object_observation)
+- 308: object 308 | controller=Paso27 | owner=Paso27 | zone=unknown (inferred unknown) (latest_object_observation)
+- 309: Infestation Sage | controller=Paso27 | owner=Paso27 | zone=Battlefield (latest_object_observation)
+- 311: Vraska, the Silencer | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 312: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 313: Vraska, the Silencer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 317: object 317 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 318: object 318 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 320: Mountain | controller=Paso27 | owner=Paso27 | zone=Battlefield (latest_object_observation)
+- 321: Diregraf Ghoul | controller=Paso27 | owner=Paso27 | zone=Battlefield (latest_object_observation)
+- 323: Perforating Artist | controller=Paso27 | owner=Paso27 | zone=Battlefield (latest_object_observation)
+- 327: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 328: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 329: Axebane Ferox | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 334: object 334 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 335: object 335 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 336: object 336 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Paso27: 11 total items
+  zones: Battlefield=10, unknown=1
+  objects: Mountain x3, Slumbering Cerberus x2, Bloodfell Caves, Diregraf Ghoul, Infestation Sage, Perforating Artist, Rakdos Guildgate, object 308
+gian31: 30 total items
+  zones: Battlefield=11, Hand=12, unknown=7
+  objects: Swamp x6, Forest x4, Virulent Emissary x3, Axebane Ferox x2, Fynn, the Fangbearer x2, The Serpent Society x2, Vraska, the Silencer x2, Hard-Hitting Question, Virulent Silencer, object 294, object 305, object 317
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (11): Axebane Ferox, Forest, Forest, Fynn, the Fangbearer, Swamp, Swamp, Swamp, The Serpent Society, Virulent Emissary, Virulent Emissary, Vraska, the Silencer
+  Graveyard: 0 card(s)
+Paso27:
+  Battlefield (10): Bloodfell Caves, Diregraf Ghoul, Infestation Sage, Mountain, Mountain, Mountain, Perforating Artist, Rakdos Guildgate, Slumbering Cerberus, Slumbering Cerberus
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+8 objects have no resolved final zone and are omitted from the known board state.
+Paso27: 1 unknown object(s)
+gian31: 7 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=12
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Paso27:
+  Battlefield (8): Mountain, Mountain, Rakdos Guildgate, Bloodfell Caves, Infestation Sage, Mountain, Diregraf Ghoul, Perforating Artist
+  Graveyard (1): Slumbering Cerberus
+gian31:
+  Battlefield (9): Forest, Forest, Fynn, the Fangbearer, Swamp, The Serpent Society, Swamp, Vraska, the Silencer, Swamp, Axebane Ferox
+  Graveyard (1): Virulent Emissary
+Known non-persistent entries (counts only):
+  Paso27: Hand=1
+  gian31: Hand=2, Limbo=4, Pending=1
+  unknown: Hand=1, Library=97, Limbo=6
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: Paso27 Battlefield=1
+- Turn 2: Paso27 Battlefield=1; gian31 Battlefield=2
+- Turn 3: Paso27 Battlefield=3; gian31 Battlefield=2
+- Turn 4: Paso27 Battlefield=2; Paso27 Graveyard=1; gian31 Battlefield=3; gian31 Graveyard=1
+- Turn 5: Paso27 Battlefield=3; Paso27 Graveyard=1; gian31 Battlefield=3; gian31 Graveyard=1
+- Turn 6: Paso27 Battlefield=3; Paso27 Graveyard=1; gian31 Battlefield=5; gian31 Graveyard=1
+- Turn 7: Paso27 Battlefield=5; Paso27 Graveyard=1; gian31 Battlefield=5; gian31 Graveyard=1
+- Turn 8: Paso27 Battlefield=5; Paso27 Graveyard=1; gian31 Battlefield=7; gian31 Graveyard=1
+- Turn 9: Paso27 Battlefield=8; Paso27 Graveyard=1; gian31 Battlefield=7; gian31 Graveyard=1
+- Turn 10: Paso27 Battlefield=8; Paso27 Graveyard=1; gian31 Battlefield=9; gian31 Graveyard=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Virulent Emissary resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Slumbering Cerberus resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Fynn, the Fangbearer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: The Serpent Society resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Infestation Sage resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Vraska, the Silencer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Diregraf Ghoul resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Perforating Artist resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Axebane Ferox resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
