@@ -1,0 +1,448 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, martin
+Seat map: Seat 1=gian31, Seat 2=martin
+Turn range (known): 1 - 7
+Unnumbered turn groups retained: 1
+Records: 15
+Action chains: 14
+Winner: gian31
+Final life: {'gian31': 23, 'martin': 19}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 7 (Phase_Combat, Step_DeclareBlock; Ability of Ajani's Pridemate, seq 180).
+Later numbered GRE record(s): 4 after action sequence 180 across turn(s) [7]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+POST-ACTION GRE RECORDS - RESULT ORDER UNRESOLVED
+  - Turn 7, seq 182: identity_changed.
+  - Turn 7, seq 182: zone_transfer (SBA_Damage).
+  - Turn 7, seq 182: identity_changed.
+  - Turn 7, seq 182: zone_transfer (SBA_Deathtouch).
+  These records are retained for traceability; their order relative to the match-result payload is not asserted.
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 17 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 5 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 6] (raw records=5; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 6 explicit Library -> Hand movement(s); named in the draw record=3, resolved through an explicit identity transition=1, unresolved=2.
+Unresolved draw identities (explicit movements retained): Turn 2, seq 27, object 404; Turn 6, seq 132, object 427.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 7).
+  - gian31: 5 observed card(s): Fynn, the Fangbearer [340], Virulent Emissary [341], Forest [342], The Serpent Society [344], Forest [345].
+  - unknown: 7 observed card(s): object 219 [219], object 220 [220], object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 23, 'martin': 19}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 7 (Phase_Combat, Step_DeclareBlock; Ability of Ajani's Pridemate, seq 180).
+Last captured life snapshot: martin 21 -> 19 (seq 182).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=1, abilities=0; explicit battlefield entries=Forest, Virulent Emissary.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Orzhov Guildgate.
+- Turn 3: actions: cards=1, abilities=2; combat snapshots=1; life mutations=2; explicit battlefield entries=Forest, Fynn, the Fangbearer.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Ajani's Pridemate.
+- Turn 5: actions: cards=2, abilities=4; combat snapshots=1; life mutations=3; explicit battlefield entries=Dragon Sniper, Dragon Sniper.
+- Turn 6: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 7: actions: cards=2, abilities=2; combat snapshots=1; life mutations=3; explicit battlefield exits=Virulent Emissary, Ajani's Pridemate.
+- Turn None: actions: cards=0, abilities=0.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Virulent Emissary [valid_resolution_no_immediate_mutation, seq=13] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=402)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Virulent Emissary resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Virulent Emissary (object 402) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Virulent Emissary (object 402) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Qarsi Revenant [400] Hand (gian31) -> Library (gian31) (Put; GRE sequence 7).
+      Forest [399] Hand (gian31) -> Library (gian31) (Put; GRE sequence 7).
+      Forest [401] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 10).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forest [401], Virulent Emissary [402]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 404 [404] Library (martin) -> Hand (martin) (Draw; GRE sequence 27).
+      Orzhov Guildgate [405] Hand (martin) -> Battlefield (PlayLand; GRE sequence 30).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forest [401], Virulent Emissary [402]
+      martin: Battlefield: Orzhov Guildgate [405]
+
+Turn 3
+  - Fynn, the Fangbearer [valid_resolution_no_immediate_mutation, seq=50] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=408)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Fynn, the Fangbearer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 408) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 408) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Virulent Emissary [observed_semantic_effect, seq=52] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=402, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Virulent Emissary: gian31 gains 1 life.
+  - Ability of Fynn, the Fangbearer [observed_semantic_effect, seq=64] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=408, source_last_explicit_zone=Battlefield)
+      effects: +2 counter(s)
+      narrative: Ability of Fynn, the Fangbearer: 2 counter(s) are added to martin (player seat 2).
+      explicit effect object references: martin [player seat 2] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Virulent Emissary [402] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 +1; martin -1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): martin 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Dragon Sniper [406] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 44).
+      Forest [407] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 47).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forest [401], Forest [407], Fynn, the Fangbearer [408], Virulent Emissary [402]
+      martin: Battlefield: Orzhov Guildgate [405]
+
+Turn 4
+  - Ajani's Pridemate [valid_resolution_no_immediate_mutation, seq=80] (active=martin, phase=Phase_Main1, controller=martin, owner=martin, source_object=415)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ajani's Pridemate resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ajani's Pridemate (object 415) Hand (martin) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ajani's Pridemate (object 415) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Plains [413] Library (martin) -> Hand (martin) (Draw; GRE sequence 74).
+      Plains [414] Hand (martin) -> Battlefield (PlayLand; GRE sequence 77).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forest [401], Forest [407], Fynn, the Fangbearer [408], Virulent Emissary [402]
+      martin: Battlefield: Ajani's Pridemate [415], Orzhov Guildgate [405], Plains [414]
+
+Turn 5
+  - Dragon Sniper [valid_resolution_no_immediate_mutation, seq=99] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=419)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Dragon Sniper resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Dragon Sniper (object 419) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Dragon Sniper (object 419) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Virulent Emissary [observed_semantic_effect, seq=101] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=402, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Virulent Emissary: gian31 gains 1 life.
+  - Dragon Sniper [valid_resolution_no_immediate_mutation, seq=104] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=422)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Dragon Sniper resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Dragon Sniper (object 422) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Dragon Sniper (object 422) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Virulent Emissary [observed_semantic_effect, seq=106] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=402, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Virulent Emissary: gian31 gains 1 life.
+  - Ability of Fynn, the Fangbearer [observed_semantic_effect, seq=120] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=408, source_last_explicit_zone=Battlefield)
+      effects: +2 counter(s)
+      narrative: Ability of Fynn, the Fangbearer: 2 counter(s) are added to martin (player seat 2).
+      explicit effect object references: martin [player seat 2] (role/targeting only where the protocol identifies it)
+  - Ability of Fynn, the Fangbearer [observed_semantic_effect, seq=122] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=408, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 120 and 122; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: +2 counter(s)
+      narrative: Ability of Fynn, the Fangbearer: 2 counter(s) are added to martin (player seat 2).
+      explicit effect object references: martin [player seat 2] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Virulent Emissary [402] (unblocked, observed P/T 1/1), Fynn, the Fangbearer [408] (unblocked, observed P/T 1/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 +2; martin -2 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    life: gian31 22 -> 23
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): martin 19 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Dragon Sniper [418] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 94).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Dragon Sniper [419], Dragon Sniper [422], Forest [401], Forest [407], Fynn, the Fangbearer [408], Virulent Emissary [402]
+      martin: Battlefield: Ajani's Pridemate [415], Orzhov Guildgate [405], Plains [414]
+
+Turn 6
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 427 [427] Library (martin) -> Hand (martin) (Draw; GRE sequence 132).
+      Swamp [428] Hand (martin) -> Battlefield (PlayLand; GRE sequence 135).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Dragon Sniper [419], Dragon Sniper [422], Forest [401], Forest [407], Fynn, the Fangbearer [408], Virulent Emissary [402]
+      martin: Battlefield: Ajani's Pridemate [415], Orzhov Guildgate [405], Plains [414], Swamp [428]
+
+Turn 7
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=172] (active=gian31, phase=Phase_Combat, step=Step_DeclareBlock, controller=martin, owner=martin, source_object=415, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [415].
+  - Ability of Ajani's Pridemate [observed_semantic_effect, seq=180] (active=gian31, phase=Phase_Combat, step=Step_DeclareBlock, controller=martin, owner=martin, source_object=415, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 172 and 180; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to Ajani's Pridemate [415].
+  - Moment of Triumph [observed_semantic_effect, seq=170] (active=unknown, controller=martin, owner=martin, source_object=430)
+      chronology reconciliation: parser turn group None conflicts with Turn 7; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: P/T +2/+2, life +2
+      narrative: Moment of Triumph: Ajani's Pridemate gets +2/+2; martin gains 2 life.
+      explicit effect object references: Ajani's Pridemate [415] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Moment of Triumph (object 430) Hand (martin) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Moment of Triumph (object 433) Stack -> Graveyard (martin) (Resolve; shared object ID)
+      identity continuity: source object 430 -> transfer object 433 (explicit GRE ObjectIdChanged chain).
+  - Moment of Triumph [observed_semantic_effect, seq=178] (active=unknown, controller=martin, owner=martin, source_object=434)
+      chronology reconciliation: parser turn group None conflicts with Turn 7; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: P/T +2/+2, life +2
+      narrative: Moment of Triumph: Ajani's Pridemate gets +2/+2; martin gains 2 life.
+      explicit effect object references: Ajani's Pridemate [415] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Moment of Triumph (object 434) Hand (martin) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Moment of Triumph (object 437) Stack -> Graveyard (martin) (Resolve; shared object ID)
+      identity continuity: source object 434 -> transfer object 437 (explicit GRE ObjectIdChanged chain).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Virulent Emissary [402] (unblocked, observed P/T 1/1), Dragon Sniper [419] (unblocked, observed P/T 1/1), Dragon Sniper [422] (unblocked, observed P/T 1/1)
+      blockers: Ajani's Pridemate [415]
+      combat-result zone change: Virulent Emissary [440] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: martin +2 (individual changes below; gains and losses may offset)
+    life: martin 17 -> 19
+    life: martin 19 -> 21
+    life (unattributed loss during combat phase; not explained by observed attacker damage): martin 21 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hard-Hitting Question [429] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 150).
+      Virulent Emissary [440] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 182).
+      Ajani's Pridemate [441] Battlefield -> Graveyard (martin) (SBA_Deathtouch; GRE sequence 182).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Dragon Sniper [419], Dragon Sniper [422], Forest [401], Forest [407], Fynn, the Fangbearer [408]; Graveyard: Virulent Emissary [440]
+      martin: Battlefield: Orzhov Guildgate [405], Plains [414], Swamp [428]; Graveyard: Ajani's Pridemate [441], Moment of Triumph [433], Moment of Triumph [437]
+
+UNNUMBERED / UNRESOLVED TURN GROUP
+  - The captured records do not provide a verified numbered turn for the following events.
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 7, seq 182, Phase_Combat: martin 21 -> 19. Combat declaration observed; exact assignment unavailable. Previous captured action: Ajani's Pridemate.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Qarsi Revenant [owner=gian31, controller=gian31] moves Hand (gian31) -> Library (gian31) (Put).
+- Turn 1, seq 7: Forest [owner=gian31, controller=gian31] moves Hand (gian31) -> Library (gian31) (Put).
+- Turn 1, seq 10: Forest [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 1, seq 11: Virulent Emissary [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 1, seq 13: Virulent Emissary [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 27: object 404 [owner/controller metadata unavailable] moves Library (martin) -> Hand (martin) (Draw).
+- Turn 2, seq 30: Orzhov Guildgate [owner=martin, controller=martin] moves Hand (martin) -> Battlefield (PlayLand).
+- Turn 3, seq 44: Dragon Sniper [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 47: Forest [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 48: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 50: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 74: Plains [owner/controller metadata unavailable] moves Library (martin) -> Hand (martin) (Draw).
+- Turn 4, seq 77: Plains [owner=martin, controller=martin] moves Hand (martin) -> Battlefield (PlayLand).
+- Turn 4, seq 78: Ajani's Pridemate [owner=martin, controller=martin] moves Hand (martin) -> Stack (CastSpell).
+- Turn 4, seq 80: Ajani's Pridemate [owner=martin, controller=martin] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 94: Dragon Sniper [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 97: Dragon Sniper [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 99: Dragon Sniper [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 102: Dragon Sniper [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 104: Dragon Sniper [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 132: object 427 [owner/controller metadata unavailable] moves Library (martin) -> Hand (martin) (Draw).
+- Turn 6, seq 135: Swamp [owner=martin, controller=martin] moves Hand (martin) -> Battlefield (PlayLand).
+- Turn 7, seq 150: Hard-Hitting Question [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 166: Moment of Triumph [owner=martin, controller=martin] moves Hand (martin) -> Stack (CastSpell).
+- Turn 7, seq 170: Moment of Triumph [owner=martin, controller=martin] moves Stack -> Graveyard (martin) (Resolve).
+- Turn 7, seq 174: Moment of Triumph [owner=martin, controller=martin] moves Hand (martin) -> Stack (CastSpell).
+- Turn 7, seq 178: Moment of Triumph [owner=martin, controller=martin] moves Stack -> Graveyard (martin) (Resolve).
+- Turn 7, seq 182: Virulent Emissary [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 7, seq 182: Ajani's Pridemate [owner=martin, controller=martin] moves Battlefield -> Graveyard (martin) (SBA_Deathtouch).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 343 becomes object 400 [Qarsi Revenant].
+- Turn 1, seq 7: object 339 becomes object 399 [Forest].
+- Turn 1, seq 10: object 342 becomes object 401 [Forest].
+- Turn 1, seq 11: object 341 becomes object 402 [Virulent Emissary].
+- Turn 2, seq 27: object 226 becomes object 404 [object 226].
+- Turn 2, seq 30: object 221 becomes object 405 [Orzhov Guildgate].
+- Turn 3, seq 44: object 346 becomes object 406 [Dragon Sniper].
+- Turn 3, seq 47: object 345 becomes object 407 [Forest].
+- Turn 3, seq 48: object 340 becomes object 408 [Fynn, the Fangbearer].
+- Turn 4, seq 74: object 227 becomes object 413 [Plains].
+- Turn 4, seq 77: object 413 becomes object 414 [Plains].
+- Turn 4, seq 78: object 220 becomes object 415 [Ajani's Pridemate].
+- Turn 5, seq 94: object 347 becomes object 418 [Dragon Sniper].
+- Turn 5, seq 97: object 406 becomes object 419 [Dragon Sniper].
+- Turn 5, seq 102: object 418 becomes object 422 [Dragon Sniper].
+- Turn 6, seq 132: object 228 becomes object 427 [object 228].
+- Turn 6, seq 135: object 222 becomes object 428 [Swamp].
+- Turn 7, seq 150: object 348 becomes object 429 [Hard-Hitting Question].
+- Turn 7, seq 166: object 223 becomes object 430 [Moment of Triumph].
+- Turn 7, seq 170: object 430 becomes object 433 [Moment of Triumph].
+- Turn 7, seq 174: object 225 becomes object 434 [Moment of Triumph].
+- Turn 7, seq 178: object 434 becomes object 437 [Moment of Triumph].
+- Turn 7, seq 182: object 402 becomes object 440 [Virulent Emissary].
+- Turn 7, seq 182: object 415 becomes object 441 [Ajani's Pridemate].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Forest (object 401) from Hand (gian31) to Battlefield.
+- Turn 2: martin plays Orzhov Guildgate (object 405) from Hand (martin) to Battlefield.
+- Turn 3: gian31 plays Forest (object 407) from Hand (gian31) to Battlefield.
+- Turn 4: martin plays Plains (object 414) from Hand (martin) to Battlefield.
+- Turn 6: martin plays Swamp (object 428) from Hand (martin) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Fynn, the Fangbearer: casts=1; abilities=3 (triggered=3, activated=0) across turns [3, 3, 5, 5]
+  observed effect totals: draws=0, tokens=0, counters=3, returns=0, damage=0, life_changes=0, other=0
+  observed effects: +2 counter(s)
+- Virulent Emissary: casts=1; abilities=3 (triggered=3, activated=0) across turns [1, 3, 5, 5]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=3, other=0
+  observed effects: life +1
+- Ajani's Pridemate: casts=1; abilities=2 (triggered=2, activated=0) across turns [4, 7, 7]
+  observed effect totals: draws=0, tokens=0, counters=2, returns=0, damage=0, life_changes=0, other=2
+  observed effects: +1 counter(s), P/T +1/+1
+- Dragon Sniper: casts=2 across turns [5, 5]
+- Moment of Triumph: casts=2 across turns [7, 7]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=2
+  observed effects: P/T +2/+2, life +2
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 3 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Virulent Emissary (gian31) -> martin; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 5 - DeclareAttack (active=gian31)
+  attacker: Virulent Emissary (gian31) -> martin; unblocked in this observed snapshot
+  attacker: Fynn, the Fangbearer (gian31) -> martin; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Virulent Emissary (gian31) -> martin; unblocked in this observed snapshot
+  attacker: Dragon Sniper (gian31) -> martin; unblocked in this observed snapshot
+  attacker: Dragon Sniper (gian31) -> martin; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 3: Ability of Fynn, the Fangbearer (active=gian31) - Ability of Fynn, the Fangbearer: 2 counter(s) are added to target.
+- Turn 5: Ability of Fynn, the Fangbearer (active=gian31) - Ability of Fynn, the Fangbearer: 2 counter(s) are added to target.
+- Turn 5: Ability of Fynn, the Fangbearer (active=gian31) - Ability of Fynn, the Fangbearer: 2 counter(s) are added to target.
+- Turn 7: Ability of Ajani's Pridemate (active=gian31 controller=martin) - Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to target.
+- Turn 7: Ability of Ajani's Pridemate (active=gian31 controller=martin) - Ability of Ajani's Pridemate: Ajani's Pridemate gets +1/+1; 1 counter(s) are added to target.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Virulent Silencer | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 160: Hullcarver | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 161: Overgrown Tomb | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Qarsi Revenant | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: The Serpent Society | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 279: Serpent Specialist | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 280: Hullcarver | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 281: Forest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 282: The Serpent Society | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 283: Forest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 284: Forest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 285: Forest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 339: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 340: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 341: Virulent Emissary | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 342: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 343: Qarsi Revenant | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 344: The Serpent Society | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 345: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 399: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 400: Qarsi Revenant | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 401: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 402: Virulent Emissary | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 405: Orzhov Guildgate | controller=martin | owner=martin | zone=Battlefield (latest_object_observation)
+- 406: Dragon Sniper | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 407: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 408: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 411: object 411 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 412: object 412 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 414: Plains | controller=martin | owner=martin | zone=Battlefield (latest_object_observation)
+- 415: Ajani's Pridemate | controller=martin | owner=martin | zone=Battlefield (latest_object_observation)
+- 418: Dragon Sniper | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 419: Dragon Sniper | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 421: object 421 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 422: Dragon Sniper | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 424: object 424 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 425: object 425 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 426: object 426 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 428: Swamp | controller=martin | owner=martin | zone=Battlefield (latest_object_observation)
+- 429: Hard-Hitting Question | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 430: Moment of Triumph | controller=martin | owner=martin | zone=Stack (latest_object_observation)
+- 432: Deal Gone Bad | controller=martin | owner=martin | zone=unknown (inferred unknown) (latest_object_observation)
+- 433: Moment of Triumph | controller=martin | owner=martin | zone=Battlefield (latest_object_observation)
+- 434: Moment of Triumph | controller=martin | owner=martin | zone=Battlefield (latest_object_observation)
+- 436: Deal Gone Bad | controller=martin | owner=martin | zone=unknown (inferred unknown) (latest_object_observation)
+- 437: Moment of Triumph | controller=martin | owner=martin | zone=Battlefield (latest_object_observation)
+- 438: object 438 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 439: object 439 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 440: Virulent Emissary | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 441: Ajani's Pridemate | controller=martin | owner=martin | zone=Battlefield (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+gian31: 41 total items
+  zones: Battlefield=15, Hand=18, unknown=8
+  objects: Forest x10, Dragon Sniper x4, Qarsi Revenant x3, The Serpent Society x3, Virulent Emissary x3, Fynn, the Fangbearer x2, Hullcarver x2, Swamp x2, Hard-Hitting Question, Overgrown Tomb, Serpent Specialist, Virulent Silencer
+martin: 11 total items
+  zones: Battlefield=8, Stack=1, unknown=2
+  objects: Moment of Triumph x4, Ajani's Pridemate x2, Deal Gone Bad x2, Orzhov Guildgate, Plains, Swamp
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (15): Dragon Sniper, Dragon Sniper, Forest, Forest, Forest, Forest, Forest, Forest, Fynn, the Fangbearer, Fynn, the Fangbearer, Qarsi Revenant, Qarsi Revenant, Virulent Emissary, Virulent Emissary, Virulent Emissary
+  Graveyard: 0 card(s)
+martin:
+  Battlefield (8): Ajani's Pridemate, Ajani's Pridemate, Moment of Triumph, Moment of Triumph, Moment of Triumph, Orzhov Guildgate, Plains, Swamp
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+10 objects have no resolved final zone and are omitted from the known board state.
+gian31: 8 unknown object(s)
+martin: 2 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=18, Stack=1
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+gian31:
+  Battlefield (5): Forest, Forest, Fynn, the Fangbearer, Dragon Sniper, Dragon Sniper
+  Graveyard (1): Virulent Emissary
+martin:
+  Battlefield (3): Orzhov Guildgate, Plains, Swamp
+  Graveyard (3): Moment of Triumph, Moment of Triumph, Ajani's Pridemate
+Known non-persistent entries (counts only):
+  gian31: Hand=2, Library=2, Limbo=3, Pending=2
+  martin: Hand=2, Limbo=3
+  unknown: Hand=2, Library=100, Limbo=6
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=2
+- Turn 2: gian31 Battlefield=2; martin Battlefield=1
+- Turn 3: gian31 Battlefield=4; martin Battlefield=1
+- Turn 4: gian31 Battlefield=4; martin Battlefield=3
+- Turn 5: gian31 Battlefield=6; martin Battlefield=3
+- Turn 6: gian31 Battlefield=6; martin Battlefield=4
+- Turn 7: gian31 Battlefield=5; gian31 Graveyard=1; martin Battlefield=3; martin Graveyard=3
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Virulent Emissary resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Fynn, the Fangbearer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Ajani's Pridemate resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Dragon Sniper resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Dragon Sniper resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
