@@ -1,0 +1,571 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, H4ch310
+Seat map: Seat 1=gian31, Seat 2=H4ch310
+Turn range (known): 1 - 11
+Records: 22
+Action chains: 22
+Winner: gian31
+Final life: {'gian31': 21, 'H4ch310': 18}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 11 (Phase_Combat, Step_CombatDamage; Ability of Fynn, the Fangbearer, seq 281).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 22 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 7 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 6, 8, 10] (raw records=7; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 10 explicit Library -> Hand movement(s); named in the draw record=5, resolved through an explicit identity transition=3, unresolved=2.
+Unresolved draw identities (explicit movements retained): Turn 4, seq 75, object 353; Turn 10, seq 241, object 394.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 6).
+  - gian31: 6 observed card(s): Swamp [279], Forest [280], Dragon Sniper [281], Virulent Emissary [283], Fynn, the Fangbearer [284], Defend the Rider [285].
+  - unknown: 7 observed card(s): object 219 [219], object 220 [220], object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 21, 'H4ch310': 18}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 11 (Phase_Combat, Step_CombatDamage; Ability of Fynn, the Fangbearer, seq 281).
+Last captured life snapshot: H4ch310 20 -> 18 (seq 278).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=1, abilities=0; explicit battlefield entries=Forest, Virulent Emissary.
+- Turn 2: actions: cards=0, abilities=1; life mutations=1; explicit battlefield entries=Swiftwater Cliffs.
+- Turn 3: actions: cards=1, abilities=2; combat snapshots=1; life mutations=2; explicit battlefield entries=Swamp, Fynn, the Fangbearer.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Balmor, Battlemage Captain.
+- Turn 5: actions: cards=2, abilities=3; combat snapshots=1; life mutations=2; explicit battlefield entries=Dragon Sniper, Ghost Vacuum; explicit battlefield exits=Virulent Emissary, Balmor, Battlemage Captain.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Swamp; explicit battlefield exits=Fynn, the Fangbearer.
+- Turn 7: actions: cards=1, abilities=2; combat snapshots=1; life mutations=1; explicit battlefield entries=Fynn, the Fangbearer.
+- Turn 8: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Osseous Sticktwister, Swiftwater Cliffs.
+- Turn 9: actions: cards=0, abilities=2; combat snapshots=1; life mutations=1; explicit battlefield exits=Osseous Sticktwister.
+- Turn 10: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Soured Springs, Osseous Sticktwister.
+- Turn 11: actions: cards=0, abilities=1; combat snapshots=1; life mutations=1.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Virulent Emissary [valid_resolution_no_immediate_mutation, seq=12] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=341)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Virulent Emissary resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Virulent Emissary (object 341) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Virulent Emissary (object 341) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Virulent Silencer [339] Hand (gian31) -> Library (gian31) (Put; GRE sequence 6).
+      Forest [340] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 9).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forest [340], Virulent Emissary [341]
+
+Turn 2
+  - Ability of Swiftwater Cliffs [observed_semantic_effect, seq=31] (active=H4ch310, phase=Phase_Main1, controller=H4ch310, owner=H4ch310, source_object=344, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Swiftwater Cliffs: H4ch310 gains 1 life.
+    net observed life change this turn: H4ch310 +1 (individual changes below; gains and losses may offset)
+    life: H4ch310 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      Mountain [343] Library (H4ch310) -> Hand (H4ch310) (Draw; GRE sequence 26).
+      Swiftwater Cliffs [344] Hand (H4ch310) -> Battlefield (PlayLand; GRE sequence 29).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forest [340], Virulent Emissary [341]
+      H4ch310: Battlefield: Swiftwater Cliffs [344]
+
+Turn 3
+  - Fynn, the Fangbearer [valid_resolution_no_immediate_mutation, seq=51] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=348)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Fynn, the Fangbearer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 348) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 348) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Virulent Emissary [observed_semantic_effect, seq=53] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=341, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Virulent Emissary: gian31 gains 1 life.
+  - Ability of Fynn, the Fangbearer [observed_semantic_effect, seq=65] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: +2 counter(s)
+      narrative: Ability of Fynn, the Fangbearer: 2 counter(s) are added to H4ch310 (player seat 2).
+      explicit effect object references: H4ch310 [player seat 2] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Virulent Emissary [341] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: H4ch310 -1; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 20 -> 21
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): H4ch310 21 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Qarsi Revenant [346] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 45).
+      Swamp [347] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 48).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forest [340], Fynn, the Fangbearer [348], Swamp [347], Virulent Emissary [341]
+      H4ch310: Battlefield: Swiftwater Cliffs [344]
+
+Turn 4
+  - Balmor, Battlemage Captain [valid_resolution_no_immediate_mutation, seq=81] (active=H4ch310, phase=Phase_Main1, controller=H4ch310, owner=H4ch310, source_object=355)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Balmor, Battlemage Captain resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Balmor, Battlemage Captain (object 355) Hand (H4ch310) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Balmor, Battlemage Captain (object 355) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 353 [353] Library (H4ch310) -> Hand (H4ch310) (Draw; GRE sequence 75).
+      Mountain [354] Hand (H4ch310) -> Battlefield (PlayLand; GRE sequence 78).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forest [340], Fynn, the Fangbearer [348], Swamp [347], Virulent Emissary [341]
+      H4ch310: Battlefield: Balmor, Battlemage Captain [355], Mountain [354], Swiftwater Cliffs [344]
+
+Turn 5
+  - Dragon Sniper [valid_resolution_no_immediate_mutation, seq=100] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=359)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Dragon Sniper resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Dragon Sniper (object 359) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Dragon Sniper (object 359) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Virulent Emissary [observed_semantic_effect, seq=102] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=341, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Virulent Emissary: gian31 gains 1 life.
+  - Ghost Vacuum [valid_resolution_no_immediate_mutation, seq=105] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=362)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ghost Vacuum resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ghost Vacuum (object 362) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ghost Vacuum (object 362) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Fynn, the Fangbearer [observed_semantic_effect, seq=119] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=348, source_last_explicit_zone=Battlefield)
+      effects: +2 counter(s)
+      narrative: Ability of Fynn, the Fangbearer: 2 counter(s) are added to H4ch310 (player seat 2).
+      explicit effect object references: H4ch310 [player seat 2] (role/targeting only where the protocol identifies it)
+  - Ability of Ghost Vacuum [observed_semantic_effect, seq=128] (active=gian31, phase=Phase_Main2, controller=gian31, owner=gian31, source_object=362, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Ghost Vacuum: exiles Virulent Emissary.
+      explicit effect object references: Virulent Emissary [365], Virulent Emissary [368] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Virulent Emissary (object 368) Graveyard (gian31) -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Virulent Emissary [341] (unblocked, observed P/T 1/1), Fynn, the Fangbearer [348] (unblocked, observed P/T 1/3)
+      blockers: none identified
+      combat-result zone change: Virulent Emissary [365] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: H4ch310 -1; gian31 +1 (individual changes below; gains and losses may offset)
+    life: gian31 21 -> 22
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): H4ch310 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Ghost Vacuum [358] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 95).
+      Virulent Emissary [365] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 117).
+      Balmor, Battlemage Captain [366] Battlefield -> Graveyard (H4ch310) (SBA_Deathtouch; GRE sequence 117).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Dragon Sniper [359], Forest [340], Fynn, the Fangbearer [348], Ghost Vacuum [362], Swamp [347]; Exile: Virulent Emissary [368]
+      H4ch310: Battlefield: Mountain [354], Swiftwater Cliffs [344]; Graveyard: Balmor, Battlemage Captain [366]
+
+Turn 6
+  - Dark Deed [observed_semantic_effect, seq=142] (active=H4ch310, phase=Phase_Main1, controller=H4ch310, owner=H4ch310, source_object=371)
+      effects: P/T -4/-4
+      narrative: Dark Deed: Fynn, the Fangbearer gets -4/-4.
+      explicit effect object references: Fynn, the Fangbearer [348] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Dark Deed (object 371) Hand (H4ch310) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Dark Deed (object 374) Stack -> Graveyard (H4ch310) (Resolve; shared object ID)
+      identity continuity: source object 371 -> transfer object 374 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 375) Battlefield -> Graveyard (gian31) (SBA_ZeroToughness; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Osseous Sticktwister [369] Library (H4ch310) -> Hand (H4ch310) (Draw; GRE sequence 134).
+      Swamp [370] Hand (H4ch310) -> Battlefield (PlayLand; GRE sequence 137).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Dragon Sniper [359], Forest [340], Ghost Vacuum [362], Swamp [347]; Exile: Virulent Emissary [368]; Graveyard: Fynn, the Fangbearer [375]
+      H4ch310: Battlefield: Mountain [354], Swamp [370], Swiftwater Cliffs [344]; Graveyard: Balmor, Battlemage Captain [366], Dark Deed [374]
+
+Turn 7
+  - Fynn, the Fangbearer [valid_resolution_no_immediate_mutation, seq=161] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=377)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Fynn, the Fangbearer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 377) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 377) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Fynn, the Fangbearer [observed_semantic_effect, seq=173] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=377, source_last_explicit_zone=Battlefield)
+      effects: +2 counter(s)
+      narrative: Ability of Fynn, the Fangbearer: 2 counter(s) are added to H4ch310 (player seat 2).
+      explicit effect object references: H4ch310 [player seat 2] (role/targeting only where the protocol identifies it)
+  - Ability of Ghost Vacuum [observed_semantic_effect, seq=182] (active=gian31, phase=Phase_Main2, controller=gian31, owner=gian31, source_object=362, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Ghost Vacuum: exiles Balmor, Battlemage Captain.
+      explicit effect object references: Balmor, Battlemage Captain [366], Balmor, Battlemage Captain [382] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Balmor, Battlemage Captain (object 382) Graveyard (H4ch310) -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Dragon Sniper [359] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: H4ch310 -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): H4ch310 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Fynn, the Fangbearer [376] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 156).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Dragon Sniper [359], Forest [340], Fynn, the Fangbearer [377], Ghost Vacuum [362], Swamp [347]; Exile: Virulent Emissary [368]; Graveyard: Fynn, the Fangbearer [375]
+      H4ch310: Battlefield: Mountain [354], Swamp [370], Swiftwater Cliffs [344]; Graveyard: Dark Deed [374]; Exile: Balmor, Battlemage Captain [382]
+
+Turn 8
+  - Osseous Sticktwister [valid_resolution_no_immediate_mutation, seq=193] (active=H4ch310, phase=Phase_Main1, controller=H4ch310, owner=H4ch310, source_object=384)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Osseous Sticktwister resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Osseous Sticktwister (object 384) Hand (H4ch310) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Osseous Sticktwister (object 384) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Swiftwater Cliffs [observed_semantic_effect, seq=196] (active=H4ch310, phase=Phase_Main1, controller=H4ch310, owner=H4ch310, source_object=387, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Swiftwater Cliffs: H4ch310 gains 1 life.
+    net observed life change this turn: H4ch310 +1 (individual changes below; gains and losses may offset)
+    life: H4ch310 18 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swiftwater Cliffs [383] Library (H4ch310) -> Hand (H4ch310) (Draw; GRE sequence 188).
+      Swiftwater Cliffs [387] Hand (H4ch310) -> Battlefield (PlayLand; GRE sequence 194).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Dragon Sniper [359], Forest [340], Fynn, the Fangbearer [377], Ghost Vacuum [362], Swamp [347]; Exile: Virulent Emissary [368]; Graveyard: Fynn, the Fangbearer [375]
+      H4ch310: Battlefield: Mountain [354], Osseous Sticktwister [384], Swamp [370], Swiftwater Cliffs [344], Swiftwater Cliffs [387]; Graveyard: Dark Deed [374]; Exile: Balmor, Battlemage Captain [382]
+
+Turn 9
+  - Ability of Fynn, the Fangbearer [observed_semantic_effect, seq=226] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=377, source_last_explicit_zone=Battlefield)
+      effects: +2 counter(s)
+      narrative: Ability of Fynn, the Fangbearer: 2 counter(s) are added to H4ch310 (player seat 2).
+      explicit effect object references: H4ch310 [player seat 2] (role/targeting only where the protocol identifies it)
+  - Ability of Ghost Vacuum [observed_semantic_effect, seq=235] (active=gian31, phase=Phase_Main2, controller=gian31, owner=gian31, source_object=362, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Ghost Vacuum: exiles Osseous Sticktwister.
+      explicit effect object references: Osseous Sticktwister [391], Osseous Sticktwister [393] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Osseous Sticktwister (object 393) Graveyard (H4ch310) -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock -> CombatDamage):
+      attackers: Dragon Sniper [359] (unblocked, observed P/T 1/1), Fynn, the Fangbearer [377] (blocked, observed P/T 1/3)
+      blockers: Osseous Sticktwister [384]
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: H4ch310 +1 (individual changes below; gains and losses may offset)
+    life (gain observed during combat phase; exact source unavailable): H4ch310 19 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Fynn, the Fangbearer [389] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 210).
+      Osseous Sticktwister [391] Battlefield -> Graveyard (H4ch310) (SBA_Deathtouch; GRE sequence 224).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Dragon Sniper [359], Forest [340], Fynn, the Fangbearer [377], Ghost Vacuum [362], Swamp [347]; Exile: Virulent Emissary [368]; Graveyard: Fynn, the Fangbearer [375]
+      H4ch310: Battlefield: Mountain [354], Swamp [370], Swiftwater Cliffs [344], Swiftwater Cliffs [387]; Graveyard: Dark Deed [374]; Exile: Balmor, Battlemage Captain [382], Osseous Sticktwister [393]
+
+Turn 10
+  - Ability of Soured Springs [observed_semantic_effect, seq=248] (active=H4ch310, phase=Phase_Main1, controller=H4ch310, owner=H4ch310, source_object=395, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Soured Springs: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 1] (role/targeting only where the protocol identifies it)
+  - Osseous Sticktwister [valid_resolution_no_immediate_mutation, seq=251] (active=H4ch310, phase=Phase_Main1, controller=H4ch310, owner=H4ch310, source_object=397)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Osseous Sticktwister resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Osseous Sticktwister (object 397) Hand (H4ch310) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Osseous Sticktwister (object 397) Stack -> Battlefield (Resolve; shared object ID)
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Soured Springs; direct protocol link unavailable): gian31 22 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 394 [394] Library (H4ch310) -> Hand (H4ch310) (Draw; GRE sequence 241).
+      Soured Springs [395] Hand (H4ch310) -> Battlefield (PlayLand; GRE sequence 244).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Dragon Sniper [359], Forest [340], Fynn, the Fangbearer [377], Ghost Vacuum [362], Swamp [347]; Exile: Virulent Emissary [368]; Graveyard: Fynn, the Fangbearer [375]
+      H4ch310: Battlefield: Mountain [354], Osseous Sticktwister [397], Soured Springs [395], Swamp [370], Swiftwater Cliffs [344], Swiftwater Cliffs [387]; Graveyard: Dark Deed [374]; Exile: Balmor, Battlemage Captain [382], Osseous Sticktwister [393]
+
+Turn 11
+  - Ability of Fynn, the Fangbearer [observed_semantic_effect, seq=281] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=377, source_last_explicit_zone=Battlefield)
+      effects: +2 counter(s)
+      narrative: Ability of Fynn, the Fangbearer: 2 counter(s) are added to H4ch310 (player seat 2).
+      explicit effect object references: H4ch310 [player seat 2] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Dragon Sniper [359] (unblocked, observed P/T 1/1), Fynn, the Fangbearer [377] (unblocked, observed P/T 1/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: H4ch310 -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): H4ch310 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Cauldron of Essence [400] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 265).
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 5, seq 117, Phase_Main1: H4ch310 20 -> 19. Combat declaration observed; exact assignment unavailable. Previous captured action: Ghost Vacuum.
+- Turn 9, seq 224: H4ch310 19 -> 20. Combat declaration observed; exact assignment unavailable.
+- Turn 10, seq 248, Phase_Main1: gian31 22 -> 21. Semantic attribution: Soured Springs; direct protocol link unavailable. Previous captured action: Soured Springs.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 6: Virulent Silencer [owner=gian31, controller=gian31] moves Hand (gian31) -> Library (gian31) (Put).
+- Turn 1, seq 9: Forest [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 1, seq 10: Virulent Emissary [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 1, seq 12: Virulent Emissary [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 26: Mountain [owner/controller metadata unavailable] moves Library (H4ch310) -> Hand (H4ch310) (Draw).
+- Turn 2, seq 29: Swiftwater Cliffs [owner=H4ch310, controller=H4ch310] moves Hand (H4ch310) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Qarsi Revenant [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 48: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 49: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 51: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 75: object 353 [owner/controller metadata unavailable] moves Library (H4ch310) -> Hand (H4ch310) (Draw).
+- Turn 4, seq 78: Mountain [owner=H4ch310, controller=H4ch310] moves Hand (H4ch310) -> Battlefield (PlayLand).
+- Turn 4, seq 79: Balmor, Battlemage Captain [owner=H4ch310, controller=H4ch310] moves Hand (H4ch310) -> Stack (CastSpell).
+- Turn 4, seq 81: Balmor, Battlemage Captain [owner=H4ch310, controller=H4ch310] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 95: Ghost Vacuum [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 98: Dragon Sniper [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 100: Dragon Sniper [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 103: Ghost Vacuum [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 105: Ghost Vacuum [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 117: Virulent Emissary [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 5, seq 117: Balmor, Battlemage Captain [owner=H4ch310, controller=H4ch310] moves Battlefield -> Graveyard (H4ch310) (SBA_Deathtouch).
+- Turn 5, seq 128: Virulent Emissary [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Exile (Exile).
+- Turn 6, seq 134: Osseous Sticktwister [owner/controller metadata unavailable] moves Library (H4ch310) -> Hand (H4ch310) (Draw).
+- Turn 6, seq 137: Swamp [owner=H4ch310, controller=H4ch310] moves Hand (H4ch310) -> Battlefield (PlayLand).
+- Turn 6, seq 138: Dark Deed [owner=H4ch310, controller=H4ch310] moves Hand (H4ch310) -> Stack (CastSpell).
+- Turn 6, seq 142: Dark Deed [owner=H4ch310, controller=H4ch310] moves Stack -> Graveyard (H4ch310) (Resolve).
+- Turn 6, seq 142: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_ZeroToughness).
+- Turn 7, seq 156: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 159: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 161: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 182: Balmor, Battlemage Captain [owner=H4ch310, controller=H4ch310] moves Graveyard (H4ch310) -> Exile (Exile).
+- Turn 8, seq 188: Swiftwater Cliffs [owner/controller metadata unavailable] moves Library (H4ch310) -> Hand (H4ch310) (Draw).
+- Turn 8, seq 191: Osseous Sticktwister [owner=H4ch310, controller=H4ch310] moves Hand (H4ch310) -> Stack (CastSpell).
+- Turn 8, seq 193: Osseous Sticktwister [owner=H4ch310, controller=H4ch310] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 194: Swiftwater Cliffs [owner=H4ch310, controller=H4ch310] moves Hand (H4ch310) -> Battlefield (PlayLand).
+- Turn 9, seq 210: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 9, seq 224: Osseous Sticktwister [owner=H4ch310, controller=H4ch310] moves Battlefield -> Graveyard (H4ch310) (SBA_Deathtouch).
+- Turn 9, seq 235: Osseous Sticktwister [owner=H4ch310, controller=H4ch310] moves Graveyard (H4ch310) -> Exile (Exile).
+- Turn 10, seq 241: object 394 [owner/controller metadata unavailable] moves Library (H4ch310) -> Hand (H4ch310) (Draw).
+- Turn 10, seq 244: Soured Springs [owner=H4ch310, controller=H4ch310] moves Hand (H4ch310) -> Battlefield (PlayLand).
+- Turn 10, seq 249: Osseous Sticktwister [owner=H4ch310, controller=H4ch310] moves Hand (H4ch310) -> Stack (CastSpell).
+- Turn 10, seq 251: Osseous Sticktwister [owner=H4ch310, controller=H4ch310] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 265: Cauldron of Essence [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 6: object 282 becomes object 339 [Virulent Silencer].
+- Turn 1, seq 9: object 280 becomes object 340 [Forest].
+- Turn 1, seq 10: object 283 becomes object 341 [Virulent Emissary].
+- Turn 2, seq 26: object 226 becomes object 343 [Mountain].
+- Turn 2, seq 29: object 222 becomes object 344 [Swiftwater Cliffs].
+- Turn 3, seq 45: object 286 becomes object 346 [Qarsi Revenant].
+- Turn 3, seq 48: object 279 becomes object 347 [Swamp].
+- Turn 3, seq 49: object 284 becomes object 348 [Fynn, the Fangbearer].
+- Turn 4, seq 75: object 227 becomes object 353 [object 227].
+- Turn 4, seq 78: object 343 becomes object 354 [Mountain].
+- Turn 4, seq 79: object 225 becomes object 355 [Balmor, Battlemage Captain].
+- Turn 5, seq 95: object 287 becomes object 358 [Ghost Vacuum].
+- Turn 5, seq 98: object 281 becomes object 359 [Dragon Sniper].
+- Turn 5, seq 103: object 358 becomes object 362 [Ghost Vacuum].
+- Turn 5, seq 117: object 341 becomes object 365 [Virulent Emissary].
+- Turn 5, seq 117: object 355 becomes object 366 [Balmor, Battlemage Captain].
+- Turn 5, seq 128: object 365 becomes object 368 [Virulent Emissary].
+- Turn 6, seq 134: object 228 becomes object 369 [Osseous Sticktwister].
+- Turn 6, seq 137: object 224 becomes object 370 [Swamp].
+- Turn 6, seq 138: object 223 becomes object 371 [Dark Deed].
+- Turn 6, seq 142: object 371 becomes object 374 [Dark Deed].
+- Turn 6, seq 142: object 348 becomes object 375 [Fynn, the Fangbearer].
+- Turn 7, seq 156: object 288 becomes object 376 [Fynn, the Fangbearer].
+- Turn 7, seq 159: object 376 becomes object 377 [Fynn, the Fangbearer].
+- Turn 7, seq 182: object 366 becomes object 382 [Balmor, Battlemage Captain].
+- Turn 8, seq 188: object 229 becomes object 383 [Swiftwater Cliffs].
+- Turn 8, seq 191: object 369 becomes object 384 [Osseous Sticktwister].
+- Turn 8, seq 194: object 383 becomes object 387 [Swiftwater Cliffs].
+- Turn 9, seq 210: object 289 becomes object 389 [Fynn, the Fangbearer].
+- Turn 9, seq 224: object 384 becomes object 391 [Osseous Sticktwister].
+- Turn 9, seq 235: object 391 becomes object 393 [Osseous Sticktwister].
+- Turn 10, seq 241: object 230 becomes object 394 [object 230].
+- Turn 10, seq 244: object 221 becomes object 395 [Soured Springs].
+- Turn 10, seq 249: object 219 becomes object 397 [Osseous Sticktwister].
+- Turn 11, seq 265: object 290 becomes object 400 [Cauldron of Essence].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Forest (object 340) from Hand (gian31) to Battlefield.
+- Turn 2: H4ch310 plays Swiftwater Cliffs (object 344) from Hand (H4ch310) to Battlefield.
+- Turn 3: gian31 plays Swamp (object 347) from Hand (gian31) to Battlefield.
+- Turn 4: H4ch310 plays Mountain (object 354) from Hand (H4ch310) to Battlefield.
+- Turn 6: H4ch310 plays Swamp (object 370) from Hand (H4ch310) to Battlefield.
+- Turn 8: H4ch310 plays Swiftwater Cliffs (object 387) from Hand (H4ch310) to Battlefield.
+- Turn 10: H4ch310 plays Soured Springs (object 395) from Hand (H4ch310) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Fynn, the Fangbearer: casts=2; abilities=5 (triggered=5, activated=0) across turns [3, 3, 5, 7, 7, 9, 11]
+  observed effect totals: draws=0, tokens=0, counters=5, returns=0, damage=0, life_changes=0, other=0
+  observed effects: +2 counter(s)
+- Ghost Vacuum: casts=1; abilities=3 (triggered=3, activated=0) across turns [5, 5, 7, 9]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=3
+  observed effects: exile
+- Virulent Emissary: casts=1; abilities=2 (triggered=2, activated=0) across turns [1, 3, 5]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Osseous Sticktwister: casts=2 across turns [8, 10]
+- Swiftwater Cliffs: abilities=2 (triggered=2, activated=0) across turns [2, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=2, other=0
+  observed effects: life +1
+- Balmor, Battlemage Captain: casts=1 across turns [4]
+- Dark Deed: casts=1 across turns [6]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: P/T -4/-4
+- Dragon Sniper: casts=1 across turns [5]
+- Soured Springs: abilities=1 (triggered=1, activated=0) across turns [10]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=1, other=1
+  observed effects: 1 damage, life -1, synthetic event
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 3 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Virulent Emissary (gian31) -> H4ch310; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 5 - DeclareAttack (active=gian31)
+  attacker: Virulent Emissary (gian31) -> H4ch310; unblocked in this observed snapshot
+  attacker: Fynn, the Fangbearer (gian31) -> H4ch310; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Dragon Sniper (gian31) -> H4ch310; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 9 - DeclareAttack, DeclareBlock, CombatDamage (active=gian31)
+  attacker: Dragon Sniper (gian31) -> H4ch310; unblocked in this observed snapshot
+  attacker: Fynn, the Fangbearer (gian31) -> H4ch310; blocked by Osseous Sticktwister
+  combat damage assignment: unknown unless explicitly observed
+Turn 11 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Dragon Sniper (gian31) -> H4ch310; unblocked in this observed snapshot
+  attacker: Fynn, the Fangbearer (gian31) -> H4ch310; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 3: Ability of Fynn, the Fangbearer (active=gian31) - Ability of Fynn, the Fangbearer: 2 counter(s) are added to target.
+- Turn 5: Ability of Fynn, the Fangbearer (active=gian31) - Ability of Fynn, the Fangbearer: 2 counter(s) are added to target.
+- Turn 7: Ability of Fynn, the Fangbearer (active=gian31) - Ability of Fynn, the Fangbearer: 2 counter(s) are added to target.
+- Turn 9: Ability of Fynn, the Fangbearer (active=gian31) - Ability of Fynn, the Fangbearer: 2 counter(s) are added to target.
+- Turn 11: Ability of Fynn, the Fangbearer (active=gian31) - Ability of Fynn, the Fangbearer: 2 counter(s) are added to target.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Hullcarver | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 160: Dragon Sniper | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 161: Forest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Dragon Sniper | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Virulent Emissary | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Hullcarver | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 279: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 280: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 281: Dragon Sniper | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 282: Virulent Silencer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 283: Virulent Emissary | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 284: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 285: Defend the Rider | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 339: Virulent Silencer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 340: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 341: Virulent Emissary | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 344: Swiftwater Cliffs | controller=H4ch310 | owner=H4ch310 | zone=Battlefield (latest_object_observation)
+- 345: object 345 | controller=H4ch310 | owner=H4ch310 | zone=unknown (inferred unknown) (latest_object_observation)
+- 346: Qarsi Revenant | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 347: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 348: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 351: object 351 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 352: object 352 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 354: Mountain | controller=H4ch310 | owner=H4ch310 | zone=Battlefield (latest_object_observation)
+- 355: Balmor, Battlemage Captain | controller=H4ch310 | owner=H4ch310 | zone=Battlefield (latest_object_observation)
+- 358: Ghost Vacuum | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 359: Dragon Sniper | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 361: object 361 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 362: Ghost Vacuum | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 364: object 364 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 365: Virulent Emissary | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 366: Balmor, Battlemage Captain | controller=H4ch310 | owner=H4ch310 | zone=Battlefield (latest_object_observation)
+- 367: object 367 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 368: Virulent Emissary | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 370: Swamp | controller=H4ch310 | owner=H4ch310 | zone=Battlefield (latest_object_observation)
+- 371: Dark Deed | controller=H4ch310 | owner=H4ch310 | zone=Stack (latest_object_observation)
+- 374: Dark Deed | controller=H4ch310 | owner=H4ch310 | zone=unknown (inferred unknown) (latest_object_observation)
+- 375: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 376: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 377: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 380: object 380 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 381: object 381 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 382: Balmor, Battlemage Captain | controller=H4ch310 | owner=H4ch310 | zone=Exile (latest_object_observation)
+- 384: Osseous Sticktwister | controller=H4ch310 | owner=H4ch310 | zone=Battlefield (latest_object_observation)
+- 387: Swiftwater Cliffs | controller=H4ch310 | owner=H4ch310 | zone=Battlefield (latest_object_observation)
+- 388: object 388 | controller=H4ch310 | owner=H4ch310 | zone=unknown (inferred unknown) (latest_object_observation)
+- 389: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 390: object 390 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 391: Osseous Sticktwister | controller=H4ch310 | owner=H4ch310 | zone=Battlefield (latest_object_observation)
+- 392: object 392 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 393: Osseous Sticktwister | controller=H4ch310 | owner=H4ch310 | zone=Exile (latest_object_observation)
+- 395: Soured Springs | controller=H4ch310 | owner=H4ch310 | zone=Battlefield (latest_object_observation)
+- 396: object 396 | controller=H4ch310 | owner=H4ch310 | zone=unknown (inferred unknown) (latest_object_observation)
+- 397: Osseous Sticktwister | controller=H4ch310 | owner=H4ch310 | zone=Battlefield (latest_object_observation)
+- 400: Cauldron of Essence | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 401: object 401 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 402: object 402 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+H4ch310: 17 total items
+  zones: Battlefield=10, Exile=2, Stack=1, unknown=4
+  objects: Osseous Sticktwister x4, Balmor, Battlemage Captain x3, Dark Deed x2, Swiftwater Cliffs x2, Mountain, Soured Springs, Swamp, object 345, object 388, object 396
+gian31: 41 total items
+  zones: Battlefield=14, Exile=1, Graveyard=1, Hand=13, Stack=1, unknown=11
+  objects: Fynn, the Fangbearer x6, Virulent Emissary x5, Dragon Sniper x4, Forest x3, Swamp x3, Ghost Vacuum x2, Hullcarver x2, Virulent Silencer x2, Cauldron of Essence, Defend the Rider, Qarsi Revenant, object 351
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (14): Dragon Sniper, Dragon Sniper, Forest, Forest, Fynn, the Fangbearer, Fynn, the Fangbearer, Fynn, the Fangbearer, Swamp, Swamp, Virulent Emissary, Virulent Emissary, Virulent Emissary, Virulent Silencer, Virulent Silencer
+  Graveyard: 1 card(s)
+H4ch310:
+  Battlefield (10): Balmor, Battlemage Captain, Balmor, Battlemage Captain, Mountain, Osseous Sticktwister, Osseous Sticktwister, Osseous Sticktwister, Soured Springs, Swamp, Swiftwater Cliffs, Swiftwater Cliffs
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+15 objects have no resolved final zone and are omitted from the known board state.
+H4ch310: 4 unknown object(s)
+gian31: 11 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=13, Stack=2
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+H4ch310:
+  Battlefield (6): Swiftwater Cliffs, Mountain, Swamp, Swiftwater Cliffs, Soured Springs, Osseous Sticktwister
+  Graveyard (1): Dark Deed
+  Exile (2): Balmor, Battlemage Captain, Osseous Sticktwister
+gian31:
+  Battlefield (5): Forest, Swamp, Dragon Sniper, Ghost Vacuum, Fynn, the Fangbearer
+  Graveyard (1): Fynn, the Fangbearer
+  Exile (1): Virulent Emissary
+Known non-persistent entries (counts only):
+  H4ch310: Hand=2, Limbo=2
+  gian31: Hand=4, Library=1, Pending=1
+  unknown: Hand=1, Library=96, Limbo=5
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=2
+- Turn 2: H4ch310 Battlefield=1; gian31 Battlefield=2
+- Turn 3: H4ch310 Battlefield=1; gian31 Battlefield=4
+- Turn 4: H4ch310 Battlefield=3; gian31 Battlefield=4
+- Turn 5: H4ch310 Battlefield=2; H4ch310 Graveyard=1; gian31 Battlefield=5; gian31 Exile=1
+- Turn 6: H4ch310 Battlefield=3; H4ch310 Graveyard=2; gian31 Battlefield=4; gian31 Graveyard=1; gian31 Exile=1
+- Turn 7: H4ch310 Battlefield=3; H4ch310 Graveyard=1; H4ch310 Exile=1; gian31 Battlefield=5; gian31 Graveyard=1; gian31 Exile=1
+- Turn 8: H4ch310 Battlefield=5; H4ch310 Graveyard=1; H4ch310 Exile=1; gian31 Battlefield=5; gian31 Graveyard=1; gian31 Exile=1
+- Turn 9: H4ch310 Battlefield=4; H4ch310 Graveyard=1; H4ch310 Exile=2; gian31 Battlefield=5; gian31 Graveyard=1; gian31 Exile=1
+- Turn 10: H4ch310 Battlefield=6; H4ch310 Graveyard=1; H4ch310 Exile=2; gian31 Battlefield=5; gian31 Graveyard=1; gian31 Exile=1
+- Turn 11: H4ch310 Battlefield=6; H4ch310 Graveyard=1; H4ch310 Exile=2; gian31 Battlefield=5; gian31 Graveyard=1; gian31 Exile=1
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Virulent Emissary resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Fynn, the Fangbearer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Balmor, Battlemage Captain resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Dragon Sniper resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Ghost Vacuum resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Fynn, the Fangbearer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Osseous Sticktwister resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Osseous Sticktwister resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
