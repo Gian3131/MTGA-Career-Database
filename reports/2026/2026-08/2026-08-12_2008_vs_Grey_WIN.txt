@@ -1,0 +1,429 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, Grey
+Seat map: Seat 1=gian31, Seat 2=Grey
+Turn range (known): 1 - 7
+Records: 14
+Action chains: 12
+Winner: gian31
+Final life: {'gian31': 19, 'Grey': 17}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 7 (Phase_Combat, Step_CombatDamage; Ability of Fynn, the Fangbearer, seq 175).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 16 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 6 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6] (raw records=6; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 6 explicit Library -> Hand movement(s); named in the draw record=3, resolved through an explicit identity transition=2, unresolved=1.
+Unresolved draw identities (explicit movements retained): Turn 2, seq 27, object 405.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 7).
+  - gian31: 5 observed card(s): Fynn, the Fangbearer [340], Forest [342], Hullcarver [343], Swamp [345], Forest [346].
+  - unknown: 7 observed card(s): object 220 [220], object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225], object 226 [226].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 19, 'Grey': 17}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 7 (Phase_Combat, Step_CombatDamage; Ability of Fynn, the Fangbearer, seq 175).
+Last captured life snapshot: Grey 19 -> 17 (seq 168).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Hullcarver.
+- Turn 2: actions: cards=0, abilities=1; life mutations=1; explicit battlefield entries=Tranquil Cove.
+- Turn 3: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Forest, Fynn, the Fangbearer.
+- Turn 4: actions: cards=1, abilities=1; life mutations=1; explicit battlefield entries=Lonely Arroyo; explicit battlefield exits=Fynn, the Fangbearer.
+- Turn 5: actions: cards=2, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Forest, Fynn, the Fangbearer, Hullcarver.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Plains, Fog Bank.
+- Turn 7: actions: cards=1, abilities=3; combat snapshots=1; life mutations=1; explicit battlefield entries=Virulent Silencer.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Hullcarver [valid_resolution_no_immediate_mutation, seq=13] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=403)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hullcarver resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hullcarver (object 403) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hullcarver (object 403) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Vraska, the Silencer [401] Hand (gian31) -> Library (gian31) (Put; GRE sequence 7).
+      Axebane Ferox [400] Hand (gian31) -> Library (gian31) (Put; GRE sequence 7).
+      Swamp [402] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 10).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Hullcarver [403], Swamp [402]
+
+Turn 2
+  - Ability of Tranquil Cove [observed_semantic_effect, seq=32] (active=Grey, phase=Phase_Main1, controller=Grey, owner=Grey, source_object=406, source_last_explicit_zone=Battlefield)
+      effects: life +1
+      narrative: Ability of Tranquil Cove: Grey gains 1 life.
+    net observed life change this turn: Grey +1 (individual changes below; gains and losses may offset)
+    life: Grey 20 -> 21
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 405 [405] Library (Grey) -> Hand (Grey) (Draw; GRE sequence 27).
+      Tranquil Cove [406] Hand (Grey) -> Battlefield (PlayLand; GRE sequence 30).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Hullcarver [403], Swamp [402]
+      Grey: Battlefield: Tranquil Cove [406]
+
+Turn 3
+  - Fynn, the Fangbearer [valid_resolution_no_immediate_mutation, seq=52] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=410)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Fynn, the Fangbearer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 410) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 410) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Fynn, the Fangbearer [observed_semantic_effect, seq=64] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=410, source_last_explicit_zone=Battlefield)
+      effects: +2 counter(s)
+      narrative: Ability of Fynn, the Fangbearer: 2 counter(s) are added to Grey (player seat 2).
+      explicit effect object references: Grey [player seat 2] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Hullcarver [403] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Grey -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Grey 21 -> 20
+    additional protocol-observed zone movements not assigned to an action chain:
+      Virulent Silencer [408] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 46).
+      Forest [409] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 49).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forest [409], Fynn, the Fangbearer [410], Hullcarver [403], Swamp [402]
+      Grey: Battlefield: Tranquil Cove [406]
+
+Turn 4
+  - Ability of Lonely Arroyo [observed_semantic_effect, seq=81] (active=Grey, phase=Phase_Main1, controller=Grey, owner=Grey, source_object=415, source_last_explicit_zone=Battlefield)
+      effects: 1 damage; life -1 (damage is causal; the life change is its observed result, not additional damage)
+      narrative: Ability of Lonely Arroyo: gian31 takes 1 damage (resulting in 1 life lost).
+      explicit effect object references: gian31 [player seat 1] (role/targeting only where the protocol identifies it)
+  - Unsummon [observed_semantic_effect, seq=86] (active=Grey, phase=Phase_Main1, controller=Grey, owner=Grey, source_object=417)
+      effects: return to battlefield
+      narrative: Unsummon: a card/permanent returns.
+      explicit effect object references: Fynn, the Fangbearer [410], Fynn, the Fangbearer [419] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Unsummon (object 417) Hand (Grey) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 419) Battlefield -> Hand (gian31) (Return; shared object ID)
+      protocol-linked zone transfer: Unsummon (object 421) Stack -> Graveyard (Grey) (Resolve; shared object ID)
+      identity continuity: source object 417 -> transfer object 421 (explicit GRE ObjectIdChanged chain).
+    net observed life change this turn: gian31 -1 (individual changes below; gains and losses may offset)
+    life (semantically attributed to Lonely Arroyo; direct protocol link unavailable): gian31 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Lonely Arroyo [414] Library (Grey) -> Hand (Grey) (Draw; GRE sequence 74).
+      Lonely Arroyo [415] Hand (Grey) -> Battlefield (PlayLand; GRE sequence 77).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forest [409], Hullcarver [403], Swamp [402]
+      Grey: Battlefield: Lonely Arroyo [415], Tranquil Cove [406]; Graveyard: Unsummon [421]
+
+Turn 5
+  - Fynn, the Fangbearer [valid_resolution_no_immediate_mutation, seq=106] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=424)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Fynn, the Fangbearer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 424) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 424) Stack -> Battlefield (Resolve; shared object ID)
+  - Hullcarver [valid_resolution_no_immediate_mutation, seq=109] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=427)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hullcarver resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hullcarver (object 427) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hullcarver (object 427) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Fynn, the Fangbearer [observed_semantic_effect, seq=121] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=424, source_last_explicit_zone=Battlefield)
+      effects: +2 counter(s)
+      narrative: Ability of Fynn, the Fangbearer: 2 counter(s) are added to Grey (player seat 2).
+      explicit effect object references: Grey [player seat 2] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Hullcarver [403] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Grey -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): Grey 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hullcarver [422] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 100).
+      Forest [423] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 103).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forest [409], Forest [423], Fynn, the Fangbearer [424], Hullcarver [403], Hullcarver [427], Swamp [402]
+      Grey: Battlefield: Lonely Arroyo [415], Tranquil Cove [406]; Graveyard: Unsummon [421]
+
+Turn 6
+  - Fog Bank [valid_resolution_no_immediate_mutation, seq=137] (active=Grey, phase=Phase_Main1, controller=Grey, owner=Grey, source_object=432)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Fog Bank resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Fog Bank (object 432) Hand (Grey) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fog Bank (object 432) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Fog Bank [430] Library (Grey) -> Hand (Grey) (Draw; GRE sequence 131).
+      Plains [431] Hand (Grey) -> Battlefield (PlayLand; GRE sequence 134).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forest [409], Forest [423], Fynn, the Fangbearer [424], Hullcarver [403], Hullcarver [427], Swamp [402]
+      Grey: Battlefield: Fog Bank [432], Lonely Arroyo [415], Plains [431], Tranquil Cove [406]; Graveyard: Unsummon [421]
+
+Turn 7
+  - Virulent Silencer [valid_resolution_no_immediate_mutation, seq=156] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=436)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Virulent Silencer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Virulent Silencer (object 436) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Virulent Silencer (object 436) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Virulent Silencer [observed_semantic_effect, seq=171] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=436, source_last_explicit_zone=Battlefield)
+      effects: +2 counter(s)
+      narrative: Ability of Virulent Silencer: 2 counter(s) are added to Grey (player seat 2).
+      explicit effect object references: Grey [player seat 2] (role/targeting only where the protocol identifies it)
+  - Ability of Fynn, the Fangbearer [observed_semantic_effect, seq=173] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=424, source_last_explicit_zone=Battlefield)
+      effects: +2 counter(s)
+      narrative: Ability of Fynn, the Fangbearer: 2 counter(s) are added to Grey (player seat 2).
+      explicit effect object references: Grey [player seat 2] (role/targeting only where the protocol identifies it)
+  - Ability of Fynn, the Fangbearer [observed_semantic_effect, seq=175] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=424, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 173 and 175; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: +2 counter(s)
+      narrative: Ability of Fynn, the Fangbearer: 2 counter(s) are added to Grey (player seat 2).
+      explicit effect object references: Grey [player seat 2] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Hullcarver [403] (unblocked, observed P/T 1/1), Fynn, the Fangbearer [424] (unblocked, observed P/T 1/3), Hullcarver [427] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: Grey -2 (individual changes below; gains and losses may offset)
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): Grey 19 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Quarrel [435] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 151).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Forest [409], Forest [423], Fynn, the Fangbearer [424], Hullcarver [403], Hullcarver [427], Swamp [402], Virulent Silencer [436]
+      Grey: Battlefield: Fog Bank [432], Lonely Arroyo [415], Plains [431], Tranquil Cove [406]; Graveyard: Unsummon [421]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 4, seq 81, Phase_Main1: gian31 20 -> 19. Semantic attribution: Lonely Arroyo; direct protocol link unavailable. Previous captured action: Lonely Arroyo.
+- Turn 7, seq 168, Phase_Main1: Grey 19 -> 17. Combat declaration observed; exact assignment unavailable. Previous captured action: Virulent Silencer.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Vraska, the Silencer [owner=gian31, controller=gian31] moves Hand (gian31) -> Library (gian31) (Put).
+- Turn 1, seq 7: Axebane Ferox [owner=gian31, controller=gian31] moves Hand (gian31) -> Library (gian31) (Put).
+- Turn 1, seq 10: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 1, seq 11: Hullcarver [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 1, seq 13: Hullcarver [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 27: object 405 [owner/controller metadata unavailable] moves Library (Grey) -> Hand (Grey) (Draw).
+- Turn 2, seq 30: Tranquil Cove [owner=Grey, controller=Grey] moves Hand (Grey) -> Battlefield (PlayLand).
+- Turn 3, seq 46: Virulent Silencer [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 3, seq 49: Forest [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 50: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 3, seq 52: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 74: Lonely Arroyo [owner/controller metadata unavailable] moves Library (Grey) -> Hand (Grey) (Draw).
+- Turn 4, seq 77: Lonely Arroyo [owner=Grey, controller=Grey] moves Hand (Grey) -> Battlefield (PlayLand).
+- Turn 4, seq 82: Unsummon [owner=Grey, controller=Grey] moves Hand (Grey) -> Stack (CastSpell).
+- Turn 4, seq 86: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Battlefield -> Hand (gian31) (Return).
+- Turn 4, seq 86: Unsummon [owner=Grey, controller=Grey] moves Stack -> Graveyard (Grey) (Resolve).
+- Turn 5, seq 100: Hullcarver [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 5, seq 103: Forest [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 5, seq 104: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 106: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 107: Hullcarver [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 5, seq 109: Hullcarver [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 131: Fog Bank [owner/controller metadata unavailable] moves Library (Grey) -> Hand (Grey) (Draw).
+- Turn 6, seq 134: Plains [owner=Grey, controller=Grey] moves Hand (Grey) -> Battlefield (PlayLand).
+- Turn 6, seq 135: Fog Bank [owner=Grey, controller=Grey] moves Hand (Grey) -> Stack (CastSpell).
+- Turn 6, seq 137: Fog Bank [owner=Grey, controller=Grey] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 151: Quarrel [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 7, seq 154: Virulent Silencer [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 156: Virulent Silencer [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 344 becomes object 401 [Vraska, the Silencer].
+- Turn 1, seq 7: object 341 becomes object 400 [Axebane Ferox].
+- Turn 1, seq 10: object 345 becomes object 402 [Swamp].
+- Turn 1, seq 11: object 343 becomes object 403 [Hullcarver].
+- Turn 2, seq 27: object 227 becomes object 405 [object 227].
+- Turn 2, seq 30: object 224 becomes object 406 [Tranquil Cove].
+- Turn 3, seq 46: object 347 becomes object 408 [Virulent Silencer].
+- Turn 3, seq 49: object 342 becomes object 409 [Forest].
+- Turn 3, seq 50: object 340 becomes object 410 [Fynn, the Fangbearer].
+- Turn 4, seq 74: object 228 becomes object 414 [Lonely Arroyo].
+- Turn 4, seq 77: object 414 becomes object 415 [Lonely Arroyo].
+- Turn 4, seq 82: object 225 becomes object 417 [Unsummon].
+- Turn 4, seq 86: object 410 becomes object 419 [Fynn, the Fangbearer].
+- Turn 4, seq 86: object 417 becomes object 421 [Unsummon].
+- Turn 5, seq 100: object 348 becomes object 422 [Hullcarver].
+- Turn 5, seq 103: object 346 becomes object 423 [Forest].
+- Turn 5, seq 104: object 419 becomes object 424 [Fynn, the Fangbearer].
+- Turn 5, seq 107: object 422 becomes object 427 [Hullcarver].
+- Turn 6, seq 131: object 229 becomes object 430 [Fog Bank].
+- Turn 6, seq 134: object 223 becomes object 431 [Plains].
+- Turn 6, seq 135: object 430 becomes object 432 [Fog Bank].
+- Turn 7, seq 151: object 349 becomes object 435 [Quarrel].
+- Turn 7, seq 154: object 408 becomes object 436 [Virulent Silencer].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: gian31 plays Swamp (object 402) from Hand (gian31) to Battlefield.
+- Turn 2: Grey plays Tranquil Cove (object 406) from Hand (Grey) to Battlefield.
+- Turn 3: gian31 plays Forest (object 409) from Hand (gian31) to Battlefield.
+- Turn 4: Grey plays Lonely Arroyo (object 415) from Hand (Grey) to Battlefield.
+- Turn 5: gian31 plays Forest (object 423) from Hand (gian31) to Battlefield.
+- Turn 6: Grey plays Plains (object 431) from Hand (Grey) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Fynn, the Fangbearer: casts=2; abilities=4 (triggered=4, activated=0) across turns [3, 3, 5, 5, 7, 7]
+  observed effect totals: draws=0, tokens=0, counters=4, returns=0, damage=0, life_changes=0, other=0
+  observed effects: +2 counter(s)
+- Hullcarver: casts=2 across turns [1, 5]
+- Virulent Silencer: casts=1; abilities=1 (triggered=1, activated=0) across turns [7, 7]
+  observed effect totals: draws=0, tokens=0, counters=1, returns=0, damage=0, life_changes=0, other=0
+  observed effects: +2 counter(s)
+- Fog Bank: casts=1 across turns [6]
+- Lonely Arroyo: abilities=1 (triggered=1, activated=0) across turns [4]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=1, other=1
+  observed effects: 1 damage, life -1, synthetic event
+- Tranquil Cove: abilities=1 (triggered=1, activated=0) across turns [2]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=1, other=0
+  observed effects: life +1
+- Unsummon: casts=1 across turns [4]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=1, damage=0, life_changes=0, other=0
+  observed effects: return to battlefield
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 3 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Hullcarver (gian31) -> Grey; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 5 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Hullcarver (gian31) -> Grey; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 7 - DeclareAttack (active=gian31)
+  attacker: Hullcarver (gian31) -> Grey; unblocked in this observed snapshot
+  attacker: Fynn, the Fangbearer (gian31) -> Grey; unblocked in this observed snapshot
+  attacker: Hullcarver (gian31) -> Grey; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 3: Ability of Fynn, the Fangbearer (active=gian31) - Ability of Fynn, the Fangbearer: 2 counter(s) are added to target.
+- Turn 5: Ability of Fynn, the Fangbearer (active=gian31) - Ability of Fynn, the Fangbearer: 2 counter(s) are added to target.
+- Turn 7: Ability of Virulent Silencer (active=gian31) - Ability of Virulent Silencer: 2 counter(s) are added to target.
+- Turn 7: Ability of Fynn, the Fangbearer (active=gian31) - Ability of Fynn, the Fangbearer: 2 counter(s) are added to target.
+- Turn 7: Ability of Fynn, the Fangbearer (active=gian31) - Ability of Fynn, the Fangbearer: 2 counter(s) are added to target.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 160: Virulent Emissary | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 161: Quarrel | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 162: Dragon Sniper | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 163: Virulent Silencer | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 164: Defend the Rider | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 165: Forest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 166: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 280: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 281: Qarsi Revenant | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 282: Axebane Ferox | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 283: Defend the Rider | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 284: Forest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 285: Virulent Emissary | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 286: Forest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 340: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 341: Axebane Ferox | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 342: Forest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 343: Hullcarver | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 344: Vraska, the Silencer | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 345: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 346: Forest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 400: Axebane Ferox | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 401: Vraska, the Silencer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 402: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 403: Hullcarver | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 406: Tranquil Cove | controller=Grey | owner=Grey | zone=Battlefield (latest_object_observation)
+- 407: object 407 | controller=Grey | owner=Grey | zone=unknown (inferred unknown) (latest_object_observation)
+- 408: Virulent Silencer | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 409: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 410: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 413: object 413 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 415: Lonely Arroyo | controller=Grey | owner=Grey | zone=Battlefield (latest_object_observation)
+- 416: object 416 | controller=Grey | owner=Grey | zone=unknown (inferred unknown) (latest_object_observation)
+- 417: Unsummon | controller=Grey | owner=Grey | zone=Stack (latest_object_observation)
+- 419: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 421: Unsummon | controller=Grey | owner=Grey | zone=unknown (inferred unknown) (latest_object_observation)
+- 422: Hullcarver | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 423: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 424: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 427: Hullcarver | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 429: object 429 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 431: Plains | controller=Grey | owner=Grey | zone=Battlefield (latest_object_observation)
+- 432: Fog Bank | controller=Grey | owner=Grey | zone=Battlefield (latest_object_observation)
+- 435: Quarrel | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 436: Virulent Silencer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 440: object 440 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 441: object 441 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 442: object 442 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+Grey: 8 total items
+  zones: Battlefield=4, Stack=1, unknown=3
+  objects: Unsummon x2, Fog Bank, Lonely Arroyo, Plains, Tranquil Cove, object 407, object 416
+gian31: 40 total items
+  zones: Battlefield=11, Hand=24, unknown=5
+  objects: Forest x7, Fynn, the Fangbearer x4, Hullcarver x4, Swamp x4, Axebane Ferox x3, Virulent Silencer x3, Defend the Rider x2, Quarrel x2, Virulent Emissary x2, Vraska, the Silencer x2, Dragon Sniper, Qarsi Revenant
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (11): Axebane Ferox, Forest, Forest, Fynn, the Fangbearer, Fynn, the Fangbearer, Fynn, the Fangbearer, Hullcarver, Hullcarver, Swamp, Virulent Silencer, Vraska, the Silencer
+  Graveyard: 0 card(s)
+Grey:
+  Battlefield (4): Fog Bank, Lonely Arroyo, Plains, Tranquil Cove
+  Graveyard: 0 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+8 objects have no resolved final zone and are omitted from the known board state.
+Grey: 3 unknown object(s)
+gian31: 5 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=24, Stack=1
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+Grey:
+  Battlefield (4): Tranquil Cove, Lonely Arroyo, Plains, Fog Bank
+  Graveyard (1): Unsummon
+gian31:
+  Battlefield (7): Swamp, Hullcarver, Forest, Forest, Fynn, the Fangbearer, Hullcarver, Virulent Silencer
+Known non-persistent entries (counts only):
+  Grey: Hand=1
+  gian31: Hand=1, Library=2, Limbo=4
+  unknown: Hand=4, Library=100, Limbo=5
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: gian31 Battlefield=2
+- Turn 2: Grey Battlefield=1; gian31 Battlefield=2
+- Turn 3: Grey Battlefield=1; gian31 Battlefield=4
+- Turn 4: Grey Battlefield=2; Grey Graveyard=1; gian31 Battlefield=3
+- Turn 5: Grey Battlefield=2; Grey Graveyard=1; gian31 Battlefield=6
+- Turn 6: Grey Battlefield=4; Grey Graveyard=1; gian31 Battlefield=6
+- Turn 7: Grey Battlefield=4; Grey Graveyard=1; gian31 Battlefield=7
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Hullcarver resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Fynn, the Fangbearer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Fynn, the Fangbearer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Hullcarver resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Fog Bank resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Virulent Silencer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
