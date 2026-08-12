@@ -1,0 +1,763 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: BozoTheBear, gian31
+Seat map: Seat 1=BozoTheBear, Seat 2=gian31
+Turn range (known): 1 - 14
+Records: 29
+Action chains: 25
+Winner: gian31
+Final life: {'BozoTheBear': 13, 'gian31': 13}
+Match conclusion: Match-result payload confirms a game win; the specific win condition is not exposed in captured records.
+Last captured action before match-result payload: Turn 14 (Phase_Combat, Step_CombatDamage; Ability of Virulent Silencer, seq 385).
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 33 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 7 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 11, 12, 14] (raw records=7; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 14 explicit Library -> Hand movement(s); named in the draw record=7, resolved through an explicit identity transition=4, unresolved=3.
+Unresolved draw identities (explicit movements retained): Turn 5, seq 91, object 299; Turn 7, seq 146, object 312; Turn 7, seq 153, object 317.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Forest [222], Serpent Specialist [223], Hullcarver [224], Ghost Vacuum [225], Dragon Sniper [226], Overgrown Tomb [227], Fynn, the Fangbearer [228].
+  - unknown: 7 observed card(s): object 162 [162], object 163 [163], object 164 [164], object 165 [165], object 166 [166], object 167 [167], object 168 [168].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'BozoTheBear': 13, 'gian31': 13}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 14 (Phase_Combat, Step_CombatDamage; Ability of Virulent Silencer, seq 385).
+Last captured life snapshot: BozoTheBear 15 -> 13 (seq 380).
+Terminal reason unavailable in the match-result payload; no zero-or-below life transition was observed in captured records.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=0, abilities=0; explicit battlefield entries=Swamp.
+- Turn 2: actions: cards=1, abilities=0; explicit battlefield entries=Forest, Dragon Sniper.
+- Turn 3: actions: cards=1, abilities=0; explicit battlefield entries=Mountain, Gleaming Barrier.
+- Turn 4: actions: cards=1, abilities=1; combat snapshots=1; life mutations=2; explicit battlefield entries=Overgrown Tomb, Fynn, the Fangbearer.
+- Turn 5: actions: cards=1, abilities=0; explicit battlefield exits=Fynn, the Fangbearer.
+- Turn 6: actions: cards=2, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Ghost Vacuum, Serpent Specialist.
+- Turn 7: actions: cards=1, abilities=0.
+- Turn 8: actions: cards=1, abilities=2; combat snapshots=1; life mutations=1; explicit battlefield entries=Hullcarver; explicit battlefield exits=Dragon Sniper, Gleaming Barrier.
+- Turn 9: actions: cards=2, abilities=0; explicit battlefield entries=Gleaming Barrier, Greedy Freebooter; explicit battlefield exits=Treasure.
+- Turn 10: actions: cards=1, abilities=2; combat snapshots=1; explicit battlefield entries=Hullcarver; explicit battlefield exits=Serpent Specialist, Greedy Freebooter, Gleaming Barrier.
+- Turn 11: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Bonehoard Dracosaur; explicit battlefield exits=Treasure, Treasure.
+- Turn 12: actions: cards=1, abilities=3; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, Virulent Silencer.
+- Turn 13: actions: cards=2, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Goldvein Pick; explicit battlefield exits=Virulent Silencer, Treasure.
+- Turn 14: actions: cards=1, abilities=3; combat snapshots=1; life mutations=1; explicit battlefield entries=Forest, Virulent Silencer.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [282] Hand (BozoTheBear) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      BozoTheBear: Battlefield: Swamp [282]
+
+Turn 2
+  - Dragon Sniper [valid_resolution_no_immediate_mutation, seq=27] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=285)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Dragon Sniper resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Dragon Sniper (object 285) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Dragon Sniper (object 285) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Qarsi Revenant [283] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 21).
+      Forest [284] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 24).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      BozoTheBear: Battlefield: Swamp [282]
+      gian31: Battlefield: Dragon Sniper [285], Forest [284]
+
+Turn 3
+  - Gleaming Barrier [valid_resolution_no_immediate_mutation, seq=47] (active=BozoTheBear, phase=Phase_Main1, controller=BozoTheBear, owner=BozoTheBear, source_object=290)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Gleaming Barrier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Gleaming Barrier (object 290) Hand (BozoTheBear) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gleaming Barrier (object 290) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Dusk Sight [287] Library (BozoTheBear) -> Hand (BozoTheBear) (Draw; GRE sequence 41).
+      Mountain [289] Hand (BozoTheBear) -> Battlefield (PlayLand; GRE sequence 44).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      BozoTheBear: Battlefield: Gleaming Barrier [290], Mountain [289], Swamp [282]
+      gian31: Battlefield: Dragon Sniper [285], Forest [284]
+
+Turn 4
+  - Fynn, the Fangbearer [valid_resolution_no_immediate_mutation, seq=68] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=295)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Fynn, the Fangbearer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 295) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 295) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Fynn, the Fangbearer [observed_semantic_effect, seq=81] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=295, source_last_explicit_zone=Battlefield)
+      effects: +2 counter(s)
+      narrative: Ability of Fynn, the Fangbearer: 2 counter(s) are added to BozoTheBear (player seat 1).
+      explicit effect object references: BozoTheBear [player seat 1] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Dragon Sniper [285] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      other-player life loss not explained by observed attacker damage: gian31 20 -> 18 (-2; phase=unknown; source unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: BozoTheBear -1; gian31 -2 (individual changes below; gains and losses may offset)
+    life (unattributed noncombat loss on a turn with combat; not explained by observed attacker damage): gian31 20 -> 18
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): BozoTheBear 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Virulent Silencer [293] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 61).
+      Overgrown Tomb [294] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 65).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      BozoTheBear: Battlefield: Gleaming Barrier [290], Mountain [289], Swamp [282]
+      gian31: Battlefield: Dragon Sniper [285], Forest [284], Fynn, the Fangbearer [295], Overgrown Tomb [294]
+
+Turn 5
+  - Shoot the Sheriff [observed_semantic_effect, seq=98] (active=BozoTheBear, phase=Phase_Main1, controller=BozoTheBear, owner=BozoTheBear, source_object=300)
+      effects: destroy
+      narrative: Shoot the Sheriff destroys Fynn, the Fangbearer.
+      explicit effect object references: Fynn, the Fangbearer [295], Fynn, the Fangbearer [303] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Shoot the Sheriff (object 300) Hand (BozoTheBear) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 303) Battlefield -> Graveyard (gian31) (Destroy; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 304) Stack -> Graveyard (BozoTheBear) (Resolve; shared object ID)
+      identity continuity: source object 300 -> transfer object 304 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 299 [299] Library (BozoTheBear) -> Hand (BozoTheBear) (Draw; GRE sequence 91).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      BozoTheBear: Battlefield: Gleaming Barrier [290], Mountain [289], Swamp [282]; Graveyard: Shoot the Sheriff [304]
+      gian31: Battlefield: Dragon Sniper [285], Forest [284], Overgrown Tomb [294]; Graveyard: Fynn, the Fangbearer [303]
+
+Turn 6
+  - Ghost Vacuum [valid_resolution_no_immediate_mutation, seq=117] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=306)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Ghost Vacuum resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Ghost Vacuum (object 306) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Ghost Vacuum (object 306) Stack -> Battlefield (Resolve; shared object ID)
+  - Serpent Specialist [valid_resolution_no_immediate_mutation, seq=120] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=308)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Serpent Specialist resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Serpent Specialist (object 308) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Serpent Specialist (object 308) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Ghost Vacuum [observed_semantic_effect, seq=125] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=306, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Ghost Vacuum: exiles Fynn, the Fangbearer.
+      explicit effect object references: Fynn, the Fangbearer [303], Fynn, the Fangbearer [311] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 311) Graveyard (gian31) -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Dragon Sniper [285] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: BozoTheBear -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): BozoTheBear 19 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Virulent Silencer [305] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 112).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      BozoTheBear: Battlefield: Gleaming Barrier [290], Mountain [289], Swamp [282]; Graveyard: Shoot the Sheriff [304]
+      gian31: Battlefield: Dragon Sniper [285], Forest [284], Ghost Vacuum [306], Overgrown Tomb [294], Serpent Specialist [308]; Exile: Fynn, the Fangbearer [311]
+
+Turn 7
+  - Dusk Sight [observed_semantic_effect, seq=153] (active=BozoTheBear, phase=Phase_Main1, controller=BozoTheBear, owner=BozoTheBear, source_object=313)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Dusk Sight: draw; Gleaming Barrier gets +1/+1; 1 counter(s) are added to Gleaming Barrier [290].
+      explicit effect object references: object 172 [172], Gleaming Barrier [290], object 317 [317] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Dusk Sight (object 313) Hand (BozoTheBear) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: object 317 (object 317) Library (BozoTheBear) -> Hand (BozoTheBear) (Draw; shared object ID)
+      protocol-linked zone transfer: Feral Deathgorger (object 318) Stack -> Library (BozoTheBear) (Resolve; shared object ID)
+      identity continuity: source object 313 -> transfer object 318 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 312 [312] Library (BozoTheBear) -> Hand (BozoTheBear) (Draw; GRE sequence 146).
+
+Turn 8
+  - Hullcarver [valid_resolution_no_immediate_mutation, seq=173] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=372)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hullcarver resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hullcarver (object 372) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hullcarver (object 372) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Ghost Vacuum [observed_semantic_effect, seq=190] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=306, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Ghost Vacuum: exiles Dragon Sniper.
+      explicit effect object references: Dragon Sniper [374], Dragon Sniper [378] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Dragon Sniper (object 378) Graveyard (gian31) -> Exile (Exile; shared object ID)
+  - Ability of Gleaming Barrier [observed_semantic_effect, seq=192] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=BozoTheBear, owner=BozoTheBear, source_object=290, source_last_explicit_zone=Battlefield, source_successor=375 observed Battlefield -> Graveyard (BozoTheBear) (SBA_Deathtouch))
+      effects: token creation
+      narrative: Ability of Gleaming Barrier: a token is created.
+      explicit effect object references: Treasure [379] (role/targeting only where the protocol identifies it)
+      token created: Treasure (object 379, controller=BozoTheBear); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 376).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Dragon Sniper [285] (blocked, observed P/T 1/1), Serpent Specialist [308] (unblocked, observed P/T 1/1)
+      blockers: Gleaming Barrier [290]
+      combat-correlated defending-player life loss: 1; observed attacker power total: 2; snapshot comparison does not reconcile (exact assignment unavailable).
+      combat-result zone change: Dragon Sniper [374] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: BozoTheBear -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): BozoTheBear 18 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      The Serpent Society [371] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 168).
+      Dragon Sniper [374] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 185).
+      Gleaming Barrier [375] Battlefield -> Graveyard (BozoTheBear) (SBA_Deathtouch; GRE sequence 185).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      BozoTheBear: Battlefield: Mountain [289], Swamp [282]; Graveyard: Gleaming Barrier [375], Shoot the Sheriff [304]
+      gian31: Battlefield: Forest [284], Ghost Vacuum [306], Hullcarver [372], Overgrown Tomb [294], Serpent Specialist [308]; Exile: Dragon Sniper [378], Fynn, the Fangbearer [311]
+
+Turn 9
+  - Gleaming Barrier [valid_resolution_no_immediate_mutation, seq=207] (active=BozoTheBear, phase=Phase_Main1, controller=BozoTheBear, owner=BozoTheBear, source_object=381)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Gleaming Barrier resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Gleaming Barrier (object 381) Hand (BozoTheBear) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Gleaming Barrier (object 381) Stack -> Battlefield (Resolve; shared object ID)
+  - Greedy Freebooter [valid_resolution_no_immediate_mutation, seq=211] (active=BozoTheBear, phase=Phase_Main1, controller=BozoTheBear, owner=BozoTheBear, source_object=384)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Greedy Freebooter resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Greedy Freebooter (object 384) Hand (BozoTheBear) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Greedy Freebooter (object 384) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Greedy Freebooter [380] Library (BozoTheBear) -> Hand (BozoTheBear) (Draw; GRE sequence 202).
+      Treasure [386] Battlefield -> Graveyard (BozoTheBear) (Sacrifice; GRE sequence 209).
+        sacrifice observed after Gleaming Barrier (seq 207); direct causal linkage is unavailable.
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      BozoTheBear: Battlefield: Gleaming Barrier [381], Greedy Freebooter [384], Mountain [289], Swamp [282]; Graveyard: Gleaming Barrier [375], Shoot the Sheriff [304], Treasure [386]
+      gian31: Battlefield: Forest [284], Ghost Vacuum [306], Hullcarver [372], Overgrown Tomb [294], Serpent Specialist [308]; Exile: Dragon Sniper [378], Fynn, the Fangbearer [311]
+
+Turn 10
+  - Hullcarver [valid_resolution_no_immediate_mutation, seq=230] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=388)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hullcarver resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hullcarver (object 388) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hullcarver (object 388) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Ghost Vacuum [observed_semantic_effect, seq=249] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=306, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Ghost Vacuum: exiles Serpent Specialist.
+      explicit effect object references: Serpent Specialist [390], Serpent Specialist [396] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Serpent Specialist (object 396) Graveyard (gian31) -> Exile (Exile; shared object ID)
+  - Ability of Gleaming Barrier [observed_semantic_effect, seq=251] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=BozoTheBear, owner=BozoTheBear, source_object=381, source_last_explicit_zone=Battlefield, source_successor=391 observed Battlefield -> Graveyard (BozoTheBear) (SBA_Deathtouch))
+      effects: token creation
+      narrative: Ability of Gleaming Barrier: a token is created.
+      explicit effect object references: Treasure [397] (role/targeting only where the protocol identifies it)
+      token created: Treasure (object 397, controller=BozoTheBear); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 394).
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock -> CombatDamage):
+      attackers: Serpent Specialist [308] (blocked, observed P/T 1/1), Hullcarver [372] (blocked, observed P/T 1/1)
+      blockers: Gleaming Barrier [381], Greedy Freebooter [384]
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat-result zone change: Serpent Specialist [390] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat-result zone change: Greedy Freebooter [392] Battlefield -> Graveyard (BozoTheBear) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hullcarver [387] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 225).
+      Serpent Specialist [390] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 243).
+      Greedy Freebooter [392] Battlefield -> Graveyard (BozoTheBear) (SBA_Damage; GRE sequence 243).
+      Gleaming Barrier [391] Battlefield -> Graveyard (BozoTheBear) (SBA_Deathtouch; GRE sequence 243).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      BozoTheBear: Battlefield: Mountain [289], Swamp [282]; Graveyard: Gleaming Barrier [375], Gleaming Barrier [391], Greedy Freebooter [392], Shoot the Sheriff [304], Treasure [386]
+      gian31: Battlefield: Forest [284], Ghost Vacuum [306], Hullcarver [372], Hullcarver [388], Overgrown Tomb [294]; Exile: Dragon Sniper [378], Fynn, the Fangbearer [311], Serpent Specialist [396]
+
+Turn 11
+  - Bonehoard Dracosaur [valid_resolution_no_immediate_mutation, seq=271] (active=BozoTheBear, phase=Phase_Main1, controller=BozoTheBear, owner=BozoTheBear, source_object=401)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Bonehoard Dracosaur resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Bonehoard Dracosaur (object 401) Hand (BozoTheBear) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Bonehoard Dracosaur (object 401) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [399] Library (BozoTheBear) -> Hand (BozoTheBear) (Draw; GRE sequence 264).
+      Swamp [400] Hand (BozoTheBear) -> Battlefield (PlayLand; GRE sequence 267).
+      Treasure [406] Battlefield -> Graveyard (BozoTheBear) (Sacrifice; GRE sequence 269).
+      Treasure [408] Battlefield -> Graveyard (BozoTheBear) (Sacrifice; GRE sequence 269).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      BozoTheBear: Battlefield: Bonehoard Dracosaur [401], Mountain [289], Swamp [282], Swamp [400]; Graveyard: Gleaming Barrier [375], Gleaming Barrier [391], Greedy Freebooter [392], Shoot the Sheriff [304], Treasure [386], Treasure [406], Treasure [408]
+      gian31: Battlefield: Forest [284], Ghost Vacuum [306], Hullcarver [372], Hullcarver [388], Overgrown Tomb [294]; Exile: Dragon Sniper [378], Fynn, the Fangbearer [311], Serpent Specialist [396]
+
+Turn 12
+  - Virulent Silencer [valid_resolution_no_immediate_mutation, seq=291] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=411)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Virulent Silencer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Virulent Silencer (object 411) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Virulent Silencer (object 411) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Virulent Silencer [observed_semantic_effect, seq=305] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=411, source_last_explicit_zone=Battlefield)
+      effects: +2 counter(s)
+      narrative: Ability of Virulent Silencer: 2 counter(s) are added to BozoTheBear (player seat 1).
+      explicit effect object references: BozoTheBear [player seat 1] (role/targeting only where the protocol identifies it)
+  - Ability of Virulent Silencer [observed_semantic_effect, seq=307] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=411, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 305 and 307; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: +2 counter(s)
+      narrative: Ability of Virulent Silencer: 2 counter(s) are added to BozoTheBear (player seat 1).
+      explicit effect object references: BozoTheBear [player seat 1] (role/targeting only where the protocol identifies it)
+  - Ability of Ghost Vacuum [observed_semantic_effect, seq=316] (active=gian31, phase=Phase_Main2, controller=gian31, owner=gian31, source_object=306, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Ghost Vacuum: exiles Gleaming Barrier.
+      explicit effect object references: Gleaming Barrier [375], Gleaming Barrier [418] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Gleaming Barrier (object 418) Graveyard (BozoTheBear) -> Exile (Exile; shared object ID)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Hullcarver [372] (unblocked, observed P/T 1/1), Hullcarver [388] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: BozoTheBear -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): BozoTheBear 17 -> 15
+    additional protocol-observed zone movements not assigned to an action chain:
+      Swamp [409] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 285).
+      Swamp [410] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 288).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      BozoTheBear: Battlefield: Bonehoard Dracosaur [401], Mountain [289], Swamp [282], Swamp [400]; Graveyard: Gleaming Barrier [391], Greedy Freebooter [392], Shoot the Sheriff [304], Treasure [386], Treasure [406], Treasure [408]; Exile: Gleaming Barrier [418]
+      gian31: Battlefield: Forest [284], Ghost Vacuum [306], Hullcarver [372], Hullcarver [388], Overgrown Tomb [294], Swamp [410], Virulent Silencer [411]; Exile: Dragon Sniper [378], Fynn, the Fangbearer [311], Serpent Specialist [396]
+
+Turn 13
+  - Ability of Bonehoard Dracosaur [observed_semantic_effect, seq=322] (active=BozoTheBear, phase=Phase_Beginning, step=Step_Upkeep, controller=BozoTheBear, owner=BozoTheBear, source_object=401, source_last_explicit_zone=Battlefield)
+      effects: exile, exile, token creation
+      narrative: Ability of Bonehoard Dracosaur: exiles Abrade, Shoot the Sheriff; exile; a token is created.
+      explicit effect object references: object 324 [324], object 325 [325], Abrade [420], Shoot the Sheriff [421], Treasure [422] (role/targeting only where the protocol identifies it)
+      token created: Treasure (object 422, controller=BozoTheBear); evidence=explicit GRE AnnotationType_TokenCreated (creation source runtime object 419).
+      protocol-linked zone transfer: Abrade (object 420) Library (BozoTheBear) -> Exile (Exile; shared object ID)
+      protocol-linked zone transfer: Shoot the Sheriff (object 421) Library (BozoTheBear) -> Exile (Exile; shared object ID)
+  - Abrade [observed_semantic_effect, seq=332] (active=BozoTheBear, phase=Phase_Main1, controller=BozoTheBear, owner=BozoTheBear, source_object=424)
+      effects: 3 damage
+      narrative: Abrade: Virulent Silencer takes 3 damage.
+      explicit effect object references: Virulent Silencer [411] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Abrade (object 424) Exile -> Stack (CastSpell; shared object ID)
+      nonstandard cast origin: observed from Exile; enabling source/rule not identified in captured records.
+      protocol-linked zone transfer: Abrade (object 427) Stack -> Graveyard (BozoTheBear) (Resolve; shared object ID)
+      identity continuity: source object 424 -> transfer object 427 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Virulent Silencer (object 428) Battlefield -> Graveyard (gian31) (SBA_Damage; shared object ID)
+  - Goldvein Pick [valid_resolution_no_immediate_mutation, seq=336] (active=BozoTheBear, phase=Phase_Main1, controller=BozoTheBear, owner=BozoTheBear, source_object=429)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Goldvein Pick resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Goldvein Pick (object 429) Hand (BozoTheBear) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Goldvein Pick (object 429) Stack -> Battlefield (Resolve; shared object ID)
+  Combat snapshots observed (active=BozoTheBear; frames: DeclareAttack -> DeclareBlock):
+      attackers: Bonehoard Dracosaur [401] (unblocked, observed P/T 5/5)
+      blockers: none identified
+      combat-correlated defending-player life loss: 5; observed attacker power total: 5; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -5 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 5 + observed modifiers 0 = 5; individual assignment unavailable): gian31 18 -> 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Goldvein Pick [423] Library (BozoTheBear) -> Hand (BozoTheBear) (Draw; GRE sequence 324).
+      Treasure [432] Battlefield -> Graveyard (BozoTheBear) (Sacrifice; GRE sequence 334).
+        sacrifice observed after Abrade (seq 332); direct causal linkage is unavailable.
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      BozoTheBear: Battlefield: Bonehoard Dracosaur [401], Goldvein Pick [429], Mountain [289], Swamp [282], Swamp [400]; Graveyard: Abrade [427], Gleaming Barrier [391], Greedy Freebooter [392], Shoot the Sheriff [304], Treasure [386], Treasure [406], Treasure [408], Treasure [432]; Exile: Gleaming Barrier [418], Shoot the Sheriff [421]
+      gian31: Battlefield: Forest [284], Ghost Vacuum [306], Hullcarver [372], Hullcarver [388], Overgrown Tomb [294], Swamp [410]; Exile: Dragon Sniper [378], Fynn, the Fangbearer [311], Serpent Specialist [396]; Graveyard: Virulent Silencer [428]
+
+Turn 14
+  - Ability of Ghost Vacuum [observed_semantic_effect, seq=366] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=306, source_last_explicit_zone=Battlefield)
+      effects: exile
+      narrative: Ability of Ghost Vacuum: exiles Virulent Silencer.
+      explicit effect object references: Virulent Silencer [428], Virulent Silencer [436] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Virulent Silencer (object 436) Graveyard (gian31) -> Exile (Exile; shared object ID)
+  - Virulent Silencer [valid_resolution_no_immediate_mutation, seq=369] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=437)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Virulent Silencer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Virulent Silencer (object 437) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Virulent Silencer (object 437) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Virulent Silencer [observed_semantic_effect, seq=383] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=437, source_last_explicit_zone=Battlefield)
+      effects: +2 counter(s)
+      narrative: Ability of Virulent Silencer: 2 counter(s) are added to BozoTheBear (player seat 1).
+      explicit effect object references: BozoTheBear [player seat 1] (role/targeting only where the protocol identifies it)
+  - Ability of Virulent Silencer [observed_semantic_effect, seq=385] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=437, source_last_explicit_zone=Battlefield)
+      diagnostic: distinct consecutive ability records observed at seq 383 and 385; whether they are separate abilities or one resolution is not determinable from captured records
+      effects: +2 counter(s)
+      narrative: Ability of Virulent Silencer: 2 counter(s) are added to BozoTheBear (player seat 1).
+      explicit effect object references: BozoTheBear [player seat 1] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> DeclareBlock):
+      attackers: Hullcarver [372] (unblocked, observed P/T 1/1), Hullcarver [388] (unblocked, observed P/T 1/1)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: BozoTheBear -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): BozoTheBear 15 -> 13
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [433] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 358).
+      Forest [434] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 361).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      BozoTheBear: Battlefield: Bonehoard Dracosaur [401], Goldvein Pick [429], Mountain [289], Swamp [282], Swamp [400]; Graveyard: Abrade [427], Gleaming Barrier [391], Greedy Freebooter [392], Shoot the Sheriff [304], Treasure [386], Treasure [406], Treasure [408], Treasure [432]; Exile: Gleaming Barrier [418], Shoot the Sheriff [421]
+      gian31: Battlefield: Forest [284], Forest [434], Ghost Vacuum [306], Hullcarver [372], Hullcarver [388], Overgrown Tomb [294], Swamp [410], Virulent Silencer [437]; Exile: Dragon Sniper [378], Fynn, the Fangbearer [311], Serpent Specialist [396], Virulent Silencer [436]
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- Turn 4, seq 65: gian31 20 -> 18. Combat declaration observed; exact assignment unavailable.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+This is separate from the transfer ledger: tokens may be introduced without an ordinary zone transfer.
+Consistency: 3 token creations observed; 0 active as last observed; 3 explicitly left the battlefield. Token presence is not inferred into the protocol ledger.
+- Treasure [379] controller=BozoTheBear; created Turn 8 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 9 via Battlefield -> Graveyard (BozoTheBear) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+- Treasure [397] controller=BozoTheBear; created Turn 10 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 11 via Battlefield -> Graveyard (BozoTheBear) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+- Treasure [422] controller=BozoTheBear; created Turn 13 (unknown); creation evidence=explicit GRE AnnotationType_TokenCreated; left battlefield Turn 13 via Battlefield -> Graveyard (BozoTheBear) (Sacrifice); ceases to exist after that observed move (token rules consequence).
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Swamp [owner=BozoTheBear, controller=BozoTheBear] moves Hand (BozoTheBear) -> Battlefield (PlayLand).
+- Turn 2, seq 21: Qarsi Revenant [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 24: Forest [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 2, seq 25: Dragon Sniper [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 2, seq 27: Dragon Sniper [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 41: Dusk Sight [owner/controller metadata unavailable] moves Library (BozoTheBear) -> Hand (BozoTheBear) (Draw).
+- Turn 3, seq 44: Mountain [owner=BozoTheBear, controller=BozoTheBear] moves Hand (BozoTheBear) -> Battlefield (PlayLand).
+- Turn 3, seq 45: Gleaming Barrier [owner=BozoTheBear, controller=BozoTheBear] moves Hand (BozoTheBear) -> Stack (CastSpell).
+- Turn 3, seq 47: Gleaming Barrier [owner=BozoTheBear, controller=BozoTheBear] moves Stack -> Battlefield (Resolve).
+- Turn 4, seq 61: Virulent Silencer [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 65: Overgrown Tomb [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 66: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 68: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 91: object 299 [owner/controller metadata unavailable] moves Library (BozoTheBear) -> Hand (BozoTheBear) (Draw).
+- Turn 5, seq 94: Shoot the Sheriff [owner=BozoTheBear, controller=BozoTheBear] moves Hand (BozoTheBear) -> Stack (CastSpell).
+- Turn 5, seq 98: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (Destroy).
+- Turn 5, seq 98: Shoot the Sheriff [owner=BozoTheBear, controller=BozoTheBear] moves Stack -> Graveyard (BozoTheBear) (Resolve).
+- Turn 6, seq 112: Virulent Silencer [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 115: Ghost Vacuum [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 117: Ghost Vacuum [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 118: Serpent Specialist [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 120: Serpent Specialist [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 6, seq 125: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Exile (Exile).
+- Turn 7, seq 146: object 312 [owner/controller metadata unavailable] moves Library (BozoTheBear) -> Hand (BozoTheBear) (Draw).
+- Turn 7, seq 149: Dusk Sight [owner=BozoTheBear, controller=BozoTheBear] moves Hand (BozoTheBear) -> Stack (CastSpell).
+- Turn 7, seq 153: object 317 [owner/controller metadata unavailable] moves Library (BozoTheBear) -> Hand (BozoTheBear) (Draw).
+- Turn 7, seq 153: Feral Deathgorger [owner=BozoTheBear, controller=BozoTheBear] moves Stack -> Library (BozoTheBear) (Resolve).
+- Turn 8, seq 168: The Serpent Society [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 171: Hullcarver [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 173: Hullcarver [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 185: Dragon Sniper [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 8, seq 185: Gleaming Barrier [owner=BozoTheBear, controller=BozoTheBear] moves Battlefield -> Graveyard (BozoTheBear) (SBA_Deathtouch).
+- Turn 8, seq 190: Dragon Sniper [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Exile (Exile).
+- Turn 9, seq 202: Greedy Freebooter [owner/controller metadata unavailable] moves Library (BozoTheBear) -> Hand (BozoTheBear) (Draw).
+- Turn 9, seq 205: Gleaming Barrier [owner=BozoTheBear, controller=BozoTheBear] moves Hand (BozoTheBear) -> Stack (CastSpell).
+- Turn 9, seq 207: Gleaming Barrier [owner=BozoTheBear, controller=BozoTheBear] moves Stack -> Battlefield (Resolve).
+- Turn 9, seq 208: Greedy Freebooter [owner=BozoTheBear, controller=BozoTheBear] moves Hand (BozoTheBear) -> Stack (CastSpell).
+- Turn 9, seq 209: Treasure [owner/controller metadata unavailable] moves Battlefield -> Graveyard (BozoTheBear) (Sacrifice).
+- Turn 9, seq 211: Greedy Freebooter [owner=BozoTheBear, controller=BozoTheBear] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 225: Hullcarver [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 228: Hullcarver [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 230: Hullcarver [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 243: Serpent Specialist [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 10, seq 243: Greedy Freebooter [owner=BozoTheBear, controller=BozoTheBear] moves Battlefield -> Graveyard (BozoTheBear) (SBA_Damage).
+- Turn 10, seq 243: Gleaming Barrier [owner=BozoTheBear, controller=BozoTheBear] moves Battlefield -> Graveyard (BozoTheBear) (SBA_Deathtouch).
+- Turn 10, seq 249: Serpent Specialist [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Exile (Exile).
+- Turn 11, seq 264: Swamp [owner/controller metadata unavailable] moves Library (BozoTheBear) -> Hand (BozoTheBear) (Draw).
+- Turn 11, seq 267: Swamp [owner=BozoTheBear, controller=BozoTheBear] moves Hand (BozoTheBear) -> Battlefield (PlayLand).
+- Turn 11, seq 268: Bonehoard Dracosaur [owner=BozoTheBear, controller=BozoTheBear] moves Hand (BozoTheBear) -> Stack (CastSpell).
+- Turn 11, seq 269: Treasure [owner/controller metadata unavailable] moves Battlefield -> Graveyard (BozoTheBear) (Sacrifice).
+- Turn 11, seq 269: Treasure [owner/controller metadata unavailable] moves Battlefield -> Graveyard (BozoTheBear) (Sacrifice).
+- Turn 11, seq 271: Bonehoard Dracosaur [owner=BozoTheBear, controller=BozoTheBear] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 285: Swamp [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 288: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 12, seq 289: Virulent Silencer [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 12, seq 291: Virulent Silencer [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 12, seq 316: Gleaming Barrier [owner=BozoTheBear, controller=BozoTheBear] moves Graveyard (BozoTheBear) -> Exile (Exile).
+- Turn 13, seq 322: Abrade [owner=BozoTheBear, controller=BozoTheBear] moves Library (BozoTheBear) -> Exile (Exile).
+- Turn 13, seq 322: Shoot the Sheriff [owner=BozoTheBear, controller=BozoTheBear] moves Library (BozoTheBear) -> Exile (Exile).
+- Turn 13, seq 324: Goldvein Pick [owner/controller metadata unavailable] moves Library (BozoTheBear) -> Hand (BozoTheBear) (Draw).
+- Turn 13, seq 327: Abrade [owner=BozoTheBear, controller=BozoTheBear] moves Exile -> Stack (CastSpell).
+- Turn 13, seq 332: Abrade [owner=BozoTheBear, controller=BozoTheBear] moves Stack -> Graveyard (BozoTheBear) (Resolve).
+- Turn 13, seq 332: Virulent Silencer [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 13, seq 333: Goldvein Pick [owner=BozoTheBear, controller=BozoTheBear] moves Hand (BozoTheBear) -> Stack (CastSpell).
+- Turn 13, seq 334: Treasure [owner/controller metadata unavailable] moves Battlefield -> Graveyard (BozoTheBear) (Sacrifice).
+- Turn 13, seq 336: Goldvein Pick [owner=BozoTheBear, controller=BozoTheBear] moves Stack -> Battlefield (Resolve).
+- Turn 14, seq 358: Forest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 14, seq 361: Forest [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 14, seq 366: Virulent Silencer [owner=gian31, controller=gian31] moves Graveyard (gian31) -> Exile (Exile).
+- Turn 14, seq 367: Virulent Silencer [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 14, seq 369: Virulent Silencer [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 165 becomes object 282 [Swamp].
+- Turn 2, seq 21: object 229 becomes object 283 [Qarsi Revenant].
+- Turn 2, seq 24: object 222 becomes object 284 [Forest].
+- Turn 2, seq 25: object 226 becomes object 285 [Dragon Sniper].
+- Turn 3, seq 41: object 169 becomes object 287 [Dusk Sight].
+- Turn 3, seq 44: object 164 becomes object 289 [Mountain].
+- Turn 3, seq 45: object 166 becomes object 290 [Gleaming Barrier].
+- Turn 4, seq 61: object 230 becomes object 293 [Virulent Silencer].
+- Turn 4, seq 65: object 227 becomes object 294 [Overgrown Tomb].
+- Turn 4, seq 66: object 228 becomes object 295 [Fynn, the Fangbearer].
+- Turn 5, seq 91: object 170 becomes object 299 [object 170].
+- Turn 5, seq 94: object 168 becomes object 300 [Shoot the Sheriff].
+- Turn 5, seq 98: object 295 becomes object 303 [Fynn, the Fangbearer].
+- Turn 5, seq 98: object 300 becomes object 304 [Shoot the Sheriff].
+- Turn 6, seq 112: object 231 becomes object 305 [Virulent Silencer].
+- Turn 6, seq 115: object 225 becomes object 306 [Ghost Vacuum].
+- Turn 6, seq 118: object 223 becomes object 308 [Serpent Specialist].
+- Turn 6, seq 125: object 303 becomes object 311 [Fynn, the Fangbearer].
+- Turn 7, seq 146: object 171 becomes object 312 [object 171].
+- Turn 7, seq 149: object 287 becomes object 313 [Dusk Sight].
+- Turn 7, seq 153: object 172 becomes object 317 [object 172].
+- Turn 7, seq 153: object 313 becomes object 318 (Dusk Sight -> Feral Deathgorger).
+- Turn 8, seq 168: object 232 becomes object 371 [The Serpent Society].
+- Turn 8, seq 171: object 224 becomes object 372 [Hullcarver].
+- Turn 8, seq 185: object 285 becomes object 374 [Dragon Sniper].
+- Turn 8, seq 185: object 290 becomes object 375 [Gleaming Barrier].
+- Turn 8, seq 190: object 374 becomes object 378 [Dragon Sniper].
+- Turn 9, seq 202: object 321 becomes object 380 [Greedy Freebooter].
+- Turn 9, seq 205: object 163 becomes object 381 [Gleaming Barrier].
+- Turn 9, seq 208: object 380 becomes object 384 [Greedy Freebooter].
+- Turn 9, seq 209: object 379 becomes object 386 [Treasure].
+- Turn 10, seq 225: object 233 becomes object 387 [Hullcarver].
+- Turn 10, seq 228: object 387 becomes object 388 [Hullcarver].
+- Turn 10, seq 243: object 308 becomes object 390 [Serpent Specialist].
+- Turn 10, seq 243: object 384 becomes object 392 [Greedy Freebooter].
+- Turn 10, seq 243: object 381 becomes object 391 [Gleaming Barrier].
+- Turn 10, seq 249: object 390 becomes object 396 [Serpent Specialist].
+- Turn 11, seq 264: object 323 becomes object 399 [Swamp].
+- Turn 11, seq 267: object 399 becomes object 400 [Swamp].
+- Turn 11, seq 268: object 162 becomes object 401 [Bonehoard Dracosaur].
+- Turn 11, seq 269: object 397 becomes object 406 [Treasure].
+- Turn 11, seq 269: object 398 becomes object 408 [Treasure].
+- Turn 12, seq 285: object 234 becomes object 409 [Swamp].
+- Turn 12, seq 288: object 409 becomes object 410 [Swamp].
+- Turn 12, seq 289: object 305 becomes object 411 [Virulent Silencer].
+- Turn 12, seq 316: object 375 becomes object 418 [Gleaming Barrier].
+- Turn 13, seq 322: object 324 becomes object 420 [Abrade].
+- Turn 13, seq 322: object 325 becomes object 421 [Shoot the Sheriff].
+- Turn 13, seq 324: object 326 becomes object 423 [Goldvein Pick].
+- Turn 13, seq 327: object 420 becomes object 424 [Abrade].
+- Turn 13, seq 332: object 424 becomes object 427 [Abrade].
+- Turn 13, seq 332: object 411 becomes object 428 [Virulent Silencer].
+- Turn 13, seq 333: object 423 becomes object 429 [Goldvein Pick].
+- Turn 13, seq 334: object 422 becomes object 432 [Treasure].
+- Turn 14, seq 358: object 235 becomes object 433 [Forest].
+- Turn 14, seq 361: object 433 becomes object 434 [Forest].
+- Turn 14, seq 366: object 428 becomes object 436 [Virulent Silencer].
+- Turn 14, seq 367: object 293 becomes object 437 [Virulent Silencer].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: BozoTheBear plays Swamp (object 282) from Hand (BozoTheBear) to Battlefield.
+- Turn 2: gian31 plays Forest (object 284) from Hand (gian31) to Battlefield.
+- Turn 3: BozoTheBear plays Mountain (object 289) from Hand (BozoTheBear) to Battlefield.
+- Turn 4: gian31 plays Overgrown Tomb (object 294) from Hand (gian31) to Battlefield.
+- Turn 11: BozoTheBear plays Swamp (object 400) from Hand (BozoTheBear) to Battlefield.
+- Turn 12: gian31 plays Swamp (object 410) from Hand (gian31) to Battlefield.
+- Turn 14: gian31 plays Forest (object 434) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Ghost Vacuum: casts=1; abilities=5 (triggered=5, activated=0) across turns [6, 6, 8, 10, 12, 14]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=5
+  observed effects: exile
+- Virulent Silencer: casts=2; abilities=4 (triggered=4, activated=0) across turns [12, 12, 12, 14, 14, 14]
+  observed effect totals: draws=0, tokens=0, counters=4, returns=0, damage=0, life_changes=0, other=0
+  observed effects: +2 counter(s)
+- Gleaming Barrier: casts=2; abilities=2 (triggered=2, activated=0) across turns [3, 8, 9, 10]
+  observed effect totals: draws=0, tokens=2, counters=0, returns=0, damage=0, life_changes=0, other=0
+  observed effects: token creation
+- Bonehoard Dracosaur: casts=1; abilities=1 (triggered=1, activated=0) across turns [11, 13]
+  observed effect totals: draws=0, tokens=1, counters=0, returns=0, damage=0, life_changes=0, other=2
+  observed effects: exile, token creation
+- Fynn, the Fangbearer: casts=1; abilities=1 (triggered=1, activated=0) across turns [4, 4]
+  observed effect totals: draws=0, tokens=0, counters=1, returns=0, damage=0, life_changes=0, other=0
+  observed effects: +2 counter(s)
+- Hullcarver: casts=2 across turns [8, 10]
+- Abrade: casts=1 across turns [13]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 3 damage
+- Dragon Sniper: casts=1 across turns [2]
+- Dusk Sight: casts=1 across turns [7]
+  observed effect totals: draws=1, tokens=0, counters=1, returns=0, damage=0, life_changes=0, other=1
+  observed effects: +1 counter(s), P/T +1/+1, draw
+- Goldvein Pick: casts=1 across turns [13]
+- Greedy Freebooter: casts=1 across turns [9]
+- Serpent Specialist: casts=1 across turns [6]
+- Shoot the Sheriff: casts=1 across turns [5]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=0, life_changes=0, other=1
+  observed effects: destroy
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 4 - DeclareAttack (active=gian31)
+  attacker: Dragon Sniper (gian31) -> BozoTheBear; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 6 - DeclareAttack (active=gian31)
+  attacker: Dragon Sniper (gian31) -> BozoTheBear; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Dragon Sniper (gian31) -> BozoTheBear; blocked by Gleaming Barrier
+  attacker: Serpent Specialist (gian31) -> BozoTheBear; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, DeclareBlock, CombatDamage (active=gian31)
+  attacker: Serpent Specialist (gian31) -> BozoTheBear; blocked by Greedy Freebooter
+  attacker: Hullcarver (gian31) -> BozoTheBear; blocked by Gleaming Barrier
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Hullcarver (gian31) -> BozoTheBear; unblocked in this observed snapshot
+  attacker: Hullcarver (gian31) -> BozoTheBear; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 13 - DeclareAttack, DeclareBlock (active=BozoTheBear)
+  attacker: Bonehoard Dracosaur (BozoTheBear) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 14 - DeclareAttack, DeclareBlock (active=gian31)
+  attacker: Hullcarver (gian31) -> BozoTheBear; unblocked in this observed snapshot
+  attacker: Hullcarver (gian31) -> BozoTheBear; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 4: Ability of Fynn, the Fangbearer (active=gian31) - Ability of Fynn, the Fangbearer: 2 counter(s) are added to target.
+- Turn 8: Ability of Ghost Vacuum (active=gian31) - Ability of Ghost Vacuum: exile.
+- Turn 8: Ability of Gleaming Barrier (active=gian31 controller=BozoTheBear) - Ability of Gleaming Barrier: a token is created.
+- Turn 10: Ability of Ghost Vacuum (active=gian31) - Ability of Ghost Vacuum: exile.
+- Turn 10: Ability of Gleaming Barrier (active=gian31 controller=BozoTheBear) - Ability of Gleaming Barrier: a token is created.
+- Turn 12: Ability of Virulent Silencer (active=gian31) - Ability of Virulent Silencer: 2 counter(s) are added to target.
+- Turn 12: Ability of Virulent Silencer (active=gian31) - Ability of Virulent Silencer: 2 counter(s) are added to target.
+- Turn 14: Ability of Virulent Silencer (active=gian31) - Ability of Virulent Silencer: 2 counter(s) are added to target.
+- Turn 14: Ability of Virulent Silencer (active=gian31) - Ability of Virulent Silencer: 2 counter(s) are added to target.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 222: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 223: Serpent Specialist | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 224: Hullcarver | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 225: Ghost Vacuum | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 226: Dragon Sniper | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 227: Overgrown Tomb | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 228: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 282: Swamp | controller=BozoTheBear | owner=BozoTheBear | zone=Battlefield (latest_object_observation)
+- 283: Qarsi Revenant | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 284: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 285: Dragon Sniper | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 289: Mountain | controller=BozoTheBear | owner=BozoTheBear | zone=Battlefield (latest_object_observation)
+- 290: Gleaming Barrier | controller=BozoTheBear | owner=BozoTheBear | zone=Battlefield (latest_object_observation)
+- 293: Virulent Silencer | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 294: Overgrown Tomb | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 295: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 298: object 298 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 300: Shoot the Sheriff | controller=BozoTheBear | owner=BozoTheBear | zone=Stack (latest_object_observation)
+- 303: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Graveyard (latest_object_observation)
+- 304: Shoot the Sheriff | controller=BozoTheBear | owner=BozoTheBear | zone=Battlefield (latest_object_observation)
+- 305: Virulent Silencer | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 306: Ghost Vacuum | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 308: Serpent Specialist | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 310: object 310 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 311: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 313: Dusk Sight | controller=BozoTheBear | owner=BozoTheBear | zone=Stack (latest_object_observation)
+- 314: Dusk Sight | controller=BozoTheBear | owner=BozoTheBear | zone=unknown (inferred unknown) (latest_object_observation)
+- 318: Feral Deathgorger | controller=BozoTheBear | owner=BozoTheBear | zone=Battlefield (latest_object_observation)
+- 319: Dusk Sight | controller=BozoTheBear | owner=BozoTheBear | zone=Battlefield (latest_object_observation)
+- 320: Feral Deathgorger | controller=BozoTheBear | owner=BozoTheBear | zone=unknown (inferred unknown) (latest_object_observation)
+- 371: The Serpent Society | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 372: Hullcarver | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 374: Dragon Sniper | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 375: Gleaming Barrier | controller=BozoTheBear | owner=BozoTheBear | zone=Battlefield (latest_object_observation)
+- 376: object 376 | controller=BozoTheBear | owner=BozoTheBear | zone=unknown (inferred unknown) (latest_object_observation)
+- 377: object 377 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 378: Dragon Sniper | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 379: Treasure | controller=BozoTheBear | owner=BozoTheBear | zone=Battlefield (latest_object_observation)
+- 381: Gleaming Barrier | controller=BozoTheBear | owner=BozoTheBear | zone=Battlefield (latest_object_observation)
+- 384: Greedy Freebooter | controller=BozoTheBear | owner=BozoTheBear | zone=Battlefield (latest_object_observation)
+- 387: Hullcarver | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 388: Hullcarver | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 390: Serpent Specialist | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 391: Gleaming Barrier | controller=BozoTheBear | owner=BozoTheBear | zone=Battlefield (latest_object_observation)
+- 392: Greedy Freebooter | controller=BozoTheBear | owner=BozoTheBear | zone=Battlefield (latest_object_observation)
+- 393: object 393 | controller=BozoTheBear | owner=BozoTheBear | zone=unknown (inferred unknown) (latest_object_observation)
+- 394: object 394 | controller=BozoTheBear | owner=BozoTheBear | zone=unknown (inferred unknown) (latest_object_observation)
+- 395: object 395 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 396: Serpent Specialist | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 397: Treasure | controller=BozoTheBear | owner=BozoTheBear | zone=Battlefield (latest_object_observation)
+- 398: Treasure | controller=BozoTheBear | owner=BozoTheBear | zone=Battlefield (latest_object_observation)
+- 400: Swamp | controller=BozoTheBear | owner=BozoTheBear | zone=Battlefield (latest_object_observation)
+- 401: Bonehoard Dracosaur | controller=BozoTheBear | owner=BozoTheBear | zone=Battlefield (latest_object_observation)
+- 409: Swamp | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 410: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 411: Virulent Silencer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 415: object 415 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 416: object 416 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 417: object 417 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 418: Gleaming Barrier | controller=BozoTheBear | owner=BozoTheBear | zone=Exile (latest_object_observation)
+- 419: object 419 | controller=BozoTheBear | owner=BozoTheBear | zone=unknown (inferred unknown) (latest_object_observation)
+- 420: Abrade | controller=BozoTheBear | owner=BozoTheBear | zone=Exile (latest_object_observation)
+- 421: Shoot the Sheriff | controller=BozoTheBear | owner=BozoTheBear | zone=Exile (latest_object_observation)
+- 422: Treasure | controller=BozoTheBear | owner=BozoTheBear | zone=Battlefield (latest_object_observation)
+- 424: Abrade | controller=BozoTheBear | owner=BozoTheBear | zone=Stack (latest_object_observation)
+- 427: Abrade | controller=BozoTheBear | owner=BozoTheBear | zone=Battlefield (latest_object_observation)
+- 428: Virulent Silencer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 429: Goldvein Pick | controller=BozoTheBear | owner=BozoTheBear | zone=Stack (latest_object_observation)
+- 433: Forest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 434: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 435: object 435 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 436: Virulent Silencer | controller=gian31 | owner=gian31 | zone=Exile (latest_object_observation)
+- 437: Virulent Silencer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 441: object 441 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 442: object 442 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+BozoTheBear: 31 total items
+  zones: Battlefield=18, Exile=3, Stack=4, unknown=6
+  objects: Gleaming Barrier x5, Treasure x4, Abrade x3, Dusk Sight x3, Shoot the Sheriff x3, Feral Deathgorger x2, Greedy Freebooter x2, Swamp x2, Bonehoard Dracosaur, Goldvein Pick, Mountain, object 376
+gian31: 44 total items
+  zones: Battlefield=21, Exile=4, Graveyard=1, Hand=7, Stack=1, unknown=10
+  objects: Virulent Silencer x6, Dragon Sniper x4, Forest x4, Fynn, the Fangbearer x4, Hullcarver x4, Serpent Specialist x4, Ghost Vacuum x2, Overgrown Tomb x2, Swamp x2, Qarsi Revenant, The Serpent Society, object 298
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+BozoTheBear:
+  Battlefield (18): Abrade, Bonehoard Dracosaur, Dusk Sight, Feral Deathgorger, Gleaming Barrier, Gleaming Barrier, Gleaming Barrier, Gleaming Barrier, Greedy Freebooter, Greedy Freebooter, Mountain, Shoot the Sheriff, Swamp, Swamp, Treasure, Treasure, Treasure, Treasure
+  Graveyard: 0 card(s)
+gian31:
+  Battlefield (21): Dragon Sniper, Dragon Sniper, Dragon Sniper, Forest, Forest, Forest, Fynn, the Fangbearer, Fynn, the Fangbearer, Ghost Vacuum, Hullcarver, Hullcarver, Hullcarver, Overgrown Tomb, Overgrown Tomb, Serpent Specialist, Serpent Specialist, Serpent Specialist, Swamp, Virulent Silencer, Virulent Silencer, Virulent Silencer
+  Graveyard: 1 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+16 objects have no resolved final zone and are omitted from the known board state.
+BozoTheBear: 6 unknown object(s)
+gian31: 10 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=7, Stack=5
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+BozoTheBear:
+  Battlefield (5): Swamp, Mountain, Swamp, Bonehoard Dracosaur, Goldvein Pick
+  Graveyard (4): Shoot the Sheriff, Gleaming Barrier, Greedy Freebooter, Abrade
+  Exile (2): Gleaming Barrier, Shoot the Sheriff
+gian31:
+  Battlefield (8): Forest, Overgrown Tomb, Ghost Vacuum, Hullcarver, Hullcarver, Swamp, Forest, Virulent Silencer
+  Graveyard (1): Virulent Silencer
+  Exile (4): Fynn, the Fangbearer, Dragon Sniper, Serpent Specialist, Virulent Silencer
+Known non-persistent entries (counts only):
+  BozoTheBear: Hand=3, Limbo=4
+  gian31: Hand=2, Limbo=5
+  unknown: Hand=1, Library=91, Limbo=6
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: BozoTheBear Battlefield=1
+- Turn 2: BozoTheBear Battlefield=1; gian31 Battlefield=2
+- Turn 3: BozoTheBear Battlefield=3; gian31 Battlefield=2
+- Turn 4: BozoTheBear Battlefield=3; gian31 Battlefield=4
+- Turn 5: BozoTheBear Battlefield=3; BozoTheBear Graveyard=1; gian31 Battlefield=3; gian31 Graveyard=1
+- Turn 6: BozoTheBear Battlefield=3; BozoTheBear Graveyard=1; gian31 Battlefield=5; gian31 Exile=1
+- Turn 7: BozoTheBear Battlefield=3; BozoTheBear Graveyard=1; gian31 Battlefield=5; gian31 Exile=1
+- Turn 8: BozoTheBear Battlefield=2; BozoTheBear Graveyard=2; gian31 Battlefield=5; gian31 Exile=2
+- Turn 9: BozoTheBear Battlefield=4; BozoTheBear Graveyard=3; gian31 Battlefield=5; gian31 Exile=2
+- Turn 10: BozoTheBear Battlefield=2; BozoTheBear Graveyard=5; gian31 Battlefield=5; gian31 Exile=3
+- Turn 11: BozoTheBear Battlefield=4; BozoTheBear Graveyard=7; gian31 Battlefield=5; gian31 Exile=3
+- Turn 12: BozoTheBear Battlefield=4; BozoTheBear Graveyard=6; BozoTheBear Exile=1; gian31 Battlefield=7; gian31 Exile=3
+- Turn 13: BozoTheBear Battlefield=5; BozoTheBear Graveyard=8; BozoTheBear Exile=2; gian31 Battlefield=6; gian31 Graveyard=1; gian31 Exile=3
+- Turn 14: BozoTheBear Battlefield=5; BozoTheBear Graveyard=8; BozoTheBear Exile=2; gian31 Battlefield=8; gian31 Exile=4
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 2: Dragon Sniper resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Gleaming Barrier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Fynn, the Fangbearer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Ghost Vacuum resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Serpent Specialist resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Hullcarver resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Gleaming Barrier resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Greedy Freebooter resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Hullcarver resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Bonehoard Dracosaur resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 12: Virulent Silencer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 13: Goldvein Pick resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 14: Virulent Silencer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
