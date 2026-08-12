@@ -1,0 +1,659 @@
+MTGA MATCH ANALYSIS
+============================================================
+Players: gian31, elgrams
+Seat map: Seat 1=gian31, Seat 2=elgrams
+Turn range (known): 1 - 12
+Unnumbered turn groups retained: 1
+Records: 20
+Action chains: 19
+Winner: gian31
+Final life: {'gian31': 18, 'elgrams': 17}
+Match conclusion: Winner observed from match-result payload (protocol reason: ResultReason_Concede); no more specific terminal event was captured.
+Last captured action before match-result payload: Turn 11 (Phase_Main1; Springbloom Druid, seq 285).
+Later numbered GRE record(s): 20 after action sequence 285 across turn(s) [11, 12]. The match-result payload has no GRE message sequence, so their authoritative temporal relationship to it is unavailable.
+POST-ACTION GRE RECORDS - RESULT ORDER UNRESOLVED
+  - Turn 11, seq 288: identity_changed.
+  - Turn 11, seq 288: zone_transfer (Sacrifice).
+  - Turn 11, seq 289: identity_changed.
+  - Turn 11, seq 289: zone_transfer (Put).
+  - Turn 11, seq 289: identity_changed.
+  - Turn 11, seq 289: zone_transfer (Put).
+  - Turn 12, seq 304: tapped_changed.
+  - Turn 12, seq 304: tapped_changed.
+  - Turn 12, seq 304: tapped_changed.
+  - Turn 12, seq 304: tapped_changed.
+  - Turn 12, seq 304: tapped_changed.
+  - Turn 12, seq 304: tapped_changed.
+  - Turn 12, seq 304: tapped_changed.
+  - Turn 12, seq 306: identity_changed.
+  - Turn 12, seq 306: zone_transfer (Draw).
+  - Turn 12, seq 309: identity_changed.
+  - Turn 12, seq 309: zone_transfer (PlayLand).
+  - Turn 12, seq 315: tapped_changed.
+  - Turn 12, seq 315: tapped_changed.
+  - Turn 12, seq 315: tapped_changed.
+  These records are retained for traceability; their order relative to the match-result payload is not asserted.
+Technical note: final_match_reconstruction.json is the compact, shareable technical companion. Full GRE checkpoint history is retained locally in final_match_reconstruction_full.json; external archive inclusion depends on the selected export option.
+Protocol ledger coverage: 31 runtime objects have explicit transfer history; this is not a complete battlefield or zone snapshot.
+Land-drop coverage: 10 distinct explicit PlayLand movement(s) across turns [1, 2, 3, 4, 5, 6, 8, 10, 11, 12] (raw records=10; equivalent duplicates=0). Every explicit PlayLand transfer is rendered either under its action chain or as an additional protocol-observed movement.
+Draw coverage: 11 explicit Library -> Hand movement(s); named in the draw record=6, resolved through an explicit identity transition=4, unresolved=1.
+Unresolved draw identities (explicit movements retained): Turn 9, seq 222, object 437.
+OPENING HAND (EARLIEST CAPTURED CHECKPOINT)
+  - checkpoint: Turn 1 (Phase_Beginning, Step_Upkeep; game state 4).
+  - gian31: 7 observed card(s): Forest [159], Hard-Hitting Question [160], Fynn, the Fangbearer [161], Virulent Silencer [162], Swamp [163], Axebane Ferox [164], Swamp [165].
+  - unknown: 7 observed card(s): object 219 [219], object 220 [220], object 221 [221], object 222 [222], object 223 [223], object 224 [224], object 225 [225].
+  - coverage: Earliest captured GRE checkpoint only; cards absent from this checkpoint are not inferred.
+STATE AT MATCH END
+------------------------------------------------------------
+Winner: gian31; observed final life totals: {'gian31': 18, 'elgrams': 17}.
+Composite final-state evidence: persistent non-token zones are reported from GRE checkpoints/transfer ledger below; token entries are reported separately from token observations and are not merged into that ledger.
+Last captured action before result payload: Turn 11 (Phase_Main1; Springbloom Druid, seq 285).
+Last captured life snapshot: elgrams 19 -> 17 (seq 267).
+Terminal condition observed: match ended by concession (ResultReason_Concede); the strategic reason for conceding is unavailable.
+
+TURN NAVIGATION INDEX (ADDITIVE)
+------------------------------------------------------------
+- Turn 1: actions: cards=1, abilities=0; explicit battlefield entries=Forest, Sazh's Chocobo.
+- Turn 2: actions: cards=0, abilities=0; explicit battlefield entries=Forest.
+- Turn 3: actions: cards=2, abilities=2; combat snapshots=1; life mutations=1; explicit battlefield entries=Escape Tunnel, Studious First-Year, Forest; explicit battlefield exits=Escape Tunnel.
+- Turn 4: actions: cards=1, abilities=0; explicit battlefield entries=Forest, Fynn, the Fangbearer.
+- Turn 5: actions: cards=1, abilities=2; combat snapshots=1; explicit battlefield entries=Escape Tunnel, Llanowar Elves, Forest; explicit battlefield exits=Escape Tunnel, Fynn, the Fangbearer, Sazh's Chocobo.
+- Turn 6: actions: cards=1, abilities=0; explicit battlefield entries=Swamp, Fynn, the Fangbearer.
+- Turn 7: actions: cards=3, abilities=0; explicit battlefield entries=Traveling Chocobo.
+- Turn 8: actions: cards=2, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Swamp, Virulent Silencer; explicit battlefield exits=Traveling Chocobo.
+- Turn 9: actions: cards=1, abilities=0; explicit battlefield entries=Forest, Tifa Lockhart.
+- Turn 10: actions: cards=1, abilities=1; combat snapshots=1; life mutations=1; explicit battlefield entries=Forest, Axebane Ferox; explicit battlefield exits=Studious First-Year, Tifa Lockhart.
+- Turn 11: actions: cards=1, abilities=0; explicit battlefield entries=Forest, Springbloom Druid, Forest, Forest; explicit battlefield exits=Forest.
+- Turn 12: actions: cards=0, abilities=0; combat snapshots=1; explicit battlefield entries=Forest.
+- Turn None: actions: cards=0, abilities=0.
+This index is navigational only: the complete timeline and all individual transfer records remain authoritative below.
+
+TURN-BY-TURN TIMELINE
+------------------------------------------------------------
+Turn 1
+  - Sazh's Chocobo [valid_resolution_no_immediate_mutation, seq=10] (active=elgrams, phase=Phase_Main1, controller=elgrams, owner=elgrams, source_object=280)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Sazh's Chocobo resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Sazh's Chocobo (object 280) Hand (elgrams) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Sazh's Chocobo (object 280) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [279] Hand (elgrams) -> Battlefield (PlayLand; GRE sequence 7).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      elgrams: Battlefield: Forest [279], Sazh's Chocobo [280]
+
+Turn 2
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [282] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 24).
+      Forest [283] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 27).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      elgrams: Battlefield: Forest [279], Sazh's Chocobo [280]
+      gian31: Battlefield: Forest [283]
+
+Turn 3
+  - Ability of Sazh's Chocobo [observed_semantic_effect, seq=46] (active=elgrams, phase=Phase_Main1, controller=elgrams, owner=elgrams, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Sazh's Chocobo: Sazh's Chocobo gets +1/+1; 1 counter(s) are added to Sazh's Chocobo [280].
+  - Studious First-Year [valid_resolution_no_immediate_mutation, seq=49] (active=elgrams, phase=Phase_Main1, controller=elgrams, owner=elgrams, source_object=287)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Studious First-Year resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Studious First-Year (object 287) Hand (elgrams) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Studious First-Year (object 287) Stack -> Battlefield (Resolve; shared object ID)
+  - Studious First-Year [valid_resolution_no_immediate_mutation, seq=50] (active=elgrams, phase=Phase_Main1, controller=elgrams, owner=elgrams, source_object=287)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Studious First-Year resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Studious First-Year (object 287) Hand (elgrams) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Studious First-Year (object 287) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Sazh's Chocobo [observed_semantic_effect, seq=57] (active=elgrams, phase=Phase_Main1, controller=elgrams, owner=elgrams, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Sazh's Chocobo: Sazh's Chocobo gets +1/+1; 1 counter(s) are added to Sazh's Chocobo [280].
+  Combat snapshots observed (active=elgrams; frames: DeclareAttack -> DeclareBlock):
+      attackers: Sazh's Chocobo [280] (unblocked, observed P/T 2/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 2; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: gian31 -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): gian31 20 -> 18
+    additional protocol-observed zone movements not assigned to an action chain:
+      Llanowar Elves [284] Library (elgrams) -> Hand (elgrams) (Draw; GRE sequence 41).
+      Escape Tunnel [285] Hand (elgrams) -> Battlefield (PlayLand; GRE sequence 44).
+      Escape Tunnel [291] Battlefield -> Graveyard (elgrams) (Sacrifice; GRE sequence 51).
+        sacrifice observed after Studious First-Year (seq 50); direct causal linkage is unavailable.
+      Forest [292] Library (elgrams) -> Battlefield (Put; GRE sequence 54).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      elgrams: Battlefield: Forest [279], Forest [292], Sazh's Chocobo [280], Studious First-Year [287]; Graveyard: Escape Tunnel [291]
+      gian31: Battlefield: Forest [283]
+
+Turn 4
+  - Fynn, the Fangbearer [valid_resolution_no_immediate_mutation, seq=83] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=347)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Fynn, the Fangbearer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 347) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 347) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Fynn, the Fangbearer [345] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 77).
+      Forest [346] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 80).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      elgrams: Battlefield: Forest [279], Forest [292], Sazh's Chocobo [280], Studious First-Year [287]; Graveyard: Escape Tunnel [291]
+      gian31: Battlefield: Forest [283], Forest [346], Fynn, the Fangbearer [347]
+
+Turn 5
+  - Ability of Sazh's Chocobo [observed_semantic_effect, seq=102] (active=elgrams, phase=Phase_Main1, controller=elgrams, owner=elgrams, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Sazh's Chocobo: Sazh's Chocobo gets +1/+1; 1 counter(s) are added to Sazh's Chocobo [280].
+  - Llanowar Elves [valid_resolution_no_immediate_mutation, seq=105] (active=elgrams, phase=Phase_Main1, controller=elgrams, owner=elgrams, source_object=353)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Llanowar Elves resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Llanowar Elves (object 353) Hand (elgrams) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Llanowar Elves (object 353) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Sazh's Chocobo [observed_semantic_effect, seq=112] (active=elgrams, phase=Phase_Main1, controller=elgrams, owner=elgrams, source_object=280, source_last_explicit_zone=Battlefield)
+      effects: one +1/+1 counter; observed P/T change +1/+1 (the characteristic change is the observed result of that counter, not an additional cumulative bonus)
+      narrative: Ability of Sazh's Chocobo: Sazh's Chocobo gets +1/+1; 1 counter(s) are added to Sazh's Chocobo [280].
+  Combat snapshots observed (active=elgrams; frames: DeclareAttack):
+      attackers: Sazh's Chocobo [280] (unblocked, observed P/T 4/5)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat-result zone change: Fynn, the Fangbearer [409] Battlefield -> Graveyard (gian31) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    additional protocol-observed zone movements not assigned to an action chain:
+      Springbloom Druid [350] Library (elgrams) -> Hand (elgrams) (Draw; GRE sequence 97).
+      Escape Tunnel [351] Hand (elgrams) -> Battlefield (PlayLand; GRE sequence 100).
+      Escape Tunnel [356] Battlefield -> Graveyard (elgrams) (Sacrifice; GRE sequence 106).
+        sacrifice observed after Llanowar Elves (seq 105); direct causal linkage is unavailable.
+      Forest [357] Library (elgrams) -> Battlefield (Put; GRE sequence 109).
+      Fynn, the Fangbearer [409] Battlefield -> Graveyard (gian31) (SBA_Damage; GRE sequence 124).
+      Sazh's Chocobo [408] Battlefield -> Graveyard (elgrams) (SBA_Deathtouch; GRE sequence 124).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      elgrams: Battlefield: Forest [279], Forest [292], Forest [357], Llanowar Elves [353], Studious First-Year [287]; Graveyard: Escape Tunnel [291], Escape Tunnel [356], Sazh's Chocobo [408]
+      gian31: Battlefield: Forest [283], Forest [346]; Graveyard: Fynn, the Fangbearer [409]
+
+Turn 6
+  - Fynn, the Fangbearer [valid_resolution_no_immediate_mutation, seq=140] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=412)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Fynn, the Fangbearer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 412) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Fynn, the Fangbearer (object 412) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Defend the Rider [410] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 134).
+      Swamp [411] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 137).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      elgrams: Battlefield: Forest [279], Forest [292], Forest [357], Llanowar Elves [353], Studious First-Year [287]; Graveyard: Escape Tunnel [291], Escape Tunnel [356], Sazh's Chocobo [408]
+      gian31: Battlefield: Forest [283], Forest [346], Fynn, the Fangbearer [412], Swamp [411]; Graveyard: Fynn, the Fangbearer [409]
+
+Turn 7
+  - Traveling Chocobo [valid_resolution_no_immediate_mutation, seq=159] (active=elgrams, phase=Phase_Main1, controller=elgrams, owner=elgrams, source_object=416)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Traveling Chocobo resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Traveling Chocobo (object 416) Hand (elgrams) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Traveling Chocobo (object 416) Stack -> Battlefield (Resolve; shared object ID)
+  - Hard-Hitting Question [valid_resolution_no_immediate_mutation, seq=172] (active=elgrams, phase=Phase_Main1, controller=elgrams, owner=elgrams, source_object=420)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Hard-Hitting Question resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Hard-Hitting Question (object 420) Hand (elgrams) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hard-Hitting Question (object 425) Stack -> Graveyard (elgrams) (Resolve; shared object ID)
+      identity continuity: source object 420 -> transfer object 425 (explicit GRE ObjectIdChanged chain).
+  - Defend the Rider [valid_resolution_no_immediate_mutation, seq=170] (active=unknown, controller=gian31, owner=gian31, source_object=422)
+      chronology reconciliation: parser turn group None conflicts with Turn 7; rendered under the latter from explicit CastSpell/Resolve lifecycle transfers.
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Defend the Rider resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Defend the Rider (object 422) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Defend the Rider (object 424) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 422 -> transfer object 424 (explicit GRE ObjectIdChanged chain).
+    additional protocol-observed zone movements not assigned to an action chain:
+      Hard-Hitting Question [415] Library (elgrams) -> Hand (elgrams) (Draw; GRE sequence 154).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      elgrams: Battlefield: Forest [279], Forest [292], Forest [357], Llanowar Elves [353], Studious First-Year [287], Traveling Chocobo [416]; Graveyard: Escape Tunnel [291], Escape Tunnel [356], Hard-Hitting Question [425], Sazh's Chocobo [408]
+      gian31: Battlefield: Forest [283], Forest [346], Fynn, the Fangbearer [412], Swamp [411]; Graveyard: Defend the Rider [424], Fynn, the Fangbearer [409]
+
+Turn 8
+  - Virulent Silencer [valid_resolution_no_immediate_mutation, seq=193] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=428)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Virulent Silencer resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Virulent Silencer (object 428) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Virulent Silencer (object 428) Stack -> Battlefield (Resolve; shared object ID)
+  - Hard-Hitting Question [observed_semantic_effect, seq=199] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=432)
+      effects: 1 damage
+      narrative: Hard-Hitting Question: Traveling Chocobo takes 1 damage.
+      explicit effect object references: Traveling Chocobo [416] (role/targeting only where the protocol identifies it)
+      protocol-linked zone transfer: Hard-Hitting Question (object 432) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Hard-Hitting Question (object 434) Stack -> Graveyard (gian31) (Resolve; shared object ID)
+      identity continuity: source object 432 -> transfer object 434 (explicit GRE ObjectIdChanged chain).
+      protocol-linked zone transfer: Traveling Chocobo (object 435) Battlefield -> Graveyard (elgrams) (SBA_Deathtouch; shared object ID)
+  - Ability of Fynn, the Fangbearer [observed_semantic_effect, seq=212] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=412, source_last_explicit_zone=Battlefield)
+      effects: +2 counter(s)
+      narrative: Ability of Fynn, the Fangbearer: 2 counter(s) are added to elgrams (player seat 2).
+      explicit effect object references: elgrams [player seat 2] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Fynn, the Fangbearer [412] (unblocked, observed P/T 1/3)
+      blockers: none identified
+      combat-correlated defending-player life loss: 1; observed attacker power total: 1; snapshot comparison matches (exact assignment unavailable).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: elgrams -1 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 1 + observed modifiers 0 = 1; individual assignment unavailable): elgrams 20 -> 19
+    additional protocol-observed zone movements not assigned to an action chain:
+      Quarrel [426] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 187).
+      Swamp [427] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 190).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      elgrams: Battlefield: Forest [279], Forest [292], Forest [357], Llanowar Elves [353], Studious First-Year [287]; Graveyard: Escape Tunnel [291], Escape Tunnel [356], Hard-Hitting Question [425], Sazh's Chocobo [408], Traveling Chocobo [435]
+      gian31: Battlefield: Forest [283], Forest [346], Fynn, the Fangbearer [412], Swamp [411], Swamp [427], Virulent Silencer [428]; Graveyard: Defend the Rider [424], Fynn, the Fangbearer [409], Hard-Hitting Question [434]
+
+Turn 9
+  - Tifa Lockhart [valid_resolution_no_immediate_mutation, seq=233] (active=elgrams, phase=Phase_Main1, controller=elgrams, owner=elgrams, source_object=489)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Tifa Lockhart resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Tifa Lockhart (object 489) Hand (elgrams) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Tifa Lockhart (object 489) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      object 437 [437] Library (elgrams) -> Hand (elgrams) (Draw; GRE sequence 222).
+      Rampant Growth [438] Exile -> Stack (CastSpell; GRE sequence 225).
+      Forest [441] Library (elgrams) -> Battlefield (Put; GRE sequence 228).
+      Rampant Growth [488] Stack -> Graveyard (elgrams) (Resolve; GRE sequence 229).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      elgrams: Battlefield: Forest [279], Forest [292], Forest [357], Forest [441], Llanowar Elves [353], Studious First-Year [287], Tifa Lockhart [489]; Graveyard: Escape Tunnel [291], Escape Tunnel [356], Hard-Hitting Question [425], Rampant Growth [488], Sazh's Chocobo [408], Traveling Chocobo [435]
+      gian31: Battlefield: Forest [283], Forest [346], Fynn, the Fangbearer [412], Swamp [411], Swamp [427], Virulent Silencer [428]; Graveyard: Defend the Rider [424], Fynn, the Fangbearer [409], Hard-Hitting Question [434]
+
+Turn 10
+  - Axebane Ferox [valid_resolution_no_immediate_mutation, seq=254] (active=gian31, phase=Phase_Main1, controller=gian31, owner=gian31, source_object=494)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Axebane Ferox resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Axebane Ferox (object 494) Hand (gian31) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Axebane Ferox (object 494) Stack -> Battlefield (Resolve; shared object ID)
+  - Ability of Virulent Silencer [observed_semantic_effect, seq=269] (active=gian31, phase=Phase_Combat, step=Step_CombatDamage, controller=gian31, owner=gian31, source_object=428, source_last_explicit_zone=Battlefield)
+      effects: +2 counter(s)
+      narrative: Ability of Virulent Silencer: 2 counter(s) are added to elgrams (player seat 2).
+      explicit effect object references: elgrams [player seat 2] (role/targeting only where the protocol identifies it)
+  Combat snapshots observed (active=gian31; frames: DeclareAttack -> CombatDamage):
+      attackers: Fynn, the Fangbearer [412] (blocked, observed P/T 1/3), Virulent Silencer [428] (unblocked, observed P/T 2/3), Axebane Ferox [494] (blocked, observed P/T 4/4)
+      blockers: none identified
+      combat-correlated defending-player life loss: 2; observed attacker power total: 7; snapshot comparison does not reconcile (exact assignment unavailable).
+      combat-result zone change: Studious First-Year [500] Battlefield -> Graveyard (elgrams) (SBA_Damage).
+      combat damage assignment: unknown unless explicitly observed
+    net observed life change this turn: elgrams -2 (individual changes below; gains and losses may offset)
+    life (combat fully reconciled: snapshot power 2 + observed modifiers 0 = 2; individual assignment unavailable): elgrams 19 -> 17
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [492] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 248).
+      Forest [493] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 251).
+      Studious First-Year [500] Battlefield -> Graveyard (elgrams) (SBA_Damage; GRE sequence 267).
+      Tifa Lockhart [501] Battlefield -> Graveyard (elgrams) (SBA_Deathtouch; GRE sequence 267).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      elgrams: Battlefield: Forest [279], Forest [292], Forest [357], Forest [441], Llanowar Elves [353]; Graveyard: Escape Tunnel [291], Escape Tunnel [356], Hard-Hitting Question [425], Rampant Growth [488], Sazh's Chocobo [408], Studious First-Year [500], Tifa Lockhart [501], Traveling Chocobo [435]
+      gian31: Battlefield: Axebane Ferox [494], Forest [283], Forest [346], Forest [493], Fynn, the Fangbearer [412], Swamp [411], Swamp [427], Virulent Silencer [428]; Graveyard: Defend the Rider [424], Fynn, the Fangbearer [409], Hard-Hitting Question [434]
+
+Turn 11
+  - Springbloom Druid [valid_resolution_no_immediate_mutation, seq=285] (active=elgrams, phase=Phase_Main1, controller=elgrams, owner=elgrams, source_object=504)
+      effects: no immediate mutation captured (this does not prove the spell or permanent had no rules effect)
+      narrative: Springbloom Druid resolves with no immediate observed mutation.
+      protocol-linked zone transfer: Springbloom Druid (object 504) Hand (elgrams) -> Stack (CastSpell; shared object ID)
+      protocol-linked zone transfer: Springbloom Druid (object 504) Stack -> Battlefield (Resolve; shared object ID)
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [502] Library (elgrams) -> Hand (elgrams) (Draw; GRE sequence 279).
+      Forest [503] Hand (elgrams) -> Battlefield (PlayLand; GRE sequence 282).
+      Forest [509] Battlefield -> Graveyard (elgrams) (Sacrifice; GRE sequence 288).
+        sacrifice observed after Springbloom Druid (seq 285); direct causal linkage is unavailable.
+      Forest [511] Library (elgrams) -> Battlefield (Put; GRE sequence 289).
+      Forest [510] Library (elgrams) -> Battlefield (Put; GRE sequence 289).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Axebane Ferox [494], Forest [283], Forest [346], Forest [493], Fynn, the Fangbearer [412], Swamp [411], Swamp [427], Virulent Silencer [428]; Graveyard: Defend the Rider [424], Fynn, the Fangbearer [409], Hard-Hitting Question [434]
+      elgrams: Graveyard: Escape Tunnel [291], Escape Tunnel [356], Forest [509], Hard-Hitting Question [425], Rampant Growth [488], Sazh's Chocobo [408], Studious First-Year [500], Tifa Lockhart [501], Traveling Chocobo [435]; Battlefield: Forest [292], Forest [357], Forest [441], Forest [503], Forest [510], Forest [511], Llanowar Elves [353], Springbloom Druid [504]
+
+Turn 12
+  Combat snapshots observed (active=gian31; frames: DeclareAttack):
+      attackers: Fynn, the Fangbearer [412] (unblocked, observed P/T 1/3), Virulent Silencer [428] (unblocked, observed P/T 2/3), Axebane Ferox [494] (unblocked, observed P/T 4/4)
+      blockers: none identified
+      attack declaration observed; no corresponding combat-damage life change was captured.
+      combat damage assignment: unknown unless explicitly observed
+    additional protocol-observed zone movements not assigned to an action chain:
+      Forest [555] Library (gian31) -> Hand (gian31) (Draw; GRE sequence 306).
+      Forest [556] Hand (gian31) -> Battlefield (PlayLand; GRE sequence 309).
+    end-of-turn protocol ledger (partial; only objects with explicit transfers, not a complete zone snapshot):
+      gian31: Battlefield: Axebane Ferox [494], Forest [283], Forest [346], Forest [493], Forest [556], Fynn, the Fangbearer [412], Swamp [411], Swamp [427], Virulent Silencer [428]; Graveyard: Defend the Rider [424], Fynn, the Fangbearer [409], Hard-Hitting Question [434]
+      elgrams: Graveyard: Escape Tunnel [291], Escape Tunnel [356], Forest [509], Hard-Hitting Question [425], Rampant Growth [488], Sazh's Chocobo [408], Studious First-Year [500], Tifa Lockhart [501], Traveling Chocobo [435]; Battlefield: Forest [292], Forest [357], Forest [441], Forest [503], Forest [510], Forest [511], Llanowar Elves [353], Springbloom Druid [504]
+
+UNNUMBERED / UNRESOLVED TURN GROUP
+  - The captured records do not provide a verified numbered turn for the following events.
+
+TIMELINE COVERAGE
+------------------------------------------------------------
+LIFE ATTRIBUTION GAPS
+------------------------------------------------------------
+Only life changes without an exact source or a fully reconciled combat total are listed; individual combat assignment limits remain documented in the timeline.
+- No life mutation without an exact same-record source was observed.
+LETHAL COVERAGE
+------------------------------------------------------------
+- No life-total transition to 0 or below was observed.
+OBSERVED TOKEN STATE
+------------------------------------------------------------
+- No token creation with an explicit runtime object ID was observed.
+PROTOCOL-OBSERVED ZONE TRANSFERS
+------------------------------------------------------------
+- Turn 1, seq 7: Forest [owner=elgrams, controller=elgrams] moves Hand (elgrams) -> Battlefield (PlayLand).
+- Turn 1, seq 8: Sazh's Chocobo [owner=elgrams, controller=elgrams] moves Hand (elgrams) -> Stack (CastSpell).
+- Turn 1, seq 10: Sazh's Chocobo [owner=elgrams, controller=elgrams] moves Stack -> Battlefield (Resolve).
+- Turn 2, seq 24: Forest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 2, seq 27: Forest [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 3, seq 41: Llanowar Elves [owner/controller metadata unavailable] moves Library (elgrams) -> Hand (elgrams) (Draw).
+- Turn 3, seq 44: Escape Tunnel [owner=elgrams, controller=elgrams] moves Hand (elgrams) -> Battlefield (PlayLand).
+- Turn 3, seq 47: Studious First-Year [owner=elgrams, controller=elgrams] moves Hand (elgrams) -> Stack (CastSpell).
+- Turn 3, seq 49: Studious First-Year [owner=elgrams, controller=elgrams] moves Stack -> Battlefield (Resolve).
+- Turn 3, seq 51: Escape Tunnel [owner=elgrams, controller=elgrams] moves Battlefield -> Graveyard (elgrams) (Sacrifice).
+- Turn 3, seq 54: Forest [owner=elgrams, controller=elgrams] moves Library (elgrams) -> Battlefield (Put).
+- Turn 4, seq 77: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 4, seq 80: Forest [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 4, seq 81: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 4, seq 83: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 97: Springbloom Druid [owner/controller metadata unavailable] moves Library (elgrams) -> Hand (elgrams) (Draw).
+- Turn 5, seq 100: Escape Tunnel [owner=elgrams, controller=elgrams] moves Hand (elgrams) -> Battlefield (PlayLand).
+- Turn 5, seq 103: Llanowar Elves [owner=elgrams, controller=elgrams] moves Hand (elgrams) -> Stack (CastSpell).
+- Turn 5, seq 105: Llanowar Elves [owner=elgrams, controller=elgrams] moves Stack -> Battlefield (Resolve).
+- Turn 5, seq 106: Escape Tunnel [owner=elgrams, controller=elgrams] moves Battlefield -> Graveyard (elgrams) (Sacrifice).
+- Turn 5, seq 109: Forest [owner=elgrams, controller=elgrams] moves Library (elgrams) -> Battlefield (Put).
+- Turn 5, seq 124: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Battlefield -> Graveyard (gian31) (SBA_Damage).
+- Turn 5, seq 124: Sazh's Chocobo [owner=elgrams, controller=elgrams] moves Battlefield -> Graveyard (elgrams) (SBA_Deathtouch).
+- Turn 6, seq 134: Defend the Rider [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 6, seq 137: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 6, seq 138: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 6, seq 140: Fynn, the Fangbearer [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 154: Hard-Hitting Question [owner/controller metadata unavailable] moves Library (elgrams) -> Hand (elgrams) (Draw).
+- Turn 7, seq 157: Traveling Chocobo [owner=elgrams, controller=elgrams] moves Hand (elgrams) -> Stack (CastSpell).
+- Turn 7, seq 159: Traveling Chocobo [owner=elgrams, controller=elgrams] moves Stack -> Battlefield (Resolve).
+- Turn 7, seq 160: Hard-Hitting Question [owner=elgrams, controller=elgrams] moves Hand (elgrams) -> Stack (CastSpell).
+- Turn 7, seq 165: Defend the Rider [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 7, seq 170: Defend the Rider [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 7, seq 172: Hard-Hitting Question [owner=elgrams, controller=elgrams] moves Stack -> Graveyard (elgrams) (Resolve).
+- Turn 8, seq 187: Quarrel [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 8, seq 190: Swamp [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 8, seq 191: Virulent Silencer [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 193: Virulent Silencer [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 8, seq 194: Hard-Hitting Question [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 8, seq 199: Hard-Hitting Question [owner=gian31, controller=gian31] moves Stack -> Graveyard (gian31) (Resolve).
+- Turn 8, seq 199: Traveling Chocobo [owner=elgrams, controller=elgrams] moves Battlefield -> Graveyard (elgrams) (SBA_Deathtouch).
+- Turn 9, seq 222: object 437 [owner/controller metadata unavailable] moves Library (elgrams) -> Hand (elgrams) (Draw).
+- Turn 9, seq 225: Rampant Growth [owner=elgrams, controller=elgrams] moves Exile -> Stack (CastSpell).
+- Turn 9, seq 228: Forest [owner=elgrams, controller=elgrams] moves Library (elgrams) -> Battlefield (Put).
+- Turn 9, seq 229: Rampant Growth [owner/controller metadata unavailable] moves Stack -> Graveyard (elgrams) (Resolve).
+- Turn 9, seq 231: Tifa Lockhart [owner=elgrams, controller=elgrams] moves Hand (elgrams) -> Stack (CastSpell).
+- Turn 9, seq 233: Tifa Lockhart [owner=elgrams, controller=elgrams] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 248: Forest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 10, seq 251: Forest [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+- Turn 10, seq 252: Axebane Ferox [owner=gian31, controller=gian31] moves Hand (gian31) -> Stack (CastSpell).
+- Turn 10, seq 254: Axebane Ferox [owner=gian31, controller=gian31] moves Stack -> Battlefield (Resolve).
+- Turn 10, seq 267: Studious First-Year [owner=elgrams, controller=elgrams] moves Battlefield -> Graveyard (elgrams) (SBA_Damage).
+- Turn 10, seq 267: Tifa Lockhart [owner=elgrams, controller=elgrams] moves Battlefield -> Graveyard (elgrams) (SBA_Deathtouch).
+- Turn 11, seq 279: Forest [owner/controller metadata unavailable] moves Library (elgrams) -> Hand (elgrams) (Draw).
+- Turn 11, seq 282: Forest [owner=elgrams, controller=elgrams] moves Hand (elgrams) -> Battlefield (PlayLand).
+- Turn 11, seq 283: Springbloom Druid [owner=elgrams, controller=elgrams] moves Hand (elgrams) -> Stack (CastSpell).
+- Turn 11, seq 285: Springbloom Druid [owner=elgrams, controller=elgrams] moves Stack -> Battlefield (Resolve).
+- Turn 11, seq 288: Forest [owner=elgrams, controller=elgrams] moves Battlefield -> Graveyard (elgrams) (Sacrifice).
+- Turn 11, seq 289: Forest [owner=elgrams, controller=elgrams] moves Library (elgrams) -> Battlefield (Put).
+- Turn 11, seq 289: Forest [owner=elgrams, controller=elgrams] moves Library (elgrams) -> Battlefield (Put).
+- Turn 12, seq 306: Forest [owner=gian31, controller=gian31] moves Library (gian31) -> Hand (gian31) (Draw).
+- Turn 12, seq 309: Forest [owner=gian31, controller=gian31] moves Hand (gian31) -> Battlefield (PlayLand).
+Equivalent transfer duplicates retained as diagnostics (rendered once above):
+- Turn 3: Studious First-Year [287] Stack -> Battlefield (Resolve); sequences 49, 50.
+- Turn 9: Rampant Growth [488] Stack -> Graveyard (elgrams) (Resolve); sequences 229, 230.
+OBJECT IDENTITY TRANSITIONS
+------------------------------------------------------------
+- Turn 1, seq 7: object 220 becomes object 279 [Forest].
+- Turn 1, seq 8: object 225 becomes object 280 [Sazh's Chocobo].
+- Turn 2, seq 24: object 166 becomes object 282 [Forest].
+- Turn 2, seq 27: object 159 becomes object 283 [Forest].
+- Turn 3, seq 41: object 226 becomes object 284 [Llanowar Elves].
+- Turn 3, seq 44: object 222 becomes object 285 [Escape Tunnel].
+- Turn 3, seq 47: object 219 becomes object 287 [Studious First-Year].
+- Turn 3, seq 51: object 285 becomes object 291 [Escape Tunnel].
+- Turn 3, seq 54: object 243 becomes object 292 [Forest].
+- Turn 4, seq 77: object 167 becomes object 345 [Fynn, the Fangbearer].
+- Turn 4, seq 80: object 282 becomes object 346 [Forest].
+- Turn 4, seq 81: object 161 becomes object 347 [Fynn, the Fangbearer].
+- Turn 5, seq 97: object 294 becomes object 350 [Springbloom Druid].
+- Turn 5, seq 100: object 223 becomes object 351 [Escape Tunnel].
+- Turn 5, seq 103: object 284 becomes object 353 [Llanowar Elves].
+- Turn 5, seq 106: object 351 becomes object 356 [Escape Tunnel].
+- Turn 5, seq 109: object 340 becomes object 357 [Forest].
+- Turn 5, seq 124: object 347 becomes object 409 [Fynn, the Fangbearer].
+- Turn 5, seq 124: object 280 becomes object 408 [Sazh's Chocobo].
+- Turn 6, seq 134: object 168 becomes object 410 [Defend the Rider].
+- Turn 6, seq 137: object 163 becomes object 411 [Swamp].
+- Turn 6, seq 138: object 345 becomes object 412 [Fynn, the Fangbearer].
+- Turn 7, seq 154: object 359 becomes object 415 [Hard-Hitting Question].
+- Turn 7, seq 157: object 224 becomes object 416 [Traveling Chocobo].
+- Turn 7, seq 160: object 415 becomes object 420 [Hard-Hitting Question].
+- Turn 7, seq 165: object 410 becomes object 422 [Defend the Rider].
+- Turn 7, seq 170: object 422 becomes object 424 [Defend the Rider].
+- Turn 7, seq 172: object 420 becomes object 425 [Hard-Hitting Question].
+- Turn 8, seq 187: object 169 becomes object 426 [Quarrel].
+- Turn 8, seq 190: object 165 becomes object 427 [Swamp].
+- Turn 8, seq 191: object 162 becomes object 428 [Virulent Silencer].
+- Turn 8, seq 194: object 160 becomes object 432 [Hard-Hitting Question].
+- Turn 8, seq 199: object 432 becomes object 434 [Hard-Hitting Question].
+- Turn 8, seq 199: object 416 becomes object 435 [Traveling Chocobo].
+- Turn 9, seq 222: object 360 becomes object 437 [object 360].
+- Turn 9, seq 225: object 289 becomes object 438 [Rampant Growth].
+- Turn 9, seq 228: object 375 becomes object 441 [Forest].
+- Turn 9, seq 229: object 438 becomes object 488 [Rampant Growth].
+- Turn 9, seq 230: object 438 becomes object 488 [Rampant Growth].
+- Turn 9, seq 231: object 221 becomes object 489 [Tifa Lockhart].
+- Turn 10, seq 248: object 170 becomes object 492 [Forest].
+- Turn 10, seq 251: object 492 becomes object 493 [Forest].
+- Turn 10, seq 252: object 164 becomes object 494 [Axebane Ferox].
+- Turn 10, seq 267: object 287 becomes object 500 [Studious First-Year].
+- Turn 10, seq 267: object 489 becomes object 501 [Tifa Lockhart].
+- Turn 11, seq 279: object 442 becomes object 502 [Forest].
+- Turn 11, seq 282: object 502 becomes object 503 [Forest].
+- Turn 11, seq 283: object 350 becomes object 504 [Springbloom Druid].
+- Turn 11, seq 288: object 279 becomes object 509 [Forest].
+- Turn 11, seq 289: object 458 becomes object 511 [Forest].
+- Turn 11, seq 289: object 456 becomes object 510 [Forest].
+- Turn 12, seq 306: object 171 becomes object 555 [Forest].
+- Turn 12, seq 309: object 555 becomes object 556 [Forest].
+LAND DROPS OBSERVED
+------------------------------------------------------------
+- Turn 1: elgrams plays Forest (object 279) from Hand (elgrams) to Battlefield.
+- Turn 2: gian31 plays Forest (object 283) from Hand (gian31) to Battlefield.
+- Turn 3: elgrams plays Escape Tunnel (object 285) from Hand (elgrams) to Battlefield.
+- Turn 4: gian31 plays Forest (object 346) from Hand (gian31) to Battlefield.
+- Turn 5: elgrams plays Escape Tunnel (object 351) from Hand (elgrams) to Battlefield.
+- Turn 6: gian31 plays Swamp (object 411) from Hand (gian31) to Battlefield.
+- Turn 8: gian31 plays Swamp (object 427) from Hand (gian31) to Battlefield.
+- Turn 10: gian31 plays Forest (object 493) from Hand (gian31) to Battlefield.
+- Turn 11: elgrams plays Forest (object 503) from Hand (elgrams) to Battlefield.
+- Turn 12: gian31 plays Forest (object 556) from Hand (gian31) to Battlefield.
+CORRELATION DIAGNOSTICS
+------------------------------------------------------------
+- No repeated same-runtime action records with a potentially shared life snapshot were observed.
+REPEATED ADJACENT ABILITY SEQUENCE SUMMARY
+------------------------------------------------------------
+- No repeated adjacent ability pair was observed.
+OBSERVED REPEATED ADJACENT ABILITY PATTERNS
+------------------------------------------------------------
+- No repeated adjacent ability cycle was observed.
+
+CARD USAGE
+------------------------------------------------------------
+- Sazh's Chocobo: casts=1; abilities=4 (triggered=4, activated=0) across turns [1, 3, 3, 5, 5]
+  observed effect totals: draws=0, tokens=0, counters=4, returns=0, damage=0, life_changes=0, other=4
+  observed effects: +1 counter(s), P/T +1/+1
+- Fynn, the Fangbearer: casts=2; abilities=1 (triggered=1, activated=0) across turns [4, 6, 8]
+  observed effect totals: draws=0, tokens=0, counters=1, returns=0, damage=0, life_changes=0, other=0
+  observed effects: +2 counter(s)
+- Hard-Hitting Question: casts=2 across turns [7, 8]
+  observed effect totals: draws=0, tokens=0, counters=0, returns=0, damage=1, life_changes=0, other=0
+  observed effects: 1 damage
+- Studious First-Year: casts=2 across turns [3, 3]
+- Virulent Silencer: casts=1; abilities=1 (triggered=1, activated=0) across turns [8, 10]
+  observed effect totals: draws=0, tokens=0, counters=1, returns=0, damage=0, life_changes=0, other=0
+  observed effects: +2 counter(s)
+- Axebane Ferox: casts=1 across turns [10]
+- Defend the Rider: casts=1 across turns [7]
+- Llanowar Elves: casts=1 across turns [5]
+- Springbloom Druid: casts=1 across turns [11]
+- Tifa Lockhart: casts=1 across turns [9]
+- Traveling Chocobo: casts=1 across turns [7]
+
+PROTOCOL-OBSERVED COMBAT
+------------------------------------------------------------
+Turn 3 - DeclareAttack, DeclareBlock (active=elgrams)
+  attacker: Sazh's Chocobo (elgrams) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 5 - DeclareAttack (active=elgrams)
+  attacker: Sazh's Chocobo (elgrams) -> gian31; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 8 - DeclareAttack (active=gian31)
+  attacker: Fynn, the Fangbearer (gian31) -> elgrams; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+Turn 10 - DeclareAttack, CombatDamage (active=gian31)
+  attacker: Fynn, the Fangbearer (gian31) -> elgrams; blocked by unknown blocker
+  attacker: Virulent Silencer (gian31) -> elgrams; unblocked in this observed snapshot
+  attacker: Axebane Ferox (gian31) -> elgrams; blocked by unknown blocker
+  combat damage assignment: unknown unless explicitly observed
+Turn 12 - DeclareAttack (active=gian31)
+  attacker: Fynn, the Fangbearer (gian31) -> elgrams; unblocked in this observed snapshot
+  attacker: Virulent Silencer (gian31) -> elgrams; unblocked in this observed snapshot
+  attacker: Axebane Ferox (gian31) -> elgrams; unblocked in this observed snapshot
+  combat damage assignment: unknown unless explicitly observed
+
+COMBAT SUMMARY
+------------------------------------------------------------
+- Turn 8: Ability of Fynn, the Fangbearer (active=gian31) - Ability of Fynn, the Fangbearer: 2 counter(s) are added to target.
+- Turn 10: Ability of Virulent Silencer (active=gian31) - Ability of Virulent Silencer: 2 counter(s) are added to target.
+
+TECHNICAL APPENDIX - OBJECT INDEX (LAST OBSERVATIONS)
+------------------------------------------------------------
+- 159: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 160: Hard-Hitting Question | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 161: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 162: Virulent Silencer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 163: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 164: Axebane Ferox | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 165: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 279: Forest | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 280: Sazh's Chocobo | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 282: Forest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 283: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 285: Escape Tunnel | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 286: Ureni of the Unwritten | controller=elgrams | owner=elgrams | zone=unknown (inferred unknown) (latest_object_observation)
+- 287: Studious First-Year | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 289: Rampant Growth | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 290: object 290 | controller=elgrams | owner=elgrams | zone=unknown (inferred unknown) (latest_object_observation)
+- 291: Escape Tunnel | controller=elgrams | owner=elgrams | zone=Graveyard (latest_object_observation)
+- 292: Forest | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 293: Ureni of the Unwritten | controller=elgrams | owner=elgrams | zone=unknown (inferred unknown) (latest_object_observation)
+- 345: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 346: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 347: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 351: Escape Tunnel | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 352: Ureni of the Unwritten | controller=elgrams | owner=elgrams | zone=unknown (inferred unknown) (latest_object_observation)
+- 353: Llanowar Elves | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 355: object 355 | controller=elgrams | owner=elgrams | zone=unknown (inferred unknown) (latest_object_observation)
+- 356: Escape Tunnel | controller=elgrams | owner=elgrams | zone=Graveyard (latest_object_observation)
+- 357: Forest | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 358: Ureni of the Unwritten | controller=elgrams | owner=elgrams | zone=unknown (inferred unknown) (latest_object_observation)
+- 408: Sazh's Chocobo | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 409: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 410: Defend the Rider | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 411: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 412: Fynn, the Fangbearer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 416: Traveling Chocobo | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 420: Hard-Hitting Question | controller=elgrams | owner=elgrams | zone=Stack (latest_object_observation)
+- 422: Defend the Rider | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 424: Defend the Rider | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 425: Hard-Hitting Question | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 426: Quarrel | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 427: Swamp | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 428: Virulent Silencer | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 432: Hard-Hitting Question | controller=gian31 | owner=gian31 | zone=Stack (latest_object_observation)
+- 434: Hard-Hitting Question | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 435: Traveling Chocobo | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 436: object 436 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 438: Rampant Growth | controller=elgrams | owner=elgrams | zone=Stack (latest_object_observation)
+- 441: Forest | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 489: Tifa Lockhart | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 492: Forest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 493: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 494: Axebane Ferox | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+- 499: object 499 | controller=gian31 | owner=gian31 | zone=unknown (inferred unknown) (latest_object_observation)
+- 500: Studious First-Year | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 501: Tifa Lockhart | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 503: Forest | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 504: Springbloom Druid | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 508: object 508 | controller=elgrams | owner=elgrams | zone=unknown (inferred unknown) (latest_object_observation)
+- 509: Forest | controller=elgrams | owner=elgrams | zone=Graveyard (latest_object_observation)
+- 510: Forest | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 511: Forest | controller=elgrams | owner=elgrams | zone=Battlefield (latest_object_observation)
+- 555: Forest | controller=gian31 | owner=gian31 | zone=Hand (latest_object_observation)
+- 556: Forest | controller=gian31 | owner=gian31 | zone=Battlefield (latest_object_observation)
+
+TECHNICAL APPENDIX - CONTROLLER INVENTORY (LAST OBSERVATIONS)
+------------------------------------------------------------
+elgrams: 33 total items
+  zones: Battlefield=21, Graveyard=3, Stack=2, unknown=7
+  objects: Forest x8, Escape Tunnel x4, Ureni of the Unwritten x4, Hard-Hitting Question x2, Rampant Growth x2, Sazh's Chocobo x2, Studious First-Year x2, Tifa Lockhart x2, Traveling Chocobo x2, Llanowar Elves, Springbloom Druid, object 290
+gian31: 30 total items
+  zones: Battlefield=20, Hand=6, Stack=2, unknown=2
+  objects: Forest x8, Fynn, the Fangbearer x5, Swamp x4, Defend the Rider x3, Hard-Hitting Question x3, Axebane Ferox x2, Virulent Silencer x2, Quarrel, object 436, object 499
+
+TECHNICAL APPENDIX - LEGACY OBSERVATION-BASED BOARD
+------------------------------------------------------------
+This legacy view is retained for traceability only. The protocol-reconciled state below is the player-facing source for reconstructed zones.
+gian31:
+  Battlefield (20): Axebane Ferox, Axebane Ferox, Defend the Rider, Forest, Forest, Forest, Forest, Forest, Fynn, the Fangbearer, Fynn, the Fangbearer, Fynn, the Fangbearer, Fynn, the Fangbearer, Hard-Hitting Question, Hard-Hitting Question, Swamp, Swamp, Swamp, Swamp, Virulent Silencer, Virulent Silencer
+  Graveyard: 0 card(s)
+elgrams:
+  Battlefield (21): Escape Tunnel, Escape Tunnel, Forest, Forest, Forest, Forest, Forest, Forest, Forest, Hard-Hitting Question, Llanowar Elves, Rampant Growth, Sazh's Chocobo, Sazh's Chocobo, Springbloom Druid, Studious First-Year, Studious First-Year, Tifa Lockhart, Tifa Lockhart, Traveling Chocobo, Traveling Chocobo
+  Graveyard: 3 card(s)
+
+UNKNOWN OBJECT POSITIONS
+------------------------------------------------------------
+9 objects have no resolved final zone and are omitted from the known board state.
+elgrams: 7 unknown object(s)
+gian31: 2 unknown object(s)
+
+UNVERIFIED FINAL POSITIONS
+------------------------------------------------------------
+Private or transient-zone observations are not presented as final game state. They remain traceable in the object index.
+Omitted observations: Hand=6, Stack=4
+
+LAST PROTOCOL-RECONCILED PERSISTENT STATE
+------------------------------------------------------------
+Built from the latest GRE Full/Diff checkpoint when available; protocol mutations remain available for traceability.
+elgrams:
+  Battlefield (8): Forest, Llanowar Elves, Forest, Forest, Forest, Springbloom Druid, Forest, Forest
+  Graveyard (8): Escape Tunnel, Escape Tunnel, Sazh's Chocobo, Hard-Hitting Question, Traveling Chocobo, Studious First-Year, Tifa Lockhart, Forest
+gian31:
+  Battlefield (9): Forest, Forest, Swamp, Fynn, the Fangbearer, Swamp, Virulent Silencer, Forest, Axebane Ferox, Forest
+  Graveyard (3): Fynn, the Fangbearer, Defend the Rider, Hard-Hitting Question
+Known non-persistent entries (counts only):
+  elgrams: Hand=1, Limbo=3
+  gian31: Hand=1, Limbo=3
+  unknown: Library=90, Limbo=7
+
+EVENT-DERIVED ZONE SNAPSHOTS
+------------------------------------------------------------
+Additive ledger from explicit zone-transfer events; it is not a complete authoritative game-state snapshot.
+- Turn 1: elgrams Battlefield=2
+- Turn 2: elgrams Battlefield=2; gian31 Battlefield=1
+- Turn 3: elgrams Battlefield=4; elgrams Graveyard=1; gian31 Battlefield=1
+- Turn 4: elgrams Battlefield=4; elgrams Graveyard=1; gian31 Battlefield=3
+- Turn 5: elgrams Battlefield=5; elgrams Graveyard=3; gian31 Battlefield=2; gian31 Graveyard=1
+- Turn 6: elgrams Battlefield=5; elgrams Graveyard=3; gian31 Battlefield=4; gian31 Graveyard=1
+- Turn 7: elgrams Battlefield=6; elgrams Graveyard=4; gian31 Battlefield=4; gian31 Graveyard=2
+- Turn 8: elgrams Battlefield=5; elgrams Graveyard=5; gian31 Battlefield=6; gian31 Graveyard=3
+- Turn 9: elgrams Battlefield=7; elgrams Graveyard=6; gian31 Battlefield=6; gian31 Graveyard=3
+- Turn 10: elgrams Battlefield=5; elgrams Graveyard=8; gian31 Battlefield=8; gian31 Graveyard=3
+- Turn 11: elgrams Battlefield=8; elgrams Graveyard=9; gian31 Battlefield=8; gian31 Graveyard=3
+- Turn 12: elgrams Battlefield=8; elgrams Graveyard=9; gian31 Battlefield=9; gian31 Graveyard=3
+
+COACH NOTES
+------------------------------------------------------------
+- Turn 1: Sazh's Chocobo resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Studious First-Year resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 3: Studious First-Year resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 4: Fynn, the Fangbearer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 5: Llanowar Elves resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 6: Fynn, the Fangbearer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Traveling Chocobo resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Hard-Hitting Question resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 7: Defend the Rider resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 8: Virulent Silencer resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 9: Tifa Lockhart resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 10: Axebane Ferox resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
+- Turn 11: Springbloom Druid resolved with no immediately observed effect. Review this resolution only if the card was expected to produce an immediate tactical impact.
